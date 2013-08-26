@@ -16,3 +16,6 @@
 # .  un punto singolo rappresenta la directory di lavoro corrente.
 # .. due punti indicano la directory superiore.
 
+#4)
+# E' un carattere speciale usato nelle espressioni regolari.
+
