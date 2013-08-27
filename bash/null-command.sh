@@ -7,8 +7,7 @@ echo $? # 0
 
 # Valuta una stringa di variabili utilizzando la sostituzione di parametro.
 # Visualizza un messaggio d'errore se una, o più, delle variabili fondamentali d'ambiente non è impostata.
-: ${HOSTSNAME}
+: ${HOSTNAME?}
 
 # In combinazione con >, l'operatore di redirezione, azzera il contenuto di un file, senza cambiarne i permessi. Se il file non esiste, viene creato.
 : > data.txt
-
