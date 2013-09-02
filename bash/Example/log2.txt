@@ -1,0 +1,2 @@
+redirection.sh: line 17: let: a = ((0 / 0)): division by 0 (error token is "))")
+Il valore di a è 
