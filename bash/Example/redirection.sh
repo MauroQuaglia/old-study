@@ -18,13 +18,7 @@ let "a = ((0 / 0))"
 echo "Il valore di a è $a"
 ) &> log2.txt # Nel log c'è l'errore.
 
-(
-let "a = ((0 / 0))" 
-echo "Il valore di a è $a"
-) > log3.txt # Nel log non c'è l'errore. 
-
-
-# >&
+# >& - QUESTO NON RIESCO A VEDERLO
 #edirige lo stdout di comando nello stderr.
 ( 
 echo "Il valore di a è 3..."

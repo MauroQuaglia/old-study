@@ -1,0 +1,18 @@
+total 72
+drwxrwxr-x 2 xpuser xpuser  4096 Sep  3 12:34 .
+drwxrwxr-x 4 xpuser xpuser  4096 Sep  2 12:12 ..
+-rw-rw-r-- 1 xpuser xpuser   199 Sep  2 12:04 code-blocks.sh
+-rw-rw-r-- 1 xpuser xpuser   196 Sep  2 12:40 copy-files.sh
+-rw-rw-r-- 1 xpuser xpuser     7 Sep  2 12:04 data1.txt
+-rw-rw-r-- 1 xpuser xpuser    13 Sep  2 12:04 data2.txt
+-rw-rw-r-- 1 xpuser xpuser 10240 Sep  2 12:04 data.tar
+-rw-rw-r-- 1 xpuser xpuser   100 Sep  3 12:13 log2.txt
+-rw-rw-r-- 1 xpuser xpuser    19 Sep  3 12:12 log3.txt
+-rw-rw-r-- 1 xpuser xpuser    23 Sep  3 12:13 log4.txt
+-rw-rw-r-- 1 xpuser xpuser    20 Sep  3 12:13 log.txt
+-rw-rw-r-- 1 xpuser xpuser   246 Sep  3 12:34 process-substitution.sh
+-rw-rw-r-- 1 xpuser xpuser   523 Sep  2 12:04 prova.sh
+-rw-rw-r-- 1 xpuser xpuser   481 Sep  3 12:13 redirection.sh
+-rw-rw-r-- 1 xpuser xpuser   322 Sep  2 12:04 save-some-data.sh
+-rw-rw-r-- 1 xpuser xpuser   974 Sep  3 12:34 sort1.txt
+-rw-rw-r-- 1 xpuser xpuser     0 Sep  3 12:34 sort.txt
