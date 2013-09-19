@@ -1,5 +1,5 @@
-echo "$#"
-until [ -z "$1" ]
+echo 
+until [ "$#" > 0 ]
 do
  echo "argomento [$1]"
  shift
