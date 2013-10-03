@@ -15,10 +15,11 @@ fi
 
 print_groups()
 {
-echo "Array dei numeri id dei gruppi a cui appartiene l'utente corrente." 
-for id in "${GROUPS[@]}"
+print "GROUPS" "Array dei numeri id dei gruppi a cui appartiene l'utente corrente."
+
+for ((i=0; i<"${#GROUPS[@]}"; i++)) 
 do
-   echo "$id"  
+ print "GROUPS[$i]" "Id del gruppo in posizione $i dell'array." 
 done
 }
 
@@ -35,12 +36,14 @@ print "BASH_VERSION" "La versione Bash installata."
 print "DIRSTACK" "La locazione più alta dello stack delle directory."
 print "EDITOR" "Editor di testo predefinito."
 print "EUID" "Identificativo associato all'identità assunta dall'utente."
-print "FUNCNAME" "Nome della funzione in corrente."
+print "FUNCNAME" "Nome della funzione corrente."
 print "GLOBIGNORE" "Elenco di nomi di file da escludere dalla ricerca nel globbing."
-print_groups  
-
-printf -- '%s\n' "${GROUPS[@]}"
-    
+print_groups
+print "HOME" "Directory home dell'utente."
+print "HOSTNAME" "Nome host del sistema."
+print "HOSTTYPE" "Tipo di macchina."
+print "IFS" "Internal Field Separator. Come Bash riconosce le singole parole, nell'interpretazione delle stringhe."
+   
 
 
                                             
