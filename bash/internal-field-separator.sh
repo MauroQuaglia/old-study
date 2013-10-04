@@ -1,14 +1,6 @@
 # $IFS gestisce il separatore di campo.
-
-#echo "abc.ghi.jkl.mno.pqr" | tr "." "_"
-
-echo "d\\nd"
-
-echo "$IFS" | tr " " "W"
-echo "$IFS" | tr "\n" "R"
-
-echo
-echo
+echo "$IFS" | tr ' ' 'W'
+echo "$IFS" | tr '\n' 'R'
 
 output_arguments()
 {

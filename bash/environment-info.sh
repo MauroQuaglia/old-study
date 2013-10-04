@@ -23,6 +23,27 @@ do
 done
 }
 
+print_path()
+{
+echo "PATH: percorsi delle directory in cui si trovano i file eseguibili."
+
+local IFS=":"
+for path in $PATH 
+do 
+ echo "[$path]"
+done
+}
+
+print_pipe_status()
+{
+echo "PIPESTATUS: Array contenente gli exit status dell'ultima pipe eseguita in foreground."
+
+for status in $PIPESTATUS
+do
+ echo "$status"
+done 
+}
+
 print "BASH" "Percorso dell'eseguibile Bash."
 print "BASH_ENV" "Puntatore al file di avvio di Bash."
 print "BASH_SUBSHELL" "Livello di annidamento delle subshell."
@@ -43,7 +64,16 @@ print "HOME" "Directory home dell'utente."
 print "HOSTNAME" "Nome host del sistema."
 print "HOSTTYPE" "Tipo di macchina."
 print "IFS" "Internal Field Separator. Come Bash riconosce le singole parole, nell'interpretazione delle stringhe."
-   
+print "IGNOREEOF" "Quanti End Of File (control-D) la shell deve ignorare prima del logout."
+print "LC_COLLATE" "controlla l'ordine di collazione nell'espansione del nome del file e nella ricerca di corrispondenza."
+print "LC_CTYPE" "Controlla l'interpretazione dei caratteri nel globbing e nella ricerca di corrispondenza."
+print "LINENO" "Numero della riga dello script di shell in cui essa appare."
+print "MACHTYPE" "Identifica il sistema hardware in modo dettagliato."
+print "OLDPWD" "Directory in cui vi trovavate prima dell'ultimo comando cd."
+print "OSTYPE" "Nome del sistema operativo."
+print_path
+print_pipe_status
+
 
 
                                             
