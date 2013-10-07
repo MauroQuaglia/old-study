@@ -73,8 +73,14 @@ print "OLDPWD" "Directory in cui vi trovavate prima dell'ultimo comando cd."
 print "OSTYPE" "Nome del sistema operativo."
 print_path
 print_pipe_status
-
-
+print "PPID" "Id di processo del processo genitore."
+print "PROMPT_COMMAND" "Variabile che contiene un comando che deve essere eseguito immediatamente prima della visualizzazione del prompt primario."
+print "PS1" "Prompt principale, quello che compare sulla riga di comando."
+print "PS2" "Prompt secondario."
+print "PS3" "Prompt di terzo livello."
+print "PS4" "Prompt di quarto livello."
+print "PWD" "Directory corrente."
+print "REPLY" "Variabile preimpostata quando non ne viene fornita alcuna a read."
 
                                             
                                             
