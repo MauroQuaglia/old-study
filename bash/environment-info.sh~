@@ -87,7 +87,7 @@ print "SHLVL" "Livello della shell, profondità di annidamento di Bash."
 print "TMOUT" "Il prompt della shell termina dopo TMOUT secondi."      
 print "UID" "Numero ID dell'utente. Identificativo dell'utente anche nel caso abbia assunto temporaneamente un'altra identità."
 
-echo "--- altre variabili non builtin---"        
+echo "--- altre variabili non builti---"        
 print "ENV" "ENV"
 print "LOGNAME" "LOGNAME"
 print "MAIL" "MAIL"
