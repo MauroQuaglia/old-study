@@ -1,3 +1,5 @@
+echo "$-"
+
 RED='\e[0;31m'
 NO_COLOR='\e[0m'
 
