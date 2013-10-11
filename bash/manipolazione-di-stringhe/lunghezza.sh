@@ -1,5 +1,5 @@
-STRINGA="a b c"
+STRING="a b c"
 
-echo ${#STRINGA}
-echo `expr length "$STRINGA"`
-echo `expr "$STRINGA" : '.*'`
+echo ${#STRING}
+echo `expr length "$STRING"`
+echo `expr "$STRING" : '.*'`

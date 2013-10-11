@@ -1,5 +1,5 @@
-# Inserische una riga vuota dopo una riga più corta di 50 caratteri.
-# Utilizzo: $0 <FILE-DI-TESTO
+# Inserische una riga vuota dopo una riga più corta di 5 caratteri.
+# Utilizzo: $0 < FILE-DI-TESTO
 
 MAX_LENGTH=5
 
