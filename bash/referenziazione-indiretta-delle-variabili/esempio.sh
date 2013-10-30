@@ -1,8 +1,17 @@
-# Ipotizziamo che il valore di una variabile sia il nome di una seconda variabile. 
-
-lettera="Z"
 a=lettera
+lettera=z
 
-echo "${lettera}"
+# Referenziazione diretta.
+echo "${a}" # lettera
+echo "${lettera}" # z
 
-#In effetti questo è possibile e prende il nome di referenziazione indiretta. Viene utilizzata l'insolita notazione eval var1=\$$var2.
+# Referenziazione indiretta.
+eval a=\$$a # Dico ad a di seguire tutto il percorso. a -> lettera -> z
+echo "${a}" # z
+
+# Oppure basta mettere il ! davanti al nome della variabile e la facciamo finita!
+# echo "${!a}" # z
+
+
+
+
