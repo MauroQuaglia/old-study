@@ -6,5 +6,5 @@ declare -i count=0
 while [[ count -lt $1 ]]
 do
  echo "$RANDOM"
- count=count+1
+ count+=1
 done
