@@ -1,0 +1,61 @@
+((a=23))
+
+echo "a (valore iniziale) = $a"
+
+((a++))
+echo "a (dopo a++) = $a"
+
+((a--))
+echo "a (dopo a--) = $a"
+
+((++a))
+echo "a (dopo ++a) = $a"
+
+((--a))
+echo "a (dopo --a) = $a"
+
+# anche con let funziona:
+let b=23
+echo "b (valore iniziale) = $b"
+
+((b++))
+echo "b (dopo b++) = $b"
+
+((b--))
+echo "b (dopo b--) = $b"
+
+((++b))
+echo "b (dopo ++b) = $b"
+
+((--b))
+echo "b (dopo --b) = $b"
+
+
+n=1; let --n && echo "Vero A" #  F(0) && V = F 
+n=1; let n-- && echo "Vero B" #  V(1) && V = V
+
+
+let x=a<10?0:1
+echo "Se a < 10, allora x = 0, altrimenti x = 1."
+echo "x = $x "        # Si!
+
+echo
+
+
+# ---------------------
+# Attenzione, sorpresa!
+# ---------------------
+#  Evidentemente Chet Ramey ha contrabbandato un mucchio di costrutti in 
+#+ stile C, non documentati, in Bash (in realtà adattati da ksh, in 
+#+ quantità notevole).
+#  Nella documentazione Bash, Ramey chiama ((...)) matematica di shell,
+#+ ma ciò va ben oltre l'aritmetica.
+#  Mi spiace, Chet, ora il segreto è svelato.
+
+# Vedi anche l'uso del costrutto ((...)) nei cicli "for" e "while".
+
+# Questo costrutto funziona solo nella versione  2.04 e successive, di Bash.
+
+exit 0
+
+
