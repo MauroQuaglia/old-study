@@ -3,7 +3,7 @@ do
  if [[ -h "$file" ]]; then
   echo "$file"
  fi
-done
+done > link.txt # Posso anche redirigere l'output in un file.
 
 echo "-------------------------"
 
@@ -16,3 +16,9 @@ echo "-------------------------"
 
 # Sarebbe sufficiente questo.
 echo "$(find -type l)"
+
+
+
+
+
+
