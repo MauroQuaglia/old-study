@@ -1,0 +1,45 @@
+let a=0
+for x in 1 2 3 4 5; do
+ echo "x=[$x]"
+ while [[ $a -le 2 ]]; do
+  echo "a=[$a]"
+  ((a++)) 
+ done
+done
+
+
+
+
+
+
+
+
+#!/bin/bash
+# nested-loop.sh: Cicli "for" annidati.
+
+esterno=1             # Imposta il contatore del ciclo esterno.
+
+# Inizio del ciclo esterno.
+for a in 1 2 3 4 5
+do
+  echo "Passo $esterno del ciclo esterno."
+  echo "---------------------"
+  interno=1           # Imposta il contatore del ciclo interno.
+
+  # ==============================================================
+  # Inizio del ciclo interno.
+  for b in 1 2 3 4 5
+  do
+    echo "Passo $interno del ciclo interno."
+    let "interno+=1"  # Incrementa il contatore del ciclo interno.
+  done
+  # Fine del ciclo interno.
+  # ==============================================================
+
+  let "esterno+=1"    #  Incrementa il contatore del ciclo esterno.
+  echo                #  Spaziatura tra gli output dei successivi
+                      #+ passi del ciclo esterno.
+done
+# Fine del ciclo esterno.
+
+exit 0
