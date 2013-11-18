@@ -1,8 +1,8 @@
 let i=0
-while [[ $i -le 100 ]]; do
+while [[ $i -lt 10 ]]; do
+ ((i++))
  if [[ $i -eq $1 ]]; then 
-  break
+  continue
  fi
  echo "[$i]"
- ((i++))
 done
