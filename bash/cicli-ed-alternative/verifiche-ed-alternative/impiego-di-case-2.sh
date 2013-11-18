@@ -1,0 +1,8 @@
+echo "Premi un tasto e poi invio..."
+read Tasto
+case "$Tasto" in
+  [[:lower:]]   ) echo "Lettera minuscola";;
+  [[:upper:]]   ) echo "Lettera maiuscola";;
+  [0-9]         ) echo "Cifra";;
+  *             ) echo "Punteggiatura, spaziatura, o altro";;
+esac
