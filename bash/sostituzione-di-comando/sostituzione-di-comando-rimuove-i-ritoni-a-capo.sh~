@@ -1,9 +1,0 @@
-# cd "`pwd`"  # Questo dovrebbe funzionare sempre.
-# Tuttavia...
-						  
-mkdir 'a-capo
-'
-cd 'a-capo
-'
-echo `pwd`
-
