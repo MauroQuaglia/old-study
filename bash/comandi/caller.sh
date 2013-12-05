@@ -7,7 +7,7 @@ name2()
 name()
 {
  echo "------"
- caller 
+ caller 0
  echo "------"
 }
 
