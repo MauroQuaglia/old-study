@@ -1,0 +1,3 @@
+echo "Questa riga usa il builtin \"echo\"."
+
+/bin/echo "Questa riga usa il comando di sistema  /bin/echo."

@@ -1,0 +1,20 @@
+pid=$$
+PIDA=$(pidof $0)
+
+echo "$pid"
+echo "$PIDA"
+
+echo "------------"
+
+
+pids+=($pid)
+
+let pids_number=${#pids[*]}
+
+echo "pid corrente: [$pid]"
+echo "numero di pid: [$pids_number]"
+
+sleep 3
+
+sh $0
+
