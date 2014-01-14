@@ -7,8 +7,7 @@ class CheckOut
   end
 
   def scan(item)
-    @total += @rules[item].first
-    @rules[item].rotate!
+    @total += @rules[item].rotate!.last
   end
 
 end
