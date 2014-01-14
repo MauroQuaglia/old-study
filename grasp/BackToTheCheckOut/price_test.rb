@@ -3,14 +3,12 @@ require_relative 'check_out'
 
 class PriceTest < Test::Unit::TestCase
 
-  def test_totals_1
+  def test_totals
     assert_equal(0, price(''))
     assert_equal(50, price('A'))
     assert_equal(80, price('AB'))
     assert_equal(115, price('CDBA'))
-  end
 
-  def test_totals_2
     assert_equal(100, price('AA'))
     assert_equal(130, price('AAA'))
     assert_equal(180, price('AAAA'))
