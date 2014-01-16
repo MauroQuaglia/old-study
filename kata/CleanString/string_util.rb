@@ -1,37 +1,23 @@
 class StringUtil
+  BLANK = ' '
 
   def initialize(value)
     @value = value
   end
 
-  def cleaned
-    result = ''
-    count=1
-    chars=@value.split(//)
+  def normalizeSpaces
+    result = []
 
-    while count < chars.size
-      if chars[count] == ' ' && chars[count-1] == ' '
-        next
-      end
-
-      result += chars[count]
-
-
-      count+=1
+    last=nil
+    @value.split(//).each do |current|
+      result.push(current) if (last != BLANK || current != BLANK)
+      last=current
     end
 
+    result.shift if result.first == BLANK
+    result.pop if result.last == BLANK
 
+    result.join
   end
-
-
-  #def cleaned
-  #  result = ''
-  #  @value.split(//).each_with_index do |char, index|
-  #
-  #    puts "char: #{char} -- index: #{index}"
-  #  end
-  #
-  #
-  #end
 
 end
