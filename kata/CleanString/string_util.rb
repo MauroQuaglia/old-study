@@ -1,23 +1,18 @@
 class StringUtil
+  EMPTY = ''
   BLANK = ' '
 
-  def initialize(value)
-    @value = value
-  end
+  def normalizeSpaces(value)
+    result = EMPTY
 
-  def normalizeSpaces
-    result = []
-
-    last=nil
-    @value.split(//).each do |current|
-      result.push(current) if (last != BLANK || current != BLANK)
-      last=current
+    for i in (0...value.length)
+      result += value[i] if (value[i] != BLANK || value[i+1] != BLANK)
     end
 
-    result.shift if result.first == BLANK
-    result.pop if result.last == BLANK
+    result[0]=EMPTY if result[0] == BLANK
+    result[result.length-1]=EMPTY if result[result.length-1] == BLANK
 
-    result.join
+    result
   end
 
 end
