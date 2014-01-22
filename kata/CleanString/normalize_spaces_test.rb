@@ -12,14 +12,14 @@ class NominalizeSpacesTest < Test::Unit::TestCase
     assert_normalized('a', 'a')
   end
 
-  def test_normalize_two_character_string
+  def test_normalize_two_characters_string
     assert_normalized('', '  ')
     assert_normalized('a', ' a')
     assert_normalized('a', 'a ')
     assert_normalized('aa', 'aa')
   end
 
-  def test_normalize_three_character_string
+  def test_normalize_three_characters_string
     assert_normalized('', '   ')
     assert_normalized('a', '  a')
     assert_normalized('a', ' a ')
@@ -30,7 +30,7 @@ class NominalizeSpacesTest < Test::Unit::TestCase
     assert_normalized('aaa', 'aaa')
   end
 
-  def test_normalize_four_character_string
+  def test_normalize_four_characters_string
     assert_normalized('a a', 'a  a')
   end
 
