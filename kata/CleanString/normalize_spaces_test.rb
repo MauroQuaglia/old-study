@@ -1,5 +1,5 @@
 require 'test-unit'
-require_relative 'string_util'
+require_relative 'string_util1'
 
 class NominalizeSpacesTest < Test::Unit::TestCase
 
@@ -43,7 +43,9 @@ class NominalizeSpacesTest < Test::Unit::TestCase
   private
 
   def assert_normalized(expected, original)
-    assert_equal(expected, StringUtil.new.normalizeSpaces(original))
+    assert_equal(expected.dup, StringUtil1.new.normalizeSpaces1(original.dup))
+    assert_equal(expected.dup, StringUtil1.new.normalizeSpaces2(original.dup))
+    assert_equal(expected.dup, StringUtil1.new.normalizeSpaces3(original.dup))
   end
 
 end

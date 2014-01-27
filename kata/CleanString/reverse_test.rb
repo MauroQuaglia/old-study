@@ -1,5 +1,5 @@
 require 'test-unit'
-require_relative 'string_util'
+require_relative 'string_util2'
 
 class ReverseTest < Test::Unit::TestCase
 
@@ -28,7 +28,11 @@ class ReverseTest < Test::Unit::TestCase
   private
 
   def assert_reverse(expected, original)
-    assert_equal(expected, StringUtil.new.reverse1(original))
+    assert_equal(expected.dup, StringUtil2.new.reverse1(original.dup))
+    assert_equal(expected.dup, StringUtil2.new.reverse2(original.dup))
+    assert_equal(expected.dup, StringUtil2.new.reverse3(original.dup))
+    assert_equal(expected.dup, StringUtil2.new.reverse4(original.dup))
+    assert_equal(expected.dup, StringUtil2.new.reverse5(original.dup))
   end
 
 end
