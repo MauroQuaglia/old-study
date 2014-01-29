@@ -1,7 +1,6 @@
 require 'test-unit'
 require_relative '../checkout'
-require_relative '../product'
-require_relative '../category/book'
+require_relative '../categories'
 
 class CheckoutTest < Test::Unit::TestCase
 
@@ -10,21 +9,28 @@ class CheckoutTest < Test::Unit::TestCase
   end
 
   def test_receipt_empty_when_no_products
-    assert_equal 'Sales Taxes: 0.00\nTotal: 0.00', @checkout.receipt
+    assert_equal '', @checkout.receipt
   end
 
-  # da correggere... mi sono dimenticato il totale
   def test_one_not_imported_product_without_tax
-    @checkout.scan Product.new(Book.new, 'book', 12.49)
+    @checkout.scan Book.new('book', 12.49)
 
-    assert_equal '1 book : 12.49\nSales Taxes: 0.00\nTotal: 0.00', @checkout.receipt
+    assert_equal '1 book : 12.49\nSales Taxes: 0.00\nTotal: 12.49', @checkout.receipt
   end
 
   def test_one_not_imported_product_with_tax
-    @checkout.scan Product.new(Cosmetics.new, 'bottle of perfume', 18.99)
+    @checkout.scan Cosmetic.new('bottle of perfume', 54.65)
 
-    assert_equal '1 bottle of perfume : 18.99\nSales Taxes: 1.899\nTotal: 20.889', @checkout.receipt
+    assert_equal '1 bottle of perfume : 54.65\nSales Taxes: 5.46\nTotal: 60.11', @checkout.receipt
   end
+
+  def test_one_imported_product_without_tax
+    # una cosa di questo tipo
+    @checkout.scan Imported.new Book.new('book', 12.49)
+
+    assert_equal '1 book : 12.49\nSales Taxes: 0.00\nTotal: 12.49', @checkout.receipt
+  end
+
 
   def test_prova
 

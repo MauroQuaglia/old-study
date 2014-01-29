@@ -9,17 +9,18 @@ class Checkout
   end
 
   def receipt
-    taxes = '%.2f' % 0
-    total = '%.2f' % 0
+    return '' if @products.empty?
 
     receipt=''
-    for product in @products
-      receipt+=product.to_s + "\\n"
-    end
+    total=0
 
-    #inizialmente posso fare un ciclo per tutte poi vediamo(receipt, taxes, total)
+    product = @products[0]
 
-    receipt += "Sales Taxes: #{taxes}\\n" + "Total: #{total}"
+    receipt+=product.to_s + "\\n"
+
+    total+=product.cost
+
+    receipt += "Sales Taxes: #{'%.2f' % product.taxes}\\n" + "Total: #{'%.2f' % total}"
     receipt
   end
 

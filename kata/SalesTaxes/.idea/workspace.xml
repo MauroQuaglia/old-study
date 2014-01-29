@@ -28,10 +28,24 @@
     <list default="true" id="96770ad3-8063-434b-9314-a7af473f2c57" name="Default" comment="" />
     <ignored path="SalesTaxes.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/checkout_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390925615227" ignored="false" />
-    <file path="/checkout.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390925930188" ignored="false" />
-    <file path="/book.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390923116586" ignored="false" />
-    <file path="/product.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390925763531" ignored="false" />
+    <file path="/checkout_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390996327298" ignored="false" />
+    <file path="/checkout.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390995796433" ignored="false" />
+    <file path="/book.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390995919298" ignored="false" />
+    <file path="/product.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390996115454" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/app/views/shared/_cookie_banner.es.html.erb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989790711" ignored="false" />
+    <file path="/_cookie_banner.es.html.erb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989790711" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/public/js/javascript.js" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390984426741" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/public/js/javascript-min.js" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390984426741" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/test/integration/cookie_banner_acceptance_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989657638" ignored="false" />
+    <file path="/cookie_banner_acceptance_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989269114" ignored="false" />
+    <file path="/a.dummy" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989584478" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/test/helpers/capybara_test_helper.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390988507863" ignored="false" />
+    <file path="/capybara_test_helper.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390988507863" ignored="false" />
+    <file path="/trova_prezzi_page.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390988628207" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/test/page_objects/trova_prezzi_page.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390988628207" ignored="false" />
+    <file path="/cosmetic.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390993637047" ignored="false" />
+    <file path="/application.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390995067225" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/config/application.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390995067225" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +59,18 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="checkout.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="checkout.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="81" selection-start="343" selection-end="343" vertical-scroll-proportion="0.73906">
+            <state line="22" column="50" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,25 +79,7 @@
       <file leaf-file-name="checkout_test.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/checkout_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="24" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cosmetics.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/category/cosmetics.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="book.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/category/book.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="7" selection-start="13" selection-end="66" vertical-scroll-proportion="0.0">
+            <state line="27" column="29" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,7 +88,16 @@
       <file leaf-file-name="product.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/product.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="12" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+            <state line="17" column="12" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="categories.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/categories.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="6" selection-start="136" selection-end="136" vertical-scroll-proportion="0.3106796">
               <folding />
             </state>
           </provider>
@@ -105,11 +115,13 @@
       <list>
         <option value="$PROJECT_DIR$/checkout_test.rb" />
         <option value="$PROJECT_DIR$/Test/checkout_test.rb" />
-        <option value="$PROJECT_DIR$/category/book.rb" />
         <option value="$PROJECT_DIR$/category/cosmetics.rb" />
-        <option value="$PROJECT_DIR$/test/checkout_test.rb" />
-        <option value="$PROJECT_DIR$/product.rb" />
+        <option value="$PROJECT_DIR$/category/cosmetic.rb" />
+        <option value="$PROJECT_DIR$/category/book.rb" />
+        <option value="$PROJECT_DIR$/book.rb" />
         <option value="$PROJECT_DIR$/checkout.rb" />
+        <option value="$PROJECT_DIR$/product.rb" />
+        <option value="$PROJECT_DIR$/test/checkout_test.rb" />
       </list>
     </option>
   </component>
@@ -164,20 +176,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalesTaxes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalesTaxes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="category" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -193,14 +191,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/category" />
       <recent name="$PROJECT_DIR$/Test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Test" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_one_not_imported_product_without_tax">
+  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.CheckoutTest">
     <configuration default="false" name="test_prova" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="SalesTaxes" />
@@ -321,6 +320,36 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="test_one_not_imported_product_with_tax" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="SalesTaxes" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/test" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/test/checkout_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_one_not_imported_product_with_tax" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="" />
@@ -397,18 +426,20 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_prova" />
       <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutTest" />
       <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_receipt_empty_when_no_products" />
       <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_not_imported_product_without_tax" />
+      <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_not_imported_product_with_tax" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_not_imported_product_without_tax" />
-        <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutTest" />
-        <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_receipt_empty_when_no_products" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutTest" />
+        <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_not_imported_product_with_tax" />
+        <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_not_imported_product_without_tax" />
         <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_prova" />
+        <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_receipt_empty_when_no_products" />
       </list>
     </recent_temporary>
   </component>
@@ -427,19 +458,19 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25262576" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25815368" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -501,6 +532,34 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/categories.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="7" selection-start="13" selection-end="66" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="81" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/checkout_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="24" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/categories.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="7" selection-start="13" selection-end="66" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/checkout.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
@@ -515,51 +574,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/category/book.rb">
+    <entry file="file://$PROJECT_DIR$/categories.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="5" selection-start="12" selection-end="66" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/product.rb">
+    <entry file="file://$PROJECT_DIR$/checkout.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/category/book.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="13" selection-end="66" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/category/cosmetics.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+        <state line="22" column="50" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/product.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+        <state line="17" column="12" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/checkout_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+        <state line="27" column="29" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout.rb">
+    <entry file="file://$PROJECT_DIR$/categories.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="81" selection-start="343" selection-end="343" vertical-scroll-proportion="0.73906">
+        <state line="8" column="6" selection-start="136" selection-end="136" vertical-scroll-proportion="0.3106796">
           <folding />
         </state>
       </provider>
