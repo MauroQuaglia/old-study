@@ -1,6 +1,7 @@
 require 'test-unit'
 require_relative '../checkout'
 require_relative '../categories'
+require_relative '../import'
 
 class CheckoutTest < Test::Unit::TestCase
 
@@ -25,10 +26,9 @@ class CheckoutTest < Test::Unit::TestCase
   end
 
   def test_one_imported_product_without_tax
-    # una cosa di questo tipo
-    @checkout.scan Imported.new Book.new('book', 12.49)
+    @checkout.scan Import.new Book.new('book', 12.49)
 
-    assert_equal '1 book : 12.49\nSales Taxes: 0.00\nTotal: 12.49', @checkout.receipt
+    assert_equal '1 book : 12.49\nSales Taxes: 0.62\nTotal: 13.11', @checkout.receipt
   end
 
 
