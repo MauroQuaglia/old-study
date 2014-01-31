@@ -7,12 +7,8 @@ class Product
     @rate = rate
   end
 
-  def cost
-    @price + taxes
-  end
-
   def taxes
-    @price * @rate / 100
+    @price * @rate * 0.01
   end
 
 end

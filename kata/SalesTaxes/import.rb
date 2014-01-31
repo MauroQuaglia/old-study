@@ -13,10 +13,6 @@ class Import
     @product.price
   end
 
-  def cost
-    @product.cost + duty
-  end
-
   def taxes
     @product.taxes + duty
   end
@@ -24,7 +20,7 @@ class Import
   private
 
   def duty
-    @product.price * @rate / 100
+    @product.price * @rate * 0.01
   end
 
 end

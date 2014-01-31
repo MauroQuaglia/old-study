@@ -6,34 +6,43 @@ require_relative '../import'
 class CheckoutTest < Test::Unit::TestCase
 
   def setup
-    @checkout = Checkout.new
+    @receipt = Checkout.new
   end
 
   def test_receipt_empty_when_no_products
-    assert_equal '', @checkout.receipt
+    assert_equal 'Sales Taxes: 0.00\\nTotal: 0.00', @receipt.receipt
   end
 
   def test_one_not_imported_product_without_tax
-    @checkout.scan Book.new('book', 12.49)
+    @receipt.scan Book.new('book', 10.00)
 
-    assert_equal '1 book : 12.49\nSales Taxes: 0.00\nTotal: 12.49', @checkout.receipt
+    assert_equal '1 book : 10.00\nSales Taxes: 0.00\nTotal: 10.00', @receipt.receipt
   end
 
   def test_one_not_imported_product_with_tax
-    @checkout.scan Cosmetic.new('bottle of perfume', 54.65)
+    @receipt.scan Cosmetic.new('bottle of perfume', 10.00)
 
-    assert_equal '1 bottle of perfume : 54.65\nSales Taxes: 5.46\nTotal: 60.11', @checkout.receipt
+    assert_equal '1 bottle of perfume : 10.00\nSales Taxes: 1.00\nTotal: 11.00', @receipt.receipt
   end
 
   def test_one_imported_product_without_tax
-    @checkout.scan Import.new Book.new('book', 12.49)
+    @receipt.scan Import.new Book.new('book', 10.00)
 
-    assert_equal '1 book : 12.49\nSales Taxes: 0.62\nTotal: 13.11', @checkout.receipt
+    assert_equal '1 book : 10.00\nSales Taxes: 0.50\nTotal: 10.50', @receipt.receipt
   end
 
+  def test_one_imported_product_with_tax
+    @receipt.scan Import.new Cosmetic.new('bottle of perfume', 10.00)
 
-  def test_prova
-
+    assert_equal '1 bottle of perfume : 10.00\nSales Taxes: 1.50\nTotal: 11.50', @receipt.receipt
   end
+
+  def test_rouded_tax
+    @receipt.scan Import.new Book.new('book', 10.07)
+
+    assert_equal '1 book : 10.07\nSales Taxes: 0.55\nTotal: 10.62', @receipt.receipt
+  end
+
 
 end
+
