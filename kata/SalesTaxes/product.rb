@@ -1,5 +1,5 @@
 class Product
-  attr_reader :price
+  attr_reader :description, :price
 
   def initialize(description, price, rate)
     @description = description
@@ -11,12 +11,8 @@ class Product
     @price + taxes
   end
 
-  def to_s
-    "1 #{@description} : #{@price}"
-  end
-
   def taxes
-    @rate == 0 ? @rate : (@price * @rate) / 100
+    @price * @rate / 100
   end
 
 end

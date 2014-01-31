@@ -1,22 +1,30 @@
 class Import
-  # forse si può usare il delegate per chiamare la base
 
   def initialize(product)
     @product = product
     @rate = 5
   end
 
+  def description
+    @product.description
+  end
+
+  def price
+    @product.price
+  end
+
   def cost
-    @product.cost + (@product.price * @rate) / 100
+    @product.cost + duty
   end
 
   def taxes
-    @product.taxes + (@product.price * @rate) / 100
+    @product.taxes + duty
   end
 
-  def to_s
-    @product.to_s
-  end
+  private
 
+  def duty
+    @product.price * @rate / 100
+  end
 
 end
