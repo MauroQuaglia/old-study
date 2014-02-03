@@ -1,23 +1,24 @@
-require_relative 'rounded'
+require_relative 'rounding'
 
 class Checkout
 
-  def initialize(decimals = 2)
-    @receipt = ''
+  def initialize(decimals = 2, rounding, receipt)
+    @sensibility = "%.#{decimals}f"
+    @rounding = rounding
+    @receipt = receipt
     @total= 0
     @taxes=0
-    @sensibility = "%.#{decimals}f"
   end
 
   def scan(product)
-    @receipt += "1 #{product.description} : #{value_for(product.price)}\\n"
-    @taxes += Rounded.new.up product.taxes
+    @taxes += @rounding.up product.taxes
     @total += product.price + @taxes
 
+    @receipt.add(product.description, value_for(product.price))
   end
 
   def receipt
-    @receipt += "Sales Taxes: #{value_for(@taxes)}\\n" + "Total: #{value_for(@total)}"
+    @receipt.print value_for(@taxes), value_for(@total)
   end
 
   private
