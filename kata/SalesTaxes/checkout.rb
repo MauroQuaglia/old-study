@@ -15,7 +15,9 @@ class Checkout
   end
 
   def receipt
-    @receipt.print @taxes, @total
+    @receipt.add_taxes @taxes
+    @receipt.add_total @total
+    @receipt.print
   end
 
   private

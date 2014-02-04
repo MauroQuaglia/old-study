@@ -3,6 +3,7 @@ require_relative '../receipt'
 require_relative '../checkout'
 require_relative '../categories'
 require_relative '../import'
+require_relative '../rounding'
 
 class CheckoutAcceptanceTest < Test::Unit::TestCase
 

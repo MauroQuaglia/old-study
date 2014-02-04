@@ -1,20 +1,24 @@
 class FakeReceipt
-  attr_reader :description, :price, :taxes, :total
+  attr_reader :description, :taxes, :total
 
   def initialize
     @description=''
-    @price=-1
     @taxes=-1
     @total=-1
   end
 
   def add(description, price)
     @description = description
-    @price = price
   end
 
-  def print(taxes, total)
+  def add_taxes(taxes)
     @taxes = taxes
+  end
+
+  def add_total(total)
     @total = total
+  end
+
+  def print
   end
 end

@@ -9,8 +9,16 @@ class Receipt
     @receipt += "1 #{description}: #{value_for(price)}\\n"
   end
 
-  def print(taxes, total)
-    @receipt += "Sales Taxes: #{value_for(taxes)}\\n" + "Total: #{value_for(total)}"
+  def add_taxes(taxes)
+    @receipt += "Sales Taxes: #{value_for(taxes)}\\n"
+  end
+
+  def add_total(total)
+    @receipt += "Total: #{value_for(total)}"
+  end
+
+  def print
+    @receipt
   end
 
   private
