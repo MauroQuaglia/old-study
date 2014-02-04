@@ -1,9 +1,6 @@
-require_relative 'rounding'
-
 class Checkout
 
-  def initialize(decimals = 2, rounding, receipt)
-    @sensibility = "%.#{decimals}f"
+  def initialize(rounding, receipt)
     @rounding = rounding
     @receipt = receipt
     @total= 0
@@ -11,20 +8,20 @@ class Checkout
   end
 
   def scan(product)
-    @taxes += @rounding.up product.taxes
-    @total += product.price + @taxes
+    @taxes += @rounding.up(product.taxes)
+    @total += total_price(product)
 
-    @receipt.add(product.description, value_for(product.price))
+    @receipt.add(product.description, total_price(product))
   end
 
   def receipt
-    @receipt.print value_for(@taxes), value_for(@total)
+    @receipt.print @taxes, @total
   end
 
   private
 
-  def value_for(number)
-    @sensibility % number
+  def total_price(product)
+    product.price + @rounding.up(product.taxes)
   end
 
 end

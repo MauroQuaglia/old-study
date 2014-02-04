@@ -28,17 +28,17 @@
     <list default="true" id="96770ad3-8063-434b-9314-a7af473f2c57" name="Default" comment="" />
     <ignored path="SalesTaxes.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/checkout_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391435350115" ignored="false" />
-    <file path="/checkout.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391435835731" ignored="false" />
+    <file path="/checkout_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391513260720" ignored="false" />
+    <file path="/checkout.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391513377440" ignored="false" />
     <file path="/book.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390995919298" ignored="false" />
     <file path="/product.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391184013447" ignored="false" />
-    <file path="$USER_HOME$/ruby/trovaprezzi/app/views/shared/_cookie_banner.es.html.erb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989790711" ignored="false" />
-    <file path="/_cookie_banner.es.html.erb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989790711" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/app/views/shared/_cookie_banner.es.html.erb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391442649734" ignored="false" />
+    <file path="/_cookie_banner.es.html.erb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391442649734" ignored="false" />
     <file path="$USER_HOME$/ruby/trovaprezzi/public/js/javascript.js" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391176064732" ignored="false" />
     <file path="$USER_HOME$/ruby/trovaprezzi/public/js/javascript-min.js" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390984426741" ignored="false" />
-    <file path="$USER_HOME$/ruby/trovaprezzi/test/integration/cookie_banner_acceptance_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989657638" ignored="false" />
-    <file path="/cookie_banner_acceptance_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390989269114" ignored="false" />
-    <file path="/a.dummy" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391185022716" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/test/integration/cookie_banner_acceptance_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391443458570" ignored="false" />
+    <file path="/cookie_banner_acceptance_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391443458570" ignored="false" />
+    <file path="/a.dummy" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391511426005" ignored="false" />
     <file path="$USER_HOME$/ruby/trovaprezzi/test/helpers/capybara_test_helper.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390988507863" ignored="false" />
     <file path="/capybara_test_helper.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390988507863" ignored="false" />
     <file path="/trova_prezzi_page.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390988628207" ignored="false" />
@@ -47,16 +47,19 @@
     <file path="/application.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390995067225" ignored="false" />
     <file path="$USER_HOME$/ruby/trovaprezzi/config/application.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1390995067225" ignored="false" />
     <file path="/imported.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391012072210" ignored="false" />
-    <file path="/temp.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391184723142" ignored="false" />
-    <file path="/import.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391169060602" ignored="false" />
-    <file path="/receipt.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391167884428" ignored="false" />
-    <file path="/receipt_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391434269874" ignored="false" />
+    <file path="/temp.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391443939662" ignored="false" />
+    <file path="/import.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391512965888" ignored="false" />
+    <file path="/receipt.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391443648183" ignored="false" />
+    <file path="/receipt_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391513227680" ignored="false" />
     <file path="/Dummy.txt" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391176094068" ignored="false" />
     <file path="/rouded_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391180510088" ignored="false" />
-    <file path="/rounding_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391184777656" ignored="false" />
-    <file path="/checkout_acceptance_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391435660980" ignored="false" />
-    <file path="/categories.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391185172583" ignored="false" />
+    <file path="/rounding_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391513723968" ignored="false" />
+    <file path="/checkout_acceptance_test.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391513071295" ignored="false" />
+    <file path="/categories.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391513304224" ignored="false" />
     <file path="/fake_receipt.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391434645665" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/app/helpers/categories_helper.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391439803551" ignored="false" />
+    <file path="$USER_HOME$/ruby/trovaprezzi/test/page_objects/trova_prezzi_page_objects.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391442659574" ignored="false" />
+    <file path="/trova_prezzi_page_objects.rb" changelist="96770ad3-8063-434b-9314-a7af473f2c57" time="1391442551097" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,37 +81,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="checkout_acceptance_test.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/checkout_acceptance_test.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testrunner.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/testunit/test/unit/ui/teamcity/testrunner.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="0" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="receipt.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/receipt.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="categories.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/categories.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
+            <state line="2" column="10" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -117,16 +93,52 @@
       <file leaf-file-name="checkout.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
+            <state line="12" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout_test.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/checkout_test.rb">
+      <file leaf-file-name="import.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/import.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="261" selection-end="261" vertical-scroll-proportion="0.3883495">
+            <state line="10" column="4" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/product.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="receipt.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/receipt.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="2" selection-start="201" selection-end="201" vertical-scroll-proportion="0.43349755">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rounding_test.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/rounding_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="receipt_test.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/receipt_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,16 +169,16 @@
         <option value="$PROJECT_DIR$/rouded.rb" />
         <option value="$PROJECT_DIR$/test/rouded_test.rb" />
         <option value="$PROJECT_DIR$/test/rounded_test.rb" />
-        <option value="$PROJECT_DIR$/import.rb" />
         <option value="$PROJECT_DIR$/product.rb" />
-        <option value="$PROJECT_DIR$/receipt.rb" />
-        <option value="$PROJECT_DIR$/test/rounding_test.rb" />
-        <option value="$PROJECT_DIR$/test/receipt_test.rb" />
         <option value="$PROJECT_DIR$/test/fake_receipt.rb" />
+        <option value="$PROJECT_DIR$/receipt.rb" />
+        <option value="$PROJECT_DIR$/import.rb" />
+        <option value="$PROJECT_DIR$/test/checkout_acceptance_test.rb" />
+        <option value="$PROJECT_DIR$/test/receipt_test.rb" />
         <option value="$PROJECT_DIR$/test/checkout_test.rb" />
         <option value="$PROJECT_DIR$/categories.rb" />
-        <option value="$PROJECT_DIR$/test/checkout_acceptance_test.rb" />
         <option value="$PROJECT_DIR$/checkout.rb" />
+        <option value="$PROJECT_DIR$/test/rounding_test.rb" />
       </list>
     </option>
   </component>
@@ -242,11 +254,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="Errors" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="Errors" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -259,7 +271,67 @@
       <recent name="$PROJECT_DIR$/Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.CheckoutTest">
+  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.RoundingTest">
+    <configuration default="false" name="All tests in: test" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="SalesTaxes" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/test" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$PROJECT_DIR$/test" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/{*_test,test_*}.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_one_imported_product_with_tax" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="SalesTaxes" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/test" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/test/checkout_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_one_imported_product_with_tax" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="CheckoutTest" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="SalesTaxes" />
@@ -290,7 +362,7 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="test_one_not_imported_product_without_tax" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+    <configuration default="false" name="test_one_imported_product_without_tax" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="SalesTaxes" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -312,7 +384,7 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/test/checkout_test.rb" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_one_not_imported_product_without_tax" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_one_imported_product_without_tax" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
@@ -320,7 +392,7 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="test_mixed_products_1" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+    <configuration default="false" name="RoundingTest" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="SalesTaxes" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -340,76 +412,12 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/test/checkout_acceptance_test.rb" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_mixed_products_1" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CheckoutAcceptanceTest" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
-      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
-      <module name="SalesTaxes" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/test" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/test/checkout_acceptance_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/test/rounding_test.rb" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="All specs in: test" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="SalesTaxes" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/test" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$PROJECT_DIR$/test" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -491,19 +499,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutTest" />
-      <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_not_imported_product_without_tax" />
-      <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_mixed_products_1" />
-      <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutAcceptanceTest" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.All specs in: test" />
+      <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.All tests in: test" />
+      <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_imported_product_with_tax" />
+      <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutTest" />
+      <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_imported_product_without_tax" />
+      <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.RoundingTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutTest" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.All specs in: test" />
-        <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_mixed_products_1" />
-        <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutAcceptanceTest" />
-        <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_not_imported_product_without_tax" />
+        <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.RoundingTest" />
+        <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.All tests in: test" />
+        <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_imported_product_without_tax" />
+        <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.CheckoutTest" />
+        <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_one_imported_product_with_tax" />
       </list>
     </recent_temporary>
   </component>
@@ -524,12 +532,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27750137" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28081813" sideWeight="0.6625" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -596,13 +604,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/categories.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="13" selection-end="66" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/checkout_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="23" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
@@ -622,44 +623,56 @@
         <state line="179" column="0" selection-start="4855" selection-end="4855" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/rounding_test.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/testunit/test/unit/ui/teamcity/testrunner.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="152" selection-end="152" vertical-scroll-proportion="0.1800643">
+        <state line="92" column="0" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs20/kernel.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="391" column="8" selection-start="14982" selection-end="14982" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fake_receipt.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="3" selection-start="316" selection-end="316" vertical-scroll-proportion="0.488746">
+        <state line="19" column="3" selection-start="316" selection-end="316" vertical-scroll-proportion="0.74876845">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/receipt_test.rb">
+    <entry file="file://$PROJECT_DIR$/test/checkout_acceptance_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.2347826">
+        <state line="7" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/import.rb">
+    <entry file="file://$PROJECT_DIR$/test/checkout_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.3601286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.3601286">
+        <state line="31" column="36" selection-start="802" selection-end="802" vertical-scroll-proportion="0.47126436">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/categories.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
+        <state line="2" column="10" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/import.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -671,37 +684,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/receipt.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/testunit/test/unit/ui/teamcity/testrunner.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkout.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/checkout_acceptance_test.rb">
+    <entry file="file://$PROJECT_DIR$/test/rounding_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/checkout_test.rb">
+    <entry file="file://$PROJECT_DIR$/test/receipt_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="261" selection-end="261" vertical-scroll-proportion="0.3883495">
+        <state line="8" column="14" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/receipt.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="2" selection-start="201" selection-end="201" vertical-scroll-proportion="0.43349755">
           <folding />
         </state>
       </provider>

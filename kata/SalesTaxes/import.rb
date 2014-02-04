@@ -6,7 +6,9 @@ class Import
   end
 
   def description
-    @product.description
+    key='imported '
+    @product.description.slice!(key)
+    key + @product.description
   end
 
   def price
