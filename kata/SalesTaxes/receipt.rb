@@ -6,15 +6,15 @@ class Receipt
   end
 
   def add(description, price)
-    @receipt += "1 #{description}: #{value_for(price)}\\n"
+    write "1 #{description}: #{value_for(price)}"
   end
 
   def add_taxes(taxes)
-    @receipt += "Sales Taxes: #{value_for(taxes)}\\n"
+    write "Sales Taxes: #{value_for(taxes)}"
   end
 
   def add_total(total)
-    @receipt += "Total: #{value_for(total)}"
+    write "Total: #{value_for(total)}"
   end
 
   def print
@@ -22,6 +22,10 @@ class Receipt
   end
 
   private
+
+  def write(line)
+    @receipt += line + "\\n"
+  end
 
   def value_for(number)
     @sensibility % number
