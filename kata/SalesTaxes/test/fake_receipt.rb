@@ -21,4 +21,5 @@ class FakeReceipt
 
   def print
   end
+
 end

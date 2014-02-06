@@ -3,12 +3,12 @@ class Checkout
   def initialize(rounding, receipt)
     @rounding = rounding
     @receipt = receipt
-    @total= 0
-    @taxes=0
+    @total = 0
+    @taxes = 0
   end
 
   def scan(product)
-    @taxes += @rounding.up(product.taxes)
+    @taxes += round_taxes(product)
     @total += total_price(product)
 
     @receipt.add(product.description, total_price(product))
@@ -23,7 +23,11 @@ class Checkout
   private
 
   def total_price(product)
-    product.price + @rounding.up(product.taxes)
+    product.price + round_taxes(product)
+  end
+
+  def round_taxes(product)
+    @rounding.up(product.taxes)
   end
 
 end
