@@ -1,29 +1,43 @@
 require_relative 'product'
-require_relative 'import'
 
 class ProductFactory
   DUTY = 5
+  RATE = 10
 
   def initialize
-    @rate = Hash.new
-    @rate['book'] = 0
-    @rate['imported book'] = 5
-    @rate['bottle of perfume'] = 10
-    @rate['imported bottle of perfume'] = 15
+    @rate_key = ['perfume', 'music']
+    @duty_key = ['imported']
   end
 
   def create good
     values = good.split(' at ')
 
-    type = values[0]
-    type.slice! '1'
-    type = type.gsub(/\s+/, ' ').strip
+    description = description(values)
+    price = price(values)
+    tax = taxes(description.split(' '))
 
-    price = values[1].to_f
+    Product.new(description, price, tax)
+  end
 
-    Product.new(type, price, @rate[type])
+  private
 
+  def description(values)
+    description = values[0]
+    description.slice!('1 ')
+    description
+  end
+
+  def price(values)
+    values[1].to_f
+  end
+
+  def taxes(tokens)
+     add_tax(tokens, @rate_key, RATE) + add_tax(tokens, @duty_key, DUTY)
+  end
+
+  def add_tax(tokens, keys, rate)
+    tokens.each{|token| return rate if keys.include? token}
+    return 0
   end
 
 end
-

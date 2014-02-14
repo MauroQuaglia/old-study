@@ -8,6 +8,11 @@ class Product
   end
 
   def description
+    key='imported '
+    if @description.include? key
+      @description.slice!(key)
+      return key + @description
+    end
     @description
   end
 

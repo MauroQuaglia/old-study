@@ -24,7 +24,7 @@ class Receipt
   private
 
   def write(line)
-    @receipt += line + "\\n"
+    @receipt += line + "\n"
   end
 
   def value_for(number)

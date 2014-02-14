@@ -1,9 +1,8 @@
 require 'test-unit'
 require_relative '../checkout'
-require_relative '../categories'
-require_relative '../import'
 require_relative '../rounding'
 require_relative 'fake_receipt'
+require_relative '../product'
 
 class CheckoutTest < Test::Unit::TestCase
 
@@ -13,27 +12,15 @@ class CheckoutTest < Test::Unit::TestCase
   end
 
   def test_one_not_imported_product_without_tax
-    @checkout.scan Book.new('book', 10.00)
+    @checkout.scan Product.new('book', 10.00, 0)
 
     assert_receipt_values('book', 0, 10.00)
   end
 
   def test_one_not_imported_product_with_tax
-    @checkout.scan Cosmetic.new('bottle of perfume', 10.00)
+    @checkout.scan Product.new('bottle of perfume', 10.00, 10)
 
     assert_receipt_values('bottle of perfume', 1.00, 11.00)
-  end
-
-  def test_one_imported_product_without_tax
-    @checkout.scan Import.new Book.new('book', 10.00)
-
-    assert_receipt_values('imported book', 0.50, 10.50)
-  end
-
-  def test_one_imported_product_with_tax
-    @checkout.scan Import.new Cosmetic.new('bottle of perfume', 10.00)
-
-    assert_receipt_values('imported bottle of perfume', 1.50, 11.50)
   end
 
   private

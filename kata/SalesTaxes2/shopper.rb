@@ -1,5 +1,3 @@
-require_relative 'piece'
-
 class Shopper
 
   def initialize(shopping_list)
