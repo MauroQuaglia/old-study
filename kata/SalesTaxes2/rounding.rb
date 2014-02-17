@@ -5,7 +5,7 @@ class Rounding
   end
 
   def up(x)
-    ((x / @sensibility).ceil) * @sensibility
+    @sensibility == 0 ? x : ((x / @sensibility).ceil) * @sensibility
   end
 
 end

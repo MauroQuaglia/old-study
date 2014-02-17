@@ -1,11 +1,15 @@
 require 'test-unit'
+require_relative '../rounding'
+require_relative '../receipt'
 require_relative '../supermarket'
 require_relative '../shopper'
 
 class AcceptanceTest < Test::Unit::TestCase
 
   def setup
-    @supermarket = Supermarket.new
+    rounding = Rounding.new(0.05)
+    receipt = Receipt.new(2)
+    @supermarket = Supermarket.new rounding, receipt, ProductFactory.new
   end
 
   def test_acceptance_1
@@ -64,6 +68,7 @@ Total: 74.68
   def assert_receipt(input, output)
     shopper=Shopper.new(input)
     @supermarket.checkout(shopper)
+
     assert_equal output, @supermarket.receipt
   end
 

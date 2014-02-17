@@ -13,5 +13,13 @@ class RoundingTest < Test::Unit::TestCase
     assert_equal 0.10, rounding.up(0.100)
   end
 
+  def test_no_rounding
+    rounding = Rounding.new(0)
+
+    assert_equal 0, rounding.up(0)
+    assert_equal 0.50, rounding.up(0.50)
+    assert_equal 1.00, rounding.up(1.00)
+  end
+
 end
 
