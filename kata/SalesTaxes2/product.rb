@@ -9,8 +9,6 @@ class Product
 
   def description
     key = 'imported'
-    @description.downcase!
-
     if @description.include? key
       return @description.gsub(key, ' ').split(' ').insert(1, key).join(' ')
     end
