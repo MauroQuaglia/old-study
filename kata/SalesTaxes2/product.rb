@@ -9,11 +9,12 @@ class Product
 
   def description
     key = 'imported'
-    if !@description.include? key
-      return @description
-    else
-      @description.gsub(key, ' ').split(' ').insert(1, key).join(' ')
+    @description.downcase!
+
+    if @description.include? key
+      return @description.gsub(key, ' ').split(' ').insert(1, key).join(' ')
     end
+    @description
   end
 
   def taxes

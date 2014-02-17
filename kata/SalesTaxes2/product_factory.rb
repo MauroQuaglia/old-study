@@ -9,25 +9,15 @@ class ProductFactory
 
   def create good
     values = good.split(' at ')
-
-    description = description(values)
-    price = price(values)
-    tax = taxes(description.split(' '))
-
-    Product.new(description, price, tax)
+    description = values[0]
+    price = values[1].to_f
+    Product.new(description, price, taxes(description))
   end
 
   private
 
-  def description(values)
-    values[0]
-  end
-
-  def price(values)
-    values[1].to_f
-  end
-
-  def taxes(tokens)
+  def taxes(description)
+    tokens = description.downcase.split(' ')
     tax(tokens, @rate_key, @rate) + tax(tokens, @duty_key, @duty)
   end
 

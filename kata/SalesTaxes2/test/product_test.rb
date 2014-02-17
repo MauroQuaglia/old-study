@@ -10,7 +10,7 @@ class ProductTest < Test::Unit::TestCase
   end
 
   def test_standard_description_of_imported_product
-    product = Product.new '1 imported book', 10, 0
+    product = Product.new '1 Imported book', 10, 0
 
     assert_equal '1 imported book', product.description
   end
