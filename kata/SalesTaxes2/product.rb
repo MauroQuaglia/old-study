@@ -1,5 +1,5 @@
 class Product
-  attr_reader :description, :price
+  attr_reader :price
 
   def initialize(description, price, rate)
     @description = description
@@ -8,12 +8,12 @@ class Product
   end
 
   def description
-    key='imported '
-    if @description.include? key
-      @description.slice!(key)
-      return key + @description
+    key = 'imported'
+    if !@description.include? key
+      return @description
+    else
+      @description.gsub(key, ' ').split(' ').insert(1, key).join(' ')
     end
-    @description
   end
 
   def taxes

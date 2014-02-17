@@ -1,12 +1,10 @@
 require_relative 'product'
 
 class ProductFactory
-  DUTY = 5
-  RATE = 10
 
   def initialize
-    @rate_key = ['perfume', 'music']
-    @duty_key = ['imported']
+    @rate = 10; @rate_key = ['perfume', 'music']
+    @duty = 5; @duty_key = ['imported']
   end
 
   def create good
@@ -22,9 +20,7 @@ class ProductFactory
   private
 
   def description(values)
-    description = values[0]
-    description.slice!('1 ')
-    description
+    values[0]
   end
 
   def price(values)
@@ -32,12 +28,11 @@ class ProductFactory
   end
 
   def taxes(tokens)
-     add_tax(tokens, @rate_key, RATE) + add_tax(tokens, @duty_key, DUTY)
+    tax(tokens, @rate_key, @rate) + tax(tokens, @duty_key, @duty)
   end
 
-  def add_tax(tokens, keys, rate)
-    tokens.each{|token| return rate if keys.include? token}
-    return 0
+  def tax(tokens, keys, rate)
+    tokens.each { |token| return rate if keys.include? token }; 0
   end
 
 end

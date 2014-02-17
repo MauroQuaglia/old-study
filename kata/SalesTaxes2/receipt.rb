@@ -6,7 +6,7 @@ class Receipt
   end
 
   def add(description, price)
-    write "1 #{description}: #{value_for(price)}"
+    write "#{description}: #{value_for(price)}"
   end
 
   def add_taxes(taxes)
