@@ -66,8 +66,7 @@ Total: 74.68
   private
 
   def assert_receipt(input, output)
-    shopper=Shopper.new(input)
-    @supermarket.checkout(shopper)
+    @supermarket.checkout(Shopper.new(input))
 
     assert_equal output, @supermarket.receipt
   end

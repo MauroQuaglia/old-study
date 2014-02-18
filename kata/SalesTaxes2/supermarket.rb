@@ -1,5 +1,4 @@
 require_relative 'checkout'
-require_relative 'product_factory'
 
 class Supermarket
 

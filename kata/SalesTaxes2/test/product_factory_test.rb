@@ -35,13 +35,4 @@ class ProductFactoryTest < Test::Unit::TestCase
     assert_equal 1.50, product.taxes
   end
 
-
-  def test_prova
-    h = Hash.new(0)
-    h[:d] = 100
-    puts h['d']
-    puts ['d'].inject { |sum, t| sum + h[t] }
-
-    #puts [1, 2, 3].inject { |sum, t| sum + t }
-  end
 end
