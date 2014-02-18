@@ -3,26 +3,21 @@ require_relative 'product'
 class ProductFactory
 
   def initialize
-    @rate = 10; @rate_key = ['perfume', 'music']
-    @duty = 5; @duty_key = ['imported']
+    @rate=Hash.new 0
+    @rate['perfume']=10
+    @rate['music']=10
+    @rate['imported']=5
   end
 
-  def create good
+  def create(good)
     values = good.split(' at ')
-    description = values[0]
-    price = values[1].to_f
-    Product.new(description, price, taxes(description))
+    Product.new(values[0], values[1].to_f, taxes(values[0]))
   end
 
   private
 
   def taxes(description)
-    tokens = description.downcase.split(' ')
-    tax(tokens, @rate_key, @rate) + tax(tokens, @duty_key, @duty)
-  end
-
-  def tax(tokens, keys, rate)
-    tokens.each { |token| return rate if keys.include? token }; 0
+    description.downcase.split(' ').inject(0) { |sum, x| sum + @rate[x] }
   end
 
 end
