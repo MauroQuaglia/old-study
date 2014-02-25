@@ -6,7 +6,7 @@ class StringUtil1
       r+=s[i] if s[i]!=' ' || s[i+1]!=' '
     end
     r[0]='' if r[0]==' '
-    r[r.length-1]='' if r[r.length-1]==' '
+    r[-1]='' if r[-1]==' '
     r
   end
 
@@ -14,9 +14,9 @@ class StringUtil1
     r=''
     b=' '+s+' '
     for i in 0...b.length
-      r+=b[i] if b[i]!=' ' || r[r.length-1]!=' '
+      r+=b[i] if b[i]!=' ' || r[-1]!=' '
     end
-    r[0]=r[r.length-1]=''
+    r[0]=r[-1]=''
     r
   end
 

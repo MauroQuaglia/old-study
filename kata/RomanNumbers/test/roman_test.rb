@@ -3,24 +3,17 @@ require '../roman'
 
 class RomanTest < Test::Unit::TestCase
 
-  def test_one
+  def test_unit
     assert_equal 1, Roman.new.to_decimal('I')
-  end
-
-  def test_two
     assert_equal 2, Roman.new.to_decimal('II')
-  end
-
-  def test_three
     assert_equal 3, Roman.new.to_decimal('III')
-  end
-
-  def test_four
     assert_equal 4, Roman.new.to_decimal('IV')
+    assert_equal 5, Roman.new.to_decimal('V')
+    assert_equal 6, Roman.new.to_decimal('VI')
+    assert_equal 7, Roman.new.to_decimal('VII')
+    assert_equal 8, Roman.new.to_decimal('VIII')
+    assert_equal 9, Roman.new.to_decimal('IX')
   end
 
-  def test_prova
-   # puts 1.
-  end
 
 end
