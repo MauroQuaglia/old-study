@@ -15,13 +15,4 @@ class RomanTest < Test::Unit::TestCase
     assert_equal 9, Roman.new.to_decimal('IX')
   end
 
-  def test_prova
-      b=['a']
-    puts b[1]==nil
-    d = Hash.new(0)
-    d['v'] = 'd'
-    puts d[nil]
-
-  end
-
 end

@@ -19,5 +19,9 @@ class DecimalTest < Test::Unit::TestCase
     assert_equal 'IV', Decimal.new.to_roman(4)
   end
 
+  def test_prova
+    puts 'f' * 1
+  end
+
 
 end
