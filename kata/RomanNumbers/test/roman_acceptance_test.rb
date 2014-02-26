@@ -3,4006 +3,4011 @@ require '../roman'
 
 class RomanAcceptanceTest < Test::Unit::TestCase
 
+  def assert_roman(decimal, roman)
+    assert_equal decimal, Roman.new.to_decimal(roman)
+    assert_equal decimal, Roman.new.to_decimal2(roman)
+  end
+
   def test_acceptance
-    assert_equal 1, Roman.new.to_decimal('I')
-    assert_equal 2, Roman.new.to_decimal('II')
-    assert_equal 3, Roman.new.to_decimal('III')
-    assert_equal 4, Roman.new.to_decimal('IV')
-    assert_equal 5, Roman.new.to_decimal('V')
-    assert_equal 6, Roman.new.to_decimal('VI')
-    assert_equal 7, Roman.new.to_decimal('VII')
-    assert_equal 8, Roman.new.to_decimal('VIII')
-    assert_equal 9, Roman.new.to_decimal('IX')
-    assert_equal 10, Roman.new.to_decimal('X')
-    assert_equal 11, Roman.new.to_decimal('XI')
-    assert_equal 12, Roman.new.to_decimal('XII')
-    assert_equal 13, Roman.new.to_decimal('XIII')
-    assert_equal 14, Roman.new.to_decimal('XIV')
-    assert_equal 15, Roman.new.to_decimal('XV')
-    assert_equal 16, Roman.new.to_decimal('XVI')
-    assert_equal 17, Roman.new.to_decimal('XVII')
-    assert_equal 18, Roman.new.to_decimal('XVIII')
-    assert_equal 19, Roman.new.to_decimal('XIX')
-    assert_equal 20, Roman.new.to_decimal('XX')
-    assert_equal 21, Roman.new.to_decimal('XXI')
-    assert_equal 22, Roman.new.to_decimal('XXII')
-    assert_equal 23, Roman.new.to_decimal('XXIII')
-    assert_equal 24, Roman.new.to_decimal('XXIV')
-    assert_equal 25, Roman.new.to_decimal('XXV')
-    assert_equal 26, Roman.new.to_decimal('XXVI')
-    assert_equal 27, Roman.new.to_decimal('XXVII')
-    assert_equal 28, Roman.new.to_decimal('XXVIII')
-    assert_equal 29, Roman.new.to_decimal('XXIX')
-    assert_equal 30, Roman.new.to_decimal('XXX')
-    assert_equal 31, Roman.new.to_decimal('XXXI')
-    assert_equal 32, Roman.new.to_decimal('XXXII')
-    assert_equal 33, Roman.new.to_decimal('XXXIII')
-    assert_equal 34, Roman.new.to_decimal('XXXIV')
-    assert_equal 35, Roman.new.to_decimal('XXXV')
-    assert_equal 36, Roman.new.to_decimal('XXXVI')
-    assert_equal 37, Roman.new.to_decimal('XXXVII')
-    assert_equal 38, Roman.new.to_decimal('XXXVIII')
-    assert_equal 39, Roman.new.to_decimal('XXXIX')
-    assert_equal 40, Roman.new.to_decimal('XL')
-    assert_equal 41, Roman.new.to_decimal('XLI')
-    assert_equal 42, Roman.new.to_decimal('XLII')
-    assert_equal 43, Roman.new.to_decimal('XLIII')
-    assert_equal 44, Roman.new.to_decimal('XLIV')
-    assert_equal 45, Roman.new.to_decimal('XLV')
-    assert_equal 46, Roman.new.to_decimal('XLVI')
-    assert_equal 47, Roman.new.to_decimal('XLVII')
-    assert_equal 48, Roman.new.to_decimal('XLVIII')
-    assert_equal 49, Roman.new.to_decimal('XLIX')
-    assert_equal 50, Roman.new.to_decimal('L')
-    assert_equal 51, Roman.new.to_decimal('LI')
-    assert_equal 52, Roman.new.to_decimal('LII')
-    assert_equal 53, Roman.new.to_decimal('LIII')
-    assert_equal 54, Roman.new.to_decimal('LIV')
-    assert_equal 55, Roman.new.to_decimal('LV')
-    assert_equal 56, Roman.new.to_decimal('LVI')
-    assert_equal 57, Roman.new.to_decimal('LVII')
-    assert_equal 58, Roman.new.to_decimal('LVIII')
-    assert_equal 59, Roman.new.to_decimal('LIX')
-    assert_equal 60, Roman.new.to_decimal('LX')
-    assert_equal 61, Roman.new.to_decimal('LXI')
-    assert_equal 62, Roman.new.to_decimal('LXII')
-    assert_equal 63, Roman.new.to_decimal('LXIII')
-    assert_equal 64, Roman.new.to_decimal('LXIV')
-    assert_equal 65, Roman.new.to_decimal('LXV')
-    assert_equal 66, Roman.new.to_decimal('LXVI')
-    assert_equal 67, Roman.new.to_decimal('LXVII')
-    assert_equal 68, Roman.new.to_decimal('LXVIII')
-    assert_equal 69, Roman.new.to_decimal('LXIX')
-    assert_equal 70, Roman.new.to_decimal('LXX')
-    assert_equal 71, Roman.new.to_decimal('LXXI')
-    assert_equal 72, Roman.new.to_decimal('LXXII')
-    assert_equal 73, Roman.new.to_decimal('LXXIII')
-    assert_equal 74, Roman.new.to_decimal('LXXIV')
-    assert_equal 75, Roman.new.to_decimal('LXXV')
-    assert_equal 76, Roman.new.to_decimal('LXXVI')
-    assert_equal 77, Roman.new.to_decimal('LXXVII')
-    assert_equal 78, Roman.new.to_decimal('LXXVIII')
-    assert_equal 79, Roman.new.to_decimal('LXXIX')
-    assert_equal 80, Roman.new.to_decimal('LXXX')
-    assert_equal 81, Roman.new.to_decimal('LXXXI')
-    assert_equal 82, Roman.new.to_decimal('LXXXII')
-    assert_equal 83, Roman.new.to_decimal('LXXXIII')
-    assert_equal 84, Roman.new.to_decimal('LXXXIV')
-    assert_equal 85, Roman.new.to_decimal('LXXXV')
-    assert_equal 86, Roman.new.to_decimal('LXXXVI')
-    assert_equal 87, Roman.new.to_decimal('LXXXVII')
-    assert_equal 88, Roman.new.to_decimal('LXXXVIII')
-    assert_equal 89, Roman.new.to_decimal('LXXXIX')
-    assert_equal 90, Roman.new.to_decimal('XC')
-    assert_equal 91, Roman.new.to_decimal('XCI')
-    assert_equal 92, Roman.new.to_decimal('XCII')
-    assert_equal 93, Roman.new.to_decimal('XCIII')
-    assert_equal 94, Roman.new.to_decimal('XCIV')
-    assert_equal 95, Roman.new.to_decimal('XCV')
-    assert_equal 96, Roman.new.to_decimal('XCVI')
-    assert_equal 97, Roman.new.to_decimal('XCVII')
-    assert_equal 98, Roman.new.to_decimal('XCVIII')
-    assert_equal 99, Roman.new.to_decimal('XCIX')
-    assert_equal 100, Roman.new.to_decimal('C')
-    assert_equal 101, Roman.new.to_decimal('CI')
-    assert_equal 102, Roman.new.to_decimal('CII')
-    assert_equal 103, Roman.new.to_decimal('CIII')
-    assert_equal 104, Roman.new.to_decimal('CIV')
-    assert_equal 105, Roman.new.to_decimal('CV')
-    assert_equal 106, Roman.new.to_decimal('CVI')
-    assert_equal 107, Roman.new.to_decimal('CVII')
-    assert_equal 108, Roman.new.to_decimal('CVIII')
-    assert_equal 109, Roman.new.to_decimal('CIX')
-    assert_equal 110, Roman.new.to_decimal('CX')
-    assert_equal 111, Roman.new.to_decimal('CXI')
-    assert_equal 112, Roman.new.to_decimal('CXII')
-    assert_equal 113, Roman.new.to_decimal('CXIII')
-    assert_equal 114, Roman.new.to_decimal('CXIV')
-    assert_equal 115, Roman.new.to_decimal('CXV')
-    assert_equal 116, Roman.new.to_decimal('CXVI')
-    assert_equal 117, Roman.new.to_decimal('CXVII')
-    assert_equal 118, Roman.new.to_decimal('CXVIII')
-    assert_equal 119, Roman.new.to_decimal('CXIX')
-    assert_equal 120, Roman.new.to_decimal('CXX')
-    assert_equal 121, Roman.new.to_decimal('CXXI')
-    assert_equal 122, Roman.new.to_decimal('CXXII')
-    assert_equal 123, Roman.new.to_decimal('CXXIII')
-    assert_equal 124, Roman.new.to_decimal('CXXIV')
-    assert_equal 125, Roman.new.to_decimal('CXXV')
-    assert_equal 126, Roman.new.to_decimal('CXXVI')
-    assert_equal 127, Roman.new.to_decimal('CXXVII')
-    assert_equal 128, Roman.new.to_decimal('CXXVIII')
-    assert_equal 129, Roman.new.to_decimal('CXXIX')
-    assert_equal 130, Roman.new.to_decimal('CXXX')
-    assert_equal 131, Roman.new.to_decimal('CXXXI')
-    assert_equal 132, Roman.new.to_decimal('CXXXII')
-    assert_equal 133, Roman.new.to_decimal('CXXXIII')
-    assert_equal 134, Roman.new.to_decimal('CXXXIV')
-    assert_equal 135, Roman.new.to_decimal('CXXXV')
-    assert_equal 136, Roman.new.to_decimal('CXXXVI')
-    assert_equal 137, Roman.new.to_decimal('CXXXVII')
-    assert_equal 138, Roman.new.to_decimal('CXXXVIII')
-    assert_equal 139, Roman.new.to_decimal('CXXXIX')
-    assert_equal 140, Roman.new.to_decimal('CXL')
-    assert_equal 141, Roman.new.to_decimal('CXLI')
-    assert_equal 142, Roman.new.to_decimal('CXLII')
-    assert_equal 143, Roman.new.to_decimal('CXLIII')
-    assert_equal 144, Roman.new.to_decimal('CXLIV')
-    assert_equal 145, Roman.new.to_decimal('CXLV')
-    assert_equal 146, Roman.new.to_decimal('CXLVI')
-    assert_equal 147, Roman.new.to_decimal('CXLVII')
-    assert_equal 148, Roman.new.to_decimal('CXLVIII')
-    assert_equal 149, Roman.new.to_decimal('CXLIX')
-    assert_equal 150, Roman.new.to_decimal('CL')
-    assert_equal 151, Roman.new.to_decimal('CLI')
-    assert_equal 152, Roman.new.to_decimal('CLII')
-    assert_equal 153, Roman.new.to_decimal('CLIII')
-    assert_equal 154, Roman.new.to_decimal('CLIV')
-    assert_equal 155, Roman.new.to_decimal('CLV')
-    assert_equal 156, Roman.new.to_decimal('CLVI')
-    assert_equal 157, Roman.new.to_decimal('CLVII')
-    assert_equal 158, Roman.new.to_decimal('CLVIII')
-    assert_equal 159, Roman.new.to_decimal('CLIX')
-    assert_equal 160, Roman.new.to_decimal('CLX')
-    assert_equal 161, Roman.new.to_decimal('CLXI')
-    assert_equal 162, Roman.new.to_decimal('CLXII')
-    assert_equal 163, Roman.new.to_decimal('CLXIII')
-    assert_equal 164, Roman.new.to_decimal('CLXIV')
-    assert_equal 165, Roman.new.to_decimal('CLXV')
-    assert_equal 166, Roman.new.to_decimal('CLXVI')
-    assert_equal 167, Roman.new.to_decimal('CLXVII')
-    assert_equal 168, Roman.new.to_decimal('CLXVIII')
-    assert_equal 169, Roman.new.to_decimal('CLXIX')
-    assert_equal 170, Roman.new.to_decimal('CLXX')
-    assert_equal 171, Roman.new.to_decimal('CLXXI')
-    assert_equal 172, Roman.new.to_decimal('CLXXII')
-    assert_equal 173, Roman.new.to_decimal('CLXXIII')
-    assert_equal 174, Roman.new.to_decimal('CLXXIV')
-    assert_equal 175, Roman.new.to_decimal('CLXXV')
-    assert_equal 176, Roman.new.to_decimal('CLXXVI')
-    assert_equal 177, Roman.new.to_decimal('CLXXVII')
-    assert_equal 178, Roman.new.to_decimal('CLXXVIII')
-    assert_equal 179, Roman.new.to_decimal('CLXXIX')
-    assert_equal 180, Roman.new.to_decimal('CLXXX')
-    assert_equal 181, Roman.new.to_decimal('CLXXXI')
-    assert_equal 182, Roman.new.to_decimal('CLXXXII')
-    assert_equal 183, Roman.new.to_decimal('CLXXXIII')
-    assert_equal 184, Roman.new.to_decimal('CLXXXIV')
-    assert_equal 185, Roman.new.to_decimal('CLXXXV')
-    assert_equal 186, Roman.new.to_decimal('CLXXXVI')
-    assert_equal 187, Roman.new.to_decimal('CLXXXVII')
-    assert_equal 188, Roman.new.to_decimal('CLXXXVIII')
-    assert_equal 189, Roman.new.to_decimal('CLXXXIX')
-    assert_equal 190, Roman.new.to_decimal('CXC')
-    assert_equal 191, Roman.new.to_decimal('CXCI')
-    assert_equal 192, Roman.new.to_decimal('CXCII')
-    assert_equal 193, Roman.new.to_decimal('CXCIII')
-    assert_equal 194, Roman.new.to_decimal('CXCIV')
-    assert_equal 195, Roman.new.to_decimal('CXCV')
-    assert_equal 196, Roman.new.to_decimal('CXCVI')
-    assert_equal 197, Roman.new.to_decimal('CXCVII')
-    assert_equal 198, Roman.new.to_decimal('CXCVIII')
-    assert_equal 199, Roman.new.to_decimal('CXCIX')
-    assert_equal 200, Roman.new.to_decimal('CC')
-    assert_equal 201, Roman.new.to_decimal('CCI')
-    assert_equal 202, Roman.new.to_decimal('CCII')
-    assert_equal 203, Roman.new.to_decimal('CCIII')
-    assert_equal 204, Roman.new.to_decimal('CCIV')
-    assert_equal 205, Roman.new.to_decimal('CCV')
-    assert_equal 206, Roman.new.to_decimal('CCVI')
-    assert_equal 207, Roman.new.to_decimal('CCVII')
-    assert_equal 208, Roman.new.to_decimal('CCVIII')
-    assert_equal 209, Roman.new.to_decimal('CCIX')
-    assert_equal 210, Roman.new.to_decimal('CCX')
-    assert_equal 211, Roman.new.to_decimal('CCXI')
-    assert_equal 212, Roman.new.to_decimal('CCXII')
-    assert_equal 213, Roman.new.to_decimal('CCXIII')
-    assert_equal 214, Roman.new.to_decimal('CCXIV')
-    assert_equal 215, Roman.new.to_decimal('CCXV')
-    assert_equal 216, Roman.new.to_decimal('CCXVI')
-    assert_equal 217, Roman.new.to_decimal('CCXVII')
-    assert_equal 218, Roman.new.to_decimal('CCXVIII')
-    assert_equal 219, Roman.new.to_decimal('CCXIX')
-    assert_equal 220, Roman.new.to_decimal('CCXX')
-    assert_equal 221, Roman.new.to_decimal('CCXXI')
-    assert_equal 222, Roman.new.to_decimal('CCXXII')
-    assert_equal 223, Roman.new.to_decimal('CCXXIII')
-    assert_equal 224, Roman.new.to_decimal('CCXXIV')
-    assert_equal 225, Roman.new.to_decimal('CCXXV')
-    assert_equal 226, Roman.new.to_decimal('CCXXVI')
-    assert_equal 227, Roman.new.to_decimal('CCXXVII')
-    assert_equal 228, Roman.new.to_decimal('CCXXVIII')
-    assert_equal 229, Roman.new.to_decimal('CCXXIX')
-    assert_equal 230, Roman.new.to_decimal('CCXXX')
-    assert_equal 231, Roman.new.to_decimal('CCXXXI')
-    assert_equal 232, Roman.new.to_decimal('CCXXXII')
-    assert_equal 233, Roman.new.to_decimal('CCXXXIII')
-    assert_equal 234, Roman.new.to_decimal('CCXXXIV')
-    assert_equal 235, Roman.new.to_decimal('CCXXXV')
-    assert_equal 236, Roman.new.to_decimal('CCXXXVI')
-    assert_equal 237, Roman.new.to_decimal('CCXXXVII')
-    assert_equal 238, Roman.new.to_decimal('CCXXXVIII')
-    assert_equal 239, Roman.new.to_decimal('CCXXXIX')
-    assert_equal 240, Roman.new.to_decimal('CCXL')
-    assert_equal 241, Roman.new.to_decimal('CCXLI')
-    assert_equal 242, Roman.new.to_decimal('CCXLII')
-    assert_equal 243, Roman.new.to_decimal('CCXLIII')
-    assert_equal 244, Roman.new.to_decimal('CCXLIV')
-    assert_equal 245, Roman.new.to_decimal('CCXLV')
-    assert_equal 246, Roman.new.to_decimal('CCXLVI')
-    assert_equal 247, Roman.new.to_decimal('CCXLVII')
-    assert_equal 248, Roman.new.to_decimal('CCXLVIII')
-    assert_equal 249, Roman.new.to_decimal('CCXLIX')
-    assert_equal 250, Roman.new.to_decimal('CCL')
-    assert_equal 251, Roman.new.to_decimal('CCLI')
-    assert_equal 252, Roman.new.to_decimal('CCLII')
-    assert_equal 253, Roman.new.to_decimal('CCLIII')
-    assert_equal 254, Roman.new.to_decimal('CCLIV')
-    assert_equal 255, Roman.new.to_decimal('CCLV')
-    assert_equal 256, Roman.new.to_decimal('CCLVI')
-    assert_equal 257, Roman.new.to_decimal('CCLVII')
-    assert_equal 258, Roman.new.to_decimal('CCLVIII')
-    assert_equal 259, Roman.new.to_decimal('CCLIX')
-    assert_equal 260, Roman.new.to_decimal('CCLX')
-    assert_equal 261, Roman.new.to_decimal('CCLXI')
-    assert_equal 262, Roman.new.to_decimal('CCLXII')
-    assert_equal 263, Roman.new.to_decimal('CCLXIII')
-    assert_equal 264, Roman.new.to_decimal('CCLXIV')
-    assert_equal 265, Roman.new.to_decimal('CCLXV')
-    assert_equal 266, Roman.new.to_decimal('CCLXVI')
-    assert_equal 267, Roman.new.to_decimal('CCLXVII')
-    assert_equal 268, Roman.new.to_decimal('CCLXVIII')
-    assert_equal 269, Roman.new.to_decimal('CCLXIX')
-    assert_equal 270, Roman.new.to_decimal('CCLXX')
-    assert_equal 271, Roman.new.to_decimal('CCLXXI')
-    assert_equal 272, Roman.new.to_decimal('CCLXXII')
-    assert_equal 273, Roman.new.to_decimal('CCLXXIII')
-    assert_equal 274, Roman.new.to_decimal('CCLXXIV')
-    assert_equal 275, Roman.new.to_decimal('CCLXXV')
-    assert_equal 276, Roman.new.to_decimal('CCLXXVI')
-    assert_equal 277, Roman.new.to_decimal('CCLXXVII')
-    assert_equal 278, Roman.new.to_decimal('CCLXXVIII')
-    assert_equal 279, Roman.new.to_decimal('CCLXXIX')
-    assert_equal 280, Roman.new.to_decimal('CCLXXX')
-    assert_equal 281, Roman.new.to_decimal('CCLXXXI')
-    assert_equal 282, Roman.new.to_decimal('CCLXXXII')
-    assert_equal 283, Roman.new.to_decimal('CCLXXXIII')
-    assert_equal 284, Roman.new.to_decimal('CCLXXXIV')
-    assert_equal 285, Roman.new.to_decimal('CCLXXXV')
-    assert_equal 286, Roman.new.to_decimal('CCLXXXVI')
-    assert_equal 287, Roman.new.to_decimal('CCLXXXVII')
-    assert_equal 288, Roman.new.to_decimal('CCLXXXVIII')
-    assert_equal 289, Roman.new.to_decimal('CCLXXXIX')
-    assert_equal 290, Roman.new.to_decimal('CCXC')
-    assert_equal 291, Roman.new.to_decimal('CCXCI')
-    assert_equal 292, Roman.new.to_decimal('CCXCII')
-    assert_equal 293, Roman.new.to_decimal('CCXCIII')
-    assert_equal 294, Roman.new.to_decimal('CCXCIV')
-    assert_equal 295, Roman.new.to_decimal('CCXCV')
-    assert_equal 296, Roman.new.to_decimal('CCXCVI')
-    assert_equal 297, Roman.new.to_decimal('CCXCVII')
-    assert_equal 298, Roman.new.to_decimal('CCXCVIII')
-    assert_equal 299, Roman.new.to_decimal('CCXCIX')
-    assert_equal 300, Roman.new.to_decimal('CCC')
-    assert_equal 301, Roman.new.to_decimal('CCCI')
-    assert_equal 302, Roman.new.to_decimal('CCCII')
-    assert_equal 303, Roman.new.to_decimal('CCCIII')
-    assert_equal 304, Roman.new.to_decimal('CCCIV')
-    assert_equal 305, Roman.new.to_decimal('CCCV')
-    assert_equal 306, Roman.new.to_decimal('CCCVI')
-    assert_equal 307, Roman.new.to_decimal('CCCVII')
-    assert_equal 308, Roman.new.to_decimal('CCCVIII')
-    assert_equal 309, Roman.new.to_decimal('CCCIX')
-    assert_equal 310, Roman.new.to_decimal('CCCX')
-    assert_equal 311, Roman.new.to_decimal('CCCXI')
-    assert_equal 312, Roman.new.to_decimal('CCCXII')
-    assert_equal 313, Roman.new.to_decimal('CCCXIII')
-    assert_equal 314, Roman.new.to_decimal('CCCXIV')
-    assert_equal 315, Roman.new.to_decimal('CCCXV')
-    assert_equal 316, Roman.new.to_decimal('CCCXVI')
-    assert_equal 317, Roman.new.to_decimal('CCCXVII')
-    assert_equal 318, Roman.new.to_decimal('CCCXVIII')
-    assert_equal 319, Roman.new.to_decimal('CCCXIX')
-    assert_equal 320, Roman.new.to_decimal('CCCXX')
-    assert_equal 321, Roman.new.to_decimal('CCCXXI')
-    assert_equal 322, Roman.new.to_decimal('CCCXXII')
-    assert_equal 323, Roman.new.to_decimal('CCCXXIII')
-    assert_equal 324, Roman.new.to_decimal('CCCXXIV')
-    assert_equal 325, Roman.new.to_decimal('CCCXXV')
-    assert_equal 326, Roman.new.to_decimal('CCCXXVI')
-    assert_equal 327, Roman.new.to_decimal('CCCXXVII')
-    assert_equal 328, Roman.new.to_decimal('CCCXXVIII')
-    assert_equal 329, Roman.new.to_decimal('CCCXXIX')
-    assert_equal 330, Roman.new.to_decimal('CCCXXX')
-    assert_equal 331, Roman.new.to_decimal('CCCXXXI')
-    assert_equal 332, Roman.new.to_decimal('CCCXXXII')
-    assert_equal 333, Roman.new.to_decimal('CCCXXXIII')
-    assert_equal 334, Roman.new.to_decimal('CCCXXXIV')
-    assert_equal 335, Roman.new.to_decimal('CCCXXXV')
-    assert_equal 336, Roman.new.to_decimal('CCCXXXVI')
-    assert_equal 337, Roman.new.to_decimal('CCCXXXVII')
-    assert_equal 338, Roman.new.to_decimal('CCCXXXVIII')
-    assert_equal 339, Roman.new.to_decimal('CCCXXXIX')
-    assert_equal 340, Roman.new.to_decimal('CCCXL')
-    assert_equal 341, Roman.new.to_decimal('CCCXLI')
-    assert_equal 342, Roman.new.to_decimal('CCCXLII')
-    assert_equal 343, Roman.new.to_decimal('CCCXLIII')
-    assert_equal 344, Roman.new.to_decimal('CCCXLIV')
-    assert_equal 345, Roman.new.to_decimal('CCCXLV')
-    assert_equal 346, Roman.new.to_decimal('CCCXLVI')
-    assert_equal 347, Roman.new.to_decimal('CCCXLVII')
-    assert_equal 348, Roman.new.to_decimal('CCCXLVIII')
-    assert_equal 349, Roman.new.to_decimal('CCCXLIX')
-    assert_equal 350, Roman.new.to_decimal('CCCL')
-    assert_equal 351, Roman.new.to_decimal('CCCLI')
-    assert_equal 352, Roman.new.to_decimal('CCCLII')
-    assert_equal 353, Roman.new.to_decimal('CCCLIII')
-    assert_equal 354, Roman.new.to_decimal('CCCLIV')
-    assert_equal 355, Roman.new.to_decimal('CCCLV')
-    assert_equal 356, Roman.new.to_decimal('CCCLVI')
-    assert_equal 357, Roman.new.to_decimal('CCCLVII')
-    assert_equal 358, Roman.new.to_decimal('CCCLVIII')
-    assert_equal 359, Roman.new.to_decimal('CCCLIX')
-    assert_equal 360, Roman.new.to_decimal('CCCLX')
-    assert_equal 361, Roman.new.to_decimal('CCCLXI')
-    assert_equal 362, Roman.new.to_decimal('CCCLXII')
-    assert_equal 363, Roman.new.to_decimal('CCCLXIII')
-    assert_equal 364, Roman.new.to_decimal('CCCLXIV')
-    assert_equal 365, Roman.new.to_decimal('CCCLXV')
-    assert_equal 366, Roman.new.to_decimal('CCCLXVI')
-    assert_equal 367, Roman.new.to_decimal('CCCLXVII')
-    assert_equal 368, Roman.new.to_decimal('CCCLXVIII')
-    assert_equal 369, Roman.new.to_decimal('CCCLXIX')
-    assert_equal 370, Roman.new.to_decimal('CCCLXX')
-    assert_equal 371, Roman.new.to_decimal('CCCLXXI')
-    assert_equal 372, Roman.new.to_decimal('CCCLXXII')
-    assert_equal 373, Roman.new.to_decimal('CCCLXXIII')
-    assert_equal 374, Roman.new.to_decimal('CCCLXXIV')
-    assert_equal 375, Roman.new.to_decimal('CCCLXXV')
-    assert_equal 376, Roman.new.to_decimal('CCCLXXVI')
-    assert_equal 377, Roman.new.to_decimal('CCCLXXVII')
-    assert_equal 378, Roman.new.to_decimal('CCCLXXVIII')
-    assert_equal 379, Roman.new.to_decimal('CCCLXXIX')
-    assert_equal 380, Roman.new.to_decimal('CCCLXXX')
-    assert_equal 381, Roman.new.to_decimal('CCCLXXXI')
-    assert_equal 382, Roman.new.to_decimal('CCCLXXXII')
-    assert_equal 383, Roman.new.to_decimal('CCCLXXXIII')
-    assert_equal 384, Roman.new.to_decimal('CCCLXXXIV')
-    assert_equal 385, Roman.new.to_decimal('CCCLXXXV')
-    assert_equal 386, Roman.new.to_decimal('CCCLXXXVI')
-    assert_equal 387, Roman.new.to_decimal('CCCLXXXVII')
-    assert_equal 388, Roman.new.to_decimal('CCCLXXXVIII')
-    assert_equal 389, Roman.new.to_decimal('CCCLXXXIX')
-    assert_equal 390, Roman.new.to_decimal('CCCXC')
-    assert_equal 391, Roman.new.to_decimal('CCCXCI')
-    assert_equal 392, Roman.new.to_decimal('CCCXCII')
-    assert_equal 393, Roman.new.to_decimal('CCCXCIII')
-    assert_equal 394, Roman.new.to_decimal('CCCXCIV')
-    assert_equal 395, Roman.new.to_decimal('CCCXCV')
-    assert_equal 396, Roman.new.to_decimal('CCCXCVI')
-    assert_equal 397, Roman.new.to_decimal('CCCXCVII')
-    assert_equal 398, Roman.new.to_decimal('CCCXCVIII')
-    assert_equal 399, Roman.new.to_decimal('CCCXCIX')
-    assert_equal 400, Roman.new.to_decimal('CD')
-    assert_equal 401, Roman.new.to_decimal('CDI')
-    assert_equal 402, Roman.new.to_decimal('CDII')
-    assert_equal 403, Roman.new.to_decimal('CDIII')
-    assert_equal 404, Roman.new.to_decimal('CDIV')
-    assert_equal 405, Roman.new.to_decimal('CDV')
-    assert_equal 406, Roman.new.to_decimal('CDVI')
-    assert_equal 407, Roman.new.to_decimal('CDVII')
-    assert_equal 408, Roman.new.to_decimal('CDVIII')
-    assert_equal 409, Roman.new.to_decimal('CDIX')
-    assert_equal 410, Roman.new.to_decimal('CDX')
-    assert_equal 411, Roman.new.to_decimal('CDXI')
-    assert_equal 412, Roman.new.to_decimal('CDXII')
-    assert_equal 413, Roman.new.to_decimal('CDXIII')
-    assert_equal 414, Roman.new.to_decimal('CDXIV')
-    assert_equal 415, Roman.new.to_decimal('CDXV')
-    assert_equal 416, Roman.new.to_decimal('CDXVI')
-    assert_equal 417, Roman.new.to_decimal('CDXVII')
-    assert_equal 418, Roman.new.to_decimal('CDXVIII')
-    assert_equal 419, Roman.new.to_decimal('CDXIX')
-    assert_equal 420, Roman.new.to_decimal('CDXX')
-    assert_equal 421, Roman.new.to_decimal('CDXXI')
-    assert_equal 422, Roman.new.to_decimal('CDXXII')
-    assert_equal 423, Roman.new.to_decimal('CDXXIII')
-    assert_equal 424, Roman.new.to_decimal('CDXXIV')
-    assert_equal 425, Roman.new.to_decimal('CDXXV')
-    assert_equal 426, Roman.new.to_decimal('CDXXVI')
-    assert_equal 427, Roman.new.to_decimal('CDXXVII')
-    assert_equal 428, Roman.new.to_decimal('CDXXVIII')
-    assert_equal 429, Roman.new.to_decimal('CDXXIX')
-    assert_equal 430, Roman.new.to_decimal('CDXXX')
-    assert_equal 431, Roman.new.to_decimal('CDXXXI')
-    assert_equal 432, Roman.new.to_decimal('CDXXXII')
-    assert_equal 433, Roman.new.to_decimal('CDXXXIII')
-    assert_equal 434, Roman.new.to_decimal('CDXXXIV')
-    assert_equal 435, Roman.new.to_decimal('CDXXXV')
-    assert_equal 436, Roman.new.to_decimal('CDXXXVI')
-    assert_equal 437, Roman.new.to_decimal('CDXXXVII')
-    assert_equal 438, Roman.new.to_decimal('CDXXXVIII')
-    assert_equal 439, Roman.new.to_decimal('CDXXXIX')
-    assert_equal 440, Roman.new.to_decimal('CDXL')
-    assert_equal 441, Roman.new.to_decimal('CDXLI')
-    assert_equal 442, Roman.new.to_decimal('CDXLII')
-    assert_equal 443, Roman.new.to_decimal('CDXLIII')
-    assert_equal 444, Roman.new.to_decimal('CDXLIV')
-    assert_equal 445, Roman.new.to_decimal('CDXLV')
-    assert_equal 446, Roman.new.to_decimal('CDXLVI')
-    assert_equal 447, Roman.new.to_decimal('CDXLVII')
-    assert_equal 448, Roman.new.to_decimal('CDXLVIII')
-    assert_equal 449, Roman.new.to_decimal('CDXLIX')
-    assert_equal 450, Roman.new.to_decimal('CDL')
-    assert_equal 451, Roman.new.to_decimal('CDLI')
-    assert_equal 452, Roman.new.to_decimal('CDLII')
-    assert_equal 453, Roman.new.to_decimal('CDLIII')
-    assert_equal 454, Roman.new.to_decimal('CDLIV')
-    assert_equal 455, Roman.new.to_decimal('CDLV')
-    assert_equal 456, Roman.new.to_decimal('CDLVI')
-    assert_equal 457, Roman.new.to_decimal('CDLVII')
-    assert_equal 458, Roman.new.to_decimal('CDLVIII')
-    assert_equal 459, Roman.new.to_decimal('CDLIX')
-    assert_equal 460, Roman.new.to_decimal('CDLX')
-    assert_equal 461, Roman.new.to_decimal('CDLXI')
-    assert_equal 462, Roman.new.to_decimal('CDLXII')
-    assert_equal 463, Roman.new.to_decimal('CDLXIII')
-    assert_equal 464, Roman.new.to_decimal('CDLXIV')
-    assert_equal 465, Roman.new.to_decimal('CDLXV')
-    assert_equal 466, Roman.new.to_decimal('CDLXVI')
-    assert_equal 467, Roman.new.to_decimal('CDLXVII')
-    assert_equal 468, Roman.new.to_decimal('CDLXVIII')
-    assert_equal 469, Roman.new.to_decimal('CDLXIX')
-    assert_equal 470, Roman.new.to_decimal('CDLXX')
-    assert_equal 471, Roman.new.to_decimal('CDLXXI')
-    assert_equal 472, Roman.new.to_decimal('CDLXXII')
-    assert_equal 473, Roman.new.to_decimal('CDLXXIII')
-    assert_equal 474, Roman.new.to_decimal('CDLXXIV')
-    assert_equal 475, Roman.new.to_decimal('CDLXXV')
-    assert_equal 476, Roman.new.to_decimal('CDLXXVI')
-    assert_equal 477, Roman.new.to_decimal('CDLXXVII')
-    assert_equal 478, Roman.new.to_decimal('CDLXXVIII')
-    assert_equal 479, Roman.new.to_decimal('CDLXXIX')
-    assert_equal 480, Roman.new.to_decimal('CDLXXX')
-    assert_equal 481, Roman.new.to_decimal('CDLXXXI')
-    assert_equal 482, Roman.new.to_decimal('CDLXXXII')
-    assert_equal 483, Roman.new.to_decimal('CDLXXXIII')
-    assert_equal 484, Roman.new.to_decimal('CDLXXXIV')
-    assert_equal 485, Roman.new.to_decimal('CDLXXXV')
-    assert_equal 486, Roman.new.to_decimal('CDLXXXVI')
-    assert_equal 487, Roman.new.to_decimal('CDLXXXVII')
-    assert_equal 488, Roman.new.to_decimal('CDLXXXVIII')
-    assert_equal 489, Roman.new.to_decimal('CDLXXXIX')
-    assert_equal 490, Roman.new.to_decimal('CDXC')
-    assert_equal 491, Roman.new.to_decimal('CDXCI')
-    assert_equal 492, Roman.new.to_decimal('CDXCII')
-    assert_equal 493, Roman.new.to_decimal('CDXCIII')
-    assert_equal 494, Roman.new.to_decimal('CDXCIV')
-    assert_equal 495, Roman.new.to_decimal('CDXCV')
-    assert_equal 496, Roman.new.to_decimal('CDXCVI')
-    assert_equal 497, Roman.new.to_decimal('CDXCVII')
-    assert_equal 498, Roman.new.to_decimal('CDXCVIII')
-    assert_equal 499, Roman.new.to_decimal('CDXCIX')
-    assert_equal 500, Roman.new.to_decimal('D')
-    assert_equal 501, Roman.new.to_decimal('DI')
-    assert_equal 502, Roman.new.to_decimal('DII')
-    assert_equal 503, Roman.new.to_decimal('DIII')
-    assert_equal 504, Roman.new.to_decimal('DIV')
-    assert_equal 505, Roman.new.to_decimal('DV')
-    assert_equal 506, Roman.new.to_decimal('DVI')
-    assert_equal 507, Roman.new.to_decimal('DVII')
-    assert_equal 508, Roman.new.to_decimal('DVIII')
-    assert_equal 509, Roman.new.to_decimal('DIX')
-    assert_equal 510, Roman.new.to_decimal('DX')
-    assert_equal 511, Roman.new.to_decimal('DXI')
-    assert_equal 512, Roman.new.to_decimal('DXII')
-    assert_equal 513, Roman.new.to_decimal('DXIII')
-    assert_equal 514, Roman.new.to_decimal('DXIV')
-    assert_equal 515, Roman.new.to_decimal('DXV')
-    assert_equal 516, Roman.new.to_decimal('DXVI')
-    assert_equal 517, Roman.new.to_decimal('DXVII')
-    assert_equal 518, Roman.new.to_decimal('DXVIII')
-    assert_equal 519, Roman.new.to_decimal('DXIX')
-    assert_equal 520, Roman.new.to_decimal('DXX')
-    assert_equal 521, Roman.new.to_decimal('DXXI')
-    assert_equal 522, Roman.new.to_decimal('DXXII')
-    assert_equal 523, Roman.new.to_decimal('DXXIII')
-    assert_equal 524, Roman.new.to_decimal('DXXIV')
-    assert_equal 525, Roman.new.to_decimal('DXXV')
-    assert_equal 526, Roman.new.to_decimal('DXXVI')
-    assert_equal 527, Roman.new.to_decimal('DXXVII')
-    assert_equal 528, Roman.new.to_decimal('DXXVIII')
-    assert_equal 529, Roman.new.to_decimal('DXXIX')
-    assert_equal 530, Roman.new.to_decimal('DXXX')
-    assert_equal 531, Roman.new.to_decimal('DXXXI')
-    assert_equal 532, Roman.new.to_decimal('DXXXII')
-    assert_equal 533, Roman.new.to_decimal('DXXXIII')
-    assert_equal 534, Roman.new.to_decimal('DXXXIV')
-    assert_equal 535, Roman.new.to_decimal('DXXXV')
-    assert_equal 536, Roman.new.to_decimal('DXXXVI')
-    assert_equal 537, Roman.new.to_decimal('DXXXVII')
-    assert_equal 538, Roman.new.to_decimal('DXXXVIII')
-    assert_equal 539, Roman.new.to_decimal('DXXXIX')
-    assert_equal 540, Roman.new.to_decimal('DXL')
-    assert_equal 541, Roman.new.to_decimal('DXLI')
-    assert_equal 542, Roman.new.to_decimal('DXLII')
-    assert_equal 543, Roman.new.to_decimal('DXLIII')
-    assert_equal 544, Roman.new.to_decimal('DXLIV')
-    assert_equal 545, Roman.new.to_decimal('DXLV')
-    assert_equal 546, Roman.new.to_decimal('DXLVI')
-    assert_equal 547, Roman.new.to_decimal('DXLVII')
-    assert_equal 548, Roman.new.to_decimal('DXLVIII')
-    assert_equal 549, Roman.new.to_decimal('DXLIX')
-    assert_equal 550, Roman.new.to_decimal('DL')
-    assert_equal 551, Roman.new.to_decimal('DLI')
-    assert_equal 552, Roman.new.to_decimal('DLII')
-    assert_equal 553, Roman.new.to_decimal('DLIII')
-    assert_equal 554, Roman.new.to_decimal('DLIV')
-    assert_equal 555, Roman.new.to_decimal('DLV')
-    assert_equal 556, Roman.new.to_decimal('DLVI')
-    assert_equal 557, Roman.new.to_decimal('DLVII')
-    assert_equal 558, Roman.new.to_decimal('DLVIII')
-    assert_equal 559, Roman.new.to_decimal('DLIX')
-    assert_equal 560, Roman.new.to_decimal('DLX')
-    assert_equal 561, Roman.new.to_decimal('DLXI')
-    assert_equal 562, Roman.new.to_decimal('DLXII')
-    assert_equal 563, Roman.new.to_decimal('DLXIII')
-    assert_equal 564, Roman.new.to_decimal('DLXIV')
-    assert_equal 565, Roman.new.to_decimal('DLXV')
-    assert_equal 566, Roman.new.to_decimal('DLXVI')
-    assert_equal 567, Roman.new.to_decimal('DLXVII')
-    assert_equal 568, Roman.new.to_decimal('DLXVIII')
-    assert_equal 569, Roman.new.to_decimal('DLXIX')
-    assert_equal 570, Roman.new.to_decimal('DLXX')
-    assert_equal 571, Roman.new.to_decimal('DLXXI')
-    assert_equal 572, Roman.new.to_decimal('DLXXII')
-    assert_equal 573, Roman.new.to_decimal('DLXXIII')
-    assert_equal 574, Roman.new.to_decimal('DLXXIV')
-    assert_equal 575, Roman.new.to_decimal('DLXXV')
-    assert_equal 576, Roman.new.to_decimal('DLXXVI')
-    assert_equal 577, Roman.new.to_decimal('DLXXVII')
-    assert_equal 578, Roman.new.to_decimal('DLXXVIII')
-    assert_equal 579, Roman.new.to_decimal('DLXXIX')
-    assert_equal 580, Roman.new.to_decimal('DLXXX')
-    assert_equal 581, Roman.new.to_decimal('DLXXXI')
-    assert_equal 582, Roman.new.to_decimal('DLXXXII')
-    assert_equal 583, Roman.new.to_decimal('DLXXXIII')
-    assert_equal 584, Roman.new.to_decimal('DLXXXIV')
-    assert_equal 585, Roman.new.to_decimal('DLXXXV')
-    assert_equal 586, Roman.new.to_decimal('DLXXXVI')
-    assert_equal 587, Roman.new.to_decimal('DLXXXVII')
-    assert_equal 588, Roman.new.to_decimal('DLXXXVIII')
-    assert_equal 589, Roman.new.to_decimal('DLXXXIX')
-    assert_equal 590, Roman.new.to_decimal('DXC')
-    assert_equal 591, Roman.new.to_decimal('DXCI')
-    assert_equal 592, Roman.new.to_decimal('DXCII')
-    assert_equal 593, Roman.new.to_decimal('DXCIII')
-    assert_equal 594, Roman.new.to_decimal('DXCIV')
-    assert_equal 595, Roman.new.to_decimal('DXCV')
-    assert_equal 596, Roman.new.to_decimal('DXCVI')
-    assert_equal 597, Roman.new.to_decimal('DXCVII')
-    assert_equal 598, Roman.new.to_decimal('DXCVIII')
-    assert_equal 599, Roman.new.to_decimal('DXCIX')
-    assert_equal 600, Roman.new.to_decimal('DC')
-    assert_equal 601, Roman.new.to_decimal('DCI')
-    assert_equal 602, Roman.new.to_decimal('DCII')
-    assert_equal 603, Roman.new.to_decimal('DCIII')
-    assert_equal 604, Roman.new.to_decimal('DCIV')
-    assert_equal 605, Roman.new.to_decimal('DCV')
-    assert_equal 606, Roman.new.to_decimal('DCVI')
-    assert_equal 607, Roman.new.to_decimal('DCVII')
-    assert_equal 608, Roman.new.to_decimal('DCVIII')
-    assert_equal 609, Roman.new.to_decimal('DCIX')
-    assert_equal 610, Roman.new.to_decimal('DCX')
-    assert_equal 611, Roman.new.to_decimal('DCXI')
-    assert_equal 612, Roman.new.to_decimal('DCXII')
-    assert_equal 613, Roman.new.to_decimal('DCXIII')
-    assert_equal 614, Roman.new.to_decimal('DCXIV')
-    assert_equal 615, Roman.new.to_decimal('DCXV')
-    assert_equal 616, Roman.new.to_decimal('DCXVI')
-    assert_equal 617, Roman.new.to_decimal('DCXVII')
-    assert_equal 618, Roman.new.to_decimal('DCXVIII')
-    assert_equal 619, Roman.new.to_decimal('DCXIX')
-    assert_equal 620, Roman.new.to_decimal('DCXX')
-    assert_equal 621, Roman.new.to_decimal('DCXXI')
-    assert_equal 622, Roman.new.to_decimal('DCXXII')
-    assert_equal 623, Roman.new.to_decimal('DCXXIII')
-    assert_equal 624, Roman.new.to_decimal('DCXXIV')
-    assert_equal 625, Roman.new.to_decimal('DCXXV')
-    assert_equal 626, Roman.new.to_decimal('DCXXVI')
-    assert_equal 627, Roman.new.to_decimal('DCXXVII')
-    assert_equal 628, Roman.new.to_decimal('DCXXVIII')
-    assert_equal 629, Roman.new.to_decimal('DCXXIX')
-    assert_equal 630, Roman.new.to_decimal('DCXXX')
-    assert_equal 631, Roman.new.to_decimal('DCXXXI')
-    assert_equal 632, Roman.new.to_decimal('DCXXXII')
-    assert_equal 633, Roman.new.to_decimal('DCXXXIII')
-    assert_equal 634, Roman.new.to_decimal('DCXXXIV')
-    assert_equal 635, Roman.new.to_decimal('DCXXXV')
-    assert_equal 636, Roman.new.to_decimal('DCXXXVI')
-    assert_equal 637, Roman.new.to_decimal('DCXXXVII')
-    assert_equal 638, Roman.new.to_decimal('DCXXXVIII')
-    assert_equal 639, Roman.new.to_decimal('DCXXXIX')
-    assert_equal 640, Roman.new.to_decimal('DCXL')
-    assert_equal 641, Roman.new.to_decimal('DCXLI')
-    assert_equal 642, Roman.new.to_decimal('DCXLII')
-    assert_equal 643, Roman.new.to_decimal('DCXLIII')
-    assert_equal 644, Roman.new.to_decimal('DCXLIV')
-    assert_equal 645, Roman.new.to_decimal('DCXLV')
-    assert_equal 646, Roman.new.to_decimal('DCXLVI')
-    assert_equal 647, Roman.new.to_decimal('DCXLVII')
-    assert_equal 648, Roman.new.to_decimal('DCXLVIII')
-    assert_equal 649, Roman.new.to_decimal('DCXLIX')
-    assert_equal 650, Roman.new.to_decimal('DCL')
-    assert_equal 651, Roman.new.to_decimal('DCLI')
-    assert_equal 652, Roman.new.to_decimal('DCLII')
-    assert_equal 653, Roman.new.to_decimal('DCLIII')
-    assert_equal 654, Roman.new.to_decimal('DCLIV')
-    assert_equal 655, Roman.new.to_decimal('DCLV')
-    assert_equal 656, Roman.new.to_decimal('DCLVI')
-    assert_equal 657, Roman.new.to_decimal('DCLVII')
-    assert_equal 658, Roman.new.to_decimal('DCLVIII')
-    assert_equal 659, Roman.new.to_decimal('DCLIX')
-    assert_equal 660, Roman.new.to_decimal('DCLX')
-    assert_equal 661, Roman.new.to_decimal('DCLXI')
-    assert_equal 662, Roman.new.to_decimal('DCLXII')
-    assert_equal 663, Roman.new.to_decimal('DCLXIII')
-    assert_equal 664, Roman.new.to_decimal('DCLXIV')
-    assert_equal 665, Roman.new.to_decimal('DCLXV')
-    assert_equal 666, Roman.new.to_decimal('DCLXVI')
-    assert_equal 667, Roman.new.to_decimal('DCLXVII')
-    assert_equal 668, Roman.new.to_decimal('DCLXVIII')
-    assert_equal 669, Roman.new.to_decimal('DCLXIX')
-    assert_equal 670, Roman.new.to_decimal('DCLXX')
-    assert_equal 671, Roman.new.to_decimal('DCLXXI')
-    assert_equal 672, Roman.new.to_decimal('DCLXXII')
-    assert_equal 673, Roman.new.to_decimal('DCLXXIII')
-    assert_equal 674, Roman.new.to_decimal('DCLXXIV')
-    assert_equal 675, Roman.new.to_decimal('DCLXXV')
-    assert_equal 676, Roman.new.to_decimal('DCLXXVI')
-    assert_equal 677, Roman.new.to_decimal('DCLXXVII')
-    assert_equal 678, Roman.new.to_decimal('DCLXXVIII')
-    assert_equal 679, Roman.new.to_decimal('DCLXXIX')
-    assert_equal 680, Roman.new.to_decimal('DCLXXX')
-    assert_equal 681, Roman.new.to_decimal('DCLXXXI')
-    assert_equal 682, Roman.new.to_decimal('DCLXXXII')
-    assert_equal 683, Roman.new.to_decimal('DCLXXXIII')
-    assert_equal 684, Roman.new.to_decimal('DCLXXXIV')
-    assert_equal 685, Roman.new.to_decimal('DCLXXXV')
-    assert_equal 686, Roman.new.to_decimal('DCLXXXVI')
-    assert_equal 687, Roman.new.to_decimal('DCLXXXVII')
-    assert_equal 688, Roman.new.to_decimal('DCLXXXVIII')
-    assert_equal 689, Roman.new.to_decimal('DCLXXXIX')
-    assert_equal 690, Roman.new.to_decimal('DCXC')
-    assert_equal 691, Roman.new.to_decimal('DCXCI')
-    assert_equal 692, Roman.new.to_decimal('DCXCII')
-    assert_equal 693, Roman.new.to_decimal('DCXCIII')
-    assert_equal 694, Roman.new.to_decimal('DCXCIV')
-    assert_equal 695, Roman.new.to_decimal('DCXCV')
-    assert_equal 696, Roman.new.to_decimal('DCXCVI')
-    assert_equal 697, Roman.new.to_decimal('DCXCVII')
-    assert_equal 698, Roman.new.to_decimal('DCXCVIII')
-    assert_equal 699, Roman.new.to_decimal('DCXCIX')
-    assert_equal 700, Roman.new.to_decimal('DCC')
-    assert_equal 701, Roman.new.to_decimal('DCCI')
-    assert_equal 702, Roman.new.to_decimal('DCCII')
-    assert_equal 703, Roman.new.to_decimal('DCCIII')
-    assert_equal 704, Roman.new.to_decimal('DCCIV')
-    assert_equal 705, Roman.new.to_decimal('DCCV')
-    assert_equal 706, Roman.new.to_decimal('DCCVI')
-    assert_equal 707, Roman.new.to_decimal('DCCVII')
-    assert_equal 708, Roman.new.to_decimal('DCCVIII')
-    assert_equal 709, Roman.new.to_decimal('DCCIX')
-    assert_equal 710, Roman.new.to_decimal('DCCX')
-    assert_equal 711, Roman.new.to_decimal('DCCXI')
-    assert_equal 712, Roman.new.to_decimal('DCCXII')
-    assert_equal 713, Roman.new.to_decimal('DCCXIII')
-    assert_equal 714, Roman.new.to_decimal('DCCXIV')
-    assert_equal 715, Roman.new.to_decimal('DCCXV')
-    assert_equal 716, Roman.new.to_decimal('DCCXVI')
-    assert_equal 717, Roman.new.to_decimal('DCCXVII')
-    assert_equal 718, Roman.new.to_decimal('DCCXVIII')
-    assert_equal 719, Roman.new.to_decimal('DCCXIX')
-    assert_equal 720, Roman.new.to_decimal('DCCXX')
-    assert_equal 721, Roman.new.to_decimal('DCCXXI')
-    assert_equal 722, Roman.new.to_decimal('DCCXXII')
-    assert_equal 723, Roman.new.to_decimal('DCCXXIII')
-    assert_equal 724, Roman.new.to_decimal('DCCXXIV')
-    assert_equal 725, Roman.new.to_decimal('DCCXXV')
-    assert_equal 726, Roman.new.to_decimal('DCCXXVI')
-    assert_equal 727, Roman.new.to_decimal('DCCXXVII')
-    assert_equal 728, Roman.new.to_decimal('DCCXXVIII')
-    assert_equal 729, Roman.new.to_decimal('DCCXXIX')
-    assert_equal 730, Roman.new.to_decimal('DCCXXX')
-    assert_equal 731, Roman.new.to_decimal('DCCXXXI')
-    assert_equal 732, Roman.new.to_decimal('DCCXXXII')
-    assert_equal 733, Roman.new.to_decimal('DCCXXXIII')
-    assert_equal 734, Roman.new.to_decimal('DCCXXXIV')
-    assert_equal 735, Roman.new.to_decimal('DCCXXXV')
-    assert_equal 736, Roman.new.to_decimal('DCCXXXVI')
-    assert_equal 737, Roman.new.to_decimal('DCCXXXVII')
-    assert_equal 738, Roman.new.to_decimal('DCCXXXVIII')
-    assert_equal 739, Roman.new.to_decimal('DCCXXXIX')
-    assert_equal 740, Roman.new.to_decimal('DCCXL')
-    assert_equal 741, Roman.new.to_decimal('DCCXLI')
-    assert_equal 742, Roman.new.to_decimal('DCCXLII')
-    assert_equal 743, Roman.new.to_decimal('DCCXLIII')
-    assert_equal 744, Roman.new.to_decimal('DCCXLIV')
-    assert_equal 745, Roman.new.to_decimal('DCCXLV')
-    assert_equal 746, Roman.new.to_decimal('DCCXLVI')
-    assert_equal 747, Roman.new.to_decimal('DCCXLVII')
-    assert_equal 748, Roman.new.to_decimal('DCCXLVIII')
-    assert_equal 749, Roman.new.to_decimal('DCCXLIX')
-    assert_equal 750, Roman.new.to_decimal('DCCL')
-    assert_equal 751, Roman.new.to_decimal('DCCLI')
-    assert_equal 752, Roman.new.to_decimal('DCCLII')
-    assert_equal 753, Roman.new.to_decimal('DCCLIII')
-    assert_equal 754, Roman.new.to_decimal('DCCLIV')
-    assert_equal 755, Roman.new.to_decimal('DCCLV')
-    assert_equal 756, Roman.new.to_decimal('DCCLVI')
-    assert_equal 757, Roman.new.to_decimal('DCCLVII')
-    assert_equal 758, Roman.new.to_decimal('DCCLVIII')
-    assert_equal 759, Roman.new.to_decimal('DCCLIX')
-    assert_equal 760, Roman.new.to_decimal('DCCLX')
-    assert_equal 761, Roman.new.to_decimal('DCCLXI')
-    assert_equal 762, Roman.new.to_decimal('DCCLXII')
-    assert_equal 763, Roman.new.to_decimal('DCCLXIII')
-    assert_equal 764, Roman.new.to_decimal('DCCLXIV')
-    assert_equal 765, Roman.new.to_decimal('DCCLXV')
-    assert_equal 766, Roman.new.to_decimal('DCCLXVI')
-    assert_equal 767, Roman.new.to_decimal('DCCLXVII')
-    assert_equal 768, Roman.new.to_decimal('DCCLXVIII')
-    assert_equal 769, Roman.new.to_decimal('DCCLXIX')
-    assert_equal 770, Roman.new.to_decimal('DCCLXX')
-    assert_equal 771, Roman.new.to_decimal('DCCLXXI')
-    assert_equal 772, Roman.new.to_decimal('DCCLXXII')
-    assert_equal 773, Roman.new.to_decimal('DCCLXXIII')
-    assert_equal 774, Roman.new.to_decimal('DCCLXXIV')
-    assert_equal 775, Roman.new.to_decimal('DCCLXXV')
-    assert_equal 776, Roman.new.to_decimal('DCCLXXVI')
-    assert_equal 777, Roman.new.to_decimal('DCCLXXVII')
-    assert_equal 778, Roman.new.to_decimal('DCCLXXVIII')
-    assert_equal 779, Roman.new.to_decimal('DCCLXXIX')
-    assert_equal 780, Roman.new.to_decimal('DCCLXXX')
-    assert_equal 781, Roman.new.to_decimal('DCCLXXXI')
-    assert_equal 782, Roman.new.to_decimal('DCCLXXXII')
-    assert_equal 783, Roman.new.to_decimal('DCCLXXXIII')
-    assert_equal 784, Roman.new.to_decimal('DCCLXXXIV')
-    assert_equal 785, Roman.new.to_decimal('DCCLXXXV')
-    assert_equal 786, Roman.new.to_decimal('DCCLXXXVI')
-    assert_equal 787, Roman.new.to_decimal('DCCLXXXVII')
-    assert_equal 788, Roman.new.to_decimal('DCCLXXXVIII')
-    assert_equal 789, Roman.new.to_decimal('DCCLXXXIX')
-    assert_equal 790, Roman.new.to_decimal('DCCXC')
-    assert_equal 791, Roman.new.to_decimal('DCCXCI')
-    assert_equal 792, Roman.new.to_decimal('DCCXCII')
-    assert_equal 793, Roman.new.to_decimal('DCCXCIII')
-    assert_equal 794, Roman.new.to_decimal('DCCXCIV')
-    assert_equal 795, Roman.new.to_decimal('DCCXCV')
-    assert_equal 796, Roman.new.to_decimal('DCCXCVI')
-    assert_equal 797, Roman.new.to_decimal('DCCXCVII')
-    assert_equal 798, Roman.new.to_decimal('DCCXCVIII')
-    assert_equal 799, Roman.new.to_decimal('DCCXCIX')
-    assert_equal 800, Roman.new.to_decimal('DCCC')
-    assert_equal 801, Roman.new.to_decimal('DCCCI')
-    assert_equal 802, Roman.new.to_decimal('DCCCII')
-    assert_equal 803, Roman.new.to_decimal('DCCCIII')
-    assert_equal 804, Roman.new.to_decimal('DCCCIV')
-    assert_equal 805, Roman.new.to_decimal('DCCCV')
-    assert_equal 806, Roman.new.to_decimal('DCCCVI')
-    assert_equal 807, Roman.new.to_decimal('DCCCVII')
-    assert_equal 808, Roman.new.to_decimal('DCCCVIII')
-    assert_equal 809, Roman.new.to_decimal('DCCCIX')
-    assert_equal 810, Roman.new.to_decimal('DCCCX')
-    assert_equal 811, Roman.new.to_decimal('DCCCXI')
-    assert_equal 812, Roman.new.to_decimal('DCCCXII')
-    assert_equal 813, Roman.new.to_decimal('DCCCXIII')
-    assert_equal 814, Roman.new.to_decimal('DCCCXIV')
-    assert_equal 815, Roman.new.to_decimal('DCCCXV')
-    assert_equal 816, Roman.new.to_decimal('DCCCXVI')
-    assert_equal 817, Roman.new.to_decimal('DCCCXVII')
-    assert_equal 818, Roman.new.to_decimal('DCCCXVIII')
-    assert_equal 819, Roman.new.to_decimal('DCCCXIX')
-    assert_equal 820, Roman.new.to_decimal('DCCCXX')
-    assert_equal 821, Roman.new.to_decimal('DCCCXXI')
-    assert_equal 822, Roman.new.to_decimal('DCCCXXII')
-    assert_equal 823, Roman.new.to_decimal('DCCCXXIII')
-    assert_equal 824, Roman.new.to_decimal('DCCCXXIV')
-    assert_equal 825, Roman.new.to_decimal('DCCCXXV')
-    assert_equal 826, Roman.new.to_decimal('DCCCXXVI')
-    assert_equal 827, Roman.new.to_decimal('DCCCXXVII')
-    assert_equal 828, Roman.new.to_decimal('DCCCXXVIII')
-    assert_equal 829, Roman.new.to_decimal('DCCCXXIX')
-    assert_equal 830, Roman.new.to_decimal('DCCCXXX')
-    assert_equal 831, Roman.new.to_decimal('DCCCXXXI')
-    assert_equal 832, Roman.new.to_decimal('DCCCXXXII')
-    assert_equal 833, Roman.new.to_decimal('DCCCXXXIII')
-    assert_equal 834, Roman.new.to_decimal('DCCCXXXIV')
-    assert_equal 835, Roman.new.to_decimal('DCCCXXXV')
-    assert_equal 836, Roman.new.to_decimal('DCCCXXXVI')
-    assert_equal 837, Roman.new.to_decimal('DCCCXXXVII')
-    assert_equal 838, Roman.new.to_decimal('DCCCXXXVIII')
-    assert_equal 839, Roman.new.to_decimal('DCCCXXXIX')
-    assert_equal 840, Roman.new.to_decimal('DCCCXL')
-    assert_equal 841, Roman.new.to_decimal('DCCCXLI')
-    assert_equal 842, Roman.new.to_decimal('DCCCXLII')
-    assert_equal 843, Roman.new.to_decimal('DCCCXLIII')
-    assert_equal 844, Roman.new.to_decimal('DCCCXLIV')
-    assert_equal 845, Roman.new.to_decimal('DCCCXLV')
-    assert_equal 846, Roman.new.to_decimal('DCCCXLVI')
-    assert_equal 847, Roman.new.to_decimal('DCCCXLVII')
-    assert_equal 848, Roman.new.to_decimal('DCCCXLVIII')
-    assert_equal 849, Roman.new.to_decimal('DCCCXLIX')
-    assert_equal 850, Roman.new.to_decimal('DCCCL')
-    assert_equal 851, Roman.new.to_decimal('DCCCLI')
-    assert_equal 852, Roman.new.to_decimal('DCCCLII')
-    assert_equal 853, Roman.new.to_decimal('DCCCLIII')
-    assert_equal 854, Roman.new.to_decimal('DCCCLIV')
-    assert_equal 855, Roman.new.to_decimal('DCCCLV')
-    assert_equal 856, Roman.new.to_decimal('DCCCLVI')
-    assert_equal 857, Roman.new.to_decimal('DCCCLVII')
-    assert_equal 858, Roman.new.to_decimal('DCCCLVIII')
-    assert_equal 859, Roman.new.to_decimal('DCCCLIX')
-    assert_equal 860, Roman.new.to_decimal('DCCCLX')
-    assert_equal 861, Roman.new.to_decimal('DCCCLXI')
-    assert_equal 862, Roman.new.to_decimal('DCCCLXII')
-    assert_equal 863, Roman.new.to_decimal('DCCCLXIII')
-    assert_equal 864, Roman.new.to_decimal('DCCCLXIV')
-    assert_equal 865, Roman.new.to_decimal('DCCCLXV')
-    assert_equal 866, Roman.new.to_decimal('DCCCLXVI')
-    assert_equal 867, Roman.new.to_decimal('DCCCLXVII')
-    assert_equal 868, Roman.new.to_decimal('DCCCLXVIII')
-    assert_equal 869, Roman.new.to_decimal('DCCCLXIX')
-    assert_equal 870, Roman.new.to_decimal('DCCCLXX')
-    assert_equal 871, Roman.new.to_decimal('DCCCLXXI')
-    assert_equal 872, Roman.new.to_decimal('DCCCLXXII')
-    assert_equal 873, Roman.new.to_decimal('DCCCLXXIII')
-    assert_equal 874, Roman.new.to_decimal('DCCCLXXIV')
-    assert_equal 875, Roman.new.to_decimal('DCCCLXXV')
-    assert_equal 876, Roman.new.to_decimal('DCCCLXXVI')
-    assert_equal 877, Roman.new.to_decimal('DCCCLXXVII')
-    assert_equal 878, Roman.new.to_decimal('DCCCLXXVIII')
-    assert_equal 879, Roman.new.to_decimal('DCCCLXXIX')
-    assert_equal 880, Roman.new.to_decimal('DCCCLXXX')
-    assert_equal 881, Roman.new.to_decimal('DCCCLXXXI')
-    assert_equal 882, Roman.new.to_decimal('DCCCLXXXII')
-    assert_equal 883, Roman.new.to_decimal('DCCCLXXXIII')
-    assert_equal 884, Roman.new.to_decimal('DCCCLXXXIV')
-    assert_equal 885, Roman.new.to_decimal('DCCCLXXXV')
-    assert_equal 886, Roman.new.to_decimal('DCCCLXXXVI')
-    assert_equal 887, Roman.new.to_decimal('DCCCLXXXVII')
-    assert_equal 888, Roman.new.to_decimal('DCCCLXXXVIII')
-    assert_equal 889, Roman.new.to_decimal('DCCCLXXXIX')
-    assert_equal 890, Roman.new.to_decimal('DCCCXC')
-    assert_equal 891, Roman.new.to_decimal('DCCCXCI')
-    assert_equal 892, Roman.new.to_decimal('DCCCXCII')
-    assert_equal 893, Roman.new.to_decimal('DCCCXCIII')
-    assert_equal 894, Roman.new.to_decimal('DCCCXCIV')
-    assert_equal 895, Roman.new.to_decimal('DCCCXCV')
-    assert_equal 896, Roman.new.to_decimal('DCCCXCVI')
-    assert_equal 897, Roman.new.to_decimal('DCCCXCVII')
-    assert_equal 898, Roman.new.to_decimal('DCCCXCVIII')
-    assert_equal 899, Roman.new.to_decimal('DCCCXCIX')
-    assert_equal 900, Roman.new.to_decimal('CM')
-    assert_equal 901, Roman.new.to_decimal('CMI')
-    assert_equal 902, Roman.new.to_decimal('CMII')
-    assert_equal 903, Roman.new.to_decimal('CMIII')
-    assert_equal 904, Roman.new.to_decimal('CMIV')
-    assert_equal 905, Roman.new.to_decimal('CMV')
-    assert_equal 906, Roman.new.to_decimal('CMVI')
-    assert_equal 907, Roman.new.to_decimal('CMVII')
-    assert_equal 908, Roman.new.to_decimal('CMVIII')
-    assert_equal 909, Roman.new.to_decimal('CMIX')
-    assert_equal 910, Roman.new.to_decimal('CMX')
-    assert_equal 911, Roman.new.to_decimal('CMXI')
-    assert_equal 912, Roman.new.to_decimal('CMXII')
-    assert_equal 913, Roman.new.to_decimal('CMXIII')
-    assert_equal 914, Roman.new.to_decimal('CMXIV')
-    assert_equal 915, Roman.new.to_decimal('CMXV')
-    assert_equal 916, Roman.new.to_decimal('CMXVI')
-    assert_equal 917, Roman.new.to_decimal('CMXVII')
-    assert_equal 918, Roman.new.to_decimal('CMXVIII')
-    assert_equal 919, Roman.new.to_decimal('CMXIX')
-    assert_equal 920, Roman.new.to_decimal('CMXX')
-    assert_equal 921, Roman.new.to_decimal('CMXXI')
-    assert_equal 922, Roman.new.to_decimal('CMXXII')
-    assert_equal 923, Roman.new.to_decimal('CMXXIII')
-    assert_equal 924, Roman.new.to_decimal('CMXXIV')
-    assert_equal 925, Roman.new.to_decimal('CMXXV')
-    assert_equal 926, Roman.new.to_decimal('CMXXVI')
-    assert_equal 927, Roman.new.to_decimal('CMXXVII')
-    assert_equal 928, Roman.new.to_decimal('CMXXVIII')
-    assert_equal 929, Roman.new.to_decimal('CMXXIX')
-    assert_equal 930, Roman.new.to_decimal('CMXXX')
-    assert_equal 931, Roman.new.to_decimal('CMXXXI')
-    assert_equal 932, Roman.new.to_decimal('CMXXXII')
-    assert_equal 933, Roman.new.to_decimal('CMXXXIII')
-    assert_equal 934, Roman.new.to_decimal('CMXXXIV')
-    assert_equal 935, Roman.new.to_decimal('CMXXXV')
-    assert_equal 936, Roman.new.to_decimal('CMXXXVI')
-    assert_equal 937, Roman.new.to_decimal('CMXXXVII')
-    assert_equal 938, Roman.new.to_decimal('CMXXXVIII')
-    assert_equal 939, Roman.new.to_decimal('CMXXXIX')
-    assert_equal 940, Roman.new.to_decimal('CMXL')
-    assert_equal 941, Roman.new.to_decimal('CMXLI')
-    assert_equal 942, Roman.new.to_decimal('CMXLII')
-    assert_equal 943, Roman.new.to_decimal('CMXLIII')
-    assert_equal 944, Roman.new.to_decimal('CMXLIV')
-    assert_equal 945, Roman.new.to_decimal('CMXLV')
-    assert_equal 946, Roman.new.to_decimal('CMXLVI')
-    assert_equal 947, Roman.new.to_decimal('CMXLVII')
-    assert_equal 948, Roman.new.to_decimal('CMXLVIII')
-    assert_equal 949, Roman.new.to_decimal('CMXLIX')
-    assert_equal 950, Roman.new.to_decimal('CML')
-    assert_equal 951, Roman.new.to_decimal('CMLI')
-    assert_equal 952, Roman.new.to_decimal('CMLII')
-    assert_equal 953, Roman.new.to_decimal('CMLIII')
-    assert_equal 954, Roman.new.to_decimal('CMLIV')
-    assert_equal 955, Roman.new.to_decimal('CMLV')
-    assert_equal 956, Roman.new.to_decimal('CMLVI')
-    assert_equal 957, Roman.new.to_decimal('CMLVII')
-    assert_equal 958, Roman.new.to_decimal('CMLVIII')
-    assert_equal 959, Roman.new.to_decimal('CMLIX')
-    assert_equal 960, Roman.new.to_decimal('CMLX')
-    assert_equal 961, Roman.new.to_decimal('CMLXI')
-    assert_equal 962, Roman.new.to_decimal('CMLXII')
-    assert_equal 963, Roman.new.to_decimal('CMLXIII')
-    assert_equal 964, Roman.new.to_decimal('CMLXIV')
-    assert_equal 965, Roman.new.to_decimal('CMLXV')
-    assert_equal 966, Roman.new.to_decimal('CMLXVI')
-    assert_equal 967, Roman.new.to_decimal('CMLXVII')
-    assert_equal 968, Roman.new.to_decimal('CMLXVIII')
-    assert_equal 969, Roman.new.to_decimal('CMLXIX')
-    assert_equal 970, Roman.new.to_decimal('CMLXX')
-    assert_equal 971, Roman.new.to_decimal('CMLXXI')
-    assert_equal 972, Roman.new.to_decimal('CMLXXII')
-    assert_equal 973, Roman.new.to_decimal('CMLXXIII')
-    assert_equal 974, Roman.new.to_decimal('CMLXXIV')
-    assert_equal 975, Roman.new.to_decimal('CMLXXV')
-    assert_equal 976, Roman.new.to_decimal('CMLXXVI')
-    assert_equal 977, Roman.new.to_decimal('CMLXXVII')
-    assert_equal 978, Roman.new.to_decimal('CMLXXVIII')
-    assert_equal 979, Roman.new.to_decimal('CMLXXIX')
-    assert_equal 980, Roman.new.to_decimal('CMLXXX')
-    assert_equal 981, Roman.new.to_decimal('CMLXXXI')
-    assert_equal 982, Roman.new.to_decimal('CMLXXXII')
-    assert_equal 983, Roman.new.to_decimal('CMLXXXIII')
-    assert_equal 984, Roman.new.to_decimal('CMLXXXIV')
-    assert_equal 985, Roman.new.to_decimal('CMLXXXV')
-    assert_equal 986, Roman.new.to_decimal('CMLXXXVI')
-    assert_equal 987, Roman.new.to_decimal('CMLXXXVII')
-    assert_equal 988, Roman.new.to_decimal('CMLXXXVIII')
-    assert_equal 989, Roman.new.to_decimal('CMLXXXIX')
-    assert_equal 990, Roman.new.to_decimal('CMXC')
-    assert_equal 991, Roman.new.to_decimal('CMXCI')
-    assert_equal 992, Roman.new.to_decimal('CMXCII')
-    assert_equal 993, Roman.new.to_decimal('CMXCIII')
-    assert_equal 994, Roman.new.to_decimal('CMXCIV')
-    assert_equal 995, Roman.new.to_decimal('CMXCV')
-    assert_equal 996, Roman.new.to_decimal('CMXCVI')
-    assert_equal 997, Roman.new.to_decimal('CMXCVII')
-    assert_equal 998, Roman.new.to_decimal('CMXCVIII')
-    assert_equal 999, Roman.new.to_decimal('CMXCIX')
-    assert_equal 1000, Roman.new.to_decimal('M')
-    assert_equal 1001, Roman.new.to_decimal('MI')
-    assert_equal 1002, Roman.new.to_decimal('MII')
-    assert_equal 1003, Roman.new.to_decimal('MIII')
-    assert_equal 1004, Roman.new.to_decimal('MIV')
-    assert_equal 1005, Roman.new.to_decimal('MV')
-    assert_equal 1006, Roman.new.to_decimal('MVI')
-    assert_equal 1007, Roman.new.to_decimal('MVII')
-    assert_equal 1008, Roman.new.to_decimal('MVIII')
-    assert_equal 1009, Roman.new.to_decimal('MIX')
-    assert_equal 1010, Roman.new.to_decimal('MX')
-    assert_equal 1011, Roman.new.to_decimal('MXI')
-    assert_equal 1012, Roman.new.to_decimal('MXII')
-    assert_equal 1013, Roman.new.to_decimal('MXIII')
-    assert_equal 1014, Roman.new.to_decimal('MXIV')
-    assert_equal 1015, Roman.new.to_decimal('MXV')
-    assert_equal 1016, Roman.new.to_decimal('MXVI')
-    assert_equal 1017, Roman.new.to_decimal('MXVII')
-    assert_equal 1018, Roman.new.to_decimal('MXVIII')
-    assert_equal 1019, Roman.new.to_decimal('MXIX')
-    assert_equal 1020, Roman.new.to_decimal('MXX')
-    assert_equal 1021, Roman.new.to_decimal('MXXI')
-    assert_equal 1022, Roman.new.to_decimal('MXXII')
-    assert_equal 1023, Roman.new.to_decimal('MXXIII')
-    assert_equal 1024, Roman.new.to_decimal('MXXIV')
-    assert_equal 1025, Roman.new.to_decimal('MXXV')
-    assert_equal 1026, Roman.new.to_decimal('MXXVI')
-    assert_equal 1027, Roman.new.to_decimal('MXXVII')
-    assert_equal 1028, Roman.new.to_decimal('MXXVIII')
-    assert_equal 1029, Roman.new.to_decimal('MXXIX')
-    assert_equal 1030, Roman.new.to_decimal('MXXX')
-    assert_equal 1031, Roman.new.to_decimal('MXXXI')
-    assert_equal 1032, Roman.new.to_decimal('MXXXII')
-    assert_equal 1033, Roman.new.to_decimal('MXXXIII')
-    assert_equal 1034, Roman.new.to_decimal('MXXXIV')
-    assert_equal 1035, Roman.new.to_decimal('MXXXV')
-    assert_equal 1036, Roman.new.to_decimal('MXXXVI')
-    assert_equal 1037, Roman.new.to_decimal('MXXXVII')
-    assert_equal 1038, Roman.new.to_decimal('MXXXVIII')
-    assert_equal 1039, Roman.new.to_decimal('MXXXIX')
-    assert_equal 1040, Roman.new.to_decimal('MXL')
-    assert_equal 1041, Roman.new.to_decimal('MXLI')
-    assert_equal 1042, Roman.new.to_decimal('MXLII')
-    assert_equal 1043, Roman.new.to_decimal('MXLIII')
-    assert_equal 1044, Roman.new.to_decimal('MXLIV')
-    assert_equal 1045, Roman.new.to_decimal('MXLV')
-    assert_equal 1046, Roman.new.to_decimal('MXLVI')
-    assert_equal 1047, Roman.new.to_decimal('MXLVII')
-    assert_equal 1048, Roman.new.to_decimal('MXLVIII')
-    assert_equal 1049, Roman.new.to_decimal('MXLIX')
-    assert_equal 1050, Roman.new.to_decimal('ML')
-    assert_equal 1051, Roman.new.to_decimal('MLI')
-    assert_equal 1052, Roman.new.to_decimal('MLII')
-    assert_equal 1053, Roman.new.to_decimal('MLIII')
-    assert_equal 1054, Roman.new.to_decimal('MLIV')
-    assert_equal 1055, Roman.new.to_decimal('MLV')
-    assert_equal 1056, Roman.new.to_decimal('MLVI')
-    assert_equal 1057, Roman.new.to_decimal('MLVII')
-    assert_equal 1058, Roman.new.to_decimal('MLVIII')
-    assert_equal 1059, Roman.new.to_decimal('MLIX')
-    assert_equal 1060, Roman.new.to_decimal('MLX')
-    assert_equal 1061, Roman.new.to_decimal('MLXI')
-    assert_equal 1062, Roman.new.to_decimal('MLXII')
-    assert_equal 1063, Roman.new.to_decimal('MLXIII')
-    assert_equal 1064, Roman.new.to_decimal('MLXIV')
-    assert_equal 1065, Roman.new.to_decimal('MLXV')
-    assert_equal 1066, Roman.new.to_decimal('MLXVI')
-    assert_equal 1067, Roman.new.to_decimal('MLXVII')
-    assert_equal 1068, Roman.new.to_decimal('MLXVIII')
-    assert_equal 1069, Roman.new.to_decimal('MLXIX')
-    assert_equal 1070, Roman.new.to_decimal('MLXX')
-    assert_equal 1071, Roman.new.to_decimal('MLXXI')
-    assert_equal 1072, Roman.new.to_decimal('MLXXII')
-    assert_equal 1073, Roman.new.to_decimal('MLXXIII')
-    assert_equal 1074, Roman.new.to_decimal('MLXXIV')
-    assert_equal 1075, Roman.new.to_decimal('MLXXV')
-    assert_equal 1076, Roman.new.to_decimal('MLXXVI')
-    assert_equal 1077, Roman.new.to_decimal('MLXXVII')
-    assert_equal 1078, Roman.new.to_decimal('MLXXVIII')
-    assert_equal 1079, Roman.new.to_decimal('MLXXIX')
-    assert_equal 1080, Roman.new.to_decimal('MLXXX')
-    assert_equal 1081, Roman.new.to_decimal('MLXXXI')
-    assert_equal 1082, Roman.new.to_decimal('MLXXXII')
-    assert_equal 1083, Roman.new.to_decimal('MLXXXIII')
-    assert_equal 1084, Roman.new.to_decimal('MLXXXIV')
-    assert_equal 1085, Roman.new.to_decimal('MLXXXV')
-    assert_equal 1086, Roman.new.to_decimal('MLXXXVI')
-    assert_equal 1087, Roman.new.to_decimal('MLXXXVII')
-    assert_equal 1088, Roman.new.to_decimal('MLXXXVIII')
-    assert_equal 1089, Roman.new.to_decimal('MLXXXIX')
-    assert_equal 1090, Roman.new.to_decimal('MXC')
-    assert_equal 1091, Roman.new.to_decimal('MXCI')
-    assert_equal 1092, Roman.new.to_decimal('MXCII')
-    assert_equal 1093, Roman.new.to_decimal('MXCIII')
-    assert_equal 1094, Roman.new.to_decimal('MXCIV')
-    assert_equal 1095, Roman.new.to_decimal('MXCV')
-    assert_equal 1096, Roman.new.to_decimal('MXCVI')
-    assert_equal 1097, Roman.new.to_decimal('MXCVII')
-    assert_equal 1098, Roman.new.to_decimal('MXCVIII')
-    assert_equal 1099, Roman.new.to_decimal('MXCIX')
-    assert_equal 1100, Roman.new.to_decimal('MC')
-    assert_equal 1101, Roman.new.to_decimal('MCI')
-    assert_equal 1102, Roman.new.to_decimal('MCII')
-    assert_equal 1103, Roman.new.to_decimal('MCIII')
-    assert_equal 1104, Roman.new.to_decimal('MCIV')
-    assert_equal 1105, Roman.new.to_decimal('MCV')
-    assert_equal 1106, Roman.new.to_decimal('MCVI')
-    assert_equal 1107, Roman.new.to_decimal('MCVII')
-    assert_equal 1108, Roman.new.to_decimal('MCVIII')
-    assert_equal 1109, Roman.new.to_decimal('MCIX')
-    assert_equal 1110, Roman.new.to_decimal('MCX')
-    assert_equal 1111, Roman.new.to_decimal('MCXI')
-    assert_equal 1112, Roman.new.to_decimal('MCXII')
-    assert_equal 1113, Roman.new.to_decimal('MCXIII')
-    assert_equal 1114, Roman.new.to_decimal('MCXIV')
-    assert_equal 1115, Roman.new.to_decimal('MCXV')
-    assert_equal 1116, Roman.new.to_decimal('MCXVI')
-    assert_equal 1117, Roman.new.to_decimal('MCXVII')
-    assert_equal 1118, Roman.new.to_decimal('MCXVIII')
-    assert_equal 1119, Roman.new.to_decimal('MCXIX')
-    assert_equal 1120, Roman.new.to_decimal('MCXX')
-    assert_equal 1121, Roman.new.to_decimal('MCXXI')
-    assert_equal 1122, Roman.new.to_decimal('MCXXII')
-    assert_equal 1123, Roman.new.to_decimal('MCXXIII')
-    assert_equal 1124, Roman.new.to_decimal('MCXXIV')
-    assert_equal 1125, Roman.new.to_decimal('MCXXV')
-    assert_equal 1126, Roman.new.to_decimal('MCXXVI')
-    assert_equal 1127, Roman.new.to_decimal('MCXXVII')
-    assert_equal 1128, Roman.new.to_decimal('MCXXVIII')
-    assert_equal 1129, Roman.new.to_decimal('MCXXIX')
-    assert_equal 1130, Roman.new.to_decimal('MCXXX')
-    assert_equal 1131, Roman.new.to_decimal('MCXXXI')
-    assert_equal 1132, Roman.new.to_decimal('MCXXXII')
-    assert_equal 1133, Roman.new.to_decimal('MCXXXIII')
-    assert_equal 1134, Roman.new.to_decimal('MCXXXIV')
-    assert_equal 1135, Roman.new.to_decimal('MCXXXV')
-    assert_equal 1136, Roman.new.to_decimal('MCXXXVI')
-    assert_equal 1137, Roman.new.to_decimal('MCXXXVII')
-    assert_equal 1138, Roman.new.to_decimal('MCXXXVIII')
-    assert_equal 1139, Roman.new.to_decimal('MCXXXIX')
-    assert_equal 1140, Roman.new.to_decimal('MCXL')
-    assert_equal 1141, Roman.new.to_decimal('MCXLI')
-    assert_equal 1142, Roman.new.to_decimal('MCXLII')
-    assert_equal 1143, Roman.new.to_decimal('MCXLIII')
-    assert_equal 1144, Roman.new.to_decimal('MCXLIV')
-    assert_equal 1145, Roman.new.to_decimal('MCXLV')
-    assert_equal 1146, Roman.new.to_decimal('MCXLVI')
-    assert_equal 1147, Roman.new.to_decimal('MCXLVII')
-    assert_equal 1148, Roman.new.to_decimal('MCXLVIII')
-    assert_equal 1149, Roman.new.to_decimal('MCXLIX')
-    assert_equal 1150, Roman.new.to_decimal('MCL')
-    assert_equal 1151, Roman.new.to_decimal('MCLI')
-    assert_equal 1152, Roman.new.to_decimal('MCLII')
-    assert_equal 1153, Roman.new.to_decimal('MCLIII')
-    assert_equal 1154, Roman.new.to_decimal('MCLIV')
-    assert_equal 1155, Roman.new.to_decimal('MCLV')
-    assert_equal 1156, Roman.new.to_decimal('MCLVI')
-    assert_equal 1157, Roman.new.to_decimal('MCLVII')
-    assert_equal 1158, Roman.new.to_decimal('MCLVIII')
-    assert_equal 1159, Roman.new.to_decimal('MCLIX')
-    assert_equal 1160, Roman.new.to_decimal('MCLX')
-    assert_equal 1161, Roman.new.to_decimal('MCLXI')
-    assert_equal 1162, Roman.new.to_decimal('MCLXII')
-    assert_equal 1163, Roman.new.to_decimal('MCLXIII')
-    assert_equal 1164, Roman.new.to_decimal('MCLXIV')
-    assert_equal 1165, Roman.new.to_decimal('MCLXV')
-    assert_equal 1166, Roman.new.to_decimal('MCLXVI')
-    assert_equal 1167, Roman.new.to_decimal('MCLXVII')
-    assert_equal 1168, Roman.new.to_decimal('MCLXVIII')
-    assert_equal 1169, Roman.new.to_decimal('MCLXIX')
-    assert_equal 1170, Roman.new.to_decimal('MCLXX')
-    assert_equal 1171, Roman.new.to_decimal('MCLXXI')
-    assert_equal 1172, Roman.new.to_decimal('MCLXXII')
-    assert_equal 1173, Roman.new.to_decimal('MCLXXIII')
-    assert_equal 1174, Roman.new.to_decimal('MCLXXIV')
-    assert_equal 1175, Roman.new.to_decimal('MCLXXV')
-    assert_equal 1176, Roman.new.to_decimal('MCLXXVI')
-    assert_equal 1177, Roman.new.to_decimal('MCLXXVII')
-    assert_equal 1178, Roman.new.to_decimal('MCLXXVIII')
-    assert_equal 1179, Roman.new.to_decimal('MCLXXIX')
-    assert_equal 1180, Roman.new.to_decimal('MCLXXX')
-    assert_equal 1181, Roman.new.to_decimal('MCLXXXI')
-    assert_equal 1182, Roman.new.to_decimal('MCLXXXII')
-    assert_equal 1183, Roman.new.to_decimal('MCLXXXIII')
-    assert_equal 1184, Roman.new.to_decimal('MCLXXXIV')
-    assert_equal 1185, Roman.new.to_decimal('MCLXXXV')
-    assert_equal 1186, Roman.new.to_decimal('MCLXXXVI')
-    assert_equal 1187, Roman.new.to_decimal('MCLXXXVII')
-    assert_equal 1188, Roman.new.to_decimal('MCLXXXVIII')
-    assert_equal 1189, Roman.new.to_decimal('MCLXXXIX')
-    assert_equal 1190, Roman.new.to_decimal('MCXC')
-    assert_equal 1191, Roman.new.to_decimal('MCXCI')
-    assert_equal 1192, Roman.new.to_decimal('MCXCII')
-    assert_equal 1193, Roman.new.to_decimal('MCXCIII')
-    assert_equal 1194, Roman.new.to_decimal('MCXCIV')
-    assert_equal 1195, Roman.new.to_decimal('MCXCV')
-    assert_equal 1196, Roman.new.to_decimal('MCXCVI')
-    assert_equal 1197, Roman.new.to_decimal('MCXCVII')
-    assert_equal 1198, Roman.new.to_decimal('MCXCVIII')
-    assert_equal 1199, Roman.new.to_decimal('MCXCIX')
-    assert_equal 1200, Roman.new.to_decimal('MCC')
-    assert_equal 1201, Roman.new.to_decimal('MCCI')
-    assert_equal 1202, Roman.new.to_decimal('MCCII')
-    assert_equal 1203, Roman.new.to_decimal('MCCIII')
-    assert_equal 1204, Roman.new.to_decimal('MCCIV')
-    assert_equal 1205, Roman.new.to_decimal('MCCV')
-    assert_equal 1206, Roman.new.to_decimal('MCCVI')
-    assert_equal 1207, Roman.new.to_decimal('MCCVII')
-    assert_equal 1208, Roman.new.to_decimal('MCCVIII')
-    assert_equal 1209, Roman.new.to_decimal('MCCIX')
-    assert_equal 1210, Roman.new.to_decimal('MCCX')
-    assert_equal 1211, Roman.new.to_decimal('MCCXI')
-    assert_equal 1212, Roman.new.to_decimal('MCCXII')
-    assert_equal 1213, Roman.new.to_decimal('MCCXIII')
-    assert_equal 1214, Roman.new.to_decimal('MCCXIV')
-    assert_equal 1215, Roman.new.to_decimal('MCCXV')
-    assert_equal 1216, Roman.new.to_decimal('MCCXVI')
-    assert_equal 1217, Roman.new.to_decimal('MCCXVII')
-    assert_equal 1218, Roman.new.to_decimal('MCCXVIII')
-    assert_equal 1219, Roman.new.to_decimal('MCCXIX')
-    assert_equal 1220, Roman.new.to_decimal('MCCXX')
-    assert_equal 1221, Roman.new.to_decimal('MCCXXI')
-    assert_equal 1222, Roman.new.to_decimal('MCCXXII')
-    assert_equal 1223, Roman.new.to_decimal('MCCXXIII')
-    assert_equal 1224, Roman.new.to_decimal('MCCXXIV')
-    assert_equal 1225, Roman.new.to_decimal('MCCXXV')
-    assert_equal 1226, Roman.new.to_decimal('MCCXXVI')
-    assert_equal 1227, Roman.new.to_decimal('MCCXXVII')
-    assert_equal 1228, Roman.new.to_decimal('MCCXXVIII')
-    assert_equal 1229, Roman.new.to_decimal('MCCXXIX')
-    assert_equal 1230, Roman.new.to_decimal('MCCXXX')
-    assert_equal 1231, Roman.new.to_decimal('MCCXXXI')
-    assert_equal 1232, Roman.new.to_decimal('MCCXXXII')
-    assert_equal 1233, Roman.new.to_decimal('MCCXXXIII')
-    assert_equal 1234, Roman.new.to_decimal('MCCXXXIV')
-    assert_equal 1235, Roman.new.to_decimal('MCCXXXV')
-    assert_equal 1236, Roman.new.to_decimal('MCCXXXVI')
-    assert_equal 1237, Roman.new.to_decimal('MCCXXXVII')
-    assert_equal 1238, Roman.new.to_decimal('MCCXXXVIII')
-    assert_equal 1239, Roman.new.to_decimal('MCCXXXIX')
-    assert_equal 1240, Roman.new.to_decimal('MCCXL')
-    assert_equal 1241, Roman.new.to_decimal('MCCXLI')
-    assert_equal 1242, Roman.new.to_decimal('MCCXLII')
-    assert_equal 1243, Roman.new.to_decimal('MCCXLIII')
-    assert_equal 1244, Roman.new.to_decimal('MCCXLIV')
-    assert_equal 1245, Roman.new.to_decimal('MCCXLV')
-    assert_equal 1246, Roman.new.to_decimal('MCCXLVI')
-    assert_equal 1247, Roman.new.to_decimal('MCCXLVII')
-    assert_equal 1248, Roman.new.to_decimal('MCCXLVIII')
-    assert_equal 1249, Roman.new.to_decimal('MCCXLIX')
-    assert_equal 1250, Roman.new.to_decimal('MCCL')
-    assert_equal 1251, Roman.new.to_decimal('MCCLI')
-    assert_equal 1252, Roman.new.to_decimal('MCCLII')
-    assert_equal 1253, Roman.new.to_decimal('MCCLIII')
-    assert_equal 1254, Roman.new.to_decimal('MCCLIV')
-    assert_equal 1255, Roman.new.to_decimal('MCCLV')
-    assert_equal 1256, Roman.new.to_decimal('MCCLVI')
-    assert_equal 1257, Roman.new.to_decimal('MCCLVII')
-    assert_equal 1258, Roman.new.to_decimal('MCCLVIII')
-    assert_equal 1259, Roman.new.to_decimal('MCCLIX')
-    assert_equal 1260, Roman.new.to_decimal('MCCLX')
-    assert_equal 1261, Roman.new.to_decimal('MCCLXI')
-    assert_equal 1262, Roman.new.to_decimal('MCCLXII')
-    assert_equal 1263, Roman.new.to_decimal('MCCLXIII')
-    assert_equal 1264, Roman.new.to_decimal('MCCLXIV')
-    assert_equal 1265, Roman.new.to_decimal('MCCLXV')
-    assert_equal 1266, Roman.new.to_decimal('MCCLXVI')
-    assert_equal 1267, Roman.new.to_decimal('MCCLXVII')
-    assert_equal 1268, Roman.new.to_decimal('MCCLXVIII')
-    assert_equal 1269, Roman.new.to_decimal('MCCLXIX')
-    assert_equal 1270, Roman.new.to_decimal('MCCLXX')
-    assert_equal 1271, Roman.new.to_decimal('MCCLXXI')
-    assert_equal 1272, Roman.new.to_decimal('MCCLXXII')
-    assert_equal 1273, Roman.new.to_decimal('MCCLXXIII')
-    assert_equal 1274, Roman.new.to_decimal('MCCLXXIV')
-    assert_equal 1275, Roman.new.to_decimal('MCCLXXV')
-    assert_equal 1276, Roman.new.to_decimal('MCCLXXVI')
-    assert_equal 1277, Roman.new.to_decimal('MCCLXXVII')
-    assert_equal 1278, Roman.new.to_decimal('MCCLXXVIII')
-    assert_equal 1279, Roman.new.to_decimal('MCCLXXIX')
-    assert_equal 1280, Roman.new.to_decimal('MCCLXXX')
-    assert_equal 1281, Roman.new.to_decimal('MCCLXXXI')
-    assert_equal 1282, Roman.new.to_decimal('MCCLXXXII')
-    assert_equal 1283, Roman.new.to_decimal('MCCLXXXIII')
-    assert_equal 1284, Roman.new.to_decimal('MCCLXXXIV')
-    assert_equal 1285, Roman.new.to_decimal('MCCLXXXV')
-    assert_equal 1286, Roman.new.to_decimal('MCCLXXXVI')
-    assert_equal 1287, Roman.new.to_decimal('MCCLXXXVII')
-    assert_equal 1288, Roman.new.to_decimal('MCCLXXXVIII')
-    assert_equal 1289, Roman.new.to_decimal('MCCLXXXIX')
-    assert_equal 1290, Roman.new.to_decimal('MCCXC')
-    assert_equal 1291, Roman.new.to_decimal('MCCXCI')
-    assert_equal 1292, Roman.new.to_decimal('MCCXCII')
-    assert_equal 1293, Roman.new.to_decimal('MCCXCIII')
-    assert_equal 1294, Roman.new.to_decimal('MCCXCIV')
-    assert_equal 1295, Roman.new.to_decimal('MCCXCV')
-    assert_equal 1296, Roman.new.to_decimal('MCCXCVI')
-    assert_equal 1297, Roman.new.to_decimal('MCCXCVII')
-    assert_equal 1298, Roman.new.to_decimal('MCCXCVIII')
-    assert_equal 1299, Roman.new.to_decimal('MCCXCIX')
-    assert_equal 1300, Roman.new.to_decimal('MCCC')
-    assert_equal 1301, Roman.new.to_decimal('MCCCI')
-    assert_equal 1302, Roman.new.to_decimal('MCCCII')
-    assert_equal 1303, Roman.new.to_decimal('MCCCIII')
-    assert_equal 1304, Roman.new.to_decimal('MCCCIV')
-    assert_equal 1305, Roman.new.to_decimal('MCCCV')
-    assert_equal 1306, Roman.new.to_decimal('MCCCVI')
-    assert_equal 1307, Roman.new.to_decimal('MCCCVII')
-    assert_equal 1308, Roman.new.to_decimal('MCCCVIII')
-    assert_equal 1309, Roman.new.to_decimal('MCCCIX')
-    assert_equal 1310, Roman.new.to_decimal('MCCCX')
-    assert_equal 1311, Roman.new.to_decimal('MCCCXI')
-    assert_equal 1312, Roman.new.to_decimal('MCCCXII')
-    assert_equal 1313, Roman.new.to_decimal('MCCCXIII')
-    assert_equal 1314, Roman.new.to_decimal('MCCCXIV')
-    assert_equal 1315, Roman.new.to_decimal('MCCCXV')
-    assert_equal 1316, Roman.new.to_decimal('MCCCXVI')
-    assert_equal 1317, Roman.new.to_decimal('MCCCXVII')
-    assert_equal 1318, Roman.new.to_decimal('MCCCXVIII')
-    assert_equal 1319, Roman.new.to_decimal('MCCCXIX')
-    assert_equal 1320, Roman.new.to_decimal('MCCCXX')
-    assert_equal 1321, Roman.new.to_decimal('MCCCXXI')
-    assert_equal 1322, Roman.new.to_decimal('MCCCXXII')
-    assert_equal 1323, Roman.new.to_decimal('MCCCXXIII')
-    assert_equal 1324, Roman.new.to_decimal('MCCCXXIV')
-    assert_equal 1325, Roman.new.to_decimal('MCCCXXV')
-    assert_equal 1326, Roman.new.to_decimal('MCCCXXVI')
-    assert_equal 1327, Roman.new.to_decimal('MCCCXXVII')
-    assert_equal 1328, Roman.new.to_decimal('MCCCXXVIII')
-    assert_equal 1329, Roman.new.to_decimal('MCCCXXIX')
-    assert_equal 1330, Roman.new.to_decimal('MCCCXXX')
-    assert_equal 1331, Roman.new.to_decimal('MCCCXXXI')
-    assert_equal 1332, Roman.new.to_decimal('MCCCXXXII')
-    assert_equal 1333, Roman.new.to_decimal('MCCCXXXIII')
-    assert_equal 1334, Roman.new.to_decimal('MCCCXXXIV')
-    assert_equal 1335, Roman.new.to_decimal('MCCCXXXV')
-    assert_equal 1336, Roman.new.to_decimal('MCCCXXXVI')
-    assert_equal 1337, Roman.new.to_decimal('MCCCXXXVII')
-    assert_equal 1338, Roman.new.to_decimal('MCCCXXXVIII')
-    assert_equal 1339, Roman.new.to_decimal('MCCCXXXIX')
-    assert_equal 1340, Roman.new.to_decimal('MCCCXL')
-    assert_equal 1341, Roman.new.to_decimal('MCCCXLI')
-    assert_equal 1342, Roman.new.to_decimal('MCCCXLII')
-    assert_equal 1343, Roman.new.to_decimal('MCCCXLIII')
-    assert_equal 1344, Roman.new.to_decimal('MCCCXLIV')
-    assert_equal 1345, Roman.new.to_decimal('MCCCXLV')
-    assert_equal 1346, Roman.new.to_decimal('MCCCXLVI')
-    assert_equal 1347, Roman.new.to_decimal('MCCCXLVII')
-    assert_equal 1348, Roman.new.to_decimal('MCCCXLVIII')
-    assert_equal 1349, Roman.new.to_decimal('MCCCXLIX')
-    assert_equal 1350, Roman.new.to_decimal('MCCCL')
-    assert_equal 1351, Roman.new.to_decimal('MCCCLI')
-    assert_equal 1352, Roman.new.to_decimal('MCCCLII')
-    assert_equal 1353, Roman.new.to_decimal('MCCCLIII')
-    assert_equal 1354, Roman.new.to_decimal('MCCCLIV')
-    assert_equal 1355, Roman.new.to_decimal('MCCCLV')
-    assert_equal 1356, Roman.new.to_decimal('MCCCLVI')
-    assert_equal 1357, Roman.new.to_decimal('MCCCLVII')
-    assert_equal 1358, Roman.new.to_decimal('MCCCLVIII')
-    assert_equal 1359, Roman.new.to_decimal('MCCCLIX')
-    assert_equal 1360, Roman.new.to_decimal('MCCCLX')
-    assert_equal 1361, Roman.new.to_decimal('MCCCLXI')
-    assert_equal 1362, Roman.new.to_decimal('MCCCLXII')
-    assert_equal 1363, Roman.new.to_decimal('MCCCLXIII')
-    assert_equal 1364, Roman.new.to_decimal('MCCCLXIV')
-    assert_equal 1365, Roman.new.to_decimal('MCCCLXV')
-    assert_equal 1366, Roman.new.to_decimal('MCCCLXVI')
-    assert_equal 1367, Roman.new.to_decimal('MCCCLXVII')
-    assert_equal 1368, Roman.new.to_decimal('MCCCLXVIII')
-    assert_equal 1369, Roman.new.to_decimal('MCCCLXIX')
-    assert_equal 1370, Roman.new.to_decimal('MCCCLXX')
-    assert_equal 1371, Roman.new.to_decimal('MCCCLXXI')
-    assert_equal 1372, Roman.new.to_decimal('MCCCLXXII')
-    assert_equal 1373, Roman.new.to_decimal('MCCCLXXIII')
-    assert_equal 1374, Roman.new.to_decimal('MCCCLXXIV')
-    assert_equal 1375, Roman.new.to_decimal('MCCCLXXV')
-    assert_equal 1376, Roman.new.to_decimal('MCCCLXXVI')
-    assert_equal 1377, Roman.new.to_decimal('MCCCLXXVII')
-    assert_equal 1378, Roman.new.to_decimal('MCCCLXXVIII')
-    assert_equal 1379, Roman.new.to_decimal('MCCCLXXIX')
-    assert_equal 1380, Roman.new.to_decimal('MCCCLXXX')
-    assert_equal 1381, Roman.new.to_decimal('MCCCLXXXI')
-    assert_equal 1382, Roman.new.to_decimal('MCCCLXXXII')
-    assert_equal 1383, Roman.new.to_decimal('MCCCLXXXIII')
-    assert_equal 1384, Roman.new.to_decimal('MCCCLXXXIV')
-    assert_equal 1385, Roman.new.to_decimal('MCCCLXXXV')
-    assert_equal 1386, Roman.new.to_decimal('MCCCLXXXVI')
-    assert_equal 1387, Roman.new.to_decimal('MCCCLXXXVII')
-    assert_equal 1388, Roman.new.to_decimal('MCCCLXXXVIII')
-    assert_equal 1389, Roman.new.to_decimal('MCCCLXXXIX')
-    assert_equal 1390, Roman.new.to_decimal('MCCCXC')
-    assert_equal 1391, Roman.new.to_decimal('MCCCXCI')
-    assert_equal 1392, Roman.new.to_decimal('MCCCXCII')
-    assert_equal 1393, Roman.new.to_decimal('MCCCXCIII')
-    assert_equal 1394, Roman.new.to_decimal('MCCCXCIV')
-    assert_equal 1395, Roman.new.to_decimal('MCCCXCV')
-    assert_equal 1396, Roman.new.to_decimal('MCCCXCVI')
-    assert_equal 1397, Roman.new.to_decimal('MCCCXCVII')
-    assert_equal 1398, Roman.new.to_decimal('MCCCXCVIII')
-    assert_equal 1399, Roman.new.to_decimal('MCCCXCIX')
-    assert_equal 1400, Roman.new.to_decimal('MCD')
-    assert_equal 1401, Roman.new.to_decimal('MCDI')
-    assert_equal 1402, Roman.new.to_decimal('MCDII')
-    assert_equal 1403, Roman.new.to_decimal('MCDIII')
-    assert_equal 1404, Roman.new.to_decimal('MCDIV')
-    assert_equal 1405, Roman.new.to_decimal('MCDV')
-    assert_equal 1406, Roman.new.to_decimal('MCDVI')
-    assert_equal 1407, Roman.new.to_decimal('MCDVII')
-    assert_equal 1408, Roman.new.to_decimal('MCDVIII')
-    assert_equal 1409, Roman.new.to_decimal('MCDIX')
-    assert_equal 1410, Roman.new.to_decimal('MCDX')
-    assert_equal 1411, Roman.new.to_decimal('MCDXI')
-    assert_equal 1412, Roman.new.to_decimal('MCDXII')
-    assert_equal 1413, Roman.new.to_decimal('MCDXIII')
-    assert_equal 1414, Roman.new.to_decimal('MCDXIV')
-    assert_equal 1415, Roman.new.to_decimal('MCDXV')
-    assert_equal 1416, Roman.new.to_decimal('MCDXVI')
-    assert_equal 1417, Roman.new.to_decimal('MCDXVII')
-    assert_equal 1418, Roman.new.to_decimal('MCDXVIII')
-    assert_equal 1419, Roman.new.to_decimal('MCDXIX')
-    assert_equal 1420, Roman.new.to_decimal('MCDXX')
-    assert_equal 1421, Roman.new.to_decimal('MCDXXI')
-    assert_equal 1422, Roman.new.to_decimal('MCDXXII')
-    assert_equal 1423, Roman.new.to_decimal('MCDXXIII')
-    assert_equal 1424, Roman.new.to_decimal('MCDXXIV')
-    assert_equal 1425, Roman.new.to_decimal('MCDXXV')
-    assert_equal 1426, Roman.new.to_decimal('MCDXXVI')
-    assert_equal 1427, Roman.new.to_decimal('MCDXXVII')
-    assert_equal 1428, Roman.new.to_decimal('MCDXXVIII')
-    assert_equal 1429, Roman.new.to_decimal('MCDXXIX')
-    assert_equal 1430, Roman.new.to_decimal('MCDXXX')
-    assert_equal 1431, Roman.new.to_decimal('MCDXXXI')
-    assert_equal 1432, Roman.new.to_decimal('MCDXXXII')
-    assert_equal 1433, Roman.new.to_decimal('MCDXXXIII')
-    assert_equal 1434, Roman.new.to_decimal('MCDXXXIV')
-    assert_equal 1435, Roman.new.to_decimal('MCDXXXV')
-    assert_equal 1436, Roman.new.to_decimal('MCDXXXVI')
-    assert_equal 1437, Roman.new.to_decimal('MCDXXXVII')
-    assert_equal 1438, Roman.new.to_decimal('MCDXXXVIII')
-    assert_equal 1439, Roman.new.to_decimal('MCDXXXIX')
-    assert_equal 1440, Roman.new.to_decimal('MCDXL')
-    assert_equal 1441, Roman.new.to_decimal('MCDXLI')
-    assert_equal 1442, Roman.new.to_decimal('MCDXLII')
-    assert_equal 1443, Roman.new.to_decimal('MCDXLIII')
-    assert_equal 1444, Roman.new.to_decimal('MCDXLIV')
-    assert_equal 1445, Roman.new.to_decimal('MCDXLV')
-    assert_equal 1446, Roman.new.to_decimal('MCDXLVI')
-    assert_equal 1447, Roman.new.to_decimal('MCDXLVII')
-    assert_equal 1448, Roman.new.to_decimal('MCDXLVIII')
-    assert_equal 1449, Roman.new.to_decimal('MCDXLIX')
-    assert_equal 1450, Roman.new.to_decimal('MCDL')
-    assert_equal 1451, Roman.new.to_decimal('MCDLI')
-    assert_equal 1452, Roman.new.to_decimal('MCDLII')
-    assert_equal 1453, Roman.new.to_decimal('MCDLIII')
-    assert_equal 1454, Roman.new.to_decimal('MCDLIV')
-    assert_equal 1455, Roman.new.to_decimal('MCDLV')
-    assert_equal 1456, Roman.new.to_decimal('MCDLVI')
-    assert_equal 1457, Roman.new.to_decimal('MCDLVII')
-    assert_equal 1458, Roman.new.to_decimal('MCDLVIII')
-    assert_equal 1459, Roman.new.to_decimal('MCDLIX')
-    assert_equal 1460, Roman.new.to_decimal('MCDLX')
-    assert_equal 1461, Roman.new.to_decimal('MCDLXI')
-    assert_equal 1462, Roman.new.to_decimal('MCDLXII')
-    assert_equal 1463, Roman.new.to_decimal('MCDLXIII')
-    assert_equal 1464, Roman.new.to_decimal('MCDLXIV')
-    assert_equal 1465, Roman.new.to_decimal('MCDLXV')
-    assert_equal 1466, Roman.new.to_decimal('MCDLXVI')
-    assert_equal 1467, Roman.new.to_decimal('MCDLXVII')
-    assert_equal 1468, Roman.new.to_decimal('MCDLXVIII')
-    assert_equal 1469, Roman.new.to_decimal('MCDLXIX')
-    assert_equal 1470, Roman.new.to_decimal('MCDLXX')
-    assert_equal 1471, Roman.new.to_decimal('MCDLXXI')
-    assert_equal 1472, Roman.new.to_decimal('MCDLXXII')
-    assert_equal 1473, Roman.new.to_decimal('MCDLXXIII')
-    assert_equal 1474, Roman.new.to_decimal('MCDLXXIV')
-    assert_equal 1475, Roman.new.to_decimal('MCDLXXV')
-    assert_equal 1476, Roman.new.to_decimal('MCDLXXVI')
-    assert_equal 1477, Roman.new.to_decimal('MCDLXXVII')
-    assert_equal 1478, Roman.new.to_decimal('MCDLXXVIII')
-    assert_equal 1479, Roman.new.to_decimal('MCDLXXIX')
-    assert_equal 1480, Roman.new.to_decimal('MCDLXXX')
-    assert_equal 1481, Roman.new.to_decimal('MCDLXXXI')
-    assert_equal 1482, Roman.new.to_decimal('MCDLXXXII')
-    assert_equal 1483, Roman.new.to_decimal('MCDLXXXIII')
-    assert_equal 1484, Roman.new.to_decimal('MCDLXXXIV')
-    assert_equal 1485, Roman.new.to_decimal('MCDLXXXV')
-    assert_equal 1486, Roman.new.to_decimal('MCDLXXXVI')
-    assert_equal 1487, Roman.new.to_decimal('MCDLXXXVII')
-    assert_equal 1488, Roman.new.to_decimal('MCDLXXXVIII')
-    assert_equal 1489, Roman.new.to_decimal('MCDLXXXIX')
-    assert_equal 1490, Roman.new.to_decimal('MCDXC')
-    assert_equal 1491, Roman.new.to_decimal('MCDXCI')
-    assert_equal 1492, Roman.new.to_decimal('MCDXCII')
-    assert_equal 1493, Roman.new.to_decimal('MCDXCIII')
-    assert_equal 1494, Roman.new.to_decimal('MCDXCIV')
-    assert_equal 1495, Roman.new.to_decimal('MCDXCV')
-    assert_equal 1496, Roman.new.to_decimal('MCDXCVI')
-    assert_equal 1497, Roman.new.to_decimal('MCDXCVII')
-    assert_equal 1498, Roman.new.to_decimal('MCDXCVIII')
-    assert_equal 1499, Roman.new.to_decimal('MCDXCIX')
-    assert_equal 1500, Roman.new.to_decimal('MD')
-    assert_equal 1501, Roman.new.to_decimal('MDI')
-    assert_equal 1502, Roman.new.to_decimal('MDII')
-    assert_equal 1503, Roman.new.to_decimal('MDIII')
-    assert_equal 1504, Roman.new.to_decimal('MDIV')
-    assert_equal 1505, Roman.new.to_decimal('MDV')
-    assert_equal 1506, Roman.new.to_decimal('MDVI')
-    assert_equal 1507, Roman.new.to_decimal('MDVII')
-    assert_equal 1508, Roman.new.to_decimal('MDVIII')
-    assert_equal 1509, Roman.new.to_decimal('MDIX')
-    assert_equal 1510, Roman.new.to_decimal('MDX')
-    assert_equal 1511, Roman.new.to_decimal('MDXI')
-    assert_equal 1512, Roman.new.to_decimal('MDXII')
-    assert_equal 1513, Roman.new.to_decimal('MDXIII')
-    assert_equal 1514, Roman.new.to_decimal('MDXIV')
-    assert_equal 1515, Roman.new.to_decimal('MDXV')
-    assert_equal 1516, Roman.new.to_decimal('MDXVI')
-    assert_equal 1517, Roman.new.to_decimal('MDXVII')
-    assert_equal 1518, Roman.new.to_decimal('MDXVIII')
-    assert_equal 1519, Roman.new.to_decimal('MDXIX')
-    assert_equal 1520, Roman.new.to_decimal('MDXX')
-    assert_equal 1521, Roman.new.to_decimal('MDXXI')
-    assert_equal 1522, Roman.new.to_decimal('MDXXII')
-    assert_equal 1523, Roman.new.to_decimal('MDXXIII')
-    assert_equal 1524, Roman.new.to_decimal('MDXXIV')
-    assert_equal 1525, Roman.new.to_decimal('MDXXV')
-    assert_equal 1526, Roman.new.to_decimal('MDXXVI')
-    assert_equal 1527, Roman.new.to_decimal('MDXXVII')
-    assert_equal 1528, Roman.new.to_decimal('MDXXVIII')
-    assert_equal 1529, Roman.new.to_decimal('MDXXIX')
-    assert_equal 1530, Roman.new.to_decimal('MDXXX')
-    assert_equal 1531, Roman.new.to_decimal('MDXXXI')
-    assert_equal 1532, Roman.new.to_decimal('MDXXXII')
-    assert_equal 1533, Roman.new.to_decimal('MDXXXIII')
-    assert_equal 1534, Roman.new.to_decimal('MDXXXIV')
-    assert_equal 1535, Roman.new.to_decimal('MDXXXV')
-    assert_equal 1536, Roman.new.to_decimal('MDXXXVI')
-    assert_equal 1537, Roman.new.to_decimal('MDXXXVII')
-    assert_equal 1538, Roman.new.to_decimal('MDXXXVIII')
-    assert_equal 1539, Roman.new.to_decimal('MDXXXIX')
-    assert_equal 1540, Roman.new.to_decimal('MDXL')
-    assert_equal 1541, Roman.new.to_decimal('MDXLI')
-    assert_equal 1542, Roman.new.to_decimal('MDXLII')
-    assert_equal 1543, Roman.new.to_decimal('MDXLIII')
-    assert_equal 1544, Roman.new.to_decimal('MDXLIV')
-    assert_equal 1545, Roman.new.to_decimal('MDXLV')
-    assert_equal 1546, Roman.new.to_decimal('MDXLVI')
-    assert_equal 1547, Roman.new.to_decimal('MDXLVII')
-    assert_equal 1548, Roman.new.to_decimal('MDXLVIII')
-    assert_equal 1549, Roman.new.to_decimal('MDXLIX')
-    assert_equal 1550, Roman.new.to_decimal('MDL')
-    assert_equal 1551, Roman.new.to_decimal('MDLI')
-    assert_equal 1552, Roman.new.to_decimal('MDLII')
-    assert_equal 1553, Roman.new.to_decimal('MDLIII')
-    assert_equal 1554, Roman.new.to_decimal('MDLIV')
-    assert_equal 1555, Roman.new.to_decimal('MDLV')
-    assert_equal 1556, Roman.new.to_decimal('MDLVI')
-    assert_equal 1557, Roman.new.to_decimal('MDLVII')
-    assert_equal 1558, Roman.new.to_decimal('MDLVIII')
-    assert_equal 1559, Roman.new.to_decimal('MDLIX')
-    assert_equal 1560, Roman.new.to_decimal('MDLX')
-    assert_equal 1561, Roman.new.to_decimal('MDLXI')
-    assert_equal 1562, Roman.new.to_decimal('MDLXII')
-    assert_equal 1563, Roman.new.to_decimal('MDLXIII')
-    assert_equal 1564, Roman.new.to_decimal('MDLXIV')
-    assert_equal 1565, Roman.new.to_decimal('MDLXV')
-    assert_equal 1566, Roman.new.to_decimal('MDLXVI')
-    assert_equal 1567, Roman.new.to_decimal('MDLXVII')
-    assert_equal 1568, Roman.new.to_decimal('MDLXVIII')
-    assert_equal 1569, Roman.new.to_decimal('MDLXIX')
-    assert_equal 1570, Roman.new.to_decimal('MDLXX')
-    assert_equal 1571, Roman.new.to_decimal('MDLXXI')
-    assert_equal 1572, Roman.new.to_decimal('MDLXXII')
-    assert_equal 1573, Roman.new.to_decimal('MDLXXIII')
-    assert_equal 1574, Roman.new.to_decimal('MDLXXIV')
-    assert_equal 1575, Roman.new.to_decimal('MDLXXV')
-    assert_equal 1576, Roman.new.to_decimal('MDLXXVI')
-    assert_equal 1577, Roman.new.to_decimal('MDLXXVII')
-    assert_equal 1578, Roman.new.to_decimal('MDLXXVIII')
-    assert_equal 1579, Roman.new.to_decimal('MDLXXIX')
-    assert_equal 1580, Roman.new.to_decimal('MDLXXX')
-    assert_equal 1581, Roman.new.to_decimal('MDLXXXI')
-    assert_equal 1582, Roman.new.to_decimal('MDLXXXII')
-    assert_equal 1583, Roman.new.to_decimal('MDLXXXIII')
-    assert_equal 1584, Roman.new.to_decimal('MDLXXXIV')
-    assert_equal 1585, Roman.new.to_decimal('MDLXXXV')
-    assert_equal 1586, Roman.new.to_decimal('MDLXXXVI')
-    assert_equal 1587, Roman.new.to_decimal('MDLXXXVII')
-    assert_equal 1588, Roman.new.to_decimal('MDLXXXVIII')
-    assert_equal 1589, Roman.new.to_decimal('MDLXXXIX')
-    assert_equal 1590, Roman.new.to_decimal('MDXC')
-    assert_equal 1591, Roman.new.to_decimal('MDXCI')
-    assert_equal 1592, Roman.new.to_decimal('MDXCII')
-    assert_equal 1593, Roman.new.to_decimal('MDXCIII')
-    assert_equal 1594, Roman.new.to_decimal('MDXCIV')
-    assert_equal 1595, Roman.new.to_decimal('MDXCV')
-    assert_equal 1596, Roman.new.to_decimal('MDXCVI')
-    assert_equal 1597, Roman.new.to_decimal('MDXCVII')
-    assert_equal 1598, Roman.new.to_decimal('MDXCVIII')
-    assert_equal 1599, Roman.new.to_decimal('MDXCIX')
-    assert_equal 1600, Roman.new.to_decimal('MDC')
-    assert_equal 1601, Roman.new.to_decimal('MDCI')
-    assert_equal 1602, Roman.new.to_decimal('MDCII')
-    assert_equal 1603, Roman.new.to_decimal('MDCIII')
-    assert_equal 1604, Roman.new.to_decimal('MDCIV')
-    assert_equal 1605, Roman.new.to_decimal('MDCV')
-    assert_equal 1606, Roman.new.to_decimal('MDCVI')
-    assert_equal 1607, Roman.new.to_decimal('MDCVII')
-    assert_equal 1608, Roman.new.to_decimal('MDCVIII')
-    assert_equal 1609, Roman.new.to_decimal('MDCIX')
-    assert_equal 1610, Roman.new.to_decimal('MDCX')
-    assert_equal 1611, Roman.new.to_decimal('MDCXI')
-    assert_equal 1612, Roman.new.to_decimal('MDCXII')
-    assert_equal 1613, Roman.new.to_decimal('MDCXIII')
-    assert_equal 1614, Roman.new.to_decimal('MDCXIV')
-    assert_equal 1615, Roman.new.to_decimal('MDCXV')
-    assert_equal 1616, Roman.new.to_decimal('MDCXVI')
-    assert_equal 1617, Roman.new.to_decimal('MDCXVII')
-    assert_equal 1618, Roman.new.to_decimal('MDCXVIII')
-    assert_equal 1619, Roman.new.to_decimal('MDCXIX')
-    assert_equal 1620, Roman.new.to_decimal('MDCXX')
-    assert_equal 1621, Roman.new.to_decimal('MDCXXI')
-    assert_equal 1622, Roman.new.to_decimal('MDCXXII')
-    assert_equal 1623, Roman.new.to_decimal('MDCXXIII')
-    assert_equal 1624, Roman.new.to_decimal('MDCXXIV')
-    assert_equal 1625, Roman.new.to_decimal('MDCXXV')
-    assert_equal 1626, Roman.new.to_decimal('MDCXXVI')
-    assert_equal 1627, Roman.new.to_decimal('MDCXXVII')
-    assert_equal 1628, Roman.new.to_decimal('MDCXXVIII')
-    assert_equal 1629, Roman.new.to_decimal('MDCXXIX')
-    assert_equal 1630, Roman.new.to_decimal('MDCXXX')
-    assert_equal 1631, Roman.new.to_decimal('MDCXXXI')
-    assert_equal 1632, Roman.new.to_decimal('MDCXXXII')
-    assert_equal 1633, Roman.new.to_decimal('MDCXXXIII')
-    assert_equal 1634, Roman.new.to_decimal('MDCXXXIV')
-    assert_equal 1635, Roman.new.to_decimal('MDCXXXV')
-    assert_equal 1636, Roman.new.to_decimal('MDCXXXVI')
-    assert_equal 1637, Roman.new.to_decimal('MDCXXXVII')
-    assert_equal 1638, Roman.new.to_decimal('MDCXXXVIII')
-    assert_equal 1639, Roman.new.to_decimal('MDCXXXIX')
-    assert_equal 1640, Roman.new.to_decimal('MDCXL')
-    assert_equal 1641, Roman.new.to_decimal('MDCXLI')
-    assert_equal 1642, Roman.new.to_decimal('MDCXLII')
-    assert_equal 1643, Roman.new.to_decimal('MDCXLIII')
-    assert_equal 1644, Roman.new.to_decimal('MDCXLIV')
-    assert_equal 1645, Roman.new.to_decimal('MDCXLV')
-    assert_equal 1646, Roman.new.to_decimal('MDCXLVI')
-    assert_equal 1647, Roman.new.to_decimal('MDCXLVII')
-    assert_equal 1648, Roman.new.to_decimal('MDCXLVIII')
-    assert_equal 1649, Roman.new.to_decimal('MDCXLIX')
-    assert_equal 1650, Roman.new.to_decimal('MDCL')
-    assert_equal 1651, Roman.new.to_decimal('MDCLI')
-    assert_equal 1652, Roman.new.to_decimal('MDCLII')
-    assert_equal 1653, Roman.new.to_decimal('MDCLIII')
-    assert_equal 1654, Roman.new.to_decimal('MDCLIV')
-    assert_equal 1655, Roman.new.to_decimal('MDCLV')
-    assert_equal 1656, Roman.new.to_decimal('MDCLVI')
-    assert_equal 1657, Roman.new.to_decimal('MDCLVII')
-    assert_equal 1658, Roman.new.to_decimal('MDCLVIII')
-    assert_equal 1659, Roman.new.to_decimal('MDCLIX')
-    assert_equal 1660, Roman.new.to_decimal('MDCLX')
-    assert_equal 1661, Roman.new.to_decimal('MDCLXI')
-    assert_equal 1662, Roman.new.to_decimal('MDCLXII')
-    assert_equal 1663, Roman.new.to_decimal('MDCLXIII')
-    assert_equal 1664, Roman.new.to_decimal('MDCLXIV')
-    assert_equal 1665, Roman.new.to_decimal('MDCLXV')
-    assert_equal 1666, Roman.new.to_decimal('MDCLXVI')
-    assert_equal 1667, Roman.new.to_decimal('MDCLXVII')
-    assert_equal 1668, Roman.new.to_decimal('MDCLXVIII')
-    assert_equal 1669, Roman.new.to_decimal('MDCLXIX')
-    assert_equal 1670, Roman.new.to_decimal('MDCLXX')
-    assert_equal 1671, Roman.new.to_decimal('MDCLXXI')
-    assert_equal 1672, Roman.new.to_decimal('MDCLXXII')
-    assert_equal 1673, Roman.new.to_decimal('MDCLXXIII')
-    assert_equal 1674, Roman.new.to_decimal('MDCLXXIV')
-    assert_equal 1675, Roman.new.to_decimal('MDCLXXV')
-    assert_equal 1676, Roman.new.to_decimal('MDCLXXVI')
-    assert_equal 1677, Roman.new.to_decimal('MDCLXXVII')
-    assert_equal 1678, Roman.new.to_decimal('MDCLXXVIII')
-    assert_equal 1679, Roman.new.to_decimal('MDCLXXIX')
-    assert_equal 1680, Roman.new.to_decimal('MDCLXXX')
-    assert_equal 1681, Roman.new.to_decimal('MDCLXXXI')
-    assert_equal 1682, Roman.new.to_decimal('MDCLXXXII')
-    assert_equal 1683, Roman.new.to_decimal('MDCLXXXIII')
-    assert_equal 1684, Roman.new.to_decimal('MDCLXXXIV')
-    assert_equal 1685, Roman.new.to_decimal('MDCLXXXV')
-    assert_equal 1686, Roman.new.to_decimal('MDCLXXXVI')
-    assert_equal 1687, Roman.new.to_decimal('MDCLXXXVII')
-    assert_equal 1688, Roman.new.to_decimal('MDCLXXXVIII')
-    assert_equal 1689, Roman.new.to_decimal('MDCLXXXIX')
-    assert_equal 1690, Roman.new.to_decimal('MDCXC')
-    assert_equal 1691, Roman.new.to_decimal('MDCXCI')
-    assert_equal 1692, Roman.new.to_decimal('MDCXCII')
-    assert_equal 1693, Roman.new.to_decimal('MDCXCIII')
-    assert_equal 1694, Roman.new.to_decimal('MDCXCIV')
-    assert_equal 1695, Roman.new.to_decimal('MDCXCV')
-    assert_equal 1696, Roman.new.to_decimal('MDCXCVI')
-    assert_equal 1697, Roman.new.to_decimal('MDCXCVII')
-    assert_equal 1698, Roman.new.to_decimal('MDCXCVIII')
-    assert_equal 1699, Roman.new.to_decimal('MDCXCIX')
-    assert_equal 1700, Roman.new.to_decimal('MDCC')
-    assert_equal 1701, Roman.new.to_decimal('MDCCI')
-    assert_equal 1702, Roman.new.to_decimal('MDCCII')
-    assert_equal 1703, Roman.new.to_decimal('MDCCIII')
-    assert_equal 1704, Roman.new.to_decimal('MDCCIV')
-    assert_equal 1705, Roman.new.to_decimal('MDCCV')
-    assert_equal 1706, Roman.new.to_decimal('MDCCVI')
-    assert_equal 1707, Roman.new.to_decimal('MDCCVII')
-    assert_equal 1708, Roman.new.to_decimal('MDCCVIII')
-    assert_equal 1709, Roman.new.to_decimal('MDCCIX')
-    assert_equal 1710, Roman.new.to_decimal('MDCCX')
-    assert_equal 1711, Roman.new.to_decimal('MDCCXI')
-    assert_equal 1712, Roman.new.to_decimal('MDCCXII')
-    assert_equal 1713, Roman.new.to_decimal('MDCCXIII')
-    assert_equal 1714, Roman.new.to_decimal('MDCCXIV')
-    assert_equal 1715, Roman.new.to_decimal('MDCCXV')
-    assert_equal 1716, Roman.new.to_decimal('MDCCXVI')
-    assert_equal 1717, Roman.new.to_decimal('MDCCXVII')
-    assert_equal 1718, Roman.new.to_decimal('MDCCXVIII')
-    assert_equal 1719, Roman.new.to_decimal('MDCCXIX')
-    assert_equal 1720, Roman.new.to_decimal('MDCCXX')
-    assert_equal 1721, Roman.new.to_decimal('MDCCXXI')
-    assert_equal 1722, Roman.new.to_decimal('MDCCXXII')
-    assert_equal 1723, Roman.new.to_decimal('MDCCXXIII')
-    assert_equal 1724, Roman.new.to_decimal('MDCCXXIV')
-    assert_equal 1725, Roman.new.to_decimal('MDCCXXV')
-    assert_equal 1726, Roman.new.to_decimal('MDCCXXVI')
-    assert_equal 1727, Roman.new.to_decimal('MDCCXXVII')
-    assert_equal 1728, Roman.new.to_decimal('MDCCXXVIII')
-    assert_equal 1729, Roman.new.to_decimal('MDCCXXIX')
-    assert_equal 1730, Roman.new.to_decimal('MDCCXXX')
-    assert_equal 1731, Roman.new.to_decimal('MDCCXXXI')
-    assert_equal 1732, Roman.new.to_decimal('MDCCXXXII')
-    assert_equal 1733, Roman.new.to_decimal('MDCCXXXIII')
-    assert_equal 1734, Roman.new.to_decimal('MDCCXXXIV')
-    assert_equal 1735, Roman.new.to_decimal('MDCCXXXV')
-    assert_equal 1736, Roman.new.to_decimal('MDCCXXXVI')
-    assert_equal 1737, Roman.new.to_decimal('MDCCXXXVII')
-    assert_equal 1738, Roman.new.to_decimal('MDCCXXXVIII')
-    assert_equal 1739, Roman.new.to_decimal('MDCCXXXIX')
-    assert_equal 1740, Roman.new.to_decimal('MDCCXL')
-    assert_equal 1741, Roman.new.to_decimal('MDCCXLI')
-    assert_equal 1742, Roman.new.to_decimal('MDCCXLII')
-    assert_equal 1743, Roman.new.to_decimal('MDCCXLIII')
-    assert_equal 1744, Roman.new.to_decimal('MDCCXLIV')
-    assert_equal 1745, Roman.new.to_decimal('MDCCXLV')
-    assert_equal 1746, Roman.new.to_decimal('MDCCXLVI')
-    assert_equal 1747, Roman.new.to_decimal('MDCCXLVII')
-    assert_equal 1748, Roman.new.to_decimal('MDCCXLVIII')
-    assert_equal 1749, Roman.new.to_decimal('MDCCXLIX')
-    assert_equal 1750, Roman.new.to_decimal('MDCCL')
-    assert_equal 1751, Roman.new.to_decimal('MDCCLI')
-    assert_equal 1752, Roman.new.to_decimal('MDCCLII')
-    assert_equal 1753, Roman.new.to_decimal('MDCCLIII')
-    assert_equal 1754, Roman.new.to_decimal('MDCCLIV')
-    assert_equal 1755, Roman.new.to_decimal('MDCCLV')
-    assert_equal 1756, Roman.new.to_decimal('MDCCLVI')
-    assert_equal 1757, Roman.new.to_decimal('MDCCLVII')
-    assert_equal 1758, Roman.new.to_decimal('MDCCLVIII')
-    assert_equal 1759, Roman.new.to_decimal('MDCCLIX')
-    assert_equal 1760, Roman.new.to_decimal('MDCCLX')
-    assert_equal 1761, Roman.new.to_decimal('MDCCLXI')
-    assert_equal 1762, Roman.new.to_decimal('MDCCLXII')
-    assert_equal 1763, Roman.new.to_decimal('MDCCLXIII')
-    assert_equal 1764, Roman.new.to_decimal('MDCCLXIV')
-    assert_equal 1765, Roman.new.to_decimal('MDCCLXV')
-    assert_equal 1766, Roman.new.to_decimal('MDCCLXVI')
-    assert_equal 1767, Roman.new.to_decimal('MDCCLXVII')
-    assert_equal 1768, Roman.new.to_decimal('MDCCLXVIII')
-    assert_equal 1769, Roman.new.to_decimal('MDCCLXIX')
-    assert_equal 1770, Roman.new.to_decimal('MDCCLXX')
-    assert_equal 1771, Roman.new.to_decimal('MDCCLXXI')
-    assert_equal 1772, Roman.new.to_decimal('MDCCLXXII')
-    assert_equal 1773, Roman.new.to_decimal('MDCCLXXIII')
-    assert_equal 1774, Roman.new.to_decimal('MDCCLXXIV')
-    assert_equal 1775, Roman.new.to_decimal('MDCCLXXV')
-    assert_equal 1776, Roman.new.to_decimal('MDCCLXXVI')
-    assert_equal 1777, Roman.new.to_decimal('MDCCLXXVII')
-    assert_equal 1778, Roman.new.to_decimal('MDCCLXXVIII')
-    assert_equal 1779, Roman.new.to_decimal('MDCCLXXIX')
-    assert_equal 1780, Roman.new.to_decimal('MDCCLXXX')
-    assert_equal 1781, Roman.new.to_decimal('MDCCLXXXI')
-    assert_equal 1782, Roman.new.to_decimal('MDCCLXXXII')
-    assert_equal 1783, Roman.new.to_decimal('MDCCLXXXIII')
-    assert_equal 1784, Roman.new.to_decimal('MDCCLXXXIV')
-    assert_equal 1785, Roman.new.to_decimal('MDCCLXXXV')
-    assert_equal 1786, Roman.new.to_decimal('MDCCLXXXVI')
-    assert_equal 1787, Roman.new.to_decimal('MDCCLXXXVII')
-    assert_equal 1788, Roman.new.to_decimal('MDCCLXXXVIII')
-    assert_equal 1789, Roman.new.to_decimal('MDCCLXXXIX')
-    assert_equal 1790, Roman.new.to_decimal('MDCCXC')
-    assert_equal 1791, Roman.new.to_decimal('MDCCXCI')
-    assert_equal 1792, Roman.new.to_decimal('MDCCXCII')
-    assert_equal 1793, Roman.new.to_decimal('MDCCXCIII')
-    assert_equal 1794, Roman.new.to_decimal('MDCCXCIV')
-    assert_equal 1795, Roman.new.to_decimal('MDCCXCV')
-    assert_equal 1796, Roman.new.to_decimal('MDCCXCVI')
-    assert_equal 1797, Roman.new.to_decimal('MDCCXCVII')
-    assert_equal 1798, Roman.new.to_decimal('MDCCXCVIII')
-    assert_equal 1799, Roman.new.to_decimal('MDCCXCIX')
-    assert_equal 1800, Roman.new.to_decimal('MDCCC')
-    assert_equal 1801, Roman.new.to_decimal('MDCCCI')
-    assert_equal 1802, Roman.new.to_decimal('MDCCCII')
-    assert_equal 1803, Roman.new.to_decimal('MDCCCIII')
-    assert_equal 1804, Roman.new.to_decimal('MDCCCIV')
-    assert_equal 1805, Roman.new.to_decimal('MDCCCV')
-    assert_equal 1806, Roman.new.to_decimal('MDCCCVI')
-    assert_equal 1807, Roman.new.to_decimal('MDCCCVII')
-    assert_equal 1808, Roman.new.to_decimal('MDCCCVIII')
-    assert_equal 1809, Roman.new.to_decimal('MDCCCIX')
-    assert_equal 1810, Roman.new.to_decimal('MDCCCX')
-    assert_equal 1811, Roman.new.to_decimal('MDCCCXI')
-    assert_equal 1812, Roman.new.to_decimal('MDCCCXII')
-    assert_equal 1813, Roman.new.to_decimal('MDCCCXIII')
-    assert_equal 1814, Roman.new.to_decimal('MDCCCXIV')
-    assert_equal 1815, Roman.new.to_decimal('MDCCCXV')
-    assert_equal 1816, Roman.new.to_decimal('MDCCCXVI')
-    assert_equal 1817, Roman.new.to_decimal('MDCCCXVII')
-    assert_equal 1818, Roman.new.to_decimal('MDCCCXVIII')
-    assert_equal 1819, Roman.new.to_decimal('MDCCCXIX')
-    assert_equal 1820, Roman.new.to_decimal('MDCCCXX')
-    assert_equal 1821, Roman.new.to_decimal('MDCCCXXI')
-    assert_equal 1822, Roman.new.to_decimal('MDCCCXXII')
-    assert_equal 1823, Roman.new.to_decimal('MDCCCXXIII')
-    assert_equal 1824, Roman.new.to_decimal('MDCCCXXIV')
-    assert_equal 1825, Roman.new.to_decimal('MDCCCXXV')
-    assert_equal 1826, Roman.new.to_decimal('MDCCCXXVI')
-    assert_equal 1827, Roman.new.to_decimal('MDCCCXXVII')
-    assert_equal 1828, Roman.new.to_decimal('MDCCCXXVIII')
-    assert_equal 1829, Roman.new.to_decimal('MDCCCXXIX')
-    assert_equal 1830, Roman.new.to_decimal('MDCCCXXX')
-    assert_equal 1831, Roman.new.to_decimal('MDCCCXXXI')
-    assert_equal 1832, Roman.new.to_decimal('MDCCCXXXII')
-    assert_equal 1833, Roman.new.to_decimal('MDCCCXXXIII')
-    assert_equal 1834, Roman.new.to_decimal('MDCCCXXXIV')
-    assert_equal 1835, Roman.new.to_decimal('MDCCCXXXV')
-    assert_equal 1836, Roman.new.to_decimal('MDCCCXXXVI')
-    assert_equal 1837, Roman.new.to_decimal('MDCCCXXXVII')
-    assert_equal 1838, Roman.new.to_decimal('MDCCCXXXVIII')
-    assert_equal 1839, Roman.new.to_decimal('MDCCCXXXIX')
-    assert_equal 1840, Roman.new.to_decimal('MDCCCXL')
-    assert_equal 1841, Roman.new.to_decimal('MDCCCXLI')
-    assert_equal 1842, Roman.new.to_decimal('MDCCCXLII')
-    assert_equal 1843, Roman.new.to_decimal('MDCCCXLIII')
-    assert_equal 1844, Roman.new.to_decimal('MDCCCXLIV')
-    assert_equal 1845, Roman.new.to_decimal('MDCCCXLV')
-    assert_equal 1846, Roman.new.to_decimal('MDCCCXLVI')
-    assert_equal 1847, Roman.new.to_decimal('MDCCCXLVII')
-    assert_equal 1848, Roman.new.to_decimal('MDCCCXLVIII')
-    assert_equal 1849, Roman.new.to_decimal('MDCCCXLIX')
-    assert_equal 1850, Roman.new.to_decimal('MDCCCL')
-    assert_equal 1851, Roman.new.to_decimal('MDCCCLI')
-    assert_equal 1852, Roman.new.to_decimal('MDCCCLII')
-    assert_equal 1853, Roman.new.to_decimal('MDCCCLIII')
-    assert_equal 1854, Roman.new.to_decimal('MDCCCLIV')
-    assert_equal 1855, Roman.new.to_decimal('MDCCCLV')
-    assert_equal 1856, Roman.new.to_decimal('MDCCCLVI')
-    assert_equal 1857, Roman.new.to_decimal('MDCCCLVII')
-    assert_equal 1858, Roman.new.to_decimal('MDCCCLVIII')
-    assert_equal 1859, Roman.new.to_decimal('MDCCCLIX')
-    assert_equal 1860, Roman.new.to_decimal('MDCCCLX')
-    assert_equal 1861, Roman.new.to_decimal('MDCCCLXI')
-    assert_equal 1862, Roman.new.to_decimal('MDCCCLXII')
-    assert_equal 1863, Roman.new.to_decimal('MDCCCLXIII')
-    assert_equal 1864, Roman.new.to_decimal('MDCCCLXIV')
-    assert_equal 1865, Roman.new.to_decimal('MDCCCLXV')
-    assert_equal 1866, Roman.new.to_decimal('MDCCCLXVI')
-    assert_equal 1867, Roman.new.to_decimal('MDCCCLXVII')
-    assert_equal 1868, Roman.new.to_decimal('MDCCCLXVIII')
-    assert_equal 1869, Roman.new.to_decimal('MDCCCLXIX')
-    assert_equal 1870, Roman.new.to_decimal('MDCCCLXX')
-    assert_equal 1871, Roman.new.to_decimal('MDCCCLXXI')
-    assert_equal 1872, Roman.new.to_decimal('MDCCCLXXII')
-    assert_equal 1873, Roman.new.to_decimal('MDCCCLXXIII')
-    assert_equal 1874, Roman.new.to_decimal('MDCCCLXXIV')
-    assert_equal 1875, Roman.new.to_decimal('MDCCCLXXV')
-    assert_equal 1876, Roman.new.to_decimal('MDCCCLXXVI')
-    assert_equal 1877, Roman.new.to_decimal('MDCCCLXXVII')
-    assert_equal 1878, Roman.new.to_decimal('MDCCCLXXVIII')
-    assert_equal 1879, Roman.new.to_decimal('MDCCCLXXIX')
-    assert_equal 1880, Roman.new.to_decimal('MDCCCLXXX')
-    assert_equal 1881, Roman.new.to_decimal('MDCCCLXXXI')
-    assert_equal 1882, Roman.new.to_decimal('MDCCCLXXXII')
-    assert_equal 1883, Roman.new.to_decimal('MDCCCLXXXIII')
-    assert_equal 1884, Roman.new.to_decimal('MDCCCLXXXIV')
-    assert_equal 1885, Roman.new.to_decimal('MDCCCLXXXV')
-    assert_equal 1886, Roman.new.to_decimal('MDCCCLXXXVI')
-    assert_equal 1887, Roman.new.to_decimal('MDCCCLXXXVII')
-    assert_equal 1888, Roman.new.to_decimal('MDCCCLXXXVIII')
-    assert_equal 1889, Roman.new.to_decimal('MDCCCLXXXIX')
-    assert_equal 1890, Roman.new.to_decimal('MDCCCXC')
-    assert_equal 1891, Roman.new.to_decimal('MDCCCXCI')
-    assert_equal 1892, Roman.new.to_decimal('MDCCCXCII')
-    assert_equal 1893, Roman.new.to_decimal('MDCCCXCIII')
-    assert_equal 1894, Roman.new.to_decimal('MDCCCXCIV')
-    assert_equal 1895, Roman.new.to_decimal('MDCCCXCV')
-    assert_equal 1896, Roman.new.to_decimal('MDCCCXCVI')
-    assert_equal 1897, Roman.new.to_decimal('MDCCCXCVII')
-    assert_equal 1898, Roman.new.to_decimal('MDCCCXCVIII')
-    assert_equal 1899, Roman.new.to_decimal('MDCCCXCIX')
-    assert_equal 1900, Roman.new.to_decimal('MCM')
-    assert_equal 1901, Roman.new.to_decimal('MCMI')
-    assert_equal 1902, Roman.new.to_decimal('MCMII')
-    assert_equal 1903, Roman.new.to_decimal('MCMIII')
-    assert_equal 1904, Roman.new.to_decimal('MCMIV')
-    assert_equal 1905, Roman.new.to_decimal('MCMV')
-    assert_equal 1906, Roman.new.to_decimal('MCMVI')
-    assert_equal 1907, Roman.new.to_decimal('MCMVII')
-    assert_equal 1908, Roman.new.to_decimal('MCMVIII')
-    assert_equal 1909, Roman.new.to_decimal('MCMIX')
-    assert_equal 1910, Roman.new.to_decimal('MCMX')
-    assert_equal 1911, Roman.new.to_decimal('MCMXI')
-    assert_equal 1912, Roman.new.to_decimal('MCMXII')
-    assert_equal 1913, Roman.new.to_decimal('MCMXIII')
-    assert_equal 1914, Roman.new.to_decimal('MCMXIV')
-    assert_equal 1915, Roman.new.to_decimal('MCMXV')
-    assert_equal 1916, Roman.new.to_decimal('MCMXVI')
-    assert_equal 1917, Roman.new.to_decimal('MCMXVII')
-    assert_equal 1918, Roman.new.to_decimal('MCMXVIII')
-    assert_equal 1919, Roman.new.to_decimal('MCMXIX')
-    assert_equal 1920, Roman.new.to_decimal('MCMXX')
-    assert_equal 1921, Roman.new.to_decimal('MCMXXI')
-    assert_equal 1922, Roman.new.to_decimal('MCMXXII')
-    assert_equal 1923, Roman.new.to_decimal('MCMXXIII')
-    assert_equal 1924, Roman.new.to_decimal('MCMXXIV')
-    assert_equal 1925, Roman.new.to_decimal('MCMXXV')
-    assert_equal 1926, Roman.new.to_decimal('MCMXXVI')
-    assert_equal 1927, Roman.new.to_decimal('MCMXXVII')
-    assert_equal 1928, Roman.new.to_decimal('MCMXXVIII')
-    assert_equal 1929, Roman.new.to_decimal('MCMXXIX')
-    assert_equal 1930, Roman.new.to_decimal('MCMXXX')
-    assert_equal 1931, Roman.new.to_decimal('MCMXXXI')
-    assert_equal 1932, Roman.new.to_decimal('MCMXXXII')
-    assert_equal 1933, Roman.new.to_decimal('MCMXXXIII')
-    assert_equal 1934, Roman.new.to_decimal('MCMXXXIV')
-    assert_equal 1935, Roman.new.to_decimal('MCMXXXV')
-    assert_equal 1936, Roman.new.to_decimal('MCMXXXVI')
-    assert_equal 1937, Roman.new.to_decimal('MCMXXXVII')
-    assert_equal 1938, Roman.new.to_decimal('MCMXXXVIII')
-    assert_equal 1939, Roman.new.to_decimal('MCMXXXIX')
-    assert_equal 1940, Roman.new.to_decimal('MCMXL')
-    assert_equal 1941, Roman.new.to_decimal('MCMXLI')
-    assert_equal 1942, Roman.new.to_decimal('MCMXLII')
-    assert_equal 1943, Roman.new.to_decimal('MCMXLIII')
-    assert_equal 1944, Roman.new.to_decimal('MCMXLIV')
-    assert_equal 1945, Roman.new.to_decimal('MCMXLV')
-    assert_equal 1946, Roman.new.to_decimal('MCMXLVI')
-    assert_equal 1947, Roman.new.to_decimal('MCMXLVII')
-    assert_equal 1948, Roman.new.to_decimal('MCMXLVIII')
-    assert_equal 1949, Roman.new.to_decimal('MCMXLIX')
-    assert_equal 1950, Roman.new.to_decimal('MCML')
-    assert_equal 1951, Roman.new.to_decimal('MCMLI')
-    assert_equal 1952, Roman.new.to_decimal('MCMLII')
-    assert_equal 1953, Roman.new.to_decimal('MCMLIII')
-    assert_equal 1954, Roman.new.to_decimal('MCMLIV')
-    assert_equal 1955, Roman.new.to_decimal('MCMLV')
-    assert_equal 1956, Roman.new.to_decimal('MCMLVI')
-    assert_equal 1957, Roman.new.to_decimal('MCMLVII')
-    assert_equal 1958, Roman.new.to_decimal('MCMLVIII')
-    assert_equal 1959, Roman.new.to_decimal('MCMLIX')
-    assert_equal 1960, Roman.new.to_decimal('MCMLX')
-    assert_equal 1961, Roman.new.to_decimal('MCMLXI')
-    assert_equal 1962, Roman.new.to_decimal('MCMLXII')
-    assert_equal 1963, Roman.new.to_decimal('MCMLXIII')
-    assert_equal 1964, Roman.new.to_decimal('MCMLXIV')
-    assert_equal 1965, Roman.new.to_decimal('MCMLXV')
-    assert_equal 1966, Roman.new.to_decimal('MCMLXVI')
-    assert_equal 1967, Roman.new.to_decimal('MCMLXVII')
-    assert_equal 1968, Roman.new.to_decimal('MCMLXVIII')
-    assert_equal 1969, Roman.new.to_decimal('MCMLXIX')
-    assert_equal 1970, Roman.new.to_decimal('MCMLXX')
-    assert_equal 1971, Roman.new.to_decimal('MCMLXXI')
-    assert_equal 1972, Roman.new.to_decimal('MCMLXXII')
-    assert_equal 1973, Roman.new.to_decimal('MCMLXXIII')
-    assert_equal 1974, Roman.new.to_decimal('MCMLXXIV')
-    assert_equal 1975, Roman.new.to_decimal('MCMLXXV')
-    assert_equal 1976, Roman.new.to_decimal('MCMLXXVI')
-    assert_equal 1977, Roman.new.to_decimal('MCMLXXVII')
-    assert_equal 1978, Roman.new.to_decimal('MCMLXXVIII')
-    assert_equal 1979, Roman.new.to_decimal('MCMLXXIX')
-    assert_equal 1980, Roman.new.to_decimal('MCMLXXX')
-    assert_equal 1981, Roman.new.to_decimal('MCMLXXXI')
-    assert_equal 1982, Roman.new.to_decimal('MCMLXXXII')
-    assert_equal 1983, Roman.new.to_decimal('MCMLXXXIII')
-    assert_equal 1984, Roman.new.to_decimal('MCMLXXXIV')
-    assert_equal 1985, Roman.new.to_decimal('MCMLXXXV')
-    assert_equal 1986, Roman.new.to_decimal('MCMLXXXVI')
-    assert_equal 1987, Roman.new.to_decimal('MCMLXXXVII')
-    assert_equal 1988, Roman.new.to_decimal('MCMLXXXVIII')
-    assert_equal 1989, Roman.new.to_decimal('MCMLXXXIX')
-    assert_equal 1990, Roman.new.to_decimal('MCMXC')
-    assert_equal 1991, Roman.new.to_decimal('MCMXCI')
-    assert_equal 1992, Roman.new.to_decimal('MCMXCII')
-    assert_equal 1993, Roman.new.to_decimal('MCMXCIII')
-    assert_equal 1994, Roman.new.to_decimal('MCMXCIV')
-    assert_equal 1995, Roman.new.to_decimal('MCMXCV')
-    assert_equal 1996, Roman.new.to_decimal('MCMXCVI')
-    assert_equal 1997, Roman.new.to_decimal('MCMXCVII')
-    assert_equal 1998, Roman.new.to_decimal('MCMXCVIII')
-    assert_equal 1999, Roman.new.to_decimal('MCMXCIX')
-    assert_equal 2000, Roman.new.to_decimal('MM')
-    assert_equal 2001, Roman.new.to_decimal('MMI')
-    assert_equal 2002, Roman.new.to_decimal('MMII')
-    assert_equal 2003, Roman.new.to_decimal('MMIII')
-    assert_equal 2004, Roman.new.to_decimal('MMIV')
-    assert_equal 2005, Roman.new.to_decimal('MMV')
-    assert_equal 2006, Roman.new.to_decimal('MMVI')
-    assert_equal 2007, Roman.new.to_decimal('MMVII')
-    assert_equal 2008, Roman.new.to_decimal('MMVIII')
-    assert_equal 2009, Roman.new.to_decimal('MMIX')
-    assert_equal 2010, Roman.new.to_decimal('MMX')
-    assert_equal 2011, Roman.new.to_decimal('MMXI')
-    assert_equal 2012, Roman.new.to_decimal('MMXII')
-    assert_equal 2013, Roman.new.to_decimal('MMXIII')
-    assert_equal 2014, Roman.new.to_decimal('MMXIV')
-    assert_equal 2015, Roman.new.to_decimal('MMXV')
-    assert_equal 2016, Roman.new.to_decimal('MMXVI')
-    assert_equal 2017, Roman.new.to_decimal('MMXVII')
-    assert_equal 2018, Roman.new.to_decimal('MMXVIII')
-    assert_equal 2019, Roman.new.to_decimal('MMXIX')
-    assert_equal 2020, Roman.new.to_decimal('MMXX')
-    assert_equal 2021, Roman.new.to_decimal('MMXXI')
-    assert_equal 2022, Roman.new.to_decimal('MMXXII')
-    assert_equal 2023, Roman.new.to_decimal('MMXXIII')
-    assert_equal 2024, Roman.new.to_decimal('MMXXIV')
-    assert_equal 2025, Roman.new.to_decimal('MMXXV')
-    assert_equal 2026, Roman.new.to_decimal('MMXXVI')
-    assert_equal 2027, Roman.new.to_decimal('MMXXVII')
-    assert_equal 2028, Roman.new.to_decimal('MMXXVIII')
-    assert_equal 2029, Roman.new.to_decimal('MMXXIX')
-    assert_equal 2030, Roman.new.to_decimal('MMXXX')
-    assert_equal 2031, Roman.new.to_decimal('MMXXXI')
-    assert_equal 2032, Roman.new.to_decimal('MMXXXII')
-    assert_equal 2033, Roman.new.to_decimal('MMXXXIII')
-    assert_equal 2034, Roman.new.to_decimal('MMXXXIV')
-    assert_equal 2035, Roman.new.to_decimal('MMXXXV')
-    assert_equal 2036, Roman.new.to_decimal('MMXXXVI')
-    assert_equal 2037, Roman.new.to_decimal('MMXXXVII')
-    assert_equal 2038, Roman.new.to_decimal('MMXXXVIII')
-    assert_equal 2039, Roman.new.to_decimal('MMXXXIX')
-    assert_equal 2040, Roman.new.to_decimal('MMXL')
-    assert_equal 2041, Roman.new.to_decimal('MMXLI')
-    assert_equal 2042, Roman.new.to_decimal('MMXLII')
-    assert_equal 2043, Roman.new.to_decimal('MMXLIII')
-    assert_equal 2044, Roman.new.to_decimal('MMXLIV')
-    assert_equal 2045, Roman.new.to_decimal('MMXLV')
-    assert_equal 2046, Roman.new.to_decimal('MMXLVI')
-    assert_equal 2047, Roman.new.to_decimal('MMXLVII')
-    assert_equal 2048, Roman.new.to_decimal('MMXLVIII')
-    assert_equal 2049, Roman.new.to_decimal('MMXLIX')
-    assert_equal 2050, Roman.new.to_decimal('MML')
-    assert_equal 2051, Roman.new.to_decimal('MMLI')
-    assert_equal 2052, Roman.new.to_decimal('MMLII')
-    assert_equal 2053, Roman.new.to_decimal('MMLIII')
-    assert_equal 2054, Roman.new.to_decimal('MMLIV')
-    assert_equal 2055, Roman.new.to_decimal('MMLV')
-    assert_equal 2056, Roman.new.to_decimal('MMLVI')
-    assert_equal 2057, Roman.new.to_decimal('MMLVII')
-    assert_equal 2058, Roman.new.to_decimal('MMLVIII')
-    assert_equal 2059, Roman.new.to_decimal('MMLIX')
-    assert_equal 2060, Roman.new.to_decimal('MMLX')
-    assert_equal 2061, Roman.new.to_decimal('MMLXI')
-    assert_equal 2062, Roman.new.to_decimal('MMLXII')
-    assert_equal 2063, Roman.new.to_decimal('MMLXIII')
-    assert_equal 2064, Roman.new.to_decimal('MMLXIV')
-    assert_equal 2065, Roman.new.to_decimal('MMLXV')
-    assert_equal 2066, Roman.new.to_decimal('MMLXVI')
-    assert_equal 2067, Roman.new.to_decimal('MMLXVII')
-    assert_equal 2068, Roman.new.to_decimal('MMLXVIII')
-    assert_equal 2069, Roman.new.to_decimal('MMLXIX')
-    assert_equal 2070, Roman.new.to_decimal('MMLXX')
-    assert_equal 2071, Roman.new.to_decimal('MMLXXI')
-    assert_equal 2072, Roman.new.to_decimal('MMLXXII')
-    assert_equal 2073, Roman.new.to_decimal('MMLXXIII')
-    assert_equal 2074, Roman.new.to_decimal('MMLXXIV')
-    assert_equal 2075, Roman.new.to_decimal('MMLXXV')
-    assert_equal 2076, Roman.new.to_decimal('MMLXXVI')
-    assert_equal 2077, Roman.new.to_decimal('MMLXXVII')
-    assert_equal 2078, Roman.new.to_decimal('MMLXXVIII')
-    assert_equal 2079, Roman.new.to_decimal('MMLXXIX')
-    assert_equal 2080, Roman.new.to_decimal('MMLXXX')
-    assert_equal 2081, Roman.new.to_decimal('MMLXXXI')
-    assert_equal 2082, Roman.new.to_decimal('MMLXXXII')
-    assert_equal 2083, Roman.new.to_decimal('MMLXXXIII')
-    assert_equal 2084, Roman.new.to_decimal('MMLXXXIV')
-    assert_equal 2085, Roman.new.to_decimal('MMLXXXV')
-    assert_equal 2086, Roman.new.to_decimal('MMLXXXVI')
-    assert_equal 2087, Roman.new.to_decimal('MMLXXXVII')
-    assert_equal 2088, Roman.new.to_decimal('MMLXXXVIII')
-    assert_equal 2089, Roman.new.to_decimal('MMLXXXIX')
-    assert_equal 2090, Roman.new.to_decimal('MMXC')
-    assert_equal 2091, Roman.new.to_decimal('MMXCI')
-    assert_equal 2092, Roman.new.to_decimal('MMXCII')
-    assert_equal 2093, Roman.new.to_decimal('MMXCIII')
-    assert_equal 2094, Roman.new.to_decimal('MMXCIV')
-    assert_equal 2095, Roman.new.to_decimal('MMXCV')
-    assert_equal 2096, Roman.new.to_decimal('MMXCVI')
-    assert_equal 2097, Roman.new.to_decimal('MMXCVII')
-    assert_equal 2098, Roman.new.to_decimal('MMXCVIII')
-    assert_equal 2099, Roman.new.to_decimal('MMXCIX')
-    assert_equal 2100, Roman.new.to_decimal('MMC')
-    assert_equal 2101, Roman.new.to_decimal('MMCI')
-    assert_equal 2102, Roman.new.to_decimal('MMCII')
-    assert_equal 2103, Roman.new.to_decimal('MMCIII')
-    assert_equal 2104, Roman.new.to_decimal('MMCIV')
-    assert_equal 2105, Roman.new.to_decimal('MMCV')
-    assert_equal 2106, Roman.new.to_decimal('MMCVI')
-    assert_equal 2107, Roman.new.to_decimal('MMCVII')
-    assert_equal 2108, Roman.new.to_decimal('MMCVIII')
-    assert_equal 2109, Roman.new.to_decimal('MMCIX')
-    assert_equal 2110, Roman.new.to_decimal('MMCX')
-    assert_equal 2111, Roman.new.to_decimal('MMCXI')
-    assert_equal 2112, Roman.new.to_decimal('MMCXII')
-    assert_equal 2113, Roman.new.to_decimal('MMCXIII')
-    assert_equal 2114, Roman.new.to_decimal('MMCXIV')
-    assert_equal 2115, Roman.new.to_decimal('MMCXV')
-    assert_equal 2116, Roman.new.to_decimal('MMCXVI')
-    assert_equal 2117, Roman.new.to_decimal('MMCXVII')
-    assert_equal 2118, Roman.new.to_decimal('MMCXVIII')
-    assert_equal 2119, Roman.new.to_decimal('MMCXIX')
-    assert_equal 2120, Roman.new.to_decimal('MMCXX')
-    assert_equal 2121, Roman.new.to_decimal('MMCXXI')
-    assert_equal 2122, Roman.new.to_decimal('MMCXXII')
-    assert_equal 2123, Roman.new.to_decimal('MMCXXIII')
-    assert_equal 2124, Roman.new.to_decimal('MMCXXIV')
-    assert_equal 2125, Roman.new.to_decimal('MMCXXV')
-    assert_equal 2126, Roman.new.to_decimal('MMCXXVI')
-    assert_equal 2127, Roman.new.to_decimal('MMCXXVII')
-    assert_equal 2128, Roman.new.to_decimal('MMCXXVIII')
-    assert_equal 2129, Roman.new.to_decimal('MMCXXIX')
-    assert_equal 2130, Roman.new.to_decimal('MMCXXX')
-    assert_equal 2131, Roman.new.to_decimal('MMCXXXI')
-    assert_equal 2132, Roman.new.to_decimal('MMCXXXII')
-    assert_equal 2133, Roman.new.to_decimal('MMCXXXIII')
-    assert_equal 2134, Roman.new.to_decimal('MMCXXXIV')
-    assert_equal 2135, Roman.new.to_decimal('MMCXXXV')
-    assert_equal 2136, Roman.new.to_decimal('MMCXXXVI')
-    assert_equal 2137, Roman.new.to_decimal('MMCXXXVII')
-    assert_equal 2138, Roman.new.to_decimal('MMCXXXVIII')
-    assert_equal 2139, Roman.new.to_decimal('MMCXXXIX')
-    assert_equal 2140, Roman.new.to_decimal('MMCXL')
-    assert_equal 2141, Roman.new.to_decimal('MMCXLI')
-    assert_equal 2142, Roman.new.to_decimal('MMCXLII')
-    assert_equal 2143, Roman.new.to_decimal('MMCXLIII')
-    assert_equal 2144, Roman.new.to_decimal('MMCXLIV')
-    assert_equal 2145, Roman.new.to_decimal('MMCXLV')
-    assert_equal 2146, Roman.new.to_decimal('MMCXLVI')
-    assert_equal 2147, Roman.new.to_decimal('MMCXLVII')
-    assert_equal 2148, Roman.new.to_decimal('MMCXLVIII')
-    assert_equal 2149, Roman.new.to_decimal('MMCXLIX')
-    assert_equal 2150, Roman.new.to_decimal('MMCL')
-    assert_equal 2151, Roman.new.to_decimal('MMCLI')
-    assert_equal 2152, Roman.new.to_decimal('MMCLII')
-    assert_equal 2153, Roman.new.to_decimal('MMCLIII')
-    assert_equal 2154, Roman.new.to_decimal('MMCLIV')
-    assert_equal 2155, Roman.new.to_decimal('MMCLV')
-    assert_equal 2156, Roman.new.to_decimal('MMCLVI')
-    assert_equal 2157, Roman.new.to_decimal('MMCLVII')
-    assert_equal 2158, Roman.new.to_decimal('MMCLVIII')
-    assert_equal 2159, Roman.new.to_decimal('MMCLIX')
-    assert_equal 2160, Roman.new.to_decimal('MMCLX')
-    assert_equal 2161, Roman.new.to_decimal('MMCLXI')
-    assert_equal 2162, Roman.new.to_decimal('MMCLXII')
-    assert_equal 2163, Roman.new.to_decimal('MMCLXIII')
-    assert_equal 2164, Roman.new.to_decimal('MMCLXIV')
-    assert_equal 2165, Roman.new.to_decimal('MMCLXV')
-    assert_equal 2166, Roman.new.to_decimal('MMCLXVI')
-    assert_equal 2167, Roman.new.to_decimal('MMCLXVII')
-    assert_equal 2168, Roman.new.to_decimal('MMCLXVIII')
-    assert_equal 2169, Roman.new.to_decimal('MMCLXIX')
-    assert_equal 2170, Roman.new.to_decimal('MMCLXX')
-    assert_equal 2171, Roman.new.to_decimal('MMCLXXI')
-    assert_equal 2172, Roman.new.to_decimal('MMCLXXII')
-    assert_equal 2173, Roman.new.to_decimal('MMCLXXIII')
-    assert_equal 2174, Roman.new.to_decimal('MMCLXXIV')
-    assert_equal 2175, Roman.new.to_decimal('MMCLXXV')
-    assert_equal 2176, Roman.new.to_decimal('MMCLXXVI')
-    assert_equal 2177, Roman.new.to_decimal('MMCLXXVII')
-    assert_equal 2178, Roman.new.to_decimal('MMCLXXVIII')
-    assert_equal 2179, Roman.new.to_decimal('MMCLXXIX')
-    assert_equal 2180, Roman.new.to_decimal('MMCLXXX')
-    assert_equal 2181, Roman.new.to_decimal('MMCLXXXI')
-    assert_equal 2182, Roman.new.to_decimal('MMCLXXXII')
-    assert_equal 2183, Roman.new.to_decimal('MMCLXXXIII')
-    assert_equal 2184, Roman.new.to_decimal('MMCLXXXIV')
-    assert_equal 2185, Roman.new.to_decimal('MMCLXXXV')
-    assert_equal 2186, Roman.new.to_decimal('MMCLXXXVI')
-    assert_equal 2187, Roman.new.to_decimal('MMCLXXXVII')
-    assert_equal 2188, Roman.new.to_decimal('MMCLXXXVIII')
-    assert_equal 2189, Roman.new.to_decimal('MMCLXXXIX')
-    assert_equal 2190, Roman.new.to_decimal('MMCXC')
-    assert_equal 2191, Roman.new.to_decimal('MMCXCI')
-    assert_equal 2192, Roman.new.to_decimal('MMCXCII')
-    assert_equal 2193, Roman.new.to_decimal('MMCXCIII')
-    assert_equal 2194, Roman.new.to_decimal('MMCXCIV')
-    assert_equal 2195, Roman.new.to_decimal('MMCXCV')
-    assert_equal 2196, Roman.new.to_decimal('MMCXCVI')
-    assert_equal 2197, Roman.new.to_decimal('MMCXCVII')
-    assert_equal 2198, Roman.new.to_decimal('MMCXCVIII')
-    assert_equal 2199, Roman.new.to_decimal('MMCXCIX')
-    assert_equal 2200, Roman.new.to_decimal('MMCC')
-    assert_equal 2201, Roman.new.to_decimal('MMCCI')
-    assert_equal 2202, Roman.new.to_decimal('MMCCII')
-    assert_equal 2203, Roman.new.to_decimal('MMCCIII')
-    assert_equal 2204, Roman.new.to_decimal('MMCCIV')
-    assert_equal 2205, Roman.new.to_decimal('MMCCV')
-    assert_equal 2206, Roman.new.to_decimal('MMCCVI')
-    assert_equal 2207, Roman.new.to_decimal('MMCCVII')
-    assert_equal 2208, Roman.new.to_decimal('MMCCVIII')
-    assert_equal 2209, Roman.new.to_decimal('MMCCIX')
-    assert_equal 2210, Roman.new.to_decimal('MMCCX')
-    assert_equal 2211, Roman.new.to_decimal('MMCCXI')
-    assert_equal 2212, Roman.new.to_decimal('MMCCXII')
-    assert_equal 2213, Roman.new.to_decimal('MMCCXIII')
-    assert_equal 2214, Roman.new.to_decimal('MMCCXIV')
-    assert_equal 2215, Roman.new.to_decimal('MMCCXV')
-    assert_equal 2216, Roman.new.to_decimal('MMCCXVI')
-    assert_equal 2217, Roman.new.to_decimal('MMCCXVII')
-    assert_equal 2218, Roman.new.to_decimal('MMCCXVIII')
-    assert_equal 2219, Roman.new.to_decimal('MMCCXIX')
-    assert_equal 2220, Roman.new.to_decimal('MMCCXX')
-    assert_equal 2221, Roman.new.to_decimal('MMCCXXI')
-    assert_equal 2222, Roman.new.to_decimal('MMCCXXII')
-    assert_equal 2223, Roman.new.to_decimal('MMCCXXIII')
-    assert_equal 2224, Roman.new.to_decimal('MMCCXXIV')
-    assert_equal 2225, Roman.new.to_decimal('MMCCXXV')
-    assert_equal 2226, Roman.new.to_decimal('MMCCXXVI')
-    assert_equal 2227, Roman.new.to_decimal('MMCCXXVII')
-    assert_equal 2228, Roman.new.to_decimal('MMCCXXVIII')
-    assert_equal 2229, Roman.new.to_decimal('MMCCXXIX')
-    assert_equal 2230, Roman.new.to_decimal('MMCCXXX')
-    assert_equal 2231, Roman.new.to_decimal('MMCCXXXI')
-    assert_equal 2232, Roman.new.to_decimal('MMCCXXXII')
-    assert_equal 2233, Roman.new.to_decimal('MMCCXXXIII')
-    assert_equal 2234, Roman.new.to_decimal('MMCCXXXIV')
-    assert_equal 2235, Roman.new.to_decimal('MMCCXXXV')
-    assert_equal 2236, Roman.new.to_decimal('MMCCXXXVI')
-    assert_equal 2237, Roman.new.to_decimal('MMCCXXXVII')
-    assert_equal 2238, Roman.new.to_decimal('MMCCXXXVIII')
-    assert_equal 2239, Roman.new.to_decimal('MMCCXXXIX')
-    assert_equal 2240, Roman.new.to_decimal('MMCCXL')
-    assert_equal 2241, Roman.new.to_decimal('MMCCXLI')
-    assert_equal 2242, Roman.new.to_decimal('MMCCXLII')
-    assert_equal 2243, Roman.new.to_decimal('MMCCXLIII')
-    assert_equal 2244, Roman.new.to_decimal('MMCCXLIV')
-    assert_equal 2245, Roman.new.to_decimal('MMCCXLV')
-    assert_equal 2246, Roman.new.to_decimal('MMCCXLVI')
-    assert_equal 2247, Roman.new.to_decimal('MMCCXLVII')
-    assert_equal 2248, Roman.new.to_decimal('MMCCXLVIII')
-    assert_equal 2249, Roman.new.to_decimal('MMCCXLIX')
-    assert_equal 2250, Roman.new.to_decimal('MMCCL')
-    assert_equal 2251, Roman.new.to_decimal('MMCCLI')
-    assert_equal 2252, Roman.new.to_decimal('MMCCLII')
-    assert_equal 2253, Roman.new.to_decimal('MMCCLIII')
-    assert_equal 2254, Roman.new.to_decimal('MMCCLIV')
-    assert_equal 2255, Roman.new.to_decimal('MMCCLV')
-    assert_equal 2256, Roman.new.to_decimal('MMCCLVI')
-    assert_equal 2257, Roman.new.to_decimal('MMCCLVII')
-    assert_equal 2258, Roman.new.to_decimal('MMCCLVIII')
-    assert_equal 2259, Roman.new.to_decimal('MMCCLIX')
-    assert_equal 2260, Roman.new.to_decimal('MMCCLX')
-    assert_equal 2261, Roman.new.to_decimal('MMCCLXI')
-    assert_equal 2262, Roman.new.to_decimal('MMCCLXII')
-    assert_equal 2263, Roman.new.to_decimal('MMCCLXIII')
-    assert_equal 2264, Roman.new.to_decimal('MMCCLXIV')
-    assert_equal 2265, Roman.new.to_decimal('MMCCLXV')
-    assert_equal 2266, Roman.new.to_decimal('MMCCLXVI')
-    assert_equal 2267, Roman.new.to_decimal('MMCCLXVII')
-    assert_equal 2268, Roman.new.to_decimal('MMCCLXVIII')
-    assert_equal 2269, Roman.new.to_decimal('MMCCLXIX')
-    assert_equal 2270, Roman.new.to_decimal('MMCCLXX')
-    assert_equal 2271, Roman.new.to_decimal('MMCCLXXI')
-    assert_equal 2272, Roman.new.to_decimal('MMCCLXXII')
-    assert_equal 2273, Roman.new.to_decimal('MMCCLXXIII')
-    assert_equal 2274, Roman.new.to_decimal('MMCCLXXIV')
-    assert_equal 2275, Roman.new.to_decimal('MMCCLXXV')
-    assert_equal 2276, Roman.new.to_decimal('MMCCLXXVI')
-    assert_equal 2277, Roman.new.to_decimal('MMCCLXXVII')
-    assert_equal 2278, Roman.new.to_decimal('MMCCLXXVIII')
-    assert_equal 2279, Roman.new.to_decimal('MMCCLXXIX')
-    assert_equal 2280, Roman.new.to_decimal('MMCCLXXX')
-    assert_equal 2281, Roman.new.to_decimal('MMCCLXXXI')
-    assert_equal 2282, Roman.new.to_decimal('MMCCLXXXII')
-    assert_equal 2283, Roman.new.to_decimal('MMCCLXXXIII')
-    assert_equal 2284, Roman.new.to_decimal('MMCCLXXXIV')
-    assert_equal 2285, Roman.new.to_decimal('MMCCLXXXV')
-    assert_equal 2286, Roman.new.to_decimal('MMCCLXXXVI')
-    assert_equal 2287, Roman.new.to_decimal('MMCCLXXXVII')
-    assert_equal 2288, Roman.new.to_decimal('MMCCLXXXVIII')
-    assert_equal 2289, Roman.new.to_decimal('MMCCLXXXIX')
-    assert_equal 2290, Roman.new.to_decimal('MMCCXC')
-    assert_equal 2291, Roman.new.to_decimal('MMCCXCI')
-    assert_equal 2292, Roman.new.to_decimal('MMCCXCII')
-    assert_equal 2293, Roman.new.to_decimal('MMCCXCIII')
-    assert_equal 2294, Roman.new.to_decimal('MMCCXCIV')
-    assert_equal 2295, Roman.new.to_decimal('MMCCXCV')
-    assert_equal 2296, Roman.new.to_decimal('MMCCXCVI')
-    assert_equal 2297, Roman.new.to_decimal('MMCCXCVII')
-    assert_equal 2298, Roman.new.to_decimal('MMCCXCVIII')
-    assert_equal 2299, Roman.new.to_decimal('MMCCXCIX')
-    assert_equal 2300, Roman.new.to_decimal('MMCCC')
-    assert_equal 2301, Roman.new.to_decimal('MMCCCI')
-    assert_equal 2302, Roman.new.to_decimal('MMCCCII')
-    assert_equal 2303, Roman.new.to_decimal('MMCCCIII')
-    assert_equal 2304, Roman.new.to_decimal('MMCCCIV')
-    assert_equal 2305, Roman.new.to_decimal('MMCCCV')
-    assert_equal 2306, Roman.new.to_decimal('MMCCCVI')
-    assert_equal 2307, Roman.new.to_decimal('MMCCCVII')
-    assert_equal 2308, Roman.new.to_decimal('MMCCCVIII')
-    assert_equal 2309, Roman.new.to_decimal('MMCCCIX')
-    assert_equal 2310, Roman.new.to_decimal('MMCCCX')
-    assert_equal 2311, Roman.new.to_decimal('MMCCCXI')
-    assert_equal 2312, Roman.new.to_decimal('MMCCCXII')
-    assert_equal 2313, Roman.new.to_decimal('MMCCCXIII')
-    assert_equal 2314, Roman.new.to_decimal('MMCCCXIV')
-    assert_equal 2315, Roman.new.to_decimal('MMCCCXV')
-    assert_equal 2316, Roman.new.to_decimal('MMCCCXVI')
-    assert_equal 2317, Roman.new.to_decimal('MMCCCXVII')
-    assert_equal 2318, Roman.new.to_decimal('MMCCCXVIII')
-    assert_equal 2319, Roman.new.to_decimal('MMCCCXIX')
-    assert_equal 2320, Roman.new.to_decimal('MMCCCXX')
-    assert_equal 2321, Roman.new.to_decimal('MMCCCXXI')
-    assert_equal 2322, Roman.new.to_decimal('MMCCCXXII')
-    assert_equal 2323, Roman.new.to_decimal('MMCCCXXIII')
-    assert_equal 2324, Roman.new.to_decimal('MMCCCXXIV')
-    assert_equal 2325, Roman.new.to_decimal('MMCCCXXV')
-    assert_equal 2326, Roman.new.to_decimal('MMCCCXXVI')
-    assert_equal 2327, Roman.new.to_decimal('MMCCCXXVII')
-    assert_equal 2328, Roman.new.to_decimal('MMCCCXXVIII')
-    assert_equal 2329, Roman.new.to_decimal('MMCCCXXIX')
-    assert_equal 2330, Roman.new.to_decimal('MMCCCXXX')
-    assert_equal 2331, Roman.new.to_decimal('MMCCCXXXI')
-    assert_equal 2332, Roman.new.to_decimal('MMCCCXXXII')
-    assert_equal 2333, Roman.new.to_decimal('MMCCCXXXIII')
-    assert_equal 2334, Roman.new.to_decimal('MMCCCXXXIV')
-    assert_equal 2335, Roman.new.to_decimal('MMCCCXXXV')
-    assert_equal 2336, Roman.new.to_decimal('MMCCCXXXVI')
-    assert_equal 2337, Roman.new.to_decimal('MMCCCXXXVII')
-    assert_equal 2338, Roman.new.to_decimal('MMCCCXXXVIII')
-    assert_equal 2339, Roman.new.to_decimal('MMCCCXXXIX')
-    assert_equal 2340, Roman.new.to_decimal('MMCCCXL')
-    assert_equal 2341, Roman.new.to_decimal('MMCCCXLI')
-    assert_equal 2342, Roman.new.to_decimal('MMCCCXLII')
-    assert_equal 2343, Roman.new.to_decimal('MMCCCXLIII')
-    assert_equal 2344, Roman.new.to_decimal('MMCCCXLIV')
-    assert_equal 2345, Roman.new.to_decimal('MMCCCXLV')
-    assert_equal 2346, Roman.new.to_decimal('MMCCCXLVI')
-    assert_equal 2347, Roman.new.to_decimal('MMCCCXLVII')
-    assert_equal 2348, Roman.new.to_decimal('MMCCCXLVIII')
-    assert_equal 2349, Roman.new.to_decimal('MMCCCXLIX')
-    assert_equal 2350, Roman.new.to_decimal('MMCCCL')
-    assert_equal 2351, Roman.new.to_decimal('MMCCCLI')
-    assert_equal 2352, Roman.new.to_decimal('MMCCCLII')
-    assert_equal 2353, Roman.new.to_decimal('MMCCCLIII')
-    assert_equal 2354, Roman.new.to_decimal('MMCCCLIV')
-    assert_equal 2355, Roman.new.to_decimal('MMCCCLV')
-    assert_equal 2356, Roman.new.to_decimal('MMCCCLVI')
-    assert_equal 2357, Roman.new.to_decimal('MMCCCLVII')
-    assert_equal 2358, Roman.new.to_decimal('MMCCCLVIII')
-    assert_equal 2359, Roman.new.to_decimal('MMCCCLIX')
-    assert_equal 2360, Roman.new.to_decimal('MMCCCLX')
-    assert_equal 2361, Roman.new.to_decimal('MMCCCLXI')
-    assert_equal 2362, Roman.new.to_decimal('MMCCCLXII')
-    assert_equal 2363, Roman.new.to_decimal('MMCCCLXIII')
-    assert_equal 2364, Roman.new.to_decimal('MMCCCLXIV')
-    assert_equal 2365, Roman.new.to_decimal('MMCCCLXV')
-    assert_equal 2366, Roman.new.to_decimal('MMCCCLXVI')
-    assert_equal 2367, Roman.new.to_decimal('MMCCCLXVII')
-    assert_equal 2368, Roman.new.to_decimal('MMCCCLXVIII')
-    assert_equal 2369, Roman.new.to_decimal('MMCCCLXIX')
-    assert_equal 2370, Roman.new.to_decimal('MMCCCLXX')
-    assert_equal 2371, Roman.new.to_decimal('MMCCCLXXI')
-    assert_equal 2372, Roman.new.to_decimal('MMCCCLXXII')
-    assert_equal 2373, Roman.new.to_decimal('MMCCCLXXIII')
-    assert_equal 2374, Roman.new.to_decimal('MMCCCLXXIV')
-    assert_equal 2375, Roman.new.to_decimal('MMCCCLXXV')
-    assert_equal 2376, Roman.new.to_decimal('MMCCCLXXVI')
-    assert_equal 2377, Roman.new.to_decimal('MMCCCLXXVII')
-    assert_equal 2378, Roman.new.to_decimal('MMCCCLXXVIII')
-    assert_equal 2379, Roman.new.to_decimal('MMCCCLXXIX')
-    assert_equal 2380, Roman.new.to_decimal('MMCCCLXXX')
-    assert_equal 2381, Roman.new.to_decimal('MMCCCLXXXI')
-    assert_equal 2382, Roman.new.to_decimal('MMCCCLXXXII')
-    assert_equal 2383, Roman.new.to_decimal('MMCCCLXXXIII')
-    assert_equal 2384, Roman.new.to_decimal('MMCCCLXXXIV')
-    assert_equal 2385, Roman.new.to_decimal('MMCCCLXXXV')
-    assert_equal 2386, Roman.new.to_decimal('MMCCCLXXXVI')
-    assert_equal 2387, Roman.new.to_decimal('MMCCCLXXXVII')
-    assert_equal 2388, Roman.new.to_decimal('MMCCCLXXXVIII')
-    assert_equal 2389, Roman.new.to_decimal('MMCCCLXXXIX')
-    assert_equal 2390, Roman.new.to_decimal('MMCCCXC')
-    assert_equal 2391, Roman.new.to_decimal('MMCCCXCI')
-    assert_equal 2392, Roman.new.to_decimal('MMCCCXCII')
-    assert_equal 2393, Roman.new.to_decimal('MMCCCXCIII')
-    assert_equal 2394, Roman.new.to_decimal('MMCCCXCIV')
-    assert_equal 2395, Roman.new.to_decimal('MMCCCXCV')
-    assert_equal 2396, Roman.new.to_decimal('MMCCCXCVI')
-    assert_equal 2397, Roman.new.to_decimal('MMCCCXCVII')
-    assert_equal 2398, Roman.new.to_decimal('MMCCCXCVIII')
-    assert_equal 2399, Roman.new.to_decimal('MMCCCXCIX')
-    assert_equal 2400, Roman.new.to_decimal('MMCD')
-    assert_equal 2401, Roman.new.to_decimal('MMCDI')
-    assert_equal 2402, Roman.new.to_decimal('MMCDII')
-    assert_equal 2403, Roman.new.to_decimal('MMCDIII')
-    assert_equal 2404, Roman.new.to_decimal('MMCDIV')
-    assert_equal 2405, Roman.new.to_decimal('MMCDV')
-    assert_equal 2406, Roman.new.to_decimal('MMCDVI')
-    assert_equal 2407, Roman.new.to_decimal('MMCDVII')
-    assert_equal 2408, Roman.new.to_decimal('MMCDVIII')
-    assert_equal 2409, Roman.new.to_decimal('MMCDIX')
-    assert_equal 2410, Roman.new.to_decimal('MMCDX')
-    assert_equal 2411, Roman.new.to_decimal('MMCDXI')
-    assert_equal 2412, Roman.new.to_decimal('MMCDXII')
-    assert_equal 2413, Roman.new.to_decimal('MMCDXIII')
-    assert_equal 2414, Roman.new.to_decimal('MMCDXIV')
-    assert_equal 2415, Roman.new.to_decimal('MMCDXV')
-    assert_equal 2416, Roman.new.to_decimal('MMCDXVI')
-    assert_equal 2417, Roman.new.to_decimal('MMCDXVII')
-    assert_equal 2418, Roman.new.to_decimal('MMCDXVIII')
-    assert_equal 2419, Roman.new.to_decimal('MMCDXIX')
-    assert_equal 2420, Roman.new.to_decimal('MMCDXX')
-    assert_equal 2421, Roman.new.to_decimal('MMCDXXI')
-    assert_equal 2422, Roman.new.to_decimal('MMCDXXII')
-    assert_equal 2423, Roman.new.to_decimal('MMCDXXIII')
-    assert_equal 2424, Roman.new.to_decimal('MMCDXXIV')
-    assert_equal 2425, Roman.new.to_decimal('MMCDXXV')
-    assert_equal 2426, Roman.new.to_decimal('MMCDXXVI')
-    assert_equal 2427, Roman.new.to_decimal('MMCDXXVII')
-    assert_equal 2428, Roman.new.to_decimal('MMCDXXVIII')
-    assert_equal 2429, Roman.new.to_decimal('MMCDXXIX')
-    assert_equal 2430, Roman.new.to_decimal('MMCDXXX')
-    assert_equal 2431, Roman.new.to_decimal('MMCDXXXI')
-    assert_equal 2432, Roman.new.to_decimal('MMCDXXXII')
-    assert_equal 2433, Roman.new.to_decimal('MMCDXXXIII')
-    assert_equal 2434, Roman.new.to_decimal('MMCDXXXIV')
-    assert_equal 2435, Roman.new.to_decimal('MMCDXXXV')
-    assert_equal 2436, Roman.new.to_decimal('MMCDXXXVI')
-    assert_equal 2437, Roman.new.to_decimal('MMCDXXXVII')
-    assert_equal 2438, Roman.new.to_decimal('MMCDXXXVIII')
-    assert_equal 2439, Roman.new.to_decimal('MMCDXXXIX')
-    assert_equal 2440, Roman.new.to_decimal('MMCDXL')
-    assert_equal 2441, Roman.new.to_decimal('MMCDXLI')
-    assert_equal 2442, Roman.new.to_decimal('MMCDXLII')
-    assert_equal 2443, Roman.new.to_decimal('MMCDXLIII')
-    assert_equal 2444, Roman.new.to_decimal('MMCDXLIV')
-    assert_equal 2445, Roman.new.to_decimal('MMCDXLV')
-    assert_equal 2446, Roman.new.to_decimal('MMCDXLVI')
-    assert_equal 2447, Roman.new.to_decimal('MMCDXLVII')
-    assert_equal 2448, Roman.new.to_decimal('MMCDXLVIII')
-    assert_equal 2449, Roman.new.to_decimal('MMCDXLIX')
-    assert_equal 2450, Roman.new.to_decimal('MMCDL')
-    assert_equal 2451, Roman.new.to_decimal('MMCDLI')
-    assert_equal 2452, Roman.new.to_decimal('MMCDLII')
-    assert_equal 2453, Roman.new.to_decimal('MMCDLIII')
-    assert_equal 2454, Roman.new.to_decimal('MMCDLIV')
-    assert_equal 2455, Roman.new.to_decimal('MMCDLV')
-    assert_equal 2456, Roman.new.to_decimal('MMCDLVI')
-    assert_equal 2457, Roman.new.to_decimal('MMCDLVII')
-    assert_equal 2458, Roman.new.to_decimal('MMCDLVIII')
-    assert_equal 2459, Roman.new.to_decimal('MMCDLIX')
-    assert_equal 2460, Roman.new.to_decimal('MMCDLX')
-    assert_equal 2461, Roman.new.to_decimal('MMCDLXI')
-    assert_equal 2462, Roman.new.to_decimal('MMCDLXII')
-    assert_equal 2463, Roman.new.to_decimal('MMCDLXIII')
-    assert_equal 2464, Roman.new.to_decimal('MMCDLXIV')
-    assert_equal 2465, Roman.new.to_decimal('MMCDLXV')
-    assert_equal 2466, Roman.new.to_decimal('MMCDLXVI')
-    assert_equal 2467, Roman.new.to_decimal('MMCDLXVII')
-    assert_equal 2468, Roman.new.to_decimal('MMCDLXVIII')
-    assert_equal 2469, Roman.new.to_decimal('MMCDLXIX')
-    assert_equal 2470, Roman.new.to_decimal('MMCDLXX')
-    assert_equal 2471, Roman.new.to_decimal('MMCDLXXI')
-    assert_equal 2472, Roman.new.to_decimal('MMCDLXXII')
-    assert_equal 2473, Roman.new.to_decimal('MMCDLXXIII')
-    assert_equal 2474, Roman.new.to_decimal('MMCDLXXIV')
-    assert_equal 2475, Roman.new.to_decimal('MMCDLXXV')
-    assert_equal 2476, Roman.new.to_decimal('MMCDLXXVI')
-    assert_equal 2477, Roman.new.to_decimal('MMCDLXXVII')
-    assert_equal 2478, Roman.new.to_decimal('MMCDLXXVIII')
-    assert_equal 2479, Roman.new.to_decimal('MMCDLXXIX')
-    assert_equal 2480, Roman.new.to_decimal('MMCDLXXX')
-    assert_equal 2481, Roman.new.to_decimal('MMCDLXXXI')
-    assert_equal 2482, Roman.new.to_decimal('MMCDLXXXII')
-    assert_equal 2483, Roman.new.to_decimal('MMCDLXXXIII')
-    assert_equal 2484, Roman.new.to_decimal('MMCDLXXXIV')
-    assert_equal 2485, Roman.new.to_decimal('MMCDLXXXV')
-    assert_equal 2486, Roman.new.to_decimal('MMCDLXXXVI')
-    assert_equal 2487, Roman.new.to_decimal('MMCDLXXXVII')
-    assert_equal 2488, Roman.new.to_decimal('MMCDLXXXVIII')
-    assert_equal 2489, Roman.new.to_decimal('MMCDLXXXIX')
-    assert_equal 2490, Roman.new.to_decimal('MMCDXC')
-    assert_equal 2491, Roman.new.to_decimal('MMCDXCI')
-    assert_equal 2492, Roman.new.to_decimal('MMCDXCII')
-    assert_equal 2493, Roman.new.to_decimal('MMCDXCIII')
-    assert_equal 2494, Roman.new.to_decimal('MMCDXCIV')
-    assert_equal 2495, Roman.new.to_decimal('MMCDXCV')
-    assert_equal 2496, Roman.new.to_decimal('MMCDXCVI')
-    assert_equal 2497, Roman.new.to_decimal('MMCDXCVII')
-    assert_equal 2498, Roman.new.to_decimal('MMCDXCVIII')
-    assert_equal 2499, Roman.new.to_decimal('MMCDXCIX')
-    assert_equal 2500, Roman.new.to_decimal('MMD')
-    assert_equal 2501, Roman.new.to_decimal('MMDI')
-    assert_equal 2502, Roman.new.to_decimal('MMDII')
-    assert_equal 2503, Roman.new.to_decimal('MMDIII')
-    assert_equal 2504, Roman.new.to_decimal('MMDIV')
-    assert_equal 2505, Roman.new.to_decimal('MMDV')
-    assert_equal 2506, Roman.new.to_decimal('MMDVI')
-    assert_equal 2507, Roman.new.to_decimal('MMDVII')
-    assert_equal 2508, Roman.new.to_decimal('MMDVIII')
-    assert_equal 2509, Roman.new.to_decimal('MMDIX')
-    assert_equal 2510, Roman.new.to_decimal('MMDX')
-    assert_equal 2511, Roman.new.to_decimal('MMDXI')
-    assert_equal 2512, Roman.new.to_decimal('MMDXII')
-    assert_equal 2513, Roman.new.to_decimal('MMDXIII')
-    assert_equal 2514, Roman.new.to_decimal('MMDXIV')
-    assert_equal 2515, Roman.new.to_decimal('MMDXV')
-    assert_equal 2516, Roman.new.to_decimal('MMDXVI')
-    assert_equal 2517, Roman.new.to_decimal('MMDXVII')
-    assert_equal 2518, Roman.new.to_decimal('MMDXVIII')
-    assert_equal 2519, Roman.new.to_decimal('MMDXIX')
-    assert_equal 2520, Roman.new.to_decimal('MMDXX')
-    assert_equal 2521, Roman.new.to_decimal('MMDXXI')
-    assert_equal 2522, Roman.new.to_decimal('MMDXXII')
-    assert_equal 2523, Roman.new.to_decimal('MMDXXIII')
-    assert_equal 2524, Roman.new.to_decimal('MMDXXIV')
-    assert_equal 2525, Roman.new.to_decimal('MMDXXV')
-    assert_equal 2526, Roman.new.to_decimal('MMDXXVI')
-    assert_equal 2527, Roman.new.to_decimal('MMDXXVII')
-    assert_equal 2528, Roman.new.to_decimal('MMDXXVIII')
-    assert_equal 2529, Roman.new.to_decimal('MMDXXIX')
-    assert_equal 2530, Roman.new.to_decimal('MMDXXX')
-    assert_equal 2531, Roman.new.to_decimal('MMDXXXI')
-    assert_equal 2532, Roman.new.to_decimal('MMDXXXII')
-    assert_equal 2533, Roman.new.to_decimal('MMDXXXIII')
-    assert_equal 2534, Roman.new.to_decimal('MMDXXXIV')
-    assert_equal 2535, Roman.new.to_decimal('MMDXXXV')
-    assert_equal 2536, Roman.new.to_decimal('MMDXXXVI')
-    assert_equal 2537, Roman.new.to_decimal('MMDXXXVII')
-    assert_equal 2538, Roman.new.to_decimal('MMDXXXVIII')
-    assert_equal 2539, Roman.new.to_decimal('MMDXXXIX')
-    assert_equal 2540, Roman.new.to_decimal('MMDXL')
-    assert_equal 2541, Roman.new.to_decimal('MMDXLI')
-    assert_equal 2542, Roman.new.to_decimal('MMDXLII')
-    assert_equal 2543, Roman.new.to_decimal('MMDXLIII')
-    assert_equal 2544, Roman.new.to_decimal('MMDXLIV')
-    assert_equal 2545, Roman.new.to_decimal('MMDXLV')
-    assert_equal 2546, Roman.new.to_decimal('MMDXLVI')
-    assert_equal 2547, Roman.new.to_decimal('MMDXLVII')
-    assert_equal 2548, Roman.new.to_decimal('MMDXLVIII')
-    assert_equal 2549, Roman.new.to_decimal('MMDXLIX')
-    assert_equal 2550, Roman.new.to_decimal('MMDL')
-    assert_equal 2551, Roman.new.to_decimal('MMDLI')
-    assert_equal 2552, Roman.new.to_decimal('MMDLII')
-    assert_equal 2553, Roman.new.to_decimal('MMDLIII')
-    assert_equal 2554, Roman.new.to_decimal('MMDLIV')
-    assert_equal 2555, Roman.new.to_decimal('MMDLV')
-    assert_equal 2556, Roman.new.to_decimal('MMDLVI')
-    assert_equal 2557, Roman.new.to_decimal('MMDLVII')
-    assert_equal 2558, Roman.new.to_decimal('MMDLVIII')
-    assert_equal 2559, Roman.new.to_decimal('MMDLIX')
-    assert_equal 2560, Roman.new.to_decimal('MMDLX')
-    assert_equal 2561, Roman.new.to_decimal('MMDLXI')
-    assert_equal 2562, Roman.new.to_decimal('MMDLXII')
-    assert_equal 2563, Roman.new.to_decimal('MMDLXIII')
-    assert_equal 2564, Roman.new.to_decimal('MMDLXIV')
-    assert_equal 2565, Roman.new.to_decimal('MMDLXV')
-    assert_equal 2566, Roman.new.to_decimal('MMDLXVI')
-    assert_equal 2567, Roman.new.to_decimal('MMDLXVII')
-    assert_equal 2568, Roman.new.to_decimal('MMDLXVIII')
-    assert_equal 2569, Roman.new.to_decimal('MMDLXIX')
-    assert_equal 2570, Roman.new.to_decimal('MMDLXX')
-    assert_equal 2571, Roman.new.to_decimal('MMDLXXI')
-    assert_equal 2572, Roman.new.to_decimal('MMDLXXII')
-    assert_equal 2573, Roman.new.to_decimal('MMDLXXIII')
-    assert_equal 2574, Roman.new.to_decimal('MMDLXXIV')
-    assert_equal 2575, Roman.new.to_decimal('MMDLXXV')
-    assert_equal 2576, Roman.new.to_decimal('MMDLXXVI')
-    assert_equal 2577, Roman.new.to_decimal('MMDLXXVII')
-    assert_equal 2578, Roman.new.to_decimal('MMDLXXVIII')
-    assert_equal 2579, Roman.new.to_decimal('MMDLXXIX')
-    assert_equal 2580, Roman.new.to_decimal('MMDLXXX')
-    assert_equal 2581, Roman.new.to_decimal('MMDLXXXI')
-    assert_equal 2582, Roman.new.to_decimal('MMDLXXXII')
-    assert_equal 2583, Roman.new.to_decimal('MMDLXXXIII')
-    assert_equal 2584, Roman.new.to_decimal('MMDLXXXIV')
-    assert_equal 2585, Roman.new.to_decimal('MMDLXXXV')
-    assert_equal 2586, Roman.new.to_decimal('MMDLXXXVI')
-    assert_equal 2587, Roman.new.to_decimal('MMDLXXXVII')
-    assert_equal 2588, Roman.new.to_decimal('MMDLXXXVIII')
-    assert_equal 2589, Roman.new.to_decimal('MMDLXXXIX')
-    assert_equal 2590, Roman.new.to_decimal('MMDXC')
-    assert_equal 2591, Roman.new.to_decimal('MMDXCI')
-    assert_equal 2592, Roman.new.to_decimal('MMDXCII')
-    assert_equal 2593, Roman.new.to_decimal('MMDXCIII')
-    assert_equal 2594, Roman.new.to_decimal('MMDXCIV')
-    assert_equal 2595, Roman.new.to_decimal('MMDXCV')
-    assert_equal 2596, Roman.new.to_decimal('MMDXCVI')
-    assert_equal 2597, Roman.new.to_decimal('MMDXCVII')
-    assert_equal 2598, Roman.new.to_decimal('MMDXCVIII')
-    assert_equal 2599, Roman.new.to_decimal('MMDXCIX')
-    assert_equal 2600, Roman.new.to_decimal('MMDC')
-    assert_equal 2601, Roman.new.to_decimal('MMDCI')
-    assert_equal 2602, Roman.new.to_decimal('MMDCII')
-    assert_equal 2603, Roman.new.to_decimal('MMDCIII')
-    assert_equal 2604, Roman.new.to_decimal('MMDCIV')
-    assert_equal 2605, Roman.new.to_decimal('MMDCV')
-    assert_equal 2606, Roman.new.to_decimal('MMDCVI')
-    assert_equal 2607, Roman.new.to_decimal('MMDCVII')
-    assert_equal 2608, Roman.new.to_decimal('MMDCVIII')
-    assert_equal 2609, Roman.new.to_decimal('MMDCIX')
-    assert_equal 2610, Roman.new.to_decimal('MMDCX')
-    assert_equal 2611, Roman.new.to_decimal('MMDCXI')
-    assert_equal 2612, Roman.new.to_decimal('MMDCXII')
-    assert_equal 2613, Roman.new.to_decimal('MMDCXIII')
-    assert_equal 2614, Roman.new.to_decimal('MMDCXIV')
-    assert_equal 2615, Roman.new.to_decimal('MMDCXV')
-    assert_equal 2616, Roman.new.to_decimal('MMDCXVI')
-    assert_equal 2617, Roman.new.to_decimal('MMDCXVII')
-    assert_equal 2618, Roman.new.to_decimal('MMDCXVIII')
-    assert_equal 2619, Roman.new.to_decimal('MMDCXIX')
-    assert_equal 2620, Roman.new.to_decimal('MMDCXX')
-    assert_equal 2621, Roman.new.to_decimal('MMDCXXI')
-    assert_equal 2622, Roman.new.to_decimal('MMDCXXII')
-    assert_equal 2623, Roman.new.to_decimal('MMDCXXIII')
-    assert_equal 2624, Roman.new.to_decimal('MMDCXXIV')
-    assert_equal 2625, Roman.new.to_decimal('MMDCXXV')
-    assert_equal 2626, Roman.new.to_decimal('MMDCXXVI')
-    assert_equal 2627, Roman.new.to_decimal('MMDCXXVII')
-    assert_equal 2628, Roman.new.to_decimal('MMDCXXVIII')
-    assert_equal 2629, Roman.new.to_decimal('MMDCXXIX')
-    assert_equal 2630, Roman.new.to_decimal('MMDCXXX')
-    assert_equal 2631, Roman.new.to_decimal('MMDCXXXI')
-    assert_equal 2632, Roman.new.to_decimal('MMDCXXXII')
-    assert_equal 2633, Roman.new.to_decimal('MMDCXXXIII')
-    assert_equal 2634, Roman.new.to_decimal('MMDCXXXIV')
-    assert_equal 2635, Roman.new.to_decimal('MMDCXXXV')
-    assert_equal 2636, Roman.new.to_decimal('MMDCXXXVI')
-    assert_equal 2637, Roman.new.to_decimal('MMDCXXXVII')
-    assert_equal 2638, Roman.new.to_decimal('MMDCXXXVIII')
-    assert_equal 2639, Roman.new.to_decimal('MMDCXXXIX')
-    assert_equal 2640, Roman.new.to_decimal('MMDCXL')
-    assert_equal 2641, Roman.new.to_decimal('MMDCXLI')
-    assert_equal 2642, Roman.new.to_decimal('MMDCXLII')
-    assert_equal 2643, Roman.new.to_decimal('MMDCXLIII')
-    assert_equal 2644, Roman.new.to_decimal('MMDCXLIV')
-    assert_equal 2645, Roman.new.to_decimal('MMDCXLV')
-    assert_equal 2646, Roman.new.to_decimal('MMDCXLVI')
-    assert_equal 2647, Roman.new.to_decimal('MMDCXLVII')
-    assert_equal 2648, Roman.new.to_decimal('MMDCXLVIII')
-    assert_equal 2649, Roman.new.to_decimal('MMDCXLIX')
-    assert_equal 2650, Roman.new.to_decimal('MMDCL')
-    assert_equal 2651, Roman.new.to_decimal('MMDCLI')
-    assert_equal 2652, Roman.new.to_decimal('MMDCLII')
-    assert_equal 2653, Roman.new.to_decimal('MMDCLIII')
-    assert_equal 2654, Roman.new.to_decimal('MMDCLIV')
-    assert_equal 2655, Roman.new.to_decimal('MMDCLV')
-    assert_equal 2656, Roman.new.to_decimal('MMDCLVI')
-    assert_equal 2657, Roman.new.to_decimal('MMDCLVII')
-    assert_equal 2658, Roman.new.to_decimal('MMDCLVIII')
-    assert_equal 2659, Roman.new.to_decimal('MMDCLIX')
-    assert_equal 2660, Roman.new.to_decimal('MMDCLX')
-    assert_equal 2661, Roman.new.to_decimal('MMDCLXI')
-    assert_equal 2662, Roman.new.to_decimal('MMDCLXII')
-    assert_equal 2663, Roman.new.to_decimal('MMDCLXIII')
-    assert_equal 2664, Roman.new.to_decimal('MMDCLXIV')
-    assert_equal 2665, Roman.new.to_decimal('MMDCLXV')
-    assert_equal 2666, Roman.new.to_decimal('MMDCLXVI')
-    assert_equal 2667, Roman.new.to_decimal('MMDCLXVII')
-    assert_equal 2668, Roman.new.to_decimal('MMDCLXVIII')
-    assert_equal 2669, Roman.new.to_decimal('MMDCLXIX')
-    assert_equal 2670, Roman.new.to_decimal('MMDCLXX')
-    assert_equal 2671, Roman.new.to_decimal('MMDCLXXI')
-    assert_equal 2672, Roman.new.to_decimal('MMDCLXXII')
-    assert_equal 2673, Roman.new.to_decimal('MMDCLXXIII')
-    assert_equal 2674, Roman.new.to_decimal('MMDCLXXIV')
-    assert_equal 2675, Roman.new.to_decimal('MMDCLXXV')
-    assert_equal 2676, Roman.new.to_decimal('MMDCLXXVI')
-    assert_equal 2677, Roman.new.to_decimal('MMDCLXXVII')
-    assert_equal 2678, Roman.new.to_decimal('MMDCLXXVIII')
-    assert_equal 2679, Roman.new.to_decimal('MMDCLXXIX')
-    assert_equal 2680, Roman.new.to_decimal('MMDCLXXX')
-    assert_equal 2681, Roman.new.to_decimal('MMDCLXXXI')
-    assert_equal 2682, Roman.new.to_decimal('MMDCLXXXII')
-    assert_equal 2683, Roman.new.to_decimal('MMDCLXXXIII')
-    assert_equal 2684, Roman.new.to_decimal('MMDCLXXXIV')
-    assert_equal 2685, Roman.new.to_decimal('MMDCLXXXV')
-    assert_equal 2686, Roman.new.to_decimal('MMDCLXXXVI')
-    assert_equal 2687, Roman.new.to_decimal('MMDCLXXXVII')
-    assert_equal 2688, Roman.new.to_decimal('MMDCLXXXVIII')
-    assert_equal 2689, Roman.new.to_decimal('MMDCLXXXIX')
-    assert_equal 2690, Roman.new.to_decimal('MMDCXC')
-    assert_equal 2691, Roman.new.to_decimal('MMDCXCI')
-    assert_equal 2692, Roman.new.to_decimal('MMDCXCII')
-    assert_equal 2693, Roman.new.to_decimal('MMDCXCIII')
-    assert_equal 2694, Roman.new.to_decimal('MMDCXCIV')
-    assert_equal 2695, Roman.new.to_decimal('MMDCXCV')
-    assert_equal 2696, Roman.new.to_decimal('MMDCXCVI')
-    assert_equal 2697, Roman.new.to_decimal('MMDCXCVII')
-    assert_equal 2698, Roman.new.to_decimal('MMDCXCVIII')
-    assert_equal 2699, Roman.new.to_decimal('MMDCXCIX')
-    assert_equal 2700, Roman.new.to_decimal('MMDCC')
-    assert_equal 2701, Roman.new.to_decimal('MMDCCI')
-    assert_equal 2702, Roman.new.to_decimal('MMDCCII')
-    assert_equal 2703, Roman.new.to_decimal('MMDCCIII')
-    assert_equal 2704, Roman.new.to_decimal('MMDCCIV')
-    assert_equal 2705, Roman.new.to_decimal('MMDCCV')
-    assert_equal 2706, Roman.new.to_decimal('MMDCCVI')
-    assert_equal 2707, Roman.new.to_decimal('MMDCCVII')
-    assert_equal 2708, Roman.new.to_decimal('MMDCCVIII')
-    assert_equal 2709, Roman.new.to_decimal('MMDCCIX')
-    assert_equal 2710, Roman.new.to_decimal('MMDCCX')
-    assert_equal 2711, Roman.new.to_decimal('MMDCCXI')
-    assert_equal 2712, Roman.new.to_decimal('MMDCCXII')
-    assert_equal 2713, Roman.new.to_decimal('MMDCCXIII')
-    assert_equal 2714, Roman.new.to_decimal('MMDCCXIV')
-    assert_equal 2715, Roman.new.to_decimal('MMDCCXV')
-    assert_equal 2716, Roman.new.to_decimal('MMDCCXVI')
-    assert_equal 2717, Roman.new.to_decimal('MMDCCXVII')
-    assert_equal 2718, Roman.new.to_decimal('MMDCCXVIII')
-    assert_equal 2719, Roman.new.to_decimal('MMDCCXIX')
-    assert_equal 2720, Roman.new.to_decimal('MMDCCXX')
-    assert_equal 2721, Roman.new.to_decimal('MMDCCXXI')
-    assert_equal 2722, Roman.new.to_decimal('MMDCCXXII')
-    assert_equal 2723, Roman.new.to_decimal('MMDCCXXIII')
-    assert_equal 2724, Roman.new.to_decimal('MMDCCXXIV')
-    assert_equal 2725, Roman.new.to_decimal('MMDCCXXV')
-    assert_equal 2726, Roman.new.to_decimal('MMDCCXXVI')
-    assert_equal 2727, Roman.new.to_decimal('MMDCCXXVII')
-    assert_equal 2728, Roman.new.to_decimal('MMDCCXXVIII')
-    assert_equal 2729, Roman.new.to_decimal('MMDCCXXIX')
-    assert_equal 2730, Roman.new.to_decimal('MMDCCXXX')
-    assert_equal 2731, Roman.new.to_decimal('MMDCCXXXI')
-    assert_equal 2732, Roman.new.to_decimal('MMDCCXXXII')
-    assert_equal 2733, Roman.new.to_decimal('MMDCCXXXIII')
-    assert_equal 2734, Roman.new.to_decimal('MMDCCXXXIV')
-    assert_equal 2735, Roman.new.to_decimal('MMDCCXXXV')
-    assert_equal 2736, Roman.new.to_decimal('MMDCCXXXVI')
-    assert_equal 2737, Roman.new.to_decimal('MMDCCXXXVII')
-    assert_equal 2738, Roman.new.to_decimal('MMDCCXXXVIII')
-    assert_equal 2739, Roman.new.to_decimal('MMDCCXXXIX')
-    assert_equal 2740, Roman.new.to_decimal('MMDCCXL')
-    assert_equal 2741, Roman.new.to_decimal('MMDCCXLI')
-    assert_equal 2742, Roman.new.to_decimal('MMDCCXLII')
-    assert_equal 2743, Roman.new.to_decimal('MMDCCXLIII')
-    assert_equal 2744, Roman.new.to_decimal('MMDCCXLIV')
-    assert_equal 2745, Roman.new.to_decimal('MMDCCXLV')
-    assert_equal 2746, Roman.new.to_decimal('MMDCCXLVI')
-    assert_equal 2747, Roman.new.to_decimal('MMDCCXLVII')
-    assert_equal 2748, Roman.new.to_decimal('MMDCCXLVIII')
-    assert_equal 2749, Roman.new.to_decimal('MMDCCXLIX')
-    assert_equal 2750, Roman.new.to_decimal('MMDCCL')
-    assert_equal 2751, Roman.new.to_decimal('MMDCCLI')
-    assert_equal 2752, Roman.new.to_decimal('MMDCCLII')
-    assert_equal 2753, Roman.new.to_decimal('MMDCCLIII')
-    assert_equal 2754, Roman.new.to_decimal('MMDCCLIV')
-    assert_equal 2755, Roman.new.to_decimal('MMDCCLV')
-    assert_equal 2756, Roman.new.to_decimal('MMDCCLVI')
-    assert_equal 2757, Roman.new.to_decimal('MMDCCLVII')
-    assert_equal 2758, Roman.new.to_decimal('MMDCCLVIII')
-    assert_equal 2759, Roman.new.to_decimal('MMDCCLIX')
-    assert_equal 2760, Roman.new.to_decimal('MMDCCLX')
-    assert_equal 2761, Roman.new.to_decimal('MMDCCLXI')
-    assert_equal 2762, Roman.new.to_decimal('MMDCCLXII')
-    assert_equal 2763, Roman.new.to_decimal('MMDCCLXIII')
-    assert_equal 2764, Roman.new.to_decimal('MMDCCLXIV')
-    assert_equal 2765, Roman.new.to_decimal('MMDCCLXV')
-    assert_equal 2766, Roman.new.to_decimal('MMDCCLXVI')
-    assert_equal 2767, Roman.new.to_decimal('MMDCCLXVII')
-    assert_equal 2768, Roman.new.to_decimal('MMDCCLXVIII')
-    assert_equal 2769, Roman.new.to_decimal('MMDCCLXIX')
-    assert_equal 2770, Roman.new.to_decimal('MMDCCLXX')
-    assert_equal 2771, Roman.new.to_decimal('MMDCCLXXI')
-    assert_equal 2772, Roman.new.to_decimal('MMDCCLXXII')
-    assert_equal 2773, Roman.new.to_decimal('MMDCCLXXIII')
-    assert_equal 2774, Roman.new.to_decimal('MMDCCLXXIV')
-    assert_equal 2775, Roman.new.to_decimal('MMDCCLXXV')
-    assert_equal 2776, Roman.new.to_decimal('MMDCCLXXVI')
-    assert_equal 2777, Roman.new.to_decimal('MMDCCLXXVII')
-    assert_equal 2778, Roman.new.to_decimal('MMDCCLXXVIII')
-    assert_equal 2779, Roman.new.to_decimal('MMDCCLXXIX')
-    assert_equal 2780, Roman.new.to_decimal('MMDCCLXXX')
-    assert_equal 2781, Roman.new.to_decimal('MMDCCLXXXI')
-    assert_equal 2782, Roman.new.to_decimal('MMDCCLXXXII')
-    assert_equal 2783, Roman.new.to_decimal('MMDCCLXXXIII')
-    assert_equal 2784, Roman.new.to_decimal('MMDCCLXXXIV')
-    assert_equal 2785, Roman.new.to_decimal('MMDCCLXXXV')
-    assert_equal 2786, Roman.new.to_decimal('MMDCCLXXXVI')
-    assert_equal 2787, Roman.new.to_decimal('MMDCCLXXXVII')
-    assert_equal 2788, Roman.new.to_decimal('MMDCCLXXXVIII')
-    assert_equal 2789, Roman.new.to_decimal('MMDCCLXXXIX')
-    assert_equal 2790, Roman.new.to_decimal('MMDCCXC')
-    assert_equal 2791, Roman.new.to_decimal('MMDCCXCI')
-    assert_equal 2792, Roman.new.to_decimal('MMDCCXCII')
-    assert_equal 2793, Roman.new.to_decimal('MMDCCXCIII')
-    assert_equal 2794, Roman.new.to_decimal('MMDCCXCIV')
-    assert_equal 2795, Roman.new.to_decimal('MMDCCXCV')
-    assert_equal 2796, Roman.new.to_decimal('MMDCCXCVI')
-    assert_equal 2797, Roman.new.to_decimal('MMDCCXCVII')
-    assert_equal 2798, Roman.new.to_decimal('MMDCCXCVIII')
-    assert_equal 2799, Roman.new.to_decimal('MMDCCXCIX')
-    assert_equal 2800, Roman.new.to_decimal('MMDCCC')
-    assert_equal 2801, Roman.new.to_decimal('MMDCCCI')
-    assert_equal 2802, Roman.new.to_decimal('MMDCCCII')
-    assert_equal 2803, Roman.new.to_decimal('MMDCCCIII')
-    assert_equal 2804, Roman.new.to_decimal('MMDCCCIV')
-    assert_equal 2805, Roman.new.to_decimal('MMDCCCV')
-    assert_equal 2806, Roman.new.to_decimal('MMDCCCVI')
-    assert_equal 2807, Roman.new.to_decimal('MMDCCCVII')
-    assert_equal 2808, Roman.new.to_decimal('MMDCCCVIII')
-    assert_equal 2809, Roman.new.to_decimal('MMDCCCIX')
-    assert_equal 2810, Roman.new.to_decimal('MMDCCCX')
-    assert_equal 2811, Roman.new.to_decimal('MMDCCCXI')
-    assert_equal 2812, Roman.new.to_decimal('MMDCCCXII')
-    assert_equal 2813, Roman.new.to_decimal('MMDCCCXIII')
-    assert_equal 2814, Roman.new.to_decimal('MMDCCCXIV')
-    assert_equal 2815, Roman.new.to_decimal('MMDCCCXV')
-    assert_equal 2816, Roman.new.to_decimal('MMDCCCXVI')
-    assert_equal 2817, Roman.new.to_decimal('MMDCCCXVII')
-    assert_equal 2818, Roman.new.to_decimal('MMDCCCXVIII')
-    assert_equal 2819, Roman.new.to_decimal('MMDCCCXIX')
-    assert_equal 2820, Roman.new.to_decimal('MMDCCCXX')
-    assert_equal 2821, Roman.new.to_decimal('MMDCCCXXI')
-    assert_equal 2822, Roman.new.to_decimal('MMDCCCXXII')
-    assert_equal 2823, Roman.new.to_decimal('MMDCCCXXIII')
-    assert_equal 2824, Roman.new.to_decimal('MMDCCCXXIV')
-    assert_equal 2825, Roman.new.to_decimal('MMDCCCXXV')
-    assert_equal 2826, Roman.new.to_decimal('MMDCCCXXVI')
-    assert_equal 2827, Roman.new.to_decimal('MMDCCCXXVII')
-    assert_equal 2828, Roman.new.to_decimal('MMDCCCXXVIII')
-    assert_equal 2829, Roman.new.to_decimal('MMDCCCXXIX')
-    assert_equal 2830, Roman.new.to_decimal('MMDCCCXXX')
-    assert_equal 2831, Roman.new.to_decimal('MMDCCCXXXI')
-    assert_equal 2832, Roman.new.to_decimal('MMDCCCXXXII')
-    assert_equal 2833, Roman.new.to_decimal('MMDCCCXXXIII')
-    assert_equal 2834, Roman.new.to_decimal('MMDCCCXXXIV')
-    assert_equal 2835, Roman.new.to_decimal('MMDCCCXXXV')
-    assert_equal 2836, Roman.new.to_decimal('MMDCCCXXXVI')
-    assert_equal 2837, Roman.new.to_decimal('MMDCCCXXXVII')
-    assert_equal 2838, Roman.new.to_decimal('MMDCCCXXXVIII')
-    assert_equal 2839, Roman.new.to_decimal('MMDCCCXXXIX')
-    assert_equal 2840, Roman.new.to_decimal('MMDCCCXL')
-    assert_equal 2841, Roman.new.to_decimal('MMDCCCXLI')
-    assert_equal 2842, Roman.new.to_decimal('MMDCCCXLII')
-    assert_equal 2843, Roman.new.to_decimal('MMDCCCXLIII')
-    assert_equal 2844, Roman.new.to_decimal('MMDCCCXLIV')
-    assert_equal 2845, Roman.new.to_decimal('MMDCCCXLV')
-    assert_equal 2846, Roman.new.to_decimal('MMDCCCXLVI')
-    assert_equal 2847, Roman.new.to_decimal('MMDCCCXLVII')
-    assert_equal 2848, Roman.new.to_decimal('MMDCCCXLVIII')
-    assert_equal 2849, Roman.new.to_decimal('MMDCCCXLIX')
-    assert_equal 2850, Roman.new.to_decimal('MMDCCCL')
-    assert_equal 2851, Roman.new.to_decimal('MMDCCCLI')
-    assert_equal 2852, Roman.new.to_decimal('MMDCCCLII')
-    assert_equal 2853, Roman.new.to_decimal('MMDCCCLIII')
-    assert_equal 2854, Roman.new.to_decimal('MMDCCCLIV')
-    assert_equal 2855, Roman.new.to_decimal('MMDCCCLV')
-    assert_equal 2856, Roman.new.to_decimal('MMDCCCLVI')
-    assert_equal 2857, Roman.new.to_decimal('MMDCCCLVII')
-    assert_equal 2858, Roman.new.to_decimal('MMDCCCLVIII')
-    assert_equal 2859, Roman.new.to_decimal('MMDCCCLIX')
-    assert_equal 2860, Roman.new.to_decimal('MMDCCCLX')
-    assert_equal 2861, Roman.new.to_decimal('MMDCCCLXI')
-    assert_equal 2862, Roman.new.to_decimal('MMDCCCLXII')
-    assert_equal 2863, Roman.new.to_decimal('MMDCCCLXIII')
-    assert_equal 2864, Roman.new.to_decimal('MMDCCCLXIV')
-    assert_equal 2865, Roman.new.to_decimal('MMDCCCLXV')
-    assert_equal 2866, Roman.new.to_decimal('MMDCCCLXVI')
-    assert_equal 2867, Roman.new.to_decimal('MMDCCCLXVII')
-    assert_equal 2868, Roman.new.to_decimal('MMDCCCLXVIII')
-    assert_equal 2869, Roman.new.to_decimal('MMDCCCLXIX')
-    assert_equal 2870, Roman.new.to_decimal('MMDCCCLXX')
-    assert_equal 2871, Roman.new.to_decimal('MMDCCCLXXI')
-    assert_equal 2872, Roman.new.to_decimal('MMDCCCLXXII')
-    assert_equal 2873, Roman.new.to_decimal('MMDCCCLXXIII')
-    assert_equal 2874, Roman.new.to_decimal('MMDCCCLXXIV')
-    assert_equal 2875, Roman.new.to_decimal('MMDCCCLXXV')
-    assert_equal 2876, Roman.new.to_decimal('MMDCCCLXXVI')
-    assert_equal 2877, Roman.new.to_decimal('MMDCCCLXXVII')
-    assert_equal 2878, Roman.new.to_decimal('MMDCCCLXXVIII')
-    assert_equal 2879, Roman.new.to_decimal('MMDCCCLXXIX')
-    assert_equal 2880, Roman.new.to_decimal('MMDCCCLXXX')
-    assert_equal 2881, Roman.new.to_decimal('MMDCCCLXXXI')
-    assert_equal 2882, Roman.new.to_decimal('MMDCCCLXXXII')
-    assert_equal 2883, Roman.new.to_decimal('MMDCCCLXXXIII')
-    assert_equal 2884, Roman.new.to_decimal('MMDCCCLXXXIV')
-    assert_equal 2885, Roman.new.to_decimal('MMDCCCLXXXV')
-    assert_equal 2886, Roman.new.to_decimal('MMDCCCLXXXVI')
-    assert_equal 2887, Roman.new.to_decimal('MMDCCCLXXXVII')
-    assert_equal 2888, Roman.new.to_decimal('MMDCCCLXXXVIII')
-    assert_equal 2889, Roman.new.to_decimal('MMDCCCLXXXIX')
-    assert_equal 2890, Roman.new.to_decimal('MMDCCCXC')
-    assert_equal 2891, Roman.new.to_decimal('MMDCCCXCI')
-    assert_equal 2892, Roman.new.to_decimal('MMDCCCXCII')
-    assert_equal 2893, Roman.new.to_decimal('MMDCCCXCIII')
-    assert_equal 2894, Roman.new.to_decimal('MMDCCCXCIV')
-    assert_equal 2895, Roman.new.to_decimal('MMDCCCXCV')
-    assert_equal 2896, Roman.new.to_decimal('MMDCCCXCVI')
-    assert_equal 2897, Roman.new.to_decimal('MMDCCCXCVII')
-    assert_equal 2898, Roman.new.to_decimal('MMDCCCXCVIII')
-    assert_equal 2899, Roman.new.to_decimal('MMDCCCXCIX')
-    assert_equal 2900, Roman.new.to_decimal('MMCM')
-    assert_equal 2901, Roman.new.to_decimal('MMCMI')
-    assert_equal 2902, Roman.new.to_decimal('MMCMII')
-    assert_equal 2903, Roman.new.to_decimal('MMCMIII')
-    assert_equal 2904, Roman.new.to_decimal('MMCMIV')
-    assert_equal 2905, Roman.new.to_decimal('MMCMV')
-    assert_equal 2906, Roman.new.to_decimal('MMCMVI')
-    assert_equal 2907, Roman.new.to_decimal('MMCMVII')
-    assert_equal 2908, Roman.new.to_decimal('MMCMVIII')
-    assert_equal 2909, Roman.new.to_decimal('MMCMIX')
-    assert_equal 2910, Roman.new.to_decimal('MMCMX')
-    assert_equal 2911, Roman.new.to_decimal('MMCMXI')
-    assert_equal 2912, Roman.new.to_decimal('MMCMXII')
-    assert_equal 2913, Roman.new.to_decimal('MMCMXIII')
-    assert_equal 2914, Roman.new.to_decimal('MMCMXIV')
-    assert_equal 2915, Roman.new.to_decimal('MMCMXV')
-    assert_equal 2916, Roman.new.to_decimal('MMCMXVI')
-    assert_equal 2917, Roman.new.to_decimal('MMCMXVII')
-    assert_equal 2918, Roman.new.to_decimal('MMCMXVIII')
-    assert_equal 2919, Roman.new.to_decimal('MMCMXIX')
-    assert_equal 2920, Roman.new.to_decimal('MMCMXX')
-    assert_equal 2921, Roman.new.to_decimal('MMCMXXI')
-    assert_equal 2922, Roman.new.to_decimal('MMCMXXII')
-    assert_equal 2923, Roman.new.to_decimal('MMCMXXIII')
-    assert_equal 2924, Roman.new.to_decimal('MMCMXXIV')
-    assert_equal 2925, Roman.new.to_decimal('MMCMXXV')
-    assert_equal 2926, Roman.new.to_decimal('MMCMXXVI')
-    assert_equal 2927, Roman.new.to_decimal('MMCMXXVII')
-    assert_equal 2928, Roman.new.to_decimal('MMCMXXVIII')
-    assert_equal 2929, Roman.new.to_decimal('MMCMXXIX')
-    assert_equal 2930, Roman.new.to_decimal('MMCMXXX')
-    assert_equal 2931, Roman.new.to_decimal('MMCMXXXI')
-    assert_equal 2932, Roman.new.to_decimal('MMCMXXXII')
-    assert_equal 2933, Roman.new.to_decimal('MMCMXXXIII')
-    assert_equal 2934, Roman.new.to_decimal('MMCMXXXIV')
-    assert_equal 2935, Roman.new.to_decimal('MMCMXXXV')
-    assert_equal 2936, Roman.new.to_decimal('MMCMXXXVI')
-    assert_equal 2937, Roman.new.to_decimal('MMCMXXXVII')
-    assert_equal 2938, Roman.new.to_decimal('MMCMXXXVIII')
-    assert_equal 2939, Roman.new.to_decimal('MMCMXXXIX')
-    assert_equal 2940, Roman.new.to_decimal('MMCMXL')
-    assert_equal 2941, Roman.new.to_decimal('MMCMXLI')
-    assert_equal 2942, Roman.new.to_decimal('MMCMXLII')
-    assert_equal 2943, Roman.new.to_decimal('MMCMXLIII')
-    assert_equal 2944, Roman.new.to_decimal('MMCMXLIV')
-    assert_equal 2945, Roman.new.to_decimal('MMCMXLV')
-    assert_equal 2946, Roman.new.to_decimal('MMCMXLVI')
-    assert_equal 2947, Roman.new.to_decimal('MMCMXLVII')
-    assert_equal 2948, Roman.new.to_decimal('MMCMXLVIII')
-    assert_equal 2949, Roman.new.to_decimal('MMCMXLIX')
-    assert_equal 2950, Roman.new.to_decimal('MMCML')
-    assert_equal 2951, Roman.new.to_decimal('MMCMLI')
-    assert_equal 2952, Roman.new.to_decimal('MMCMLII')
-    assert_equal 2953, Roman.new.to_decimal('MMCMLIII')
-    assert_equal 2954, Roman.new.to_decimal('MMCMLIV')
-    assert_equal 2955, Roman.new.to_decimal('MMCMLV')
-    assert_equal 2956, Roman.new.to_decimal('MMCMLVI')
-    assert_equal 2957, Roman.new.to_decimal('MMCMLVII')
-    assert_equal 2958, Roman.new.to_decimal('MMCMLVIII')
-    assert_equal 2959, Roman.new.to_decimal('MMCMLIX')
-    assert_equal 2960, Roman.new.to_decimal('MMCMLX')
-    assert_equal 2961, Roman.new.to_decimal('MMCMLXI')
-    assert_equal 2962, Roman.new.to_decimal('MMCMLXII')
-    assert_equal 2963, Roman.new.to_decimal('MMCMLXIII')
-    assert_equal 2964, Roman.new.to_decimal('MMCMLXIV')
-    assert_equal 2965, Roman.new.to_decimal('MMCMLXV')
-    assert_equal 2966, Roman.new.to_decimal('MMCMLXVI')
-    assert_equal 2967, Roman.new.to_decimal('MMCMLXVII')
-    assert_equal 2968, Roman.new.to_decimal('MMCMLXVIII')
-    assert_equal 2969, Roman.new.to_decimal('MMCMLXIX')
-    assert_equal 2970, Roman.new.to_decimal('MMCMLXX')
-    assert_equal 2971, Roman.new.to_decimal('MMCMLXXI')
-    assert_equal 2972, Roman.new.to_decimal('MMCMLXXII')
-    assert_equal 2973, Roman.new.to_decimal('MMCMLXXIII')
-    assert_equal 2974, Roman.new.to_decimal('MMCMLXXIV')
-    assert_equal 2975, Roman.new.to_decimal('MMCMLXXV')
-    assert_equal 2976, Roman.new.to_decimal('MMCMLXXVI')
-    assert_equal 2977, Roman.new.to_decimal('MMCMLXXVII')
-    assert_equal 2978, Roman.new.to_decimal('MMCMLXXVIII')
-    assert_equal 2979, Roman.new.to_decimal('MMCMLXXIX')
-    assert_equal 2980, Roman.new.to_decimal('MMCMLXXX')
-    assert_equal 2981, Roman.new.to_decimal('MMCMLXXXI')
-    assert_equal 2982, Roman.new.to_decimal('MMCMLXXXII')
-    assert_equal 2983, Roman.new.to_decimal('MMCMLXXXIII')
-    assert_equal 2984, Roman.new.to_decimal('MMCMLXXXIV')
-    assert_equal 2985, Roman.new.to_decimal('MMCMLXXXV')
-    assert_equal 2986, Roman.new.to_decimal('MMCMLXXXVI')
-    assert_equal 2987, Roman.new.to_decimal('MMCMLXXXVII')
-    assert_equal 2988, Roman.new.to_decimal('MMCMLXXXVIII')
-    assert_equal 2989, Roman.new.to_decimal('MMCMLXXXIX')
-    assert_equal 2990, Roman.new.to_decimal('MMCMXC')
-    assert_equal 2991, Roman.new.to_decimal('MMCMXCI')
-    assert_equal 2992, Roman.new.to_decimal('MMCMXCII')
-    assert_equal 2993, Roman.new.to_decimal('MMCMXCIII')
-    assert_equal 2994, Roman.new.to_decimal('MMCMXCIV')
-    assert_equal 2995, Roman.new.to_decimal('MMCMXCV')
-    assert_equal 2996, Roman.new.to_decimal('MMCMXCVI')
-    assert_equal 2997, Roman.new.to_decimal('MMCMXCVII')
-    assert_equal 2998, Roman.new.to_decimal('MMCMXCVIII')
-    assert_equal 2999, Roman.new.to_decimal('MMCMXCIX')
-    assert_equal 3000, Roman.new.to_decimal('MMM')
-    assert_equal 3001, Roman.new.to_decimal('MMMI')
-    assert_equal 3002, Roman.new.to_decimal('MMMII')
-    assert_equal 3003, Roman.new.to_decimal('MMMIII')
-    assert_equal 3004, Roman.new.to_decimal('MMMIV')
-    assert_equal 3005, Roman.new.to_decimal('MMMV')
-    assert_equal 3006, Roman.new.to_decimal('MMMVI')
-    assert_equal 3007, Roman.new.to_decimal('MMMVII')
-    assert_equal 3008, Roman.new.to_decimal('MMMVIII')
-    assert_equal 3009, Roman.new.to_decimal('MMMIX')
-    assert_equal 3010, Roman.new.to_decimal('MMMX')
-    assert_equal 3011, Roman.new.to_decimal('MMMXI')
-    assert_equal 3012, Roman.new.to_decimal('MMMXII')
-    assert_equal 3013, Roman.new.to_decimal('MMMXIII')
-    assert_equal 3014, Roman.new.to_decimal('MMMXIV')
-    assert_equal 3015, Roman.new.to_decimal('MMMXV')
-    assert_equal 3016, Roman.new.to_decimal('MMMXVI')
-    assert_equal 3017, Roman.new.to_decimal('MMMXVII')
-    assert_equal 3018, Roman.new.to_decimal('MMMXVIII')
-    assert_equal 3019, Roman.new.to_decimal('MMMXIX')
-    assert_equal 3020, Roman.new.to_decimal('MMMXX')
-    assert_equal 3021, Roman.new.to_decimal('MMMXXI')
-    assert_equal 3022, Roman.new.to_decimal('MMMXXII')
-    assert_equal 3023, Roman.new.to_decimal('MMMXXIII')
-    assert_equal 3024, Roman.new.to_decimal('MMMXXIV')
-    assert_equal 3025, Roman.new.to_decimal('MMMXXV')
-    assert_equal 3026, Roman.new.to_decimal('MMMXXVI')
-    assert_equal 3027, Roman.new.to_decimal('MMMXXVII')
-    assert_equal 3028, Roman.new.to_decimal('MMMXXVIII')
-    assert_equal 3029, Roman.new.to_decimal('MMMXXIX')
-    assert_equal 3030, Roman.new.to_decimal('MMMXXX')
-    assert_equal 3031, Roman.new.to_decimal('MMMXXXI')
-    assert_equal 3032, Roman.new.to_decimal('MMMXXXII')
-    assert_equal 3033, Roman.new.to_decimal('MMMXXXIII')
-    assert_equal 3034, Roman.new.to_decimal('MMMXXXIV')
-    assert_equal 3035, Roman.new.to_decimal('MMMXXXV')
-    assert_equal 3036, Roman.new.to_decimal('MMMXXXVI')
-    assert_equal 3037, Roman.new.to_decimal('MMMXXXVII')
-    assert_equal 3038, Roman.new.to_decimal('MMMXXXVIII')
-    assert_equal 3039, Roman.new.to_decimal('MMMXXXIX')
-    assert_equal 3040, Roman.new.to_decimal('MMMXL')
-    assert_equal 3041, Roman.new.to_decimal('MMMXLI')
-    assert_equal 3042, Roman.new.to_decimal('MMMXLII')
-    assert_equal 3043, Roman.new.to_decimal('MMMXLIII')
-    assert_equal 3044, Roman.new.to_decimal('MMMXLIV')
-    assert_equal 3045, Roman.new.to_decimal('MMMXLV')
-    assert_equal 3046, Roman.new.to_decimal('MMMXLVI')
-    assert_equal 3047, Roman.new.to_decimal('MMMXLVII')
-    assert_equal 3048, Roman.new.to_decimal('MMMXLVIII')
-    assert_equal 3049, Roman.new.to_decimal('MMMXLIX')
-    assert_equal 3050, Roman.new.to_decimal('MMML')
-    assert_equal 3051, Roman.new.to_decimal('MMMLI')
-    assert_equal 3052, Roman.new.to_decimal('MMMLII')
-    assert_equal 3053, Roman.new.to_decimal('MMMLIII')
-    assert_equal 3054, Roman.new.to_decimal('MMMLIV')
-    assert_equal 3055, Roman.new.to_decimal('MMMLV')
-    assert_equal 3056, Roman.new.to_decimal('MMMLVI')
-    assert_equal 3057, Roman.new.to_decimal('MMMLVII')
-    assert_equal 3058, Roman.new.to_decimal('MMMLVIII')
-    assert_equal 3059, Roman.new.to_decimal('MMMLIX')
-    assert_equal 3060, Roman.new.to_decimal('MMMLX')
-    assert_equal 3061, Roman.new.to_decimal('MMMLXI')
-    assert_equal 3062, Roman.new.to_decimal('MMMLXII')
-    assert_equal 3063, Roman.new.to_decimal('MMMLXIII')
-    assert_equal 3064, Roman.new.to_decimal('MMMLXIV')
-    assert_equal 3065, Roman.new.to_decimal('MMMLXV')
-    assert_equal 3066, Roman.new.to_decimal('MMMLXVI')
-    assert_equal 3067, Roman.new.to_decimal('MMMLXVII')
-    assert_equal 3068, Roman.new.to_decimal('MMMLXVIII')
-    assert_equal 3069, Roman.new.to_decimal('MMMLXIX')
-    assert_equal 3070, Roman.new.to_decimal('MMMLXX')
-    assert_equal 3071, Roman.new.to_decimal('MMMLXXI')
-    assert_equal 3072, Roman.new.to_decimal('MMMLXXII')
-    assert_equal 3073, Roman.new.to_decimal('MMMLXXIII')
-    assert_equal 3074, Roman.new.to_decimal('MMMLXXIV')
-    assert_equal 3075, Roman.new.to_decimal('MMMLXXV')
-    assert_equal 3076, Roman.new.to_decimal('MMMLXXVI')
-    assert_equal 3077, Roman.new.to_decimal('MMMLXXVII')
-    assert_equal 3078, Roman.new.to_decimal('MMMLXXVIII')
-    assert_equal 3079, Roman.new.to_decimal('MMMLXXIX')
-    assert_equal 3080, Roman.new.to_decimal('MMMLXXX')
-    assert_equal 3081, Roman.new.to_decimal('MMMLXXXI')
-    assert_equal 3082, Roman.new.to_decimal('MMMLXXXII')
-    assert_equal 3083, Roman.new.to_decimal('MMMLXXXIII')
-    assert_equal 3084, Roman.new.to_decimal('MMMLXXXIV')
-    assert_equal 3085, Roman.new.to_decimal('MMMLXXXV')
-    assert_equal 3086, Roman.new.to_decimal('MMMLXXXVI')
-    assert_equal 3087, Roman.new.to_decimal('MMMLXXXVII')
-    assert_equal 3088, Roman.new.to_decimal('MMMLXXXVIII')
-    assert_equal 3089, Roman.new.to_decimal('MMMLXXXIX')
-    assert_equal 3090, Roman.new.to_decimal('MMMXC')
-    assert_equal 3091, Roman.new.to_decimal('MMMXCI')
-    assert_equal 3092, Roman.new.to_decimal('MMMXCII')
-    assert_equal 3093, Roman.new.to_decimal('MMMXCIII')
-    assert_equal 3094, Roman.new.to_decimal('MMMXCIV')
-    assert_equal 3095, Roman.new.to_decimal('MMMXCV')
-    assert_equal 3096, Roman.new.to_decimal('MMMXCVI')
-    assert_equal 3097, Roman.new.to_decimal('MMMXCVII')
-    assert_equal 3098, Roman.new.to_decimal('MMMXCVIII')
-    assert_equal 3099, Roman.new.to_decimal('MMMXCIX')
-    assert_equal 3100, Roman.new.to_decimal('MMMC')
-    assert_equal 3101, Roman.new.to_decimal('MMMCI')
-    assert_equal 3102, Roman.new.to_decimal('MMMCII')
-    assert_equal 3103, Roman.new.to_decimal('MMMCIII')
-    assert_equal 3104, Roman.new.to_decimal('MMMCIV')
-    assert_equal 3105, Roman.new.to_decimal('MMMCV')
-    assert_equal 3106, Roman.new.to_decimal('MMMCVI')
-    assert_equal 3107, Roman.new.to_decimal('MMMCVII')
-    assert_equal 3108, Roman.new.to_decimal('MMMCVIII')
-    assert_equal 3109, Roman.new.to_decimal('MMMCIX')
-    assert_equal 3110, Roman.new.to_decimal('MMMCX')
-    assert_equal 3111, Roman.new.to_decimal('MMMCXI')
-    assert_equal 3112, Roman.new.to_decimal('MMMCXII')
-    assert_equal 3113, Roman.new.to_decimal('MMMCXIII')
-    assert_equal 3114, Roman.new.to_decimal('MMMCXIV')
-    assert_equal 3115, Roman.new.to_decimal('MMMCXV')
-    assert_equal 3116, Roman.new.to_decimal('MMMCXVI')
-    assert_equal 3117, Roman.new.to_decimal('MMMCXVII')
-    assert_equal 3118, Roman.new.to_decimal('MMMCXVIII')
-    assert_equal 3119, Roman.new.to_decimal('MMMCXIX')
-    assert_equal 3120, Roman.new.to_decimal('MMMCXX')
-    assert_equal 3121, Roman.new.to_decimal('MMMCXXI')
-    assert_equal 3122, Roman.new.to_decimal('MMMCXXII')
-    assert_equal 3123, Roman.new.to_decimal('MMMCXXIII')
-    assert_equal 3124, Roman.new.to_decimal('MMMCXXIV')
-    assert_equal 3125, Roman.new.to_decimal('MMMCXXV')
-    assert_equal 3126, Roman.new.to_decimal('MMMCXXVI')
-    assert_equal 3127, Roman.new.to_decimal('MMMCXXVII')
-    assert_equal 3128, Roman.new.to_decimal('MMMCXXVIII')
-    assert_equal 3129, Roman.new.to_decimal('MMMCXXIX')
-    assert_equal 3130, Roman.new.to_decimal('MMMCXXX')
-    assert_equal 3131, Roman.new.to_decimal('MMMCXXXI')
-    assert_equal 3132, Roman.new.to_decimal('MMMCXXXII')
-    assert_equal 3133, Roman.new.to_decimal('MMMCXXXIII')
-    assert_equal 3134, Roman.new.to_decimal('MMMCXXXIV')
-    assert_equal 3135, Roman.new.to_decimal('MMMCXXXV')
-    assert_equal 3136, Roman.new.to_decimal('MMMCXXXVI')
-    assert_equal 3137, Roman.new.to_decimal('MMMCXXXVII')
-    assert_equal 3138, Roman.new.to_decimal('MMMCXXXVIII')
-    assert_equal 3139, Roman.new.to_decimal('MMMCXXXIX')
-    assert_equal 3140, Roman.new.to_decimal('MMMCXL')
-    assert_equal 3141, Roman.new.to_decimal('MMMCXLI')
-    assert_equal 3142, Roman.new.to_decimal('MMMCXLII')
-    assert_equal 3143, Roman.new.to_decimal('MMMCXLIII')
-    assert_equal 3144, Roman.new.to_decimal('MMMCXLIV')
-    assert_equal 3145, Roman.new.to_decimal('MMMCXLV')
-    assert_equal 3146, Roman.new.to_decimal('MMMCXLVI')
-    assert_equal 3147, Roman.new.to_decimal('MMMCXLVII')
-    assert_equal 3148, Roman.new.to_decimal('MMMCXLVIII')
-    assert_equal 3149, Roman.new.to_decimal('MMMCXLIX')
-    assert_equal 3150, Roman.new.to_decimal('MMMCL')
-    assert_equal 3151, Roman.new.to_decimal('MMMCLI')
-    assert_equal 3152, Roman.new.to_decimal('MMMCLII')
-    assert_equal 3153, Roman.new.to_decimal('MMMCLIII')
-    assert_equal 3154, Roman.new.to_decimal('MMMCLIV')
-    assert_equal 3155, Roman.new.to_decimal('MMMCLV')
-    assert_equal 3156, Roman.new.to_decimal('MMMCLVI')
-    assert_equal 3157, Roman.new.to_decimal('MMMCLVII')
-    assert_equal 3158, Roman.new.to_decimal('MMMCLVIII')
-    assert_equal 3159, Roman.new.to_decimal('MMMCLIX')
-    assert_equal 3160, Roman.new.to_decimal('MMMCLX')
-    assert_equal 3161, Roman.new.to_decimal('MMMCLXI')
-    assert_equal 3162, Roman.new.to_decimal('MMMCLXII')
-    assert_equal 3163, Roman.new.to_decimal('MMMCLXIII')
-    assert_equal 3164, Roman.new.to_decimal('MMMCLXIV')
-    assert_equal 3165, Roman.new.to_decimal('MMMCLXV')
-    assert_equal 3166, Roman.new.to_decimal('MMMCLXVI')
-    assert_equal 3167, Roman.new.to_decimal('MMMCLXVII')
-    assert_equal 3168, Roman.new.to_decimal('MMMCLXVIII')
-    assert_equal 3169, Roman.new.to_decimal('MMMCLXIX')
-    assert_equal 3170, Roman.new.to_decimal('MMMCLXX')
-    assert_equal 3171, Roman.new.to_decimal('MMMCLXXI')
-    assert_equal 3172, Roman.new.to_decimal('MMMCLXXII')
-    assert_equal 3173, Roman.new.to_decimal('MMMCLXXIII')
-    assert_equal 3174, Roman.new.to_decimal('MMMCLXXIV')
-    assert_equal 3175, Roman.new.to_decimal('MMMCLXXV')
-    assert_equal 3176, Roman.new.to_decimal('MMMCLXXVI')
-    assert_equal 3177, Roman.new.to_decimal('MMMCLXXVII')
-    assert_equal 3178, Roman.new.to_decimal('MMMCLXXVIII')
-    assert_equal 3179, Roman.new.to_decimal('MMMCLXXIX')
-    assert_equal 3180, Roman.new.to_decimal('MMMCLXXX')
-    assert_equal 3181, Roman.new.to_decimal('MMMCLXXXI')
-    assert_equal 3182, Roman.new.to_decimal('MMMCLXXXII')
-    assert_equal 3183, Roman.new.to_decimal('MMMCLXXXIII')
-    assert_equal 3184, Roman.new.to_decimal('MMMCLXXXIV')
-    assert_equal 3185, Roman.new.to_decimal('MMMCLXXXV')
-    assert_equal 3186, Roman.new.to_decimal('MMMCLXXXVI')
-    assert_equal 3187, Roman.new.to_decimal('MMMCLXXXVII')
-    assert_equal 3188, Roman.new.to_decimal('MMMCLXXXVIII')
-    assert_equal 3189, Roman.new.to_decimal('MMMCLXXXIX')
-    assert_equal 3190, Roman.new.to_decimal('MMMCXC')
-    assert_equal 3191, Roman.new.to_decimal('MMMCXCI')
-    assert_equal 3192, Roman.new.to_decimal('MMMCXCII')
-    assert_equal 3193, Roman.new.to_decimal('MMMCXCIII')
-    assert_equal 3194, Roman.new.to_decimal('MMMCXCIV')
-    assert_equal 3195, Roman.new.to_decimal('MMMCXCV')
-    assert_equal 3196, Roman.new.to_decimal('MMMCXCVI')
-    assert_equal 3197, Roman.new.to_decimal('MMMCXCVII')
-    assert_equal 3198, Roman.new.to_decimal('MMMCXCVIII')
-    assert_equal 3199, Roman.new.to_decimal('MMMCXCIX')
-    assert_equal 3200, Roman.new.to_decimal('MMMCC')
-    assert_equal 3201, Roman.new.to_decimal('MMMCCI')
-    assert_equal 3202, Roman.new.to_decimal('MMMCCII')
-    assert_equal 3203, Roman.new.to_decimal('MMMCCIII')
-    assert_equal 3204, Roman.new.to_decimal('MMMCCIV')
-    assert_equal 3205, Roman.new.to_decimal('MMMCCV')
-    assert_equal 3206, Roman.new.to_decimal('MMMCCVI')
-    assert_equal 3207, Roman.new.to_decimal('MMMCCVII')
-    assert_equal 3208, Roman.new.to_decimal('MMMCCVIII')
-    assert_equal 3209, Roman.new.to_decimal('MMMCCIX')
-    assert_equal 3210, Roman.new.to_decimal('MMMCCX')
-    assert_equal 3211, Roman.new.to_decimal('MMMCCXI')
-    assert_equal 3212, Roman.new.to_decimal('MMMCCXII')
-    assert_equal 3213, Roman.new.to_decimal('MMMCCXIII')
-    assert_equal 3214, Roman.new.to_decimal('MMMCCXIV')
-    assert_equal 3215, Roman.new.to_decimal('MMMCCXV')
-    assert_equal 3216, Roman.new.to_decimal('MMMCCXVI')
-    assert_equal 3217, Roman.new.to_decimal('MMMCCXVII')
-    assert_equal 3218, Roman.new.to_decimal('MMMCCXVIII')
-    assert_equal 3219, Roman.new.to_decimal('MMMCCXIX')
-    assert_equal 3220, Roman.new.to_decimal('MMMCCXX')
-    assert_equal 3221, Roman.new.to_decimal('MMMCCXXI')
-    assert_equal 3222, Roman.new.to_decimal('MMMCCXXII')
-    assert_equal 3223, Roman.new.to_decimal('MMMCCXXIII')
-    assert_equal 3224, Roman.new.to_decimal('MMMCCXXIV')
-    assert_equal 3225, Roman.new.to_decimal('MMMCCXXV')
-    assert_equal 3226, Roman.new.to_decimal('MMMCCXXVI')
-    assert_equal 3227, Roman.new.to_decimal('MMMCCXXVII')
-    assert_equal 3228, Roman.new.to_decimal('MMMCCXXVIII')
-    assert_equal 3229, Roman.new.to_decimal('MMMCCXXIX')
-    assert_equal 3230, Roman.new.to_decimal('MMMCCXXX')
-    assert_equal 3231, Roman.new.to_decimal('MMMCCXXXI')
-    assert_equal 3232, Roman.new.to_decimal('MMMCCXXXII')
-    assert_equal 3233, Roman.new.to_decimal('MMMCCXXXIII')
-    assert_equal 3234, Roman.new.to_decimal('MMMCCXXXIV')
-    assert_equal 3235, Roman.new.to_decimal('MMMCCXXXV')
-    assert_equal 3236, Roman.new.to_decimal('MMMCCXXXVI')
-    assert_equal 3237, Roman.new.to_decimal('MMMCCXXXVII')
-    assert_equal 3238, Roman.new.to_decimal('MMMCCXXXVIII')
-    assert_equal 3239, Roman.new.to_decimal('MMMCCXXXIX')
-    assert_equal 3240, Roman.new.to_decimal('MMMCCXL')
-    assert_equal 3241, Roman.new.to_decimal('MMMCCXLI')
-    assert_equal 3242, Roman.new.to_decimal('MMMCCXLII')
-    assert_equal 3243, Roman.new.to_decimal('MMMCCXLIII')
-    assert_equal 3244, Roman.new.to_decimal('MMMCCXLIV')
-    assert_equal 3245, Roman.new.to_decimal('MMMCCXLV')
-    assert_equal 3246, Roman.new.to_decimal('MMMCCXLVI')
-    assert_equal 3247, Roman.new.to_decimal('MMMCCXLVII')
-    assert_equal 3248, Roman.new.to_decimal('MMMCCXLVIII')
-    assert_equal 3249, Roman.new.to_decimal('MMMCCXLIX')
-    assert_equal 3250, Roman.new.to_decimal('MMMCCL')
-    assert_equal 3251, Roman.new.to_decimal('MMMCCLI')
-    assert_equal 3252, Roman.new.to_decimal('MMMCCLII')
-    assert_equal 3253, Roman.new.to_decimal('MMMCCLIII')
-    assert_equal 3254, Roman.new.to_decimal('MMMCCLIV')
-    assert_equal 3255, Roman.new.to_decimal('MMMCCLV')
-    assert_equal 3256, Roman.new.to_decimal('MMMCCLVI')
-    assert_equal 3257, Roman.new.to_decimal('MMMCCLVII')
-    assert_equal 3258, Roman.new.to_decimal('MMMCCLVIII')
-    assert_equal 3259, Roman.new.to_decimal('MMMCCLIX')
-    assert_equal 3260, Roman.new.to_decimal('MMMCCLX')
-    assert_equal 3261, Roman.new.to_decimal('MMMCCLXI')
-    assert_equal 3262, Roman.new.to_decimal('MMMCCLXII')
-    assert_equal 3263, Roman.new.to_decimal('MMMCCLXIII')
-    assert_equal 3264, Roman.new.to_decimal('MMMCCLXIV')
-    assert_equal 3265, Roman.new.to_decimal('MMMCCLXV')
-    assert_equal 3266, Roman.new.to_decimal('MMMCCLXVI')
-    assert_equal 3267, Roman.new.to_decimal('MMMCCLXVII')
-    assert_equal 3268, Roman.new.to_decimal('MMMCCLXVIII')
-    assert_equal 3269, Roman.new.to_decimal('MMMCCLXIX')
-    assert_equal 3270, Roman.new.to_decimal('MMMCCLXX')
-    assert_equal 3271, Roman.new.to_decimal('MMMCCLXXI')
-    assert_equal 3272, Roman.new.to_decimal('MMMCCLXXII')
-    assert_equal 3273, Roman.new.to_decimal('MMMCCLXXIII')
-    assert_equal 3274, Roman.new.to_decimal('MMMCCLXXIV')
-    assert_equal 3275, Roman.new.to_decimal('MMMCCLXXV')
-    assert_equal 3276, Roman.new.to_decimal('MMMCCLXXVI')
-    assert_equal 3277, Roman.new.to_decimal('MMMCCLXXVII')
-    assert_equal 3278, Roman.new.to_decimal('MMMCCLXXVIII')
-    assert_equal 3279, Roman.new.to_decimal('MMMCCLXXIX')
-    assert_equal 3280, Roman.new.to_decimal('MMMCCLXXX')
-    assert_equal 3281, Roman.new.to_decimal('MMMCCLXXXI')
-    assert_equal 3282, Roman.new.to_decimal('MMMCCLXXXII')
-    assert_equal 3283, Roman.new.to_decimal('MMMCCLXXXIII')
-    assert_equal 3284, Roman.new.to_decimal('MMMCCLXXXIV')
-    assert_equal 3285, Roman.new.to_decimal('MMMCCLXXXV')
-    assert_equal 3286, Roman.new.to_decimal('MMMCCLXXXVI')
-    assert_equal 3287, Roman.new.to_decimal('MMMCCLXXXVII')
-    assert_equal 3288, Roman.new.to_decimal('MMMCCLXXXVIII')
-    assert_equal 3289, Roman.new.to_decimal('MMMCCLXXXIX')
-    assert_equal 3290, Roman.new.to_decimal('MMMCCXC')
-    assert_equal 3291, Roman.new.to_decimal('MMMCCXCI')
-    assert_equal 3292, Roman.new.to_decimal('MMMCCXCII')
-    assert_equal 3293, Roman.new.to_decimal('MMMCCXCIII')
-    assert_equal 3294, Roman.new.to_decimal('MMMCCXCIV')
-    assert_equal 3295, Roman.new.to_decimal('MMMCCXCV')
-    assert_equal 3296, Roman.new.to_decimal('MMMCCXCVI')
-    assert_equal 3297, Roman.new.to_decimal('MMMCCXCVII')
-    assert_equal 3298, Roman.new.to_decimal('MMMCCXCVIII')
-    assert_equal 3299, Roman.new.to_decimal('MMMCCXCIX')
-    assert_equal 3300, Roman.new.to_decimal('MMMCCC')
-    assert_equal 3301, Roman.new.to_decimal('MMMCCCI')
-    assert_equal 3302, Roman.new.to_decimal('MMMCCCII')
-    assert_equal 3303, Roman.new.to_decimal('MMMCCCIII')
-    assert_equal 3304, Roman.new.to_decimal('MMMCCCIV')
-    assert_equal 3305, Roman.new.to_decimal('MMMCCCV')
-    assert_equal 3306, Roman.new.to_decimal('MMMCCCVI')
-    assert_equal 3307, Roman.new.to_decimal('MMMCCCVII')
-    assert_equal 3308, Roman.new.to_decimal('MMMCCCVIII')
-    assert_equal 3309, Roman.new.to_decimal('MMMCCCIX')
-    assert_equal 3310, Roman.new.to_decimal('MMMCCCX')
-    assert_equal 3311, Roman.new.to_decimal('MMMCCCXI')
-    assert_equal 3312, Roman.new.to_decimal('MMMCCCXII')
-    assert_equal 3313, Roman.new.to_decimal('MMMCCCXIII')
-    assert_equal 3314, Roman.new.to_decimal('MMMCCCXIV')
-    assert_equal 3315, Roman.new.to_decimal('MMMCCCXV')
-    assert_equal 3316, Roman.new.to_decimal('MMMCCCXVI')
-    assert_equal 3317, Roman.new.to_decimal('MMMCCCXVII')
-    assert_equal 3318, Roman.new.to_decimal('MMMCCCXVIII')
-    assert_equal 3319, Roman.new.to_decimal('MMMCCCXIX')
-    assert_equal 3320, Roman.new.to_decimal('MMMCCCXX')
-    assert_equal 3321, Roman.new.to_decimal('MMMCCCXXI')
-    assert_equal 3322, Roman.new.to_decimal('MMMCCCXXII')
-    assert_equal 3323, Roman.new.to_decimal('MMMCCCXXIII')
-    assert_equal 3324, Roman.new.to_decimal('MMMCCCXXIV')
-    assert_equal 3325, Roman.new.to_decimal('MMMCCCXXV')
-    assert_equal 3326, Roman.new.to_decimal('MMMCCCXXVI')
-    assert_equal 3327, Roman.new.to_decimal('MMMCCCXXVII')
-    assert_equal 3328, Roman.new.to_decimal('MMMCCCXXVIII')
-    assert_equal 3329, Roman.new.to_decimal('MMMCCCXXIX')
-    assert_equal 3330, Roman.new.to_decimal('MMMCCCXXX')
-    assert_equal 3331, Roman.new.to_decimal('MMMCCCXXXI')
-    assert_equal 3332, Roman.new.to_decimal('MMMCCCXXXII')
-    assert_equal 3333, Roman.new.to_decimal('MMMCCCXXXIII')
-    assert_equal 3334, Roman.new.to_decimal('MMMCCCXXXIV')
-    assert_equal 3335, Roman.new.to_decimal('MMMCCCXXXV')
-    assert_equal 3336, Roman.new.to_decimal('MMMCCCXXXVI')
-    assert_equal 3337, Roman.new.to_decimal('MMMCCCXXXVII')
-    assert_equal 3338, Roman.new.to_decimal('MMMCCCXXXVIII')
-    assert_equal 3339, Roman.new.to_decimal('MMMCCCXXXIX')
-    assert_equal 3340, Roman.new.to_decimal('MMMCCCXL')
-    assert_equal 3341, Roman.new.to_decimal('MMMCCCXLI')
-    assert_equal 3342, Roman.new.to_decimal('MMMCCCXLII')
-    assert_equal 3343, Roman.new.to_decimal('MMMCCCXLIII')
-    assert_equal 3344, Roman.new.to_decimal('MMMCCCXLIV')
-    assert_equal 3345, Roman.new.to_decimal('MMMCCCXLV')
-    assert_equal 3346, Roman.new.to_decimal('MMMCCCXLVI')
-    assert_equal 3347, Roman.new.to_decimal('MMMCCCXLVII')
-    assert_equal 3348, Roman.new.to_decimal('MMMCCCXLVIII')
-    assert_equal 3349, Roman.new.to_decimal('MMMCCCXLIX')
-    assert_equal 3350, Roman.new.to_decimal('MMMCCCL')
-    assert_equal 3351, Roman.new.to_decimal('MMMCCCLI')
-    assert_equal 3352, Roman.new.to_decimal('MMMCCCLII')
-    assert_equal 3353, Roman.new.to_decimal('MMMCCCLIII')
-    assert_equal 3354, Roman.new.to_decimal('MMMCCCLIV')
-    assert_equal 3355, Roman.new.to_decimal('MMMCCCLV')
-    assert_equal 3356, Roman.new.to_decimal('MMMCCCLVI')
-    assert_equal 3357, Roman.new.to_decimal('MMMCCCLVII')
-    assert_equal 3358, Roman.new.to_decimal('MMMCCCLVIII')
-    assert_equal 3359, Roman.new.to_decimal('MMMCCCLIX')
-    assert_equal 3360, Roman.new.to_decimal('MMMCCCLX')
-    assert_equal 3361, Roman.new.to_decimal('MMMCCCLXI')
-    assert_equal 3362, Roman.new.to_decimal('MMMCCCLXII')
-    assert_equal 3363, Roman.new.to_decimal('MMMCCCLXIII')
-    assert_equal 3364, Roman.new.to_decimal('MMMCCCLXIV')
-    assert_equal 3365, Roman.new.to_decimal('MMMCCCLXV')
-    assert_equal 3366, Roman.new.to_decimal('MMMCCCLXVI')
-    assert_equal 3367, Roman.new.to_decimal('MMMCCCLXVII')
-    assert_equal 3368, Roman.new.to_decimal('MMMCCCLXVIII')
-    assert_equal 3369, Roman.new.to_decimal('MMMCCCLXIX')
-    assert_equal 3370, Roman.new.to_decimal('MMMCCCLXX')
-    assert_equal 3371, Roman.new.to_decimal('MMMCCCLXXI')
-    assert_equal 3372, Roman.new.to_decimal('MMMCCCLXXII')
-    assert_equal 3373, Roman.new.to_decimal('MMMCCCLXXIII')
-    assert_equal 3374, Roman.new.to_decimal('MMMCCCLXXIV')
-    assert_equal 3375, Roman.new.to_decimal('MMMCCCLXXV')
-    assert_equal 3376, Roman.new.to_decimal('MMMCCCLXXVI')
-    assert_equal 3377, Roman.new.to_decimal('MMMCCCLXXVII')
-    assert_equal 3378, Roman.new.to_decimal('MMMCCCLXXVIII')
-    assert_equal 3379, Roman.new.to_decimal('MMMCCCLXXIX')
-    assert_equal 3380, Roman.new.to_decimal('MMMCCCLXXX')
-    assert_equal 3381, Roman.new.to_decimal('MMMCCCLXXXI')
-    assert_equal 3382, Roman.new.to_decimal('MMMCCCLXXXII')
-    assert_equal 3383, Roman.new.to_decimal('MMMCCCLXXXIII')
-    assert_equal 3384, Roman.new.to_decimal('MMMCCCLXXXIV')
-    assert_equal 3385, Roman.new.to_decimal('MMMCCCLXXXV')
-    assert_equal 3386, Roman.new.to_decimal('MMMCCCLXXXVI')
-    assert_equal 3387, Roman.new.to_decimal('MMMCCCLXXXVII')
-    assert_equal 3388, Roman.new.to_decimal('MMMCCCLXXXVIII')
-    assert_equal 3389, Roman.new.to_decimal('MMMCCCLXXXIX')
-    assert_equal 3390, Roman.new.to_decimal('MMMCCCXC')
-    assert_equal 3391, Roman.new.to_decimal('MMMCCCXCI')
-    assert_equal 3392, Roman.new.to_decimal('MMMCCCXCII')
-    assert_equal 3393, Roman.new.to_decimal('MMMCCCXCIII')
-    assert_equal 3394, Roman.new.to_decimal('MMMCCCXCIV')
-    assert_equal 3395, Roman.new.to_decimal('MMMCCCXCV')
-    assert_equal 3396, Roman.new.to_decimal('MMMCCCXCVI')
-    assert_equal 3397, Roman.new.to_decimal('MMMCCCXCVII')
-    assert_equal 3398, Roman.new.to_decimal('MMMCCCXCVIII')
-    assert_equal 3399, Roman.new.to_decimal('MMMCCCXCIX')
-    assert_equal 3400, Roman.new.to_decimal('MMMCD')
-    assert_equal 3401, Roman.new.to_decimal('MMMCDI')
-    assert_equal 3402, Roman.new.to_decimal('MMMCDII')
-    assert_equal 3403, Roman.new.to_decimal('MMMCDIII')
-    assert_equal 3404, Roman.new.to_decimal('MMMCDIV')
-    assert_equal 3405, Roman.new.to_decimal('MMMCDV')
-    assert_equal 3406, Roman.new.to_decimal('MMMCDVI')
-    assert_equal 3407, Roman.new.to_decimal('MMMCDVII')
-    assert_equal 3408, Roman.new.to_decimal('MMMCDVIII')
-    assert_equal 3409, Roman.new.to_decimal('MMMCDIX')
-    assert_equal 3410, Roman.new.to_decimal('MMMCDX')
-    assert_equal 3411, Roman.new.to_decimal('MMMCDXI')
-    assert_equal 3412, Roman.new.to_decimal('MMMCDXII')
-    assert_equal 3413, Roman.new.to_decimal('MMMCDXIII')
-    assert_equal 3414, Roman.new.to_decimal('MMMCDXIV')
-    assert_equal 3415, Roman.new.to_decimal('MMMCDXV')
-    assert_equal 3416, Roman.new.to_decimal('MMMCDXVI')
-    assert_equal 3417, Roman.new.to_decimal('MMMCDXVII')
-    assert_equal 3418, Roman.new.to_decimal('MMMCDXVIII')
-    assert_equal 3419, Roman.new.to_decimal('MMMCDXIX')
-    assert_equal 3420, Roman.new.to_decimal('MMMCDXX')
-    assert_equal 3421, Roman.new.to_decimal('MMMCDXXI')
-    assert_equal 3422, Roman.new.to_decimal('MMMCDXXII')
-    assert_equal 3423, Roman.new.to_decimal('MMMCDXXIII')
-    assert_equal 3424, Roman.new.to_decimal('MMMCDXXIV')
-    assert_equal 3425, Roman.new.to_decimal('MMMCDXXV')
-    assert_equal 3426, Roman.new.to_decimal('MMMCDXXVI')
-    assert_equal 3427, Roman.new.to_decimal('MMMCDXXVII')
-    assert_equal 3428, Roman.new.to_decimal('MMMCDXXVIII')
-    assert_equal 3429, Roman.new.to_decimal('MMMCDXXIX')
-    assert_equal 3430, Roman.new.to_decimal('MMMCDXXX')
-    assert_equal 3431, Roman.new.to_decimal('MMMCDXXXI')
-    assert_equal 3432, Roman.new.to_decimal('MMMCDXXXII')
-    assert_equal 3433, Roman.new.to_decimal('MMMCDXXXIII')
-    assert_equal 3434, Roman.new.to_decimal('MMMCDXXXIV')
-    assert_equal 3435, Roman.new.to_decimal('MMMCDXXXV')
-    assert_equal 3436, Roman.new.to_decimal('MMMCDXXXVI')
-    assert_equal 3437, Roman.new.to_decimal('MMMCDXXXVII')
-    assert_equal 3438, Roman.new.to_decimal('MMMCDXXXVIII')
-    assert_equal 3439, Roman.new.to_decimal('MMMCDXXXIX')
-    assert_equal 3440, Roman.new.to_decimal('MMMCDXL')
-    assert_equal 3441, Roman.new.to_decimal('MMMCDXLI')
-    assert_equal 3442, Roman.new.to_decimal('MMMCDXLII')
-    assert_equal 3443, Roman.new.to_decimal('MMMCDXLIII')
-    assert_equal 3444, Roman.new.to_decimal('MMMCDXLIV')
-    assert_equal 3445, Roman.new.to_decimal('MMMCDXLV')
-    assert_equal 3446, Roman.new.to_decimal('MMMCDXLVI')
-    assert_equal 3447, Roman.new.to_decimal('MMMCDXLVII')
-    assert_equal 3448, Roman.new.to_decimal('MMMCDXLVIII')
-    assert_equal 3449, Roman.new.to_decimal('MMMCDXLIX')
-    assert_equal 3450, Roman.new.to_decimal('MMMCDL')
-    assert_equal 3451, Roman.new.to_decimal('MMMCDLI')
-    assert_equal 3452, Roman.new.to_decimal('MMMCDLII')
-    assert_equal 3453, Roman.new.to_decimal('MMMCDLIII')
-    assert_equal 3454, Roman.new.to_decimal('MMMCDLIV')
-    assert_equal 3455, Roman.new.to_decimal('MMMCDLV')
-    assert_equal 3456, Roman.new.to_decimal('MMMCDLVI')
-    assert_equal 3457, Roman.new.to_decimal('MMMCDLVII')
-    assert_equal 3458, Roman.new.to_decimal('MMMCDLVIII')
-    assert_equal 3459, Roman.new.to_decimal('MMMCDLIX')
-    assert_equal 3460, Roman.new.to_decimal('MMMCDLX')
-    assert_equal 3461, Roman.new.to_decimal('MMMCDLXI')
-    assert_equal 3462, Roman.new.to_decimal('MMMCDLXII')
-    assert_equal 3463, Roman.new.to_decimal('MMMCDLXIII')
-    assert_equal 3464, Roman.new.to_decimal('MMMCDLXIV')
-    assert_equal 3465, Roman.new.to_decimal('MMMCDLXV')
-    assert_equal 3466, Roman.new.to_decimal('MMMCDLXVI')
-    assert_equal 3467, Roman.new.to_decimal('MMMCDLXVII')
-    assert_equal 3468, Roman.new.to_decimal('MMMCDLXVIII')
-    assert_equal 3469, Roman.new.to_decimal('MMMCDLXIX')
-    assert_equal 3470, Roman.new.to_decimal('MMMCDLXX')
-    assert_equal 3471, Roman.new.to_decimal('MMMCDLXXI')
-    assert_equal 3472, Roman.new.to_decimal('MMMCDLXXII')
-    assert_equal 3473, Roman.new.to_decimal('MMMCDLXXIII')
-    assert_equal 3474, Roman.new.to_decimal('MMMCDLXXIV')
-    assert_equal 3475, Roman.new.to_decimal('MMMCDLXXV')
-    assert_equal 3476, Roman.new.to_decimal('MMMCDLXXVI')
-    assert_equal 3477, Roman.new.to_decimal('MMMCDLXXVII')
-    assert_equal 3478, Roman.new.to_decimal('MMMCDLXXVIII')
-    assert_equal 3479, Roman.new.to_decimal('MMMCDLXXIX')
-    assert_equal 3480, Roman.new.to_decimal('MMMCDLXXX')
-    assert_equal 3481, Roman.new.to_decimal('MMMCDLXXXI')
-    assert_equal 3482, Roman.new.to_decimal('MMMCDLXXXII')
-    assert_equal 3483, Roman.new.to_decimal('MMMCDLXXXIII')
-    assert_equal 3484, Roman.new.to_decimal('MMMCDLXXXIV')
-    assert_equal 3485, Roman.new.to_decimal('MMMCDLXXXV')
-    assert_equal 3486, Roman.new.to_decimal('MMMCDLXXXVI')
-    assert_equal 3487, Roman.new.to_decimal('MMMCDLXXXVII')
-    assert_equal 3488, Roman.new.to_decimal('MMMCDLXXXVIII')
-    assert_equal 3489, Roman.new.to_decimal('MMMCDLXXXIX')
-    assert_equal 3490, Roman.new.to_decimal('MMMCDXC')
-    assert_equal 3491, Roman.new.to_decimal('MMMCDXCI')
-    assert_equal 3492, Roman.new.to_decimal('MMMCDXCII')
-    assert_equal 3493, Roman.new.to_decimal('MMMCDXCIII')
-    assert_equal 3494, Roman.new.to_decimal('MMMCDXCIV')
-    assert_equal 3495, Roman.new.to_decimal('MMMCDXCV')
-    assert_equal 3496, Roman.new.to_decimal('MMMCDXCVI')
-    assert_equal 3497, Roman.new.to_decimal('MMMCDXCVII')
-    assert_equal 3498, Roman.new.to_decimal('MMMCDXCVIII')
-    assert_equal 3499, Roman.new.to_decimal('MMMCDXCIX')
-    assert_equal 3500, Roman.new.to_decimal('MMMD')
-    assert_equal 3501, Roman.new.to_decimal('MMMDI')
-    assert_equal 3502, Roman.new.to_decimal('MMMDII')
-    assert_equal 3503, Roman.new.to_decimal('MMMDIII')
-    assert_equal 3504, Roman.new.to_decimal('MMMDIV')
-    assert_equal 3505, Roman.new.to_decimal('MMMDV')
-    assert_equal 3506, Roman.new.to_decimal('MMMDVI')
-    assert_equal 3507, Roman.new.to_decimal('MMMDVII')
-    assert_equal 3508, Roman.new.to_decimal('MMMDVIII')
-    assert_equal 3509, Roman.new.to_decimal('MMMDIX')
-    assert_equal 3510, Roman.new.to_decimal('MMMDX')
-    assert_equal 3511, Roman.new.to_decimal('MMMDXI')
-    assert_equal 3512, Roman.new.to_decimal('MMMDXII')
-    assert_equal 3513, Roman.new.to_decimal('MMMDXIII')
-    assert_equal 3514, Roman.new.to_decimal('MMMDXIV')
-    assert_equal 3515, Roman.new.to_decimal('MMMDXV')
-    assert_equal 3516, Roman.new.to_decimal('MMMDXVI')
-    assert_equal 3517, Roman.new.to_decimal('MMMDXVII')
-    assert_equal 3518, Roman.new.to_decimal('MMMDXVIII')
-    assert_equal 3519, Roman.new.to_decimal('MMMDXIX')
-    assert_equal 3520, Roman.new.to_decimal('MMMDXX')
-    assert_equal 3521, Roman.new.to_decimal('MMMDXXI')
-    assert_equal 3522, Roman.new.to_decimal('MMMDXXII')
-    assert_equal 3523, Roman.new.to_decimal('MMMDXXIII')
-    assert_equal 3524, Roman.new.to_decimal('MMMDXXIV')
-    assert_equal 3525, Roman.new.to_decimal('MMMDXXV')
-    assert_equal 3526, Roman.new.to_decimal('MMMDXXVI')
-    assert_equal 3527, Roman.new.to_decimal('MMMDXXVII')
-    assert_equal 3528, Roman.new.to_decimal('MMMDXXVIII')
-    assert_equal 3529, Roman.new.to_decimal('MMMDXXIX')
-    assert_equal 3530, Roman.new.to_decimal('MMMDXXX')
-    assert_equal 3531, Roman.new.to_decimal('MMMDXXXI')
-    assert_equal 3532, Roman.new.to_decimal('MMMDXXXII')
-    assert_equal 3533, Roman.new.to_decimal('MMMDXXXIII')
-    assert_equal 3534, Roman.new.to_decimal('MMMDXXXIV')
-    assert_equal 3535, Roman.new.to_decimal('MMMDXXXV')
-    assert_equal 3536, Roman.new.to_decimal('MMMDXXXVI')
-    assert_equal 3537, Roman.new.to_decimal('MMMDXXXVII')
-    assert_equal 3538, Roman.new.to_decimal('MMMDXXXVIII')
-    assert_equal 3539, Roman.new.to_decimal('MMMDXXXIX')
-    assert_equal 3540, Roman.new.to_decimal('MMMDXL')
-    assert_equal 3541, Roman.new.to_decimal('MMMDXLI')
-    assert_equal 3542, Roman.new.to_decimal('MMMDXLII')
-    assert_equal 3543, Roman.new.to_decimal('MMMDXLIII')
-    assert_equal 3544, Roman.new.to_decimal('MMMDXLIV')
-    assert_equal 3545, Roman.new.to_decimal('MMMDXLV')
-    assert_equal 3546, Roman.new.to_decimal('MMMDXLVI')
-    assert_equal 3547, Roman.new.to_decimal('MMMDXLVII')
-    assert_equal 3548, Roman.new.to_decimal('MMMDXLVIII')
-    assert_equal 3549, Roman.new.to_decimal('MMMDXLIX')
-    assert_equal 3550, Roman.new.to_decimal('MMMDL')
-    assert_equal 3551, Roman.new.to_decimal('MMMDLI')
-    assert_equal 3552, Roman.new.to_decimal('MMMDLII')
-    assert_equal 3553, Roman.new.to_decimal('MMMDLIII')
-    assert_equal 3554, Roman.new.to_decimal('MMMDLIV')
-    assert_equal 3555, Roman.new.to_decimal('MMMDLV')
-    assert_equal 3556, Roman.new.to_decimal('MMMDLVI')
-    assert_equal 3557, Roman.new.to_decimal('MMMDLVII')
-    assert_equal 3558, Roman.new.to_decimal('MMMDLVIII')
-    assert_equal 3559, Roman.new.to_decimal('MMMDLIX')
-    assert_equal 3560, Roman.new.to_decimal('MMMDLX')
-    assert_equal 3561, Roman.new.to_decimal('MMMDLXI')
-    assert_equal 3562, Roman.new.to_decimal('MMMDLXII')
-    assert_equal 3563, Roman.new.to_decimal('MMMDLXIII')
-    assert_equal 3564, Roman.new.to_decimal('MMMDLXIV')
-    assert_equal 3565, Roman.new.to_decimal('MMMDLXV')
-    assert_equal 3566, Roman.new.to_decimal('MMMDLXVI')
-    assert_equal 3567, Roman.new.to_decimal('MMMDLXVII')
-    assert_equal 3568, Roman.new.to_decimal('MMMDLXVIII')
-    assert_equal 3569, Roman.new.to_decimal('MMMDLXIX')
-    assert_equal 3570, Roman.new.to_decimal('MMMDLXX')
-    assert_equal 3571, Roman.new.to_decimal('MMMDLXXI')
-    assert_equal 3572, Roman.new.to_decimal('MMMDLXXII')
-    assert_equal 3573, Roman.new.to_decimal('MMMDLXXIII')
-    assert_equal 3574, Roman.new.to_decimal('MMMDLXXIV')
-    assert_equal 3575, Roman.new.to_decimal('MMMDLXXV')
-    assert_equal 3576, Roman.new.to_decimal('MMMDLXXVI')
-    assert_equal 3577, Roman.new.to_decimal('MMMDLXXVII')
-    assert_equal 3578, Roman.new.to_decimal('MMMDLXXVIII')
-    assert_equal 3579, Roman.new.to_decimal('MMMDLXXIX')
-    assert_equal 3580, Roman.new.to_decimal('MMMDLXXX')
-    assert_equal 3581, Roman.new.to_decimal('MMMDLXXXI')
-    assert_equal 3582, Roman.new.to_decimal('MMMDLXXXII')
-    assert_equal 3583, Roman.new.to_decimal('MMMDLXXXIII')
-    assert_equal 3584, Roman.new.to_decimal('MMMDLXXXIV')
-    assert_equal 3585, Roman.new.to_decimal('MMMDLXXXV')
-    assert_equal 3586, Roman.new.to_decimal('MMMDLXXXVI')
-    assert_equal 3587, Roman.new.to_decimal('MMMDLXXXVII')
-    assert_equal 3588, Roman.new.to_decimal('MMMDLXXXVIII')
-    assert_equal 3589, Roman.new.to_decimal('MMMDLXXXIX')
-    assert_equal 3590, Roman.new.to_decimal('MMMDXC')
-    assert_equal 3591, Roman.new.to_decimal('MMMDXCI')
-    assert_equal 3592, Roman.new.to_decimal('MMMDXCII')
-    assert_equal 3593, Roman.new.to_decimal('MMMDXCIII')
-    assert_equal 3594, Roman.new.to_decimal('MMMDXCIV')
-    assert_equal 3595, Roman.new.to_decimal('MMMDXCV')
-    assert_equal 3596, Roman.new.to_decimal('MMMDXCVI')
-    assert_equal 3597, Roman.new.to_decimal('MMMDXCVII')
-    assert_equal 3598, Roman.new.to_decimal('MMMDXCVIII')
-    assert_equal 3599, Roman.new.to_decimal('MMMDXCIX')
-    assert_equal 3600, Roman.new.to_decimal('MMMDC')
-    assert_equal 3601, Roman.new.to_decimal('MMMDCI')
-    assert_equal 3602, Roman.new.to_decimal('MMMDCII')
-    assert_equal 3603, Roman.new.to_decimal('MMMDCIII')
-    assert_equal 3604, Roman.new.to_decimal('MMMDCIV')
-    assert_equal 3605, Roman.new.to_decimal('MMMDCV')
-    assert_equal 3606, Roman.new.to_decimal('MMMDCVI')
-    assert_equal 3607, Roman.new.to_decimal('MMMDCVII')
-    assert_equal 3608, Roman.new.to_decimal('MMMDCVIII')
-    assert_equal 3609, Roman.new.to_decimal('MMMDCIX')
-    assert_equal 3610, Roman.new.to_decimal('MMMDCX')
-    assert_equal 3611, Roman.new.to_decimal('MMMDCXI')
-    assert_equal 3612, Roman.new.to_decimal('MMMDCXII')
-    assert_equal 3613, Roman.new.to_decimal('MMMDCXIII')
-    assert_equal 3614, Roman.new.to_decimal('MMMDCXIV')
-    assert_equal 3615, Roman.new.to_decimal('MMMDCXV')
-    assert_equal 3616, Roman.new.to_decimal('MMMDCXVI')
-    assert_equal 3617, Roman.new.to_decimal('MMMDCXVII')
-    assert_equal 3618, Roman.new.to_decimal('MMMDCXVIII')
-    assert_equal 3619, Roman.new.to_decimal('MMMDCXIX')
-    assert_equal 3620, Roman.new.to_decimal('MMMDCXX')
-    assert_equal 3621, Roman.new.to_decimal('MMMDCXXI')
-    assert_equal 3622, Roman.new.to_decimal('MMMDCXXII')
-    assert_equal 3623, Roman.new.to_decimal('MMMDCXXIII')
-    assert_equal 3624, Roman.new.to_decimal('MMMDCXXIV')
-    assert_equal 3625, Roman.new.to_decimal('MMMDCXXV')
-    assert_equal 3626, Roman.new.to_decimal('MMMDCXXVI')
-    assert_equal 3627, Roman.new.to_decimal('MMMDCXXVII')
-    assert_equal 3628, Roman.new.to_decimal('MMMDCXXVIII')
-    assert_equal 3629, Roman.new.to_decimal('MMMDCXXIX')
-    assert_equal 3630, Roman.new.to_decimal('MMMDCXXX')
-    assert_equal 3631, Roman.new.to_decimal('MMMDCXXXI')
-    assert_equal 3632, Roman.new.to_decimal('MMMDCXXXII')
-    assert_equal 3633, Roman.new.to_decimal('MMMDCXXXIII')
-    assert_equal 3634, Roman.new.to_decimal('MMMDCXXXIV')
-    assert_equal 3635, Roman.new.to_decimal('MMMDCXXXV')
-    assert_equal 3636, Roman.new.to_decimal('MMMDCXXXVI')
-    assert_equal 3637, Roman.new.to_decimal('MMMDCXXXVII')
-    assert_equal 3638, Roman.new.to_decimal('MMMDCXXXVIII')
-    assert_equal 3639, Roman.new.to_decimal('MMMDCXXXIX')
-    assert_equal 3640, Roman.new.to_decimal('MMMDCXL')
-    assert_equal 3641, Roman.new.to_decimal('MMMDCXLI')
-    assert_equal 3642, Roman.new.to_decimal('MMMDCXLII')
-    assert_equal 3643, Roman.new.to_decimal('MMMDCXLIII')
-    assert_equal 3644, Roman.new.to_decimal('MMMDCXLIV')
-    assert_equal 3645, Roman.new.to_decimal('MMMDCXLV')
-    assert_equal 3646, Roman.new.to_decimal('MMMDCXLVI')
-    assert_equal 3647, Roman.new.to_decimal('MMMDCXLVII')
-    assert_equal 3648, Roman.new.to_decimal('MMMDCXLVIII')
-    assert_equal 3649, Roman.new.to_decimal('MMMDCXLIX')
-    assert_equal 3650, Roman.new.to_decimal('MMMDCL')
-    assert_equal 3651, Roman.new.to_decimal('MMMDCLI')
-    assert_equal 3652, Roman.new.to_decimal('MMMDCLII')
-    assert_equal 3653, Roman.new.to_decimal('MMMDCLIII')
-    assert_equal 3654, Roman.new.to_decimal('MMMDCLIV')
-    assert_equal 3655, Roman.new.to_decimal('MMMDCLV')
-    assert_equal 3656, Roman.new.to_decimal('MMMDCLVI')
-    assert_equal 3657, Roman.new.to_decimal('MMMDCLVII')
-    assert_equal 3658, Roman.new.to_decimal('MMMDCLVIII')
-    assert_equal 3659, Roman.new.to_decimal('MMMDCLIX')
-    assert_equal 3660, Roman.new.to_decimal('MMMDCLX')
-    assert_equal 3661, Roman.new.to_decimal('MMMDCLXI')
-    assert_equal 3662, Roman.new.to_decimal('MMMDCLXII')
-    assert_equal 3663, Roman.new.to_decimal('MMMDCLXIII')
-    assert_equal 3664, Roman.new.to_decimal('MMMDCLXIV')
-    assert_equal 3665, Roman.new.to_decimal('MMMDCLXV')
-    assert_equal 3666, Roman.new.to_decimal('MMMDCLXVI')
-    assert_equal 3667, Roman.new.to_decimal('MMMDCLXVII')
-    assert_equal 3668, Roman.new.to_decimal('MMMDCLXVIII')
-    assert_equal 3669, Roman.new.to_decimal('MMMDCLXIX')
-    assert_equal 3670, Roman.new.to_decimal('MMMDCLXX')
-    assert_equal 3671, Roman.new.to_decimal('MMMDCLXXI')
-    assert_equal 3672, Roman.new.to_decimal('MMMDCLXXII')
-    assert_equal 3673, Roman.new.to_decimal('MMMDCLXXIII')
-    assert_equal 3674, Roman.new.to_decimal('MMMDCLXXIV')
-    assert_equal 3675, Roman.new.to_decimal('MMMDCLXXV')
-    assert_equal 3676, Roman.new.to_decimal('MMMDCLXXVI')
-    assert_equal 3677, Roman.new.to_decimal('MMMDCLXXVII')
-    assert_equal 3678, Roman.new.to_decimal('MMMDCLXXVIII')
-    assert_equal 3679, Roman.new.to_decimal('MMMDCLXXIX')
-    assert_equal 3680, Roman.new.to_decimal('MMMDCLXXX')
-    assert_equal 3681, Roman.new.to_decimal('MMMDCLXXXI')
-    assert_equal 3682, Roman.new.to_decimal('MMMDCLXXXII')
-    assert_equal 3683, Roman.new.to_decimal('MMMDCLXXXIII')
-    assert_equal 3684, Roman.new.to_decimal('MMMDCLXXXIV')
-    assert_equal 3685, Roman.new.to_decimal('MMMDCLXXXV')
-    assert_equal 3686, Roman.new.to_decimal('MMMDCLXXXVI')
-    assert_equal 3687, Roman.new.to_decimal('MMMDCLXXXVII')
-    assert_equal 3688, Roman.new.to_decimal('MMMDCLXXXVIII')
-    assert_equal 3689, Roman.new.to_decimal('MMMDCLXXXIX')
-    assert_equal 3690, Roman.new.to_decimal('MMMDCXC')
-    assert_equal 3691, Roman.new.to_decimal('MMMDCXCI')
-    assert_equal 3692, Roman.new.to_decimal('MMMDCXCII')
-    assert_equal 3693, Roman.new.to_decimal('MMMDCXCIII')
-    assert_equal 3694, Roman.new.to_decimal('MMMDCXCIV')
-    assert_equal 3695, Roman.new.to_decimal('MMMDCXCV')
-    assert_equal 3696, Roman.new.to_decimal('MMMDCXCVI')
-    assert_equal 3697, Roman.new.to_decimal('MMMDCXCVII')
-    assert_equal 3698, Roman.new.to_decimal('MMMDCXCVIII')
-    assert_equal 3699, Roman.new.to_decimal('MMMDCXCIX')
-    assert_equal 3700, Roman.new.to_decimal('MMMDCC')
-    assert_equal 3701, Roman.new.to_decimal('MMMDCCI')
-    assert_equal 3702, Roman.new.to_decimal('MMMDCCII')
-    assert_equal 3703, Roman.new.to_decimal('MMMDCCIII')
-    assert_equal 3704, Roman.new.to_decimal('MMMDCCIV')
-    assert_equal 3705, Roman.new.to_decimal('MMMDCCV')
-    assert_equal 3706, Roman.new.to_decimal('MMMDCCVI')
-    assert_equal 3707, Roman.new.to_decimal('MMMDCCVII')
-    assert_equal 3708, Roman.new.to_decimal('MMMDCCVIII')
-    assert_equal 3709, Roman.new.to_decimal('MMMDCCIX')
-    assert_equal 3710, Roman.new.to_decimal('MMMDCCX')
-    assert_equal 3711, Roman.new.to_decimal('MMMDCCXI')
-    assert_equal 3712, Roman.new.to_decimal('MMMDCCXII')
-    assert_equal 3713, Roman.new.to_decimal('MMMDCCXIII')
-    assert_equal 3714, Roman.new.to_decimal('MMMDCCXIV')
-    assert_equal 3715, Roman.new.to_decimal('MMMDCCXV')
-    assert_equal 3716, Roman.new.to_decimal('MMMDCCXVI')
-    assert_equal 3717, Roman.new.to_decimal('MMMDCCXVII')
-    assert_equal 3718, Roman.new.to_decimal('MMMDCCXVIII')
-    assert_equal 3719, Roman.new.to_decimal('MMMDCCXIX')
-    assert_equal 3720, Roman.new.to_decimal('MMMDCCXX')
-    assert_equal 3721, Roman.new.to_decimal('MMMDCCXXI')
-    assert_equal 3722, Roman.new.to_decimal('MMMDCCXXII')
-    assert_equal 3723, Roman.new.to_decimal('MMMDCCXXIII')
-    assert_equal 3724, Roman.new.to_decimal('MMMDCCXXIV')
-    assert_equal 3725, Roman.new.to_decimal('MMMDCCXXV')
-    assert_equal 3726, Roman.new.to_decimal('MMMDCCXXVI')
-    assert_equal 3727, Roman.new.to_decimal('MMMDCCXXVII')
-    assert_equal 3728, Roman.new.to_decimal('MMMDCCXXVIII')
-    assert_equal 3729, Roman.new.to_decimal('MMMDCCXXIX')
-    assert_equal 3730, Roman.new.to_decimal('MMMDCCXXX')
-    assert_equal 3731, Roman.new.to_decimal('MMMDCCXXXI')
-    assert_equal 3732, Roman.new.to_decimal('MMMDCCXXXII')
-    assert_equal 3733, Roman.new.to_decimal('MMMDCCXXXIII')
-    assert_equal 3734, Roman.new.to_decimal('MMMDCCXXXIV')
-    assert_equal 3735, Roman.new.to_decimal('MMMDCCXXXV')
-    assert_equal 3736, Roman.new.to_decimal('MMMDCCXXXVI')
-    assert_equal 3737, Roman.new.to_decimal('MMMDCCXXXVII')
-    assert_equal 3738, Roman.new.to_decimal('MMMDCCXXXVIII')
-    assert_equal 3739, Roman.new.to_decimal('MMMDCCXXXIX')
-    assert_equal 3740, Roman.new.to_decimal('MMMDCCXL')
-    assert_equal 3741, Roman.new.to_decimal('MMMDCCXLI')
-    assert_equal 3742, Roman.new.to_decimal('MMMDCCXLII')
-    assert_equal 3743, Roman.new.to_decimal('MMMDCCXLIII')
-    assert_equal 3744, Roman.new.to_decimal('MMMDCCXLIV')
-    assert_equal 3745, Roman.new.to_decimal('MMMDCCXLV')
-    assert_equal 3746, Roman.new.to_decimal('MMMDCCXLVI')
-    assert_equal 3747, Roman.new.to_decimal('MMMDCCXLVII')
-    assert_equal 3748, Roman.new.to_decimal('MMMDCCXLVIII')
-    assert_equal 3749, Roman.new.to_decimal('MMMDCCXLIX')
-    assert_equal 3750, Roman.new.to_decimal('MMMDCCL')
-    assert_equal 3751, Roman.new.to_decimal('MMMDCCLI')
-    assert_equal 3752, Roman.new.to_decimal('MMMDCCLII')
-    assert_equal 3753, Roman.new.to_decimal('MMMDCCLIII')
-    assert_equal 3754, Roman.new.to_decimal('MMMDCCLIV')
-    assert_equal 3755, Roman.new.to_decimal('MMMDCCLV')
-    assert_equal 3756, Roman.new.to_decimal('MMMDCCLVI')
-    assert_equal 3757, Roman.new.to_decimal('MMMDCCLVII')
-    assert_equal 3758, Roman.new.to_decimal('MMMDCCLVIII')
-    assert_equal 3759, Roman.new.to_decimal('MMMDCCLIX')
-    assert_equal 3760, Roman.new.to_decimal('MMMDCCLX')
-    assert_equal 3761, Roman.new.to_decimal('MMMDCCLXI')
-    assert_equal 3762, Roman.new.to_decimal('MMMDCCLXII')
-    assert_equal 3763, Roman.new.to_decimal('MMMDCCLXIII')
-    assert_equal 3764, Roman.new.to_decimal('MMMDCCLXIV')
-    assert_equal 3765, Roman.new.to_decimal('MMMDCCLXV')
-    assert_equal 3766, Roman.new.to_decimal('MMMDCCLXVI')
-    assert_equal 3767, Roman.new.to_decimal('MMMDCCLXVII')
-    assert_equal 3768, Roman.new.to_decimal('MMMDCCLXVIII')
-    assert_equal 3769, Roman.new.to_decimal('MMMDCCLXIX')
-    assert_equal 3770, Roman.new.to_decimal('MMMDCCLXX')
-    assert_equal 3771, Roman.new.to_decimal('MMMDCCLXXI')
-    assert_equal 3772, Roman.new.to_decimal('MMMDCCLXXII')
-    assert_equal 3773, Roman.new.to_decimal('MMMDCCLXXIII')
-    assert_equal 3774, Roman.new.to_decimal('MMMDCCLXXIV')
-    assert_equal 3775, Roman.new.to_decimal('MMMDCCLXXV')
-    assert_equal 3776, Roman.new.to_decimal('MMMDCCLXXVI')
-    assert_equal 3777, Roman.new.to_decimal('MMMDCCLXXVII')
-    assert_equal 3778, Roman.new.to_decimal('MMMDCCLXXVIII')
-    assert_equal 3779, Roman.new.to_decimal('MMMDCCLXXIX')
-    assert_equal 3780, Roman.new.to_decimal('MMMDCCLXXX')
-    assert_equal 3781, Roman.new.to_decimal('MMMDCCLXXXI')
-    assert_equal 3782, Roman.new.to_decimal('MMMDCCLXXXII')
-    assert_equal 3783, Roman.new.to_decimal('MMMDCCLXXXIII')
-    assert_equal 3784, Roman.new.to_decimal('MMMDCCLXXXIV')
-    assert_equal 3785, Roman.new.to_decimal('MMMDCCLXXXV')
-    assert_equal 3786, Roman.new.to_decimal('MMMDCCLXXXVI')
-    assert_equal 3787, Roman.new.to_decimal('MMMDCCLXXXVII')
-    assert_equal 3788, Roman.new.to_decimal('MMMDCCLXXXVIII')
-    assert_equal 3789, Roman.new.to_decimal('MMMDCCLXXXIX')
-    assert_equal 3790, Roman.new.to_decimal('MMMDCCXC')
-    assert_equal 3791, Roman.new.to_decimal('MMMDCCXCI')
-    assert_equal 3792, Roman.new.to_decimal('MMMDCCXCII')
-    assert_equal 3793, Roman.new.to_decimal('MMMDCCXCIII')
-    assert_equal 3794, Roman.new.to_decimal('MMMDCCXCIV')
-    assert_equal 3795, Roman.new.to_decimal('MMMDCCXCV')
-    assert_equal 3796, Roman.new.to_decimal('MMMDCCXCVI')
-    assert_equal 3797, Roman.new.to_decimal('MMMDCCXCVII')
-    assert_equal 3798, Roman.new.to_decimal('MMMDCCXCVIII')
-    assert_equal 3799, Roman.new.to_decimal('MMMDCCXCIX')
-    assert_equal 3800, Roman.new.to_decimal('MMMDCCC')
-    assert_equal 3801, Roman.new.to_decimal('MMMDCCCI')
-    assert_equal 3802, Roman.new.to_decimal('MMMDCCCII')
-    assert_equal 3803, Roman.new.to_decimal('MMMDCCCIII')
-    assert_equal 3804, Roman.new.to_decimal('MMMDCCCIV')
-    assert_equal 3805, Roman.new.to_decimal('MMMDCCCV')
-    assert_equal 3806, Roman.new.to_decimal('MMMDCCCVI')
-    assert_equal 3807, Roman.new.to_decimal('MMMDCCCVII')
-    assert_equal 3808, Roman.new.to_decimal('MMMDCCCVIII')
-    assert_equal 3809, Roman.new.to_decimal('MMMDCCCIX')
-    assert_equal 3810, Roman.new.to_decimal('MMMDCCCX')
-    assert_equal 3811, Roman.new.to_decimal('MMMDCCCXI')
-    assert_equal 3812, Roman.new.to_decimal('MMMDCCCXII')
-    assert_equal 3813, Roman.new.to_decimal('MMMDCCCXIII')
-    assert_equal 3814, Roman.new.to_decimal('MMMDCCCXIV')
-    assert_equal 3815, Roman.new.to_decimal('MMMDCCCXV')
-    assert_equal 3816, Roman.new.to_decimal('MMMDCCCXVI')
-    assert_equal 3817, Roman.new.to_decimal('MMMDCCCXVII')
-    assert_equal 3818, Roman.new.to_decimal('MMMDCCCXVIII')
-    assert_equal 3819, Roman.new.to_decimal('MMMDCCCXIX')
-    assert_equal 3820, Roman.new.to_decimal('MMMDCCCXX')
-    assert_equal 3821, Roman.new.to_decimal('MMMDCCCXXI')
-    assert_equal 3822, Roman.new.to_decimal('MMMDCCCXXII')
-    assert_equal 3823, Roman.new.to_decimal('MMMDCCCXXIII')
-    assert_equal 3824, Roman.new.to_decimal('MMMDCCCXXIV')
-    assert_equal 3825, Roman.new.to_decimal('MMMDCCCXXV')
-    assert_equal 3826, Roman.new.to_decimal('MMMDCCCXXVI')
-    assert_equal 3827, Roman.new.to_decimal('MMMDCCCXXVII')
-    assert_equal 3828, Roman.new.to_decimal('MMMDCCCXXVIII')
-    assert_equal 3829, Roman.new.to_decimal('MMMDCCCXXIX')
-    assert_equal 3830, Roman.new.to_decimal('MMMDCCCXXX')
-    assert_equal 3831, Roman.new.to_decimal('MMMDCCCXXXI')
-    assert_equal 3832, Roman.new.to_decimal('MMMDCCCXXXII')
-    assert_equal 3833, Roman.new.to_decimal('MMMDCCCXXXIII')
-    assert_equal 3834, Roman.new.to_decimal('MMMDCCCXXXIV')
-    assert_equal 3835, Roman.new.to_decimal('MMMDCCCXXXV')
-    assert_equal 3836, Roman.new.to_decimal('MMMDCCCXXXVI')
-    assert_equal 3837, Roman.new.to_decimal('MMMDCCCXXXVII')
-    assert_equal 3838, Roman.new.to_decimal('MMMDCCCXXXVIII')
-    assert_equal 3839, Roman.new.to_decimal('MMMDCCCXXXIX')
-    assert_equal 3840, Roman.new.to_decimal('MMMDCCCXL')
-    assert_equal 3841, Roman.new.to_decimal('MMMDCCCXLI')
-    assert_equal 3842, Roman.new.to_decimal('MMMDCCCXLII')
-    assert_equal 3843, Roman.new.to_decimal('MMMDCCCXLIII')
-    assert_equal 3844, Roman.new.to_decimal('MMMDCCCXLIV')
-    assert_equal 3845, Roman.new.to_decimal('MMMDCCCXLV')
-    assert_equal 3846, Roman.new.to_decimal('MMMDCCCXLVI')
-    assert_equal 3847, Roman.new.to_decimal('MMMDCCCXLVII')
-    assert_equal 3848, Roman.new.to_decimal('MMMDCCCXLVIII')
-    assert_equal 3849, Roman.new.to_decimal('MMMDCCCXLIX')
-    assert_equal 3850, Roman.new.to_decimal('MMMDCCCL')
-    assert_equal 3851, Roman.new.to_decimal('MMMDCCCLI')
-    assert_equal 3852, Roman.new.to_decimal('MMMDCCCLII')
-    assert_equal 3853, Roman.new.to_decimal('MMMDCCCLIII')
-    assert_equal 3854, Roman.new.to_decimal('MMMDCCCLIV')
-    assert_equal 3855, Roman.new.to_decimal('MMMDCCCLV')
-    assert_equal 3856, Roman.new.to_decimal('MMMDCCCLVI')
-    assert_equal 3857, Roman.new.to_decimal('MMMDCCCLVII')
-    assert_equal 3858, Roman.new.to_decimal('MMMDCCCLVIII')
-    assert_equal 3859, Roman.new.to_decimal('MMMDCCCLIX')
-    assert_equal 3860, Roman.new.to_decimal('MMMDCCCLX')
-    assert_equal 3861, Roman.new.to_decimal('MMMDCCCLXI')
-    assert_equal 3862, Roman.new.to_decimal('MMMDCCCLXII')
-    assert_equal 3863, Roman.new.to_decimal('MMMDCCCLXIII')
-    assert_equal 3864, Roman.new.to_decimal('MMMDCCCLXIV')
-    assert_equal 3865, Roman.new.to_decimal('MMMDCCCLXV')
-    assert_equal 3866, Roman.new.to_decimal('MMMDCCCLXVI')
-    assert_equal 3867, Roman.new.to_decimal('MMMDCCCLXVII')
-    assert_equal 3868, Roman.new.to_decimal('MMMDCCCLXVIII')
-    assert_equal 3869, Roman.new.to_decimal('MMMDCCCLXIX')
-    assert_equal 3870, Roman.new.to_decimal('MMMDCCCLXX')
-    assert_equal 3871, Roman.new.to_decimal('MMMDCCCLXXI')
-    assert_equal 3872, Roman.new.to_decimal('MMMDCCCLXXII')
-    assert_equal 3873, Roman.new.to_decimal('MMMDCCCLXXIII')
-    assert_equal 3874, Roman.new.to_decimal('MMMDCCCLXXIV')
-    assert_equal 3875, Roman.new.to_decimal('MMMDCCCLXXV')
-    assert_equal 3876, Roman.new.to_decimal('MMMDCCCLXXVI')
-    assert_equal 3877, Roman.new.to_decimal('MMMDCCCLXXVII')
-    assert_equal 3878, Roman.new.to_decimal('MMMDCCCLXXVIII')
-    assert_equal 3879, Roman.new.to_decimal('MMMDCCCLXXIX')
-    assert_equal 3880, Roman.new.to_decimal('MMMDCCCLXXX')
-    assert_equal 3881, Roman.new.to_decimal('MMMDCCCLXXXI')
-    assert_equal 3882, Roman.new.to_decimal('MMMDCCCLXXXII')
-    assert_equal 3883, Roman.new.to_decimal('MMMDCCCLXXXIII')
-    assert_equal 3884, Roman.new.to_decimal('MMMDCCCLXXXIV')
-    assert_equal 3885, Roman.new.to_decimal('MMMDCCCLXXXV')
-    assert_equal 3886, Roman.new.to_decimal('MMMDCCCLXXXVI')
-    assert_equal 3887, Roman.new.to_decimal('MMMDCCCLXXXVII')
-    assert_equal 3888, Roman.new.to_decimal('MMMDCCCLXXXVIII')
-    assert_equal 3889, Roman.new.to_decimal('MMMDCCCLXXXIX')
-    assert_equal 3890, Roman.new.to_decimal('MMMDCCCXC')
-    assert_equal 3891, Roman.new.to_decimal('MMMDCCCXCI')
-    assert_equal 3892, Roman.new.to_decimal('MMMDCCCXCII')
-    assert_equal 3893, Roman.new.to_decimal('MMMDCCCXCIII')
-    assert_equal 3894, Roman.new.to_decimal('MMMDCCCXCIV')
-    assert_equal 3895, Roman.new.to_decimal('MMMDCCCXCV')
-    assert_equal 3896, Roman.new.to_decimal('MMMDCCCXCVI')
-    assert_equal 3897, Roman.new.to_decimal('MMMDCCCXCVII')
-    assert_equal 3898, Roman.new.to_decimal('MMMDCCCXCVIII')
-    assert_equal 3899, Roman.new.to_decimal('MMMDCCCXCIX')
-    assert_equal 3900, Roman.new.to_decimal('MMMCM')
-    assert_equal 3901, Roman.new.to_decimal('MMMCMI')
-    assert_equal 3902, Roman.new.to_decimal('MMMCMII')
-    assert_equal 3903, Roman.new.to_decimal('MMMCMIII')
-    assert_equal 3904, Roman.new.to_decimal('MMMCMIV')
-    assert_equal 3905, Roman.new.to_decimal('MMMCMV')
-    assert_equal 3906, Roman.new.to_decimal('MMMCMVI')
-    assert_equal 3907, Roman.new.to_decimal('MMMCMVII')
-    assert_equal 3908, Roman.new.to_decimal('MMMCMVIII')
-    assert_equal 3909, Roman.new.to_decimal('MMMCMIX')
-    assert_equal 3910, Roman.new.to_decimal('MMMCMX')
-    assert_equal 3911, Roman.new.to_decimal('MMMCMXI')
-    assert_equal 3912, Roman.new.to_decimal('MMMCMXII')
-    assert_equal 3913, Roman.new.to_decimal('MMMCMXIII')
-    assert_equal 3914, Roman.new.to_decimal('MMMCMXIV')
-    assert_equal 3915, Roman.new.to_decimal('MMMCMXV')
-    assert_equal 3916, Roman.new.to_decimal('MMMCMXVI')
-    assert_equal 3917, Roman.new.to_decimal('MMMCMXVII')
-    assert_equal 3918, Roman.new.to_decimal('MMMCMXVIII')
-    assert_equal 3919, Roman.new.to_decimal('MMMCMXIX')
-    assert_equal 3920, Roman.new.to_decimal('MMMCMXX')
-    assert_equal 3921, Roman.new.to_decimal('MMMCMXXI')
-    assert_equal 3922, Roman.new.to_decimal('MMMCMXXII')
-    assert_equal 3923, Roman.new.to_decimal('MMMCMXXIII')
-    assert_equal 3924, Roman.new.to_decimal('MMMCMXXIV')
-    assert_equal 3925, Roman.new.to_decimal('MMMCMXXV')
-    assert_equal 3926, Roman.new.to_decimal('MMMCMXXVI')
-    assert_equal 3927, Roman.new.to_decimal('MMMCMXXVII')
-    assert_equal 3928, Roman.new.to_decimal('MMMCMXXVIII')
-    assert_equal 3929, Roman.new.to_decimal('MMMCMXXIX')
-    assert_equal 3930, Roman.new.to_decimal('MMMCMXXX')
-    assert_equal 3931, Roman.new.to_decimal('MMMCMXXXI')
-    assert_equal 3932, Roman.new.to_decimal('MMMCMXXXII')
-    assert_equal 3933, Roman.new.to_decimal('MMMCMXXXIII')
-    assert_equal 3934, Roman.new.to_decimal('MMMCMXXXIV')
-    assert_equal 3935, Roman.new.to_decimal('MMMCMXXXV')
-    assert_equal 3936, Roman.new.to_decimal('MMMCMXXXVI')
-    assert_equal 3937, Roman.new.to_decimal('MMMCMXXXVII')
-    assert_equal 3938, Roman.new.to_decimal('MMMCMXXXVIII')
-    assert_equal 3939, Roman.new.to_decimal('MMMCMXXXIX')
-    assert_equal 3940, Roman.new.to_decimal('MMMCMXL')
-    assert_equal 3941, Roman.new.to_decimal('MMMCMXLI')
-    assert_equal 3942, Roman.new.to_decimal('MMMCMXLII')
-    assert_equal 3943, Roman.new.to_decimal('MMMCMXLIII')
-    assert_equal 3944, Roman.new.to_decimal('MMMCMXLIV')
-    assert_equal 3945, Roman.new.to_decimal('MMMCMXLV')
-    assert_equal 3946, Roman.new.to_decimal('MMMCMXLVI')
-    assert_equal 3947, Roman.new.to_decimal('MMMCMXLVII')
-    assert_equal 3948, Roman.new.to_decimal('MMMCMXLVIII')
-    assert_equal 3949, Roman.new.to_decimal('MMMCMXLIX')
-    assert_equal 3950, Roman.new.to_decimal('MMMCML')
-    assert_equal 3951, Roman.new.to_decimal('MMMCMLI')
-    assert_equal 3952, Roman.new.to_decimal('MMMCMLII')
-    assert_equal 3953, Roman.new.to_decimal('MMMCMLIII')
-    assert_equal 3954, Roman.new.to_decimal('MMMCMLIV')
-    assert_equal 3955, Roman.new.to_decimal('MMMCMLV')
-    assert_equal 3956, Roman.new.to_decimal('MMMCMLVI')
-    assert_equal 3957, Roman.new.to_decimal('MMMCMLVII')
-    assert_equal 3958, Roman.new.to_decimal('MMMCMLVIII')
-    assert_equal 3959, Roman.new.to_decimal('MMMCMLIX')
-    assert_equal 3960, Roman.new.to_decimal('MMMCMLX')
-    assert_equal 3961, Roman.new.to_decimal('MMMCMLXI')
-    assert_equal 3962, Roman.new.to_decimal('MMMCMLXII')
-    assert_equal 3963, Roman.new.to_decimal('MMMCMLXIII')
-    assert_equal 3964, Roman.new.to_decimal('MMMCMLXIV')
-    assert_equal 3965, Roman.new.to_decimal('MMMCMLXV')
-    assert_equal 3966, Roman.new.to_decimal('MMMCMLXVI')
-    assert_equal 3967, Roman.new.to_decimal('MMMCMLXVII')
-    assert_equal 3968, Roman.new.to_decimal('MMMCMLXVIII')
-    assert_equal 3969, Roman.new.to_decimal('MMMCMLXIX')
-    assert_equal 3970, Roman.new.to_decimal('MMMCMLXX')
-    assert_equal 3971, Roman.new.to_decimal('MMMCMLXXI')
-    assert_equal 3972, Roman.new.to_decimal('MMMCMLXXII')
-    assert_equal 3973, Roman.new.to_decimal('MMMCMLXXIII')
-    assert_equal 3974, Roman.new.to_decimal('MMMCMLXXIV')
-    assert_equal 3975, Roman.new.to_decimal('MMMCMLXXV')
-    assert_equal 3976, Roman.new.to_decimal('MMMCMLXXVI')
-    assert_equal 3977, Roman.new.to_decimal('MMMCMLXXVII')
-    assert_equal 3978, Roman.new.to_decimal('MMMCMLXXVIII')
-    assert_equal 3979, Roman.new.to_decimal('MMMCMLXXIX')
-    assert_equal 3980, Roman.new.to_decimal('MMMCMLXXX')
-    assert_equal 3981, Roman.new.to_decimal('MMMCMLXXXI')
-    assert_equal 3982, Roman.new.to_decimal('MMMCMLXXXII')
-    assert_equal 3983, Roman.new.to_decimal('MMMCMLXXXIII')
-    assert_equal 3984, Roman.new.to_decimal('MMMCMLXXXIV')
-    assert_equal 3985, Roman.new.to_decimal('MMMCMLXXXV')
-    assert_equal 3986, Roman.new.to_decimal('MMMCMLXXXVI')
-    assert_equal 3987, Roman.new.to_decimal('MMMCMLXXXVII')
-    assert_equal 3988, Roman.new.to_decimal('MMMCMLXXXVIII')
-    assert_equal 3989, Roman.new.to_decimal('MMMCMLXXXIX')
-    assert_equal 3990, Roman.new.to_decimal('MMMCMXC')
-    assert_equal 3991, Roman.new.to_decimal('MMMCMXCI')
-    assert_equal 3992, Roman.new.to_decimal('MMMCMXCII')
-    assert_equal 3993, Roman.new.to_decimal('MMMCMXCIII')
-    assert_equal 3994, Roman.new.to_decimal('MMMCMXCIV')
-    assert_equal 3995, Roman.new.to_decimal('MMMCMXCV')
-    assert_equal 3996, Roman.new.to_decimal('MMMCMXCVI')
-    assert_equal 3997, Roman.new.to_decimal('MMMCMXCVII')
-    assert_equal 3998, Roman.new.to_decimal('MMMCMXCVIII')
-    assert_equal 3999, Roman.new.to_decimal('MMMCMXCIX')
+    assert_roman 1,'I'
+    assert_roman 2,'II'
+    assert_roman 3,'III'
+    assert_roman 4,'IV'
+    assert_roman 5,'V'
+    assert_roman 6,'VI'
+    assert_roman 7,'VII'
+    assert_roman 8,'VIII'
+    assert_roman 9,'IX'
+    assert_roman 10,'X'
+    assert_roman 11,'XI'
+    assert_roman 12,'XII'
+    assert_roman 13,'XIII'
+    assert_roman 14,'XIV'
+    assert_roman 15,'XV'
+    assert_roman 16,'XVI'
+    assert_roman 17,'XVII'
+    assert_roman 18,'XVIII'
+    assert_roman 19,'XIX'
+    assert_roman 20,'XX'
+    assert_roman 21,'XXI'
+    assert_roman 22,'XXII'
+    assert_roman 23,'XXIII'
+    assert_roman 24,'XXIV'
+    assert_roman 25,'XXV'
+    assert_roman 26,'XXVI'
+    assert_roman 27,'XXVII'
+    assert_roman 28,'XXVIII'
+    assert_roman 29,'XXIX'
+    assert_roman 30,'XXX'
+    assert_roman 31,'XXXI'
+    assert_roman 32,'XXXII'
+    assert_roman 33,'XXXIII'
+    assert_roman 34,'XXXIV'
+    assert_roman 35,'XXXV'
+    assert_roman 36,'XXXVI'
+    assert_roman 37,'XXXVII'
+    assert_roman 38,'XXXVIII'
+    assert_roman 39,'XXXIX'
+    assert_roman 40,'XL'
+    assert_roman 41,'XLI'
+    assert_roman 42,'XLII'
+    assert_roman 43,'XLIII'
+    assert_roman 44,'XLIV'
+    assert_roman 45,'XLV'
+    assert_roman 46,'XLVI'
+    assert_roman 47,'XLVII'
+    assert_roman 48,'XLVIII'
+    assert_roman 49,'XLIX'
+    assert_roman 50,'L'
+    assert_roman 51,'LI'
+    assert_roman 52,'LII'
+    assert_roman 53,'LIII'
+    assert_roman 54,'LIV'
+    assert_roman 55,'LV'
+    assert_roman 56,'LVI'
+    assert_roman 57,'LVII'
+    assert_roman 58,'LVIII'
+    assert_roman 59,'LIX'
+    assert_roman 60,'LX'
+    assert_roman 61,'LXI'
+    assert_roman 62,'LXII'
+    assert_roman 63,'LXIII'
+    assert_roman 64,'LXIV'
+    assert_roman 65,'LXV'
+    assert_roman 66,'LXVI'
+    assert_roman 67,'LXVII'
+    assert_roman 68,'LXVIII'
+    assert_roman 69,'LXIX'
+    assert_roman 70,'LXX'
+    assert_roman 71,'LXXI'
+    assert_roman 72,'LXXII'
+    assert_roman 73,'LXXIII'
+    assert_roman 74,'LXXIV'
+    assert_roman 75,'LXXV'
+    assert_roman 76,'LXXVI'
+    assert_roman 77,'LXXVII'
+    assert_roman 78,'LXXVIII'
+    assert_roman 79,'LXXIX'
+    assert_roman 80,'LXXX'
+    assert_roman 81,'LXXXI'
+    assert_roman 82,'LXXXII'
+    assert_roman 83,'LXXXIII'
+    assert_roman 84,'LXXXIV'
+    assert_roman 85,'LXXXV'
+    assert_roman 86,'LXXXVI'
+    assert_roman 87,'LXXXVII'
+    assert_roman 88,'LXXXVIII'
+    assert_roman 89,'LXXXIX'
+    assert_roman 90,'XC'
+    assert_roman 91,'XCI'
+    assert_roman 92,'XCII'
+    assert_roman 93,'XCIII'
+    assert_roman 94,'XCIV'
+    assert_roman 95,'XCV'
+    assert_roman 96,'XCVI'
+    assert_roman 97,'XCVII'
+    assert_roman 98,'XCVIII'
+    assert_roman 99,'XCIX'
+    assert_roman 100,'C'
+    assert_roman 101,'CI'
+    assert_roman 102,'CII'
+    assert_roman 103,'CIII'
+    assert_roman 104,'CIV'
+    assert_roman 105,'CV'
+    assert_roman 106,'CVI'
+    assert_roman 107,'CVII'
+    assert_roman 108,'CVIII'
+    assert_roman 109,'CIX'
+    assert_roman 110,'CX'
+    assert_roman 111,'CXI'
+    assert_roman 112,'CXII'
+    assert_roman 113,'CXIII'
+    assert_roman 114,'CXIV'
+    assert_roman 115,'CXV'
+    assert_roman 116,'CXVI'
+    assert_roman 117,'CXVII'
+    assert_roman 118,'CXVIII'
+    assert_roman 119,'CXIX'
+    assert_roman 120,'CXX'
+    assert_roman 121,'CXXI'
+    assert_roman 122,'CXXII'
+    assert_roman 123,'CXXIII'
+    assert_roman 124,'CXXIV'
+    assert_roman 125,'CXXV'
+    assert_roman 126,'CXXVI'
+    assert_roman 127,'CXXVII'
+    assert_roman 128,'CXXVIII'
+    assert_roman 129,'CXXIX'
+    assert_roman 130,'CXXX'
+    assert_roman 131,'CXXXI'
+    assert_roman 132,'CXXXII'
+    assert_roman 133,'CXXXIII'
+    assert_roman 134,'CXXXIV'
+    assert_roman 135,'CXXXV'
+    assert_roman 136,'CXXXVI'
+    assert_roman 137,'CXXXVII'
+    assert_roman 138,'CXXXVIII'
+    assert_roman 139,'CXXXIX'
+    assert_roman 140,'CXL'
+    assert_roman 141,'CXLI'
+    assert_roman 142,'CXLII'
+    assert_roman 143,'CXLIII'
+    assert_roman 144,'CXLIV'
+    assert_roman 145,'CXLV'
+    assert_roman 146,'CXLVI'
+    assert_roman 147,'CXLVII'
+    assert_roman 148,'CXLVIII'
+    assert_roman 149,'CXLIX'
+    assert_roman 150,'CL'
+    assert_roman 151,'CLI'
+    assert_roman 152,'CLII'
+    assert_roman 153,'CLIII'
+    assert_roman 154,'CLIV'
+    assert_roman 155,'CLV'
+    assert_roman 156,'CLVI'
+    assert_roman 157,'CLVII'
+    assert_roman 158,'CLVIII'
+    assert_roman 159,'CLIX'
+    assert_roman 160,'CLX'
+    assert_roman 161,'CLXI'
+    assert_roman 162,'CLXII'
+    assert_roman 163,'CLXIII'
+    assert_roman 164,'CLXIV'
+    assert_roman 165,'CLXV'
+    assert_roman 166,'CLXVI'
+    assert_roman 167,'CLXVII'
+    assert_roman 168,'CLXVIII'
+    assert_roman 169,'CLXIX'
+    assert_roman 170,'CLXX'
+    assert_roman 171,'CLXXI'
+    assert_roman 172,'CLXXII'
+    assert_roman 173,'CLXXIII'
+    assert_roman 174,'CLXXIV'
+    assert_roman 175,'CLXXV'
+    assert_roman 176,'CLXXVI'
+    assert_roman 177,'CLXXVII'
+    assert_roman 178,'CLXXVIII'
+    assert_roman 179,'CLXXIX'
+    assert_roman 180,'CLXXX'
+    assert_roman 181,'CLXXXI'
+    assert_roman 182,'CLXXXII'
+    assert_roman 183,'CLXXXIII'
+    assert_roman 184,'CLXXXIV'
+    assert_roman 185,'CLXXXV'
+    assert_roman 186,'CLXXXVI'
+    assert_roman 187,'CLXXXVII'
+    assert_roman 188,'CLXXXVIII'
+    assert_roman 189,'CLXXXIX'
+    assert_roman 190,'CXC'
+    assert_roman 191,'CXCI'
+    assert_roman 192,'CXCII'
+    assert_roman 193,'CXCIII'
+    assert_roman 194,'CXCIV'
+    assert_roman 195,'CXCV'
+    assert_roman 196,'CXCVI'
+    assert_roman 197,'CXCVII'
+    assert_roman 198,'CXCVIII'
+    assert_roman 199,'CXCIX'
+    assert_roman 200,'CC'
+    assert_roman 201,'CCI'
+    assert_roman 202,'CCII'
+    assert_roman 203,'CCIII'
+    assert_roman 204,'CCIV'
+    assert_roman 205,'CCV'
+    assert_roman 206,'CCVI'
+    assert_roman 207,'CCVII'
+    assert_roman 208,'CCVIII'
+    assert_roman 209,'CCIX'
+    assert_roman 210,'CCX'
+    assert_roman 211,'CCXI'
+    assert_roman 212,'CCXII'
+    assert_roman 213,'CCXIII'
+    assert_roman 214,'CCXIV'
+    assert_roman 215,'CCXV'
+    assert_roman 216,'CCXVI'
+    assert_roman 217,'CCXVII'
+    assert_roman 218,'CCXVIII'
+    assert_roman 219,'CCXIX'
+    assert_roman 220,'CCXX'
+    assert_roman 221,'CCXXI'
+    assert_roman 222,'CCXXII'
+    assert_roman 223,'CCXXIII'
+    assert_roman 224,'CCXXIV'
+    assert_roman 225,'CCXXV'
+    assert_roman 226,'CCXXVI'
+    assert_roman 227,'CCXXVII'
+    assert_roman 228,'CCXXVIII'
+    assert_roman 229,'CCXXIX'
+    assert_roman 230,'CCXXX'
+    assert_roman 231,'CCXXXI'
+    assert_roman 232,'CCXXXII'
+    assert_roman 233,'CCXXXIII'
+    assert_roman 234,'CCXXXIV'
+    assert_roman 235,'CCXXXV'
+    assert_roman 236,'CCXXXVI'
+    assert_roman 237,'CCXXXVII'
+    assert_roman 238,'CCXXXVIII'
+    assert_roman 239,'CCXXXIX'
+    assert_roman 240,'CCXL'
+    assert_roman 241,'CCXLI'
+    assert_roman 242,'CCXLII'
+    assert_roman 243,'CCXLIII'
+    assert_roman 244,'CCXLIV'
+    assert_roman 245,'CCXLV'
+    assert_roman 246,'CCXLVI'
+    assert_roman 247,'CCXLVII'
+    assert_roman 248,'CCXLVIII'
+    assert_roman 249,'CCXLIX'
+    assert_roman 250,'CCL'
+    assert_roman 251,'CCLI'
+    assert_roman 252,'CCLII'
+    assert_roman 253,'CCLIII'
+    assert_roman 254,'CCLIV'
+    assert_roman 255,'CCLV'
+    assert_roman 256,'CCLVI'
+    assert_roman 257,'CCLVII'
+    assert_roman 258,'CCLVIII'
+    assert_roman 259,'CCLIX'
+    assert_roman 260,'CCLX'
+    assert_roman 261,'CCLXI'
+    assert_roman 262,'CCLXII'
+    assert_roman 263,'CCLXIII'
+    assert_roman 264,'CCLXIV'
+    assert_roman 265,'CCLXV'
+    assert_roman 266,'CCLXVI'
+    assert_roman 267,'CCLXVII'
+    assert_roman 268,'CCLXVIII'
+    assert_roman 269,'CCLXIX'
+    assert_roman 270,'CCLXX'
+    assert_roman 271,'CCLXXI'
+    assert_roman 272,'CCLXXII'
+    assert_roman 273,'CCLXXIII'
+    assert_roman 274,'CCLXXIV'
+    assert_roman 275,'CCLXXV'
+    assert_roman 276,'CCLXXVI'
+    assert_roman 277,'CCLXXVII'
+    assert_roman 278,'CCLXXVIII'
+    assert_roman 279,'CCLXXIX'
+    assert_roman 280,'CCLXXX'
+    assert_roman 281,'CCLXXXI'
+    assert_roman 282,'CCLXXXII'
+    assert_roman 283,'CCLXXXIII'
+    assert_roman 284,'CCLXXXIV'
+    assert_roman 285,'CCLXXXV'
+    assert_roman 286,'CCLXXXVI'
+    assert_roman 287,'CCLXXXVII'
+    assert_roman 288,'CCLXXXVIII'
+    assert_roman 289,'CCLXXXIX'
+    assert_roman 290,'CCXC'
+    assert_roman 291,'CCXCI'
+    assert_roman 292,'CCXCII'
+    assert_roman 293,'CCXCIII'
+    assert_roman 294,'CCXCIV'
+    assert_roman 295,'CCXCV'
+    assert_roman 296,'CCXCVI'
+    assert_roman 297,'CCXCVII'
+    assert_roman 298,'CCXCVIII'
+    assert_roman 299,'CCXCIX'
+    assert_roman 300,'CCC'
+    assert_roman 301,'CCCI'
+    assert_roman 302,'CCCII'
+    assert_roman 303,'CCCIII'
+    assert_roman 304,'CCCIV'
+    assert_roman 305,'CCCV'
+    assert_roman 306,'CCCVI'
+    assert_roman 307,'CCCVII'
+    assert_roman 308,'CCCVIII'
+    assert_roman 309,'CCCIX'
+    assert_roman 310,'CCCX'
+    assert_roman 311,'CCCXI'
+    assert_roman 312,'CCCXII'
+    assert_roman 313,'CCCXIII'
+    assert_roman 314,'CCCXIV'
+    assert_roman 315,'CCCXV'
+    assert_roman 316,'CCCXVI'
+    assert_roman 317,'CCCXVII'
+    assert_roman 318,'CCCXVIII'
+    assert_roman 319,'CCCXIX'
+    assert_roman 320,'CCCXX'
+    assert_roman 321,'CCCXXI'
+    assert_roman 322,'CCCXXII'
+    assert_roman 323,'CCCXXIII'
+    assert_roman 324,'CCCXXIV'
+    assert_roman 325,'CCCXXV'
+    assert_roman 326,'CCCXXVI'
+    assert_roman 327,'CCCXXVII'
+    assert_roman 328,'CCCXXVIII'
+    assert_roman 329,'CCCXXIX'
+    assert_roman 330,'CCCXXX'
+    assert_roman 331,'CCCXXXI'
+    assert_roman 332,'CCCXXXII'
+    assert_roman 333,'CCCXXXIII'
+    assert_roman 334,'CCCXXXIV'
+    assert_roman 335,'CCCXXXV'
+    assert_roman 336,'CCCXXXVI'
+    assert_roman 337,'CCCXXXVII'
+    assert_roman 338,'CCCXXXVIII'
+    assert_roman 339,'CCCXXXIX'
+    assert_roman 340,'CCCXL'
+    assert_roman 341,'CCCXLI'
+    assert_roman 342,'CCCXLII'
+    assert_roman 343,'CCCXLIII'
+    assert_roman 344,'CCCXLIV'
+    assert_roman 345,'CCCXLV'
+    assert_roman 346,'CCCXLVI'
+    assert_roman 347,'CCCXLVII'
+    assert_roman 348,'CCCXLVIII'
+    assert_roman 349,'CCCXLIX'
+    assert_roman 350,'CCCL'
+    assert_roman 351,'CCCLI'
+    assert_roman 352,'CCCLII'
+    assert_roman 353,'CCCLIII'
+    assert_roman 354,'CCCLIV'
+    assert_roman 355,'CCCLV'
+    assert_roman 356,'CCCLVI'
+    assert_roman 357,'CCCLVII'
+    assert_roman 358,'CCCLVIII'
+    assert_roman 359,'CCCLIX'
+    assert_roman 360,'CCCLX'
+    assert_roman 361,'CCCLXI'
+    assert_roman 362,'CCCLXII'
+    assert_roman 363,'CCCLXIII'
+    assert_roman 364,'CCCLXIV'
+    assert_roman 365,'CCCLXV'
+    assert_roman 366,'CCCLXVI'
+    assert_roman 367,'CCCLXVII'
+    assert_roman 368,'CCCLXVIII'
+    assert_roman 369,'CCCLXIX'
+    assert_roman 370,'CCCLXX'
+    assert_roman 371,'CCCLXXI'
+    assert_roman 372,'CCCLXXII'
+    assert_roman 373,'CCCLXXIII'
+    assert_roman 374,'CCCLXXIV'
+    assert_roman 375,'CCCLXXV'
+    assert_roman 376,'CCCLXXVI'
+    assert_roman 377,'CCCLXXVII'
+    assert_roman 378,'CCCLXXVIII'
+    assert_roman 379,'CCCLXXIX'
+    assert_roman 380,'CCCLXXX'
+    assert_roman 381,'CCCLXXXI'
+    assert_roman 382,'CCCLXXXII'
+    assert_roman 383,'CCCLXXXIII'
+    assert_roman 384,'CCCLXXXIV'
+    assert_roman 385,'CCCLXXXV'
+    assert_roman 386,'CCCLXXXVI'
+    assert_roman 387,'CCCLXXXVII'
+    assert_roman 388,'CCCLXXXVIII'
+    assert_roman 389,'CCCLXXXIX'
+    assert_roman 390,'CCCXC'
+    assert_roman 391,'CCCXCI'
+    assert_roman 392,'CCCXCII'
+    assert_roman 393,'CCCXCIII'
+    assert_roman 394,'CCCXCIV'
+    assert_roman 395,'CCCXCV'
+    assert_roman 396,'CCCXCVI'
+    assert_roman 397,'CCCXCVII'
+    assert_roman 398,'CCCXCVIII'
+    assert_roman 399,'CCCXCIX'
+    assert_roman 400,'CD'
+    assert_roman 401,'CDI'
+    assert_roman 402,'CDII'
+    assert_roman 403,'CDIII'
+    assert_roman 404,'CDIV'
+    assert_roman 405,'CDV'
+    assert_roman 406,'CDVI'
+    assert_roman 407,'CDVII'
+    assert_roman 408,'CDVIII'
+    assert_roman 409,'CDIX'
+    assert_roman 410,'CDX'
+    assert_roman 411,'CDXI'
+    assert_roman 412,'CDXII'
+    assert_roman 413,'CDXIII'
+    assert_roman 414,'CDXIV'
+    assert_roman 415,'CDXV'
+    assert_roman 416,'CDXVI'
+    assert_roman 417,'CDXVII'
+    assert_roman 418,'CDXVIII'
+    assert_roman 419,'CDXIX'
+    assert_roman 420,'CDXX'
+    assert_roman 421,'CDXXI'
+    assert_roman 422,'CDXXII'
+    assert_roman 423,'CDXXIII'
+    assert_roman 424,'CDXXIV'
+    assert_roman 425,'CDXXV'
+    assert_roman 426,'CDXXVI'
+    assert_roman 427,'CDXXVII'
+    assert_roman 428,'CDXXVIII'
+    assert_roman 429,'CDXXIX'
+    assert_roman 430,'CDXXX'
+    assert_roman 431,'CDXXXI'
+    assert_roman 432,'CDXXXII'
+    assert_roman 433,'CDXXXIII'
+    assert_roman 434,'CDXXXIV'
+    assert_roman 435,'CDXXXV'
+    assert_roman 436,'CDXXXVI'
+    assert_roman 437,'CDXXXVII'
+    assert_roman 438,'CDXXXVIII'
+    assert_roman 439,'CDXXXIX'
+    assert_roman 440,'CDXL'
+    assert_roman 441,'CDXLI'
+    assert_roman 442,'CDXLII'
+    assert_roman 443,'CDXLIII'
+    assert_roman 444,'CDXLIV'
+    assert_roman 445,'CDXLV'
+    assert_roman 446,'CDXLVI'
+    assert_roman 447,'CDXLVII'
+    assert_roman 448,'CDXLVIII'
+    assert_roman 449,'CDXLIX'
+    assert_roman 450,'CDL'
+    assert_roman 451,'CDLI'
+    assert_roman 452,'CDLII'
+    assert_roman 453,'CDLIII'
+    assert_roman 454,'CDLIV'
+    assert_roman 455,'CDLV'
+    assert_roman 456,'CDLVI'
+    assert_roman 457,'CDLVII'
+    assert_roman 458,'CDLVIII'
+    assert_roman 459,'CDLIX'
+    assert_roman 460,'CDLX'
+    assert_roman 461,'CDLXI'
+    assert_roman 462,'CDLXII'
+    assert_roman 463,'CDLXIII'
+    assert_roman 464,'CDLXIV'
+    assert_roman 465,'CDLXV'
+    assert_roman 466,'CDLXVI'
+    assert_roman 467,'CDLXVII'
+    assert_roman 468,'CDLXVIII'
+    assert_roman 469,'CDLXIX'
+    assert_roman 470,'CDLXX'
+    assert_roman 471,'CDLXXI'
+    assert_roman 472,'CDLXXII'
+    assert_roman 473,'CDLXXIII'
+    assert_roman 474,'CDLXXIV'
+    assert_roman 475,'CDLXXV'
+    assert_roman 476,'CDLXXVI'
+    assert_roman 477,'CDLXXVII'
+    assert_roman 478,'CDLXXVIII'
+    assert_roman 479,'CDLXXIX'
+    assert_roman 480,'CDLXXX'
+    assert_roman 481,'CDLXXXI'
+    assert_roman 482,'CDLXXXII'
+    assert_roman 483,'CDLXXXIII'
+    assert_roman 484,'CDLXXXIV'
+    assert_roman 485,'CDLXXXV'
+    assert_roman 486,'CDLXXXVI'
+    assert_roman 487,'CDLXXXVII'
+    assert_roman 488,'CDLXXXVIII'
+    assert_roman 489,'CDLXXXIX'
+    assert_roman 490,'CDXC'
+    assert_roman 491,'CDXCI'
+    assert_roman 492,'CDXCII'
+    assert_roman 493,'CDXCIII'
+    assert_roman 494,'CDXCIV'
+    assert_roman 495,'CDXCV'
+    assert_roman 496,'CDXCVI'
+    assert_roman 497,'CDXCVII'
+    assert_roman 498,'CDXCVIII'
+    assert_roman 499,'CDXCIX'
+    assert_roman 500,'D'
+    assert_roman 501,'DI'
+    assert_roman 502,'DII'
+    assert_roman 503,'DIII'
+    assert_roman 504,'DIV'
+    assert_roman 505,'DV'
+    assert_roman 506,'DVI'
+    assert_roman 507,'DVII'
+    assert_roman 508,'DVIII'
+    assert_roman 509,'DIX'
+    assert_roman 510,'DX'
+    assert_roman 511,'DXI'
+    assert_roman 512,'DXII'
+    assert_roman 513,'DXIII'
+    assert_roman 514,'DXIV'
+    assert_roman 515,'DXV'
+    assert_roman 516,'DXVI'
+    assert_roman 517,'DXVII'
+    assert_roman 518,'DXVIII'
+    assert_roman 519,'DXIX'
+    assert_roman 520,'DXX'
+    assert_roman 521,'DXXI'
+    assert_roman 522,'DXXII'
+    assert_roman 523,'DXXIII'
+    assert_roman 524,'DXXIV'
+    assert_roman 525,'DXXV'
+    assert_roman 526,'DXXVI'
+    assert_roman 527,'DXXVII'
+    assert_roman 528,'DXXVIII'
+    assert_roman 529,'DXXIX'
+    assert_roman 530,'DXXX'
+    assert_roman 531,'DXXXI'
+    assert_roman 532,'DXXXII'
+    assert_roman 533,'DXXXIII'
+    assert_roman 534,'DXXXIV'
+    assert_roman 535,'DXXXV'
+    assert_roman 536,'DXXXVI'
+    assert_roman 537,'DXXXVII'
+    assert_roman 538,'DXXXVIII'
+    assert_roman 539,'DXXXIX'
+    assert_roman 540,'DXL'
+    assert_roman 541,'DXLI'
+    assert_roman 542,'DXLII'
+    assert_roman 543,'DXLIII'
+    assert_roman 544,'DXLIV'
+    assert_roman 545,'DXLV'
+    assert_roman 546,'DXLVI'
+    assert_roman 547,'DXLVII'
+    assert_roman 548,'DXLVIII'
+    assert_roman 549,'DXLIX'
+    assert_roman 550,'DL'
+    assert_roman 551,'DLI'
+    assert_roman 552,'DLII'
+    assert_roman 553,'DLIII'
+    assert_roman 554,'DLIV'
+    assert_roman 555,'DLV'
+    assert_roman 556,'DLVI'
+    assert_roman 557,'DLVII'
+    assert_roman 558,'DLVIII'
+    assert_roman 559,'DLIX'
+    assert_roman 560,'DLX'
+    assert_roman 561,'DLXI'
+    assert_roman 562,'DLXII'
+    assert_roman 563,'DLXIII'
+    assert_roman 564,'DLXIV'
+    assert_roman 565,'DLXV'
+    assert_roman 566,'DLXVI'
+    assert_roman 567,'DLXVII'
+    assert_roman 568,'DLXVIII'
+    assert_roman 569,'DLXIX'
+    assert_roman 570,'DLXX'
+    assert_roman 571,'DLXXI'
+    assert_roman 572,'DLXXII'
+    assert_roman 573,'DLXXIII'
+    assert_roman 574,'DLXXIV'
+    assert_roman 575,'DLXXV'
+    assert_roman 576,'DLXXVI'
+    assert_roman 577,'DLXXVII'
+    assert_roman 578,'DLXXVIII'
+    assert_roman 579,'DLXXIX'
+    assert_roman 580,'DLXXX'
+    assert_roman 581,'DLXXXI'
+    assert_roman 582,'DLXXXII'
+    assert_roman 583,'DLXXXIII'
+    assert_roman 584,'DLXXXIV'
+    assert_roman 585,'DLXXXV'
+    assert_roman 586,'DLXXXVI'
+    assert_roman 587,'DLXXXVII'
+    assert_roman 588,'DLXXXVIII'
+    assert_roman 589,'DLXXXIX'
+    assert_roman 590,'DXC'
+    assert_roman 591,'DXCI'
+    assert_roman 592,'DXCII'
+    assert_roman 593,'DXCIII'
+    assert_roman 594,'DXCIV'
+    assert_roman 595,'DXCV'
+    assert_roman 596,'DXCVI'
+    assert_roman 597,'DXCVII'
+    assert_roman 598,'DXCVIII'
+    assert_roman 599,'DXCIX'
+    assert_roman 600,'DC'
+    assert_roman 601,'DCI'
+    assert_roman 602,'DCII'
+    assert_roman 603,'DCIII'
+    assert_roman 604,'DCIV'
+    assert_roman 605,'DCV'
+    assert_roman 606,'DCVI'
+    assert_roman 607,'DCVII'
+    assert_roman 608,'DCVIII'
+    assert_roman 609,'DCIX'
+    assert_roman 610,'DCX'
+    assert_roman 611,'DCXI'
+    assert_roman 612,'DCXII'
+    assert_roman 613,'DCXIII'
+    assert_roman 614,'DCXIV'
+    assert_roman 615,'DCXV'
+    assert_roman 616,'DCXVI'
+    assert_roman 617,'DCXVII'
+    assert_roman 618,'DCXVIII'
+    assert_roman 619,'DCXIX'
+    assert_roman 620,'DCXX'
+    assert_roman 621,'DCXXI'
+    assert_roman 622,'DCXXII'
+    assert_roman 623,'DCXXIII'
+    assert_roman 624,'DCXXIV'
+    assert_roman 625,'DCXXV'
+    assert_roman 626,'DCXXVI'
+    assert_roman 627,'DCXXVII'
+    assert_roman 628,'DCXXVIII'
+    assert_roman 629,'DCXXIX'
+    assert_roman 630,'DCXXX'
+    assert_roman 631,'DCXXXI'
+    assert_roman 632,'DCXXXII'
+    assert_roman 633,'DCXXXIII'
+    assert_roman 634,'DCXXXIV'
+    assert_roman 635,'DCXXXV'
+    assert_roman 636,'DCXXXVI'
+    assert_roman 637,'DCXXXVII'
+    assert_roman 638,'DCXXXVIII'
+    assert_roman 639,'DCXXXIX'
+    assert_roman 640,'DCXL'
+    assert_roman 641,'DCXLI'
+    assert_roman 642,'DCXLII'
+    assert_roman 643,'DCXLIII'
+    assert_roman 644,'DCXLIV'
+    assert_roman 645,'DCXLV'
+    assert_roman 646,'DCXLVI'
+    assert_roman 647,'DCXLVII'
+    assert_roman 648,'DCXLVIII'
+    assert_roman 649,'DCXLIX'
+    assert_roman 650,'DCL'
+    assert_roman 651,'DCLI'
+    assert_roman 652,'DCLII'
+    assert_roman 653,'DCLIII'
+    assert_roman 654,'DCLIV'
+    assert_roman 655,'DCLV'
+    assert_roman 656,'DCLVI'
+    assert_roman 657,'DCLVII'
+    assert_roman 658,'DCLVIII'
+    assert_roman 659,'DCLIX'
+    assert_roman 660,'DCLX'
+    assert_roman 661,'DCLXI'
+    assert_roman 662,'DCLXII'
+    assert_roman 663,'DCLXIII'
+    assert_roman 664,'DCLXIV'
+    assert_roman 665,'DCLXV'
+    assert_roman 666,'DCLXVI'
+    assert_roman 667,'DCLXVII'
+    assert_roman 668,'DCLXVIII'
+    assert_roman 669,'DCLXIX'
+    assert_roman 670,'DCLXX'
+    assert_roman 671,'DCLXXI'
+    assert_roman 672,'DCLXXII'
+    assert_roman 673,'DCLXXIII'
+    assert_roman 674,'DCLXXIV'
+    assert_roman 675,'DCLXXV'
+    assert_roman 676,'DCLXXVI'
+    assert_roman 677,'DCLXXVII'
+    assert_roman 678,'DCLXXVIII'
+    assert_roman 679,'DCLXXIX'
+    assert_roman 680,'DCLXXX'
+    assert_roman 681,'DCLXXXI'
+    assert_roman 682,'DCLXXXII'
+    assert_roman 683,'DCLXXXIII'
+    assert_roman 684,'DCLXXXIV'
+    assert_roman 685,'DCLXXXV'
+    assert_roman 686,'DCLXXXVI'
+    assert_roman 687,'DCLXXXVII'
+    assert_roman 688,'DCLXXXVIII'
+    assert_roman 689,'DCLXXXIX'
+    assert_roman 690,'DCXC'
+    assert_roman 691,'DCXCI'
+    assert_roman 692,'DCXCII'
+    assert_roman 693,'DCXCIII'
+    assert_roman 694,'DCXCIV'
+    assert_roman 695,'DCXCV'
+    assert_roman 696,'DCXCVI'
+    assert_roman 697,'DCXCVII'
+    assert_roman 698,'DCXCVIII'
+    assert_roman 699,'DCXCIX'
+    assert_roman 700,'DCC'
+    assert_roman 701,'DCCI'
+    assert_roman 702,'DCCII'
+    assert_roman 703,'DCCIII'
+    assert_roman 704,'DCCIV'
+    assert_roman 705,'DCCV'
+    assert_roman 706,'DCCVI'
+    assert_roman 707,'DCCVII'
+    assert_roman 708,'DCCVIII'
+    assert_roman 709,'DCCIX'
+    assert_roman 710,'DCCX'
+    assert_roman 711,'DCCXI'
+    assert_roman 712,'DCCXII'
+    assert_roman 713,'DCCXIII'
+    assert_roman 714,'DCCXIV'
+    assert_roman 715,'DCCXV'
+    assert_roman 716,'DCCXVI'
+    assert_roman 717,'DCCXVII'
+    assert_roman 718,'DCCXVIII'
+    assert_roman 719,'DCCXIX'
+    assert_roman 720,'DCCXX'
+    assert_roman 721,'DCCXXI'
+    assert_roman 722,'DCCXXII'
+    assert_roman 723,'DCCXXIII'
+    assert_roman 724,'DCCXXIV'
+    assert_roman 725,'DCCXXV'
+    assert_roman 726,'DCCXXVI'
+    assert_roman 727,'DCCXXVII'
+    assert_roman 728,'DCCXXVIII'
+    assert_roman 729,'DCCXXIX'
+    assert_roman 730,'DCCXXX'
+    assert_roman 731,'DCCXXXI'
+    assert_roman 732,'DCCXXXII'
+    assert_roman 733,'DCCXXXIII'
+    assert_roman 734,'DCCXXXIV'
+    assert_roman 735,'DCCXXXV'
+    assert_roman 736,'DCCXXXVI'
+    assert_roman 737,'DCCXXXVII'
+    assert_roman 738,'DCCXXXVIII'
+    assert_roman 739,'DCCXXXIX'
+    assert_roman 740,'DCCXL'
+    assert_roman 741,'DCCXLI'
+    assert_roman 742,'DCCXLII'
+    assert_roman 743,'DCCXLIII'
+    assert_roman 744,'DCCXLIV'
+    assert_roman 745,'DCCXLV'
+    assert_roman 746,'DCCXLVI'
+    assert_roman 747,'DCCXLVII'
+    assert_roman 748,'DCCXLVIII'
+    assert_roman 749,'DCCXLIX'
+    assert_roman 750,'DCCL'
+    assert_roman 751,'DCCLI'
+    assert_roman 752,'DCCLII'
+    assert_roman 753,'DCCLIII'
+    assert_roman 754,'DCCLIV'
+    assert_roman 755,'DCCLV'
+    assert_roman 756,'DCCLVI'
+    assert_roman 757,'DCCLVII'
+    assert_roman 758,'DCCLVIII'
+    assert_roman 759,'DCCLIX'
+    assert_roman 760,'DCCLX'
+    assert_roman 761,'DCCLXI'
+    assert_roman 762,'DCCLXII'
+    assert_roman 763,'DCCLXIII'
+    assert_roman 764,'DCCLXIV'
+    assert_roman 765,'DCCLXV'
+    assert_roman 766,'DCCLXVI'
+    assert_roman 767,'DCCLXVII'
+    assert_roman 768,'DCCLXVIII'
+    assert_roman 769,'DCCLXIX'
+    assert_roman 770,'DCCLXX'
+    assert_roman 771,'DCCLXXI'
+    assert_roman 772,'DCCLXXII'
+    assert_roman 773,'DCCLXXIII'
+    assert_roman 774,'DCCLXXIV'
+    assert_roman 775,'DCCLXXV'
+    assert_roman 776,'DCCLXXVI'
+    assert_roman 777,'DCCLXXVII'
+    assert_roman 778,'DCCLXXVIII'
+    assert_roman 779,'DCCLXXIX'
+    assert_roman 780,'DCCLXXX'
+    assert_roman 781,'DCCLXXXI'
+    assert_roman 782,'DCCLXXXII'
+    assert_roman 783,'DCCLXXXIII'
+    assert_roman 784,'DCCLXXXIV'
+    assert_roman 785,'DCCLXXXV'
+    assert_roman 786,'DCCLXXXVI'
+    assert_roman 787,'DCCLXXXVII'
+    assert_roman 788,'DCCLXXXVIII'
+    assert_roman 789,'DCCLXXXIX'
+    assert_roman 790,'DCCXC'
+    assert_roman 791,'DCCXCI'
+    assert_roman 792,'DCCXCII'
+    assert_roman 793,'DCCXCIII'
+    assert_roman 794,'DCCXCIV'
+    assert_roman 795,'DCCXCV'
+    assert_roman 796,'DCCXCVI'
+    assert_roman 797,'DCCXCVII'
+    assert_roman 798,'DCCXCVIII'
+    assert_roman 799,'DCCXCIX'
+    assert_roman 800,'DCCC'
+    assert_roman 801,'DCCCI'
+    assert_roman 802,'DCCCII'
+    assert_roman 803,'DCCCIII'
+    assert_roman 804,'DCCCIV'
+    assert_roman 805,'DCCCV'
+    assert_roman 806,'DCCCVI'
+    assert_roman 807,'DCCCVII'
+    assert_roman 808,'DCCCVIII'
+    assert_roman 809,'DCCCIX'
+    assert_roman 810,'DCCCX'
+    assert_roman 811,'DCCCXI'
+    assert_roman 812,'DCCCXII'
+    assert_roman 813,'DCCCXIII'
+    assert_roman 814,'DCCCXIV'
+    assert_roman 815,'DCCCXV'
+    assert_roman 816,'DCCCXVI'
+    assert_roman 817,'DCCCXVII'
+    assert_roman 818,'DCCCXVIII'
+    assert_roman 819,'DCCCXIX'
+    assert_roman 820,'DCCCXX'
+    assert_roman 821,'DCCCXXI'
+    assert_roman 822,'DCCCXXII'
+    assert_roman 823,'DCCCXXIII'
+    assert_roman 824,'DCCCXXIV'
+    assert_roman 825,'DCCCXXV'
+    assert_roman 826,'DCCCXXVI'
+    assert_roman 827,'DCCCXXVII'
+    assert_roman 828,'DCCCXXVIII'
+    assert_roman 829,'DCCCXXIX'
+    assert_roman 830,'DCCCXXX'
+    assert_roman 831,'DCCCXXXI'
+    assert_roman 832,'DCCCXXXII'
+    assert_roman 833,'DCCCXXXIII'
+    assert_roman 834,'DCCCXXXIV'
+    assert_roman 835,'DCCCXXXV'
+    assert_roman 836,'DCCCXXXVI'
+    assert_roman 837,'DCCCXXXVII'
+    assert_roman 838,'DCCCXXXVIII'
+    assert_roman 839,'DCCCXXXIX'
+    assert_roman 840,'DCCCXL'
+    assert_roman 841,'DCCCXLI'
+    assert_roman 842,'DCCCXLII'
+    assert_roman 843,'DCCCXLIII'
+    assert_roman 844,'DCCCXLIV'
+    assert_roman 845,'DCCCXLV'
+    assert_roman 846,'DCCCXLVI'
+    assert_roman 847,'DCCCXLVII'
+    assert_roman 848,'DCCCXLVIII'
+    assert_roman 849,'DCCCXLIX'
+    assert_roman 850,'DCCCL'
+    assert_roman 851,'DCCCLI'
+    assert_roman 852,'DCCCLII'
+    assert_roman 853,'DCCCLIII'
+    assert_roman 854,'DCCCLIV'
+    assert_roman 855,'DCCCLV'
+    assert_roman 856,'DCCCLVI'
+    assert_roman 857,'DCCCLVII'
+    assert_roman 858,'DCCCLVIII'
+    assert_roman 859,'DCCCLIX'
+    assert_roman 860,'DCCCLX'
+    assert_roman 861,'DCCCLXI'
+    assert_roman 862,'DCCCLXII'
+    assert_roman 863,'DCCCLXIII'
+    assert_roman 864,'DCCCLXIV'
+    assert_roman 865,'DCCCLXV'
+    assert_roman 866,'DCCCLXVI'
+    assert_roman 867,'DCCCLXVII'
+    assert_roman 868,'DCCCLXVIII'
+    assert_roman 869,'DCCCLXIX'
+    assert_roman 870,'DCCCLXX'
+    assert_roman 871,'DCCCLXXI'
+    assert_roman 872,'DCCCLXXII'
+    assert_roman 873,'DCCCLXXIII'
+    assert_roman 874,'DCCCLXXIV'
+    assert_roman 875,'DCCCLXXV'
+    assert_roman 876,'DCCCLXXVI'
+    assert_roman 877,'DCCCLXXVII'
+    assert_roman 878,'DCCCLXXVIII'
+    assert_roman 879,'DCCCLXXIX'
+    assert_roman 880,'DCCCLXXX'
+    assert_roman 881,'DCCCLXXXI'
+    assert_roman 882,'DCCCLXXXII'
+    assert_roman 883,'DCCCLXXXIII'
+    assert_roman 884,'DCCCLXXXIV'
+    assert_roman 885,'DCCCLXXXV'
+    assert_roman 886,'DCCCLXXXVI'
+    assert_roman 887,'DCCCLXXXVII'
+    assert_roman 888,'DCCCLXXXVIII'
+    assert_roman 889,'DCCCLXXXIX'
+    assert_roman 890,'DCCCXC'
+    assert_roman 891,'DCCCXCI'
+    assert_roman 892,'DCCCXCII'
+    assert_roman 893,'DCCCXCIII'
+    assert_roman 894,'DCCCXCIV'
+    assert_roman 895,'DCCCXCV'
+    assert_roman 896,'DCCCXCVI'
+    assert_roman 897,'DCCCXCVII'
+    assert_roman 898,'DCCCXCVIII'
+    assert_roman 899,'DCCCXCIX'
+    assert_roman 900,'CM'
+    assert_roman 901,'CMI'
+    assert_roman 902,'CMII'
+    assert_roman 903,'CMIII'
+    assert_roman 904,'CMIV'
+    assert_roman 905,'CMV'
+    assert_roman 906,'CMVI'
+    assert_roman 907,'CMVII'
+    assert_roman 908,'CMVIII'
+    assert_roman 909,'CMIX'
+    assert_roman 910,'CMX'
+    assert_roman 911,'CMXI'
+    assert_roman 912,'CMXII'
+    assert_roman 913,'CMXIII'
+    assert_roman 914,'CMXIV'
+    assert_roman 915,'CMXV'
+    assert_roman 916,'CMXVI'
+    assert_roman 917,'CMXVII'
+    assert_roman 918,'CMXVIII'
+    assert_roman 919,'CMXIX'
+    assert_roman 920,'CMXX'
+    assert_roman 921,'CMXXI'
+    assert_roman 922,'CMXXII'
+    assert_roman 923,'CMXXIII'
+    assert_roman 924,'CMXXIV'
+    assert_roman 925,'CMXXV'
+    assert_roman 926,'CMXXVI'
+    assert_roman 927,'CMXXVII'
+    assert_roman 928,'CMXXVIII'
+    assert_roman 929,'CMXXIX'
+    assert_roman 930,'CMXXX'
+    assert_roman 931,'CMXXXI'
+    assert_roman 932,'CMXXXII'
+    assert_roman 933,'CMXXXIII'
+    assert_roman 934,'CMXXXIV'
+    assert_roman 935,'CMXXXV'
+    assert_roman 936,'CMXXXVI'
+    assert_roman 937,'CMXXXVII'
+    assert_roman 938,'CMXXXVIII'
+    assert_roman 939,'CMXXXIX'
+    assert_roman 940,'CMXL'
+    assert_roman 941,'CMXLI'
+    assert_roman 942,'CMXLII'
+    assert_roman 943,'CMXLIII'
+    assert_roman 944,'CMXLIV'
+    assert_roman 945,'CMXLV'
+    assert_roman 946,'CMXLVI'
+    assert_roman 947,'CMXLVII'
+    assert_roman 948,'CMXLVIII'
+    assert_roman 949,'CMXLIX'
+    assert_roman 950,'CML'
+    assert_roman 951,'CMLI'
+    assert_roman 952,'CMLII'
+    assert_roman 953,'CMLIII'
+    assert_roman 954,'CMLIV'
+    assert_roman 955,'CMLV'
+    assert_roman 956,'CMLVI'
+    assert_roman 957,'CMLVII'
+    assert_roman 958,'CMLVIII'
+    assert_roman 959,'CMLIX'
+    assert_roman 960,'CMLX'
+    assert_roman 961,'CMLXI'
+    assert_roman 962,'CMLXII'
+    assert_roman 963,'CMLXIII'
+    assert_roman 964,'CMLXIV'
+    assert_roman 965,'CMLXV'
+    assert_roman 966,'CMLXVI'
+    assert_roman 967,'CMLXVII'
+    assert_roman 968,'CMLXVIII'
+    assert_roman 969,'CMLXIX'
+    assert_roman 970,'CMLXX'
+    assert_roman 971,'CMLXXI'
+    assert_roman 972,'CMLXXII'
+    assert_roman 973,'CMLXXIII'
+    assert_roman 974,'CMLXXIV'
+    assert_roman 975,'CMLXXV'
+    assert_roman 976,'CMLXXVI'
+    assert_roman 977,'CMLXXVII'
+    assert_roman 978,'CMLXXVIII'
+    assert_roman 979,'CMLXXIX'
+    assert_roman 980,'CMLXXX'
+    assert_roman 981,'CMLXXXI'
+    assert_roman 982,'CMLXXXII'
+    assert_roman 983,'CMLXXXIII'
+    assert_roman 984,'CMLXXXIV'
+    assert_roman 985,'CMLXXXV'
+    assert_roman 986,'CMLXXXVI'
+    assert_roman 987,'CMLXXXVII'
+    assert_roman 988,'CMLXXXVIII'
+    assert_roman 989,'CMLXXXIX'
+    assert_roman 990,'CMXC'
+    assert_roman 991,'CMXCI'
+    assert_roman 992,'CMXCII'
+    assert_roman 993,'CMXCIII'
+    assert_roman 994,'CMXCIV'
+    assert_roman 995,'CMXCV'
+    assert_roman 996,'CMXCVI'
+    assert_roman 997,'CMXCVII'
+    assert_roman 998,'CMXCVIII'
+    assert_roman 999,'CMXCIX'
+    assert_roman 1000,'M'
+    assert_roman 1001,'MI'
+    assert_roman 1002,'MII'
+    assert_roman 1003,'MIII'
+    assert_roman 1004,'MIV'
+    assert_roman 1005,'MV'
+    assert_roman 1006,'MVI'
+    assert_roman 1007,'MVII'
+    assert_roman 1008,'MVIII'
+    assert_roman 1009,'MIX'
+    assert_roman 1010,'MX'
+    assert_roman 1011,'MXI'
+    assert_roman 1012,'MXII'
+    assert_roman 1013,'MXIII'
+    assert_roman 1014,'MXIV'
+    assert_roman 1015,'MXV'
+    assert_roman 1016,'MXVI'
+    assert_roman 1017,'MXVII'
+    assert_roman 1018,'MXVIII'
+    assert_roman 1019,'MXIX'
+    assert_roman 1020,'MXX'
+    assert_roman 1021,'MXXI'
+    assert_roman 1022,'MXXII'
+    assert_roman 1023,'MXXIII'
+    assert_roman 1024,'MXXIV'
+    assert_roman 1025,'MXXV'
+    assert_roman 1026,'MXXVI'
+    assert_roman 1027,'MXXVII'
+    assert_roman 1028,'MXXVIII'
+    assert_roman 1029,'MXXIX'
+    assert_roman 1030,'MXXX'
+    assert_roman 1031,'MXXXI'
+    assert_roman 1032,'MXXXII'
+    assert_roman 1033,'MXXXIII'
+    assert_roman 1034,'MXXXIV'
+    assert_roman 1035,'MXXXV'
+    assert_roman 1036,'MXXXVI'
+    assert_roman 1037,'MXXXVII'
+    assert_roman 1038,'MXXXVIII'
+    assert_roman 1039,'MXXXIX'
+    assert_roman 1040,'MXL'
+    assert_roman 1041,'MXLI'
+    assert_roman 1042,'MXLII'
+    assert_roman 1043,'MXLIII'
+    assert_roman 1044,'MXLIV'
+    assert_roman 1045,'MXLV'
+    assert_roman 1046,'MXLVI'
+    assert_roman 1047,'MXLVII'
+    assert_roman 1048,'MXLVIII'
+    assert_roman 1049,'MXLIX'
+    assert_roman 1050,'ML'
+    assert_roman 1051,'MLI'
+    assert_roman 1052,'MLII'
+    assert_roman 1053,'MLIII'
+    assert_roman 1054,'MLIV'
+    assert_roman 1055,'MLV'
+    assert_roman 1056,'MLVI'
+    assert_roman 1057,'MLVII'
+    assert_roman 1058,'MLVIII'
+    assert_roman 1059,'MLIX'
+    assert_roman 1060,'MLX'
+    assert_roman 1061,'MLXI'
+    assert_roman 1062,'MLXII'
+    assert_roman 1063,'MLXIII'
+    assert_roman 1064,'MLXIV'
+    assert_roman 1065,'MLXV'
+    assert_roman 1066,'MLXVI'
+    assert_roman 1067,'MLXVII'
+    assert_roman 1068,'MLXVIII'
+    assert_roman 1069,'MLXIX'
+    assert_roman 1070,'MLXX'
+    assert_roman 1071,'MLXXI'
+    assert_roman 1072,'MLXXII'
+    assert_roman 1073,'MLXXIII'
+    assert_roman 1074,'MLXXIV'
+    assert_roman 1075,'MLXXV'
+    assert_roman 1076,'MLXXVI'
+    assert_roman 1077,'MLXXVII'
+    assert_roman 1078,'MLXXVIII'
+    assert_roman 1079,'MLXXIX'
+    assert_roman 1080,'MLXXX'
+    assert_roman 1081,'MLXXXI'
+    assert_roman 1082,'MLXXXII'
+    assert_roman 1083,'MLXXXIII'
+    assert_roman 1084,'MLXXXIV'
+    assert_roman 1085,'MLXXXV'
+    assert_roman 1086,'MLXXXVI'
+    assert_roman 1087,'MLXXXVII'
+    assert_roman 1088,'MLXXXVIII'
+    assert_roman 1089,'MLXXXIX'
+    assert_roman 1090,'MXC'
+    assert_roman 1091,'MXCI'
+    assert_roman 1092,'MXCII'
+    assert_roman 1093,'MXCIII'
+    assert_roman 1094,'MXCIV'
+    assert_roman 1095,'MXCV'
+    assert_roman 1096,'MXCVI'
+    assert_roman 1097,'MXCVII'
+    assert_roman 1098,'MXCVIII'
+    assert_roman 1099,'MXCIX'
+    assert_roman 1100,'MC'
+    assert_roman 1101,'MCI'
+    assert_roman 1102,'MCII'
+    assert_roman 1103,'MCIII'
+    assert_roman 1104,'MCIV'
+    assert_roman 1105,'MCV'
+    assert_roman 1106,'MCVI'
+    assert_roman 1107,'MCVII'
+    assert_roman 1108,'MCVIII'
+    assert_roman 1109,'MCIX'
+    assert_roman 1110,'MCX'
+    assert_roman 1111,'MCXI'
+    assert_roman 1112,'MCXII'
+    assert_roman 1113,'MCXIII'
+    assert_roman 1114,'MCXIV'
+    assert_roman 1115,'MCXV'
+    assert_roman 1116,'MCXVI'
+    assert_roman 1117,'MCXVII'
+    assert_roman 1118,'MCXVIII'
+    assert_roman 1119,'MCXIX'
+    assert_roman 1120,'MCXX'
+    assert_roman 1121,'MCXXI'
+    assert_roman 1122,'MCXXII'
+    assert_roman 1123,'MCXXIII'
+    assert_roman 1124,'MCXXIV'
+    assert_roman 1125,'MCXXV'
+    assert_roman 1126,'MCXXVI'
+    assert_roman 1127,'MCXXVII'
+    assert_roman 1128,'MCXXVIII'
+    assert_roman 1129,'MCXXIX'
+    assert_roman 1130,'MCXXX'
+    assert_roman 1131,'MCXXXI'
+    assert_roman 1132,'MCXXXII'
+    assert_roman 1133,'MCXXXIII'
+    assert_roman 1134,'MCXXXIV'
+    assert_roman 1135,'MCXXXV'
+    assert_roman 1136,'MCXXXVI'
+    assert_roman 1137,'MCXXXVII'
+    assert_roman 1138,'MCXXXVIII'
+    assert_roman 1139,'MCXXXIX'
+    assert_roman 1140,'MCXL'
+    assert_roman 1141,'MCXLI'
+    assert_roman 1142,'MCXLII'
+    assert_roman 1143,'MCXLIII'
+    assert_roman 1144,'MCXLIV'
+    assert_roman 1145,'MCXLV'
+    assert_roman 1146,'MCXLVI'
+    assert_roman 1147,'MCXLVII'
+    assert_roman 1148,'MCXLVIII'
+    assert_roman 1149,'MCXLIX'
+    assert_roman 1150,'MCL'
+    assert_roman 1151,'MCLI'
+    assert_roman 1152,'MCLII'
+    assert_roman 1153,'MCLIII'
+    assert_roman 1154,'MCLIV'
+    assert_roman 1155,'MCLV'
+    assert_roman 1156,'MCLVI'
+    assert_roman 1157,'MCLVII'
+    assert_roman 1158,'MCLVIII'
+    assert_roman 1159,'MCLIX'
+    assert_roman 1160,'MCLX'
+    assert_roman 1161,'MCLXI'
+    assert_roman 1162,'MCLXII'
+    assert_roman 1163,'MCLXIII'
+    assert_roman 1164,'MCLXIV'
+    assert_roman 1165,'MCLXV'
+    assert_roman 1166,'MCLXVI'
+    assert_roman 1167,'MCLXVII'
+    assert_roman 1168,'MCLXVIII'
+    assert_roman 1169,'MCLXIX'
+    assert_roman 1170,'MCLXX'
+    assert_roman 1171,'MCLXXI'
+    assert_roman 1172,'MCLXXII'
+    assert_roman 1173,'MCLXXIII'
+    assert_roman 1174,'MCLXXIV'
+    assert_roman 1175,'MCLXXV'
+    assert_roman 1176,'MCLXXVI'
+    assert_roman 1177,'MCLXXVII'
+    assert_roman 1178,'MCLXXVIII'
+    assert_roman 1179,'MCLXXIX'
+    assert_roman 1180,'MCLXXX'
+    assert_roman 1181,'MCLXXXI'
+    assert_roman 1182,'MCLXXXII'
+    assert_roman 1183,'MCLXXXIII'
+    assert_roman 1184,'MCLXXXIV'
+    assert_roman 1185,'MCLXXXV'
+    assert_roman 1186,'MCLXXXVI'
+    assert_roman 1187,'MCLXXXVII'
+    assert_roman 1188,'MCLXXXVIII'
+    assert_roman 1189,'MCLXXXIX'
+    assert_roman 1190,'MCXC'
+    assert_roman 1191,'MCXCI'
+    assert_roman 1192,'MCXCII'
+    assert_roman 1193,'MCXCIII'
+    assert_roman 1194,'MCXCIV'
+    assert_roman 1195,'MCXCV'
+    assert_roman 1196,'MCXCVI'
+    assert_roman 1197,'MCXCVII'
+    assert_roman 1198,'MCXCVIII'
+    assert_roman 1199,'MCXCIX'
+    assert_roman 1200,'MCC'
+    assert_roman 1201,'MCCI'
+    assert_roman 1202,'MCCII'
+    assert_roman 1203,'MCCIII'
+    assert_roman 1204,'MCCIV'
+    assert_roman 1205,'MCCV'
+    assert_roman 1206,'MCCVI'
+    assert_roman 1207,'MCCVII'
+    assert_roman 1208,'MCCVIII'
+    assert_roman 1209,'MCCIX'
+    assert_roman 1210,'MCCX'
+    assert_roman 1211,'MCCXI'
+    assert_roman 1212,'MCCXII'
+    assert_roman 1213,'MCCXIII'
+    assert_roman 1214,'MCCXIV'
+    assert_roman 1215,'MCCXV'
+    assert_roman 1216,'MCCXVI'
+    assert_roman 1217,'MCCXVII'
+    assert_roman 1218,'MCCXVIII'
+    assert_roman 1219,'MCCXIX'
+    assert_roman 1220,'MCCXX'
+    assert_roman 1221,'MCCXXI'
+    assert_roman 1222,'MCCXXII'
+    assert_roman 1223,'MCCXXIII'
+    assert_roman 1224,'MCCXXIV'
+    assert_roman 1225,'MCCXXV'
+    assert_roman 1226,'MCCXXVI'
+    assert_roman 1227,'MCCXXVII'
+    assert_roman 1228,'MCCXXVIII'
+    assert_roman 1229,'MCCXXIX'
+    assert_roman 1230,'MCCXXX'
+    assert_roman 1231,'MCCXXXI'
+    assert_roman 1232,'MCCXXXII'
+    assert_roman 1233,'MCCXXXIII'
+    assert_roman 1234,'MCCXXXIV'
+    assert_roman 1235,'MCCXXXV'
+    assert_roman 1236,'MCCXXXVI'
+    assert_roman 1237,'MCCXXXVII'
+    assert_roman 1238,'MCCXXXVIII'
+    assert_roman 1239,'MCCXXXIX'
+    assert_roman 1240,'MCCXL'
+    assert_roman 1241,'MCCXLI'
+    assert_roman 1242,'MCCXLII'
+    assert_roman 1243,'MCCXLIII'
+    assert_roman 1244,'MCCXLIV'
+    assert_roman 1245,'MCCXLV'
+    assert_roman 1246,'MCCXLVI'
+    assert_roman 1247,'MCCXLVII'
+    assert_roman 1248,'MCCXLVIII'
+    assert_roman 1249,'MCCXLIX'
+    assert_roman 1250,'MCCL'
+    assert_roman 1251,'MCCLI'
+    assert_roman 1252,'MCCLII'
+    assert_roman 1253,'MCCLIII'
+    assert_roman 1254,'MCCLIV'
+    assert_roman 1255,'MCCLV'
+    assert_roman 1256,'MCCLVI'
+    assert_roman 1257,'MCCLVII'
+    assert_roman 1258,'MCCLVIII'
+    assert_roman 1259,'MCCLIX'
+    assert_roman 1260,'MCCLX'
+    assert_roman 1261,'MCCLXI'
+    assert_roman 1262,'MCCLXII'
+    assert_roman 1263,'MCCLXIII'
+    assert_roman 1264,'MCCLXIV'
+    assert_roman 1265,'MCCLXV'
+    assert_roman 1266,'MCCLXVI'
+    assert_roman 1267,'MCCLXVII'
+    assert_roman 1268,'MCCLXVIII'
+    assert_roman 1269,'MCCLXIX'
+    assert_roman 1270,'MCCLXX'
+    assert_roman 1271,'MCCLXXI'
+    assert_roman 1272,'MCCLXXII'
+    assert_roman 1273,'MCCLXXIII'
+    assert_roman 1274,'MCCLXXIV'
+    assert_roman 1275,'MCCLXXV'
+    assert_roman 1276,'MCCLXXVI'
+    assert_roman 1277,'MCCLXXVII'
+    assert_roman 1278,'MCCLXXVIII'
+    assert_roman 1279,'MCCLXXIX'
+    assert_roman 1280,'MCCLXXX'
+    assert_roman 1281,'MCCLXXXI'
+    assert_roman 1282,'MCCLXXXII'
+    assert_roman 1283,'MCCLXXXIII'
+    assert_roman 1284,'MCCLXXXIV'
+    assert_roman 1285,'MCCLXXXV'
+    assert_roman 1286,'MCCLXXXVI'
+    assert_roman 1287,'MCCLXXXVII'
+    assert_roman 1288,'MCCLXXXVIII'
+    assert_roman 1289,'MCCLXXXIX'
+    assert_roman 1290,'MCCXC'
+    assert_roman 1291,'MCCXCI'
+    assert_roman 1292,'MCCXCII'
+    assert_roman 1293,'MCCXCIII'
+    assert_roman 1294,'MCCXCIV'
+    assert_roman 1295,'MCCXCV'
+    assert_roman 1296,'MCCXCVI'
+    assert_roman 1297,'MCCXCVII'
+    assert_roman 1298,'MCCXCVIII'
+    assert_roman 1299,'MCCXCIX'
+    assert_roman 1300,'MCCC'
+    assert_roman 1301,'MCCCI'
+    assert_roman 1302,'MCCCII'
+    assert_roman 1303,'MCCCIII'
+    assert_roman 1304,'MCCCIV'
+    assert_roman 1305,'MCCCV'
+    assert_roman 1306,'MCCCVI'
+    assert_roman 1307,'MCCCVII'
+    assert_roman 1308,'MCCCVIII'
+    assert_roman 1309,'MCCCIX'
+    assert_roman 1310,'MCCCX'
+    assert_roman 1311,'MCCCXI'
+    assert_roman 1312,'MCCCXII'
+    assert_roman 1313,'MCCCXIII'
+    assert_roman 1314,'MCCCXIV'
+    assert_roman 1315,'MCCCXV'
+    assert_roman 1316,'MCCCXVI'
+    assert_roman 1317,'MCCCXVII'
+    assert_roman 1318,'MCCCXVIII'
+    assert_roman 1319,'MCCCXIX'
+    assert_roman 1320,'MCCCXX'
+    assert_roman 1321,'MCCCXXI'
+    assert_roman 1322,'MCCCXXII'
+    assert_roman 1323,'MCCCXXIII'
+    assert_roman 1324,'MCCCXXIV'
+    assert_roman 1325,'MCCCXXV'
+    assert_roman 1326,'MCCCXXVI'
+    assert_roman 1327,'MCCCXXVII'
+    assert_roman 1328,'MCCCXXVIII'
+    assert_roman 1329,'MCCCXXIX'
+    assert_roman 1330,'MCCCXXX'
+    assert_roman 1331,'MCCCXXXI'
+    assert_roman 1332,'MCCCXXXII'
+    assert_roman 1333,'MCCCXXXIII'
+    assert_roman 1334,'MCCCXXXIV'
+    assert_roman 1335,'MCCCXXXV'
+    assert_roman 1336,'MCCCXXXVI'
+    assert_roman 1337,'MCCCXXXVII'
+    assert_roman 1338,'MCCCXXXVIII'
+    assert_roman 1339,'MCCCXXXIX'
+    assert_roman 1340,'MCCCXL'
+    assert_roman 1341,'MCCCXLI'
+    assert_roman 1342,'MCCCXLII'
+    assert_roman 1343,'MCCCXLIII'
+    assert_roman 1344,'MCCCXLIV'
+    assert_roman 1345,'MCCCXLV'
+    assert_roman 1346,'MCCCXLVI'
+    assert_roman 1347,'MCCCXLVII'
+    assert_roman 1348,'MCCCXLVIII'
+    assert_roman 1349,'MCCCXLIX'
+    assert_roman 1350,'MCCCL'
+    assert_roman 1351,'MCCCLI'
+    assert_roman 1352,'MCCCLII'
+    assert_roman 1353,'MCCCLIII'
+    assert_roman 1354,'MCCCLIV'
+    assert_roman 1355,'MCCCLV'
+    assert_roman 1356,'MCCCLVI'
+    assert_roman 1357,'MCCCLVII'
+    assert_roman 1358,'MCCCLVIII'
+    assert_roman 1359,'MCCCLIX'
+    assert_roman 1360,'MCCCLX'
+    assert_roman 1361,'MCCCLXI'
+    assert_roman 1362,'MCCCLXII'
+    assert_roman 1363,'MCCCLXIII'
+    assert_roman 1364,'MCCCLXIV'
+    assert_roman 1365,'MCCCLXV'
+    assert_roman 1366,'MCCCLXVI'
+    assert_roman 1367,'MCCCLXVII'
+    assert_roman 1368,'MCCCLXVIII'
+    assert_roman 1369,'MCCCLXIX'
+    assert_roman 1370,'MCCCLXX'
+    assert_roman 1371,'MCCCLXXI'
+    assert_roman 1372,'MCCCLXXII'
+    assert_roman 1373,'MCCCLXXIII'
+    assert_roman 1374,'MCCCLXXIV'
+    assert_roman 1375,'MCCCLXXV'
+    assert_roman 1376,'MCCCLXXVI'
+    assert_roman 1377,'MCCCLXXVII'
+    assert_roman 1378,'MCCCLXXVIII'
+    assert_roman 1379,'MCCCLXXIX'
+    assert_roman 1380,'MCCCLXXX'
+    assert_roman 1381,'MCCCLXXXI'
+    assert_roman 1382,'MCCCLXXXII'
+    assert_roman 1383,'MCCCLXXXIII'
+    assert_roman 1384,'MCCCLXXXIV'
+    assert_roman 1385,'MCCCLXXXV'
+    assert_roman 1386,'MCCCLXXXVI'
+    assert_roman 1387,'MCCCLXXXVII'
+    assert_roman 1388,'MCCCLXXXVIII'
+    assert_roman 1389,'MCCCLXXXIX'
+    assert_roman 1390,'MCCCXC'
+    assert_roman 1391,'MCCCXCI'
+    assert_roman 1392,'MCCCXCII'
+    assert_roman 1393,'MCCCXCIII'
+    assert_roman 1394,'MCCCXCIV'
+    assert_roman 1395,'MCCCXCV'
+    assert_roman 1396,'MCCCXCVI'
+    assert_roman 1397,'MCCCXCVII'
+    assert_roman 1398,'MCCCXCVIII'
+    assert_roman 1399,'MCCCXCIX'
+    assert_roman 1400,'MCD'
+    assert_roman 1401,'MCDI'
+    assert_roman 1402,'MCDII'
+    assert_roman 1403,'MCDIII'
+    assert_roman 1404,'MCDIV'
+    assert_roman 1405,'MCDV'
+    assert_roman 1406,'MCDVI'
+    assert_roman 1407,'MCDVII'
+    assert_roman 1408,'MCDVIII'
+    assert_roman 1409,'MCDIX'
+    assert_roman 1410,'MCDX'
+    assert_roman 1411,'MCDXI'
+    assert_roman 1412,'MCDXII'
+    assert_roman 1413,'MCDXIII'
+    assert_roman 1414,'MCDXIV'
+    assert_roman 1415,'MCDXV'
+    assert_roman 1416,'MCDXVI'
+    assert_roman 1417,'MCDXVII'
+    assert_roman 1418,'MCDXVIII'
+    assert_roman 1419,'MCDXIX'
+    assert_roman 1420,'MCDXX'
+    assert_roman 1421,'MCDXXI'
+    assert_roman 1422,'MCDXXII'
+    assert_roman 1423,'MCDXXIII'
+    assert_roman 1424,'MCDXXIV'
+    assert_roman 1425,'MCDXXV'
+    assert_roman 1426,'MCDXXVI'
+    assert_roman 1427,'MCDXXVII'
+    assert_roman 1428,'MCDXXVIII'
+    assert_roman 1429,'MCDXXIX'
+    assert_roman 1430,'MCDXXX'
+    assert_roman 1431,'MCDXXXI'
+    assert_roman 1432,'MCDXXXII'
+    assert_roman 1433,'MCDXXXIII'
+    assert_roman 1434,'MCDXXXIV'
+    assert_roman 1435,'MCDXXXV'
+    assert_roman 1436,'MCDXXXVI'
+    assert_roman 1437,'MCDXXXVII'
+    assert_roman 1438,'MCDXXXVIII'
+    assert_roman 1439,'MCDXXXIX'
+    assert_roman 1440,'MCDXL'
+    assert_roman 1441,'MCDXLI'
+    assert_roman 1442,'MCDXLII'
+    assert_roman 1443,'MCDXLIII'
+    assert_roman 1444,'MCDXLIV'
+    assert_roman 1445,'MCDXLV'
+    assert_roman 1446,'MCDXLVI'
+    assert_roman 1447,'MCDXLVII'
+    assert_roman 1448,'MCDXLVIII'
+    assert_roman 1449,'MCDXLIX'
+    assert_roman 1450,'MCDL'
+    assert_roman 1451,'MCDLI'
+    assert_roman 1452,'MCDLII'
+    assert_roman 1453,'MCDLIII'
+    assert_roman 1454,'MCDLIV'
+    assert_roman 1455,'MCDLV'
+    assert_roman 1456,'MCDLVI'
+    assert_roman 1457,'MCDLVII'
+    assert_roman 1458,'MCDLVIII'
+    assert_roman 1459,'MCDLIX'
+    assert_roman 1460,'MCDLX'
+    assert_roman 1461,'MCDLXI'
+    assert_roman 1462,'MCDLXII'
+    assert_roman 1463,'MCDLXIII'
+    assert_roman 1464,'MCDLXIV'
+    assert_roman 1465,'MCDLXV'
+    assert_roman 1466,'MCDLXVI'
+    assert_roman 1467,'MCDLXVII'
+    assert_roman 1468,'MCDLXVIII'
+    assert_roman 1469,'MCDLXIX'
+    assert_roman 1470,'MCDLXX'
+    assert_roman 1471,'MCDLXXI'
+    assert_roman 1472,'MCDLXXII'
+    assert_roman 1473,'MCDLXXIII'
+    assert_roman 1474,'MCDLXXIV'
+    assert_roman 1475,'MCDLXXV'
+    assert_roman 1476,'MCDLXXVI'
+    assert_roman 1477,'MCDLXXVII'
+    assert_roman 1478,'MCDLXXVIII'
+    assert_roman 1479,'MCDLXXIX'
+    assert_roman 1480,'MCDLXXX'
+    assert_roman 1481,'MCDLXXXI'
+    assert_roman 1482,'MCDLXXXII'
+    assert_roman 1483,'MCDLXXXIII'
+    assert_roman 1484,'MCDLXXXIV'
+    assert_roman 1485,'MCDLXXXV'
+    assert_roman 1486,'MCDLXXXVI'
+    assert_roman 1487,'MCDLXXXVII'
+    assert_roman 1488,'MCDLXXXVIII'
+    assert_roman 1489,'MCDLXXXIX'
+    assert_roman 1490,'MCDXC'
+    assert_roman 1491,'MCDXCI'
+    assert_roman 1492,'MCDXCII'
+    assert_roman 1493,'MCDXCIII'
+    assert_roman 1494,'MCDXCIV'
+    assert_roman 1495,'MCDXCV'
+    assert_roman 1496,'MCDXCVI'
+    assert_roman 1497,'MCDXCVII'
+    assert_roman 1498,'MCDXCVIII'
+    assert_roman 1499,'MCDXCIX'
+    assert_roman 1500,'MD'
+    assert_roman 1501,'MDI'
+    assert_roman 1502,'MDII'
+    assert_roman 1503,'MDIII'
+    assert_roman 1504,'MDIV'
+    assert_roman 1505,'MDV'
+    assert_roman 1506,'MDVI'
+    assert_roman 1507,'MDVII'
+    assert_roman 1508,'MDVIII'
+    assert_roman 1509,'MDIX'
+    assert_roman 1510,'MDX'
+    assert_roman 1511,'MDXI'
+    assert_roman 1512,'MDXII'
+    assert_roman 1513,'MDXIII'
+    assert_roman 1514,'MDXIV'
+    assert_roman 1515,'MDXV'
+    assert_roman 1516,'MDXVI'
+    assert_roman 1517,'MDXVII'
+    assert_roman 1518,'MDXVIII'
+    assert_roman 1519,'MDXIX'
+    assert_roman 1520,'MDXX'
+    assert_roman 1521,'MDXXI'
+    assert_roman 1522,'MDXXII'
+    assert_roman 1523,'MDXXIII'
+    assert_roman 1524,'MDXXIV'
+    assert_roman 1525,'MDXXV'
+    assert_roman 1526,'MDXXVI'
+    assert_roman 1527,'MDXXVII'
+    assert_roman 1528,'MDXXVIII'
+    assert_roman 1529,'MDXXIX'
+    assert_roman 1530,'MDXXX'
+    assert_roman 1531,'MDXXXI'
+    assert_roman 1532,'MDXXXII'
+    assert_roman 1533,'MDXXXIII'
+    assert_roman 1534,'MDXXXIV'
+    assert_roman 1535,'MDXXXV'
+    assert_roman 1536,'MDXXXVI'
+    assert_roman 1537,'MDXXXVII'
+    assert_roman 1538,'MDXXXVIII'
+    assert_roman 1539,'MDXXXIX'
+    assert_roman 1540,'MDXL'
+    assert_roman 1541,'MDXLI'
+    assert_roman 1542,'MDXLII'
+    assert_roman 1543,'MDXLIII'
+    assert_roman 1544,'MDXLIV'
+    assert_roman 1545,'MDXLV'
+    assert_roman 1546,'MDXLVI'
+    assert_roman 1547,'MDXLVII'
+    assert_roman 1548,'MDXLVIII'
+    assert_roman 1549,'MDXLIX'
+    assert_roman 1550,'MDL'
+    assert_roman 1551,'MDLI'
+    assert_roman 1552,'MDLII'
+    assert_roman 1553,'MDLIII'
+    assert_roman 1554,'MDLIV'
+    assert_roman 1555,'MDLV'
+    assert_roman 1556,'MDLVI'
+    assert_roman 1557,'MDLVII'
+    assert_roman 1558,'MDLVIII'
+    assert_roman 1559,'MDLIX'
+    assert_roman 1560,'MDLX'
+    assert_roman 1561,'MDLXI'
+    assert_roman 1562,'MDLXII'
+    assert_roman 1563,'MDLXIII'
+    assert_roman 1564,'MDLXIV'
+    assert_roman 1565,'MDLXV'
+    assert_roman 1566,'MDLXVI'
+    assert_roman 1567,'MDLXVII'
+    assert_roman 1568,'MDLXVIII'
+    assert_roman 1569,'MDLXIX'
+    assert_roman 1570,'MDLXX'
+    assert_roman 1571,'MDLXXI'
+    assert_roman 1572,'MDLXXII'
+    assert_roman 1573,'MDLXXIII'
+    assert_roman 1574,'MDLXXIV'
+    assert_roman 1575,'MDLXXV'
+    assert_roman 1576,'MDLXXVI'
+    assert_roman 1577,'MDLXXVII'
+    assert_roman 1578,'MDLXXVIII'
+    assert_roman 1579,'MDLXXIX'
+    assert_roman 1580,'MDLXXX'
+    assert_roman 1581,'MDLXXXI'
+    assert_roman 1582,'MDLXXXII'
+    assert_roman 1583,'MDLXXXIII'
+    assert_roman 1584,'MDLXXXIV'
+    assert_roman 1585,'MDLXXXV'
+    assert_roman 1586,'MDLXXXVI'
+    assert_roman 1587,'MDLXXXVII'
+    assert_roman 1588,'MDLXXXVIII'
+    assert_roman 1589,'MDLXXXIX'
+    assert_roman 1590,'MDXC'
+    assert_roman 1591,'MDXCI'
+    assert_roman 1592,'MDXCII'
+    assert_roman 1593,'MDXCIII'
+    assert_roman 1594,'MDXCIV'
+    assert_roman 1595,'MDXCV'
+    assert_roman 1596,'MDXCVI'
+    assert_roman 1597,'MDXCVII'
+    assert_roman 1598,'MDXCVIII'
+    assert_roman 1599,'MDXCIX'
+    assert_roman 1600,'MDC'
+    assert_roman 1601,'MDCI'
+    assert_roman 1602,'MDCII'
+    assert_roman 1603,'MDCIII'
+    assert_roman 1604,'MDCIV'
+    assert_roman 1605,'MDCV'
+    assert_roman 1606,'MDCVI'
+    assert_roman 1607,'MDCVII'
+    assert_roman 1608,'MDCVIII'
+    assert_roman 1609,'MDCIX'
+    assert_roman 1610,'MDCX'
+    assert_roman 1611,'MDCXI'
+    assert_roman 1612,'MDCXII'
+    assert_roman 1613,'MDCXIII'
+    assert_roman 1614,'MDCXIV'
+    assert_roman 1615,'MDCXV'
+    assert_roman 1616,'MDCXVI'
+    assert_roman 1617,'MDCXVII'
+    assert_roman 1618,'MDCXVIII'
+    assert_roman 1619,'MDCXIX'
+    assert_roman 1620,'MDCXX'
+    assert_roman 1621,'MDCXXI'
+    assert_roman 1622,'MDCXXII'
+    assert_roman 1623,'MDCXXIII'
+    assert_roman 1624,'MDCXXIV'
+    assert_roman 1625,'MDCXXV'
+    assert_roman 1626,'MDCXXVI'
+    assert_roman 1627,'MDCXXVII'
+    assert_roman 1628,'MDCXXVIII'
+    assert_roman 1629,'MDCXXIX'
+    assert_roman 1630,'MDCXXX'
+    assert_roman 1631,'MDCXXXI'
+    assert_roman 1632,'MDCXXXII'
+    assert_roman 1633,'MDCXXXIII'
+    assert_roman 1634,'MDCXXXIV'
+    assert_roman 1635,'MDCXXXV'
+    assert_roman 1636,'MDCXXXVI'
+    assert_roman 1637,'MDCXXXVII'
+    assert_roman 1638,'MDCXXXVIII'
+    assert_roman 1639,'MDCXXXIX'
+    assert_roman 1640,'MDCXL'
+    assert_roman 1641,'MDCXLI'
+    assert_roman 1642,'MDCXLII'
+    assert_roman 1643,'MDCXLIII'
+    assert_roman 1644,'MDCXLIV'
+    assert_roman 1645,'MDCXLV'
+    assert_roman 1646,'MDCXLVI'
+    assert_roman 1647,'MDCXLVII'
+    assert_roman 1648,'MDCXLVIII'
+    assert_roman 1649,'MDCXLIX'
+    assert_roman 1650,'MDCL'
+    assert_roman 1651,'MDCLI'
+    assert_roman 1652,'MDCLII'
+    assert_roman 1653,'MDCLIII'
+    assert_roman 1654,'MDCLIV'
+    assert_roman 1655,'MDCLV'
+    assert_roman 1656,'MDCLVI'
+    assert_roman 1657,'MDCLVII'
+    assert_roman 1658,'MDCLVIII'
+    assert_roman 1659,'MDCLIX'
+    assert_roman 1660,'MDCLX'
+    assert_roman 1661,'MDCLXI'
+    assert_roman 1662,'MDCLXII'
+    assert_roman 1663,'MDCLXIII'
+    assert_roman 1664,'MDCLXIV'
+    assert_roman 1665,'MDCLXV'
+    assert_roman 1666,'MDCLXVI'
+    assert_roman 1667,'MDCLXVII'
+    assert_roman 1668,'MDCLXVIII'
+    assert_roman 1669,'MDCLXIX'
+    assert_roman 1670,'MDCLXX'
+    assert_roman 1671,'MDCLXXI'
+    assert_roman 1672,'MDCLXXII'
+    assert_roman 1673,'MDCLXXIII'
+    assert_roman 1674,'MDCLXXIV'
+    assert_roman 1675,'MDCLXXV'
+    assert_roman 1676,'MDCLXXVI'
+    assert_roman 1677,'MDCLXXVII'
+    assert_roman 1678,'MDCLXXVIII'
+    assert_roman 1679,'MDCLXXIX'
+    assert_roman 1680,'MDCLXXX'
+    assert_roman 1681,'MDCLXXXI'
+    assert_roman 1682,'MDCLXXXII'
+    assert_roman 1683,'MDCLXXXIII'
+    assert_roman 1684,'MDCLXXXIV'
+    assert_roman 1685,'MDCLXXXV'
+    assert_roman 1686,'MDCLXXXVI'
+    assert_roman 1687,'MDCLXXXVII'
+    assert_roman 1688,'MDCLXXXVIII'
+    assert_roman 1689,'MDCLXXXIX'
+    assert_roman 1690,'MDCXC'
+    assert_roman 1691,'MDCXCI'
+    assert_roman 1692,'MDCXCII'
+    assert_roman 1693,'MDCXCIII'
+    assert_roman 1694,'MDCXCIV'
+    assert_roman 1695,'MDCXCV'
+    assert_roman 1696,'MDCXCVI'
+    assert_roman 1697,'MDCXCVII'
+    assert_roman 1698,'MDCXCVIII'
+    assert_roman 1699,'MDCXCIX'
+    assert_roman 1700,'MDCC'
+    assert_roman 1701,'MDCCI'
+    assert_roman 1702,'MDCCII'
+    assert_roman 1703,'MDCCIII'
+    assert_roman 1704,'MDCCIV'
+    assert_roman 1705,'MDCCV'
+    assert_roman 1706,'MDCCVI'
+    assert_roman 1707,'MDCCVII'
+    assert_roman 1708,'MDCCVIII'
+    assert_roman 1709,'MDCCIX'
+    assert_roman 1710,'MDCCX'
+    assert_roman 1711,'MDCCXI'
+    assert_roman 1712,'MDCCXII'
+    assert_roman 1713,'MDCCXIII'
+    assert_roman 1714,'MDCCXIV'
+    assert_roman 1715,'MDCCXV'
+    assert_roman 1716,'MDCCXVI'
+    assert_roman 1717,'MDCCXVII'
+    assert_roman 1718,'MDCCXVIII'
+    assert_roman 1719,'MDCCXIX'
+    assert_roman 1720,'MDCCXX'
+    assert_roman 1721,'MDCCXXI'
+    assert_roman 1722,'MDCCXXII'
+    assert_roman 1723,'MDCCXXIII'
+    assert_roman 1724,'MDCCXXIV'
+    assert_roman 1725,'MDCCXXV'
+    assert_roman 1726,'MDCCXXVI'
+    assert_roman 1727,'MDCCXXVII'
+    assert_roman 1728,'MDCCXXVIII'
+    assert_roman 1729,'MDCCXXIX'
+    assert_roman 1730,'MDCCXXX'
+    assert_roman 1731,'MDCCXXXI'
+    assert_roman 1732,'MDCCXXXII'
+    assert_roman 1733,'MDCCXXXIII'
+    assert_roman 1734,'MDCCXXXIV'
+    assert_roman 1735,'MDCCXXXV'
+    assert_roman 1736,'MDCCXXXVI'
+    assert_roman 1737,'MDCCXXXVII'
+    assert_roman 1738,'MDCCXXXVIII'
+    assert_roman 1739,'MDCCXXXIX'
+    assert_roman 1740,'MDCCXL'
+    assert_roman 1741,'MDCCXLI'
+    assert_roman 1742,'MDCCXLII'
+    assert_roman 1743,'MDCCXLIII'
+    assert_roman 1744,'MDCCXLIV'
+    assert_roman 1745,'MDCCXLV'
+    assert_roman 1746,'MDCCXLVI'
+    assert_roman 1747,'MDCCXLVII'
+    assert_roman 1748,'MDCCXLVIII'
+    assert_roman 1749,'MDCCXLIX'
+    assert_roman 1750,'MDCCL'
+    assert_roman 1751,'MDCCLI'
+    assert_roman 1752,'MDCCLII'
+    assert_roman 1753,'MDCCLIII'
+    assert_roman 1754,'MDCCLIV'
+    assert_roman 1755,'MDCCLV'
+    assert_roman 1756,'MDCCLVI'
+    assert_roman 1757,'MDCCLVII'
+    assert_roman 1758,'MDCCLVIII'
+    assert_roman 1759,'MDCCLIX'
+    assert_roman 1760,'MDCCLX'
+    assert_roman 1761,'MDCCLXI'
+    assert_roman 1762,'MDCCLXII'
+    assert_roman 1763,'MDCCLXIII'
+    assert_roman 1764,'MDCCLXIV'
+    assert_roman 1765,'MDCCLXV'
+    assert_roman 1766,'MDCCLXVI'
+    assert_roman 1767,'MDCCLXVII'
+    assert_roman 1768,'MDCCLXVIII'
+    assert_roman 1769,'MDCCLXIX'
+    assert_roman 1770,'MDCCLXX'
+    assert_roman 1771,'MDCCLXXI'
+    assert_roman 1772,'MDCCLXXII'
+    assert_roman 1773,'MDCCLXXIII'
+    assert_roman 1774,'MDCCLXXIV'
+    assert_roman 1775,'MDCCLXXV'
+    assert_roman 1776,'MDCCLXXVI'
+    assert_roman 1777,'MDCCLXXVII'
+    assert_roman 1778,'MDCCLXXVIII'
+    assert_roman 1779,'MDCCLXXIX'
+    assert_roman 1780,'MDCCLXXX'
+    assert_roman 1781,'MDCCLXXXI'
+    assert_roman 1782,'MDCCLXXXII'
+    assert_roman 1783,'MDCCLXXXIII'
+    assert_roman 1784,'MDCCLXXXIV'
+    assert_roman 1785,'MDCCLXXXV'
+    assert_roman 1786,'MDCCLXXXVI'
+    assert_roman 1787,'MDCCLXXXVII'
+    assert_roman 1788,'MDCCLXXXVIII'
+    assert_roman 1789,'MDCCLXXXIX'
+    assert_roman 1790,'MDCCXC'
+    assert_roman 1791,'MDCCXCI'
+    assert_roman 1792,'MDCCXCII'
+    assert_roman 1793,'MDCCXCIII'
+    assert_roman 1794,'MDCCXCIV'
+    assert_roman 1795,'MDCCXCV'
+    assert_roman 1796,'MDCCXCVI'
+    assert_roman 1797,'MDCCXCVII'
+    assert_roman 1798,'MDCCXCVIII'
+    assert_roman 1799,'MDCCXCIX'
+    assert_roman 1800,'MDCCC'
+    assert_roman 1801,'MDCCCI'
+    assert_roman 1802,'MDCCCII'
+    assert_roman 1803,'MDCCCIII'
+    assert_roman 1804,'MDCCCIV'
+    assert_roman 1805,'MDCCCV'
+    assert_roman 1806,'MDCCCVI'
+    assert_roman 1807,'MDCCCVII'
+    assert_roman 1808,'MDCCCVIII'
+    assert_roman 1809,'MDCCCIX'
+    assert_roman 1810,'MDCCCX'
+    assert_roman 1811,'MDCCCXI'
+    assert_roman 1812,'MDCCCXII'
+    assert_roman 1813,'MDCCCXIII'
+    assert_roman 1814,'MDCCCXIV'
+    assert_roman 1815,'MDCCCXV'
+    assert_roman 1816,'MDCCCXVI'
+    assert_roman 1817,'MDCCCXVII'
+    assert_roman 1818,'MDCCCXVIII'
+    assert_roman 1819,'MDCCCXIX'
+    assert_roman 1820,'MDCCCXX'
+    assert_roman 1821,'MDCCCXXI'
+    assert_roman 1822,'MDCCCXXII'
+    assert_roman 1823,'MDCCCXXIII'
+    assert_roman 1824,'MDCCCXXIV'
+    assert_roman 1825,'MDCCCXXV'
+    assert_roman 1826,'MDCCCXXVI'
+    assert_roman 1827,'MDCCCXXVII'
+    assert_roman 1828,'MDCCCXXVIII'
+    assert_roman 1829,'MDCCCXXIX'
+    assert_roman 1830,'MDCCCXXX'
+    assert_roman 1831,'MDCCCXXXI'
+    assert_roman 1832,'MDCCCXXXII'
+    assert_roman 1833,'MDCCCXXXIII'
+    assert_roman 1834,'MDCCCXXXIV'
+    assert_roman 1835,'MDCCCXXXV'
+    assert_roman 1836,'MDCCCXXXVI'
+    assert_roman 1837,'MDCCCXXXVII'
+    assert_roman 1838,'MDCCCXXXVIII'
+    assert_roman 1839,'MDCCCXXXIX'
+    assert_roman 1840,'MDCCCXL'
+    assert_roman 1841,'MDCCCXLI'
+    assert_roman 1842,'MDCCCXLII'
+    assert_roman 1843,'MDCCCXLIII'
+    assert_roman 1844,'MDCCCXLIV'
+    assert_roman 1845,'MDCCCXLV'
+    assert_roman 1846,'MDCCCXLVI'
+    assert_roman 1847,'MDCCCXLVII'
+    assert_roman 1848,'MDCCCXLVIII'
+    assert_roman 1849,'MDCCCXLIX'
+    assert_roman 1850,'MDCCCL'
+    assert_roman 1851,'MDCCCLI'
+    assert_roman 1852,'MDCCCLII'
+    assert_roman 1853,'MDCCCLIII'
+    assert_roman 1854,'MDCCCLIV'
+    assert_roman 1855,'MDCCCLV'
+    assert_roman 1856,'MDCCCLVI'
+    assert_roman 1857,'MDCCCLVII'
+    assert_roman 1858,'MDCCCLVIII'
+    assert_roman 1859,'MDCCCLIX'
+    assert_roman 1860,'MDCCCLX'
+    assert_roman 1861,'MDCCCLXI'
+    assert_roman 1862,'MDCCCLXII'
+    assert_roman 1863,'MDCCCLXIII'
+    assert_roman 1864,'MDCCCLXIV'
+    assert_roman 1865,'MDCCCLXV'
+    assert_roman 1866,'MDCCCLXVI'
+    assert_roman 1867,'MDCCCLXVII'
+    assert_roman 1868,'MDCCCLXVIII'
+    assert_roman 1869,'MDCCCLXIX'
+    assert_roman 1870,'MDCCCLXX'
+    assert_roman 1871,'MDCCCLXXI'
+    assert_roman 1872,'MDCCCLXXII'
+    assert_roman 1873,'MDCCCLXXIII'
+    assert_roman 1874,'MDCCCLXXIV'
+    assert_roman 1875,'MDCCCLXXV'
+    assert_roman 1876,'MDCCCLXXVI'
+    assert_roman 1877,'MDCCCLXXVII'
+    assert_roman 1878,'MDCCCLXXVIII'
+    assert_roman 1879,'MDCCCLXXIX'
+    assert_roman 1880,'MDCCCLXXX'
+    assert_roman 1881,'MDCCCLXXXI'
+    assert_roman 1882,'MDCCCLXXXII'
+    assert_roman 1883,'MDCCCLXXXIII'
+    assert_roman 1884,'MDCCCLXXXIV'
+    assert_roman 1885,'MDCCCLXXXV'
+    assert_roman 1886,'MDCCCLXXXVI'
+    assert_roman 1887,'MDCCCLXXXVII'
+    assert_roman 1888,'MDCCCLXXXVIII'
+    assert_roman 1889,'MDCCCLXXXIX'
+    assert_roman 1890,'MDCCCXC'
+    assert_roman 1891,'MDCCCXCI'
+    assert_roman 1892,'MDCCCXCII'
+    assert_roman 1893,'MDCCCXCIII'
+    assert_roman 1894,'MDCCCXCIV'
+    assert_roman 1895,'MDCCCXCV'
+    assert_roman 1896,'MDCCCXCVI'
+    assert_roman 1897,'MDCCCXCVII'
+    assert_roman 1898,'MDCCCXCVIII'
+    assert_roman 1899,'MDCCCXCIX'
+    assert_roman 1900,'MCM'
+    assert_roman 1901,'MCMI'
+    assert_roman 1902,'MCMII'
+    assert_roman 1903,'MCMIII'
+    assert_roman 1904,'MCMIV'
+    assert_roman 1905,'MCMV'
+    assert_roman 1906,'MCMVI'
+    assert_roman 1907,'MCMVII'
+    assert_roman 1908,'MCMVIII'
+    assert_roman 1909,'MCMIX'
+    assert_roman 1910,'MCMX'
+    assert_roman 1911,'MCMXI'
+    assert_roman 1912,'MCMXII'
+    assert_roman 1913,'MCMXIII'
+    assert_roman 1914,'MCMXIV'
+    assert_roman 1915,'MCMXV'
+    assert_roman 1916,'MCMXVI'
+    assert_roman 1917,'MCMXVII'
+    assert_roman 1918,'MCMXVIII'
+    assert_roman 1919,'MCMXIX'
+    assert_roman 1920,'MCMXX'
+    assert_roman 1921,'MCMXXI'
+    assert_roman 1922,'MCMXXII'
+    assert_roman 1923,'MCMXXIII'
+    assert_roman 1924,'MCMXXIV'
+    assert_roman 1925,'MCMXXV'
+    assert_roman 1926,'MCMXXVI'
+    assert_roman 1927,'MCMXXVII'
+    assert_roman 1928,'MCMXXVIII'
+    assert_roman 1929,'MCMXXIX'
+    assert_roman 1930,'MCMXXX'
+    assert_roman 1931,'MCMXXXI'
+    assert_roman 1932,'MCMXXXII'
+    assert_roman 1933,'MCMXXXIII'
+    assert_roman 1934,'MCMXXXIV'
+    assert_roman 1935,'MCMXXXV'
+    assert_roman 1936,'MCMXXXVI'
+    assert_roman 1937,'MCMXXXVII'
+    assert_roman 1938,'MCMXXXVIII'
+    assert_roman 1939,'MCMXXXIX'
+    assert_roman 1940,'MCMXL'
+    assert_roman 1941,'MCMXLI'
+    assert_roman 1942,'MCMXLII'
+    assert_roman 1943,'MCMXLIII'
+    assert_roman 1944,'MCMXLIV'
+    assert_roman 1945,'MCMXLV'
+    assert_roman 1946,'MCMXLVI'
+    assert_roman 1947,'MCMXLVII'
+    assert_roman 1948,'MCMXLVIII'
+    assert_roman 1949,'MCMXLIX'
+    assert_roman 1950,'MCML'
+    assert_roman 1951,'MCMLI'
+    assert_roman 1952,'MCMLII'
+    assert_roman 1953,'MCMLIII'
+    assert_roman 1954,'MCMLIV'
+    assert_roman 1955,'MCMLV'
+    assert_roman 1956,'MCMLVI'
+    assert_roman 1957,'MCMLVII'
+    assert_roman 1958,'MCMLVIII'
+    assert_roman 1959,'MCMLIX'
+    assert_roman 1960,'MCMLX'
+    assert_roman 1961,'MCMLXI'
+    assert_roman 1962,'MCMLXII'
+    assert_roman 1963,'MCMLXIII'
+    assert_roman 1964,'MCMLXIV'
+    assert_roman 1965,'MCMLXV'
+    assert_roman 1966,'MCMLXVI'
+    assert_roman 1967,'MCMLXVII'
+    assert_roman 1968,'MCMLXVIII'
+    assert_roman 1969,'MCMLXIX'
+    assert_roman 1970,'MCMLXX'
+    assert_roman 1971,'MCMLXXI'
+    assert_roman 1972,'MCMLXXII'
+    assert_roman 1973,'MCMLXXIII'
+    assert_roman 1974,'MCMLXXIV'
+    assert_roman 1975,'MCMLXXV'
+    assert_roman 1976,'MCMLXXVI'
+    assert_roman 1977,'MCMLXXVII'
+    assert_roman 1978,'MCMLXXVIII'
+    assert_roman 1979,'MCMLXXIX'
+    assert_roman 1980,'MCMLXXX'
+    assert_roman 1981,'MCMLXXXI'
+    assert_roman 1982,'MCMLXXXII'
+    assert_roman 1983,'MCMLXXXIII'
+    assert_roman 1984,'MCMLXXXIV'
+    assert_roman 1985,'MCMLXXXV'
+    assert_roman 1986,'MCMLXXXVI'
+    assert_roman 1987,'MCMLXXXVII'
+    assert_roman 1988,'MCMLXXXVIII'
+    assert_roman 1989,'MCMLXXXIX'
+    assert_roman 1990,'MCMXC'
+    assert_roman 1991,'MCMXCI'
+    assert_roman 1992,'MCMXCII'
+    assert_roman 1993,'MCMXCIII'
+    assert_roman 1994,'MCMXCIV'
+    assert_roman 1995,'MCMXCV'
+    assert_roman 1996,'MCMXCVI'
+    assert_roman 1997,'MCMXCVII'
+    assert_roman 1998,'MCMXCVIII'
+    assert_roman 1999,'MCMXCIX'
+    assert_roman 2000,'MM'
+    assert_roman 2001,'MMI'
+    assert_roman 2002,'MMII'
+    assert_roman 2003,'MMIII'
+    assert_roman 2004,'MMIV'
+    assert_roman 2005,'MMV'
+    assert_roman 2006,'MMVI'
+    assert_roman 2007,'MMVII'
+    assert_roman 2008,'MMVIII'
+    assert_roman 2009,'MMIX'
+    assert_roman 2010,'MMX'
+    assert_roman 2011,'MMXI'
+    assert_roman 2012,'MMXII'
+    assert_roman 2013,'MMXIII'
+    assert_roman 2014,'MMXIV'
+    assert_roman 2015,'MMXV'
+    assert_roman 2016,'MMXVI'
+    assert_roman 2017,'MMXVII'
+    assert_roman 2018,'MMXVIII'
+    assert_roman 2019,'MMXIX'
+    assert_roman 2020,'MMXX'
+    assert_roman 2021,'MMXXI'
+    assert_roman 2022,'MMXXII'
+    assert_roman 2023,'MMXXIII'
+    assert_roman 2024,'MMXXIV'
+    assert_roman 2025,'MMXXV'
+    assert_roman 2026,'MMXXVI'
+    assert_roman 2027,'MMXXVII'
+    assert_roman 2028,'MMXXVIII'
+    assert_roman 2029,'MMXXIX'
+    assert_roman 2030,'MMXXX'
+    assert_roman 2031,'MMXXXI'
+    assert_roman 2032,'MMXXXII'
+    assert_roman 2033,'MMXXXIII'
+    assert_roman 2034,'MMXXXIV'
+    assert_roman 2035,'MMXXXV'
+    assert_roman 2036,'MMXXXVI'
+    assert_roman 2037,'MMXXXVII'
+    assert_roman 2038,'MMXXXVIII'
+    assert_roman 2039,'MMXXXIX'
+    assert_roman 2040,'MMXL'
+    assert_roman 2041,'MMXLI'
+    assert_roman 2042,'MMXLII'
+    assert_roman 2043,'MMXLIII'
+    assert_roman 2044,'MMXLIV'
+    assert_roman 2045,'MMXLV'
+    assert_roman 2046,'MMXLVI'
+    assert_roman 2047,'MMXLVII'
+    assert_roman 2048,'MMXLVIII'
+    assert_roman 2049,'MMXLIX'
+    assert_roman 2050,'MML'
+    assert_roman 2051,'MMLI'
+    assert_roman 2052,'MMLII'
+    assert_roman 2053,'MMLIII'
+    assert_roman 2054,'MMLIV'
+    assert_roman 2055,'MMLV'
+    assert_roman 2056,'MMLVI'
+    assert_roman 2057,'MMLVII'
+    assert_roman 2058,'MMLVIII'
+    assert_roman 2059,'MMLIX'
+    assert_roman 2060,'MMLX'
+    assert_roman 2061,'MMLXI'
+    assert_roman 2062,'MMLXII'
+    assert_roman 2063,'MMLXIII'
+    assert_roman 2064,'MMLXIV'
+    assert_roman 2065,'MMLXV'
+    assert_roman 2066,'MMLXVI'
+    assert_roman 2067,'MMLXVII'
+    assert_roman 2068,'MMLXVIII'
+    assert_roman 2069,'MMLXIX'
+    assert_roman 2070,'MMLXX'
+    assert_roman 2071,'MMLXXI'
+    assert_roman 2072,'MMLXXII'
+    assert_roman 2073,'MMLXXIII'
+    assert_roman 2074,'MMLXXIV'
+    assert_roman 2075,'MMLXXV'
+    assert_roman 2076,'MMLXXVI'
+    assert_roman 2077,'MMLXXVII'
+    assert_roman 2078,'MMLXXVIII'
+    assert_roman 2079,'MMLXXIX'
+    assert_roman 2080,'MMLXXX'
+    assert_roman 2081,'MMLXXXI'
+    assert_roman 2082,'MMLXXXII'
+    assert_roman 2083,'MMLXXXIII'
+    assert_roman 2084,'MMLXXXIV'
+    assert_roman 2085,'MMLXXXV'
+    assert_roman 2086,'MMLXXXVI'
+    assert_roman 2087,'MMLXXXVII'
+    assert_roman 2088,'MMLXXXVIII'
+    assert_roman 2089,'MMLXXXIX'
+    assert_roman 2090,'MMXC'
+    assert_roman 2091,'MMXCI'
+    assert_roman 2092,'MMXCII'
+    assert_roman 2093,'MMXCIII'
+    assert_roman 2094,'MMXCIV'
+    assert_roman 2095,'MMXCV'
+    assert_roman 2096,'MMXCVI'
+    assert_roman 2097,'MMXCVII'
+    assert_roman 2098,'MMXCVIII'
+    assert_roman 2099,'MMXCIX'
+    assert_roman 2100,'MMC'
+    assert_roman 2101,'MMCI'
+    assert_roman 2102,'MMCII'
+    assert_roman 2103,'MMCIII'
+    assert_roman 2104,'MMCIV'
+    assert_roman 2105,'MMCV'
+    assert_roman 2106,'MMCVI'
+    assert_roman 2107,'MMCVII'
+    assert_roman 2108,'MMCVIII'
+    assert_roman 2109,'MMCIX'
+    assert_roman 2110,'MMCX'
+    assert_roman 2111,'MMCXI'
+    assert_roman 2112,'MMCXII'
+    assert_roman 2113,'MMCXIII'
+    assert_roman 2114,'MMCXIV'
+    assert_roman 2115,'MMCXV'
+    assert_roman 2116,'MMCXVI'
+    assert_roman 2117,'MMCXVII'
+    assert_roman 2118,'MMCXVIII'
+    assert_roman 2119,'MMCXIX'
+    assert_roman 2120,'MMCXX'
+    assert_roman 2121,'MMCXXI'
+    assert_roman 2122,'MMCXXII'
+    assert_roman 2123,'MMCXXIII'
+    assert_roman 2124,'MMCXXIV'
+    assert_roman 2125,'MMCXXV'
+    assert_roman 2126,'MMCXXVI'
+    assert_roman 2127,'MMCXXVII'
+    assert_roman 2128,'MMCXXVIII'
+    assert_roman 2129,'MMCXXIX'
+    assert_roman 2130,'MMCXXX'
+    assert_roman 2131,'MMCXXXI'
+    assert_roman 2132,'MMCXXXII'
+    assert_roman 2133,'MMCXXXIII'
+    assert_roman 2134,'MMCXXXIV'
+    assert_roman 2135,'MMCXXXV'
+    assert_roman 2136,'MMCXXXVI'
+    assert_roman 2137,'MMCXXXVII'
+    assert_roman 2138,'MMCXXXVIII'
+    assert_roman 2139,'MMCXXXIX'
+    assert_roman 2140,'MMCXL'
+    assert_roman 2141,'MMCXLI'
+    assert_roman 2142,'MMCXLII'
+    assert_roman 2143,'MMCXLIII'
+    assert_roman 2144,'MMCXLIV'
+    assert_roman 2145,'MMCXLV'
+    assert_roman 2146,'MMCXLVI'
+    assert_roman 2147,'MMCXLVII'
+    assert_roman 2148,'MMCXLVIII'
+    assert_roman 2149,'MMCXLIX'
+    assert_roman 2150,'MMCL'
+    assert_roman 2151,'MMCLI'
+    assert_roman 2152,'MMCLII'
+    assert_roman 2153,'MMCLIII'
+    assert_roman 2154,'MMCLIV'
+    assert_roman 2155,'MMCLV'
+    assert_roman 2156,'MMCLVI'
+    assert_roman 2157,'MMCLVII'
+    assert_roman 2158,'MMCLVIII'
+    assert_roman 2159,'MMCLIX'
+    assert_roman 2160,'MMCLX'
+    assert_roman 2161,'MMCLXI'
+    assert_roman 2162,'MMCLXII'
+    assert_roman 2163,'MMCLXIII'
+    assert_roman 2164,'MMCLXIV'
+    assert_roman 2165,'MMCLXV'
+    assert_roman 2166,'MMCLXVI'
+    assert_roman 2167,'MMCLXVII'
+    assert_roman 2168,'MMCLXVIII'
+    assert_roman 2169,'MMCLXIX'
+    assert_roman 2170,'MMCLXX'
+    assert_roman 2171,'MMCLXXI'
+    assert_roman 2172,'MMCLXXII'
+    assert_roman 2173,'MMCLXXIII'
+    assert_roman 2174,'MMCLXXIV'
+    assert_roman 2175,'MMCLXXV'
+    assert_roman 2176,'MMCLXXVI'
+    assert_roman 2177,'MMCLXXVII'
+    assert_roman 2178,'MMCLXXVIII'
+    assert_roman 2179,'MMCLXXIX'
+    assert_roman 2180,'MMCLXXX'
+    assert_roman 2181,'MMCLXXXI'
+    assert_roman 2182,'MMCLXXXII'
+    assert_roman 2183,'MMCLXXXIII'
+    assert_roman 2184,'MMCLXXXIV'
+    assert_roman 2185,'MMCLXXXV'
+    assert_roman 2186,'MMCLXXXVI'
+    assert_roman 2187,'MMCLXXXVII'
+    assert_roman 2188,'MMCLXXXVIII'
+    assert_roman 2189,'MMCLXXXIX'
+    assert_roman 2190,'MMCXC'
+    assert_roman 2191,'MMCXCI'
+    assert_roman 2192,'MMCXCII'
+    assert_roman 2193,'MMCXCIII'
+    assert_roman 2194,'MMCXCIV'
+    assert_roman 2195,'MMCXCV'
+    assert_roman 2196,'MMCXCVI'
+    assert_roman 2197,'MMCXCVII'
+    assert_roman 2198,'MMCXCVIII'
+    assert_roman 2199,'MMCXCIX'
+    assert_roman 2200,'MMCC'
+    assert_roman 2201,'MMCCI'
+    assert_roman 2202,'MMCCII'
+    assert_roman 2203,'MMCCIII'
+    assert_roman 2204,'MMCCIV'
+    assert_roman 2205,'MMCCV'
+    assert_roman 2206,'MMCCVI'
+    assert_roman 2207,'MMCCVII'
+    assert_roman 2208,'MMCCVIII'
+    assert_roman 2209,'MMCCIX'
+    assert_roman 2210,'MMCCX'
+    assert_roman 2211,'MMCCXI'
+    assert_roman 2212,'MMCCXII'
+    assert_roman 2213,'MMCCXIII'
+    assert_roman 2214,'MMCCXIV'
+    assert_roman 2215,'MMCCXV'
+    assert_roman 2216,'MMCCXVI'
+    assert_roman 2217,'MMCCXVII'
+    assert_roman 2218,'MMCCXVIII'
+    assert_roman 2219,'MMCCXIX'
+    assert_roman 2220,'MMCCXX'
+    assert_roman 2221,'MMCCXXI'
+    assert_roman 2222,'MMCCXXII'
+    assert_roman 2223,'MMCCXXIII'
+    assert_roman 2224,'MMCCXXIV'
+    assert_roman 2225,'MMCCXXV'
+    assert_roman 2226,'MMCCXXVI'
+    assert_roman 2227,'MMCCXXVII'
+    assert_roman 2228,'MMCCXXVIII'
+    assert_roman 2229,'MMCCXXIX'
+    assert_roman 2230,'MMCCXXX'
+    assert_roman 2231,'MMCCXXXI'
+    assert_roman 2232,'MMCCXXXII'
+    assert_roman 2233,'MMCCXXXIII'
+    assert_roman 2234,'MMCCXXXIV'
+    assert_roman 2235,'MMCCXXXV'
+    assert_roman 2236,'MMCCXXXVI'
+    assert_roman 2237,'MMCCXXXVII'
+    assert_roman 2238,'MMCCXXXVIII'
+    assert_roman 2239,'MMCCXXXIX'
+    assert_roman 2240,'MMCCXL'
+    assert_roman 2241,'MMCCXLI'
+    assert_roman 2242,'MMCCXLII'
+    assert_roman 2243,'MMCCXLIII'
+    assert_roman 2244,'MMCCXLIV'
+    assert_roman 2245,'MMCCXLV'
+    assert_roman 2246,'MMCCXLVI'
+    assert_roman 2247,'MMCCXLVII'
+    assert_roman 2248,'MMCCXLVIII'
+    assert_roman 2249,'MMCCXLIX'
+    assert_roman 2250,'MMCCL'
+    assert_roman 2251,'MMCCLI'
+    assert_roman 2252,'MMCCLII'
+    assert_roman 2253,'MMCCLIII'
+    assert_roman 2254,'MMCCLIV'
+    assert_roman 2255,'MMCCLV'
+    assert_roman 2256,'MMCCLVI'
+    assert_roman 2257,'MMCCLVII'
+    assert_roman 2258,'MMCCLVIII'
+    assert_roman 2259,'MMCCLIX'
+    assert_roman 2260,'MMCCLX'
+    assert_roman 2261,'MMCCLXI'
+    assert_roman 2262,'MMCCLXII'
+    assert_roman 2263,'MMCCLXIII'
+    assert_roman 2264,'MMCCLXIV'
+    assert_roman 2265,'MMCCLXV'
+    assert_roman 2266,'MMCCLXVI'
+    assert_roman 2267,'MMCCLXVII'
+    assert_roman 2268,'MMCCLXVIII'
+    assert_roman 2269,'MMCCLXIX'
+    assert_roman 2270,'MMCCLXX'
+    assert_roman 2271,'MMCCLXXI'
+    assert_roman 2272,'MMCCLXXII'
+    assert_roman 2273,'MMCCLXXIII'
+    assert_roman 2274,'MMCCLXXIV'
+    assert_roman 2275,'MMCCLXXV'
+    assert_roman 2276,'MMCCLXXVI'
+    assert_roman 2277,'MMCCLXXVII'
+    assert_roman 2278,'MMCCLXXVIII'
+    assert_roman 2279,'MMCCLXXIX'
+    assert_roman 2280,'MMCCLXXX'
+    assert_roman 2281,'MMCCLXXXI'
+    assert_roman 2282,'MMCCLXXXII'
+    assert_roman 2283,'MMCCLXXXIII'
+    assert_roman 2284,'MMCCLXXXIV'
+    assert_roman 2285,'MMCCLXXXV'
+    assert_roman 2286,'MMCCLXXXVI'
+    assert_roman 2287,'MMCCLXXXVII'
+    assert_roman 2288,'MMCCLXXXVIII'
+    assert_roman 2289,'MMCCLXXXIX'
+    assert_roman 2290,'MMCCXC'
+    assert_roman 2291,'MMCCXCI'
+    assert_roman 2292,'MMCCXCII'
+    assert_roman 2293,'MMCCXCIII'
+    assert_roman 2294,'MMCCXCIV'
+    assert_roman 2295,'MMCCXCV'
+    assert_roman 2296,'MMCCXCVI'
+    assert_roman 2297,'MMCCXCVII'
+    assert_roman 2298,'MMCCXCVIII'
+    assert_roman 2299,'MMCCXCIX'
+    assert_roman 2300,'MMCCC'
+    assert_roman 2301,'MMCCCI'
+    assert_roman 2302,'MMCCCII'
+    assert_roman 2303,'MMCCCIII'
+    assert_roman 2304,'MMCCCIV'
+    assert_roman 2305,'MMCCCV'
+    assert_roman 2306,'MMCCCVI'
+    assert_roman 2307,'MMCCCVII'
+    assert_roman 2308,'MMCCCVIII'
+    assert_roman 2309,'MMCCCIX'
+    assert_roman 2310,'MMCCCX'
+    assert_roman 2311,'MMCCCXI'
+    assert_roman 2312,'MMCCCXII'
+    assert_roman 2313,'MMCCCXIII'
+    assert_roman 2314,'MMCCCXIV'
+    assert_roman 2315,'MMCCCXV'
+    assert_roman 2316,'MMCCCXVI'
+    assert_roman 2317,'MMCCCXVII'
+    assert_roman 2318,'MMCCCXVIII'
+    assert_roman 2319,'MMCCCXIX'
+    assert_roman 2320,'MMCCCXX'
+    assert_roman 2321,'MMCCCXXI'
+    assert_roman 2322,'MMCCCXXII'
+    assert_roman 2323,'MMCCCXXIII'
+    assert_roman 2324,'MMCCCXXIV'
+    assert_roman 2325,'MMCCCXXV'
+    assert_roman 2326,'MMCCCXXVI'
+    assert_roman 2327,'MMCCCXXVII'
+    assert_roman 2328,'MMCCCXXVIII'
+    assert_roman 2329,'MMCCCXXIX'
+    assert_roman 2330,'MMCCCXXX'
+    assert_roman 2331,'MMCCCXXXI'
+    assert_roman 2332,'MMCCCXXXII'
+    assert_roman 2333,'MMCCCXXXIII'
+    assert_roman 2334,'MMCCCXXXIV'
+    assert_roman 2335,'MMCCCXXXV'
+    assert_roman 2336,'MMCCCXXXVI'
+    assert_roman 2337,'MMCCCXXXVII'
+    assert_roman 2338,'MMCCCXXXVIII'
+    assert_roman 2339,'MMCCCXXXIX'
+    assert_roman 2340,'MMCCCXL'
+    assert_roman 2341,'MMCCCXLI'
+    assert_roman 2342,'MMCCCXLII'
+    assert_roman 2343,'MMCCCXLIII'
+    assert_roman 2344,'MMCCCXLIV'
+    assert_roman 2345,'MMCCCXLV'
+    assert_roman 2346,'MMCCCXLVI'
+    assert_roman 2347,'MMCCCXLVII'
+    assert_roman 2348,'MMCCCXLVIII'
+    assert_roman 2349,'MMCCCXLIX'
+    assert_roman 2350,'MMCCCL'
+    assert_roman 2351,'MMCCCLI'
+    assert_roman 2352,'MMCCCLII'
+    assert_roman 2353,'MMCCCLIII'
+    assert_roman 2354,'MMCCCLIV'
+    assert_roman 2355,'MMCCCLV'
+    assert_roman 2356,'MMCCCLVI'
+    assert_roman 2357,'MMCCCLVII'
+    assert_roman 2358,'MMCCCLVIII'
+    assert_roman 2359,'MMCCCLIX'
+    assert_roman 2360,'MMCCCLX'
+    assert_roman 2361,'MMCCCLXI'
+    assert_roman 2362,'MMCCCLXII'
+    assert_roman 2363,'MMCCCLXIII'
+    assert_roman 2364,'MMCCCLXIV'
+    assert_roman 2365,'MMCCCLXV'
+    assert_roman 2366,'MMCCCLXVI'
+    assert_roman 2367,'MMCCCLXVII'
+    assert_roman 2368,'MMCCCLXVIII'
+    assert_roman 2369,'MMCCCLXIX'
+    assert_roman 2370,'MMCCCLXX'
+    assert_roman 2371,'MMCCCLXXI'
+    assert_roman 2372,'MMCCCLXXII'
+    assert_roman 2373,'MMCCCLXXIII'
+    assert_roman 2374,'MMCCCLXXIV'
+    assert_roman 2375,'MMCCCLXXV'
+    assert_roman 2376,'MMCCCLXXVI'
+    assert_roman 2377,'MMCCCLXXVII'
+    assert_roman 2378,'MMCCCLXXVIII'
+    assert_roman 2379,'MMCCCLXXIX'
+    assert_roman 2380,'MMCCCLXXX'
+    assert_roman 2381,'MMCCCLXXXI'
+    assert_roman 2382,'MMCCCLXXXII'
+    assert_roman 2383,'MMCCCLXXXIII'
+    assert_roman 2384,'MMCCCLXXXIV'
+    assert_roman 2385,'MMCCCLXXXV'
+    assert_roman 2386,'MMCCCLXXXVI'
+    assert_roman 2387,'MMCCCLXXXVII'
+    assert_roman 2388,'MMCCCLXXXVIII'
+    assert_roman 2389,'MMCCCLXXXIX'
+    assert_roman 2390,'MMCCCXC'
+    assert_roman 2391,'MMCCCXCI'
+    assert_roman 2392,'MMCCCXCII'
+    assert_roman 2393,'MMCCCXCIII'
+    assert_roman 2394,'MMCCCXCIV'
+    assert_roman 2395,'MMCCCXCV'
+    assert_roman 2396,'MMCCCXCVI'
+    assert_roman 2397,'MMCCCXCVII'
+    assert_roman 2398,'MMCCCXCVIII'
+    assert_roman 2399,'MMCCCXCIX'
+    assert_roman 2400,'MMCD'
+    assert_roman 2401,'MMCDI'
+    assert_roman 2402,'MMCDII'
+    assert_roman 2403,'MMCDIII'
+    assert_roman 2404,'MMCDIV'
+    assert_roman 2405,'MMCDV'
+    assert_roman 2406,'MMCDVI'
+    assert_roman 2407,'MMCDVII'
+    assert_roman 2408,'MMCDVIII'
+    assert_roman 2409,'MMCDIX'
+    assert_roman 2410,'MMCDX'
+    assert_roman 2411,'MMCDXI'
+    assert_roman 2412,'MMCDXII'
+    assert_roman 2413,'MMCDXIII'
+    assert_roman 2414,'MMCDXIV'
+    assert_roman 2415,'MMCDXV'
+    assert_roman 2416,'MMCDXVI'
+    assert_roman 2417,'MMCDXVII'
+    assert_roman 2418,'MMCDXVIII'
+    assert_roman 2419,'MMCDXIX'
+    assert_roman 2420,'MMCDXX'
+    assert_roman 2421,'MMCDXXI'
+    assert_roman 2422,'MMCDXXII'
+    assert_roman 2423,'MMCDXXIII'
+    assert_roman 2424,'MMCDXXIV'
+    assert_roman 2425,'MMCDXXV'
+    assert_roman 2426,'MMCDXXVI'
+    assert_roman 2427,'MMCDXXVII'
+    assert_roman 2428,'MMCDXXVIII'
+    assert_roman 2429,'MMCDXXIX'
+    assert_roman 2430,'MMCDXXX'
+    assert_roman 2431,'MMCDXXXI'
+    assert_roman 2432,'MMCDXXXII'
+    assert_roman 2433,'MMCDXXXIII'
+    assert_roman 2434,'MMCDXXXIV'
+    assert_roman 2435,'MMCDXXXV'
+    assert_roman 2436,'MMCDXXXVI'
+    assert_roman 2437,'MMCDXXXVII'
+    assert_roman 2438,'MMCDXXXVIII'
+    assert_roman 2439,'MMCDXXXIX'
+    assert_roman 2440,'MMCDXL'
+    assert_roman 2441,'MMCDXLI'
+    assert_roman 2442,'MMCDXLII'
+    assert_roman 2443,'MMCDXLIII'
+    assert_roman 2444,'MMCDXLIV'
+    assert_roman 2445,'MMCDXLV'
+    assert_roman 2446,'MMCDXLVI'
+    assert_roman 2447,'MMCDXLVII'
+    assert_roman 2448,'MMCDXLVIII'
+    assert_roman 2449,'MMCDXLIX'
+    assert_roman 2450,'MMCDL'
+    assert_roman 2451,'MMCDLI'
+    assert_roman 2452,'MMCDLII'
+    assert_roman 2453,'MMCDLIII'
+    assert_roman 2454,'MMCDLIV'
+    assert_roman 2455,'MMCDLV'
+    assert_roman 2456,'MMCDLVI'
+    assert_roman 2457,'MMCDLVII'
+    assert_roman 2458,'MMCDLVIII'
+    assert_roman 2459,'MMCDLIX'
+    assert_roman 2460,'MMCDLX'
+    assert_roman 2461,'MMCDLXI'
+    assert_roman 2462,'MMCDLXII'
+    assert_roman 2463,'MMCDLXIII'
+    assert_roman 2464,'MMCDLXIV'
+    assert_roman 2465,'MMCDLXV'
+    assert_roman 2466,'MMCDLXVI'
+    assert_roman 2467,'MMCDLXVII'
+    assert_roman 2468,'MMCDLXVIII'
+    assert_roman 2469,'MMCDLXIX'
+    assert_roman 2470,'MMCDLXX'
+    assert_roman 2471,'MMCDLXXI'
+    assert_roman 2472,'MMCDLXXII'
+    assert_roman 2473,'MMCDLXXIII'
+    assert_roman 2474,'MMCDLXXIV'
+    assert_roman 2475,'MMCDLXXV'
+    assert_roman 2476,'MMCDLXXVI'
+    assert_roman 2477,'MMCDLXXVII'
+    assert_roman 2478,'MMCDLXXVIII'
+    assert_roman 2479,'MMCDLXXIX'
+    assert_roman 2480,'MMCDLXXX'
+    assert_roman 2481,'MMCDLXXXI'
+    assert_roman 2482,'MMCDLXXXII'
+    assert_roman 2483,'MMCDLXXXIII'
+    assert_roman 2484,'MMCDLXXXIV'
+    assert_roman 2485,'MMCDLXXXV'
+    assert_roman 2486,'MMCDLXXXVI'
+    assert_roman 2487,'MMCDLXXXVII'
+    assert_roman 2488,'MMCDLXXXVIII'
+    assert_roman 2489,'MMCDLXXXIX'
+    assert_roman 2490,'MMCDXC'
+    assert_roman 2491,'MMCDXCI'
+    assert_roman 2492,'MMCDXCII'
+    assert_roman 2493,'MMCDXCIII'
+    assert_roman 2494,'MMCDXCIV'
+    assert_roman 2495,'MMCDXCV'
+    assert_roman 2496,'MMCDXCVI'
+    assert_roman 2497,'MMCDXCVII'
+    assert_roman 2498,'MMCDXCVIII'
+    assert_roman 2499,'MMCDXCIX'
+    assert_roman 2500,'MMD'
+    assert_roman 2501,'MMDI'
+    assert_roman 2502,'MMDII'
+    assert_roman 2503,'MMDIII'
+    assert_roman 2504,'MMDIV'
+    assert_roman 2505,'MMDV'
+    assert_roman 2506,'MMDVI'
+    assert_roman 2507,'MMDVII'
+    assert_roman 2508,'MMDVIII'
+    assert_roman 2509,'MMDIX'
+    assert_roman 2510,'MMDX'
+    assert_roman 2511,'MMDXI'
+    assert_roman 2512,'MMDXII'
+    assert_roman 2513,'MMDXIII'
+    assert_roman 2514,'MMDXIV'
+    assert_roman 2515,'MMDXV'
+    assert_roman 2516,'MMDXVI'
+    assert_roman 2517,'MMDXVII'
+    assert_roman 2518,'MMDXVIII'
+    assert_roman 2519,'MMDXIX'
+    assert_roman 2520,'MMDXX'
+    assert_roman 2521,'MMDXXI'
+    assert_roman 2522,'MMDXXII'
+    assert_roman 2523,'MMDXXIII'
+    assert_roman 2524,'MMDXXIV'
+    assert_roman 2525,'MMDXXV'
+    assert_roman 2526,'MMDXXVI'
+    assert_roman 2527,'MMDXXVII'
+    assert_roman 2528,'MMDXXVIII'
+    assert_roman 2529,'MMDXXIX'
+    assert_roman 2530,'MMDXXX'
+    assert_roman 2531,'MMDXXXI'
+    assert_roman 2532,'MMDXXXII'
+    assert_roman 2533,'MMDXXXIII'
+    assert_roman 2534,'MMDXXXIV'
+    assert_roman 2535,'MMDXXXV'
+    assert_roman 2536,'MMDXXXVI'
+    assert_roman 2537,'MMDXXXVII'
+    assert_roman 2538,'MMDXXXVIII'
+    assert_roman 2539,'MMDXXXIX'
+    assert_roman 2540,'MMDXL'
+    assert_roman 2541,'MMDXLI'
+    assert_roman 2542,'MMDXLII'
+    assert_roman 2543,'MMDXLIII'
+    assert_roman 2544,'MMDXLIV'
+    assert_roman 2545,'MMDXLV'
+    assert_roman 2546,'MMDXLVI'
+    assert_roman 2547,'MMDXLVII'
+    assert_roman 2548,'MMDXLVIII'
+    assert_roman 2549,'MMDXLIX'
+    assert_roman 2550,'MMDL'
+    assert_roman 2551,'MMDLI'
+    assert_roman 2552,'MMDLII'
+    assert_roman 2553,'MMDLIII'
+    assert_roman 2554,'MMDLIV'
+    assert_roman 2555,'MMDLV'
+    assert_roman 2556,'MMDLVI'
+    assert_roman 2557,'MMDLVII'
+    assert_roman 2558,'MMDLVIII'
+    assert_roman 2559,'MMDLIX'
+    assert_roman 2560,'MMDLX'
+    assert_roman 2561,'MMDLXI'
+    assert_roman 2562,'MMDLXII'
+    assert_roman 2563,'MMDLXIII'
+    assert_roman 2564,'MMDLXIV'
+    assert_roman 2565,'MMDLXV'
+    assert_roman 2566,'MMDLXVI'
+    assert_roman 2567,'MMDLXVII'
+    assert_roman 2568,'MMDLXVIII'
+    assert_roman 2569,'MMDLXIX'
+    assert_roman 2570,'MMDLXX'
+    assert_roman 2571,'MMDLXXI'
+    assert_roman 2572,'MMDLXXII'
+    assert_roman 2573,'MMDLXXIII'
+    assert_roman 2574,'MMDLXXIV'
+    assert_roman 2575,'MMDLXXV'
+    assert_roman 2576,'MMDLXXVI'
+    assert_roman 2577,'MMDLXXVII'
+    assert_roman 2578,'MMDLXXVIII'
+    assert_roman 2579,'MMDLXXIX'
+    assert_roman 2580,'MMDLXXX'
+    assert_roman 2581,'MMDLXXXI'
+    assert_roman 2582,'MMDLXXXII'
+    assert_roman 2583,'MMDLXXXIII'
+    assert_roman 2584,'MMDLXXXIV'
+    assert_roman 2585,'MMDLXXXV'
+    assert_roman 2586,'MMDLXXXVI'
+    assert_roman 2587,'MMDLXXXVII'
+    assert_roman 2588,'MMDLXXXVIII'
+    assert_roman 2589,'MMDLXXXIX'
+    assert_roman 2590,'MMDXC'
+    assert_roman 2591,'MMDXCI'
+    assert_roman 2592,'MMDXCII'
+    assert_roman 2593,'MMDXCIII'
+    assert_roman 2594,'MMDXCIV'
+    assert_roman 2595,'MMDXCV'
+    assert_roman 2596,'MMDXCVI'
+    assert_roman 2597,'MMDXCVII'
+    assert_roman 2598,'MMDXCVIII'
+    assert_roman 2599,'MMDXCIX'
+    assert_roman 2600,'MMDC'
+    assert_roman 2601,'MMDCI'
+    assert_roman 2602,'MMDCII'
+    assert_roman 2603,'MMDCIII'
+    assert_roman 2604,'MMDCIV'
+    assert_roman 2605,'MMDCV'
+    assert_roman 2606,'MMDCVI'
+    assert_roman 2607,'MMDCVII'
+    assert_roman 2608,'MMDCVIII'
+    assert_roman 2609,'MMDCIX'
+    assert_roman 2610,'MMDCX'
+    assert_roman 2611,'MMDCXI'
+    assert_roman 2612,'MMDCXII'
+    assert_roman 2613,'MMDCXIII'
+    assert_roman 2614,'MMDCXIV'
+    assert_roman 2615,'MMDCXV'
+    assert_roman 2616,'MMDCXVI'
+    assert_roman 2617,'MMDCXVII'
+    assert_roman 2618,'MMDCXVIII'
+    assert_roman 2619,'MMDCXIX'
+    assert_roman 2620,'MMDCXX'
+    assert_roman 2621,'MMDCXXI'
+    assert_roman 2622,'MMDCXXII'
+    assert_roman 2623,'MMDCXXIII'
+    assert_roman 2624,'MMDCXXIV'
+    assert_roman 2625,'MMDCXXV'
+    assert_roman 2626,'MMDCXXVI'
+    assert_roman 2627,'MMDCXXVII'
+    assert_roman 2628,'MMDCXXVIII'
+    assert_roman 2629,'MMDCXXIX'
+    assert_roman 2630,'MMDCXXX'
+    assert_roman 2631,'MMDCXXXI'
+    assert_roman 2632,'MMDCXXXII'
+    assert_roman 2633,'MMDCXXXIII'
+    assert_roman 2634,'MMDCXXXIV'
+    assert_roman 2635,'MMDCXXXV'
+    assert_roman 2636,'MMDCXXXVI'
+    assert_roman 2637,'MMDCXXXVII'
+    assert_roman 2638,'MMDCXXXVIII'
+    assert_roman 2639,'MMDCXXXIX'
+    assert_roman 2640,'MMDCXL'
+    assert_roman 2641,'MMDCXLI'
+    assert_roman 2642,'MMDCXLII'
+    assert_roman 2643,'MMDCXLIII'
+    assert_roman 2644,'MMDCXLIV'
+    assert_roman 2645,'MMDCXLV'
+    assert_roman 2646,'MMDCXLVI'
+    assert_roman 2647,'MMDCXLVII'
+    assert_roman 2648,'MMDCXLVIII'
+    assert_roman 2649,'MMDCXLIX'
+    assert_roman 2650,'MMDCL'
+    assert_roman 2651,'MMDCLI'
+    assert_roman 2652,'MMDCLII'
+    assert_roman 2653,'MMDCLIII'
+    assert_roman 2654,'MMDCLIV'
+    assert_roman 2655,'MMDCLV'
+    assert_roman 2656,'MMDCLVI'
+    assert_roman 2657,'MMDCLVII'
+    assert_roman 2658,'MMDCLVIII'
+    assert_roman 2659,'MMDCLIX'
+    assert_roman 2660,'MMDCLX'
+    assert_roman 2661,'MMDCLXI'
+    assert_roman 2662,'MMDCLXII'
+    assert_roman 2663,'MMDCLXIII'
+    assert_roman 2664,'MMDCLXIV'
+    assert_roman 2665,'MMDCLXV'
+    assert_roman 2666,'MMDCLXVI'
+    assert_roman 2667,'MMDCLXVII'
+    assert_roman 2668,'MMDCLXVIII'
+    assert_roman 2669,'MMDCLXIX'
+    assert_roman 2670,'MMDCLXX'
+    assert_roman 2671,'MMDCLXXI'
+    assert_roman 2672,'MMDCLXXII'
+    assert_roman 2673,'MMDCLXXIII'
+    assert_roman 2674,'MMDCLXXIV'
+    assert_roman 2675,'MMDCLXXV'
+    assert_roman 2676,'MMDCLXXVI'
+    assert_roman 2677,'MMDCLXXVII'
+    assert_roman 2678,'MMDCLXXVIII'
+    assert_roman 2679,'MMDCLXXIX'
+    assert_roman 2680,'MMDCLXXX'
+    assert_roman 2681,'MMDCLXXXI'
+    assert_roman 2682,'MMDCLXXXII'
+    assert_roman 2683,'MMDCLXXXIII'
+    assert_roman 2684,'MMDCLXXXIV'
+    assert_roman 2685,'MMDCLXXXV'
+    assert_roman 2686,'MMDCLXXXVI'
+    assert_roman 2687,'MMDCLXXXVII'
+    assert_roman 2688,'MMDCLXXXVIII'
+    assert_roman 2689,'MMDCLXXXIX'
+    assert_roman 2690,'MMDCXC'
+    assert_roman 2691,'MMDCXCI'
+    assert_roman 2692,'MMDCXCII'
+    assert_roman 2693,'MMDCXCIII'
+    assert_roman 2694,'MMDCXCIV'
+    assert_roman 2695,'MMDCXCV'
+    assert_roman 2696,'MMDCXCVI'
+    assert_roman 2697,'MMDCXCVII'
+    assert_roman 2698,'MMDCXCVIII'
+    assert_roman 2699,'MMDCXCIX'
+    assert_roman 2700,'MMDCC'
+    assert_roman 2701,'MMDCCI'
+    assert_roman 2702,'MMDCCII'
+    assert_roman 2703,'MMDCCIII'
+    assert_roman 2704,'MMDCCIV'
+    assert_roman 2705,'MMDCCV'
+    assert_roman 2706,'MMDCCVI'
+    assert_roman 2707,'MMDCCVII'
+    assert_roman 2708,'MMDCCVIII'
+    assert_roman 2709,'MMDCCIX'
+    assert_roman 2710,'MMDCCX'
+    assert_roman 2711,'MMDCCXI'
+    assert_roman 2712,'MMDCCXII'
+    assert_roman 2713,'MMDCCXIII'
+    assert_roman 2714,'MMDCCXIV'
+    assert_roman 2715,'MMDCCXV'
+    assert_roman 2716,'MMDCCXVI'
+    assert_roman 2717,'MMDCCXVII'
+    assert_roman 2718,'MMDCCXVIII'
+    assert_roman 2719,'MMDCCXIX'
+    assert_roman 2720,'MMDCCXX'
+    assert_roman 2721,'MMDCCXXI'
+    assert_roman 2722,'MMDCCXXII'
+    assert_roman 2723,'MMDCCXXIII'
+    assert_roman 2724,'MMDCCXXIV'
+    assert_roman 2725,'MMDCCXXV'
+    assert_roman 2726,'MMDCCXXVI'
+    assert_roman 2727,'MMDCCXXVII'
+    assert_roman 2728,'MMDCCXXVIII'
+    assert_roman 2729,'MMDCCXXIX'
+    assert_roman 2730,'MMDCCXXX'
+    assert_roman 2731,'MMDCCXXXI'
+    assert_roman 2732,'MMDCCXXXII'
+    assert_roman 2733,'MMDCCXXXIII'
+    assert_roman 2734,'MMDCCXXXIV'
+    assert_roman 2735,'MMDCCXXXV'
+    assert_roman 2736,'MMDCCXXXVI'
+    assert_roman 2737,'MMDCCXXXVII'
+    assert_roman 2738,'MMDCCXXXVIII'
+    assert_roman 2739,'MMDCCXXXIX'
+    assert_roman 2740,'MMDCCXL'
+    assert_roman 2741,'MMDCCXLI'
+    assert_roman 2742,'MMDCCXLII'
+    assert_roman 2743,'MMDCCXLIII'
+    assert_roman 2744,'MMDCCXLIV'
+    assert_roman 2745,'MMDCCXLV'
+    assert_roman 2746,'MMDCCXLVI'
+    assert_roman 2747,'MMDCCXLVII'
+    assert_roman 2748,'MMDCCXLVIII'
+    assert_roman 2749,'MMDCCXLIX'
+    assert_roman 2750,'MMDCCL'
+    assert_roman 2751,'MMDCCLI'
+    assert_roman 2752,'MMDCCLII'
+    assert_roman 2753,'MMDCCLIII'
+    assert_roman 2754,'MMDCCLIV'
+    assert_roman 2755,'MMDCCLV'
+    assert_roman 2756,'MMDCCLVI'
+    assert_roman 2757,'MMDCCLVII'
+    assert_roman 2758,'MMDCCLVIII'
+    assert_roman 2759,'MMDCCLIX'
+    assert_roman 2760,'MMDCCLX'
+    assert_roman 2761,'MMDCCLXI'
+    assert_roman 2762,'MMDCCLXII'
+    assert_roman 2763,'MMDCCLXIII'
+    assert_roman 2764,'MMDCCLXIV'
+    assert_roman 2765,'MMDCCLXV'
+    assert_roman 2766,'MMDCCLXVI'
+    assert_roman 2767,'MMDCCLXVII'
+    assert_roman 2768,'MMDCCLXVIII'
+    assert_roman 2769,'MMDCCLXIX'
+    assert_roman 2770,'MMDCCLXX'
+    assert_roman 2771,'MMDCCLXXI'
+    assert_roman 2772,'MMDCCLXXII'
+    assert_roman 2773,'MMDCCLXXIII'
+    assert_roman 2774,'MMDCCLXXIV'
+    assert_roman 2775,'MMDCCLXXV'
+    assert_roman 2776,'MMDCCLXXVI'
+    assert_roman 2777,'MMDCCLXXVII'
+    assert_roman 2778,'MMDCCLXXVIII'
+    assert_roman 2779,'MMDCCLXXIX'
+    assert_roman 2780,'MMDCCLXXX'
+    assert_roman 2781,'MMDCCLXXXI'
+    assert_roman 2782,'MMDCCLXXXII'
+    assert_roman 2783,'MMDCCLXXXIII'
+    assert_roman 2784,'MMDCCLXXXIV'
+    assert_roman 2785,'MMDCCLXXXV'
+    assert_roman 2786,'MMDCCLXXXVI'
+    assert_roman 2787,'MMDCCLXXXVII'
+    assert_roman 2788,'MMDCCLXXXVIII'
+    assert_roman 2789,'MMDCCLXXXIX'
+    assert_roman 2790,'MMDCCXC'
+    assert_roman 2791,'MMDCCXCI'
+    assert_roman 2792,'MMDCCXCII'
+    assert_roman 2793,'MMDCCXCIII'
+    assert_roman 2794,'MMDCCXCIV'
+    assert_roman 2795,'MMDCCXCV'
+    assert_roman 2796,'MMDCCXCVI'
+    assert_roman 2797,'MMDCCXCVII'
+    assert_roman 2798,'MMDCCXCVIII'
+    assert_roman 2799,'MMDCCXCIX'
+    assert_roman 2800,'MMDCCC'
+    assert_roman 2801,'MMDCCCI'
+    assert_roman 2802,'MMDCCCII'
+    assert_roman 2803,'MMDCCCIII'
+    assert_roman 2804,'MMDCCCIV'
+    assert_roman 2805,'MMDCCCV'
+    assert_roman 2806,'MMDCCCVI'
+    assert_roman 2807,'MMDCCCVII'
+    assert_roman 2808,'MMDCCCVIII'
+    assert_roman 2809,'MMDCCCIX'
+    assert_roman 2810,'MMDCCCX'
+    assert_roman 2811,'MMDCCCXI'
+    assert_roman 2812,'MMDCCCXII'
+    assert_roman 2813,'MMDCCCXIII'
+    assert_roman 2814,'MMDCCCXIV'
+    assert_roman 2815,'MMDCCCXV'
+    assert_roman 2816,'MMDCCCXVI'
+    assert_roman 2817,'MMDCCCXVII'
+    assert_roman 2818,'MMDCCCXVIII'
+    assert_roman 2819,'MMDCCCXIX'
+    assert_roman 2820,'MMDCCCXX'
+    assert_roman 2821,'MMDCCCXXI'
+    assert_roman 2822,'MMDCCCXXII'
+    assert_roman 2823,'MMDCCCXXIII'
+    assert_roman 2824,'MMDCCCXXIV'
+    assert_roman 2825,'MMDCCCXXV'
+    assert_roman 2826,'MMDCCCXXVI'
+    assert_roman 2827,'MMDCCCXXVII'
+    assert_roman 2828,'MMDCCCXXVIII'
+    assert_roman 2829,'MMDCCCXXIX'
+    assert_roman 2830,'MMDCCCXXX'
+    assert_roman 2831,'MMDCCCXXXI'
+    assert_roman 2832,'MMDCCCXXXII'
+    assert_roman 2833,'MMDCCCXXXIII'
+    assert_roman 2834,'MMDCCCXXXIV'
+    assert_roman 2835,'MMDCCCXXXV'
+    assert_roman 2836,'MMDCCCXXXVI'
+    assert_roman 2837,'MMDCCCXXXVII'
+    assert_roman 2838,'MMDCCCXXXVIII'
+    assert_roman 2839,'MMDCCCXXXIX'
+    assert_roman 2840,'MMDCCCXL'
+    assert_roman 2841,'MMDCCCXLI'
+    assert_roman 2842,'MMDCCCXLII'
+    assert_roman 2843,'MMDCCCXLIII'
+    assert_roman 2844,'MMDCCCXLIV'
+    assert_roman 2845,'MMDCCCXLV'
+    assert_roman 2846,'MMDCCCXLVI'
+    assert_roman 2847,'MMDCCCXLVII'
+    assert_roman 2848,'MMDCCCXLVIII'
+    assert_roman 2849,'MMDCCCXLIX'
+    assert_roman 2850,'MMDCCCL'
+    assert_roman 2851,'MMDCCCLI'
+    assert_roman 2852,'MMDCCCLII'
+    assert_roman 2853,'MMDCCCLIII'
+    assert_roman 2854,'MMDCCCLIV'
+    assert_roman 2855,'MMDCCCLV'
+    assert_roman 2856,'MMDCCCLVI'
+    assert_roman 2857,'MMDCCCLVII'
+    assert_roman 2858,'MMDCCCLVIII'
+    assert_roman 2859,'MMDCCCLIX'
+    assert_roman 2860,'MMDCCCLX'
+    assert_roman 2861,'MMDCCCLXI'
+    assert_roman 2862,'MMDCCCLXII'
+    assert_roman 2863,'MMDCCCLXIII'
+    assert_roman 2864,'MMDCCCLXIV'
+    assert_roman 2865,'MMDCCCLXV'
+    assert_roman 2866,'MMDCCCLXVI'
+    assert_roman 2867,'MMDCCCLXVII'
+    assert_roman 2868,'MMDCCCLXVIII'
+    assert_roman 2869,'MMDCCCLXIX'
+    assert_roman 2870,'MMDCCCLXX'
+    assert_roman 2871,'MMDCCCLXXI'
+    assert_roman 2872,'MMDCCCLXXII'
+    assert_roman 2873,'MMDCCCLXXIII'
+    assert_roman 2874,'MMDCCCLXXIV'
+    assert_roman 2875,'MMDCCCLXXV'
+    assert_roman 2876,'MMDCCCLXXVI'
+    assert_roman 2877,'MMDCCCLXXVII'
+    assert_roman 2878,'MMDCCCLXXVIII'
+    assert_roman 2879,'MMDCCCLXXIX'
+    assert_roman 2880,'MMDCCCLXXX'
+    assert_roman 2881,'MMDCCCLXXXI'
+    assert_roman 2882,'MMDCCCLXXXII'
+    assert_roman 2883,'MMDCCCLXXXIII'
+    assert_roman 2884,'MMDCCCLXXXIV'
+    assert_roman 2885,'MMDCCCLXXXV'
+    assert_roman 2886,'MMDCCCLXXXVI'
+    assert_roman 2887,'MMDCCCLXXXVII'
+    assert_roman 2888,'MMDCCCLXXXVIII'
+    assert_roman 2889,'MMDCCCLXXXIX'
+    assert_roman 2890,'MMDCCCXC'
+    assert_roman 2891,'MMDCCCXCI'
+    assert_roman 2892,'MMDCCCXCII'
+    assert_roman 2893,'MMDCCCXCIII'
+    assert_roman 2894,'MMDCCCXCIV'
+    assert_roman 2895,'MMDCCCXCV'
+    assert_roman 2896,'MMDCCCXCVI'
+    assert_roman 2897,'MMDCCCXCVII'
+    assert_roman 2898,'MMDCCCXCVIII'
+    assert_roman 2899,'MMDCCCXCIX'
+    assert_roman 2900,'MMCM'
+    assert_roman 2901,'MMCMI'
+    assert_roman 2902,'MMCMII'
+    assert_roman 2903,'MMCMIII'
+    assert_roman 2904,'MMCMIV'
+    assert_roman 2905,'MMCMV'
+    assert_roman 2906,'MMCMVI'
+    assert_roman 2907,'MMCMVII'
+    assert_roman 2908,'MMCMVIII'
+    assert_roman 2909,'MMCMIX'
+    assert_roman 2910,'MMCMX'
+    assert_roman 2911,'MMCMXI'
+    assert_roman 2912,'MMCMXII'
+    assert_roman 2913,'MMCMXIII'
+    assert_roman 2914,'MMCMXIV'
+    assert_roman 2915,'MMCMXV'
+    assert_roman 2916,'MMCMXVI'
+    assert_roman 2917,'MMCMXVII'
+    assert_roman 2918,'MMCMXVIII'
+    assert_roman 2919,'MMCMXIX'
+    assert_roman 2920,'MMCMXX'
+    assert_roman 2921,'MMCMXXI'
+    assert_roman 2922,'MMCMXXII'
+    assert_roman 2923,'MMCMXXIII'
+    assert_roman 2924,'MMCMXXIV'
+    assert_roman 2925,'MMCMXXV'
+    assert_roman 2926,'MMCMXXVI'
+    assert_roman 2927,'MMCMXXVII'
+    assert_roman 2928,'MMCMXXVIII'
+    assert_roman 2929,'MMCMXXIX'
+    assert_roman 2930,'MMCMXXX'
+    assert_roman 2931,'MMCMXXXI'
+    assert_roman 2932,'MMCMXXXII'
+    assert_roman 2933,'MMCMXXXIII'
+    assert_roman 2934,'MMCMXXXIV'
+    assert_roman 2935,'MMCMXXXV'
+    assert_roman 2936,'MMCMXXXVI'
+    assert_roman 2937,'MMCMXXXVII'
+    assert_roman 2938,'MMCMXXXVIII'
+    assert_roman 2939,'MMCMXXXIX'
+    assert_roman 2940,'MMCMXL'
+    assert_roman 2941,'MMCMXLI'
+    assert_roman 2942,'MMCMXLII'
+    assert_roman 2943,'MMCMXLIII'
+    assert_roman 2944,'MMCMXLIV'
+    assert_roman 2945,'MMCMXLV'
+    assert_roman 2946,'MMCMXLVI'
+    assert_roman 2947,'MMCMXLVII'
+    assert_roman 2948,'MMCMXLVIII'
+    assert_roman 2949,'MMCMXLIX'
+    assert_roman 2950,'MMCML'
+    assert_roman 2951,'MMCMLI'
+    assert_roman 2952,'MMCMLII'
+    assert_roman 2953,'MMCMLIII'
+    assert_roman 2954,'MMCMLIV'
+    assert_roman 2955,'MMCMLV'
+    assert_roman 2956,'MMCMLVI'
+    assert_roman 2957,'MMCMLVII'
+    assert_roman 2958,'MMCMLVIII'
+    assert_roman 2959,'MMCMLIX'
+    assert_roman 2960,'MMCMLX'
+    assert_roman 2961,'MMCMLXI'
+    assert_roman 2962,'MMCMLXII'
+    assert_roman 2963,'MMCMLXIII'
+    assert_roman 2964,'MMCMLXIV'
+    assert_roman 2965,'MMCMLXV'
+    assert_roman 2966,'MMCMLXVI'
+    assert_roman 2967,'MMCMLXVII'
+    assert_roman 2968,'MMCMLXVIII'
+    assert_roman 2969,'MMCMLXIX'
+    assert_roman 2970,'MMCMLXX'
+    assert_roman 2971,'MMCMLXXI'
+    assert_roman 2972,'MMCMLXXII'
+    assert_roman 2973,'MMCMLXXIII'
+    assert_roman 2974,'MMCMLXXIV'
+    assert_roman 2975,'MMCMLXXV'
+    assert_roman 2976,'MMCMLXXVI'
+    assert_roman 2977,'MMCMLXXVII'
+    assert_roman 2978,'MMCMLXXVIII'
+    assert_roman 2979,'MMCMLXXIX'
+    assert_roman 2980,'MMCMLXXX'
+    assert_roman 2981,'MMCMLXXXI'
+    assert_roman 2982,'MMCMLXXXII'
+    assert_roman 2983,'MMCMLXXXIII'
+    assert_roman 2984,'MMCMLXXXIV'
+    assert_roman 2985,'MMCMLXXXV'
+    assert_roman 2986,'MMCMLXXXVI'
+    assert_roman 2987,'MMCMLXXXVII'
+    assert_roman 2988,'MMCMLXXXVIII'
+    assert_roman 2989,'MMCMLXXXIX'
+    assert_roman 2990,'MMCMXC'
+    assert_roman 2991,'MMCMXCI'
+    assert_roman 2992,'MMCMXCII'
+    assert_roman 2993,'MMCMXCIII'
+    assert_roman 2994,'MMCMXCIV'
+    assert_roman 2995,'MMCMXCV'
+    assert_roman 2996,'MMCMXCVI'
+    assert_roman 2997,'MMCMXCVII'
+    assert_roman 2998,'MMCMXCVIII'
+    assert_roman 2999,'MMCMXCIX'
+    assert_roman 3000,'MMM'
+    assert_roman 3001,'MMMI'
+    assert_roman 3002,'MMMII'
+    assert_roman 3003,'MMMIII'
+    assert_roman 3004,'MMMIV'
+    assert_roman 3005,'MMMV'
+    assert_roman 3006,'MMMVI'
+    assert_roman 3007,'MMMVII'
+    assert_roman 3008,'MMMVIII'
+    assert_roman 3009,'MMMIX'
+    assert_roman 3010,'MMMX'
+    assert_roman 3011,'MMMXI'
+    assert_roman 3012,'MMMXII'
+    assert_roman 3013,'MMMXIII'
+    assert_roman 3014,'MMMXIV'
+    assert_roman 3015,'MMMXV'
+    assert_roman 3016,'MMMXVI'
+    assert_roman 3017,'MMMXVII'
+    assert_roman 3018,'MMMXVIII'
+    assert_roman 3019,'MMMXIX'
+    assert_roman 3020,'MMMXX'
+    assert_roman 3021,'MMMXXI'
+    assert_roman 3022,'MMMXXII'
+    assert_roman 3023,'MMMXXIII'
+    assert_roman 3024,'MMMXXIV'
+    assert_roman 3025,'MMMXXV'
+    assert_roman 3026,'MMMXXVI'
+    assert_roman 3027,'MMMXXVII'
+    assert_roman 3028,'MMMXXVIII'
+    assert_roman 3029,'MMMXXIX'
+    assert_roman 3030,'MMMXXX'
+    assert_roman 3031,'MMMXXXI'
+    assert_roman 3032,'MMMXXXII'
+    assert_roman 3033,'MMMXXXIII'
+    assert_roman 3034,'MMMXXXIV'
+    assert_roman 3035,'MMMXXXV'
+    assert_roman 3036,'MMMXXXVI'
+    assert_roman 3037,'MMMXXXVII'
+    assert_roman 3038,'MMMXXXVIII'
+    assert_roman 3039,'MMMXXXIX'
+    assert_roman 3040,'MMMXL'
+    assert_roman 3041,'MMMXLI'
+    assert_roman 3042,'MMMXLII'
+    assert_roman 3043,'MMMXLIII'
+    assert_roman 3044,'MMMXLIV'
+    assert_roman 3045,'MMMXLV'
+    assert_roman 3046,'MMMXLVI'
+    assert_roman 3047,'MMMXLVII'
+    assert_roman 3048,'MMMXLVIII'
+    assert_roman 3049,'MMMXLIX'
+    assert_roman 3050,'MMML'
+    assert_roman 3051,'MMMLI'
+    assert_roman 3052,'MMMLII'
+    assert_roman 3053,'MMMLIII'
+    assert_roman 3054,'MMMLIV'
+    assert_roman 3055,'MMMLV'
+    assert_roman 3056,'MMMLVI'
+    assert_roman 3057,'MMMLVII'
+    assert_roman 3058,'MMMLVIII'
+    assert_roman 3059,'MMMLIX'
+    assert_roman 3060,'MMMLX'
+    assert_roman 3061,'MMMLXI'
+    assert_roman 3062,'MMMLXII'
+    assert_roman 3063,'MMMLXIII'
+    assert_roman 3064,'MMMLXIV'
+    assert_roman 3065,'MMMLXV'
+    assert_roman 3066,'MMMLXVI'
+    assert_roman 3067,'MMMLXVII'
+    assert_roman 3068,'MMMLXVIII'
+    assert_roman 3069,'MMMLXIX'
+    assert_roman 3070,'MMMLXX'
+    assert_roman 3071,'MMMLXXI'
+    assert_roman 3072,'MMMLXXII'
+    assert_roman 3073,'MMMLXXIII'
+    assert_roman 3074,'MMMLXXIV'
+    assert_roman 3075,'MMMLXXV'
+    assert_roman 3076,'MMMLXXVI'
+    assert_roman 3077,'MMMLXXVII'
+    assert_roman 3078,'MMMLXXVIII'
+    assert_roman 3079,'MMMLXXIX'
+    assert_roman 3080,'MMMLXXX'
+    assert_roman 3081,'MMMLXXXI'
+    assert_roman 3082,'MMMLXXXII'
+    assert_roman 3083,'MMMLXXXIII'
+    assert_roman 3084,'MMMLXXXIV'
+    assert_roman 3085,'MMMLXXXV'
+    assert_roman 3086,'MMMLXXXVI'
+    assert_roman 3087,'MMMLXXXVII'
+    assert_roman 3088,'MMMLXXXVIII'
+    assert_roman 3089,'MMMLXXXIX'
+    assert_roman 3090,'MMMXC'
+    assert_roman 3091,'MMMXCI'
+    assert_roman 3092,'MMMXCII'
+    assert_roman 3093,'MMMXCIII'
+    assert_roman 3094,'MMMXCIV'
+    assert_roman 3095,'MMMXCV'
+    assert_roman 3096,'MMMXCVI'
+    assert_roman 3097,'MMMXCVII'
+    assert_roman 3098,'MMMXCVIII'
+    assert_roman 3099,'MMMXCIX'
+    assert_roman 3100,'MMMC'
+    assert_roman 3101,'MMMCI'
+    assert_roman 3102,'MMMCII'
+    assert_roman 3103,'MMMCIII'
+    assert_roman 3104,'MMMCIV'
+    assert_roman 3105,'MMMCV'
+    assert_roman 3106,'MMMCVI'
+    assert_roman 3107,'MMMCVII'
+    assert_roman 3108,'MMMCVIII'
+    assert_roman 3109,'MMMCIX'
+    assert_roman 3110,'MMMCX'
+    assert_roman 3111,'MMMCXI'
+    assert_roman 3112,'MMMCXII'
+    assert_roman 3113,'MMMCXIII'
+    assert_roman 3114,'MMMCXIV'
+    assert_roman 3115,'MMMCXV'
+    assert_roman 3116,'MMMCXVI'
+    assert_roman 3117,'MMMCXVII'
+    assert_roman 3118,'MMMCXVIII'
+    assert_roman 3119,'MMMCXIX'
+    assert_roman 3120,'MMMCXX'
+    assert_roman 3121,'MMMCXXI'
+    assert_roman 3122,'MMMCXXII'
+    assert_roman 3123,'MMMCXXIII'
+    assert_roman 3124,'MMMCXXIV'
+    assert_roman 3125,'MMMCXXV'
+    assert_roman 3126,'MMMCXXVI'
+    assert_roman 3127,'MMMCXXVII'
+    assert_roman 3128,'MMMCXXVIII'
+    assert_roman 3129,'MMMCXXIX'
+    assert_roman 3130,'MMMCXXX'
+    assert_roman 3131,'MMMCXXXI'
+    assert_roman 3132,'MMMCXXXII'
+    assert_roman 3133,'MMMCXXXIII'
+    assert_roman 3134,'MMMCXXXIV'
+    assert_roman 3135,'MMMCXXXV'
+    assert_roman 3136,'MMMCXXXVI'
+    assert_roman 3137,'MMMCXXXVII'
+    assert_roman 3138,'MMMCXXXVIII'
+    assert_roman 3139,'MMMCXXXIX'
+    assert_roman 3140,'MMMCXL'
+    assert_roman 3141,'MMMCXLI'
+    assert_roman 3142,'MMMCXLII'
+    assert_roman 3143,'MMMCXLIII'
+    assert_roman 3144,'MMMCXLIV'
+    assert_roman 3145,'MMMCXLV'
+    assert_roman 3146,'MMMCXLVI'
+    assert_roman 3147,'MMMCXLVII'
+    assert_roman 3148,'MMMCXLVIII'
+    assert_roman 3149,'MMMCXLIX'
+    assert_roman 3150,'MMMCL'
+    assert_roman 3151,'MMMCLI'
+    assert_roman 3152,'MMMCLII'
+    assert_roman 3153,'MMMCLIII'
+    assert_roman 3154,'MMMCLIV'
+    assert_roman 3155,'MMMCLV'
+    assert_roman 3156,'MMMCLVI'
+    assert_roman 3157,'MMMCLVII'
+    assert_roman 3158,'MMMCLVIII'
+    assert_roman 3159,'MMMCLIX'
+    assert_roman 3160,'MMMCLX'
+    assert_roman 3161,'MMMCLXI'
+    assert_roman 3162,'MMMCLXII'
+    assert_roman 3163,'MMMCLXIII'
+    assert_roman 3164,'MMMCLXIV'
+    assert_roman 3165,'MMMCLXV'
+    assert_roman 3166,'MMMCLXVI'
+    assert_roman 3167,'MMMCLXVII'
+    assert_roman 3168,'MMMCLXVIII'
+    assert_roman 3169,'MMMCLXIX'
+    assert_roman 3170,'MMMCLXX'
+    assert_roman 3171,'MMMCLXXI'
+    assert_roman 3172,'MMMCLXXII'
+    assert_roman 3173,'MMMCLXXIII'
+    assert_roman 3174,'MMMCLXXIV'
+    assert_roman 3175,'MMMCLXXV'
+    assert_roman 3176,'MMMCLXXVI'
+    assert_roman 3177,'MMMCLXXVII'
+    assert_roman 3178,'MMMCLXXVIII'
+    assert_roman 3179,'MMMCLXXIX'
+    assert_roman 3180,'MMMCLXXX'
+    assert_roman 3181,'MMMCLXXXI'
+    assert_roman 3182,'MMMCLXXXII'
+    assert_roman 3183,'MMMCLXXXIII'
+    assert_roman 3184,'MMMCLXXXIV'
+    assert_roman 3185,'MMMCLXXXV'
+    assert_roman 3186,'MMMCLXXXVI'
+    assert_roman 3187,'MMMCLXXXVII'
+    assert_roman 3188,'MMMCLXXXVIII'
+    assert_roman 3189,'MMMCLXXXIX'
+    assert_roman 3190,'MMMCXC'
+    assert_roman 3191,'MMMCXCI'
+    assert_roman 3192,'MMMCXCII'
+    assert_roman 3193,'MMMCXCIII'
+    assert_roman 3194,'MMMCXCIV'
+    assert_roman 3195,'MMMCXCV'
+    assert_roman 3196,'MMMCXCVI'
+    assert_roman 3197,'MMMCXCVII'
+    assert_roman 3198,'MMMCXCVIII'
+    assert_roman 3199,'MMMCXCIX'
+    assert_roman 3200,'MMMCC'
+    assert_roman 3201,'MMMCCI'
+    assert_roman 3202,'MMMCCII'
+    assert_roman 3203,'MMMCCIII'
+    assert_roman 3204,'MMMCCIV'
+    assert_roman 3205,'MMMCCV'
+    assert_roman 3206,'MMMCCVI'
+    assert_roman 3207,'MMMCCVII'
+    assert_roman 3208,'MMMCCVIII'
+    assert_roman 3209,'MMMCCIX'
+    assert_roman 3210,'MMMCCX'
+    assert_roman 3211,'MMMCCXI'
+    assert_roman 3212,'MMMCCXII'
+    assert_roman 3213,'MMMCCXIII'
+    assert_roman 3214,'MMMCCXIV'
+    assert_roman 3215,'MMMCCXV'
+    assert_roman 3216,'MMMCCXVI'
+    assert_roman 3217,'MMMCCXVII'
+    assert_roman 3218,'MMMCCXVIII'
+    assert_roman 3219,'MMMCCXIX'
+    assert_roman 3220,'MMMCCXX'
+    assert_roman 3221,'MMMCCXXI'
+    assert_roman 3222,'MMMCCXXII'
+    assert_roman 3223,'MMMCCXXIII'
+    assert_roman 3224,'MMMCCXXIV'
+    assert_roman 3225,'MMMCCXXV'
+    assert_roman 3226,'MMMCCXXVI'
+    assert_roman 3227,'MMMCCXXVII'
+    assert_roman 3228,'MMMCCXXVIII'
+    assert_roman 3229,'MMMCCXXIX'
+    assert_roman 3230,'MMMCCXXX'
+    assert_roman 3231,'MMMCCXXXI'
+    assert_roman 3232,'MMMCCXXXII'
+    assert_roman 3233,'MMMCCXXXIII'
+    assert_roman 3234,'MMMCCXXXIV'
+    assert_roman 3235,'MMMCCXXXV'
+    assert_roman 3236,'MMMCCXXXVI'
+    assert_roman 3237,'MMMCCXXXVII'
+    assert_roman 3238,'MMMCCXXXVIII'
+    assert_roman 3239,'MMMCCXXXIX'
+    assert_roman 3240,'MMMCCXL'
+    assert_roman 3241,'MMMCCXLI'
+    assert_roman 3242,'MMMCCXLII'
+    assert_roman 3243,'MMMCCXLIII'
+    assert_roman 3244,'MMMCCXLIV'
+    assert_roman 3245,'MMMCCXLV'
+    assert_roman 3246,'MMMCCXLVI'
+    assert_roman 3247,'MMMCCXLVII'
+    assert_roman 3248,'MMMCCXLVIII'
+    assert_roman 3249,'MMMCCXLIX'
+    assert_roman 3250,'MMMCCL'
+    assert_roman 3251,'MMMCCLI'
+    assert_roman 3252,'MMMCCLII'
+    assert_roman 3253,'MMMCCLIII'
+    assert_roman 3254,'MMMCCLIV'
+    assert_roman 3255,'MMMCCLV'
+    assert_roman 3256,'MMMCCLVI'
+    assert_roman 3257,'MMMCCLVII'
+    assert_roman 3258,'MMMCCLVIII'
+    assert_roman 3259,'MMMCCLIX'
+    assert_roman 3260,'MMMCCLX'
+    assert_roman 3261,'MMMCCLXI'
+    assert_roman 3262,'MMMCCLXII'
+    assert_roman 3263,'MMMCCLXIII'
+    assert_roman 3264,'MMMCCLXIV'
+    assert_roman 3265,'MMMCCLXV'
+    assert_roman 3266,'MMMCCLXVI'
+    assert_roman 3267,'MMMCCLXVII'
+    assert_roman 3268,'MMMCCLXVIII'
+    assert_roman 3269,'MMMCCLXIX'
+    assert_roman 3270,'MMMCCLXX'
+    assert_roman 3271,'MMMCCLXXI'
+    assert_roman 3272,'MMMCCLXXII'
+    assert_roman 3273,'MMMCCLXXIII'
+    assert_roman 3274,'MMMCCLXXIV'
+    assert_roman 3275,'MMMCCLXXV'
+    assert_roman 3276,'MMMCCLXXVI'
+    assert_roman 3277,'MMMCCLXXVII'
+    assert_roman 3278,'MMMCCLXXVIII'
+    assert_roman 3279,'MMMCCLXXIX'
+    assert_roman 3280,'MMMCCLXXX'
+    assert_roman 3281,'MMMCCLXXXI'
+    assert_roman 3282,'MMMCCLXXXII'
+    assert_roman 3283,'MMMCCLXXXIII'
+    assert_roman 3284,'MMMCCLXXXIV'
+    assert_roman 3285,'MMMCCLXXXV'
+    assert_roman 3286,'MMMCCLXXXVI'
+    assert_roman 3287,'MMMCCLXXXVII'
+    assert_roman 3288,'MMMCCLXXXVIII'
+    assert_roman 3289,'MMMCCLXXXIX'
+    assert_roman 3290,'MMMCCXC'
+    assert_roman 3291,'MMMCCXCI'
+    assert_roman 3292,'MMMCCXCII'
+    assert_roman 3293,'MMMCCXCIII'
+    assert_roman 3294,'MMMCCXCIV'
+    assert_roman 3295,'MMMCCXCV'
+    assert_roman 3296,'MMMCCXCVI'
+    assert_roman 3297,'MMMCCXCVII'
+    assert_roman 3298,'MMMCCXCVIII'
+    assert_roman 3299,'MMMCCXCIX'
+    assert_roman 3300,'MMMCCC'
+    assert_roman 3301,'MMMCCCI'
+    assert_roman 3302,'MMMCCCII'
+    assert_roman 3303,'MMMCCCIII'
+    assert_roman 3304,'MMMCCCIV'
+    assert_roman 3305,'MMMCCCV'
+    assert_roman 3306,'MMMCCCVI'
+    assert_roman 3307,'MMMCCCVII'
+    assert_roman 3308,'MMMCCCVIII'
+    assert_roman 3309,'MMMCCCIX'
+    assert_roman 3310,'MMMCCCX'
+    assert_roman 3311,'MMMCCCXI'
+    assert_roman 3312,'MMMCCCXII'
+    assert_roman 3313,'MMMCCCXIII'
+    assert_roman 3314,'MMMCCCXIV'
+    assert_roman 3315,'MMMCCCXV'
+    assert_roman 3316,'MMMCCCXVI'
+    assert_roman 3317,'MMMCCCXVII'
+    assert_roman 3318,'MMMCCCXVIII'
+    assert_roman 3319,'MMMCCCXIX'
+    assert_roman 3320,'MMMCCCXX'
+    assert_roman 3321,'MMMCCCXXI'
+    assert_roman 3322,'MMMCCCXXII'
+    assert_roman 3323,'MMMCCCXXIII'
+    assert_roman 3324,'MMMCCCXXIV'
+    assert_roman 3325,'MMMCCCXXV'
+    assert_roman 3326,'MMMCCCXXVI'
+    assert_roman 3327,'MMMCCCXXVII'
+    assert_roman 3328,'MMMCCCXXVIII'
+    assert_roman 3329,'MMMCCCXXIX'
+    assert_roman 3330,'MMMCCCXXX'
+    assert_roman 3331,'MMMCCCXXXI'
+    assert_roman 3332,'MMMCCCXXXII'
+    assert_roman 3333,'MMMCCCXXXIII'
+    assert_roman 3334,'MMMCCCXXXIV'
+    assert_roman 3335,'MMMCCCXXXV'
+    assert_roman 3336,'MMMCCCXXXVI'
+    assert_roman 3337,'MMMCCCXXXVII'
+    assert_roman 3338,'MMMCCCXXXVIII'
+    assert_roman 3339,'MMMCCCXXXIX'
+    assert_roman 3340,'MMMCCCXL'
+    assert_roman 3341,'MMMCCCXLI'
+    assert_roman 3342,'MMMCCCXLII'
+    assert_roman 3343,'MMMCCCXLIII'
+    assert_roman 3344,'MMMCCCXLIV'
+    assert_roman 3345,'MMMCCCXLV'
+    assert_roman 3346,'MMMCCCXLVI'
+    assert_roman 3347,'MMMCCCXLVII'
+    assert_roman 3348,'MMMCCCXLVIII'
+    assert_roman 3349,'MMMCCCXLIX'
+    assert_roman 3350,'MMMCCCL'
+    assert_roman 3351,'MMMCCCLI'
+    assert_roman 3352,'MMMCCCLII'
+    assert_roman 3353,'MMMCCCLIII'
+    assert_roman 3354,'MMMCCCLIV'
+    assert_roman 3355,'MMMCCCLV'
+    assert_roman 3356,'MMMCCCLVI'
+    assert_roman 3357,'MMMCCCLVII'
+    assert_roman 3358,'MMMCCCLVIII'
+    assert_roman 3359,'MMMCCCLIX'
+    assert_roman 3360,'MMMCCCLX'
+    assert_roman 3361,'MMMCCCLXI'
+    assert_roman 3362,'MMMCCCLXII'
+    assert_roman 3363,'MMMCCCLXIII'
+    assert_roman 3364,'MMMCCCLXIV'
+    assert_roman 3365,'MMMCCCLXV'
+    assert_roman 3366,'MMMCCCLXVI'
+    assert_roman 3367,'MMMCCCLXVII'
+    assert_roman 3368,'MMMCCCLXVIII'
+    assert_roman 3369,'MMMCCCLXIX'
+    assert_roman 3370,'MMMCCCLXX'
+    assert_roman 3371,'MMMCCCLXXI'
+    assert_roman 3372,'MMMCCCLXXII'
+    assert_roman 3373,'MMMCCCLXXIII'
+    assert_roman 3374,'MMMCCCLXXIV'
+    assert_roman 3375,'MMMCCCLXXV'
+    assert_roman 3376,'MMMCCCLXXVI'
+    assert_roman 3377,'MMMCCCLXXVII'
+    assert_roman 3378,'MMMCCCLXXVIII'
+    assert_roman 3379,'MMMCCCLXXIX'
+    assert_roman 3380,'MMMCCCLXXX'
+    assert_roman 3381,'MMMCCCLXXXI'
+    assert_roman 3382,'MMMCCCLXXXII'
+    assert_roman 3383,'MMMCCCLXXXIII'
+    assert_roman 3384,'MMMCCCLXXXIV'
+    assert_roman 3385,'MMMCCCLXXXV'
+    assert_roman 3386,'MMMCCCLXXXVI'
+    assert_roman 3387,'MMMCCCLXXXVII'
+    assert_roman 3388,'MMMCCCLXXXVIII'
+    assert_roman 3389,'MMMCCCLXXXIX'
+    assert_roman 3390,'MMMCCCXC'
+    assert_roman 3391,'MMMCCCXCI'
+    assert_roman 3392,'MMMCCCXCII'
+    assert_roman 3393,'MMMCCCXCIII'
+    assert_roman 3394,'MMMCCCXCIV'
+    assert_roman 3395,'MMMCCCXCV'
+    assert_roman 3396,'MMMCCCXCVI'
+    assert_roman 3397,'MMMCCCXCVII'
+    assert_roman 3398,'MMMCCCXCVIII'
+    assert_roman 3399,'MMMCCCXCIX'
+    assert_roman 3400,'MMMCD'
+    assert_roman 3401,'MMMCDI'
+    assert_roman 3402,'MMMCDII'
+    assert_roman 3403,'MMMCDIII'
+    assert_roman 3404,'MMMCDIV'
+    assert_roman 3405,'MMMCDV'
+    assert_roman 3406,'MMMCDVI'
+    assert_roman 3407,'MMMCDVII'
+    assert_roman 3408,'MMMCDVIII'
+    assert_roman 3409,'MMMCDIX'
+    assert_roman 3410,'MMMCDX'
+    assert_roman 3411,'MMMCDXI'
+    assert_roman 3412,'MMMCDXII'
+    assert_roman 3413,'MMMCDXIII'
+    assert_roman 3414,'MMMCDXIV'
+    assert_roman 3415,'MMMCDXV'
+    assert_roman 3416,'MMMCDXVI'
+    assert_roman 3417,'MMMCDXVII'
+    assert_roman 3418,'MMMCDXVIII'
+    assert_roman 3419,'MMMCDXIX'
+    assert_roman 3420,'MMMCDXX'
+    assert_roman 3421,'MMMCDXXI'
+    assert_roman 3422,'MMMCDXXII'
+    assert_roman 3423,'MMMCDXXIII'
+    assert_roman 3424,'MMMCDXXIV'
+    assert_roman 3425,'MMMCDXXV'
+    assert_roman 3426,'MMMCDXXVI'
+    assert_roman 3427,'MMMCDXXVII'
+    assert_roman 3428,'MMMCDXXVIII'
+    assert_roman 3429,'MMMCDXXIX'
+    assert_roman 3430,'MMMCDXXX'
+    assert_roman 3431,'MMMCDXXXI'
+    assert_roman 3432,'MMMCDXXXII'
+    assert_roman 3433,'MMMCDXXXIII'
+    assert_roman 3434,'MMMCDXXXIV'
+    assert_roman 3435,'MMMCDXXXV'
+    assert_roman 3436,'MMMCDXXXVI'
+    assert_roman 3437,'MMMCDXXXVII'
+    assert_roman 3438,'MMMCDXXXVIII'
+    assert_roman 3439,'MMMCDXXXIX'
+    assert_roman 3440,'MMMCDXL'
+    assert_roman 3441,'MMMCDXLI'
+    assert_roman 3442,'MMMCDXLII'
+    assert_roman 3443,'MMMCDXLIII'
+    assert_roman 3444,'MMMCDXLIV'
+    assert_roman 3445,'MMMCDXLV'
+    assert_roman 3446,'MMMCDXLVI'
+    assert_roman 3447,'MMMCDXLVII'
+    assert_roman 3448,'MMMCDXLVIII'
+    assert_roman 3449,'MMMCDXLIX'
+    assert_roman 3450,'MMMCDL'
+    assert_roman 3451,'MMMCDLI'
+    assert_roman 3452,'MMMCDLII'
+    assert_roman 3453,'MMMCDLIII'
+    assert_roman 3454,'MMMCDLIV'
+    assert_roman 3455,'MMMCDLV'
+    assert_roman 3456,'MMMCDLVI'
+    assert_roman 3457,'MMMCDLVII'
+    assert_roman 3458,'MMMCDLVIII'
+    assert_roman 3459,'MMMCDLIX'
+    assert_roman 3460,'MMMCDLX'
+    assert_roman 3461,'MMMCDLXI'
+    assert_roman 3462,'MMMCDLXII'
+    assert_roman 3463,'MMMCDLXIII'
+    assert_roman 3464,'MMMCDLXIV'
+    assert_roman 3465,'MMMCDLXV'
+    assert_roman 3466,'MMMCDLXVI'
+    assert_roman 3467,'MMMCDLXVII'
+    assert_roman 3468,'MMMCDLXVIII'
+    assert_roman 3469,'MMMCDLXIX'
+    assert_roman 3470,'MMMCDLXX'
+    assert_roman 3471,'MMMCDLXXI'
+    assert_roman 3472,'MMMCDLXXII'
+    assert_roman 3473,'MMMCDLXXIII'
+    assert_roman 3474,'MMMCDLXXIV'
+    assert_roman 3475,'MMMCDLXXV'
+    assert_roman 3476,'MMMCDLXXVI'
+    assert_roman 3477,'MMMCDLXXVII'
+    assert_roman 3478,'MMMCDLXXVIII'
+    assert_roman 3479,'MMMCDLXXIX'
+    assert_roman 3480,'MMMCDLXXX'
+    assert_roman 3481,'MMMCDLXXXI'
+    assert_roman 3482,'MMMCDLXXXII'
+    assert_roman 3483,'MMMCDLXXXIII'
+    assert_roman 3484,'MMMCDLXXXIV'
+    assert_roman 3485,'MMMCDLXXXV'
+    assert_roman 3486,'MMMCDLXXXVI'
+    assert_roman 3487,'MMMCDLXXXVII'
+    assert_roman 3488,'MMMCDLXXXVIII'
+    assert_roman 3489,'MMMCDLXXXIX'
+    assert_roman 3490,'MMMCDXC'
+    assert_roman 3491,'MMMCDXCI'
+    assert_roman 3492,'MMMCDXCII'
+    assert_roman 3493,'MMMCDXCIII'
+    assert_roman 3494,'MMMCDXCIV'
+    assert_roman 3495,'MMMCDXCV'
+    assert_roman 3496,'MMMCDXCVI'
+    assert_roman 3497,'MMMCDXCVII'
+    assert_roman 3498,'MMMCDXCVIII'
+    assert_roman 3499,'MMMCDXCIX'
+    assert_roman 3500,'MMMD'
+    assert_roman 3501,'MMMDI'
+    assert_roman 3502,'MMMDII'
+    assert_roman 3503,'MMMDIII'
+    assert_roman 3504,'MMMDIV'
+    assert_roman 3505,'MMMDV'
+    assert_roman 3506,'MMMDVI'
+    assert_roman 3507,'MMMDVII'
+    assert_roman 3508,'MMMDVIII'
+    assert_roman 3509,'MMMDIX'
+    assert_roman 3510,'MMMDX'
+    assert_roman 3511,'MMMDXI'
+    assert_roman 3512,'MMMDXII'
+    assert_roman 3513,'MMMDXIII'
+    assert_roman 3514,'MMMDXIV'
+    assert_roman 3515,'MMMDXV'
+    assert_roman 3516,'MMMDXVI'
+    assert_roman 3517,'MMMDXVII'
+    assert_roman 3518,'MMMDXVIII'
+    assert_roman 3519,'MMMDXIX'
+    assert_roman 3520,'MMMDXX'
+    assert_roman 3521,'MMMDXXI'
+    assert_roman 3522,'MMMDXXII'
+    assert_roman 3523,'MMMDXXIII'
+    assert_roman 3524,'MMMDXXIV'
+    assert_roman 3525,'MMMDXXV'
+    assert_roman 3526,'MMMDXXVI'
+    assert_roman 3527,'MMMDXXVII'
+    assert_roman 3528,'MMMDXXVIII'
+    assert_roman 3529,'MMMDXXIX'
+    assert_roman 3530,'MMMDXXX'
+    assert_roman 3531,'MMMDXXXI'
+    assert_roman 3532,'MMMDXXXII'
+    assert_roman 3533,'MMMDXXXIII'
+    assert_roman 3534,'MMMDXXXIV'
+    assert_roman 3535,'MMMDXXXV'
+    assert_roman 3536,'MMMDXXXVI'
+    assert_roman 3537,'MMMDXXXVII'
+    assert_roman 3538,'MMMDXXXVIII'
+    assert_roman 3539,'MMMDXXXIX'
+    assert_roman 3540,'MMMDXL'
+    assert_roman 3541,'MMMDXLI'
+    assert_roman 3542,'MMMDXLII'
+    assert_roman 3543,'MMMDXLIII'
+    assert_roman 3544,'MMMDXLIV'
+    assert_roman 3545,'MMMDXLV'
+    assert_roman 3546,'MMMDXLVI'
+    assert_roman 3547,'MMMDXLVII'
+    assert_roman 3548,'MMMDXLVIII'
+    assert_roman 3549,'MMMDXLIX'
+    assert_roman 3550,'MMMDL'
+    assert_roman 3551,'MMMDLI'
+    assert_roman 3552,'MMMDLII'
+    assert_roman 3553,'MMMDLIII'
+    assert_roman 3554,'MMMDLIV'
+    assert_roman 3555,'MMMDLV'
+    assert_roman 3556,'MMMDLVI'
+    assert_roman 3557,'MMMDLVII'
+    assert_roman 3558,'MMMDLVIII'
+    assert_roman 3559,'MMMDLIX'
+    assert_roman 3560,'MMMDLX'
+    assert_roman 3561,'MMMDLXI'
+    assert_roman 3562,'MMMDLXII'
+    assert_roman 3563,'MMMDLXIII'
+    assert_roman 3564,'MMMDLXIV'
+    assert_roman 3565,'MMMDLXV'
+    assert_roman 3566,'MMMDLXVI'
+    assert_roman 3567,'MMMDLXVII'
+    assert_roman 3568,'MMMDLXVIII'
+    assert_roman 3569,'MMMDLXIX'
+    assert_roman 3570,'MMMDLXX'
+    assert_roman 3571,'MMMDLXXI'
+    assert_roman 3572,'MMMDLXXII'
+    assert_roman 3573,'MMMDLXXIII'
+    assert_roman 3574,'MMMDLXXIV'
+    assert_roman 3575,'MMMDLXXV'
+    assert_roman 3576,'MMMDLXXVI'
+    assert_roman 3577,'MMMDLXXVII'
+    assert_roman 3578,'MMMDLXXVIII'
+    assert_roman 3579,'MMMDLXXIX'
+    assert_roman 3580,'MMMDLXXX'
+    assert_roman 3581,'MMMDLXXXI'
+    assert_roman 3582,'MMMDLXXXII'
+    assert_roman 3583,'MMMDLXXXIII'
+    assert_roman 3584,'MMMDLXXXIV'
+    assert_roman 3585,'MMMDLXXXV'
+    assert_roman 3586,'MMMDLXXXVI'
+    assert_roman 3587,'MMMDLXXXVII'
+    assert_roman 3588,'MMMDLXXXVIII'
+    assert_roman 3589,'MMMDLXXXIX'
+    assert_roman 3590,'MMMDXC'
+    assert_roman 3591,'MMMDXCI'
+    assert_roman 3592,'MMMDXCII'
+    assert_roman 3593,'MMMDXCIII'
+    assert_roman 3594,'MMMDXCIV'
+    assert_roman 3595,'MMMDXCV'
+    assert_roman 3596,'MMMDXCVI'
+    assert_roman 3597,'MMMDXCVII'
+    assert_roman 3598,'MMMDXCVIII'
+    assert_roman 3599,'MMMDXCIX'
+    assert_roman 3600,'MMMDC'
+    assert_roman 3601,'MMMDCI'
+    assert_roman 3602,'MMMDCII'
+    assert_roman 3603,'MMMDCIII'
+    assert_roman 3604,'MMMDCIV'
+    assert_roman 3605,'MMMDCV'
+    assert_roman 3606,'MMMDCVI'
+    assert_roman 3607,'MMMDCVII'
+    assert_roman 3608,'MMMDCVIII'
+    assert_roman 3609,'MMMDCIX'
+    assert_roman 3610,'MMMDCX'
+    assert_roman 3611,'MMMDCXI'
+    assert_roman 3612,'MMMDCXII'
+    assert_roman 3613,'MMMDCXIII'
+    assert_roman 3614,'MMMDCXIV'
+    assert_roman 3615,'MMMDCXV'
+    assert_roman 3616,'MMMDCXVI'
+    assert_roman 3617,'MMMDCXVII'
+    assert_roman 3618,'MMMDCXVIII'
+    assert_roman 3619,'MMMDCXIX'
+    assert_roman 3620,'MMMDCXX'
+    assert_roman 3621,'MMMDCXXI'
+    assert_roman 3622,'MMMDCXXII'
+    assert_roman 3623,'MMMDCXXIII'
+    assert_roman 3624,'MMMDCXXIV'
+    assert_roman 3625,'MMMDCXXV'
+    assert_roman 3626,'MMMDCXXVI'
+    assert_roman 3627,'MMMDCXXVII'
+    assert_roman 3628,'MMMDCXXVIII'
+    assert_roman 3629,'MMMDCXXIX'
+    assert_roman 3630,'MMMDCXXX'
+    assert_roman 3631,'MMMDCXXXI'
+    assert_roman 3632,'MMMDCXXXII'
+    assert_roman 3633,'MMMDCXXXIII'
+    assert_roman 3634,'MMMDCXXXIV'
+    assert_roman 3635,'MMMDCXXXV'
+    assert_roman 3636,'MMMDCXXXVI'
+    assert_roman 3637,'MMMDCXXXVII'
+    assert_roman 3638,'MMMDCXXXVIII'
+    assert_roman 3639,'MMMDCXXXIX'
+    assert_roman 3640,'MMMDCXL'
+    assert_roman 3641,'MMMDCXLI'
+    assert_roman 3642,'MMMDCXLII'
+    assert_roman 3643,'MMMDCXLIII'
+    assert_roman 3644,'MMMDCXLIV'
+    assert_roman 3645,'MMMDCXLV'
+    assert_roman 3646,'MMMDCXLVI'
+    assert_roman 3647,'MMMDCXLVII'
+    assert_roman 3648,'MMMDCXLVIII'
+    assert_roman 3649,'MMMDCXLIX'
+    assert_roman 3650,'MMMDCL'
+    assert_roman 3651,'MMMDCLI'
+    assert_roman 3652,'MMMDCLII'
+    assert_roman 3653,'MMMDCLIII'
+    assert_roman 3654,'MMMDCLIV'
+    assert_roman 3655,'MMMDCLV'
+    assert_roman 3656,'MMMDCLVI'
+    assert_roman 3657,'MMMDCLVII'
+    assert_roman 3658,'MMMDCLVIII'
+    assert_roman 3659,'MMMDCLIX'
+    assert_roman 3660,'MMMDCLX'
+    assert_roman 3661,'MMMDCLXI'
+    assert_roman 3662,'MMMDCLXII'
+    assert_roman 3663,'MMMDCLXIII'
+    assert_roman 3664,'MMMDCLXIV'
+    assert_roman 3665,'MMMDCLXV'
+    assert_roman 3666,'MMMDCLXVI'
+    assert_roman 3667,'MMMDCLXVII'
+    assert_roman 3668,'MMMDCLXVIII'
+    assert_roman 3669,'MMMDCLXIX'
+    assert_roman 3670,'MMMDCLXX'
+    assert_roman 3671,'MMMDCLXXI'
+    assert_roman 3672,'MMMDCLXXII'
+    assert_roman 3673,'MMMDCLXXIII'
+    assert_roman 3674,'MMMDCLXXIV'
+    assert_roman 3675,'MMMDCLXXV'
+    assert_roman 3676,'MMMDCLXXVI'
+    assert_roman 3677,'MMMDCLXXVII'
+    assert_roman 3678,'MMMDCLXXVIII'
+    assert_roman 3679,'MMMDCLXXIX'
+    assert_roman 3680,'MMMDCLXXX'
+    assert_roman 3681,'MMMDCLXXXI'
+    assert_roman 3682,'MMMDCLXXXII'
+    assert_roman 3683,'MMMDCLXXXIII'
+    assert_roman 3684,'MMMDCLXXXIV'
+    assert_roman 3685,'MMMDCLXXXV'
+    assert_roman 3686,'MMMDCLXXXVI'
+    assert_roman 3687,'MMMDCLXXXVII'
+    assert_roman 3688,'MMMDCLXXXVIII'
+    assert_roman 3689,'MMMDCLXXXIX'
+    assert_roman 3690,'MMMDCXC'
+    assert_roman 3691,'MMMDCXCI'
+    assert_roman 3692,'MMMDCXCII'
+    assert_roman 3693,'MMMDCXCIII'
+    assert_roman 3694,'MMMDCXCIV'
+    assert_roman 3695,'MMMDCXCV'
+    assert_roman 3696,'MMMDCXCVI'
+    assert_roman 3697,'MMMDCXCVII'
+    assert_roman 3698,'MMMDCXCVIII'
+    assert_roman 3699,'MMMDCXCIX'
+    assert_roman 3700,'MMMDCC'
+    assert_roman 3701,'MMMDCCI'
+    assert_roman 3702,'MMMDCCII'
+    assert_roman 3703,'MMMDCCIII'
+    assert_roman 3704,'MMMDCCIV'
+    assert_roman 3705,'MMMDCCV'
+    assert_roman 3706,'MMMDCCVI'
+    assert_roman 3707,'MMMDCCVII'
+    assert_roman 3708,'MMMDCCVIII'
+    assert_roman 3709,'MMMDCCIX'
+    assert_roman 3710,'MMMDCCX'
+    assert_roman 3711,'MMMDCCXI'
+    assert_roman 3712,'MMMDCCXII'
+    assert_roman 3713,'MMMDCCXIII'
+    assert_roman 3714,'MMMDCCXIV'
+    assert_roman 3715,'MMMDCCXV'
+    assert_roman 3716,'MMMDCCXVI'
+    assert_roman 3717,'MMMDCCXVII'
+    assert_roman 3718,'MMMDCCXVIII'
+    assert_roman 3719,'MMMDCCXIX'
+    assert_roman 3720,'MMMDCCXX'
+    assert_roman 3721,'MMMDCCXXI'
+    assert_roman 3722,'MMMDCCXXII'
+    assert_roman 3723,'MMMDCCXXIII'
+    assert_roman 3724,'MMMDCCXXIV'
+    assert_roman 3725,'MMMDCCXXV'
+    assert_roman 3726,'MMMDCCXXVI'
+    assert_roman 3727,'MMMDCCXXVII'
+    assert_roman 3728,'MMMDCCXXVIII'
+    assert_roman 3729,'MMMDCCXXIX'
+    assert_roman 3730,'MMMDCCXXX'
+    assert_roman 3731,'MMMDCCXXXI'
+    assert_roman 3732,'MMMDCCXXXII'
+    assert_roman 3733,'MMMDCCXXXIII'
+    assert_roman 3734,'MMMDCCXXXIV'
+    assert_roman 3735,'MMMDCCXXXV'
+    assert_roman 3736,'MMMDCCXXXVI'
+    assert_roman 3737,'MMMDCCXXXVII'
+    assert_roman 3738,'MMMDCCXXXVIII'
+    assert_roman 3739,'MMMDCCXXXIX'
+    assert_roman 3740,'MMMDCCXL'
+    assert_roman 3741,'MMMDCCXLI'
+    assert_roman 3742,'MMMDCCXLII'
+    assert_roman 3743,'MMMDCCXLIII'
+    assert_roman 3744,'MMMDCCXLIV'
+    assert_roman 3745,'MMMDCCXLV'
+    assert_roman 3746,'MMMDCCXLVI'
+    assert_roman 3747,'MMMDCCXLVII'
+    assert_roman 3748,'MMMDCCXLVIII'
+    assert_roman 3749,'MMMDCCXLIX'
+    assert_roman 3750,'MMMDCCL'
+    assert_roman 3751,'MMMDCCLI'
+    assert_roman 3752,'MMMDCCLII'
+    assert_roman 3753,'MMMDCCLIII'
+    assert_roman 3754,'MMMDCCLIV'
+    assert_roman 3755,'MMMDCCLV'
+    assert_roman 3756,'MMMDCCLVI'
+    assert_roman 3757,'MMMDCCLVII'
+    assert_roman 3758,'MMMDCCLVIII'
+    assert_roman 3759,'MMMDCCLIX'
+    assert_roman 3760,'MMMDCCLX'
+    assert_roman 3761,'MMMDCCLXI'
+    assert_roman 3762,'MMMDCCLXII'
+    assert_roman 3763,'MMMDCCLXIII'
+    assert_roman 3764,'MMMDCCLXIV'
+    assert_roman 3765,'MMMDCCLXV'
+    assert_roman 3766,'MMMDCCLXVI'
+    assert_roman 3767,'MMMDCCLXVII'
+    assert_roman 3768,'MMMDCCLXVIII'
+    assert_roman 3769,'MMMDCCLXIX'
+    assert_roman 3770,'MMMDCCLXX'
+    assert_roman 3771,'MMMDCCLXXI'
+    assert_roman 3772,'MMMDCCLXXII'
+    assert_roman 3773,'MMMDCCLXXIII'
+    assert_roman 3774,'MMMDCCLXXIV'
+    assert_roman 3775,'MMMDCCLXXV'
+    assert_roman 3776,'MMMDCCLXXVI'
+    assert_roman 3777,'MMMDCCLXXVII'
+    assert_roman 3778,'MMMDCCLXXVIII'
+    assert_roman 3779,'MMMDCCLXXIX'
+    assert_roman 3780,'MMMDCCLXXX'
+    assert_roman 3781,'MMMDCCLXXXI'
+    assert_roman 3782,'MMMDCCLXXXII'
+    assert_roman 3783,'MMMDCCLXXXIII'
+    assert_roman 3784,'MMMDCCLXXXIV'
+    assert_roman 3785,'MMMDCCLXXXV'
+    assert_roman 3786,'MMMDCCLXXXVI'
+    assert_roman 3787,'MMMDCCLXXXVII'
+    assert_roman 3788,'MMMDCCLXXXVIII'
+    assert_roman 3789,'MMMDCCLXXXIX'
+    assert_roman 3790,'MMMDCCXC'
+    assert_roman 3791,'MMMDCCXCI'
+    assert_roman 3792,'MMMDCCXCII'
+    assert_roman 3793,'MMMDCCXCIII'
+    assert_roman 3794,'MMMDCCXCIV'
+    assert_roman 3795,'MMMDCCXCV'
+    assert_roman 3796,'MMMDCCXCVI'
+    assert_roman 3797,'MMMDCCXCVII'
+    assert_roman 3798,'MMMDCCXCVIII'
+    assert_roman 3799,'MMMDCCXCIX'
+    assert_roman 3800,'MMMDCCC'
+    assert_roman 3801,'MMMDCCCI'
+    assert_roman 3802,'MMMDCCCII'
+    assert_roman 3803,'MMMDCCCIII'
+    assert_roman 3804,'MMMDCCCIV'
+    assert_roman 3805,'MMMDCCCV'
+    assert_roman 3806,'MMMDCCCVI'
+    assert_roman 3807,'MMMDCCCVII'
+    assert_roman 3808,'MMMDCCCVIII'
+    assert_roman 3809,'MMMDCCCIX'
+    assert_roman 3810,'MMMDCCCX'
+    assert_roman 3811,'MMMDCCCXI'
+    assert_roman 3812,'MMMDCCCXII'
+    assert_roman 3813,'MMMDCCCXIII'
+    assert_roman 3814,'MMMDCCCXIV'
+    assert_roman 3815,'MMMDCCCXV'
+    assert_roman 3816,'MMMDCCCXVI'
+    assert_roman 3817,'MMMDCCCXVII'
+    assert_roman 3818,'MMMDCCCXVIII'
+    assert_roman 3819,'MMMDCCCXIX'
+    assert_roman 3820,'MMMDCCCXX'
+    assert_roman 3821,'MMMDCCCXXI'
+    assert_roman 3822,'MMMDCCCXXII'
+    assert_roman 3823,'MMMDCCCXXIII'
+    assert_roman 3824,'MMMDCCCXXIV'
+    assert_roman 3825,'MMMDCCCXXV'
+    assert_roman 3826,'MMMDCCCXXVI'
+    assert_roman 3827,'MMMDCCCXXVII'
+    assert_roman 3828,'MMMDCCCXXVIII'
+    assert_roman 3829,'MMMDCCCXXIX'
+    assert_roman 3830,'MMMDCCCXXX'
+    assert_roman 3831,'MMMDCCCXXXI'
+    assert_roman 3832,'MMMDCCCXXXII'
+    assert_roman 3833,'MMMDCCCXXXIII'
+    assert_roman 3834,'MMMDCCCXXXIV'
+    assert_roman 3835,'MMMDCCCXXXV'
+    assert_roman 3836,'MMMDCCCXXXVI'
+    assert_roman 3837,'MMMDCCCXXXVII'
+    assert_roman 3838,'MMMDCCCXXXVIII'
+    assert_roman 3839,'MMMDCCCXXXIX'
+    assert_roman 3840,'MMMDCCCXL'
+    assert_roman 3841,'MMMDCCCXLI'
+    assert_roman 3842,'MMMDCCCXLII'
+    assert_roman 3843,'MMMDCCCXLIII'
+    assert_roman 3844,'MMMDCCCXLIV'
+    assert_roman 3845,'MMMDCCCXLV'
+    assert_roman 3846,'MMMDCCCXLVI'
+    assert_roman 3847,'MMMDCCCXLVII'
+    assert_roman 3848,'MMMDCCCXLVIII'
+    assert_roman 3849,'MMMDCCCXLIX'
+    assert_roman 3850,'MMMDCCCL'
+    assert_roman 3851,'MMMDCCCLI'
+    assert_roman 3852,'MMMDCCCLII'
+    assert_roman 3853,'MMMDCCCLIII'
+    assert_roman 3854,'MMMDCCCLIV'
+    assert_roman 3855,'MMMDCCCLV'
+    assert_roman 3856,'MMMDCCCLVI'
+    assert_roman 3857,'MMMDCCCLVII'
+    assert_roman 3858,'MMMDCCCLVIII'
+    assert_roman 3859,'MMMDCCCLIX'
+    assert_roman 3860,'MMMDCCCLX'
+    assert_roman 3861,'MMMDCCCLXI'
+    assert_roman 3862,'MMMDCCCLXII'
+    assert_roman 3863,'MMMDCCCLXIII'
+    assert_roman 3864,'MMMDCCCLXIV'
+    assert_roman 3865,'MMMDCCCLXV'
+    assert_roman 3866,'MMMDCCCLXVI'
+    assert_roman 3867,'MMMDCCCLXVII'
+    assert_roman 3868,'MMMDCCCLXVIII'
+    assert_roman 3869,'MMMDCCCLXIX'
+    assert_roman 3870,'MMMDCCCLXX'
+    assert_roman 3871,'MMMDCCCLXXI'
+    assert_roman 3872,'MMMDCCCLXXII'
+    assert_roman 3873,'MMMDCCCLXXIII'
+    assert_roman 3874,'MMMDCCCLXXIV'
+    assert_roman 3875,'MMMDCCCLXXV'
+    assert_roman 3876,'MMMDCCCLXXVI'
+    assert_roman 3877,'MMMDCCCLXXVII'
+    assert_roman 3878,'MMMDCCCLXXVIII'
+    assert_roman 3879,'MMMDCCCLXXIX'
+    assert_roman 3880,'MMMDCCCLXXX'
+    assert_roman 3881,'MMMDCCCLXXXI'
+    assert_roman 3882,'MMMDCCCLXXXII'
+    assert_roman 3883,'MMMDCCCLXXXIII'
+    assert_roman 3884,'MMMDCCCLXXXIV'
+    assert_roman 3885,'MMMDCCCLXXXV'
+    assert_roman 3886,'MMMDCCCLXXXVI'
+    assert_roman 3887,'MMMDCCCLXXXVII'
+    assert_roman 3888,'MMMDCCCLXXXVIII'
+    assert_roman 3889,'MMMDCCCLXXXIX'
+    assert_roman 3890,'MMMDCCCXC'
+    assert_roman 3891,'MMMDCCCXCI'
+    assert_roman 3892,'MMMDCCCXCII'
+    assert_roman 3893,'MMMDCCCXCIII'
+    assert_roman 3894,'MMMDCCCXCIV'
+    assert_roman 3895,'MMMDCCCXCV'
+    assert_roman 3896,'MMMDCCCXCVI'
+    assert_roman 3897,'MMMDCCCXCVII'
+    assert_roman 3898,'MMMDCCCXCVIII'
+    assert_roman 3899,'MMMDCCCXCIX'
+    assert_roman 3900,'MMMCM'
+    assert_roman 3901,'MMMCMI'
+    assert_roman 3902,'MMMCMII'
+    assert_roman 3903,'MMMCMIII'
+    assert_roman 3904,'MMMCMIV'
+    assert_roman 3905,'MMMCMV'
+    assert_roman 3906,'MMMCMVI'
+    assert_roman 3907,'MMMCMVII'
+    assert_roman 3908,'MMMCMVIII'
+    assert_roman 3909,'MMMCMIX'
+    assert_roman 3910,'MMMCMX'
+    assert_roman 3911,'MMMCMXI'
+    assert_roman 3912,'MMMCMXII'
+    assert_roman 3913,'MMMCMXIII'
+    assert_roman 3914,'MMMCMXIV'
+    assert_roman 3915,'MMMCMXV'
+    assert_roman 3916,'MMMCMXVI'
+    assert_roman 3917,'MMMCMXVII'
+    assert_roman 3918,'MMMCMXVIII'
+    assert_roman 3919,'MMMCMXIX'
+    assert_roman 3920,'MMMCMXX'
+    assert_roman 3921,'MMMCMXXI'
+    assert_roman 3922,'MMMCMXXII'
+    assert_roman 3923,'MMMCMXXIII'
+    assert_roman 3924,'MMMCMXXIV'
+    assert_roman 3925,'MMMCMXXV'
+    assert_roman 3926,'MMMCMXXVI'
+    assert_roman 3927,'MMMCMXXVII'
+    assert_roman 3928,'MMMCMXXVIII'
+    assert_roman 3929,'MMMCMXXIX'
+    assert_roman 3930,'MMMCMXXX'
+    assert_roman 3931,'MMMCMXXXI'
+    assert_roman 3932,'MMMCMXXXII'
+    assert_roman 3933,'MMMCMXXXIII'
+    assert_roman 3934,'MMMCMXXXIV'
+    assert_roman 3935,'MMMCMXXXV'
+    assert_roman 3936,'MMMCMXXXVI'
+    assert_roman 3937,'MMMCMXXXVII'
+    assert_roman 3938,'MMMCMXXXVIII'
+    assert_roman 3939,'MMMCMXXXIX'
+    assert_roman 3940,'MMMCMXL'
+    assert_roman 3941,'MMMCMXLI'
+    assert_roman 3942,'MMMCMXLII'
+    assert_roman 3943,'MMMCMXLIII'
+    assert_roman 3944,'MMMCMXLIV'
+    assert_roman 3945,'MMMCMXLV'
+    assert_roman 3946,'MMMCMXLVI'
+    assert_roman 3947,'MMMCMXLVII'
+    assert_roman 3948,'MMMCMXLVIII'
+    assert_roman 3949,'MMMCMXLIX'
+    assert_roman 3950,'MMMCML'
+    assert_roman 3951,'MMMCMLI'
+    assert_roman 3952,'MMMCMLII'
+    assert_roman 3953,'MMMCMLIII'
+    assert_roman 3954,'MMMCMLIV'
+    assert_roman 3955,'MMMCMLV'
+    assert_roman 3956,'MMMCMLVI'
+    assert_roman 3957,'MMMCMLVII'
+    assert_roman 3958,'MMMCMLVIII'
+    assert_roman 3959,'MMMCMLIX'
+    assert_roman 3960,'MMMCMLX'
+    assert_roman 3961,'MMMCMLXI'
+    assert_roman 3962,'MMMCMLXII'
+    assert_roman 3963,'MMMCMLXIII'
+    assert_roman 3964,'MMMCMLXIV'
+    assert_roman 3965,'MMMCMLXV'
+    assert_roman 3966,'MMMCMLXVI'
+    assert_roman 3967,'MMMCMLXVII'
+    assert_roman 3968,'MMMCMLXVIII'
+    assert_roman 3969,'MMMCMLXIX'
+    assert_roman 3970,'MMMCMLXX'
+    assert_roman 3971,'MMMCMLXXI'
+    assert_roman 3972,'MMMCMLXXII'
+    assert_roman 3973,'MMMCMLXXIII'
+    assert_roman 3974,'MMMCMLXXIV'
+    assert_roman 3975,'MMMCMLXXV'
+    assert_roman 3976,'MMMCMLXXVI'
+    assert_roman 3977,'MMMCMLXXVII'
+    assert_roman 3978,'MMMCMLXXVIII'
+    assert_roman 3979,'MMMCMLXXIX'
+    assert_roman 3980,'MMMCMLXXX'
+    assert_roman 3981,'MMMCMLXXXI'
+    assert_roman 3982,'MMMCMLXXXII'
+    assert_roman 3983,'MMMCMLXXXIII'
+    assert_roman 3984,'MMMCMLXXXIV'
+    assert_roman 3985,'MMMCMLXXXV'
+    assert_roman 3986,'MMMCMLXXXVI'
+    assert_roman 3987,'MMMCMLXXXVII'
+    assert_roman 3988,'MMMCMLXXXVIII'
+    assert_roman 3989,'MMMCMLXXXIX'
+    assert_roman 3990,'MMMCMXC'
+    assert_roman 3991,'MMMCMXCI'
+    assert_roman 3992,'MMMCMXCII'
+    assert_roman 3993,'MMMCMXCIII'
+    assert_roman 3994,'MMMCMXCIV'
+    assert_roman 3995,'MMMCMXCV'
+    assert_roman 3996,'MMMCMXCVI'
+    assert_roman 3997,'MMMCMXCVII'
+    assert_roman 3998,'MMMCMXCVIII'
+    assert_roman 3999,'MMMCMXCIX'
   end
 
 end
