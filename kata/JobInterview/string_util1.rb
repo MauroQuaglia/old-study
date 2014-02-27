@@ -21,6 +21,14 @@ class StringUtil1
   end
 
   def normalizeSpaces3(s)
+    r=''; b = ' ' + s + ' '
+    for i in 0...b.length
+      r += b[i] if b[i] != ' ' || r[-1] != ' '
+    end
+    r[1...-1]
+  end
+
+  def normalizeSpaces4(s)
     s.gsub(/\s+/, ' ').strip
   end
 
