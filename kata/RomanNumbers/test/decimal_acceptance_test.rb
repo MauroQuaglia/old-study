@@ -5,6 +5,7 @@ class DecimalAcceptanceTest < Test::Unit::TestCase
 
   def assert_decimal(decimal, roman)
     assert_equal roman, Decimal.new.to_roman(decimal)
+    assert_equal roman, Decimal.new.to_roman2(decimal)
   end
 
   def test_acceptance
