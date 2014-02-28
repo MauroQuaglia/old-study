@@ -27,4 +27,10 @@ class DecimalTest < Test::Unit::TestCase
     assert_equal 'VI', Decimal.new.to_roman(6)
   end
 
+  def test_prova
+    d = 'a'
+    d << 'ddd'
+    puts d
+  end
+
 end

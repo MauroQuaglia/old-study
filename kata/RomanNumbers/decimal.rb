@@ -17,7 +17,7 @@ class Decimal
         1 => 'I'
     }
 
-    @r = [
+    @roman2 = [
         {1 => 'I'},
         {4 => 'IV'},
         {5 => 'V'},
@@ -38,20 +38,34 @@ class Decimal
   def to_roman(decimal)
     s = ''
     for item in @roman.keys.sort.reverse
-      integer_part = decimal / item
-      s += @roman[item] * integer_part
-      decimal = decimal - integer_part * item
+      quotient = decimal / item
+      s += @roman[item] * quotient
+      decimal = decimal - quotient * item
     end
     s
   end
 
   def to_roman2(decimal)
-    add_symbol(decimal, '', @r.length-1)
+    add_symbol(decimal, '', @roman2.length-1)
   end
 
-  def add_symbol(d, r, i)
-    r += @r[i].values[0] * (d / @r[i].keys[0])
-    i >= 1 ? add_symbol( d - (d / @r[i].keys[0]) * @r[i].keys[0], r, i-1) : r
+  private 
+  
+  def add_symbol(current_decimal, current_roman, index)
+    quotient = current_decimal / decimal(index)
+    rest = current_decimal - quotient * decimal(index)
+
+    current_roman += roman(index) * quotient
+
+    index.zero? ? current_roman : add_symbol(rest, current_roman, index-1)
+  end
+
+  def roman(i)
+    @roman2[i].values.first
+  end
+
+  def decimal(i)
+    @roman2[i].keys.first
   end
 
 end
