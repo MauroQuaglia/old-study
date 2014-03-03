@@ -1,11 +1,12 @@
 require 'test-unit'
-require '../decimal'
+require '../decimal1'
+require '../decimal2'
 
 class DecimalAcceptanceTest < Test::Unit::TestCase
 
   def assert_decimal(decimal, roman)
-    assert_equal roman, Decimal.new.to_roman(decimal)
-    assert_equal roman, Decimal.new.to_roman2(decimal)
+    assert_equal roman, Decimal1.new.to_roman(decimal)
+    assert_equal roman, Decimal2.new.to_roman(decimal)
   end
 
   def test_acceptance
