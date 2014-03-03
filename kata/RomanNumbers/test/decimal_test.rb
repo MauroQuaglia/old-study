@@ -5,7 +5,6 @@ class DecimalTest < Test::Unit::TestCase
 
   def test_one
     assert_equal 'I', Decimal1.new.to_roman(1)
-    puts 5.divmod(1)
   end
 
   def test_two

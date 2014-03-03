@@ -22,9 +22,9 @@ class Decimal1
   def to_roman(decimal)
     s = ''
     @roman.keys.sort.reverse.each do |item|
-      quotient = decimal / item
-      s += @roman[item] * quotient
-      decimal = decimal - quotient * item
+      result=decimal.divmod(item)
+      s += @roman[item] * result[0]
+      decimal = result[1]
     end
     s
   end
