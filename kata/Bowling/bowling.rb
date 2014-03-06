@@ -1,33 +1,14 @@
+require '../frame'
+
 class Bowling
 
-  def initialize
-    @current_score=[]
+  def shots(shots)
+    @shots = shots
   end
 
-  def pins_knocked_down(number)
-    @current_score.push(number)
+  def frame(i)
+    Frame.new(@shots)
   end
 
-  def score
-    @current_score.inject { |sum, x| sum + x }
-  end
-
-  def info
-    'Frame '+ frame + ' - Shot ' + shot + '; Pins knocked down: ' + pins
-  end
-
-  private
-
-  def frame
-    (((@current_score.length-1) / 2)+1).to_s
-  end
-
-  def shot
-    @current_score.length.odd? ? '1' : '2'
-  end
-
-  def pins
-    @current_score.last.to_s
-  end
 
 end
