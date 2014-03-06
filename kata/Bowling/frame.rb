@@ -5,21 +5,21 @@ class Frame
   end
 
   def score
-    return sum(@shots) if strike
-    return sum(@shots) if spare
-    sum(@shots[0..1])
+    strike? || spare? ? sum(@shots) : sum(@shots[0..1])
   end
+
+  private
 
   def sum(shots)
     shots.inject { |s, x| s + x }
   end
 
-  def strike
-    @shots[0] == 10
+  def strike?
+    @shots.first == 10
   end
 
-  def spare
-    @shots[0] + @shots[1] == 10
+  def spare?
+    sum(@shots[0..1]) == 10
   end
 
 end
