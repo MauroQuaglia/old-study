@@ -24,3 +24,29 @@ Se nell'ultimo frame della partita viene effettuato uno spare o uno strike, si e
 tiri addizionali per permettere il calcolo del punteggio del frame, dato che, come si è visto,
 il punteggio in questi casi deve tener conto dei tiri successivi. Nel caso si sia fatto strike,
 i tiri addizionali saranno due, mentre per lo spare si effettuerà solo un altro tiro.
+
+----
+
+Test di accettazione
+* frame1 -> 1, 4
+* frame2 -> 4, 5
+* frame3 -> 6, 4
+* frame4 -> 5, 5
+* frame5 -> 0, 10
+* frame6 -> 0, 1
+* frame7 -> 7, 3
+* frame8 -> 6, 4
+* frame9 -> 10
+* frame10 -> 2, 8, 6
+
+Verificare che il punteggio sia:
+* frame1 -> 5
+* frame2 -> 14
+* frame3 -> 29
+* frame4 -> 49
+* frame5 -> 60
+* frame6 -> 61
+* frame7 -> 77
+* frame8 -> 97
+* frame9 -> 117
+* frame10 -> 133

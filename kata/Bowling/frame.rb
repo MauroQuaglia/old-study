@@ -1,7 +1,7 @@
 class Frame
 
   def initialize(shots)
-    @shots = shots
+    @shots = shots.push(0, 0)
   end
 
   def score
