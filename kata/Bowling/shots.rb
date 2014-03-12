@@ -6,7 +6,7 @@ class Shots
 
   def at_frames(number)
     i=number-1
-    @shots[i*2..(i*2)+1].compact
+    @shots[i*2..(i*2)+2].compact
   end
 
   def frames_numbers
