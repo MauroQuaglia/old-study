@@ -1,11 +1,12 @@
 class Frame
 
   def initialize(shots)
-    @shots = shots.push(0, 0)
+    @shots = shots.compact.push(0, 0)
   end
 
   def score
-    strike? || spare? ? sum(@shots) : sum(@shots[0..1])
+    return @shots.first + @shots[1] + @shots[2] if strike? || spare?
+    return @shots.first + @shots[1]
   end
 
   private
@@ -19,7 +20,7 @@ class Frame
   end
 
   def spare?
-    sum(@shots[0..1]) == 10
+    @shots.first + @shots[1] == 10
   end
 
 end

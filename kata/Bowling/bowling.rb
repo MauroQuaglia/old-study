@@ -12,8 +12,8 @@ class Bowling
 
   def total_score
     score=0
-    for i in 1..@shots.frames_numbers
-      score += frame(i).score
+    @shots.frames_numbers.times do |n|
+      score += frame(n+1).score if n != 10
     end
     score
   end

@@ -21,4 +21,7 @@ class FrameTest < Test::Unit::TestCase
     assert_equal 5, frame.score
   end
 
+
+
+
 end
