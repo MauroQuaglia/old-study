@@ -13,9 +13,7 @@ end
 class SplitCharacterFilter
   def perform(value)
     value = value.scan(/.{1,5}/)
-    while value.last.length < 5
-      value.last << 'X'
-    end
+    value.last << 'X' while value.last.length < 5
     value.join(' ')
   end
 end

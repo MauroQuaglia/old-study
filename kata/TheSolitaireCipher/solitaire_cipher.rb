@@ -2,12 +2,12 @@ require '../filters'
 
 class SolitaireCipher
 
-  def initialize
-    @filters = [RemoveNoLetterFilter.new, UppercaseFilter.new, SplitCharacterFilter.new]
+  def initialize(filters)
+    @filters = filters
   end
 
   def encode(value)
-    @filters.each{|filter| value=filter.perform(value)}
+    @filters.each{|filter| value=filter.new.perform(value)}
     value
   end
 end
