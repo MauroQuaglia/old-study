@@ -43,6 +43,12 @@ class SolitaireCipherAcceptanceTest < Test::Unit::TestCase
         @value, [7, 12, 14, 3, 17, 13, 10, 1, 6, 6, 6, 22, 15, 13, 2, 10, 9, 25, 3, 2])
   end
 
+  def test_number_to_letter_filter
+    assert_solitare_chiper(
+        [RemoveNoLetterFilter, UppercaseFilter, SplitCharacterFilter, LetterToNumberFilter, NumberGeneratorFilter, NumberToLetterFilter],
+        @value, 'GLNCQMJAFFFVOMBJIYCB')
+  end
+
   private
 
   def assert_solitare_chiper(filters, value, result)
