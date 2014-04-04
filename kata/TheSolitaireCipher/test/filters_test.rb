@@ -23,15 +23,47 @@ class FiltersTest < Test::Unit::TestCase
   end
 
   def test_letter_to_number_filter
-    assert_letter_to_number_filter('a', '1')
-    assert_letter_to_number_filter('A', '1')
-    assert_letter_to_number_filter('l', '12')
-    assert_letter_to_number_filter('z', '26')
-    assert_letter_to_number_filter('ab', '1 2')
-    assert_letter_to_number_filter('a b', '1  2')
+    assert_letter_to_number_filter('a', [1])
+    assert_letter_to_number_filter('A', [1])
+    assert_letter_to_number_filter('l', [12])
+    assert_letter_to_number_filter('z', [26])
+    assert_letter_to_number_filter('ab', [1, 2])
+    assert_letter_to_number_filter('a b', [1, 2])
   end
 
+  def test_number_generator_filter
+    assert_number_generator_filter(
+        [-4, -23, -10, -24, -8, -25, -18, -6, -4, -7, -20, -13, -19, -8, -16, -21, -21, -18, -24, -10],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+  end
+
+  def test_number_generator_filter_with_limit_26
+    assert_number_generator_filter(
+        [3, 15, 4, 5, 9, 14, 18, 21, 2, 25, 12, 9, 22, 5, 12, 15, 14, 7, 5, 18],
+        [7, 12, 14, 3, 17, 13, 10, 1, 6, 6, 6, 22, 15, 13, 2, 10, 9, 25, 3, 2])
+  end
+
+  def test_number_to_letter_filter
+    assert_number_to_letter_filter([1], 'A')
+    assert_number_to_letter_filter([12], 'L')
+    assert_number_to_letter_filter([26], 'Z')
+    assert_number_to_letter_filter([1, 2], 'AB')
+  end
+
+  def test_prova
+
+  end
+
+
   private
+
+  def assert_number_to_letter_filter(value, result)
+    assert_equal result, NumberToLetterFilter.new.perform(value)
+  end
+
+  def assert_number_generator_filter(value, result)
+    assert_equal result, NumberGeneratorFilter.new.perform(value)
+  end
 
   def assert_letter_to_number_filter(value, result)
     assert_equal result, LetterToNumberFilter.new.perform(value)
