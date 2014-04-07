@@ -17,9 +17,13 @@ class FiltersTest < Test::Unit::TestCase
   end
 
   def test_split_character_filter
-    assert_split_character_filter('a', 'aXXXX')
-    assert_split_character_filter('AAAAA', 'AAAAA')
-    assert_split_character_filter('aaaaaa', 'aaaaa aXXXX')
+    assert_split_character_filter('aaaaa', 'aaaaa')
+    assert_split_character_filter('AAAAAAAAAAAA', 'AAAAA AAAAA AA')
+  end
+
+  def test_complete_string_filter
+    assert_complete_string_filter('aaaaa', 'aaaaa')
+    assert_complete_string_filter('AAAAAAA', 'AAAAAAAXXX')
   end
 
   def test_letter_to_number_filter
@@ -79,6 +83,10 @@ class FiltersTest < Test::Unit::TestCase
 
   def assert_split_character_filter(value, result)
     assert_equal result, SplitCharacterFilter.new.perform(value)
+  end
+
+  def assert_complete_string_filter(value, result)
+    assert_equal result, CompleteStringFilter.new.perform(value)
   end
 
 end

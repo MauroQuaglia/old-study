@@ -12,9 +12,15 @@ end
 
 class SplitCharacterFilter
   def perform(value)
+    value.scan(/.{1,5}/).join(' ')
+  end
+end
+
+class CompleteStringFilter
+  def perform(value)
     value = value.scan(/.{1,5}/)
     value.last << 'X' while value.last.length < 5
-    value.join(' ')
+    value.join('')
   end
 end
 
