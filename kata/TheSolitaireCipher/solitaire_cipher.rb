@@ -6,8 +6,9 @@ class SolitaireCipher
     @filters = filters
   end
 
-  def encode(value)
-    @filters.each{|filter| value=filter.new.perform(value)}
-    value
+  def encrypt(value)
+    value.downcase!
+    @filters.each{|filter| value=filter.new.encrypt(value)}
+    value.upcase!
   end
 end
