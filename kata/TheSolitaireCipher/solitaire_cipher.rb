@@ -8,7 +8,7 @@ class SolitaireCipher
 
   def encrypt(value)
     value.downcase!
-    @filters.each{|filter| value=filter.new.encrypt(value)}
+    @filters.each{|filter| value=filter.new.do(value)}
     value.upcase!
   end
 end

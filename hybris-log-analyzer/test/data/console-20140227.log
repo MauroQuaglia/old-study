@@ -1,0 +1,9 @@
+STATUS | wrapper  | main    | 2014/02/27 01:54:10.368 | Pinging the JVM took 1 seconds to respond.
+INFO   | jvm 1    | main    | 2014/02/27 03:30:11.575 | [0;33mWARN  [oldCartRemovalCronJob::de.hybris.platform.servicelayer.internal.jalo.ServicelayerJob] (oldCartRemovalCronJob) [OldCartRemovalJob] There is no sites defined for oldCartRemovalCronJob
+INFO   | jvm 1    | main    | 2014/02/27 03:30:12.076 | [m
+STATUS | wrapper  | main    | 2014/02/27 09:19:53.902 | INT trapped.  Shutting down.
+STATUS | wrapper  | main    | 2014/02/27 09:19:54.110 | INT trapped.  Forcing immediate shutdown.
+ERROR  | wrapper  | main    | 2014/02/27 09:19:54.212 | JVM did not exit on request, terminated
+STATUS | wrapper  | main    | 2014/02/27 09:19:54.317 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | main    | 2014/02/27 09:19:54.317 | JVM received a signal SIGKILL (9).
+STATUS | wrapper  | main    | 2014/02/27 09:19:54.519 | <-- Wrapper Stopped

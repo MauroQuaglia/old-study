@@ -1,0 +1,19 @@
+AT1-validazione pagina vuota
+* fornisco in input un file di testo vuoto
+* verifico che è valido
+
+AT2-validazione pagina HTML con contenuto scorretto
+* creo una pagina HTML contenente un testo in un tag div non chiuso correttamente
+* fornisco in input la pagina
+* verifico che non è valida
+
+AT3-validazione pagina HTML vuota
+* creo una pagina HTML vuota W3C valida
+* fornisco in input la pagina
+* verifico che è valido
+
+AT4-validazione pagina HTML con contenuto corretto
+* creo una pagina HTML contenente un testo in un tag div corretto
+* fornisco in input la pagina
+* verifico che è valido
+

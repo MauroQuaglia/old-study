@@ -5,9 +5,8 @@ class AcceptanceTest < Test::Unit::TestCase
 
   def setup
     @solitaire_cipher=SolitaireCipher.new(
-        [LetterFilter, CompleteStringFilter,
-        LetterToNumberFilter, NumberGeneratorFilter, NumberToLetterFilter,
-        SplitCharacterFilter])
+        [LetterFilter, NormalizeFilter, LetterToNumber, NumberGeneratorFilter, NumberToLetter, SplitFilter])
+
   end
 
   def test_encrypt
