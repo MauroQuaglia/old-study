@@ -7,7 +7,6 @@ class Analyzer
 
   def parse(line)
     return if line == ''
-
     tokens = line.split('|')
     if tokens[0].strip == @keyword
       @errors[tokens[4].strip] += 1
@@ -18,8 +17,12 @@ class Analyzer
     @errors.size > 0
   end
 
-  def errors
-    "#{@errors.size} - ERROR - JVM did not exit on request, terminated"
+  def report
+    report=''
+    @errors.each do |key, value|
+      report << "#{value} - #{@keyword} - #{key}"
+    end
+    report
   end
 
 end
