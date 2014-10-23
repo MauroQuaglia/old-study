@@ -1,3 +1,0 @@
-AT1-log vuoto non riporta null
-* in: file vuoto
-* out: "Niente da segnalare..."
