@@ -13,14 +13,10 @@ class Analyzer
     end
   end
 
-  def has_errors?
-    @errors.size > 0
-  end
-
   def report
     report=''
     @errors.each do |key, value|
-      report << "#{value} - #{@keyword} - #{key}"
+      report << "#{value} - #{@keyword} - #{key}\n"
     end
     report
   end
