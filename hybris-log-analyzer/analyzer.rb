@@ -14,9 +14,11 @@ class Analyzer
   end
 
   def report
-    report=''
+    return '' if @errors.empty?
+
+    report="#{@keyword}\n"
     @errors.each do |key, value|
-      report << "#{value} - #{@keyword} - #{key}\n"
+      report << "#{value} - #{key}\n"
     end
     report
   end

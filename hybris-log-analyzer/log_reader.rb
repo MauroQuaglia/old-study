@@ -2,8 +2,8 @@ require_relative 'analyzer'
 
 class LogReader
 
-  def initialize
-    @analyzer=Analyzer.new('ERROR')
+  def initialize(keyword)
+    @analyzer=Analyzer.new(keyword)
   end
 
   def parse(path)
