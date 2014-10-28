@@ -7,9 +7,10 @@ class LogReader
   end
 
   def parse(path)
-    file = File.open(path)
-    file.each_line do |line|
-      @analyzer.parse(line)
+    Dir.glob(path + '/*.log') do |file|
+      File.open(file).each_line do |line|
+        @analyzer.parse(line)
+      end
     end
     @analyzer
   end
