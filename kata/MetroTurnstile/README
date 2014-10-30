@@ -1,0 +1,25 @@
+Scrivere il software di gestione di un tornello della metropolitana.
+
+Per l'input/output usare una console.
+
+L'input è dato da:
+ * tipo di biglietto
+   SINGOLA CORSA
+   ABBONAMENTO
+   GIORNALIERO
+   SETTIMANALE
+   MENSILE
+ * orario della timbratura per singola corsa:
+   30/10/2014 15:30
+   01/11/2014 06:30
+
+ * se il biglietto è valido (input: GIORNALIERO 30/10/2014 15:30) lo speaker del tornello riproduce un certo suono (output: BEEP OK) altrimenti un altro (output: BEEP KO)
+
+ * Il tornello dispone anche di un lettore di chip per abbonamenti che possono essere:
+   giornalieri
+   mensili
+   settimanali
+
+ * visualizzare il tipo di abbonamento (output: DISPLAY giornaliero)
+ * suono diverso per ogni tipo di abbonamento (output: BEEP giornaliero OK)
+ * il biglietto per corsa singola vale per 72 minuti se passo nel tornello il biglietto prima della scadenza apre il tornello

@@ -29,4 +29,12 @@ class AnalyzerTest < Test::Unit::TestCase
     assert_equal("ERROR\n1 - This is the error 1!\n1 - This is the error 2!\n", @analyzer.report)
   end
 
+  def test_sort_by_values
+    @analyzer.parse('ERROR  | wrapper  | main    | 2014/02/24 16:49:31.026 | This is the error 2!')
+    @analyzer.parse('ERROR  | wrapper  | main    | 2014/02/24 16:49:31.026 | This is the error 1!')
+    @analyzer.parse('ERROR  | wrapper  | main    | 2014/02/24 16:49:31.026 | This is the error 1!')
+
+    assert_equal("ERROR\n2 - This is the error 1!\n1 - This is the error 2!\n", @analyzer.report)
+  end
+
 end
