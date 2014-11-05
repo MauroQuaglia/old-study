@@ -1,18 +1,13 @@
+require 'time'
+
 class Turnstile
 
-  def initialize(subscription)
-    @subscription = subscription
-
-    @subscriptions = Set.new
-    @subscriptions.add('SINGOLA CORSA')
-    @subscriptions.add('ABBONAMENTO')
-    @subscriptions.add('GIORNALIERO')
-    @subscriptions.add('SETTIMANALE')
-    @subscriptions.add('MENSILE')
+  def initialize(time)
+    @time = time
   end
 
-  def is_valid?
-    @subscriptions.include?(@subscription)
+  def obliterates(ticket)
+    ticket.obliterated_at(Time.now)
   end
 
 end
