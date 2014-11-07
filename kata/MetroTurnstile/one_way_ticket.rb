@@ -6,18 +6,9 @@ class OneWayTicket
     @times = []
   end
 
-  def obliterated_at(time)
+  def scan_at(time)
     @times << time
-
-    if @times.count == 1
-     return 'BEEP OK'
-    end
-
-    if (@times.last - @times.first > 72 * 60)
-      return 'BEEP KO'
-    end
-
-    'BEEP OK'
+    @times.last - @times.first >= 72 * 60 ? 'BEEP KO' : 'BEEP OK'
   end
 
 end
