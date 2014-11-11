@@ -1,21 +1,15 @@
 require 'test-unit'
-require 'time'
+require 'date'
 require_relative '../daily_ticket'
 
 class DailyTicketTest < Test::Unit::TestCase
 
   def setup
     @ticket = DailyTicket.new
-    @now = Time.now
   end
-  #* a DAILY ticket generates two lines in output.
-  # The first line contains the type of the ticket:
-  # DISPLAY DAILY and the second line should be
-  # BEEP DAILY OK if it's valid or BEEP DAILY KO otherwise.
-  # A DAILY ticket expires at midnight of the first swipe today.
 
   def test_scan_daily_ticket_valid
-    assert_equal "DISPLAY DAILY\nBEEP DAILY OK", @ticket.scan_at(Time.now)
+    assert_equal "DISPLAY DAILY\nBEEP DAILY OK", @ticket.scan_at(Date.today)
   end
 
   def test_scan_daily_ticket_still_valid

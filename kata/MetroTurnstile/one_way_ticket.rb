@@ -1,5 +1,3 @@
-require 'time'
-
 class OneWayTicket
 
   def initialize
