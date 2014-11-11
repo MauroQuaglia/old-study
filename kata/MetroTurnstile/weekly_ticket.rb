@@ -6,8 +6,13 @@ class WeeklyTicket
 
   def scan_at(time)
     @times << time
+    @times.last.cweek == @times.first.cweek ? message('OK') : message('KO')
+  end
 
-    @times.last.cweek == @times.first.cweek ? "DISPLAY WEEKLY\nBEEP WEEKLY OK" : "DISPLAY WEEKLY\nBEEP WEEKLY KO"
+  private
+
+  def message(value)
+    "DISPLAY WEEKLY\nBEEP WEEKLY #{value}"
   end
 
 end
