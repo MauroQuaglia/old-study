@@ -1,9 +1,5 @@
-require 'time'
+require 'date'
+require_relative 'ticket_shop'
 
-class Turnstile
-
-  def scan(ticket)
-    ticket.scan_at(Time.now)
-  end
-
-end
+ticket_type = ARGV[0]
+ticket = TicketShop.new.get(ticket_type)
