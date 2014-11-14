@@ -1,21 +1,23 @@
 require 'test-unit'
 require 'date'
+require_relative 'time_support'
 require_relative '../weekly_ticket'
 
 class WeeklyTicketTest < Test::Unit::TestCase
+  include TimeSupport
 
   def setup
     @ticket = WeeklyTicket.new
   end
 
-  def test_scan_today
-    assert_equal ok, @ticket.scan_at(Date.today)
+  def test_scan_now
+    assert_equal ok, @ticket.scan_at(DateTime.now)
   end
 
   def test_scan_in_the_same_week
-    monday = Date.new(2014, 10, 20)
-    saturday = Date.new(2014, 10, 25)
-    sunday = Date.new(2014, 10, 26)
+    monday = DateTime.new(2014, 10, 20)
+    saturday = DateTime.new(2014, 10, 25)
+    sunday = DateTime.new(2014, 10, 26)
 
     assert_equal ok, @ticket.scan_at(monday)
     assert_equal ok, @ticket.scan_at(saturday)
@@ -23,8 +25,8 @@ class WeeklyTicketTest < Test::Unit::TestCase
   end
 
   def test_scan_in_the_different_week
-    monday = Date.new(2014, 10, 20)
-    next_monday = Date.new(2014, 10, 27)
+    monday = DateTime.new(2014, 10, 20)
+    next_monday = monday + days(7)
 
     assert_equal ok, @ticket.scan_at(monday)
     assert_equal ko, @ticket.scan_at(next_monday)

@@ -1,12 +1,14 @@
 require 'test-unit'
-require 'time'
+require 'date'
+require_relative 'time_support'
 require_relative '../one_way_ticket'
 
 class OneWayTicketTest < Test::Unit::TestCase
+ include TimeSupport
 
   def setup
     @ticket = OneWayTicket.new
-    @now = Time.now
+    @now = DateTime.now
   end
 
   def test_scan_now
@@ -15,12 +17,17 @@ class OneWayTicketTest < Test::Unit::TestCase
 
   def test_scan_when_still_valid
     assert_equal ok, @ticket.scan_at(@now)
-    assert_equal ok, @ticket.scan_at(@now + 71 * 60)
+    assert_equal ok, @ticket.scan_at(@now + minutes(71))
   end
 
   def test_scan_when_expired
     assert_equal ok, @ticket.scan_at(@now)
-    assert_equal ko, @ticket.scan_at(@now + 72 * 60)
+    assert_equal ko, @ticket.scan_at(@now + minutes(72))
+  end
+
+  def test_scan_one_year_later
+    assert_equal ok, @ticket.scan_at(@now)
+    assert_equal ko, @ticket.scan_at(@now + years(1))
   end
 
   def ok

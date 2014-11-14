@@ -6,7 +6,7 @@ class OneWayTicket
 
   def scan_at(time)
     @times << time
-    @times.last - @times.first >= 72 * 60 ? message('KO') : message('OK')
+    @times.last.to_time - @times.first.to_time >= 72 * 60 ? message('KO') : message('OK')
   end
 
   private
