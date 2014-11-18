@@ -1,13 +1,13 @@
 require 'test-unit'
 require 'date'
 require_relative 'time_support'
-require_relative '../weekly_ticket'
+require_relative '../ticket_shop'
 
 class WeeklyTicketTest < Test::Unit::TestCase
   include TimeSupport
 
   def setup
-    @ticket = WeeklyTicket.new
+    @ticket = TicketShop.new.get('WEEKLY')
     @monday = DateTime.new(2014, 10, 20)
     assert_true @monday.monday?
   end

@@ -1,13 +1,13 @@
 require 'test-unit'
 require 'date'
 require_relative 'time_support'
-require_relative '../daily_ticket'
+require_relative '../ticket_shop'
 
 class DailyTicketTest < Test::Unit::TestCase
   include TimeSupport
 
   def setup
-    @ticket = DailyTicket.new
+    @ticket = TicketShop.new.get('DAILY')
   end
 
   def test_scan_now

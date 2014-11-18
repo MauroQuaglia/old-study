@@ -1,13 +1,13 @@
 require 'test-unit'
 require 'date'
 require_relative 'time_support'
-require_relative '../one_way_ticket'
+require_relative '../ticket_shop'
 
 class OneWayTicketTest < Test::Unit::TestCase
  include TimeSupport
 
   def setup
-    @ticket = OneWayTicket.new
+    @ticket = TicketShop.new.get('ONEWAY')
     @now = DateTime.now
   end
 
