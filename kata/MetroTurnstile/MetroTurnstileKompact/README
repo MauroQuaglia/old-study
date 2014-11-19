@@ -1,7 +1,3 @@
-Hello,
-
-Thank you for applying for the Software Developer position here in 7Pixel.
-
 To begin with, we would like you to solve this simple exercise, you can choose whatever programming language you prefer.
 You should provide sufficient evidence that your 
 solution is complete by, as a minimum, indicating that it works correctly in the most common cases.
@@ -33,29 +29,3 @@ BEEP DAILY KO
 BEEP OK
 DISPLAY WEEKLY
 BEEP WEEKLY KO
-
------
-OPTIONALLY, 
-you are free to implement another feature. It's the TEN TIME ticket. The "system" is able to receive one more input: a counter of previous swipes. When the user can pass over the turnstile "BEEP OK, X REMAINING" message is shown. When the counter reach 10 , "BEEP KO" is shown instead. For example:
-
-INPUT: 
-TENTIME 31/10/2014 10:00:00 0
-TENTIME 31/10/2014 10:00:00 8
-TENTIME 31/10/2014 10:00:00 10
-
-OUTPUT:
-BEEP OK, 9 REMAINING
-BEEP OK, 7 REMAINING
-BEEP KO
------
-
-
-
-
-Please upload it on the GitHub website when you're finished.
-
-We hope to hearing from you soon
-
-All the best
-
-Team Nautilus
