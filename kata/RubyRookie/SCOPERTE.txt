@@ -1,0 +1,2 @@
+1)
+Nei blocchi le {} hanno precedenza maggiore rispetto al costrutto do-end.
