@@ -3,7 +3,7 @@ class Basic
   @@class_variable='ciao'
 
   def initialize
-    @instance_variable = 'ciao ciao'
+    @instance_variable = 'ciao CIAO'
   end
 
   def hello

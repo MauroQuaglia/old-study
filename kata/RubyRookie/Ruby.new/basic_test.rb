@@ -100,8 +100,4 @@ class BasicTest < Test::Unit::TestCase
     puts 'ciao' if 1 < 2
   end
 
-  def test_13
-
-  end
-
 end

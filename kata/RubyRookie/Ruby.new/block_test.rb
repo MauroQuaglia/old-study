@@ -20,5 +20,4 @@ class BlockTest < Test::Unit::TestCase
     puts [1,2,3].each
   end
 
-
 end
