@@ -4,6 +4,7 @@ class PrintTest < Test::Unit::TestCase
 
   def test_1
     # va a capo
+    # chiama il metodo to_s quindi se ne faccio l'override scrivo quello che volglio
     puts 'ciao'
     puts Numeric
     puts Numeric.new
