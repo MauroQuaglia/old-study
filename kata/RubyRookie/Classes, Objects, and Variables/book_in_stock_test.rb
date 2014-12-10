@@ -14,9 +14,23 @@ class BookInStockTest < Test::Unit::TestCase
   end
 
   def test_2
-    b = BookInStock.new 'isbn', 100.0
-    p b.price
+    b = BookInStock.new 'isbn', 33.80
     p b.isbn
+
+    p b.price
+    p b.price_in_cents
+    b.price = b.price * 0.75 # ho usato il setter. Prima dell'aggiustamento avevo 25.349999999999998
+    p b.price
+    p b.price_in_cents
   end
+
+  def test_3
+    a = BookInStock.new '', 10
+    p a.type_of_price
+
+    b = BookInStock.new '', 10.1
+    p b.type_of_price
+  end
+
 
 end
