@@ -32,5 +32,27 @@ class BookInStockTest < Test::Unit::TestCase
     p b.type_of_price
   end
 
+  def test_4
+    puts (100).class
+    puts (100.0).class
+    puts (100*100.0).class
+    puts (100.0*100).class
+    puts (100/100.0).class
+    puts (100.0/100).class
+  end
+
+  def test_5
+    b = BookInStock.new '', 100
+    puts b.price
+    puts b.price_in_cents
+
+    b.price = 500
+    puts b.price
+    puts b.price_in_cents
+
+    b.price_in_cents = 700
+    puts b.price
+    puts b.price_in_cents
+  end
 
 end
