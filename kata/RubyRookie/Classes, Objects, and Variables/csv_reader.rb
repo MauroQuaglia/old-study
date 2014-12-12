@@ -14,6 +14,9 @@ class CsvReader
   end
 
   def total_value_in_stock
-    # code here
+    tot = 0.0 #così è un float
+    @book_in_stock.each{|b| tot += b.price}
+    tot
   end
+
 end

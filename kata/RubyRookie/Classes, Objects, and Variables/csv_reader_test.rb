@@ -9,4 +9,9 @@ class CsvReaderTest < Test::Unit::TestCase
     reader.read_in_csv_data('file2.csv')
     puts "Total value in stock: #{reader.total_value_in_stock}"
   end
+
+  def test_2
+   reader = CsvReader.initialize
+  end
+
 end
