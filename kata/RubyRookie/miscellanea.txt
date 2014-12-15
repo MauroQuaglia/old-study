@@ -1,0 +1,4 @@
+r: le stringhe sono mutabili
+j: le stringhe sono immutabili
+r: ha due built-in per gestire le collezioni, array e hash.
+

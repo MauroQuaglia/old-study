@@ -1,6 +1,15 @@
 class Account
+  attr_accessor :balance
+
+  def initialize(balance)
+    @balance = balance
+  end
+
+end
+
+class Account2
   attr_reader :balance
-  public :balance # l'accessor balance è protetto. E' disponibile solo all'interno della classe Account
+  protected :balance # disponibile solo per la classe account2 o classe derivata
 
   def initialize(balance)
     @balance = balance

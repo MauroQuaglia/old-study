@@ -16,8 +16,17 @@ class TransactionTest < Test::Unit::TestCase
 
     puts a.balance
     puts b.balance
+  end
 
-    puts a.greater_balance_then? b
+  def test_2
+    a = Account2.new(100)
+    b = Account2.new(200)
+
+    # non funziona a causa del protected
+    #puts a.balance
+
+    t = Transaction2.new(a, b)
+    puts t.greater # funziona perché qui il protected viene usato correttamente
   end
 
 end

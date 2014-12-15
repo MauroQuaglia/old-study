@@ -21,3 +21,16 @@ class Transaction
   private :debit, :credit
 
 end
+
+class Transaction2
+
+  def initialize(account_a, account_b)
+    @account_a = account_a
+    @account_b = account_b
+  end
+
+  def greater
+    @account_a.greater_balance_then?(@account_b)
+  end
+
+end
