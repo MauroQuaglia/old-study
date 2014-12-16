@@ -1,4 +1,11 @@
-r: le stringhe sono mutabili
-j: le stringhe sono immutabili
-r: ha due built-in per gestire le collezioni, array e hash.
+le {} hanno più precedenza rispetto al costrutto do-end
+
+In ruby le stringhe sono mutabili in java sono immutabili
+
+ruby ha due built-in per gestire le collezioni, array e hash.
+
+in un array, con gli indici negativi parto dal fondo. se l'indice non c'è ritorna nil.
+* con un array si possono simulare stack, sets, queues, dequeues, FIFO. Una struttura sola fa tutto!!!
+* esempio se lo voglio usare come stack uso i metodi push e pop
+
 
