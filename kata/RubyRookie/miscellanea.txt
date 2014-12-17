@@ -1,11 +1,15 @@
-le {} hanno più precedenza rispetto al costrutto do-end
+* le {} hanno più precedenza rispetto al costrutto do-end
 
-In ruby le stringhe sono mutabili in java sono immutabili
+* In ruby le stringhe sono mutabili in java sono immutabili
 
-ruby ha due built-in per gestire le collezioni, array e hash.
+* ruby ha due built-in per gestire le collezioni, array e hash.
 
-in un array, con gli indici negativi parto dal fondo. se l'indice non c'è ritorna nil.
-* con un array si possono simulare stack, sets, queues, dequeues, FIFO. Una struttura sola fa tutto!!!
-* esempio se lo voglio usare come stack uso i metodi push e pop
+* in un array, con gli indici negativi parto dal fondo. se l'indice non c'è ritorna nil.
+** con un array si possono simulare stack, sets, queues, dequeues, FIFO. Una struttura sola fa tutto!!!
 
+* ALLELUJA ALLELUJA!!!
+** ruby si ricorda l'ordine in cui gli elementi sono stati aggiunti in una hash! Se itero su una hash ritorna gli elementi nell'ordine in cui li ho inseriti!
+
+* quando lavoro sulle chiavi delle hash, se le devo incrementare e aggiungere posso anche non mettere nessuna if
+** basta inizializzare la hash con il default e poi fare words[token] += 1
 

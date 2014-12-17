@@ -91,12 +91,31 @@ class ArrayTest < Test::Unit::TestCase
   def test_8
     # uso un array come uno stack!
     stack = []
+    stack.pop #ok non bomba
     stack.push 'a'
     stack.push 'b'
     stack.push 'c'
     p stack
     stack.pop
     p stack
+  end
+
+  def test_9
+    # uso un array come una queue!
+    queue = []
+    queue.push 'a'
+    queue.push 'b'
+    p queue
+    queue.shift
+    p queue
+  end
+
+  def test_10
+    a = [1, 2, 3, 4, 5]
+    p a.first
+    p a.first(2)
+    p a.last
+    p a.last(2)
   end
 
 end
