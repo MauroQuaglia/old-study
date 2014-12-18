@@ -1,4 +1,5 @@
 * le {} hanno più precedenza rispetto al costrutto do-end
+** a parte la precedenza per il resto sono identiche
 
 * In ruby le stringhe sono mutabili in java sono immutabili
 
@@ -12,4 +13,10 @@
 
 * quando lavoro sulle chiavi delle hash, se le devo incrementare e aggiungere posso anche non mettere nessuna if
 ** basta inizializzare la hash con il default e poi fare words[token] += 1
+
+* un iterator è un metodo che chiama un blocco di codice ripetitivamente (per esempio each)
+
+* sintassi ruby
+** indentazione: 2 spazi
+** {} per blocchi di una righa; do-end per blocchi di più righe (occhio alle precedenze)
 

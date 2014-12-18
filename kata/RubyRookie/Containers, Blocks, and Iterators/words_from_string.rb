@@ -22,4 +22,12 @@ class WordFromString
     words
   end
 
+  def top(text, number)
+    words = count_frequency_2(text)
+    sorted = words.sort_by{|k, v| v }
+    sorted.last(number).each do |k, v|
+     p "#{k}: #{v}"
+    end
+  end
+
 end
