@@ -20,3 +20,10 @@
 ** indentazione: 2 spazi
 ** {} per blocchi di una righa; do-end per blocchi di più righe (occhio alle precedenze)
 
+* all'interno di un blocco posso definire delle variabili locali al blocco ES: (|value; square|) value=parametro, square = variabile locale
+
+ESEMPIO sui blocchi
+[1, 2, 3].find{ |x| x * x >= 90}
+# il vantaggio è che la classe array fa quello che sa fare meglio, ciò accedere agli elementi dell'array, io devo solo passargli la condizione.
+# normalmente invece mi devo preoccupare anche del ciclo!
+

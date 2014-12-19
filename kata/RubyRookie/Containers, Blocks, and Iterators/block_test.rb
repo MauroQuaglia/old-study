@@ -1,4 +1,5 @@
 require 'test/unit'
+require_relative 'word_from_string_test'
 
 class BlockTest < Test::Unit::TestCase
 
@@ -19,6 +20,24 @@ class BlockTest < Test::Unit::TestCase
   def test_4
     a = [[1, 2, 3], %w(a b c)]
     a.each{|x, y, z| p x + y + z} # in questo caso il blocco prende tre parametri: x, y, z.
+  end
+
+  def test_5
+    w = WordFromString.new
+    a = [1, 2]
+    a.each do |item|
+      w = item # w è globale al metodo. sta prendendo quella definita all'inizio
+    end
+    puts w
+  end
+
+  def test_6
+    w = WordFromString.new
+    a = [1, 2]
+    a.each do |item; w| # definisco una variabile locale w. Non c'entra niente con quella definita all'inizio.
+      w = item
+    end
+    puts w
   end
 
 
