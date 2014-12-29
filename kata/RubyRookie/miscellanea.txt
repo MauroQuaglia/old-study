@@ -27,3 +27,21 @@ ESEMPIO sui blocchi
 # il vantaggio è che la classe array fa quello che sa fare meglio, ciò accedere agli elementi dell'array, io devo solo passargli la condizione.
 # normalmente invece mi devo preoccupare anche del ciclo!
 
+* iteratori base di ruby
+* each
+ ** è l'iteratore di base, e quello più usato. itera solo gli elementi
+ ** tutte le volte che uso un iteratore, se voglio anche l'indice basta fare each.with_index invece del solo each
+ ** each.with_index(10) -> comincia a contare da 10
+ ** each_with_index -> comincia a contare da 0, non posso parametrizzarlo!
+* collect
+** collect o map sono la stessa cosa, sono alias
+* find
+* inject
+** inject() #parte dal valore del primo elemento
+** inject(9) #parte dal valore passatogli, cioè 9
+** p [2, 6, 8, 2].inject(:+)
+*** posso anche solo specificare il nome del metodo che voglio applicare agli elementi successivi della collezione. in questo caso funziona perchè in ruby l'addizione è un metodo su un numero e :x è il simbolo che corrisponde al metodo +.
+*** altro esempio p [2, 7].inject(28, :div) -> 2 (valore iniziale, metodo da chiamare sulla successione) AH, RUBY...
+
+
+

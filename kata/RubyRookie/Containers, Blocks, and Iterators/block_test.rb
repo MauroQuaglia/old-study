@@ -40,5 +40,14 @@ class BlockTest < Test::Unit::TestCase
     puts w
   end
 
+  def test_7
+    my('a')
+  end
+
+  private
+
+  def my(a, &block)
+    block.call {puts 'ciao'}
+  end
 
 end
