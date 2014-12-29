@@ -23,13 +23,13 @@
 * all'interno di un blocco posso definire delle variabili locali al blocco ES: (|value; square|) value=parametro, square = variabile locale
 
 ESEMPIO sui blocchi
-[1, 2, 3].find{ |x| x * x >= 90}
-# il vantaggio è che la classe array fa quello che sa fare meglio, ciò accedere agli elementi dell'array, io devo solo passargli la condizione.
-# normalmente invece mi devo preoccupare anche del ciclo!
+* [1, 2, 3].find{ |x| x * x >= 90}
+** il vantaggio è che la classe array fa quello che sa fare meglio, ciò accedere agli elementi dell'array, io devo solo passargli la condizione.
+** normalmente invece mi devo preoccupare anche del ciclo!
 
 * iteratori base di ruby
 * each
- ** è l'iteratore di base, e quello più usato. itera solo gli elementi
+ ** è l'iteratore di base, e quello più usato; itera solo gli elementi
  ** tutte le volte che uso un iteratore, se voglio anche l'indice basta fare each.with_index invece del solo each
  ** each.with_index(10) -> comincia a contare da 10
  ** each_with_index -> comincia a contare da 0, non posso parametrizzarlo!
@@ -39,9 +39,22 @@ ESEMPIO sui blocchi
 * inject
 ** inject() #parte dal valore del primo elemento
 ** inject(9) #parte dal valore passatogli, cioè 9
-** p [2, 6, 8, 2].inject(:+)
-*** posso anche solo specificare il nome del metodo che voglio applicare agli elementi successivi della collezione. in questo caso funziona perchè in ruby l'addizione è un metodo su un numero e :x è il simbolo che corrisponde al metodo +.
-*** altro esempio p [2, 7].inject(28, :div) -> 2 (valore iniziale, metodo da chiamare sulla successione) AH, RUBY...
+** esempio [2, 6, 8, 2].inject(:+)
+*** posso anche solo specificare il nome del metodo che voglio applicare agli elementi successivi della collezione. In questo caso funziona perchè in ruby l'addizione è un metodo su un numero e :x è il simbolo che corrisponde al metodo +.
+*** altro esempio [2, 7].inject(28, :div) -> 2 (valore iniziale 28, metodo da chiamare sulla successione div) AH, RUBY...
 
+* iterator ed enumerator
+** l'iterator è un costrutto interno. Viene usato dai metodi come each, collect, ...
+** l'enumerator invece è un iteratore esterno. Può servire se devo iterare su più collezioni contemporaneamente. Mi faccio dare gli enumerator delle collezioni, poi li ciclo con il loop.
+*** infatti con un iterator interno non posso ciclare su due collezioni contemporaneamente.
+* diciamo così:
+** iterator -> lo gestisce ruby
+** enumerator -> lo gestisco io
+* su un enumerator posso chiamare il metodo each_with_index. Quindi se mi serve un indice su una qualsiasi cosa basta che riesca a farmi dare
+il suo enumerator e poi posso usare il metodo each_with_index. Per esempio la stringa 'cat'.each_char.each_with_index, oppure più compatto 'cat'.each_char.with_index)
+
+* loop
+** loop continua ad eseguire il ciclo finchè una condizione non è verificata.
+** Con gli enumerator è furbo, quando ne ha raggiunto la fine esce dal ciclo.
 
 
