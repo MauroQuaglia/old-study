@@ -21,6 +21,7 @@
 ** {} per blocchi di una righa; do-end per blocchi di più righe (occhio alle precedenze)
 
 * all'interno di un blocco posso definire delle variabili locali al blocco ES: (|value; square|) value=parametro, square = variabile locale
+* se la voglio inizializzare (|value; square = 0|)
 
 ESEMPIO sui blocchi
 * [1, 2, 3].find{ |x| x * x >= 90}
@@ -57,4 +58,6 @@ il suo enumerator e poi posso usare il metodo each_with_index. Per esempio la st
 ** loop continua ad eseguire il ciclo finchè una condizione non è verificata.
 ** Con gli enumerator è furbo, quando ne ha raggiunto la fine esce dal ciclo.
 
-
+* sintassi
+** posso anche definire un blocco così: palindrome = -> n { n = n.to_s; n == n.reverse }
+** e lo posso chiamare così Integer.all.select(&palindrome).first(10)

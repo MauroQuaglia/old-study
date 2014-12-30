@@ -1,5 +1,12 @@
 require 'test/unit'
 
+def Integer.all
+  Enumerator.new do |y, n = 0|
+    loop {y << n += 1}
+  end.lazy # significa lazy enumerator
+end
+
+
 class EnumeratorTest < Test::Unit::TestCase
 
   def test_1
@@ -72,13 +79,117 @@ class EnumeratorTest < Test::Unit::TestCase
     p 'cat'.each_char # idem come sopra
   end
 
-
   def test_8
     # se il metodo che usa l'enumerator prende parametri, noi possiamo passarli all'enum_for.
     p (1..10).each_slice(3){|a| p a} # each_slice usa l'enumerator e prende parametri.
     # quindi:
     p (1..10).enum_for(:each_slice, 3).to_a
+  end
+
+  def test_9
+    triangular_numbers = Enumerator.new do |yielder|
+      number = 0
+      count = 1
+      loop do
+        number += count
+        count += 1
+        # finchè non torno un valore lui fa il loop
+        #yielder.yield number è la sintassi che si usa per tornare il valore number
+        yielder.yield number # alias:  yielder << number
+      end
+    end
+
+    p triangular_numbers.next
+    p triangular_numbers.next
+    p triangular_numbers.next
+    p triangular_numbers.next
+    p triangular_numbers.next
+    p triangular_numbers.next
+
+    # dato che un enumerator è anche un enumerable possimao usare anche i metodi dell'enumerable come per esempio first.
+    p triangular_numbers.first
+    p triangular_numbers.first(1)
+    p triangular_numbers.first(3)
+  end
+
+  def test_10
+    counter = Enumerator.new do |y|
+      count = 0
+      # lavora solo qua dentro
+      loop do
+        count += 1
+        y << count # è il modo per buttar fuori il valore dall'enumerator
+        puts 'ciao' #lo esegue al secondo giro, al primo esce e basta
+      end
+    end
+    p counter.next
+    p counter.next
+  end
+
+  def infinite_select(enum, &block)
+    Enumerator.new do |y|
+      enum.each do |value|
+        y << value if block.call(value) # qui li colleziona fino a 5
+      end
+    end
+  end
+
+  def infinite_select2(enum, &block)
+    enum.each do |value|
+      return value if block.call(value) #in questo caso esce subito
+    end
+  end
+
+  def test_11
+    triangular_numbers = Enumerator.new do |y|
+      number = 0
+      count = 1
+      loop do
+        number += count
+        count += 1
+        y << number
+      end
+    end
+
+    p infinite_select(triangular_numbers){|val| val % 10 == 0}.first(5)
+    puts '----------'
+    p infinite_select2(triangular_numbers){|val| val % 10 == 0}
 
   end
+
+  def test_12
+    p Integer.all.first(10)
+  end
+
+  def test_13
+    # se non ci metto lazy nell'enumerator non funziona, continua a rimanere appeso e a calcolare valori ma non ritorna mai...
+    p Integer.all.select{|i| (i % 3).zero? }.first(10)
+  end
+
+  def palindrome?(n)
+    n = n.to_s
+    n == n.reverse
+  end
+
+  def test_14
+    p Integer
+      .all
+      .select{|i| (i % 3).zero? }
+      .select{|i| palindrome?(i) }
+      .first(10)
+  end
+
+  def test_15
+    # posso anche usare questa sintassi
+    multiple_of_three = -> n { (n % 3).zero? }
+    palindrome = -> n { n = n.to_s; n == n.reverse }
+
+    p Integer
+      .all
+      .select(&multiple_of_three)
+      .select(&palindrome)
+      .first(10)
+  end
+
 
 end
