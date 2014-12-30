@@ -1,4 +1,24 @@
 require 'test/unit'
+#class Enumerator
+#  def lazy_select(&block)
+#    self.class.new do |y|
+#      each do |n|
+#        y << n if block.call(n)
+#      end
+#    end
+#  end
+#end
+
+class Enumerator
+  def lazy_select
+    self.class.new do |y|
+      each do |n|
+        y << n
+      end
+    end
+  end.lazy
+end
+
 
 class Enumerator2Test < Test::Unit::TestCase
 
@@ -33,5 +53,25 @@ class Enumerator2Test < Test::Unit::TestCase
       p enum.next
     end
   end
+
+  def test_3
+    enum = Enumerator.new do |y|
+      n = 0
+      loop do
+        n += 1
+        y << n
+      end
+    end
+
+    # metodi come select e map agiscono sull'intera collezione, vogliono analizzarla tutta
+    # quindi entro in un loop infinito
+
+    p enum.my_lazy{|n| n % 2 == 0}.first(3) # in questo caso invece esce
+    #p enum.lazy_select{|n| n % 2 == 0}.first(3) # in questo caso invece esce
+    p '---'
+    p enum.select{|n| n % 2 == 0}.first(3)
+
+  end
+
 
 end
