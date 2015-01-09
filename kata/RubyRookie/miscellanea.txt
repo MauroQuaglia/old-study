@@ -71,4 +71,36 @@ Ci sono due modi per convertire un blocco in un oggetto: "lambda" e "Proc.new" e
 * block2 = lambda {|p| p 'lambda ' + p}
 * sono entrambe due oggetti di tipo Proc.
 questi sono due oggetti (le differenze le vediamo dopo) e li invoco con call.
+Per creare un oggetto Proc posso posso usare anche una notazione più compatta
+Le due seguenti sono equivalenti:
+** a = lambda {|n| p n}
+** a = -> n {p n} # i parametri li metto fuori, ne posso mettere anche più di uno.
+*se devo passare più di un blocco devo usare le Proc, non posso utilizzare il default di Ruby che ne passa sempre uno come ultimo parametro o come implicito.
+** my_if val < 2, ->{p "#{val} is small"}, ->{p "#{val} is big"} Tra l'altro al mio metodo my_if posso passare anche la condizione da verificare!!!
+** def my_if(condition, option1, option2) non ho bisogno di mettere le & per le proc che devo passare
+* esempio di chiamate equivalenti
+def my_while(condition, &block)
+ while condition.call
+  block.call
+ end
+end
+
+def my_while2(condition)
+ while condition.call
+  yield
+ end
+end
+
+Posso anche passare una Proc come parametro di una Proc.
+m = -> {p 'xxx'}
+a = -> (x, y) {p x; y.call}
+a.call 'ciao', m
+Ottengo
+"ciao"
+"xxx"
+
+Vecchia notazione per i parametri
+proc1 = lambda do |a, *b, &block| ... end
+Nuova notazione
+proc1 = -> a, *b, &block do ... end
 
