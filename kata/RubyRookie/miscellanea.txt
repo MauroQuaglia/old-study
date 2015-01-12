@@ -104,3 +104,26 @@ proc1 = lambda do |a, *b, &block| ... end
 Nuova notazione
 proc1 = -> a, *b, &block do ... end
 
+
+5 modi diversi per passare un blocco
+ xxx {p '1'}
+
+ xxx do
+  p '2'
+ end
+
+ yyy(-> { p '3'})
+ yyy(lambda { p '4'})
+ yyy(Proc.new { p '5'})
+
+ def xxx
+  yield
+ end
+
+ def yyy(proc)
+    proc.call
+ end
+
+
+
+

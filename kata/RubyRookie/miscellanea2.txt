@@ -1,0 +1,4 @@
+Duplicazione
+* due modi per eliminarla: ereditarietà, mixins (preferibile).
+* MyClass < Object < BasicObject
+Posso creare un server al volo con la classe GServer

@@ -171,6 +171,39 @@ class ProcTest < Test::Unit::TestCase
     proc1.call(1, 2, 3){p 'aaa'}
   end
 
+  def test_16
+   xxx {p '1'}
+
+   xxx do
+     p '2'
+   end
+
+   yyy(-> { p '3'})
+   yyy(lambda { p '4'})
+   yyy(Proc.new { p '5'})
+  end
+
+  def xxx
+    yield
+  end
+
+  def yyy(proc)
+    proc.call
+  end
+
+  def test_17
+  a = power(2)
+  p a.call
+  p a.call
+  p a.call
+  p a.call
+  p a.call
+  end
+
+  def power(n)
+    y = 1
+    -> {y = y * n}
+  end
 
 end
 
