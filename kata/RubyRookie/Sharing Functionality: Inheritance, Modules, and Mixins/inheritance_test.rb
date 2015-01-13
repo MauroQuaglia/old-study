@@ -23,4 +23,13 @@ class MyTest < Test::Unit::TestCase
     puts Person.new('Mauro').to_s
   end
 
+  def test_4
+    child = Child.new
+    puts child.my_test 'one', 'two'
+  end
+
+  def test_5
+   Child.new
+  end
+
 end

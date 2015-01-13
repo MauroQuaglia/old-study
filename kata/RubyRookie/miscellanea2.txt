@@ -1,4 +1,10 @@
 Duplicazione
-* due modi per eliminarla: ereditarietà, mixins (preferibile).
-* MyClass < Object < BasicObject
+Due modi per eliminarla: ereditarietà, mixins (preferibile).
+
+MyClass < Object < BasicObject
+
 Posso creare un server al volo con la classe GServer
+
+La parola 'super' serve per chiamare il metodo base del metodo chiamato.
+Cerca il metodo nella classe base con lo stesso nome e gli passa gli stessi parametri passati al metodo figlio senza bisogno di specificarlo.
+Anche se nella classe figlio non metto il costruttore, il costruttore base viene chiamato.
