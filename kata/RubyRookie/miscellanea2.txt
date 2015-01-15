@@ -5,6 +5,27 @@ MyClass < Object < BasicObject
 
 Posso creare un server al volo con la classe GServer
 
+EREDITARIETA'
 La parola 'super' serve per chiamare il metodo base del metodo chiamato.
 Cerca il metodo nella classe base con lo stesso nome e gli passa gli stessi parametri passati al metodo figlio senza bisogno di specificarlo.
 Anche se nella classe figlio non metto il costruttore, il costruttore base viene chiamato.
+
+I moduli definiscono un namespace (una sandbox) dove posso mettere del codice senza preoccuparmi troppo di altri metodi e costanti definiti
+in quel modulo stesso. Solitamente i moduli non sono classi, non nascono con l'idea di avere una precisa responsabilità, sono
+piuttosto da vedere come posti in cui mettere del codice in comune, come metodi, classi e costanti.
+
+MODULI
+Posso caricare i moduli in un file con il require_relative come se fossero delle normali classi.
+require_relative 'trig'
+e li posso invocare così i metodi e le costanti
+Trig.sin('90') (NB: nel modulo devo averla così definita def Trig.sin(x), viene definito come module method: metodo che inizia con il nome del modulo.
+Trig::PI
+Attenzione che in questo caso non ho usato la parola 'include' per includerli nella classe ma ho usato il require_relative per caricare i
+file nel mio contesto.
+
+MIXINS
+Posso rendere disponibili i metodi e le costanti di un modulo in una classe usando la parola 'include'. La classe più il modulo/i viene detta mixin.
+All'interno del mixin posso avere anche il riferimento alla classe che lo sta usando con {self.class.name}
+Prima di usare l'include devo usare il require_relative per caricare il modulo.
+Se più classi includono lo stesso modulo esse stanno puntando alla stessa cosa. E' come se fosse uno statico. Non viene caricato nella classe
+ma c'è un puntatore che punta al modulo
