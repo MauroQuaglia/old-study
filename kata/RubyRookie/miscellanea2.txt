@@ -9,6 +9,7 @@ EREDITARIETA'
 La parola 'super' serve per chiamare il metodo base del metodo chiamato.
 Cerca il metodo nella classe base con lo stesso nome e gli passa gli stessi parametri passati al metodo figlio senza bisogno di specificarlo.
 Anche se nella classe figlio non metto il costruttore, il costruttore base viene chiamato.
+Ruby supporta solo l'ereditarietà singola
 
 I moduli definiscono un namespace (una sandbox) dove posso mettere del codice senza preoccuparmi troppo di altri metodi e costanti definiti
 in quel modulo stesso. Solitamente i moduli non sono classi, non nascono con l'idea di avere una precisa responsabilità, sono
@@ -29,3 +30,7 @@ All'interno del mixin posso avere anche il riferimento alla classe che lo sta us
 Prima di usare l'include devo usare il require_relative per caricare il modulo.
 Se più classi includono lo stesso modulo esse stanno puntando alla stessa cosa. E' come se fosse uno statico. Non viene caricato nella classe
 ma c'è un puntatore che punta al modulo
+Quando il codice del mixin comincia a interagire con quello della classe inizia il vero potere... in tal caso infatti non sto usando il modulo solo
+come un contenitore di metodi atomici ma i metodi del modulo interagiscono con quelli della classe. (Es: modulo comparable e metodo <=> nella classe.)
+* il modulo Comparable presuppone che nella classe sia definto il metodo <=>
+* fatto questo ho sei funzioni di comparazione gratis! <, <=, ==, >=, >, <=>
