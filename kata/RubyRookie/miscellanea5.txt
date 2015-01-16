@@ -34,3 +34,22 @@ Quando il codice del mixin comincia a interagire con quello della classe inizia 
 come un contenitore di metodi atomici ma i metodi del modulo interagiscono con quelli della classe. (Es: modulo comparable e metodo <=> nella classe.)
 * il modulo Comparable presuppone che nella classe sia definto il metodo <=>
 * fatto questo ho sei funzioni di comparazione gratis! <, <=, ==, >=, >, <=>
+
+-----------------------------------------------------------------------------------------------
+
+Le collezioni di Ruby come Array, Hash, ... supportano molte operazioni: ordinamento, scorrimento, ecc...
+Il bello è che anche ogni nostra classe possiamo dotarla di tutto ciò!
+* dobbiamo scrivere un iterator di nome each che ritorna gli elementi che volgiamo
+* dotare la nostra classe del modulo Enumerable (abbiamo quindi creato un mixin)
+** se implemento anche <=> avrò anche min, max, sort,...
+
+Se si vuole sfruttare nella sua completezza il modulo Enumerable implementiamo
+* each
+* <=>
+così abbiamo a disposizione tutti i metodi di Enumerable funzionanti.
+
+Esempio
+* l'inject posso usarlo in tutte le classi che includono il modulo Enumerable e che definiscono il metodo each.
+* inject applica ai primi due elemnti una certa operazione, il risultato lo applica al terzo elemento e cosi via
+* avrò una csa del tipo VowelFinder.new('ciao ciao lulu').inject(:+)
+

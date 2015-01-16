@@ -35,8 +35,6 @@ class MixinTest < Test::Unit::TestCase
 
     #dato che il sort su un array usa l'operatore <=> posso ordinare un array di persone
     puts [p3, p1, p2].sort
-
-
   end
 
 end
