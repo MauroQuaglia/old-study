@@ -1,5 +1,7 @@
 Duplicazione
 Due modi per eliminarla: ereditarietà, mixins (preferibile).
+** ereditarietà: "A è un B" (il codice si perde un po' tra padre e figlio, un po' di qua, un po' di la... inoltre c'è molto accoppiamento)
+** mixin: "A usa B", "A ha B" (solitamente nel modo reale non c'è "A è un B" ma queste due... )
 
 MyClass < Object < BasicObject
 
@@ -34,6 +36,12 @@ Quando il codice del mixin comincia a interagire con quello della classe inizia 
 come un contenitore di metodi atomici ma i metodi del modulo interagiscono con quelli della classe. (Es: modulo comparable e metodo <=> nella classe.)
 * il modulo Comparable presuppone che nella classe sia definto il metodo <=>
 * fatto questo ho sei funzioni di comparazione gratis! <, <=, ==, >=, >, <=>
+* Quando includo un modulo in una classe, vengono rese a disposizione della classe le variabili definite nel modulo.
+** se ho nella mia classe una variabile con lo stesso nome possono sorgere dei problemi!
+** quindi bisogna stare molto attenti. Se uso un modulo controllo le sue variabili, se creo un modulo un suggerimento potrebbe essere definire
+le variabili con all'inizio il nome del modulo o qualcosa che lo ricordi.
+* Come vengono cercati i metodi, anche perché tra classe ee modulo ce ne possono essere alcuni con lo stesso nome
+* classe -> mixin inclusi nella classe (l'ultimo incluso è il primo in cui cerca) -> superclass e suoi mixin
 
 -----------------------------------------------------------------------------------------------
 
