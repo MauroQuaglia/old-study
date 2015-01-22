@@ -1,4 +1,5 @@
 require 'test/unit'
+require 'mathn'
 
 class NumbersTest < Test::Unit::TestCase
 
@@ -44,7 +45,39 @@ class NumbersTest < Test::Unit::TestCase
     puts Complex(1,2) * Complex(3,4)
     puts Complex(0,1) * Complex(0,1)
     puts print_number_info Complex(1,1)
+  end
 
+  def test_6
+    Fixnum
+    print_number_info(3 + 5.0)
+    print_number_info(Complex(1,1) + 5.0)
+    print_number_info(Complex(1,1) + 5)
+    print_number_info(1.0 + Rational(2,3)) # FLOAT  Q c R e i reali sono rappresentati da Float
+    print_number_info(1 / 2)
+    print_number_info(1.0 / 2)
+    print_number_info(1.0 / 3)
+    print_number_info(0.3333333333333333 * 3)
+
+    # Senza mathn
+    #Fixnum: 3
+    #Complex: -1+0i
+    print_number_info(22 / 7)
+    print_number_info(Complex::I * Complex::I)
+
+    #Rational: 22/7
+    #Fixnum: -1
+    print_number_info(22 / 7)
+    print_number_info(Complex::I * Complex::I)
+  end
+
+  def test_7
+    3.times{print 'x', ' '}
+    1.upto(5){print 'y', ' '}
+    99.downto(98){print '- '}
+    10.step(20, 2){print 'L '}
+
+    p 3.times # senza i blocchi tornano un enumeratore
+    10.downto(7).with_index{|num, idx| p "#{idx}: #{num}"}
   end
 
   private

@@ -6,8 +6,12 @@ class MyPerson
    @name = name
   end
 
-  def <=>(other)
-    self.name.length <=> other.name.length
+  def each
+    @name
   end
+
+  #def <=>(other)
+  #  self.name.length <=> other.name.length
+  #end
 
 end
