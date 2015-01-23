@@ -50,3 +50,23 @@ STRINGHE
 * una stringa è una sequenza di caratteri tra due delimitatori
 ** caratteri stampabili
 ** dati binari (sono difficoltosi da rappresentare e quindi usiamo gli escape... questo permette in 'compilazione' di capire il carattere corretto)
+
+* Delimitatore ' gli escape sono limitati a questi due
+** carattere di escape = \
+*** '\\' -> \
+*** '\'' -> '
+
+* Delimitatore ", molti caratteri di escape
+** carattere di escape = \
+*** \n = newline, \r = return, ...
+*** esegue codice ruby operativo "#{code}". questo code può essere anche più di una semplice chiamata può anche essere del vero codice, posso definirci un metodo ed eseguirlo!
+
+* Delimitatore here-documents
+** a = <<ABC
+...
+ABC
+** << parta da colonna 1
+** <<- posso mettere l'indentazione che voglio
+** ci possono essere anche here-documens multipli su una singola riga.
+
+
