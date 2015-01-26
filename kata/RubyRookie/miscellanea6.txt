@@ -69,4 +69,21 @@ ABC
 ** <<- posso mettere l'indentazione che voglio
 ** ci possono essere anche here-documens multipli su una singola riga.
 
+--encoding--
+* ogni stringa ha associato un encoding che dipende dal file che contiene la stringa.
+** in ruby 2 l'encoding di default è UTF-8
+* oss. #{s} stampa la stringa e basta, #{s.inspect} stampa la stringa virgolettata
+* # encoding: us-ascii in cima al file e la stringa s all'interno del file ha encoding US-ASCII
+* # encoding: utf-8 in cima al file e la stringa s all'interno del file ha encoding UTF-8 (default)
+
+
+--caratteri--
+* non c'è una classe per i caratteri.
+* sono semplicemente stringhe di lunghezza uno
+* possono essere creati mettendo un ? davanti al carattere o alla sequenza che rappresenta il carattere
+* es: ?a, ?\C-a
+** chissenefrega.... usiamo 'a' al posto di ?a che è più chiaro!
+
+
+--lavorare con le stringhe--
 
