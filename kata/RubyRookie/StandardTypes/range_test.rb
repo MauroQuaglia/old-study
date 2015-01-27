@@ -53,6 +53,42 @@ class RangeTest < Test::Unit::TestCase
     end
   end
 
+  def test_5
+    File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/StandardTypes/prova.csv') do |file|
+      file.each do |line|
+        puts line if line =~ /start/ .. line =~ /end/
+      end
+    end
+  end
+
+  def test_6
+    p (1..5) === 6
+    p (1..5) === 2
+    p (1..5) === 3.14
+    p ('a'..'z') === 'j'
+    p ('a'...'z') === 'z'
+  end
+
+  def test_7
+    car_age(1)
+    car_age(2.5)
+    car_age(3)
+    car_age(5)
+    car_age(10)
+    car_age(19)
+  end
+
+  def car_age(value)
+    case value
+      when 1...3
+        puts 'da 1 a 3 escluso'
+      when 3...10
+        puts 'da 3 a 10 escluso'
+      else
+        puts 'vecchia'
+    end
+  end
+
 end
 
 
