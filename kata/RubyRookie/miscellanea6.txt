@@ -86,4 +86,34 @@ ABC
 
 
 --lavorare con le stringhe--
+* posso definire una classe song al volo: song = Struct.new(:title, :name, :length)
+* le assegnazioni multilinea sono utili per esempio in questo caso
+** length, name, title = line.chomp.split(/\s*\|\s*/) -> rende più chiara la sintassi della riga del file
+** a, b = [1, 2] -> a = 1, b= 2.......
+
+
+--range--
+un range ha vari metodi che ti permettono di accedere al contenuto del range, max, include, ....
+
+un range può anche essere basato su degli oggetti, non solo su stringhe e numeri
+** deve avere il metodo "succ"
+** e deve avere il metodo astronave (spaceship operator) <=>
+anche se questa cosa di solito si usa poco
+
+
+serve per implementare tre cose
+
+* sequenze
+** .. inclusivo, ... esclude l'ultimo elemento.
+** posso convertirla in un array o in un enumeratore
+
+* condizioni
+** può essere usato come espressione condizionale, può funzionare come un interruttore on-off
+** on quando la condizione nella prima parte è vera
+** off quando la condizione nella seconda parte è vera
+** esempio se leggo un file posso dire
+*** puts line if line =~ /start/ .. line =~ /end/ (cioè se la prima parola è start e l'ultima è end)
+
+
+* intervalli
 

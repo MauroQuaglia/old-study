@@ -30,12 +30,23 @@ class EncodingTest < Test::Unit::TestCase
       songs = []
       song_file.each do |line|
         file, length, name, title = line.chomp.split(/\s*\|\s*/)
-        songs << song.new(title, name, length)
+        name.squeeze!(' ')
+        min, sec = length.scan(/\d+/)
+        songs << song.new(title, name, min.to_i * 60 + sec.to_i)
       end
     puts songs[1]
     end
   end
 
+  def test_5
+    a, b = [1, 2]
+    print a, b
+  end
+
+  def test_6
+    p '1:2'.split(/:/)
+    p '1:2'.scan(/\d+/)
+  end
 
 end
 
