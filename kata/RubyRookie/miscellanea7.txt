@@ -2,3 +2,17 @@ Regular Expressions
 * vedere se la stringa matcha un pattern
 * estrarre da una stringa dei valori
 * cambiare una stringa
+
+* Sintassi:
+stringa =~ /regex/ num o nil
+/regex/ =~ stringa num o nil
+stringa !~ /regex/ true o false
+/regex/ !~ stringa true o false
+
+* carrattei riservati: . | ( ) [ ] { } + \ ^ $ * ?
+** se li voglio usare come dei match literal in una regex devo mettere davanti il simbolo: \
+** es: /\*/ match del carattere *, in questo caso avendo l'escape viene considerato come un carattere come tutti gli altri
+
+* /cat/ è una regex come "cat" è una stringa
+* il match ritorna un numero che è la posizione dove comincia il match nella stringa altrimenti nil (false)
+** quindi con la sintassi stringa =~ /regex/ ho in uscita un true se il match c'è, perchè mi ritorna un numero che vale true, o false se non c'è il match perchè nil è come false.
