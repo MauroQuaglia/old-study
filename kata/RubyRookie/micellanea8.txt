@@ -1,0 +1,19 @@
+metodi
+* se torna boolean (predicate method) finisce con ?
+* se modificano il reciver ovvero chi riceve il messaggio (bang method) finisce con !
+* se sono dei setter finiscono con =
+
+* parametri di default
+** def my_default(a='ciao')
+
+* se voglio passare più parametri ma non so quanti uso def my_params(*a)
+** solo un parametro splat per metodo si può avere
+** si può mettere dove si vuole nella lista dei parametri, (*a) (a, *b) (*c, d) ,ecc
+** se mi interessano solo gli estremi posso fare (a,*,b)
+** si chiama splatting
+** a volte si usa nell'ereditarietà per passare parametri alla super classe. Se non uso i parametri posso anche non mettere il nome del parametro. ES. def do(*)... end se chiamo solo super gli passa tutti i parametri
+
+* se l'ultimo parametro della lista è preceduto da &, ogni blocco associato viene convertito in una Proc.
+** è utile avere l'& se voglio memorizzare il blocco
+** double(p),double2(a, &p) nel primo non posso memorizzare nessun bloco perché implicito, nel secondo lo posso memorizzare
+
