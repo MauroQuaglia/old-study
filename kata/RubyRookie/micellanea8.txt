@@ -17,3 +17,57 @@ metodi
 ** è utile avere l'& se voglio memorizzare il blocco
 ** double(p),double2(a, &p) nel primo non posso memorizzare nessun bloco perché implicito, nel secondo lo posso memorizzare
 
+* posso anche omettere le parentesi, ma sui metodi come buona norma è sempre meglio metterle.
+
+* ogni metodo ritorna un valore
+** di solito si omette return
+** posso fare il return di più valori che vengono passati in un array, return "a", "b". poi posso usare l'assegnamento parallelo a, b = [...]
+*** a, b, c = my_return
+
+* se metto *a, più parametri vengono passati accorpaty come array
+* se metto *[a, b] i parametri accorpati come array vengono passati come parametri singoli, in realtà è * di un qualsiasi enumerable
+** five(1, 2, 3, 4, 5)
+** five(1, 2, 3, *[4, 5])
+** five(*[1, 2], 3, *[4, 5])
+** five(*(1..5))
+
+------------------------------------------------------------------
+* Esempio di come passare un blocco
+
+puts ((1..10).collect{|n| number * n}.join(', '))
+Dato che collect prende un blocco...
+
+...posso esplicitare il blocco e passarglielo...
+calc = lambda{|n| n * number}
+puts ((1..10).collect(&calc).join(', '))
+
+...oppure anche così...
+def operation
+  puts ((1..10).collect{|n| yield n}.join(', '))
+end
+operation{|n| number * n}
+-------------------------------------------------------------------
+
+Se l'ultimo argomento di un metodo è preceduto da &, ruby assume che sia una Proc.  La rimuove dalla lista dei parametri, la converte in un blocco e lo associa al metodo.
+
+
+
+def my_test(a)
+    puts a
+    yield 'Z'
+end
+
+posso chiamarlo anche così
+
+    calc = lambda{|n| p n}
+    my_test('X', &calc)
+
+    my_test('Y'){|n| p n}
+--------------------------------------------------------------------------------------------------
+
+quando passo una hash a un metodo posso anche non esplicitare le parentesi. E' meglio perchè altrimenti sembra un blocco.
+invece di:
+my_hash(:title, {a: 'ciao', b: 'miao'})
+meglio usare
+my_hash(:title, a: 'ciao', b: 'miao')
+----------------------------------
