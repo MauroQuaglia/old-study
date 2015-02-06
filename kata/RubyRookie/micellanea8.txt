@@ -71,3 +71,11 @@ my_hash(:title, {a: 'ciao', b: 'miao'})
 meglio usare
 my_hash(:title, a: 'ciao', b: 'miao')
 ----------------------------------
+
+con ruby 2.0 posso definire i parametri di default di una hash direttamente in un metodo
+def search(field, genre: nil, duration: 120)
+se gliene passo uno che non conosce mi lancia in atomatico un ArgumentError
+
+se invece ho degli extra argomenti della hash da passare oltre ai due di default posso usare il double slat
+
+-----------------------------------------------------------

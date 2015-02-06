@@ -1,0 +1,30 @@
+Espressioni
+
+
+
+Quello che per C# o Java è un'istruzione, per Ruby è un'espressione.
+my_if = if 0 == 0
+          'ciao'
+         end
+poi quando chiamo la my_if, la esegue.
+
+
+
+Posso ridefinire un'operazione usando la parola alias:
+class Fixnum
+  alias old_plus +
+end
+2 + 5 = 7
+2.old_plus(5) = 7
+
+class Fixnum
+  alias old_plus +
+  def +(other)
+    self.succ
+  end
+end
+1 + 3 = 2
+1.old_plus(3) = 4
+
+
+
