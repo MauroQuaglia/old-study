@@ -28,3 +28,33 @@ end
 
 
 
+Posso definire su una mia classi tutti i metodi che voglio, come quelli usati normalmente:
+<< (che poi torna self), [] indexing
+
+
+
+Se uso `` (backticks) o %x{} posso eseguire un comando relativo al mio sistema operativo
+l'exit status è disponibile nella variabile $?
+OSS:
+anche ` è un metodo e può essere ridefinito.
+Posso scriverlo ovunque senza specificare che riapro Object ()
+
+alias old_backquote `
+def `(cmd)
+  result = old_backquote(cmd)
+  if $? != 0
+    puts "Command: [#{cmd}] failed with status: [#{$?.exitstatus}]!"
+  end
+  result
+end
+
+
+
+Assegnamento
+semplice: a = 7 (a è una variabile o costante)
+complesso: list.projects = [1,2] dove vado io ad implementare il setting projects sull'oggetto list.
+il valore dell'assegnazione è sempre il valore del parametro, anche si poi ci metto un return!
+
+
+
+

@@ -1,6 +1,18 @@
 require 'test/unit'
 require_relative 'score_keeper'
 
+# per overraidare un metodo di object.... lo posso mettere dove voglio senza bisogno di dichiarare object
+
+alias old_backquote `
+def `(cmd)
+  result = old_backquote(cmd)
+  if $? != 0
+    puts "Command: [#{cmd}] failed with status: [#{$?.exitstatus}]!"
+  end
+  result
+end
+
+
 class MyTest < Test::Unit::TestCase
 
   def test_1
@@ -46,5 +58,23 @@ class MyTest < Test::Unit::TestCase
     sk.average
   end
 
+  def test_7
+    sk = ScoreKeeper.new
+    sk[1,2,3]
+  end
+
+  def test_8
+    puts `date`
+    puts $?
+    puts %x{ls -la}
+    puts $?
+Object
+
+  end
+
+  def test_9
+    print `ls -l /etc/passwd`
+    print `ls -l /etc/wibble`
+  end
 end
 
