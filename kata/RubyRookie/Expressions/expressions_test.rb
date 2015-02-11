@@ -68,13 +68,24 @@ class MyTest < Test::Unit::TestCase
     puts $?
     puts %x{ls -la}
     puts $?
-Object
-
   end
 
   def test_9
     print `ls -l /etc/passwd`
     print `ls -l /etc/wibble`
+  end
+
+  def test_10
+    a = 1, 2, 3
+    p a
+    b = 1
+    p b
+    d ,j, l = a
+    p d + j + l
+
+    h, k = [1, 3]
+    p h
+    p k
   end
 end
 
