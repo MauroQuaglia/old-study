@@ -71,4 +71,38 @@ d=3
 
 
 
+gli operatori ++ e -- non ci sono.
+usiamo += e -=
+tutto ciò che non è nil o false e true.
 
+&&, and -> fanno la stessa cosa ma differiscono per priorità... similmente gli altri
+and e && ritornano il primo membro se false, atrimenti valutano ed eventualmente ritornano il secondo membro.
+nil && 99 = nil, true && 99 = 99
+or e || ritornano il primo membro se true, atrimenti valutano ed eventualmente ritornano il secondo membro.
+nil || 99 #99
+'ciao' || nil # ciao
+
+Un idioma comune è assegnare un valore a una variabile solo se non è ancora assegnato.
+var ||= 'default' (che è uno shortcut per una cosa simile a var = var || 'default')
+anche se le due espressioni sono leggermente differenti.
+con ||= se la variabile è già settatat non viene fatto nessun assegnamento, con v = v || 'd' l'assegnamento viene fatto comunque.
+
+
+
+
+defined?
+nil se l'argomento non è definito
+una descrizione se l'argomento è definito.
+defined? 1 -> espressione
+defined? x -> nil
+defined? print -> method
+
+gli oggetti ruby supportano il confronto grazie ai metodi
+==, ===, <=>, =~, eql?, equal? -> tutti in classe object tranne <=>
+OSS:
+== stesso valore 1 == 1.0 ok
+eql? stesso tipo e valore 1.0 e 1 sono eql? diversi
+equal? stesso oggetto
+
+ci sono anche le versioni negate di ==, != e =~, !~
+# se le negazioni non sono definite, ruby cerca la definizione di == e nega il risultato. Vedi class T di esempio.
