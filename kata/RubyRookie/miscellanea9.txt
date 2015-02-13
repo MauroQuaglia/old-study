@@ -106,3 +106,36 @@ equal? stesso oggetto
 
 ci sono anche le versioni negate di ==, != e =~, !~
 # se le negazioni non sono definite, ruby cerca la definizione di == e nega il risultato. Vedi class T di esempio.
+
+
+IF
+la keyword then è opzionale se vado a capo. Se metto tutto su una linea allora ci vuole.
+if, then, elsif, else, end. Sono le varie keyword che si possono usare
+dato che la if è un'espressione, essa ritorna un valore e questo può essere memorizzato in una variabile
+unless = if not
+c'è anche l'operatore ternario.... condition ? true : false
+id e unless possono anche essere messi alla fine di uno statements. return 'c' if ...
+
+CASE
+praticamente una if con steroidi... una multi-if.
+case, when, then, else, ,, end
+la keyword then si usa se voglio scrivere tutto su una riga, se vado a capo non serve.
+case a
+    when 1...10   then p 'ciao'
+posso usare la virgola per separare più condizioni con lo stesso output.    when 1, 2
+NB: la comparazione del valore con il target è fatto dal case usando l'operatore ===
+posso valutare sia le singole when che solo il case
+1) case
+when XXX=AAA
+when YYY=BBB
+when ZZZ=CCC
+2)
+case VALUE
+when XXX
+when YYY
+il case ritorna l'ultima operazione eseguita quindi la posso memorizzare.
+OSS.
+l'operatore === è definito nelle classi (Class) e si può usare per controllare se il tipo della classe è lo stesso di un'altra
+SI USA ANCHE CON LE CLASSI DERIVATE
+
+LOOP
