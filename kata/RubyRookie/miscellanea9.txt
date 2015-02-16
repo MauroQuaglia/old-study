@@ -101,8 +101,10 @@ gli oggetti ruby supportano il confronto grazie ai metodi
 ==, ===, <=>, =~, eql?, equal? -> tutti in classe object tranne <=>
 OSS:
 == stesso valore 1 == 1.0 ok
-eql? stesso tipo e valore 1.0 e 1 sono eql? diversi
+=== stesso tipo di base e valore:    VERO  1 === 1.0 # numeric di base e 1 di valore
+eql? stesso tipo e valore:   FALSO 1.eql?(1.0) # integer e float
 equal? stesso oggetto
+
 
 ci sono anche le versioni negate di ==, != e =~, !~
 # se le negazioni non sono definite, ruby cerca la definizione di == e nega il risultato. Vedi class T di esempio.
@@ -138,4 +140,15 @@ OSS.
 l'operatore === è definito nelle classi (Class) e si può usare per controllare se il tipo della classe è lo stesso di un'altra
 SI USA ANCHE CON LE CLASSI DERIVATE
 
-LOOP
+-LOOPS-
+WHILE eseguo finché è true la condizione
+UNTIL eseguo finchè è false la condizione
+Entrambi si possono usare alla fine di uno statements: a += 1 while a <= 3
+OSS: il range .. è come un interruttore
+ritorna true quando il primo evento succede e rimane true finche il secondo evento non succede.
+File.foreach('numbers.txt') do |line|
+    puts(line) if line =~ /two/ .. /five/
+end
+mi scrive  two three four five
+Dato che gli estremi del range vengono valutati tutte le volte posso anche usare espressioni combinate
+

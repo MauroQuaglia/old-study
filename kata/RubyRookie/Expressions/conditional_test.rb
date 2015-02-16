@@ -55,6 +55,18 @@ class ConditionalTest < Test::Unit::TestCase
       else p 'No!'
     end
   end
+
+  def test_5
+    p 1 === 1
+    p 1 === 1.0 # la classe base mi pare sia numeric per entrambe quindi funziona anche così
+    p 1 === 2
+  end
+
+  def test_6
+    p 1 === 1.0 # numeric di base e 1 di valore
+    p 1.eql?(1.0) # integer e float
+  end
+
 end
 
 class A
