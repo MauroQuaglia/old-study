@@ -118,6 +118,8 @@ unless = if not
 c'è anche l'operatore ternario.... condition ? true : false
 id e unless possono anche essere messi alla fine di uno statements. return 'c' if ...
 
+
+
 CASE
 praticamente una if con steroidi... una multi-if.
 case, when, then, else, ,, end
@@ -140,10 +142,14 @@ OSS.
 l'operatore === è definito nelle classi (Class) e si può usare per controllare se il tipo della classe è lo stesso di un'altra
 SI USA ANCHE CON LE CLASSI DERIVATE
 
--LOOPS-
+
+
+-LOOPS- (while ed until sono le uniche primitive per il loop )
 WHILE eseguo finché è true la condizione
 UNTIL eseguo finchè è false la condizione
 Entrambi si possono usare alla fine di uno statements: a += 1 while a <= 3
+per fare scattare il while almeno una volta posso usare il begin end (do..while in C#)
+
 OSS: il range .. è come un interruttore
 ritorna true quando il primo evento succede e rimane true finche il secondo evento non succede.
 File.foreach('numbers.txt') do |line|
@@ -151,4 +157,50 @@ File.foreach('numbers.txt') do |line|
 end
 mi scrive  two three four five
 Dato che gli estremi del range vengono valutati tutte le volte posso anche usare espressioni combinate
+
+
+
+ITERATORI
+OSS. in ruby il FOR non c'è come iteratore esterno, ma compare spesso come iteratore interno, in modo che sia più difficile commettere errori.
+ES:
+3.times {p 'A'}
+1.upto(3) {p 'B'} -> è come se fosse il for
+3.downto(1) {p 'C'}
+1.step(3,1) {p 'D'}
+[1, 2].each{|x| p x}
+NB:
+una volta che una classe supporta l'each i metodi addizionali dell'enumerable sono disponibili
+File.open('numbers.txt').grep(/e$/){|l| puts l} tutti quelli che finiscono per 'e'
+* dato che file ha il metodo each posso ciclare su tutte le righe
+
+
+TRA GLI ITERATORI C'E' ANCHE
+LOOP
+loop do
+...
+end
+e
+FOR..IN
+che però è solo uno zucchero sintattico per il metodo each
+a = [1, 2, 3]
+a.each{|v| puts v}
+for v in a
+  puts v
+end
+quando ruby vede il for in lo traduce nel metodo each.
+Tuttavia una differenza c'è e riguarda lo scope delle variabili che sono definite nel body del metodo
+
+
+
+
+
+
+Quando si usano tutti queste cose è utile conoscere anche le parole chiave: break, redo, next. La parola chiave retry non c'è più. Con il ruby nuovo è stata rimossa.
+questi permettono di alterare il flusso normale dell'iteratore
+break esce dal ciclo
+next salta il giro
+redo riprova dall'inizio del ciclo
+
+
+
 

@@ -45,4 +45,11 @@ class Modifiers2Test < Test::Unit::TestCase
  #8 T .. F scatta il primo e scrive
  #9 F .. T scatta il secondo e scrive
  #10 F .. F non scrive più
+
+  def test_6
+    puts 'mauro' while false
+    begin
+      puts 'quaglia'
+    end while false
+  end
 end
