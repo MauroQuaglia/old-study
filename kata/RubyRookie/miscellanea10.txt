@@ -1,0 +1,2 @@
+Quando lancio un'eccezione posso usare una di quelle già predefinite in Ruby (146) oppure ne posso creare
+io una nuova ma deve derivare da StandardError o uno dei suoi figli, altrimenti non viene agganciata per default.

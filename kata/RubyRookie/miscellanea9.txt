@@ -199,7 +199,19 @@ Quando si usano tutti queste cose è utile conoscere anche le parole chiave: bre
 questi permettono di alterare il flusso normale dell'iteratore
 break esce dal ciclo
 next salta il giro
-redo riprova dall'inizio del ciclo
+redo riprova il ciclo appena effettuato senza rivalutare la condizione
+al break posso anche passare un valore che è quello che viene tornato dal ciclo. Altrimenti il ciclo torna nil.
+whl = while i < 3 ... break(i) if i == 2. così whl = i
+si può passare anche al next ma non serve a nulla
+
+
+SCOPE
+while, until e for non introducono nuovi scope, e se definisco una variabile AL LORO interno poi c'è anche nel codice.
+Per i blocchi e gli iteratori invece è diverso, creano un loro scope, per cui se definisco una variabile nel blocco poi non
+me la ritrovo più nel codice.
+Se però il blocco usa delle variabili già definite, poi i valori delle variabili sono influenzate dal blocco.
+Comunque le variabili si possono definire locali anche all'interno del blocco |val; scope|
+
 
 
 
