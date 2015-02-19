@@ -1,2 +1,44 @@
 Quando lancio un'eccezione posso usare una di quelle già predefinite in Ruby (146) oppure ne posso creare
 io una nuova ma deve derivare da StandardError o uno dei suoi figli, altrimenti non viene agganciata per default.
+
+OSS
+open-uri permette di scaricare pagine web e salvarle in un file
+
+Gestione eccezioni
+begin
+    ...
+rescue Exception
+    ...
+    # un riferimento all'eccezione presa è contenuta nella variabile globale $!
+    raise # se la voglio rilanciare, altrimenti non metto niente. di fatto lui rilancia la $!
+end
+
+un'alternativa ad usare $! e definire la variabile locale che contiene l'eccezione corrente
+begin
+    ...
+rescue Exception => boom
+    ...
+end
+
+
+ci possono essere più rescue per gestire le eccezioni
+begin
+    ...
+rescue StandardError, NameError => boom
+    ...
+rescue SecurityError => security
+    ...
+end
+ma come fa a capire il match?   usa (parameter === $!)    (=== come quello che usa il case e $! è l'eccezione che è stata lanciata)
+
+
+
+OSS
+se scrivo rescue senza specificare niente il default è lo StandardError
+se nessuna rescue va a buon fine o se l'accezione è lanciata al di fuore del blocco begin .. end cerca ruby un gestore di eccezione nel chiamante e nel chiamante del chiamante e così via...
+
+
+
+----
+errori di sistema (system error)
+vengono lanciate quando un errore di sistema ritorna un codice di errore (error code). (EAGAIN, ...) con 'man errno' su linux li posso vedere
