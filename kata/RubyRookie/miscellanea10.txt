@@ -4,13 +4,24 @@ io una nuova ma deve derivare da StandardError o uno dei suoi figli, altrimenti 
 OSS
 open-uri permette di scaricare pagine web e salvarle in un file
 
-Gestione eccezioni
+
+
+Gestione eccezioni costrutto
 begin
+    ...
     ...
 rescue Exception
     ...
     # un riferimento all'eccezione presa è contenuta nella variabile globale $!
     raise # se la voglio rilanciare, altrimenti non metto niente. di fatto lui rilancia la $!
+    retry # se volgio (o posso) correggere il motivo di eccezione e riprovare ad eseguire il blocco begin ..end. Da usare con molta cautela, perché potrei entrarein cicli infiniti!
+else
+    ...
+    viene eseguita solo se non ci sono state eccezioni e prima del blocco ensure
+    ...
+ensure
+    ... #operazioni finali. viene sempre eseguito
+    ...
 end
 
 un'alternativa ad usare $! e definire la variabile locale che contiene l'eccezione corrente
@@ -42,3 +53,39 @@ se nessuna rescue va a buon fine o se l'accezione è lanciata al di fuore del bl
 ----
 errori di sistema (system error)
 vengono lanciate quando un errore di sistema ritorna un codice di errore (error code). (EAGAIN, ...) con 'man errno' su linux li posso vedere
+ruby li decora con uno specifico oggetto e ce li mostra
+
+
+----------------------
+
+
+NB
+i beginner di solito mettono l'apertura del file File.open dentro il blocco begin. E' sbagliato perchè open può lanciare un'eccezione
+e se è così di solito non si vuole eseguire ciò che sta nel blocco ensure perchè non c'è nessun file da chiudere.
+
+SBAGLIATO
+begin
+ file.open
+rescue
+...
+
+GIUSTO
+file.open
+begin
+...
+rescue
+
+
+------------------------
+
+per lanciare un'eccezione nel codice posso usare (sono la stessa cosa, ma fail è più parlante di raise)
+raise
+fail (che è un sinonimo una RuntimeError)
+#raise -> RuntimeError (o quella corrente)
+#raise 'mp3' -> RuntimeError con messaggio
+#raise NameError, 'mp3'  -> NameError con messaggio mp3
+#raise NameError, 'mp3', caller -> lo stacktrace è prodotto usando Object#caller method
+
+
+
+
