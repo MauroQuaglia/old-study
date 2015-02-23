@@ -25,10 +25,11 @@ class ExceptionsTest < Test::Unit::TestCase
 
 end
 
-class MyExc1 < NoMemoryError
+class RetryException < RuntimeError
+  attr :ok_to_retry
 
-end
-
-class MyExc2 < StandardError
+  def initialize(ok_to_retry)
+    @ok_to_retry = ok_to_retry
+  end
 
 end

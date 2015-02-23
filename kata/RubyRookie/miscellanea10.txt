@@ -13,7 +13,7 @@ begin
 rescue Exception
     ...
     # un riferimento all'eccezione presa è contenuta nella variabile globale $!
-    raise # se la voglio rilanciare, altrimenti non metto niente. di fatto lui rilancia la $!
+    raise # se la voglio rilanciare (lui in automatico rilancia $!), altrimenti non metto niente.
     retry # se volgio (o posso) correggere il motivo di eccezione e riprovare ad eseguire il blocco begin ..end. Da usare con molta cautela, perché potrei entrarein cicli infiniti!
 else
     ...
@@ -89,3 +89,30 @@ fail (che è un sinonimo una RuntimeError)
 
 
 
+-------------------
+catch and throw
+- raise e rescue si usano quando qualcosa può andare storto.
+se volgio abbandonare un ciclo perchè qualcosa non 'mi piace' devo usare il catch end throw, in tal caso niente è andato storto, voglio solo abbandonareil ciclo
+esempio
+catch(:done) do
+      File.foreach('words.txt') do |line|
+        throw :done if line.chomp! == 'egli'
+        p line
+      end
+        p 'ciao'
+    end
+quando rilancio il simbolo :done esco.
+la differenza è che con il break interrompo il ciclo ed esco, qui invece esco proprio dall'esecuzione del blocco , quindi è qualcosa in più che l'uscire
+dal ciclo del foreach.
+se passo un parametro al throw viene ritornato quel valore
+value = catch(:done) do
+      File.foreach('words.txt') do |line|
+        throw :done, 'done-executed' if line.chomp! == 'egli'
+        p line
+      end
+      p 'ciao'
+    end
+    p value
+  end
+
+il throw può anche non apparire nel contesto statico del catch
