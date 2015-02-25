@@ -40,12 +40,24 @@ class MyTest < Test::Unit::TestCase
   end
 
   def test_6
-    client = TCPSocket.open('127.0.0.1', 'www')
-    puts client.readline
-    puts client.readline
-    client.close
+   # client = TCPSocket.open('127.0.0.1', 'www')
+    #puts client.readline
+    #puts client.readline
+    #client.close
+
 
   end
+
+  def test_7
+    assert_equal('a', 'a')
+    refute_equal('a', 'b')
+  end
+
+  def test_8
+    a = nil
+    refute_nil(a, 'Non va!')
+  end
+
 
 
 end
