@@ -1,3 +1,8 @@
 c'è una singola classe per gestire gli input/output, la IO.
 è un canale bidirezionale tra il programma ruby e l'esterno. (es. file è una sottoclasse di IO)
 quando ad un file leggo o scrivo tramite un blocco ci pensa lui a chiuderlo. anche se viene lanciata un'eccezione, prima che l'eccezione si propaghi il file viene chiuso.
+
+gets legge una linea da standard input
+file.gets legge una linea dal file
+
+Se so che devo leggere solo stringhe posso usare lo StringIO
