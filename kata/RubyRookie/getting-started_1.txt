@@ -1,0 +1,65 @@
+Windows
+Per installere Ruby utilizzare i download del sito:
+http://rubyinstaller.org/
+
+Per gestire più interpreti Ruby sulla stessa macchina usare pik:
+https://github.com/vertiginous/pik/downloads
+
+Se voglio installare gemme che hanno codice C nativo, mi servirà anche un ambiente di sviluppo C sulla macchina e
+bisogna scaricare il Pik development kit.
+
+Linux
+La cosa migliore è installare RVM (Ruby Version Manager) che permette di avere installazioni multiple di Ruby sulla
+stessa macchina.
+sudo apt-get update
+sudo apt-get install curl
+curl -L https://get.rvm.io | bash -s stable
+In questo modo RVM viene istallata in una directory .rvm sotto la directory home.
+
+Poi devo unire RVM al mio ambiente.
+Per fare questo devo guardare il file ~/bashrc e aggiungere in fondo:
+source $HOME/.rvm/script/rvm
+Poi devo aprire un nuovo terminare per fargli caricare il file e posso scrivere per esempio
+rvm help
+
+A questo punto posso installare Ruby tramite rvm ma prima è meglio installare delle librerie:
+rvm autolibs packages
+
+Poi possiamo installre Ruby:
+rvm install 2.0.0 (scarica e lo compila. Inoltre si scarica cnhe irb, RDoc, RubyGems,...)
+A questo punto
+rvm use 2.0.0
+ruby -v (controllo)
+
+Se voglio importare l'utilizzo di Ruby di default
+ruby use --default 2.0.0
+
+Se volgio provare ruby al volo posso usare:
+ruby
+.... comandi (posso scrivere anche una classe, finché non faccio ^D non esegue niente)
+^D
+... risultato
+
+Un tool più avanzato che tiene conto anche della history, e altro è irb:
+ruby
+.... comandi (posso scrivere anche una classe)
+... risultato
+per uscire ^D o exit
+
+
+Per eseguire un file basta andare nella directory corrente e fare
+ruby nome-file
+oppure posso renderlo eseguibile con chmod+x e fare
+./nome-file (tuttavia devo aggiungere al file l'intestazione shebang: #!/usr/bin/env ruby)
+
+
+Per la documentazione posso guardare
+http://www.ruby-doc.org
+http://rubydoc.info
+se invece volgio qualcosa di locale uso RDoc
+(devo però fare rvm docs generate)
+ri nome-classe
+ri nome-classe::nome-metodo
+...
+se lo stesso metodo c'è in più class posso fare
+ri assoc
