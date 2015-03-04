@@ -1,0 +1,3 @@
+In Ruby tutto è un oggetto.
+Per inizializzare una classe bisogna chiamare un metodo speciale: new
+Ogni oggetto un identificatore univoco chiamato object_id e uno stato proprio.

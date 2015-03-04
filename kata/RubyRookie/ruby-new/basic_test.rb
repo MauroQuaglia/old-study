@@ -8,6 +8,7 @@ class BasicTest < Test::Unit::TestCase
     # La classe Basic viene detta RECEIVER, perché riceve il messaggio.
     # new è un metodo della classe chiamato costruttore.
     Basic.new
+    puts Basic.new.object_id
   end
 
   def test_2
