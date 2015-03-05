@@ -1,3 +1,40 @@
 In Ruby tutto è un oggetto.
 Per inizializzare una classe bisogna chiamare un metodo speciale: new
 Ogni oggetto un identificatore univoco chiamato object_id e uno stato proprio.
+
+Alcuni metodi standard di Ruby:
+puts(...) -> scrive gli argomenti e va a capo
+p()       -> come puts() ma visualizza i nil esplicitamente
+
+----
+Un esempio di differenza con altri linguaggi
+Math.abs(num) In Java devo chiamare una funzione esterna per determinare il valore assoluto di un numero.
+num.abs       In Ruby, l'abilità di determinare il valore assoluto è un costrutto interno al numero stesso.
+Questa idea è condivisa da tutti gli oggetti Ruby.
+
+----
+Modi di creare stringhe
+'' -> singole quote, Ruby fa il minimo indispensabile
+"" -> double quote, Ruby lavora di più, controlla gli escape e l'interpolazione
+
+----
+Sintassi
+Il primo carattere di un nome indica a Ruby come il nome deve essere usato
+classi, moduli, costanti: lettera-maiuscola
+metodi, parametri di metodi e variabili locali: lettera-minuscola o _
+variabili globali: $
+variabili di istanza: @
+variabili di classe:@@
+
+----
+Array e Hash
+Sono collezioni indicizzate accessibile mediante una chiave.
+Nell'array la chiave può essere solo un numero, nella hash può essere un oggetto qualsiasi.
+Accedere a un array è più efficiente (in termini di velocità), ma la has ha  una maggiore flessibilità.
+
+Per creare velocemente array di stringhe si usa %w()
+
+----
+nil è un oggetto che rappresenta 'niente'.
+
+----

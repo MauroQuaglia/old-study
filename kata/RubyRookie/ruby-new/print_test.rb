@@ -9,6 +9,7 @@ class PrintTest < Test::Unit::TestCase
     puts Numeric
     puts Numeric.new
     puts [1, 'k']
+    puts nil
   end
 
   def test_2
@@ -17,6 +18,7 @@ class PrintTest < Test::Unit::TestCase
     print Numeric
     print Numeric.new
     print [1, 'k']
+    print nil
   end
 
   def test_3
@@ -25,6 +27,7 @@ class PrintTest < Test::Unit::TestCase
     p Numeric
     p Numeric.new
     p [1, 'k']
+    p nil
   end
 
   def test_4

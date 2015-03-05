@@ -8,17 +8,15 @@ class BasicTest < Test::Unit::TestCase
     # La classe Basic viene detta RECEIVER, perché riceve il messaggio.
     # new è un metodo della classe chiamato costruttore.
     Basic.new
-    puts Basic.new.object_id
   end
 
   def test_2
     puts 'ciao\nciao'
-
     puts "ciao\nciao"
-    puts "ciao #{Basic.new.hello.capitalize}"
   end
 
   def test_3
+    puts Basic.new.object_id
     puts Basic.new.global_variable_process_id
   end
 
@@ -30,8 +28,8 @@ class BasicTest < Test::Unit::TestCase
 
   def test_5
     # Per evitare la noia delle virgolette e delle virgole possiamo usare %w
-    puts ['1', 'b', 'v'].inspect
-    puts %w(1 b v).inspect
+    puts ['1', 'b'].inspect
+    puts %w(1 b).inspect
   end
 
   def test_6
