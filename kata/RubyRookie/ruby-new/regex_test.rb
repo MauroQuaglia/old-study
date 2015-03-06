@@ -3,13 +3,13 @@ require 'test-unit'
 class RegexTest < Test::Unit::TestCase
 
   def test_1
-    matched?{'Perl'=~/Perl/}
-    matched?{'Perl'=~/Perl|Python/} # | = OR
-    matched?{'Perl'=~/P(erl|ython)/} # vale anche come proprietà associativa
-    matched?{'abc'=~/abc/}
-    matched?{'abbc'=~/abc/}
-    matched?{'abbc'=~/ab+c/} # + significa 1 o più
-    matched?{'ac'=~/ab*c/}  # * significa 0 o più
+    p 'Perl'=~/Perl/
+    p 'Perl'=~/Perl|Python/ # | = OR
+    p 'Perl'=~/P(erl|ython)/ # vale anche come proprietà associativa
+    p 'abc'=~/abc/
+    p 'abbc'=~/abc/
+    p 'abbc'=~/ab+c/ # + significa 1 o più
+    p 'ac'=~/ab*c/  # * significa 0 o più
   end
 
   def test_2
@@ -18,7 +18,7 @@ class RegexTest < Test::Unit::TestCase
     matched?{'Perl Python'=~/Perl Python/} # match esatto
     matched?{'Perl Python'=~/Perl *Python/} #  . zero o più spazi
     matched?{'Perl Python'=~/Perl +Python/} #  + uno o più spazi
-    matched?{'Perl Python'=~/Perl\sPython/}  # \s uno spazio
+    matched?{'Perl Python'=~/Perl\sPython/}  # \s uno spazio, tab, new line, ...
     matched?{'Ruby Perl'=~/Ruby (Perl|Python)/}  # Ruby, uno spazio, poi perl o python
   end
 
@@ -47,11 +47,7 @@ class RegexTest < Test::Unit::TestCase
   private
 
   def matched?
-    if yield
-      puts 'true'
-    else
-      puts 'false'
-    end
+    p yield
   end
 
 end

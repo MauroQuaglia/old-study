@@ -3,8 +3,8 @@ Per inizializzare una classe bisogna chiamare un metodo speciale: new
 Ogni oggetto un identificatore univoco chiamato object_id e uno stato proprio.
 
 Alcuni metodi standard di Ruby:
-puts(...) -> scrive gli argomenti e va a capo
-p()       -> come puts() ma visualizza i nil esplicitamente
+puts()    -> scrive gli argomenti e va a capo
+p()       -> come puts() ma visualizza i nil esplicitamente. Visualizza anche il contenuto di un array senza interpretarlo.
 
 ----
 Un esempio di differenza con altri linguaggi
@@ -24,7 +24,7 @@ classi, moduli, costanti: lettera-maiuscola
 metodi, parametri di metodi e variabili locali: lettera-minuscola o _
 variabili globali: $
 variabili di istanza: @
-variabili di classe:@@
+variabili di classe: @@
 
 ----
 Array e Hash
@@ -36,5 +36,31 @@ Per creare velocemente array di stringhe si usa %w()
 
 ----
 nil è un oggetto che rappresenta 'niente'.
+nil è false, quindi spesso è utilizzato nelle istruzioni condizionali.
 
 ----
+Simboli
+A volte è utile creare delle costanti che poi posso riutilizzare in più punti:
+le costanti le devo dichiarare.
+NORTH = 1
+EAST = 2
+Ma molte volte il valore della costante (1, 2) è irrilevante, serve solo per differenziare le due direzioni.
+Ruby offre un'alternativa più pulita,
+i simboli: sono dei nomi costanti (garantiti unici) che non devono essere predichiarati.
+:north
+:east
+
+Inoltre il simbolo viene istanziato una sola volta, il suo object_id è sempre lo stesso.
+
+----
+gli STATEMENT MODIFIER sono shortcut per compattare la sintassi nel caso di una singola istruzione
+
+----
+Espressioni regolari
+'Perl'=~/Perl/
+Se c'è match ritorna la posizione di partenza del matche
+Se non c'è match torna nil (quindi si può usare nelle condizioni...)
+I metodi classici che si usano con le regex sono
+sub(regex, string) -> se c'è il match lo sostituisco con la string, ma solo il primo matche
+gsub(regex, string) -> se c'è il match lo sostituisco con la string, tutti i match (gsub = global sub)
+
