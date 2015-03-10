@@ -2,6 +2,12 @@ require 'test-unit'
 
 class RegexTest < Test::Unit::TestCase
 
+  def test_0
+    # Lo posso scrivere in entrambe i modi.
+    p 'Perl' =~ /Perl/
+    p /Perl/ =~ 'Perl'
+  end
+
   def test_1
     p 'Perl'=~/Perl/
     p 'Perl'=~/Perl|Python/ # | = OR
@@ -13,41 +19,23 @@ class RegexTest < Test::Unit::TestCase
   end
 
   def test_2
-    matched?{'12:34:56'=~/\d\d:\d\d:\d\d/}
-    matched?{'PerlXXXYYYPython'=~/Perl.*Python/} #.* zero o più caratteri
-    matched?{'Perl Python'=~/Perl Python/} # match esatto
-    matched?{'Perl Python'=~/Perl *Python/} #  . zero o più spazi
-    matched?{'Perl Python'=~/Perl +Python/} #  + uno o più spazi
-    matched?{'Perl Python'=~/Perl\sPython/}  # \s uno spazio, tab, new line, ...
-    matched?{'Ruby Perl'=~/Ruby (Perl|Python)/}  # Ruby, uno spazio, poi perl o python
+    p '12:34:56'=~/\d\d:\d\d:\d\d/
+    p 'PerlXXXYYYPython'=~/Perl.*Python/ #.* zero o più caratteri
+    p 'Perl Python'=~/Perl Python/ # match esatto
+    p 'Perl Python'=~/Perl *Python/ #  . zero o più spazi
+    p 'Perl Python'=~/Perl +Python/ #  + uno o più spazi
+    p 'Perl Python'=~/Perl\sPython/  # \s uno spazio, tab, new line, ...
+    p 'Ruby Perl'=~/Ruby (Perl|Python)/  # Ruby, uno spazio, poi perl o python
   end
 
   def test_3
-    puts 'Perl'=~/Perl/ # 0 è la posizione di partenza
-    puts 'XXX Perl YYY'=~/Perl/ # 4 è la posizione di partenza
+    p 'Perl'=~/Perl/ # 0 è la posizione di partenza
+    p 'XXX Perl YYY'=~/Perl/ # 4 è la posizione di partenza
   end
 
   def test_4
-    if 5
-      puts '5 è true'
-    end
-
-    if nil
-     puts 'nil è true'
-    else
-      puts 'nil è false'
-    end
-  end
-
-  def test_5
-    puts 'RubyRuby'.sub(/Ruby/, 'Perl')
-    puts 'RubyRuby'.gsub(/Ruby/, 'Perl')
-  end
-
-  private
-
-  def matched?
-    p yield
+    p 'RubyRuby'.sub(/Ruby/, 'Perl')
+    p 'RubyRuby'.gsub(/Ruby/, 'Perl')
   end
 
 end

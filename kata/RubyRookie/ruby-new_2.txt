@@ -1,23 +1,22 @@
 In Ruby tutto è un oggetto.
 Per inizializzare una classe bisogna chiamare un metodo speciale: new
-Ogni oggetto un identificatore univoco chiamato object_id e uno stato proprio.
+Ogni oggetto ha un identificatore univoco chiamato object_id e uno stato proprio.
 
-Alcuni metodi standard di Ruby:
-puts()    -> scrive gli argomenti e va a capo
-p()       -> come puts() ma visualizza i nil esplicitamente. Visualizza anche il contenuto di un array senza interpretarlo.
+------------------------------------------------------------------------------------------------------------------------
 
-----
 Un esempio di differenza con altri linguaggi
 Math.abs(num) In Java devo chiamare una funzione esterna per determinare il valore assoluto di un numero.
 num.abs       In Ruby, l'abilità di determinare il valore assoluto è un costrutto interno al numero stesso.
 Questa idea è condivisa da tutti gli oggetti Ruby.
 
-----
+------------------------------------------------------------------------------------------------------------------------
+
 Modi di creare stringhe
 '' -> singole quote, Ruby fa il minimo indispensabile
 "" -> double quote, Ruby lavora di più, controlla gli escape e l'interpolazione
 
-----
+------------------------------------------------------------------------------------------------------------------------
+
 Sintassi
 Il primo carattere di un nome indica a Ruby come il nome deve essere usato
 classi, moduli, costanti: lettera-maiuscola
@@ -26,41 +25,71 @@ variabili globali: $
 variabili di istanza: @
 variabili di classe: @@
 
-----
+------------------------------------------------------------------------------------------------------------------------
+
 Array e Hash
 Sono collezioni indicizzate accessibile mediante una chiave.
 Nell'array la chiave può essere solo un numero, nella hash può essere un oggetto qualsiasi.
-Accedere a un array è più efficiente (in termini di velocità), ma la has ha  una maggiore flessibilità.
+Accedere a un array è più efficiente (in termini di velocità), ma la hash ha  una maggiore flessibilità.
 
 Per creare velocemente array di stringhe si usa %w()
 
-----
+------------------------------------------------------------------------------------------------------------------------
+
 nil è un oggetto che rappresenta 'niente'.
 nil è false, quindi spesso è utilizzato nelle istruzioni condizionali.
 
-----
+------------------------------------------------------------------------------------------------------------------------
+
 Simboli
 A volte è utile creare delle costanti che poi posso riutilizzare in più punti:
 le costanti le devo dichiarare.
 NORTH = 1
 EAST = 2
 Ma molte volte il valore della costante (1, 2) è irrilevante, serve solo per differenziare le due direzioni.
-Ruby offre un'alternativa più pulita,
-i simboli: sono dei nomi costanti (garantiti unici) che non devono essere predichiarati.
+Ruby offre un'alternativa più pulita; i simboli: sono dei nomi costanti (garantiti unici) che non devono essere
+predichiarati.
 :north
 :east
 
 Inoltre il simbolo viene istanziato una sola volta, il suo object_id è sempre lo stesso.
 
-----
+------------------------------------------------------------------------------------------------------------------------
+
 gli STATEMENT MODIFIER sono shortcut per compattare la sintassi nel caso di una singola istruzione
 
-----
+------------------------------------------------------------------------------------------------------------------------
+
 Espressioni regolari
-'Perl'=~/Perl/
-Se c'è match ritorna la posizione di partenza del matche
+'Perl' =~ /Perl/
+Se c'è match ritorna la posizione di partenza del match
 Se non c'è match torna nil (quindi si può usare nelle condizioni...)
 I metodi classici che si usano con le regex sono
-sub(regex, string) -> se c'è il match lo sostituisco con la string, ma solo il primo matche
+sub(regex, string) -> se c'è il match lo sostituisco con la string, ma solo il primo match
 gsub(regex, string) -> se c'è il match lo sostituisco con la string, tutti i match (gsub = global sub)
 
+------------------------------------------------------------------------------------------------------------------------
+
+Blocchi
+Pezzi di codice che si possono associare alla chiamata ad un metodo quasi come se fossero dei parametri.
+Sintassi: {} oppure do .. end, ma le parentesi hanno precedenza più alta rispetto al costrutto do .. end. Per ovviare a
+queste precedenze se metto sempre le parentesi ai metodi è più chiaro per chi legge e viene interpretato correttamente
+dall'interprete.
+Li posso invocare con yield, a cui posso passare dei parametri.
+I parametri che prende il blocco stanno tra ||
+I blocchi vengono spesso usati con gli iterator, che sono metodi che tornano gli elementi successivi di una collezione.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Scrivere su Console
+puts   -> scrive i conenuti di quello che gli passo e va a capo, non fa vedere i nil.
+print  -> scrive quello che gli passo, non va a capo, non fa vedere i nil.
+p      -> scrive quello che gli passo, va a capo, fa vedere i nil.
+printf -> formatta il testo sotto il controllo di una certa stringa
+
+------------------------------------------------------------------------------------------------------------------------
+
+Argomenti da command-line
+Gli argomenti che passo al file sono accessibili in due modi:
+ARGV -> è un array contenente i parametri passati
+ARGF -> approfondiamo dopo...

@@ -1,6 +1,6 @@
 require 'test/unit'
 
-class Miscellanea2Test < Test::Unit::TestCase
+class MiscellaneaTest < Test::Unit::TestCase
 
   def test_1
     # Mando un MESSAGIO alla classe Basic che si chiama new.
