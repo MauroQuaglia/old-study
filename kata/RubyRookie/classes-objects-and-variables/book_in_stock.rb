@@ -6,7 +6,7 @@ class BookInStock
   #attr_writer :price
 
   # equivalente alle due righe sopra
-  attr_reader :isbn
+  attr_reader :isbn, :xxx # vien
   attr_accessor :price
 
 
@@ -52,7 +52,7 @@ class BookInStock
     #se non metto la chiocciola sto usando gli accessor.
     # infatti se li commento i test falliscono.
     # io preferisco usare la chiocciola.
-    "ISBN: #{isbn}, price: #{price}"
+    "ISBN: #{isbn}, price: #{@price}"
   end
 
 end

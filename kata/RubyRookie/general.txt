@@ -1,5 +1,0 @@
-* File
-Se devo ciclare sulle righe di un file posso fare direttamente: File.foreach('name.csv') do |line| ... end
-
-* fail
-* lancia una RuntimeError

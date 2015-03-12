@@ -1,5 +1,6 @@
 In Ruby tutto è un oggetto.
 Per inizializzare una classe bisogna chiamare un metodo speciale: new
+A sua volta viene chiamato il metodo (sempre privato) initialize
 Ogni oggetto ha un identificatore univoco chiamato object_id e uno stato proprio.
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -82,7 +83,7 @@ I blocchi vengono spesso usati con gli iterator, che sono metodi che tornano gli
 ------------------------------------------------------------------------------------------------------------------------
 
 Scrivere su Console
-puts   -> scrive i conenuti di quello che gli passo e va a capo, non fa vedere i nil.
+puts   -> scrive i conenuti di quello che gli passo e va a capo, non fa vedere i nil. Chiama il metodo to_s.
 print  -> scrive quello che gli passo, non va a capo, non fa vedere i nil.
 p      -> scrive quello che gli passo, va a capo, fa vedere i nil.
 printf -> formatta il testo sotto il controllo di una certa stringa
