@@ -9,6 +9,7 @@ Se voglio installare gemme che hanno codice C nativo, mi servirà anche un ambie
 bisogna scaricare il Pik development kit.
 
 ------------------------------------------------------------------------------------------------------------------------
+
 Linux
 La cosa migliore è installare RVM (Ruby Version Manager) che permette di avere installazioni multiple di Ruby sulla
 stessa macchina.
@@ -31,15 +32,14 @@ rvm use 2.0.0
 ruby use --default 2.0.0
 
 ------------------------------------------------------------------------------------------------------------------------
+
 Console
-Se volgio provare ruby al volo posso usare:
-ruby
+Se voglio provare ruby al volo posso usare: ruby
 .... comandi
 ^D
 ... risultato
 
-Un tool più avanzato che tiene conto anche della history, e altro è irb:
-ruby
+Un tool più avanzato che tiene conto anche della history, e altro è: irb
 .... comandi
 ... risultato
 
@@ -47,7 +47,7 @@ ruby
 Eseguibili
 Per eseguire un file basta andare nella directory corrente e fare
 ruby nome-file
-oppure posso renderlo eseguibile con chmod+x e aggiungere la notazione shenang: #!/usr/bin/env ruby
+oppure posso renderlo eseguibile con chmod+x e aggiungere la notazione shenang: #!/usr/bin/env ruby. Dopo basta fare:
 ./nome-file
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -58,6 +58,7 @@ http://www.ruby-doc.org
 http://rubydoc.info
 
 per evere le stesse informazioni in locale posso usare RDoc
-devo però fare rvm docs generate
+devo però fare: rvm docs generate
+Poi posso fare
 ri nome-classe
 ri nome-classe::nome-metodo
