@@ -9,7 +9,7 @@ end
 
 class Account2
   attr_reader :balance
-  protected :balance # disponibile solo per la classe account2 o classe derivata
+  protected :balance # disponibile solo nella classe account2 o classe derivata
 
   def initialize(balance)
     @balance = balance

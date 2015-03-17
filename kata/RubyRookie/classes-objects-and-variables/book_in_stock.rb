@@ -6,9 +6,8 @@ class BookInStock
   #attr_writer :price
 
   # equivalente alle due righe sopra
-  attr_reader :isbn, :xxx # vien
+  attr_reader :isbn
   attr_accessor :price
-
 
   def initialize(isbn, price)
     @isbn = isbn
@@ -29,8 +28,8 @@ class BookInStock
   #end
 
   # --------------------------------------
-  # price_in_cents è come se fosse una variabile di istanza virtuale
 
+  # price_in_cents è come se fosse una variabile di istanza virtuale
   # di fatto è un getter virtuale
   def price_in_cents
     # * 100 per averlo in centesimi

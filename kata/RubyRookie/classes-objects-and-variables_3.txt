@@ -29,25 +29,34 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 Controllo degli accessi
 Ci sono tre livelli di protezione dei metodi: pubblico, protetto, privato.
+
 public (default): lo possono vedere tutti.
+
 protected       : solo gli oggetti dello stesso tipo e quelli derivati lo possono vedere. (NB: qui è differente dagli
                   altri linguaggi.)
+
 private         : solo l'oggetto corrente lo può vedere.
 
 Il controllo è fatto dinamicamente e non staticamente. Una violazione dell'accesso viene segnalata solo nel momento in
 cui si tenta di farla.
 
 Esempi:
-La variabile balance e leggibile, ma solo dalla classe in cui vive o da una classe derivata.
+La variabile balance e leggibile, ma solo dal contesto della classe in cui vive o da una classe derivata.
 attr_reader :balance
 protected :balance
 
-Tutti i metodi che stanno sonno 'private' sono privati.
+Tutti i metodi che stanno sono 'private' sono privati.
 private
 ...
 ...
 
-Specifico quali sono i metodi che devono essere privati in maniera esplicita.
+Posso Specificare quali sono i metodi che devono essere privati in maniera esplicita.
 private :debit, :credit
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Variabili
+Una variabile non è un oggetto, ma è una referenza a un oggetto.
+A differenza di Java e C# le stringhe sono mutabili.
+Il metodo dup crea una nuova variabile con lo stesso valore di quella originale, ma il puntatore cambia.
+Quindi diventano completamente indipendenti.
