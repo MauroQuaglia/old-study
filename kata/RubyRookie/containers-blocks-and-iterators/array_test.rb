@@ -13,12 +13,12 @@ class ArrayTest < Test::Unit::TestCase
     b[0]='x'
     b[1]='y'
     p b
-    puts b
   end
 
   def test_2
+    # Per vedere tutti i metodi. Un array lo posso istanziare con la new o con [].
     puts Array.new.methods
-    puts '------------'
+    puts '---'
     puts [].methods
   end
 

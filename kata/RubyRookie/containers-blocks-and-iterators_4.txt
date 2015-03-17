@@ -1,0 +1,3 @@
+Le collezioni sono gestite in due modi: array, hash.
+Gli array sono indicizzati tramite il metodo [].
+Se gli passo un indice negativo, conta al contrario.
