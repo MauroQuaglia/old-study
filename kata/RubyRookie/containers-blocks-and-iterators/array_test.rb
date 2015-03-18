@@ -118,4 +118,29 @@ class ArrayTest < Test::Unit::TestCase
     p a.last(2)
   end
 
+  def test_11
+    a = []
+    a[0] = 'a'
+    a[2] = 'c'
+    p a
+  end
+
+  def test_12
+    a = ['a', 'b']
+    p a[-2..1]
+
+    a = ['a', 'b', 'c']
+    p a[-2..1]
+
+    a = ['a', 'b', 'c', 'd']
+    p a[-2..1]
+  end
+
+  def test_13
+    a = %w(a b c d e f g)
+    p a
+    a[1..2] = 99, 98, 100
+    p a
+  end
+
 end
