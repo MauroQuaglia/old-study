@@ -53,7 +53,12 @@ class IteratorTest < Test::Unit::TestCase
     a = %w(a b)
     a.each{|x| p x}
     p '---'
-    a.each.with_index{|x, y| p x, y} # uguale a a.each_with_index{|x, y| p x, y}
+    a.each.with_index{|x, y| p x, y}
+  end
+
+  def test_find_with_index
+    p [1, 2, 3].find.with_index{ |x, y| x * x >= 4; y} # mi trova la posizione dove c'è il primo numero che soddisfa
+    # la condizione
   end
 
   def test_difference

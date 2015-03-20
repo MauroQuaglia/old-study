@@ -1,5 +1,5 @@
 require 'test/unit'
-require_relative 'word_from_string_test'
+require_relative 'words_from_string'
 
 class BlockTest < Test::Unit::TestCase
 
@@ -13,16 +13,11 @@ class BlockTest < Test::Unit::TestCase
   end
 
   def test_3
-    puts ['ciao: 2', 'riciao: 3']
-    p ['ciao: 2', 'riciao: 3']
-  end
-
-  def test_4
     a = [[1, 2, 3], %w(a b c)]
     a.each{|x, y, z| p x + y + z} # in questo caso il blocco prende tre parametri: x, y, z.
   end
 
-  def test_5
+  def test_4
     w = WordFromString.new
     a = [1, 2]
     a.each do |item|
@@ -31,11 +26,33 @@ class BlockTest < Test::Unit::TestCase
     puts w
   end
 
+  def test_5
+    w = WordFromString.new
+    a = [1, 2]
+    a.each do |item|
+      l = item # l vive solo nello scope del blocco
+    end
+    puts l
+  end
+
   def test_6
     w = WordFromString.new
     a = [1, 2]
-    a.each do |item; w| # definisco una variabile locale w. Non c'entra niente con quella definita all'inizio.
-      w = item
+    a.each do |w|
+      puts w
+    end
+    puts w
+  end
+
+  def test_7
+    w = WordFromString.new
+    a = [1, 2]
+    a.each do |item; x, y, z| # definisco delle variabili locali x, y, z. Invece item è quella a cui viene passato il valore.
+      x = item + 10
+      y = item + 20
+      z = item + 30
+      p item
+      p x, y, z
     end
     puts w
   end

@@ -55,19 +55,60 @@ affidamento sull'ordinamento!
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Blocchi e Iteratori
-
-Un ITERATOR è un metodo che chiama un blocco di codice ripetutamente. (Es: each)
-
 Blocchi
 Il blocco è semplicemente un pezzo di codice.
 Come succede per un metodo, il blocco può prendere dei parametri. {|p1, p2| ...}
 Metodo {blocco}, metodo(parametri) {blocco} Possiamo pensarlo come ad un parametro extra passato al metodo.
-Scope: Se c'è una variabile all'interno del blocco con lo stesso nome di una variabile nello stesso scope ma all'esterno
-       del blocco, le due sono la stessa cosa.
-       Se la variabile compare solo nel blocco all'ora vive solo nello scope del blocco.
-       I parametri del blocco, sono sempre locali al blocco anche se hanno lo stesso nome di una variabile definita al
-       di fuori del blocco.
-       Posso definire delle variabili locali al blocco cos': {|value; suqare|}
+
+Scope:
+Se c'è una variabile all'interno del blocco con lo stesso nome di una variabile nello stesso scope ma all'esterno
+del blocco, le due sono la stessa cosa.
+Se la variabile compare solo nel blocco all'ora vive solo nello scope del blocco.
+I parametri del blocco, sono sempre locali al blocco anche se hanno lo stesso nome di una variabile definita al
+di fuori del blocco.
+Posso definire delle variabili locali al blocco così: {|item; x, y, z|} dove item è la variabile a cui viene passato
+il valore dall'iterator e x, y e z sono variabili locali al blocco.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Iterator
+Un ITERATOR è un metodo che chiama un blocco di codice ripetutamente.
+Il blocco non viene eseguito nel momento in cui ruby lo incontra, tuttavia ruby si ricorda il contesto del blocco, le
+sue variabili locali, ecc)
+All'interno del metodo posso invocare il blocco con "yield"
+Posso passare parametri al blocco: (yield param1, param2)
+Posso ricevere valori dal blocco: Il valore dell'ultima espressione valutata nel blocco è ritornata.
+
+NB: differenza con altri linguaggi
+il vantaggio è che la collezione in questione fa quello che sa fare meglio, ciò accedere ai suoi elementi. Devo solo
+dirgli cosa fare con quegli elementi tramite il blocco. In altri linguaggi invece mi devo preoccupare anche del ciclo!
+
+Esempi di iteratori
+*each
+il più semplice degli iteratori, passa al blocco gli elementi della sua collezione
+
+*find
+cerca il primo valore in una collezione che soddisfa la condizione del blocco, altrimenti torna nil.
+
+* map (o collect, sono la stessa cosa. Uno è un alias dell'altro.)
+passa ogni elemento al blocco e alla fine mi ritorna un array con tutti i nuovi valori
+
+* inject
+permette di accumulare valori, scorrendo una collezione.
+
+
+OSS.
+Posso tenere traccia anche della posizione su cui sto iterando con il metodo "with_index"
+L'iteratore ti passa il valore corrente, con la chiamata addizionale with_index ti viene passata anche la posizione.
+"with_index" è un metodo addizionale, così che possiamo aggiungerlo a un qualsiasi iteratore.
+Es.
+each.with_index
+find.with_index
+
+
+
+
+
+
 
 
