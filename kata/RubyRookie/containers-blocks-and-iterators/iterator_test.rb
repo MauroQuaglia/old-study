@@ -73,7 +73,7 @@ class IteratorTest < Test::Unit::TestCase
 
   def test_INJECT
     p [0, 1, 3, 6].inject{|sum, element| sum + element } # somma tutti gli elementi, di default parte dal primo elemento
-    p [0, 1, 3, 6].inject(100){|sum, element| sum + element } # somma tutti gli elementi, di default parte da 100
+    p [0, 1, 3, 6].inject(100){|sum, element| sum + element } # somma tutti gli elementi, partendo da 100
   end
 
   def test_INJECT_somma_e_prodott

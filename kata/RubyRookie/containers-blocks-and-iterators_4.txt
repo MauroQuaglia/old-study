@@ -73,6 +73,7 @@ il valore dall'iterator e x, y e z sono variabili locali al blocco.
 
 Iterator
 Un ITERATOR è un metodo che chiama un blocco di codice ripetutamente.
+In sostanza chiamo l'iteretaor e gli passo un blocco (.each{|| ...})
 Il blocco non viene eseguito nel momento in cui ruby lo incontra, tuttavia ruby si ricorda il contesto del blocco, le
 sue variabili locali, ecc)
 All'interno del metodo posso invocare il blocco con "yield"
@@ -80,8 +81,15 @@ Posso passare parametri al blocco: (yield param1, param2)
 Posso ricevere valori dal blocco: Il valore dell'ultima espressione valutata nel blocco è ritornata.
 
 NB: differenza con altri linguaggi
-il vantaggio è che la collezione in questione fa quello che sa fare meglio, ciò accedere ai suoi elementi. Devo solo
+Vantaggio
+la collezione in questione fa quello che sa fare meglio, ciò accedere ai suoi elementi. Devo solo
 dirgli cosa fare con quegli elementi tramite il blocco. In altri linguaggi invece mi devo preoccupare anche del ciclo!
+In ruby gli iteratori sono interni alla classe, in altri linguaggi mi devo far dare l'iteratore e poi mi devo
+preoccupare di scorrere gli elementi.
+Svantaggi
+Se non posso gestire manualmente gli iteratori diventa difficile scorrere due collezioni contemporaneamente.
+Soluzione: in queste occasioni abbiamo a disposizione la classe Enumerable che implementa un iteratore esterno. Basta
+chiamare il metodo to_enum (o enum_for)
 
 Esempi di iteratori
 *each
@@ -95,7 +103,10 @@ passa ogni elemento al blocco e alla fine mi ritorna un array con tutti i nuovi 
 
 * inject
 permette di accumulare valori, scorrendo una collezione.
-
+Somma dei valori -> [3, 2, 1].inject(){|sum, x| sum + x}  # Parte a sommare dal  3.
+Somma dei valori -> [3, 2, 1].inject(0){|sum, x| sum + x} # Parte a sommare da 0.
+oppure posso anche specificare il metodo da chiamare agli elementi successivi della collezione.
+Somma dei valori -> [3, 2, 1].inject(:+)
 
 OSS.
 Posso tenere traccia anche della posizione su cui sto iterando con il metodo "with_index"
@@ -105,7 +116,21 @@ Es.
 each.with_index
 find.with_index
 
+------------------------------------------------------------------------------------------------------------------------
 
+Enumerator
+Sono iteratori esterni
+Quasi tutti gli iterator, se chiamati senza blocco, ritornano l'enumerator.
+Posso chiamare il metodo 'loop' che continua a richiamare l'enumerator finchè questo non ha finito. In generale però
+devo fare attenzione, perché se non uso un enumerator lui continua indefinitamente a chiamare il blocco che ha
+associato.
+
+Modi per recuperare l'enumerator:
+'xxx'.enum_for(:each_char)  # torna l'enumerator del metodo each_char
+'xxx'.each_char             # se non gli passo il blocco torna l'enumeratore
+'xxx'.to_enum               # occhio che qui torna l'enumerator del metodo each
+
+Sugli enumeratori è definito il metodo each_with_index che ti da anche la posizione.
 
 
 
