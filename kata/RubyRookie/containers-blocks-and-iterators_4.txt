@@ -120,6 +120,8 @@ find.with_index
 
 Enumerator
 Sono iteratori esterni
+Sono degli oggetti
+
 Quasi tutti gli iterator, se chiamati senza blocco, ritornano l'enumerator.
 Posso chiamare il metodo 'loop' che continua a richiamare l'enumerator finchè questo non ha finito. In generale però
 devo fare attenzione, perché se non uso un enumerator lui continua indefinitamente a chiamare il blocco che ha
@@ -130,7 +132,46 @@ Modi per recuperare l'enumerator:
 'xxx'.each_char             # se non gli passo il blocco torna l'enumeratore
 'xxx'.to_enum               # occhio che qui torna l'enumerator del metodo each
 
+Se il metodoche usiamo come base per l'enumeratore prende dei parametri, quest possiamo anche passarli all'enum_for.
+
 Sugli enumeratori è definito il metodo each_with_index che ti da anche la posizione.
+* each.with_index(10) -> comincia a contare da 10
+* each_with_index -> comincia a contare da 0, non posso parametrizzarlo!
+
+
+Enumerator come generatori e filtri
+Posso acnhe io creare un enumeratore, e poi gli posso passare un blocco.
+Il blocco viene eseguito in parallelo con il codice non del blocco. L'esecuzione parte dall'alto, viene chiamato il
+blocco che viene eseguito fino allo yield, poi il controllo torna al codice, e quando viene richiamato il blocco
+riparte da dove era uscito precedentemente.
+Un oggetto Enumerator è anche un enumerable quindi abbiamo a disposizione i metodi dell'enumerable
+
+Es.
+un contatore
+
+counter = Enumerator.new do |yielder|
+  count = 0 # inizializzo a 0
+  loop do
+    count += 1
+    yielder.yield count # tutte le volte che lo chiamo l'enumeratore riparte da qui. Versione compatta: yielder << count
+  end
+end
+
+a questo contatore (counter.next...) non posso passare nessun blocco. Però posso modificarlo
+per fare in modo che prenda anche un blocco. (creo un generator...)
+
+def xxx(enumerator, &block)
+  Enumerator.new do |yielder|
+    enumerator.each do |value|
+      yielder << value if block.call(value)
+    end
+  end
+end
+
+poi posso chiamrlo così:
+puts xxx(counter) {|n| n % 2 == 0 }.first(10)
+
+Se volgio posso anche aprire la classe enumerator e aggiungergli metodi che prendono un blocco come parametro.
 
 
 
