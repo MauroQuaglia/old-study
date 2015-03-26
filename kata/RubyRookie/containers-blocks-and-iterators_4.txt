@@ -119,8 +119,8 @@ find.with_index
 ------------------------------------------------------------------------------------------------------------------------
 
 Enumerator
-Sono iteratori esterni
-Sono degli oggetti
+
+Sono iteratori esterni c come 'quasi' tutto in ruby sono degli oggetti.
 
 Quasi tutti gli iterator, se chiamati senza blocco, ritornano l'enumerator.
 Posso chiamare il metodo 'loop' che continua a richiamare l'enumerator finchè questo non ha finito. In generale però
@@ -132,33 +132,31 @@ Modi per recuperare l'enumerator:
 'xxx'.each_char             # se non gli passo il blocco torna l'enumeratore
 'xxx'.to_enum               # occhio che qui torna l'enumerator del metodo each
 
-Se il metodoche usiamo come base per l'enumeratore prende dei parametri, quest possiamo anche passarli all'enum_for.
+Se il metodo che usiamo come base per l'enumeratore prende dei parametri, quest possiamo anche passarli all'enum_for.
+(1..10).each_slice(3).to_a # each_slice usa l'enumerator e prende parametri.
+(1..10).enum_for(:each_slice, 3).to_a
 
 Sugli enumeratori è definito il metodo each_with_index che ti da anche la posizione.
 * each.with_index(10) -> comincia a contare da 10
 * each_with_index -> comincia a contare da 0, non posso parametrizzarlo!
 
+Posso anche io creare un enumeratore
+Questi viene eseguito fino allo yield, che torna un valore al codice, il codice fa quello che deve e se richiama
+l'enumeratore questo riprende da dove aveva lasciato, cioè l'istruzione dopo lo yield.
 
-Enumerator come generatori e filtri
-Posso acnhe io creare un enumeratore, e poi gli posso passare un blocco.
-Il blocco viene eseguito in parallelo con il codice non del blocco. L'esecuzione parte dall'alto, viene chiamato il
-blocco che viene eseguito fino allo yield, poi il controllo torna al codice, e quando viene richiamato il blocco
-riparte da dove era uscito precedentemente.
 Un oggetto Enumerator è anche un enumerable quindi abbiamo a disposizione i metodi dell'enumerable
 
-Es.
-un contatore
-
+Es:un contatore
 counter = Enumerator.new do |yielder|
-  count = 0 # inizializzo a 0
+  count = 0 #inizializzo a 0
   loop do
     count += 1
-    yielder.yield count # tutte le volte che lo chiamo l'enumeratore riparte da qui. Versione compatta: yielder << count
+    yielder.yield count # Qui torna il valore. versione compatta: yielder << count
   end
 end
 
 a questo contatore (counter.next...) non posso passare nessun blocco. Però posso modificarlo
-per fare in modo che prenda anche un blocco. (creo un generator...)
+per fare in modo che prenda anche un blocco. (creo un generator, un generatore di enumeratori)
 
 def xxx(enumerator, &block)
   Enumerator.new do |yielder|
@@ -169,12 +167,28 @@ def xxx(enumerator, &block)
 end
 
 poi posso chiamrlo così:
-puts xxx(counter) {|n| n % 2 == 0 }.first(10)
+xxx(counter) {|n| n % 2 == 0 }.first(10)
 
-Se volgio posso anche aprire la classe enumerator e aggiungergli metodi che prendono un blocco come parametro.
+Se voglio posso anche aprire la classe enumerator e aggiungergli metodi che prendono un blocco come parametro.
+In pratica aggiungo un filtro all'enumeratore.
+class Enumerator
+  def selection(&block)
+    Enumerator.new do |yielder|
+      each do |value|
+        yielder << value if block.call(value)
+      end
+    end
+  end
+end
 
+ora ho a disposizione il metodo selection su tutti gli enumeratori.
 
+I Lazy Enumerator
+Bisogna stare attenti con alcuni metodi chiamati sugli enumeratori (es: count e select) perchè scorrono tutta la
+collezione prima di tornare il risultato.
 
+Su tutti gli enumeratori posso chimare il metodo lazy. Questo mi ritorna un enumeratore come quello originale, ma
+reimplementa alcuni metodi come selecte map che escono non appena hanno ottenuto il risultato voluto..
 
 
 

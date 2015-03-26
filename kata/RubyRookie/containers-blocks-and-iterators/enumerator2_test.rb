@@ -1,77 +1,61 @@
 require 'test/unit'
-#class Enumerator
-#  def lazy_select(&block)
-#    self.class.new do |y|
-#      each do |n|
-#        y << n if block.call(n)
-#      end
-#    end
-#  end
-#end
-
-class Enumerator
-  def lazy_select
-    self.class.new do |y|
-      each do |n|
-        y << n
-      end
-    end
-  end.lazy
-end
-
 
 class Enumerator2Test < Test::Unit::TestCase
 
-  def test_1
-    # One way to create an Enumerator is by passing a block to its constructor.
-    # A yielder object will be passed to this block.
-    # il metodo << di yielder can be used to define the elements the Enumerator will iterate through.
-    # yielder = produttore di raccolti
+  def test_0
+    # dato che tutti gli iteratori sono interni non riesco a scorrere due collezioni contemporaneamente.
+    # allora mi faccio dare l'enumerator (che è una implementazione dell'iteratore usabile esternamente)
+    n = [1, 2, 3]
+    l = ['a', 'b', 'c']
 
-    enum = Enumerator.new do |yielder|
-      yielder << "a" # significa che l'enumeratore sta iterando su "a"
-      # tutte le volte che viene fatto yielder il controllo torna al flusso principale
-      # quando richiamo l'enumerator riparte da dove aveva lasciato
-      # dopo l'ultimo yield lancia un'eccezione StopIteration
-      yielder << "b"
-      yielder << "c"
+    n_enum = n.to_enum
+    l_enum = l.to_enum
+
+    #3.times { p n_enum.next; p l_enum.next }
+    # metodo migliore fatto apposta
+    loop do
+      p n_enum.next;
+      p l_enum.next
     end
+  end
 
-    p enum.next
-    p enum.next
-    p enum.next
-    p enum.next
+  def test_1
+    a = [1, 3, 'cat']
+    enum_a = a.to_enum
+    p enum_a.next
+    p enum_a.next
+    p enum_a.next
+
+    h = {dog: 'canine', fox: 'vulpine'}
+    enum_h = h.to_enum
+    p enum_h.next
+    p enum_h.next
   end
 
   def test_2
-    enum = Enumerator.new do |y|
-      y << 1
-      y << 2
-    end
-
-    loop do
-      p enum.next
-    end
+    a = [1, 3, 'cat']
+    enum_a1 = a.each # mi torna l'enumerator se a each non gli passo il blocco
+    p enum_a1
+    enum_a2 = a.to_enum # mi ritorna l'enumerator
+    p enum_a2
   end
 
   def test_3
-    enum = Enumerator.new do |y|
-      n = 0
-      loop do
-        n += 1
-        y << n
-      end
-    end
-
-    # metodi come select e map agiscono sull'intera collezione, vogliono analizzarla tutta
-    # quindi entro in un loop infinito
-
-    p enum.my_lazy{|n| n % 2 == 0}.first(3) # in questo caso invece esce
-    #p enum.lazy_select{|n| n % 2 == 0}.first(3) # in questo caso invece esce
-    p '---'
-    p enum.select{|n| n % 2 == 0}.first(3)
-
+    # loop continua ad eseguire il ciclo finchè una condizione non è verificata
+    #loop do
+    # p 'x'
+    # end
   end
 
+  def test_4
+    # loop però è furbo, se lo uso con un enumerator quando ha raggiunto la fine esce.
+    a = [1, 2, 3]
+    b = ('a'..'z')
+    enum_a = a.to_enum
+    enum_b = b.to_enum
+    loop do
+      puts "#{enum_a.next} - #{enum_b.next}"
+    end
+  end
 
 end
