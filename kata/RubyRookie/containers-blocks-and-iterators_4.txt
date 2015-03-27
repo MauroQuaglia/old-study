@@ -68,11 +68,13 @@ I parametri del blocco, sono sempre locali al blocco anche se hanno lo stesso no
 di fuori del blocco.
 Posso definire delle variabili locali al blocco così: {|item; x, y, z|} dove item è la variabile a cui viene passato
 il valore dall'iterator e x, y e z sono variabili locali al blocco.
+Posso anche inizializzare una variabile nel blocco: {|item, n: 0|} NB: rispetto a prima devo mettere la virgola dopo
+item
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Iterator
-Un ITERATOR è un metodo che chiama un blocco di codice ripetutamente.
+Un ITERATOR è un metodo che può chiamare un blocco di codice.
 In sostanza chiamo l'iteretaor e gli passo un blocco (.each{|| ...})
 Il blocco non viene eseguito nel momento in cui ruby lo incontra, tuttavia ruby si ricorda il contesto del blocco, le
 sue variabili locali, ecc)
@@ -186,9 +188,59 @@ ora ho a disposizione il metodo selection su tutti gli enumeratori.
 I Lazy Enumerator
 Bisogna stare attenti con alcuni metodi chiamati sugli enumeratori (es: count e select) perchè scorrono tutta la
 collezione prima di tornare il risultato.
+Se chiamo Enumerator#lazy si un qualsiasi enumeratore di Ruby questo agisce come l'originale ma reimplementa alcuni
+metodi come select e map che consumano i dati della collezione quanto basta per soddisfare la richiesta.
 
 Su tutti gli enumeratori posso chimare il metodo lazy. Questo mi ritorna un enumeratore come quello originale, ma
-reimplementa alcuni metodi come selecte map che escono non appena hanno ottenuto il risultato voluto..
+reimplementa alcuni metodi come selecte map che escono non appena hanno ottenuto il risultato voluto.
 
+Es:
+class Integer
+  def self.all
+    Enumerator.new do |yielder|
+      n = 0;
+      loop do
+        yielder << n
+        n += 1
+      end
+    #end.lazy
+    end
+  end
+end
 
+Ho aggiunto il metodo all alla classe Integer. La chiamata successiva non termina mai, oppure termina con il risultato
+voluto a seconda che l'enumeratore tornato dal metodo all sia 'normale' o lazy.
+Integer.all.select{|n| n % 2 == 0}.first(10)
 
+Una notazione alternativa è definire una proc.
+multiple_of_two = -> n { (n % 2) == 0 }
+Integer.all.select(&multiple_of_two).first(10)
+Il vantaggio che può derivare rispetto alla precedente è che posso riutilizzare il blocco multiple_of_two anche in
+altre chiamate.
+
+Alternativa a lazy sulla definizione dell'enumeratore.
+Se non metto lazy alla definizione dell'enumeratore del metodo all me la posso cavare anche cosi:
+Integer.all.select{|i| (i % 3).zero? }.first(10)       # non ritorna mai
+Integer.all.lazy.select{|i| (i % 3).zero? }.first(10)  # esce e torna i valori
+
+------------------------------------------------------------------------------------------------------------------------
+
+Normalmente un blocco è usato come target di un iteratore. Ma può avere anche un'altra funzione.
+OSS: la keyword block_given? serve per sapere se mi è stato passato un blocco quando è stato chiamato il metodo.
+if block_given? ... end
+
+Es: nelle transazioni
+posso definire un blocco di codice che girerà sotto il controllo di una qualche transazione. Per esempio in
+concomitanza alla lettura di un file. (in questo caso il blocco non è target di nessun iteratore.)
+def self.open_and_process(*args)
+ f = File.open(*args)
+ yield f
+ f.close
+end
+
+Es: come oggetti
+Posso memorizzare un blocco in un oggetto, memorizzarlo in una variabile e poi poi utilizzarlo quando mi pare.
+Posso passare un blocco implicitamente: metodo(par1, par2){blocco}
+Posso passare un blocco esplicitamente: metodo(par1, par2, &block)
+In quest'ultimo caso il blocco viene convertito in un oggetto di tipo Proc e asseganto ad una variabile. Dopodichè
+posso questa variabile alla stregua di qualsiasi altra.

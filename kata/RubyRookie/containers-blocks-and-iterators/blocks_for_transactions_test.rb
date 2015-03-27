@@ -1,6 +1,7 @@
 require 'test/unit'
 
 class File
+
   def self.open_and_process(*args)
     f = File.open(*args)
     yield f
@@ -21,7 +22,7 @@ class BlocksForTransactionsTest < Test::Unit::TestCase
 
   def test_1
     # esegue il blocco
-    # poi esegue anche il codice
+    # poi esegue anche il codice. Infatti non centra niente con l'enumeratore che dopo lo yield non esegue più il codice!
     after_yield {p 'mq'}
   end
 

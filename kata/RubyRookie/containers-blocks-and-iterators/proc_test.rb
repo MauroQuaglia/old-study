@@ -1,14 +1,15 @@
 require 'test/unit'
+require_relative 'proc_example'
 
 class ProcTest < Test::Unit::TestCase
 
   def test_1
-    my_class = MyClass.new {|p| puts p}
+    my_class = ProcExample.new {|p| puts p}
     my_class.execute 'ciao'
   end
 
   def test_2
-    my_class = MyClass.new {|p| puts 'XXX' + p + 'XXX'}
+    my_class = ProcExample.new {|p| puts 'XXX' + p + 'XXX'}
     my_proc = my_class.get_block
     my_proc.call 'MAURO'
     my_proc.call 'GANCI'
@@ -203,23 +204,6 @@ class ProcTest < Test::Unit::TestCase
   def power(n)
     y = 1
     -> {y = y * n}
-  end
-
-end
-
-class MyClass
-
-  def initialize(&action)
-    @action = action # viene memorizzato in un oggetto Proc.
-    puts @action
-  end
-
-  def execute(value)
-    @action.call value
-  end
-
-  def get_block
-    @action
   end
 
 end
