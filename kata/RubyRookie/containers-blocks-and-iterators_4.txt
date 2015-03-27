@@ -224,6 +224,7 @@ Integer.all.select{|i| (i % 3).zero? }.first(10)       # non ritorna mai
 Integer.all.lazy.select{|i| (i % 3).zero? }.first(10)  # esce e torna i valori
 
 ------------------------------------------------------------------------------------------------------------------------
+Ancora sui blocchi
 
 Normalmente un blocco è usato come target di un iteratore. Ma può avere anche un'altra funzione.
 OSS: la keyword block_given? serve per sapere se mi è stato passato un blocco quando è stato chiamato il metodo.
@@ -243,4 +244,23 @@ Posso memorizzare un blocco in un oggetto, memorizzarlo in una variabile e poi p
 Posso passare un blocco implicitamente: metodo(par1, par2){blocco}
 Posso passare un blocco esplicitamente: metodo(par1, par2, &block)
 In quest'ultimo caso il blocco viene convertito in un oggetto di tipo Proc e asseganto ad una variabile. Dopodichè
-posso questa variabile alla stregua di qualsiasi altra.
+posso usare questa variabile alla stregua di qualsiasi altra.
+Posso anche farmi ritornare il blocco che ho passato (un getter per esempio) e riutilizzarlo.
+Memorizzare un blocco come oggetto e poi poterlo usare in più punti è molto utile tanto che in Ruby ci sono due modi simili (ma non
+uguali di farlo):
+Sia lambda che Proc.new prendono un blocco e lo trasformano in un OGGETTO di tipo Proc da poter utilizzare in giro. L'oggetto
+ritornato non è lo stesso ma differisce leggermente.
+x = Proc.new {puts 'Proc'}
+y = lambda {puts 'lambda'}
+
+Es: come closure
+def n_times(thing)
+  lambda {|n| n * thing} # il valore di thing rimane locale al blocco, questa è una closure
+end
+proc = n_times 3 #anche se il parametro '3' è esterno al blocco, rimane e vive nello scope del blocco.
+p proc.call 100 # 300
+p proc.call 'X' # XXX
+
+Notazioni alternative per creare blocchi
+
+
