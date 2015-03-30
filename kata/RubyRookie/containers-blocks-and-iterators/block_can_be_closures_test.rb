@@ -16,7 +16,6 @@ class BlockCanBeClosuresTest < Test::Unit::TestCase
   def power_proc_generator
     value = 1
     lambda{ value += value }
-    # qui si porta dietro lo scope della variabile
     # 1 2 4 8 16 32 64
     # a += 1 -> a = a + 1
     # a += a -> a = a + a

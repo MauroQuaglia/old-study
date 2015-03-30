@@ -3,7 +3,7 @@ require_relative 'proc_example'
 
 class BlockAlternativeNotationTest < Test::Unit::TestCase
 
-  def test_6
+  def test_1
     # modo alternativo per creare un oggetto proc
     a = lambda {|n| p n} #ricordiamo che è comunque un oggetto proc
     a.call 'ciao'
@@ -12,8 +12,16 @@ class BlockAlternativeNotationTest < Test::Unit::TestCase
     b.call 'riciao'
   end
 
-  def test_7
-    a = -> n {p n}
+  def test_2
+    a = lambda {|n, m| p n + m}
+    a.call 'ciao', 'mauro'
+
+    b = -> (n, m) {p n + m}
+    b.call 'riciao', 'mauro'
+  end
+
+  def test_3
+    a = -> (n) {p n}
     b = -> n, m {p n + m}
     c = -> (n, m) {p n + m}
     a.call 'ciao'
@@ -21,19 +29,75 @@ class BlockAlternativeNotationTest < Test::Unit::TestCase
     c.call 'ciao', 'ganci'
   end
 
-  def test_8
-   5.times do |val|
-    my_if val < 2, ->{p "#{val} is small"}, ->{p "#{val} is big"}
+  def multiple_proc(proc1, proc2)
+    proc1.call
+    proc2.call
+  end
+
+  def test_4
+    multiple_proc(lambda {p 'a'}, lambda {p 'b'})
+    multiple_proc(->{p 'e'}, ->{p 'f'})
+
+    c = lambda {p 'c'}
+    d = lambda {p 'd'}
+    multiple_proc(c, d)
+  end
+
+  def test_5
+   1.times do |val|
+     multiple_proc(->{p "#{val} is small"}, ->{p "#{val} is big"})
+     multiple_proc(lambda{p "#{val} is big"}, lambda{p "#{val} is big"})
    end
   end
 
-  def my_if(condition, option1, option2)
+  def my_if(condition, then_clause, else_clause)
     if condition
-      option1.call
+      then_clause.call
     else
-      option2.call
+      else_clause.call
     end
   end
+
+  def test_6
+    5.times do |n|
+      my_if(n < 3, ->{p 'x'}, ->{p 'y'})
+    end
+  end
+
+  def my_while(condition, &block)
+    #La condition è una Proc, non è necessario mettergli la & davanti.
+    while condition.call
+      block.call
+    end
+  end
+
+  def test_7
+    a = 0
+    # il primo parametro è una Proc, il secondo un blocco.
+    my_while(-> {a < 3}) do
+      p a
+      a += 1
+    end
+  end
+
+  def test_8
+    a = 0
+    my_while(-> {a < 3}){p a; a += 1}
+  end
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
   def test_9
     my_block('ciao') {p 'XXX'}
@@ -46,42 +110,6 @@ class BlockAlternativeNotationTest < Test::Unit::TestCase
     p a + block.call('ciao')
   end
 
-  def test_10
-    a = 0
-    my_while(-> {a < 3}) do
-      p a
-      a += 1
-    end
-  end
-
-  def test_11
-    a = 0
-    my_while2 -> {a < 3} do
-      p a
-      a += 1
-    end
-  end
-
-  def test_12
-    a = 0
-    my_while2(-> {a < 3}){p a; a += 1}
-  end
-
-
-
-  def my_while(condition, &block)
-    #La condition è una Proc, non è necessario mettergli la & davanti.
-    while condition.call
-      block.call
-    end
-  end
-
-  def my_while2(condition)
-    #La condition è una Proc, non è necessario mettergli la & davanti.
-    while condition.call
-      yield
-    end
-  end
 
   def test_13
     m = -> {p 'xxx'}

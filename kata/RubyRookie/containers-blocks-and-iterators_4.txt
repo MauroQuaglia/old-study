@@ -261,6 +261,13 @@ proc = n_times 3 #anche se il parametro '3' è esterno al blocco, rimane e vive 
 p proc.call 100 # 300
 p proc.call 'X' # XXX
 
-Notazioni alternative per creare blocchi
+Notazioni alternative per creare le Proc
+a = lambda {|n| p n} # il parametro è tra ||
+a = -> n {p n} # il parametro è prima delle graffe
+oppure anche con più parametri
+a = lambda {|n, m| p n + m}
+a = -> (n, m) {p n + m}
+in entrambe i casi a è un'oggetto Proc.
+
 
 
