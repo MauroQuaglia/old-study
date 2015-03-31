@@ -118,6 +118,14 @@ class ArrayTest < Test::Unit::TestCase
     p a.last(2)
   end
 
+  def test_10a
+    a = [1, 2, 3, 4, 5]
+    p a.first(1)
+    p a.first
+    p a.last(1)
+    p a.last
+  end
+
   def test_11
     a = []
     a[0] = 'a'

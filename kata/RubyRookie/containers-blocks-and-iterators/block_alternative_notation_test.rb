@@ -85,94 +85,9 @@ class BlockAlternativeNotationTest < Test::Unit::TestCase
     my_while(-> {a < 3}){p a; a += 1}
   end
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
   def test_9
-    my_block('ciao') {p 'XXX'}
-    my_block('ciao') do
-      p 'XXX'
-    end
-  end
-
-  def my_block(a, &block)
-    p a + block.call('ciao')
-  end
-
-
-  def test_13
     m = -> {p 'xxx'}
     a = -> (x, y) {p x; y.call}
     a.call 'ciao', m
   end
-
-  def test_14
-    proc1 = lambda do |a, *b, &block|
-      p "a = #{a.inspect}"
-      p "b = #{b.inspect}"
-      block.call
-    end
-
-    proc1.call(1, 2, 3, 4){p 'aaa'}
-  end
-
-  def test_15
-    proc1 = -> a, *b, &block do
-      p "a = #{a.inspect}"
-      p "ac = #{a.class}"
-      p "b = #{b.inspect}"
-      p "bc = #{b.class}"
-      block.call
-    end
-
-    proc1.call(1){p 'aaa'}
-    proc1.call(1, 2){p 'aaa'}
-    proc1.call(1, 2, 3){p 'aaa'}
-  end
-
-  def test_16
-   xxx {p '1'}
-
-   xxx do
-     p '2'
-   end
-
-   yyy(-> { p '3'})
-   yyy(lambda { p '4'})
-   yyy(Proc.new { p '5'})
-  end
-
-  def xxx
-    yield
-  end
-
-  def yyy(proc)
-    proc.call
-  end
-
-  def test_17
-  a = power(2)
-  p a.call
-  p a.call
-  p a.call
-  p a.call
-  p a.call
-  end
-
-  def power(n)
-    y = 1
-    -> {y = y * n}
-  end
-
 end

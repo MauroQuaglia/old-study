@@ -2,9 +2,7 @@ Le collezioni sono gestite in due modi: array, hash.
 
 Array
 il metodo [] è in sostanza un getter, mentre il metodo []= è un setter.
-
 Se gli passo un indice negativo, conta al contrario.
-
 Se all'interno di un'array creo dei gap, questi vengono colmati con dei nil.
 a[0]=a [2]=c --> a[1]=nil
 
@@ -35,7 +33,8 @@ shift, ecc.
 
 per tornare i primi o gli ultimi elementi di un array posso usare
 a.first(2) # i primi due
-a.last(3) # gli ultimi 3
+a.last(3) # gli ultimi tre
+Oss. a.first(1) != a.first, infatti il primo torna un array di un elemento, il secondo l'elemento.
 
 Riassumendo, posso usare queste modalità di getter e setter:
 a[n]
@@ -75,7 +74,7 @@ item
 
 Iterator
 Un ITERATOR è un metodo che può chiamare un blocco di codice.
-In sostanza chiamo l'iteretaor e gli passo un blocco (.each{|| ...})
+In sostanza chiamo l'iteretor e gli passo un blocco (.each{|| ...})
 Il blocco non viene eseguito nel momento in cui ruby lo incontra, tuttavia ruby si ricorda il contesto del blocco, le
 sue variabili locali, ecc)
 All'interno del metodo posso invocare il blocco con "yield"
@@ -269,5 +268,11 @@ a = lambda {|n, m| p n + m}
 a = -> (n, m) {p n + m}
 in entrambe i casi a è un'oggetto Proc.
 
+Anche quando passo i parametri a un blocco posso avere valori di default e parametri splat, keyword e blocchi (con &
+davanti).
+Possiamo quindiscrivere blocchi verstili come se fossero metodi.
+proc = lambda { |a, *b, &block| ...}
+proc.call(1, 2, 3, 4){p 'xxx'} # 1; [2, 3, 4]; blocco
+Ovviamente anche lcon la notazione alternativa funziona: proc = -> (a, *b, &block) { ... }
 
 
