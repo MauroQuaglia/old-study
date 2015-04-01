@@ -13,7 +13,7 @@ class IteratorTest < Test::Unit::TestCase
   def fibonacci_up_to(value)
   x, y = 1, 1
   while x <= value
-    yield x
+    yield(x)
     x, y = y, x + y
   end
   end
@@ -56,11 +56,6 @@ class IteratorTest < Test::Unit::TestCase
     a.each.with_index{|x, y| p x, y}
   end
 
-  def test_find_with_index
-    p [1, 2, 3].find.with_index{ |x, y| x * x >= 4; y} # mi trova la posizione dove c'è il primo numero che soddisfa
-    # la condizione
-  end
-
   def test_difference
     [:foo, :bar, :baz].each.with_index(10) do |value, index|
       puts "#{index}: #{value}"
@@ -91,15 +86,7 @@ class IteratorTest < Test::Unit::TestCase
     # in questo caso funziona perchè in ruby l'addizione è un metodo su un numero e :x è il simbolo che corrisponde al metodo +.
   end
 
-
   def test_5
-  p 1.bit_length
-  p 2.hash
-    p [2, 6, 8, 2].inject(:+) # posso anche solo specificare il nome del metodo che voglio applicare agli elementi successivi della collezione
-    # in questo caso funziona perchè in ruby l'addizione è un metodo su un numero e :x è il simbolo che corrisponde al metodo +.
-  end
-
-  def test_6
     p [2, 7].inject(28){|s, x| s.div(x)}
     # s=28. s=28/2=14, s=14/7=2. return 2
     # quindi lo riscrivo come:

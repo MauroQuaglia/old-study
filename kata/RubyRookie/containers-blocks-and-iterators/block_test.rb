@@ -58,7 +58,7 @@ class BlockTest < Test::Unit::TestCase
   end
 
   def test_8
-    [1,2].each{|item, n: 0| puts n }
+    [10,20].each{|item, n: 1, a: 2| puts n + a + item}
   end
 
 end

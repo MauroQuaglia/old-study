@@ -3,24 +3,22 @@ Le collezioni sono gestite in due modi: array, hash.
 Array
 il metodo [] è in sostanza un getter, mentre il metodo []= è un setter.
 Se gli passo un indice negativo, conta al contrario.
-Se all'interno di un'array creo dei gap, questi vengono colmati con dei nil.
+Se all'interno di un'array creo dei vuoti, questi vengono colmati con dei nil.
 a[0]=a [2]=c --> a[1]=nil
 
-getter
-Posso anche specificargli degli estremi in modo che vengano presi gli elementi tra gli estremi (sempre presi da sinistra
-a destra):
-a[1..3] -> prende gli elementi dalla posizione 1 alla 3 compresa
-a[1...3], a[-3..-1], a[4..-2]
-a[-2..1] -> torna [] se la posizione del primo estremo è dopo quella del secondo. In sostanza non fa il giro!
-
+Getter di un array
+Specifico gli estremi in modo che gli elementi vengano presi da sinistra a destra.
+a[1..3] -> prende gli elementi dalla posizione 1 alla 3 compresa.
+a[1...3], a[-3..-1], a[4..-2], ...
+a[-2..1] -> torna [] se la posizione del primo estremo è dopo quella del secondo. Non fa il giro!
 Oppure posso partire da una certa posizione e prendere tot elementi:
 a[2, 4] parte dalla posizione 2 e ne prende in tutto 4.
-Oss. In generale quindi a[2..4] != a[2, 4]
+Oss: in generale quindi a[2..4] != a[2, 4]
 
-setter
+Setter di un array
 Se come indicizzazione uso due numeri o un range allora gli elementi nell'array originario sono sostituiti con tutto
 ciò che sta a destra dell'assegnamento.
-a[1]=[1,2,3] -> in posizione 1 metterà un array con valori [1,2,3]
+a[1] = [1, 2, 3] -> in posizione 1 metterà un array con valori [1, 2, 3].
 a[2, 2] = 'x' -> dalla posizione due, prendo in tutto due elementi, e li rimpiazzo con uno solo che vale x.
 a[2, 0] = 'y' -> inserisco y davanti al secondo elemento.
 a[1, 1] = [9, 8, 7] -> occhio, è diverso dal primo esempio. Qui mi metto in posizione 1 e rimpiazzo quel singolo
@@ -36,7 +34,7 @@ a.first(2) # i primi due
 a.last(3) # gli ultimi tre
 Oss. a.first(1) != a.first, infatti il primo torna un array di un elemento, il secondo l'elemento.
 
-Riassumendo, posso usare queste modalità di getter e setter:
+Riassumendo, posso usare queste modalità di Getter e Setter su un array.
 a[n]
 a[n..m]
 a[n, m]
@@ -44,13 +42,9 @@ a[n, m]
 ------------------------------------------------------------------------------------------------------------------------
 
 Hash
-Per indicizzare le chiavi
-'key' => 'value'
-:key => 'value'
-key: 'value' # shortcut per il precedente
-
-NB - differente da altri linguaggi: ruby si ricorda l'ordine di inserimento degli elementi nella hash, quindi posso fare
+Differentemente da altri linguaggi ruby si ricorda l'ordine di inserimento degli elementi nella hash, quindi posso fare
 affidamento sull'ordinamento!
+Posso dare un valore di default a una hash nel caso l'elemento che richiedo non esista: Hash.new('xxx').
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -68,17 +62,17 @@ di fuori del blocco.
 Posso definire delle variabili locali al blocco così: {|item; x, y, z|} dove item è la variabile a cui viene passato
 il valore dall'iterator e x, y e z sono variabili locali al blocco.
 Posso anche inizializzare una variabile nel blocco: {|item, n: 0|} NB: rispetto a prima devo mettere la virgola dopo
-item
+item, infatti è come se stessi passando al blocco dei valori.
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Iterator
-Un ITERATOR è un metodo che può chiamare un blocco di codice.
+Un ITERATOR è un metodo che può chiamare un blocco di codice ripetutamente. (es: each)
 In sostanza chiamo l'iteretor e gli passo un blocco (.each{|| ...})
 Il blocco non viene eseguito nel momento in cui ruby lo incontra, tuttavia ruby si ricorda il contesto del blocco, le
 sue variabili locali, ecc)
-All'interno del metodo posso invocare il blocco con "yield"
-Posso passare parametri al blocco: (yield param1, param2)
+All'interno del metodo posso invocare il blocco con yield o call
+Posso passare parametri al blocco: yield(param1, param2) o call(param1, param2)
 Posso ricevere valori dal blocco: Il valore dell'ultima espressione valutata nel blocco è ritornata.
 
 NB: differenza con altri linguaggi
@@ -108,20 +102,17 @@ Somma dei valori -> [3, 2, 1].inject(){|sum, x| sum + x}  # Parte a sommare dal 
 Somma dei valori -> [3, 2, 1].inject(0){|sum, x| sum + x} # Parte a sommare da 0.
 oppure posso anche specificare il metodo da chiamare agli elementi successivi della collezione.
 Somma dei valori -> [3, 2, 1].inject(:+)
+[2, 7].inject(28, :div) -> # s=28. s=28/2=14, s=14/7=2. return 2
 
 OSS.
 Posso tenere traccia anche della posizione su cui sto iterando con il metodo "with_index"
 L'iteratore ti passa il valore corrente, con la chiamata addizionale with_index ti viene passata anche la posizione.
 "with_index" è un metodo addizionale, così che possiamo aggiungerlo a un qualsiasi iteratore.
-Es.
-each.with_index
-find.with_index
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Enumerator
-
-Sono iteratori esterni c come 'quasi' tutto in ruby sono degli oggetti.
+Sono iteratori esterni e come 'quasi' tutto in ruby sono degli oggetti.
 
 Quasi tutti gli iterator, se chiamati senza blocco, ritornano l'enumerator.
 Posso chiamare il metodo 'loop' che continua a richiamare l'enumerator finchè questo non ha finito. In generale però
@@ -145,7 +136,7 @@ Posso anche io creare un enumeratore
 Questi viene eseguito fino allo yield, che torna un valore al codice, il codice fa quello che deve e se richiama
 l'enumeratore questo riprende da dove aveva lasciato, cioè l'istruzione dopo lo yield.
 
-Un oggetto Enumerator è anche un enumerable quindi abbiamo a disposizione i metodi dell'enumerable
+Un oggetto Enumerator è anche un enumerable quindi abbiamo a disposizione i metodi dell'enumerable.
 
 Es:un contatore
 counter = Enumerator.new do |yielder|
@@ -157,7 +148,7 @@ counter = Enumerator.new do |yielder|
 end
 
 a questo contatore (counter.next...) non posso passare nessun blocco. Però posso modificarlo
-per fare in modo che prenda anche un blocco. (creo un generator, un generatore di enumeratori)
+per fare in modo che prenda anche un blocco.
 
 def xxx(enumerator, &block)
   Enumerator.new do |yielder|
@@ -187,9 +178,8 @@ ora ho a disposizione il metodo selection su tutti gli enumeratori.
 I Lazy Enumerator
 Bisogna stare attenti con alcuni metodi chiamati sugli enumeratori (es: count e select) perchè scorrono tutta la
 collezione prima di tornare il risultato.
-Se chiamo Enumerator#lazy si un qualsiasi enumeratore di Ruby questo agisce come l'originale ma reimplementa alcuni
+Se chiamo Enumerator#lazy su un qualsiasi enumeratore di Ruby questo agisce come l'originale ma reimplementa alcuni
 metodi come select e map che consumano i dati della collezione quanto basta per soddisfare la richiesta.
-
 Su tutti gli enumeratori posso chimare il metodo lazy. Questo mi ritorna un enumeratore come quello originale, ma
 reimplementa alcuni metodi come selecte map che escono non appena hanno ottenuto il risultato voluto.
 

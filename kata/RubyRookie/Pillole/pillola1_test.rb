@@ -24,4 +24,19 @@ class Pillola1Test < Test::Unit::TestCase
     # 3 - c
   end
 
+  def test_3
+    # Selezionare i primi dieci numeri pari dalla classe Integer.
+  end
+
+end
+
+class Integer
+  def self.all
+    Enumerator.new do |yielder, n: 0|
+      loop do
+        yielder << n
+        n += 1
+      end
+    end
+  end
 end
