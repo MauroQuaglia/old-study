@@ -63,7 +63,7 @@ gli STATEMENT MODIFIER sono shortcut per compattare la sintassi nel caso di una 
 
 Espressioni regolari
 'Perl' =~ /Perl/
-Se c'è match ritorna la posizione di partenza del match
+Se c'è match ritorna la posizione di partenza del match.
 Se non c'è match torna nil (quindi si può usare nelle condizioni...)
 I metodi classici che si usano con le regex sono
 sub(regex, string) -> se c'è il match lo sostituisco con la string, ma solo il primo match
@@ -76,7 +76,7 @@ Pezzi di codice che si possono associare alla chiamata ad un metodo quasi come s
 Sintassi: {} oppure do .. end, ma le parentesi hanno precedenza più alta rispetto al costrutto do .. end. Per ovviare a
 queste precedenze se metto sempre le parentesi ai metodi è più chiaro per chi legge e viene interpretato correttamente
 dall'interprete.
-Li posso invocare con yield, a cui posso passare dei parametri.
+Li posso invocare con yield o call a cui posso passare dei parametri.
 I parametri che prende il blocco stanno tra ||
 I blocchi vengono spesso usati con gli iterator, che sono metodi che tornano gli elementi successivi di una collezione.
 

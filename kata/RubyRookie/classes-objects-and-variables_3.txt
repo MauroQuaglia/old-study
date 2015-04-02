@@ -19,7 +19,7 @@ Gli accessor a mano sono utili se devo fare delle manipolazioni ulteriori sulle 
 leggerle così come sono.
 
 ------------------------------------------------------------------------------------------------------------------------
-Come leggere un file csv
+Esempio di come leggere un file csv:
 
 require 'csv'
 CSV.foreach(csv_file_name, headers: true) do |row|

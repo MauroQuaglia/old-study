@@ -67,7 +67,8 @@ item, infatti è come se stessi passando al blocco dei valori.
 ------------------------------------------------------------------------------------------------------------------------
 
 Iterator
-Un ITERATOR è un metodo che può chiamare un blocco di codice ripetutamente. (es: each)
+Un ITERATOR è un metodo che può chiamare un blocco di codice ripetutamente. (es: each) ed è in grado di passargli
+ripetutamente l'elemento successivo di una collezione.
 In sostanza chiamo l'iteretor e gli passo un blocco (.each{|| ...})
 Il blocco non viene eseguito nel momento in cui ruby lo incontra, tuttavia ruby si ricorda il contesto del blocco, le
 sue variabili locali, ecc)
@@ -232,13 +233,13 @@ Es: come oggetti
 Posso memorizzare un blocco in un oggetto, memorizzarlo in una variabile e poi poi utilizzarlo quando mi pare.
 Posso passare un blocco implicitamente: metodo(par1, par2){blocco}
 Posso passare un blocco esplicitamente: metodo(par1, par2, &block)
-In quest'ultimo caso il blocco viene convertito in un oggetto di tipo Proc e asseganto ad una variabile. Dopodichè
-posso usare questa variabile alla stregua di qualsiasi altra.
+Il blocco viene convertito in un oggetto di tipo Proc e asseganto ad una variabile. Dopodichè posso usare questa
+variabile alla stregua di qualsiasi altra.
 Posso anche farmi ritornare il blocco che ho passato (un getter per esempio) e riutilizzarlo.
-Memorizzare un blocco come oggetto e poi poterlo usare in più punti è molto utile tanto che in Ruby ci sono due modi simili (ma non
-uguali di farlo):
-Sia lambda che Proc.new prendono un blocco e lo trasformano in un OGGETTO di tipo Proc da poter utilizzare in giro. L'oggetto
-ritornato non è lo stesso ma differisce leggermente.
+Memorizzare un blocco come oggetto e poi poterlo usare in più punti è molto utile tanto che in Ruby ci sono due
+modi simili (ma non uguali di farlo):
+Sia lambda che Proc.new prendono un blocco e lo trasformano in un OGGETTO di tipo Proc da poter utilizzare in giro.
+L'oggetto ritornato non è lo stesso ma differisce leggermente nei due casi seguenti:
 x = Proc.new {puts 'Proc'}
 y = lambda {puts 'lambda'}
 
@@ -263,6 +264,5 @@ davanti).
 Possiamo quindiscrivere blocchi verstili come se fossero metodi.
 proc = lambda { |a, *b, &block| ...}
 proc.call(1, 2, 3, 4){p 'xxx'} # 1; [2, 3, 4]; blocco
-Ovviamente anche lcon la notazione alternativa funziona: proc = -> (a, *b, &block) { ... }
-
+Ovviamente anche con la notazione alternativa funziona: proc = -> (a, *b, &block) { ... }
 
