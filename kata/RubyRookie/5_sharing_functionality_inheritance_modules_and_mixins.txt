@@ -1,30 +1,52 @@
 Duplicazione
 Due modi per eliminarla: ereditarietà, mixins (preferibile).
-** ereditarietà: "A è un B" (il codice si perde un po' tra padre e figlio, un po' di qua, un po' di la... inoltre c'è molto accoppiamento)
+** ereditarietà: "A è un B" (il codice si perde un po' tra padre e figlio, un po' di qua, un po' di la...
+inoltre c'è molto accoppiamento)
 ** mixin: "A usa B", "A ha B" (solitamente nel modo reale non c'è "A è un B" ma queste due... )
 
+Ereditarietà di base:
 MyClass < Object < BasicObject
 
-Posso creare un server al volo con la classe GServer
+Esempio.
+Posso creare un server TCP al volo con la classe GServer.
+LogServer < GServer
 
 EREDITARIETA'
 La parola 'super' serve per chiamare il metodo base del metodo chiamato.
-Cerca il metodo nella classe base con lo stesso nome e gli passa gli stessi parametri passati al metodo figlio senza bisogno di specificarlo.
+Cerca il metodo nella classe base con lo stesso nome e gli passa gli stessi parametri passati al metodo figlio senza
+bisogno di specificarlo.
 Anche se nella classe figlio non metto il costruttore, il costruttore base viene chiamato.
 Ruby supporta solo l'ereditarietà singola
 
-I moduli definiscono un namespace (una sandbox) dove posso mettere del codice senza preoccuparmi troppo di altri metodi e costanti definiti
-in quel modulo stesso. Solitamente i moduli non sono classi, non nascono con l'idea di avere una precisa responsabilità, sono
-piuttosto da vedere come posti in cui mettere del codice in comune, come metodi, classi e costanti.
-
 MODULI
+Per usare i mixin devo prima capire come funzionano i moduli
+I moduli definiscono un namespace (una sandbox) dove posso mettere del codice senza preoccuparmi troppo di altri metodi
+e costanti definiti in altri moduli o classi. Anche se ci sono nomi uguali di metodi possiamo invocarli separatamente
+basta definirli con il nome di modulo davanti (module method) per evitare ambiguità.
+Solitamente i moduli non sono classi, non nascono con l'idea di avere una precisa responsabilità, sono piuttosto da
+vedere come posti in cui mettere del codice in comune, come metodi, classi e costanti.
 Posso caricare i moduli in un file con il require_relative come se fossero delle normali classi.
+
+Es:
 require_relative 'trig'
-e li posso invocare così i metodi e le costanti
-Trig.sin('90') (NB: nel modulo devo averla così definita def Trig.sin(x), viene definito come module method: metodo che inizia con il nome del modulo.
-Trig::PI
-Attenzione che in questo caso non ho usato la parola 'include' per includerli nella classe ma ho usato il require_relative per caricare i
-file nel mio contesto.
+require_relative 'moral'
+def MyClass
+ include Trig, Moral
+ ...
+end
+* Cerca cos nel modulo Tring e se lo trova torna prima quello anche se ce n'è un altro definito in Moral. Usa il primo
+che trova.
+
+Es:
+require_relative 'trig'
+require_relative 'morla'
+def MyClass
+    ...
+end
+* In questo caso non ho fatto include nella classe dei moduli. Tuttavia ho caricato il file del modulo grazie al
+require_relative. Se volgio usare i metodi all'inteno della classe devo specificare per forza il nome del modulo:
+Trig.sin('XXX'), Moral.sin('YYY'). Però devo aver definito i metodi come module method, cioè metodi che iniziano con
+il nome del modulo: def Trig.sin(x)...end.
 
 MIXINS
 Posso rendere disponibili i metodi e le costanti di un modulo in una classe usando la parola 'include'. La classe più il modulo/i viene detta mixin.

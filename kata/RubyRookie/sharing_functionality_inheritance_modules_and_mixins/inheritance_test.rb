@@ -16,6 +16,8 @@ class MyTest < Test::Unit::TestCase
   def test_2
     puts Parent.superclass
     puts Object.superclass
+    puts BasicObject.superclass
+    puts BasicObject.superclass
     puts BasicObject.superclass.inspect
   end
 
