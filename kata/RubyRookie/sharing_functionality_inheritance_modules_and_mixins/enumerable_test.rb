@@ -19,8 +19,6 @@ class EnumerableTest < Test::Unit::TestCase
     p 'x'.scan(/[aeiou]/)
     p 'ako'.scan(/[aeiou]/)
     p 'ao'.scan(/[aeiou]/)
-
-    p 'aaa'.length
   end
 
   def test_4
@@ -31,8 +29,6 @@ class EnumerableTest < Test::Unit::TestCase
    p VowelFinder2.new('ciao') == VowelFinder2.new('miao')
    p VowelFinder2.new('ciao') < VowelFinder2.new('aiao')
    p VowelFinder2.new('iao') > VowelFinder2.new('o')
-
   end
-
 
 end

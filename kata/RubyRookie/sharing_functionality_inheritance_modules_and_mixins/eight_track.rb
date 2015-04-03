@@ -1,9 +1,11 @@
-require_relative 'trig'
+require_relative 'debug'
 
 class EightTrack
-  include Trig
+  include Debug
   attr_reader :name
+
   def initialize(name)
     @name = name
   end
+
 end

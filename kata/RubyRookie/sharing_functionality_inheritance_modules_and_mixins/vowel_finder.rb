@@ -2,6 +2,7 @@ class VowelFinder
   include Enumerable
 
   def initialize(string)
+    # di fatto la stringa è un array di caratteri, quindi itera su questi. è giusto quindi avere persons!
     @string = string
   end
 

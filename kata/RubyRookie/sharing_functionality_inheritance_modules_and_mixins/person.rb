@@ -11,8 +11,7 @@ class Person
   end
 
   def <=>(other)
-    # il < di person chiama questo metodo per decidere che comparazione usare.
-    # in questo caso è un compare sulle stringhe in ordine alfabetico
+    # praticamente gli sto dicendo di usare il comparable delle stringhe.
     self.name <=> other.name
   end
 
