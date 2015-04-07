@@ -17,7 +17,6 @@ class MyTest < Test::Unit::TestCase
     puts Parent.superclass
     puts Object.superclass
     puts BasicObject.superclass
-    puts BasicObject.superclass
     puts BasicObject.superclass.inspect
   end
 

@@ -1,26 +1,21 @@
 Duplicazione
 Due modi per eliminarla: ereditarietà, mixins (preferibile).
-** ereditarietà: "A è un B" (il codice si perde un po' tra padre e figlio, un po' di qua, un po' di la...
-inoltre c'è molto accoppiamento)
-** mixin: "A usa B", "A ha B" (solitamente nel modo reale non c'è "A è un B" ma queste due... )
+* ereditarietà: "A è un B" (il codice si perde un po' tra padre e figlio, inoltre c'è un accoppiamento molto forte).
+* mixin: "A usa B", "A ha B" (accoppiamento meno forte)
 
 Ereditarietà di base:
 MyClass < Object < BasicObject
-
-Esempio.
-Posso creare un server TCP al volo con la classe GServer.
-LogServer < GServer
 
 EREDITARIETA'
 La parola 'super' serve per chiamare il metodo base del metodo chiamato.
 Cerca il metodo nella classe base con lo stesso nome e gli passa gli stessi parametri passati al metodo figlio senza
 bisogno di specificarlo.
 Anche se nella classe figlio non metto il costruttore, il costruttore base viene chiamato.
-Ruby supporta solo l'ereditarietà singola
+Ruby supporta solo l'ereditarietà singola.
 
 MODULI
-Un modulo non può avere istanze perché non è una classe, ma può essere incluso on una classe.
-Per usare i mixin devo prima capire come funzionano i moduli
+Un modulo non può avere istanze perché non è una classe, ma può essere incluso in una classe.
+Per usare i mixin devo prima capire come funzionano i moduli.
 I moduli definiscono un namespace (una sandbox) dove posso mettere del codice senza preoccuparmi troppo di altri metodi
 e costanti definiti in altri moduli o classi. Anche se ci sono nomi uguali di metodi possiamo invocarli separatamente
 basta definirli con il nome di modulo davanti (module method) per evitare ambiguità.
@@ -35,8 +30,10 @@ def MyClass
  include Trig, Moral
  ...
 end
-* Cerca cos nel modulo Tring e se lo trova torna prima quello anche se ce n'è un altro definito in Moral. Usa il primo
-che trova.
+* Cerca cos in MyClass, non c'è, lo cerca in Moral e lo trova, poi controlla cosa c'è in Trig e lo trova anche qui,
+quindi usa questo perché è l'ultimo che ha trovato.
+Ruby cerca così: classe, moduli(a partire dall'ultimo incluso a salire), poi nella superclasse della classe
+e nei suoi moduli, e così via...
 
 Es:
 require_relative 'trig'
@@ -49,6 +46,15 @@ require_relative. Se volgio usare i metodi all'inteno della classe devo specific
 Trig.sin('XXX'), Moral.sin('YYY'). Però devo aver definito i metodi come module method, cioè metodi che iniziano con
 il nome del modulo: def Trig.sin(x)...end.
 
+Conflitti sulle variabili dei moduli
+Il modulo che includo nella classe può avere delle variabili di istanza.
+Tuttavia potrebbero sorgere dei problemi, in quanto questa variabile di istanza potrebbe andare in conflitto con
+varibili di istanza già definite nella classe o in altri moduli inclusi.
+Un modo semplice per risolvere il problema è chiamare le variabili di istanza con un nome che inizia per il nome
+del modulo in cui sono state definite.
+Comunque un modulo che deve tenersi il proprio stato ha già dignità di classe e non dovrebbe essere implementato come
+modulo.
+
 ------------------------------------------------------------------------------------------------------------------------
 
 MIXINS
@@ -57,9 +63,9 @@ La classe più il modulo/i viene detta mixin.
 All'interno del mixin posso avere anche il riferimento alla classe che lo sta usando con {self.class.name}
 Prima di usare l'include devo usare il require_relative per caricare il modulo.
 Se più classi includono lo stesso modulo esse stanno puntando alla stessa cosa. E' come se fosse uno statico.
-Non viene caricato nella classe ma c'è un puntatore nella classe che punta al modulo.
+Non viene caricato nella classe ma c'è un puntatore della classe al modulo.
 
-Quando il codice del mixin comincia a interagire con quello della classe inizia il vero potere...
+Quando il codice del modulo comincia a interagire con quello della classe inizia il vero potere!
 in tal caso infatti non sto usando il modulo solo come un contenitore di metodi atomici ma i metodi del modulo
 interagiscono con quelli della classe. (Es: modulo comparable e metodo <=> nella classe.)
 * il modulo Comparable presuppone che nella classe sia definto il metodo <=>
@@ -67,19 +73,16 @@ interagiscono con quelli della classe. (Es: modulo comparable e metodo <=> nella
 * Oss: dato che per esempio su un array è definito il metodo sort che usa queste, posso fare sort su un array di queste
 classi che includono Comparable.
 
-* Quando includo un modulo in una classe, vengono rese a disposizione della classe le variabili definite nel modulo.
-** se ho nella mia classe una variabile con lo stesso nome possono sorgere dei problemi!
-** Se uso un modulo controllo le sue variabili, se creo un modulo un suggerimento potrebbe essere definire
-le variabili con all'inizio il nome del modulo o qualcosa che lo ricordi.
-
-* Come vengono cercati i metodi, anche perché tra classe e modulo ce ne possono essere alcuni con lo stesso nome
-* classe -> mixin inclusi nella classe (l'ultimo incluso è il primo in cui cerca) -> superclass e suoi mixin
+Quando includo un modulo in una classe, vengono rese a disposizione della classe le variabili definite nel modulo.
+* se ho nella mia classe una variabile con lo stesso nome possono sorgere dei problemi!
+* Se uso un modulo controllo le sue variabili, se creo un modulo un suggerimento potrebbe essere definire
+le variabili con all'inizio il nome del modulo.
 
 -----------------------------------------------------------------------------------------------
 
 Le collezioni di Ruby come Array, Hash, ... supportano molte operazioni: ordinamento, scorrimento, ecc...
 Il bello è che anche ogni nostra classe possiamo dotarla di tutto ciò!
-* dobbiamo scrivere un iterator di nome each che ritorna gli elementi che volgiamo
+* dobbiamo scrivere un iterator di nome each che ritorna gli elementi che vogliamo
 * dotare la nostra classe del modulo Enumerable (abbiamo quindi creato un mixin)
 ** se implemento anche <=> avrò anche min, max, sort,...
 
@@ -91,5 +94,4 @@ così abbiamo a disposizione tutti i metodi di Enumerable funzionanti.
 Esempio
 * l'inject posso usarlo in tutte le classi che includono il modulo Enumerable e che definiscono il metodo each.
 * inject applica ai primi due elemnti una certa operazione, il risultato lo applica al terzo elemento e cosi via
-* avrò una csa del tipo VowelFinder.new('ciao ciao lulu').inject(:+)
-
+* avrò una cosa del tipo VowelFinder.new('ciao ciao lulu').inject(:+) per concatenare tutte le vocali.

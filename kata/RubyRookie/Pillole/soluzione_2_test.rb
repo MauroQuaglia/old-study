@@ -18,7 +18,7 @@ class Soluzione2Test < Test::Unit::TestCase
 end
 
 class Person
-  include Comparable, Enumerable
+  include Comparable
   attr_reader :name
 
   def initialize(name)
@@ -29,10 +29,4 @@ class Person
     @name <=> other.name
   end
 
-  def each
-    @name
-  end
-
 end
-
-

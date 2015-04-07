@@ -27,7 +27,7 @@ class EnumerableTest < Test::Unit::TestCase
 
   def test_5
    p VowelFinder2.new('ciao') == VowelFinder2.new('miao')
-   p VowelFinder2.new('ciao') < VowelFinder2.new('aiao')
+   p VowelFinder2.new('ciao') < VowelFinder2.new('aiao') # 3 vocali contro 4
    p VowelFinder2.new('iao') > VowelFinder2.new('o')
   end
 
