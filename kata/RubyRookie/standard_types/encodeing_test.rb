@@ -16,7 +16,7 @@ class EncodingTest < Test::Unit::TestCase
   end
 
   def test_3
-    file = File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/StandardTypes/songdata.csv')
+    file = File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/standard_types/songdata.csv')
     while(line = file.gets)
       p line
     end
@@ -26,7 +26,7 @@ class EncodingTest < Test::Unit::TestCase
     song = Struct.new(:title, :name, :length) # definisco una classe al volo
 
     # meglio usare il blocco così poi ruby chiude il file
-    File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/StandardTypes/songdata.csv') do |song_file|
+    File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/standard_types/songdata.csv') do |song_file|
       songs = []
       song_file.each do |line|
         file, length, name, title = line.chomp.split(/\s*\|\s*/)

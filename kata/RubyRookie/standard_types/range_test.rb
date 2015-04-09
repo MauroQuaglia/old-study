@@ -47,14 +47,14 @@ class RangeTest < Test::Unit::TestCase
   end
 
   def test_4
-    file = File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/StandardTypes/prova.csv')
+    file = File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/standard_types/prova.csv')
     while line = file.gets
       puts line if line =~ /start/ .. line =~ /end/
     end
   end
 
   def test_5
-    File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/StandardTypes/prova.csv') do |file|
+    File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/standard_types/prova.csv') do |file|
       file.each do |line|
         puts line if line =~ /start/ .. line =~ /end/
       end
