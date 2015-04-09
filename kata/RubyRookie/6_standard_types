@@ -1,37 +1,40 @@
-Numeri
+NUMERI
+La classe base di tutti i numeri è Numeric.
 
-* la classe base di tutti i numeri è Numeric.
+INTERI (Fixnum, Bignum) (N,I)
+* Come classe base hanno Integer; Integer è la classe base solo per queste due.
+* Possono avere qualsiasi lunghezza.
+* Vengono convertiti in automatico da Ruby in oggetti Fixnum o Bignum a seconda della dimensione.
+* Posso mettere davanti un carattere che ne indica la base in cui devono essere interpretati:
+** 0 = ottale, 0d = decimale = default, 0x = esadecimale, 0b = binario.
+* Gli underscore vengono ignorati e servono solo per leggere meglio il numero: 123_000.
+* Es: per convertire una stringa in un intero posso fare: Integer('9')
 
-* interi (Fixnum, Bignum) (N,I)
-** come classe base hanno Integer (Integer è la classe base solo per queste due)
-** possono avere qualsiasi lunghezza.
-** vengono convertiti in automatico da Ruby in oggetti Fixnum o Bignum a seconda della dimensione.
-** posso mettere davanti un carattere che ne indica la base in cui devono essere interpretati: 0 = ottale, 0d = decimale = default, 0x = esadecimale, 0b = binario.
-** gli underscore vengono ignorati e servono solo per leggere meglio il numero
-
-* virgola mobile (Float) (R)
-** basta mettere un punto (.0) per trasformare un Fixnum in un Float, con il punto Ruby capisce che deve fare la conversione
-** Venfono memorizzati in un oggetto Float (sia se espressi con virgola mobile, sia quando espressi con esponente)
+REALI (Float) (R)
+* basta mettere un punto (.0) per trasformare un Fixnum in un Float, con il punto Ruby capisce che deve fare la conversione
+* Vengono memorizzati in un oggetto Float (sia se espressi con virgola mobile, sia quando espressi con esponente)
 ** sia numeri con virgola mobile, es: 1.2 -> Float
 ** sia numeri con esponente, es: 5e0 = 5.0 * 10^0 = 5.0 * 1 = 5.0; 5e2 = 5.0 * 10^2 = 5.0 * 100 = 500.0 -> Float
 
-* razionali (Rational) (Q)
-** esprime il rapporto tra due numeri interi, sono delle frazioni. Dunque rispetto ai float hanno una rappresentazione "esatta" Es: 1 / 3 = 0.3333333333... che poi ruby arrotonda
+RAZIONALI (Rational) (Q)
+* esprime il rapporto tra due numeri interi, sono delle frazioni.
+* Dunque rispetto ai float hanno una rappresentazione "esatta".
 ** Es: Rational(3, 4) oppure Rational('3/4')
 
-* complessi (Complex) (C)
-** viene rappresentato come parte reale e parte immaginaria:
+COMPLESSI (Complex) (C)
+* viene rappresentato come parte reale e parte immaginaria:
 ** Complex(1,1) = 1+1i
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Quando effettuo un'operazione tra due numeri di classi diverse, il risultato appartiene alla classe più generale delle due usate.
+Quando effettuo un'operazione tra due numeri di classi diverse, il risultato appartiene alla classe più generale delle due.
 Attenzione alla divisione, se divido due interi il risultato è ancora un intero, così
 1   / 2 = 0 (int / int = int)
 1.0 / 2 = 0.5 (float / int = float)
 
-Se vogliamo fare le cose più pulite, cioè vogliamo lavorare con i razionali fino alla fine, invece di usare i risultati in virgola mobile equivalenti possiamo
-sfruttare la libreria mathn.
+Se vogliamo fare le cose più pulite, cioè vogliamo lavorare con i razionali fino alla fine, invece di usare i
+risultati in virgola mobile equivalenti possiamo sfruttare la libreria mathn.
+La libreria mathn cerca la migliore rappresentazione del numero in questione.
 Senza mathn
 * 22 / 7 -> Fixnum 3;
 * i * i -> Complex -1+0i
@@ -40,34 +43,41 @@ Con mathn
 * i * i -> Fixnum -1
 
 ------------------------------------------------------------------------------------------------------------------------
-Gli Integer supportano molte iterazioni: times, upto, downto, step (si può usare nei cicli profiquamente), ...
+
+Gli Integer supportano molti iteratori: times, upto, downto, step (si può usare nei cicli profiquamente), ...
 ES 3.times{print 'x', ' '}
 Se non viene specificato il blocco torna un enumeratore, e dato che poi ho un enumeratore ci posso fare ulteriori operazioni
 ES 10.downto(7).with_index{|num, idx| p "#{idx}: #{num}"}
+
 ------------------------------------------------------------------------------------------------------------------------
 
 STRINGHE
-* una stringa è una sequenza di caratteri tra due delimitatori
+* una stringa è una sequenza di caratteri tra due delimitatori.
 ** caratteri stampabili
-** dati binari (sono difficoltosi da rappresentare e quindi usiamo gli escape... questo permette in 'compilazione' di capire il carattere corretto)
+** dati binari (sono difficoltosi da rappresentare e quindi usiamo gli escape; questo permette in 'compilazione' di capire il carattere corretto)
 
-* Delimitatore ' gli escape sono limitati a questi due
+* Delimitatore '
 ** carattere di escape = \
-*** '\\' -> \
-*** '\'' -> '
+* si possono escapare solo questi due caratteri: \, '
+** '\\' -> \
+** '\'' -> '
 
-* Delimitatore ", molti caratteri di escape
+* Delimitatore "
 ** carattere di escape = \
-*** \n = newline, \r = return, ...
-*** esegue codice ruby operativo "#{code}". questo code può essere anche più di una semplice chiamata può anche essere del vero codice, posso definirci un metodo ed eseguirlo!
+* si possono escapare molti caratteri: \n = newline, \r = return, ...
+* esegue codice ruby operativo "#{code}".
 
 * Delimitatore here-documents
-** a = <<ABC
+a = <<ABC
 ...
 ABC
-** << parta da colonna 1
-** <<- posso mettere l'indentazione che voglio
-** ci possono essere anche here-documens multipli su una singola riga.
+b = <<-ABC
+...
+       ABC
+* << il delimitatore finale deve partire da colonna 1 del file. Esempio a
+* <<- il delimitatore finale lo posso spostare dove voglio. Esempio b.
+
+------------------------------------------------------------------------------------------------------------------------
 
 --encoding--
 * ogni stringa ha associato un encoding che dipende dal file che contiene la stringa.

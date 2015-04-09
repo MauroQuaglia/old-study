@@ -1,4 +1,5 @@
 require 'test/unit'
+require 'mathn'
 
 class Soluzione2Test < Test::Unit::TestCase
 
@@ -13,6 +14,12 @@ class Soluzione2Test < Test::Unit::TestCase
     assert_true(antonio < mauro)
     assert_true(antonio <= mauro)
     assert_true(mauro.between?(antonio, riccardo))
+  end
+
+  def test_2
+    n = Complex::I * Complex::I
+
+    assert_equal(-1.class, n.class)
   end
 
 end

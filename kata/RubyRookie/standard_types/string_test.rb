@@ -12,6 +12,10 @@ class StringTest < Test::Unit::TestCase
   end
 
   def test_2
+    # oss: il carattere q o Q è opzionale.
+    # A livello di significato, possiamo dire che:
+    # q = '
+    # Q = "
     puts '\\' # \
     puts '\'' # '
     puts 'Anche se li metto "\\" me ne lascia solo uno.'
@@ -25,18 +29,17 @@ class StringTest < Test::Unit::TestCase
   end
 
   def test_4
-    s = <<ABC
-        kkdodkodkodko
-        dokdodkodkodkodk
+    s =<<ABC
+   abc
+   123
 ABC
-    p s
+    p s # non posso spostare il delimitaotre finale
 
-    b = <<-ABC
-        kkdodkodkodko
-        dokdodkodkodkodk
-    ABC
-    p b
-
+    b =<<-ABC
+   abc
+   123
+          ABC
+    p b # posso spostare il delimitatore finale
   end
 
   def test_5

@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'mathn'
+#require 'mathn'
 
 class NumbersTest < Test::Unit::TestCase
 
@@ -29,6 +29,7 @@ class NumbersTest < Test::Unit::TestCase
   def test_3
     print_number_info 1.2
     print_number_info 1e3 # 1000 = 1 * 10^3
+    print_number_info 1.0e3 # 1000 = 1 * 10^3
     print_number_info 1e0 # 1.0 = 1.0 * 10^0 = 1.0 * 1 = 1.0
     print_number_info 5e2 # 1.0 = 1.0 * 10^0 = 1.0 * 1 = 1.0
   end
@@ -48,7 +49,6 @@ class NumbersTest < Test::Unit::TestCase
   end
 
   def test_6
-    Fixnum
     print_number_info(3 + 5.0)
     print_number_info(Complex(1,1) + 5.0)
     print_number_info(Complex(1,1) + 5)
@@ -64,6 +64,7 @@ class NumbersTest < Test::Unit::TestCase
     print_number_info(22 / 7)
     print_number_info(Complex::I * Complex::I)
 
+    # con mathn
     #Rational: 22/7
     #Fixnum: -1
     print_number_info(22 / 7)
@@ -78,6 +79,11 @@ class NumbersTest < Test::Unit::TestCase
 
     p 3.times # senza i blocchi tornano un enumeratore
     10.downto(7).with_index{|num, idx| p "#{idx}: #{num}"}
+  end
+
+  def test_8
+    puts print_number_info('9')
+    puts print_number_info(Integer('9'))
   end
 
   private

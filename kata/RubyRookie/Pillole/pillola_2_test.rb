@@ -17,6 +17,12 @@ class Pillola2Test < Test::Unit::TestCase
     #assert_true(mauro.between?(antonio, riccardo))
   end
 
+  def test_2
+    n = Complex::I * Complex::I
+
+    # assert_equal(-1.class, n.class)
+  end
+
 end
 
 class Person
