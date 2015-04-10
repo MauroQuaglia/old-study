@@ -23,6 +23,17 @@ class Pillola2Test < Test::Unit::TestCase
     # assert_equal(-1.class, n.class)
   end
 
+  # Divertiamoci con i range.
+
+  def test_3
+    # Range come Sequenza
+    p (1..10).to_a
+    p (1...10).to_a
+    p ('a'..'z').to_a
+    p ('bar'..'baz').to_a
+  end
+
+
 end
 
 class Person

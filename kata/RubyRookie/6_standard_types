@@ -79,39 +79,53 @@ b = <<-ABC
 
 ------------------------------------------------------------------------------------------------------------------------
 
---encoding--
-* ogni stringa ha associato un encoding che dipende dal file che contiene la stringa.
-** in ruby 2 l'encoding di default è UTF-8
-* oss. #{s} stampa la stringa e basta, #{s.inspect} stampa la stringa virgolettata
-* # encoding: us-ascii in cima al file e la stringa s all'interno del file ha encoding US-ASCII
-* # encoding: utf-8 in cima al file e la stringa s all'interno del file ha encoding UTF-8 (default)
+ENCODING
+Ogni stringa ha associato un encoding che dipende dal file che contiene la stringa. Di default:
+* In Ruby 1.9 è US-ASCII
+* In Ruby 2   è UTF-8
+* OSS:
+#{s} stampa la stringa e basta.
+#{s.inspect} stampa la stringa virgolettata.
+#{s.encoding} stampa l'encoding della stringa.
+Se metto:
+* # encoding: us-ascii in cima al file, la stringa s all'interno del file ha encoding US-ASCII
+* # encoding: utf-8 in cima al file, la stringa s all'interno del file ha encoding UTF-8 (default)
 
+------------------------------------------------------------------------------------------------------------------------
 
---caratteri--
-* non c'è una classe per i caratteri.
-* sono semplicemente stringhe di lunghezza uno
+CARATTERI
+* non c'è una classe per i caratteri, sono semplicemente stringhe di lunghezza uno.
 * possono essere creati mettendo un ? davanti al carattere o alla sequenza che rappresenta il carattere
-* es: ?a, ?\C-a
-** chissenefrega.... usiamo 'a' al posto di ?a che è più chiaro!
+* es: ?a
+* chissenefrega... usiamo 'a' al posto di ?a che è più chiaro!
 
+------------------------------------------------------------------------------------------------------------------------
 
---lavorare con le stringhe--
+LAVORARE CON LE STRINGHE
+
 * posso definire una classe song al volo: song = Struct.new(:title, :name, :length)
-* le assegnazioni multilinea sono utili per esempio in questo caso
-** length, name, title = line.chomp.split(/\s*\|\s*/) -> rende più chiara la sintassi della riga del file
-** a, b = [1, 2] -> a = 1, b= 2.......
+** è meno versatile di OpenStruct, ma approfondiamo dopo.
 
+* le assegnazioni multilinea sono utili per esempio per rendere chiara la sintassi di una riga di un file:
+* entrambe le regex tornano un array e l'assegnazione viene fatta in automatico.
+** length, name, title = line.chomp.split(/\s*\|\s*/)
+** a, b = length.scan(/\d+/)
 
---range--
-un range ha vari metodi che ti permettono di accedere al contenuto del range, max, include, ....
+------------------------------------------------------------------------------------------------------------------------
 
-un range può anche essere basato su degli oggetti, non solo su stringhe e numeri
-** deve avere il metodo "succ"
-** e deve avere il metodo astronave (spaceship operator) <=>
-anche se questa cosa di solito si usa poco
+RANGE
+Ha vari metodi che ti permettono di accedere al contenuto
+* max, include, include?, reject, inject, ...
 
+Un range può anche essere basato su degli oggetti, non solo su stringhe e numeri. L'importante è che l'oggetto:
+* abbia il metodo "succ"
+* implementi il metodo astronave (spaceship operator) <=>
+Questa versione del range basato su oggetti è poco usato.
 
-serve per implementare tre cose
+Serve principalmente per implementare tre cose:
+* Sequenze
+* Condizioni
+* Intervalli
 
 * sequenze
 ** .. inclusivo, ... esclude l'ultimo elemento.
