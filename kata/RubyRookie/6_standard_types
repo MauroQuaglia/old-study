@@ -120,32 +120,26 @@ Ha vari metodi che ti permettono di accedere al contenuto
 Un range può anche essere basato su degli oggetti, non solo su stringhe e numeri. L'importante è che l'oggetto:
 * abbia il metodo "succ"
 * implementi il metodo astronave (spaceship operator) <=>
-Questa versione del range basato su oggetti è poco usato.
+Dato un oggetto iniziale e finale, il metodo succ in base al <=> crea l'oggetto successivo.
 
 Serve principalmente per implementare tre cose:
 * Sequenze
 * Condizioni
 * Intervalli
 
-* sequenze
-** .. inclusivo, ... esclude l'ultimo elemento.
-** posso convertirla in un array o in un enumeratore
+SEQUENZE
+* .. inclusivo, ... esclude l'ultimo elemento.
+* posso convertirla in un array o in un enumeratore
 
-* condizioni
-** può essere usato come espressione condizionale, può funzionare come un interruttore on-off
+CONDIZIONI
+* Usato come espressione condizionale, può funzionare come un interruttore on-off
 ** on quando la condizione nella prima parte è vera
 ** off quando la condizione nella seconda parte è vera
-** esempio se leggo un file posso dire
-*** puts line if line =~ /start/ .. line =~ /end/ (cioè se la prima parola è start e l'ultima è end)
+* esempio se leggo un file e voglio prendere tutte le righe che stanno tra START e END
+** puts line if line =~ /START/ .. line =~ /END/
 
-
-* intervalli
-** serve per vedere se un valore sta in un intervallo, dobbiamo usare l'operatore ===
+INTERVALLI
+* serve per vedere se un valore sta in un intervallo, dobbiamo usare l'operatore ===
 ** p (1..5) === 2, p (1..5) === 3.14 -> entrambe vere.
 ** si usa per esempio in un case quando devo verificare un continuo nell'intervallo
-
-OSS.
-l'operatore === è definito nelle classi e si può usare per controllare se il tipo della classe è lo stesso di un'altra
-SI USA ANCHE CON LE CLASSI DERIVATE
-
 

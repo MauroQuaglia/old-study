@@ -1,22 +1,5 @@
 require 'test/unit'
-
-class MyNumber
-  attr_reader :value
-
-  def initialize(value)
-    @value = value
-  end
-
-  def succ
-    MyNumber.new(@value + 1)
-  end
-
-  def <=>(other)
-    self.value <=> other.value
-  end
-
-end
-
+require_relative 'my_range'
 
 class RangeTest < Test::Unit::TestCase
 
@@ -40,28 +23,19 @@ class RangeTest < Test::Unit::TestCase
   end
 
   def test_3
-    a = MyNumber.new(1)
-    b = MyNumber.new(10)
+    a = MyRange.new(1)
+    b = MyRange.new(10)
 
     p (a..b).to_a
   end
 
   def test_4
-    file = File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/standard_types/prova.csv')
-    while line = file.gets
-      puts line if line =~ /start/ .. line =~ /end/
+    File.foreach('range.csv') do |line|
+      puts line if line =~ /START/ .. line =~ /END/
     end
   end
 
   def test_5
-    File.open('/home/xpuser/studio/mauro-quaglia/studio/kata/RubyRookie/standard_types/prova.csv') do |file|
-      file.each do |line|
-        puts line if line =~ /start/ .. line =~ /end/
-      end
-    end
-  end
-
-  def test_6
     p (1..5) === 6
     p (1..5) === 2
     p (1..5) === 3.14
@@ -69,7 +43,7 @@ class RangeTest < Test::Unit::TestCase
     p ('a'...'z') === 'z'
   end
 
-  def test_7
+  def test_6
     car_age(1)
     car_age(2.5)
     car_age(3)

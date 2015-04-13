@@ -22,6 +22,12 @@ class Soluzione2Test < Test::Unit::TestCase
     assert_equal(-1.class, n.class)
   end
 
+  def test_3
+    File.foreach('range.csv') do |line|
+      puts line if line =~ /START/ .. line =~ /END/
+    end
+  end
+
 end
 
 class Person

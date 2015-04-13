@@ -3,7 +3,7 @@ require 'test/unit'
 class Pillola2Test < Test::Unit::TestCase
 
   def test_1
-    # Far passare le assert seguenti.
+    # Far passare le assert.
 
     mauro = Person.new('mauro')
     antonio = Person.new('antonio')
@@ -18,21 +18,18 @@ class Pillola2Test < Test::Unit::TestCase
   end
 
   def test_2
+    # Far passare l'assert.
     n = Complex::I * Complex::I
 
     # assert_equal(-1.class, n.class)
   end
 
-  # Divertiamoci con i range.
-
   def test_3
-    # Range come Sequenza
-    p (1..10).to_a
-    p (1...10).to_a
-    p ('a'..'z').to_a
-    p ('bar'..'baz').to_a
+    # Prendere dal file tutto ciò che sta tra START e END, questi ultimi compresi.
+    File.foreach('range.csv') do |line|
+      puts line if true
+    end
   end
-
 
 end
 
