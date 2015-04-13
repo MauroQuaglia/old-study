@@ -142,4 +142,3 @@ INTERVALLI
 * serve per vedere se un valore sta in un intervallo, dobbiamo usare l'operatore ===
 ** p (1..5) === 2, p (1..5) === 3.14 -> entrambe vere.
 ** si usa per esempio in un case quando devo verificare un continuo nell'intervallo
-

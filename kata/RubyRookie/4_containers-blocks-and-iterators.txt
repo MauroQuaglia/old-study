@@ -125,10 +125,6 @@ Modi per recuperare l'enumerator:
 'xxx'.each_char             # se non gli passo il blocco torna l'enumeratore
 'xxx'.to_enum               # occhio che qui torna l'enumerator del metodo each
 
-Se il metodo che usiamo come base per l'enumeratore prende dei parametri, quest possiamo anche passarli all'enum_for.
-(1..10).each_slice(3).to_a # each_slice usa l'enumerator e prende parametri.
-(1..10).enum_for(:each_slice, 3).to_a
-
 Sugli enumeratori è definito il metodo each_with_index che ti da anche la posizione.
 * each.with_index(10) -> comincia a contare da 10
 * each_with_index -> comincia a contare da 0, non posso parametrizzarlo!
@@ -261,7 +257,7 @@ in entrambe i casi a è un'oggetto Proc.
 
 Anche quando passo i parametri a un blocco posso avere valori di default e parametri splat, keyword e blocchi (con &
 davanti).
-Possiamo quindiscrivere blocchi verstili come se fossero metodi.
+Possiamo quindiscrivere blocchi versatili come se fossero metodi.
 proc = lambda { |a, *b, &block| ...}
 proc.call(1, 2, 3, 4){p 'xxx'} # 1; [2, 3, 4]; blocco
 Ovviamente anche con la notazione alternativa funziona: proc = -> (a, *b, &block) { ... }

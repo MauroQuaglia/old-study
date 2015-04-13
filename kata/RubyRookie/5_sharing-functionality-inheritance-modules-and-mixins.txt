@@ -60,7 +60,7 @@ modulo.
 MIXINS
 Posso rendere disponibili i metodi e le costanti di un modulo in una classe usando la parola 'include'.
 La classe più il modulo/i viene detta mixin.
-All'interno del mixin posso avere anche il riferimento alla classe che lo sta usando con {self.class.name}
+All'interno del modulo posso avere anche il riferimento alla classe che lo sta usando con {self.class.name}
 Prima di usare l'include devo usare il require_relative per caricare il modulo.
 Se più classi includono lo stesso modulo esse stanno puntando alla stessa cosa. E' come se fosse uno statico.
 Non viene caricato nella classe ma c'è un puntatore della classe al modulo.
@@ -73,12 +73,7 @@ interagiscono con quelli della classe. (Es: modulo comparable e metodo <=> nella
 * Oss: dato che per esempio su un array è definito il metodo sort che usa queste, posso fare sort su un array di queste
 classi che includono Comparable.
 
-Quando includo un modulo in una classe, vengono rese a disposizione della classe le variabili definite nel modulo.
-* se ho nella mia classe una variabile con lo stesso nome possono sorgere dei problemi!
-* Se uso un modulo controllo le sue variabili, se creo un modulo un suggerimento potrebbe essere definire
-le variabili con all'inizio il nome del modulo.
-
------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 Le collezioni di Ruby come Array, Hash, ... supportano molte operazioni: ordinamento, scorrimento, ecc...
 Il bello è che anche ogni nostra classe possiamo dotarla di tutto ciò!
