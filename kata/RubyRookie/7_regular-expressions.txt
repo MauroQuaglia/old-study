@@ -1,35 +1,47 @@
-Regular Expressions (istanze della classe Regexp)
-* vedere se la stringa matcha un pattern; // =~, // !~
-* estrarre da una stringa dei valori
-* cambiare una stringa; sub, gsub
-
----------------
-* VEDERE SE LA STRINGA MATCHA UN PATTERN
-* Sintassi:
-stringa =~ /regex/ num o nil
-/regex/ =~ stringa num o nil
-stringa !~ /regex/ true o false
-/regex/ !~ stringa true o false
+Regular Expressions
+* vedere se la stringa matcha un pattern;   // =~ S, // !~ S (vale anche S =~ //, S !~ //)
+* cambiare una stringa;   sub, gsub
+* estrarre da una stringa dei valori;
 
 * carrattei riservati: . | ( ) [ ] { } + \ ^ $ * ?
-** se li voglio usare come dei match literal in una regex devo mettere davanti il simbolo: \
-** devo usare il \ anche per il carattere / perchè se uso la sintassi // non deve andare in conflitto
+* se li voglio usare come caratteri che devono matchare in una stringa, nella regex devo mettere davanti il simbolo: \
+* devo usare il \ anche per il carattere / a meno di non usare la sintassi Regexp.new o %r{}.
 ** es: /\*/ match del carattere *, in questo caso avendo l'escape viene considerato come un carattere come tutti gli altri
 
+------------------------------------------------------------------------------------------------------------------------
+
+VEDERE SE LA STRINGA MATCHA UN PATTERN
+* Sintassi:
+stringa =~ /regex/ -> num o nil
+/regex/ =~ stringa -> num o nil
+stringa !~ /regex/ -> true o false
+/regex/ !~ stringa -> true o false
+
 * /cat/ è una regex come "cat" è una stringa
-* il match ritorna un numero che è la posizione dove comincia il match nella stringa altrimenti nil (false)
-** quindi con la sintassi stringa =~ /regex/ ho in uscita un true se il match c'è, perchè mi ritorna un numero che vale true, o false se non c'è il match perchè nil è come false.
+* il match ritorna un numero che è la posizione dove comincia il match nella stringa altrimenti nil.
+* quindi con la sintassi stringa =~ /regex/ ho in uscita un true se il match c'è, perchè mi ritorna un numero che vale
+true, o false se non c'è il match perchè nil è come false.
 
+------------------------------------------------------------------------------------------------------------------------
 
-* CAMBIARE UNA STRINGA
-** sub -> cambia solo il primo match
-** gsub -> li cambia tutti
-** sub, sub! -> a parte l'ovvia differenza sub se non matcha ritorna la stringa originaria, sub! tonra nil. Quind attenzione.
-*** quindi la varsione ! è usabile in un condizionale (nil = false)
+CAMBIARE UNA STRINGA
+* sub -> cambia solo il primo match
+* gsub -> li cambia tutti (global sub)
 
-----------------------------
+NB
+* sub è diverso da sub!
+** a parte la differenza data dal bang method, se sub non matcha ritorna la stringa originaria, invece sub! tonra nil.
 
+------------------------------------------------------------------------------------------------------------------------
+
+ANCORA SULLA REGEX
+
+La regex è un oggetto, in quanto istanza della classe Regexp e come tale può essere assegnato ad una variabile.
 Ci sono diversi modi per istanziare una regexp
 p1 = /mm\/dd/
 p2 = Regexp.new('mm/dd') -> utile per regexp che contengono il carattere /
 p3 = %r{mm/dd}  -> utile per regexp che contengono il carattere /
+
+OPZIONI
+i -> case insensitive; /cat/i    Regexp.new('cat', 'i')   %r{cat}i
+

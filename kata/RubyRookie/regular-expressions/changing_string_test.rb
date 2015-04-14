@@ -1,6 +1,6 @@
 require 'test/unit'
 
-class RegexReplacementTest < Test::Unit::TestCase
+class ChangingStringTest < Test::Unit::TestCase
 
   def test_1
     s = 'dog and yyy-cat-xxx-cat-zzz'

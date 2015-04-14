@@ -1,6 +1,14 @@
 require 'test/unit'
 
-class RegexTest < Test::Unit::TestCase
+class MatchingStringTest < Test::Unit::TestCase
+
+  def test_0
+    p /cat/ =~ 'cat'
+    p 'cat' =~ /cat/
+
+    p /cat/ !~ 'cat'
+    p 'cat' !~ /cat/
+  end
 
   def test_1
     p /cat/ =~ 'dog and cat' # 8, è la posizione in cui inizia il match.
@@ -9,7 +17,6 @@ class RegexTest < Test::Unit::TestCase
     p /cat/ =~ 'catch' #0
     p /cat/ !~ 'catch' #false
     p /cat/ !~ 'xaltch' #true
-
 
     p /cat/ =~ 'Cat' # nil
     p /cat/ =~ 'c.a.t.' # nil
@@ -43,25 +50,12 @@ class RegexTest < Test::Unit::TestCase
   end
 
   def test_6
-    File.open('regex.csv') do |file|
-      file.each_with_index do |line, index|
-        puts "#{index}: #{line}" if line =~ /cat/
-      end
+    File.foreach('regex.csv').with_index do |line, index|
+      puts "#{index}: #{line}" if line =~ /cat/
     end
   end
 
   def test_7
-    File.foreach('regex.csv').with_index do |line, index|
-      puts "#{index}: #{line}" if line =~ /cat/
-    end
-
-    File.foreach('regex.csv') do |line|
-      puts "#{line}" if line =~ /cat/
-    end
-
-  end
-
-  def test_8
     File.foreach('regex.csv') do |line|
       puts "MATCH #{line}" if line =~ /cat/
     end
