@@ -22,6 +22,21 @@ stringa !~ /regex/ -> true o false
 * quindi con la sintassi stringa =~ /regex/ ho in uscita un true se il match c'è, perchè mi ritorna un numero che vale
 true, o false se non c'è il match perchè nil è come false.
 
+Altri esempi di sintassi:
+/a/ =~ 'cane' -> 1
+/a/.match('cane') -> torna un oggetto MatchData
+Regexp.new('a').match('cane') -> torna un oggetto MatchData
+In sostanza quando chiamo il match, mi torna un MatchData
+Se il match fallisce tutti tornano nil
+
+Differenza fra =~ e .match
+* Con =~ ho a disposizione le variabili $&, $`, $' che contengono informazioni sul match.
+** Sono variabili globali, e sono brutte da vedere e utilizare. ($` + $& + $' riottengo la stringa originaria)
+** Sono il pre_match, il match e il post match.
+* Con .match ho a disposizione i metodi pre_match, post_match, [0]
+** Comunque riempie anche le variabili $ precedenti ma le stesse informazioni ora le posso chiedere a un oggetto.
+** result.pre_match + result[0]  + result.post_match è la stringa originaria
+
 ------------------------------------------------------------------------------------------------------------------------
 
 CAMBIARE UNA STRINGA
@@ -42,6 +57,21 @@ p1 = /mm\/dd/
 p2 = Regexp.new('mm/dd') -> utile per regexp che contengono il carattere /
 p3 = %r{mm/dd}  -> utile per regexp che contengono il carattere /
 
-OPZIONI
+OPZIONI (esempio)
+Ce ne sono molte, questo è un esempio del case insensitive.
 i -> case insensitive; /cat/i    Regexp.new('cat', 'i')   %r{cat}i
+Si può specificare anche l'encoding della regular expression, normalmente usa quello del file in cui si trova.
+
+------------------------------------------------------------------------------------------------------------------------
+
+CARATTERI RISERVATI
+
+ANCORE
+Matchano solo all'inizio di una stringa: ^, \a, \A
+* Come dire, la stringa deve iniziare per ...
+* /^123/ -> la stringa deve iniziare per 123
+
+Matchano solo alla fine di una stringa:  $, \z, \Z
+* Come dire, la stringa deve finire per ...
+* /123$/ -> la stringa deve finire per 123
 

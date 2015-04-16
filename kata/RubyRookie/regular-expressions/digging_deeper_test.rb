@@ -23,5 +23,13 @@ class DiggingDeeperTest < Test::Unit::TestCase
     p %r{cat}i =~ 'x Cat y'
   end
 
+  def test_3
+    # Escaping.
+    p /ca*t/.match('ca*t')
+    p /ca\*t/.match('ca*t')
+
+    p /\|/.match('yes | no')
+    p /sure\?/.match('are you sure?')
+  end
 
 end

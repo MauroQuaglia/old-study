@@ -65,4 +65,29 @@ class MatchingStringTest < Test::Unit::TestCase
     end
   end
 
+  def test_8
+    p /a/ =~ 'cane'# non chiamo match, torna un numero.
+    p /a/.match('cane') # chiamo match e torna un MatchData.
+    p Regexp.new('a').match('cane') # chiamo match e torna un MatchData.
+  end
+
+  def test_9
+    p /cat/ =~ 'dog and cat sven'
+    p $&
+    p $`
+    p $'
+    p $` + $& + $'
+  end
+
+  def test_10
+    result = /cat/.match('dog and cat sven')
+    p $` + $& + $' # Comunque riempie anche le variabili $.
+
+    p result.pre_match
+    p result[0]
+    p result.post_match
+
+    p result.pre_match + result[0]  + result.post_match
+  end
+
 end
