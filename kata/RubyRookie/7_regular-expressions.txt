@@ -65,13 +65,27 @@ Si può specificare anche l'encoding della regular expression, normalmente usa q
 ------------------------------------------------------------------------------------------------------------------------
 
 CARATTERI RISERVATI
+E' solo un'infarinatura, ci sarebbero troppi dettagli e servirebbe un libro solo per le regexp.
 
 ANCORE
-Matchano solo all'inizio di una stringa: ^, \a, \A
+Matchano solo all'inizio di una stringa: ^, \A
 * Come dire, la stringa deve iniziare per ...
 * /^123/ -> la stringa deve iniziare per 123
 
-Matchano solo alla fine di una stringa:  $, \z, \Z
+Matchano solo alla fine di una stringa:  $, \Z
 * Come dire, la stringa deve finire per ...
 * /123$/ -> la stringa deve finire per 123
+
+Bordi: \b, \B
+* Marchanto la stringa esatta, con o senza spazi.
+ ** /\bcat\b/ matcha solo la parola cat, se scrivo xcatx non trova nessun match.
+
+CLASSI DI CARATTERI
+* E' un insieme di caratteri tra [].
+** Ci posso mettere anche i caratteri speciali tuttavia i i caratteri del tipo \n, \s, ... rappresentano comunque
+nuova riga, spazio, ...
+** Se ci metto dei -, vuoli dire tutto quello tra gli estremi: [A-Z]
+** Posso negare una classe di caratteri merdiante il simbolo ^: [^A-Z]
+** alcune classi di caratteri sono molto utilizzate perc cui ci sono delle abbreviazioni. \d = [0-9]. Possono essere
+usate sia nel pattern che nella classe di caratteri.
 
