@@ -88,4 +88,9 @@ nuova riga, spazio, ...
 ** Posso negare una classe di caratteri merdiante il simbolo ^: [^A-Z]
 ** alcune classi di caratteri sono molto utilizzate perc cui ci sono delle abbreviazioni. \d = [0-9]. Possono essere
 usate sia nel pattern che nella classe di caratteri.
-
+* Possiamo dire alla Regexp come interpretare i caratteri. (?d) default, (?a) ASCII, (?u) UNICODE (cosa nuova di ruby 2)
+* Se all'interno delle [] voglio usare le [] o i - li devo escapare, infatti nelle le classi di caratteri si
+scivono con questi caratteri [ ] -, quindi per forza li devo escapare.
+* Posso creare intersezioni di caratteri di classi usando &&. Es: tutte le non vocali:  /[[a-z]&&[^aeiou]]/
+* lo \p permette di matchare caratteri speciali come quelli matematici che hanno codifiche particolari. Es: /\p{Alnum}/
+* il punto (fuori dalle parentesi) . rappresenta qualsiasi carattere eccetto la newline.
