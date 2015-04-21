@@ -67,6 +67,8 @@ Si può specificare anche l'encoding della regular expression, normalmente usa q
 CARATTERI RISERVATI
 E' solo un'infarinatura, ci sarebbero troppi dettagli e servirebbe un libro solo per le regexp.
 
+
+
 ANCORE
 Matchano solo all'inizio di una stringa: ^, \A
 * Come dire, la stringa deve iniziare per ...
@@ -79,6 +81,8 @@ Matchano solo alla fine di una stringa:  $, \Z
 Bordi: \b, \B
 * Marchanto la stringa esatta, con o senza spazi.
  ** /\bcat\b/ matcha solo la parola cat, se scrivo xcatx non trova nessun match.
+
+
 
 CLASSI DI CARATTERI
 * E' un insieme di caratteri tra [].
@@ -94,3 +98,28 @@ scivono con questi caratteri [ ] -, quindi per forza li devo escapare.
 * Posso creare intersezioni di caratteri di classi usando &&. Es: tutte le non vocali:  /[[a-z]&&[^aeiou]]/
 * lo \p permette di matchare caratteri speciali come quelli matematici che hanno codifiche particolari. Es: /\p{Alnum}/
 * il punto (fuori dalle parentesi) . rappresenta qualsiasi carattere eccetto la newline.
+
+
+
+RIPETIZIONI
+r = regular expression
+r*     -> 0+
+r+     -> 1+
+r?     -> 01
+r{m,n} -> almeno m e al massimo n
+r{m,}  -> almeno m
+r{,n}  -> al massimo n
+r{m}   -> m
+
+Questi operatori hanno una precedenza alta così che /ab+/ non significa che matcha una sequenza di ab, ma matcha a
+seguita da una o più b.
+Sono definiti operatori avidi perché matchano tutto quello che possono e poi ritornao.
+La versione lazy che esce appena la condizione è soddisfatta si ottiene aggiungendo un ?
+avido /\s.*\s/    moon is made of
+lazy  /\s.*?\s/   moon
+
+
+
+ALTERNANZA
+
+
