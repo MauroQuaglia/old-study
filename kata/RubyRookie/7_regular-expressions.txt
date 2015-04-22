@@ -121,5 +121,23 @@ lazy  /\s.*?\s/   moon
 
 
 ALTERNANZA
+Il | la escapiamo perchè altrimenti significa una cosa O un'altra. d|e significa d oppure e.
+Il | ha una precedenza molto bassa:
+/red ball|angry sky/ matcha [red ball] o [angry sky] e non [red ball sky] o [red angry sky].
+Per ottenere l'ultimo match dobbiamo overraidare il default e usare il raggruppamento.
 
+
+
+RAGGRUPPAMENTO
+Si possono usare le () per raggruppare le regexp, ogni cosa tra () viene trattata come una regexp a se.
+banana /an+/   -> an
+banana /(an)+/ -> anan
+
+I risultati nei match delle () sono disponibili come variabili globali:
+/(\d\d):(\d\d)/ =~ '12:50'
+"Hour #$1, minute #$2" ---> "Hour 12, minute 50"
+
+Se invece uso un MatchData abbiamo l'analogo:
+md = /(\d\d):(\d\d)/.match('12:50')
+"Hour #{md[1]}, minute #{md[2]}"  ---> "Hour 12, minute 50"
 

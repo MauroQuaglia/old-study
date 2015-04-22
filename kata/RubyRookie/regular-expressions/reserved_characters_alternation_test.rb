@@ -8,6 +8,11 @@ class ReservedCharactersAlternationTest < Test::Unit::TestCase
   end
 
   def test_1
+    value = 'red ball blue sky'
+
+    @show.regex(value, /d|e/)
+    @show.regex(value, /al|lu/)
+    @show.regex(value, /red ball|angry sky/)
   end
 
 end
