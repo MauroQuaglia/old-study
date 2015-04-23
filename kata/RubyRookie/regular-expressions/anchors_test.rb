@@ -1,6 +1,6 @@
 require 'test/unit'
 
-class ReservedCharactersAnchorsTest < Test::Unit::TestCase
+class AnchorsTest < Test::Unit::TestCase
 
   def test_1
     p /iss/ =~ 'm iss iss ipi' # 2; torna l'inizio del primo match.

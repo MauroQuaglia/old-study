@@ -1,7 +1,7 @@
 require 'test/unit'
 require_relative 'show'
 
-class ReservedCharactersGroupingTest < Test::Unit::TestCase
+class GroupingTest < Test::Unit::TestCase
 
   def setup
     @show = Show.new
@@ -54,6 +54,17 @@ class ReservedCharactersGroupingTest < Test::Unit::TestCase
   def test_6
     @show.regex('hello', /(\w)\1/) # un carattere seguito da se stesso --> ll
     @show.regex('mississipi', /(\w+)\1/) # più gruppi di caratteri che si ripetono --> ississ
+  end
+
+  def test_7
+    @show.regex('hello', /(?<name>\w)\k<name>/) # un carattere seguito da se stesso --> ll
+    @show.regex('mississipi', /(?<value>\w+)\k<value>/) # più gruppi di caratteri che si ripetono --> ississ
+    @show.regex('banana', /(?<name>\w+)\k<name>/)
+  end
+
+  def test_8
+    /(?<hour>\d\d):(?<minute>\d\d)/ =~ '12:50'
+    p "#{hour} - #{minute}"
   end
 
 end

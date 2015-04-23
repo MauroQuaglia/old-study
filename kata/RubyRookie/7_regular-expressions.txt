@@ -129,15 +129,54 @@ Per ottenere l'ultimo match dobbiamo overraidare il default e usare il raggruppa
 
 
 RAGGRUPPAMENTO
-Si possono usare le () per raggruppare le regexp, ogni cosa tra () viene trattata come una regexp a se.
+Si possono usare le () per raggruppare le regexp, ogni cosa tra () viene trattata come una regexp a se e il risultato
+del match tra parentesi viene memorizzato in una variabile che eventualmente posso riutilizzare.
 banana /an+/   -> an
 banana /(an)+/ -> anan
 
-I risultati nei match delle () sono disponibili come variabili globali:
+I risultati nei match delle () sono disponibili come variabili
+* nel codice ruby, e a cui posso riferirmi con $1, $2, ...
+* all'interno del patter stesso. e a cui posso riferirmi con \1, \2, ...
+** questo permette di cercare dei match che contengono una certa sorta di ripetizioni. Come vediamo poco più avanti
 /(\d\d):(\d\d)/ =~ '12:50'
 "Hour #$1, minute #$2" ---> "Hour 12, minute 50"
 
 Se invece uso un MatchData abbiamo l'analogo:
 md = /(\d\d):(\d\d)/.match('12:50')
 "Hour #{md[1]}, minute #{md[2]}"  ---> "Hour 12, minute 50"
+
+Un modo per cercare varie forme di ripetizione:
+Posso usare anche i nomi per raggruppare che sono più parlanti.
+?<name> ----> \k<name>
+@show.regex('banana', /(?<name>\w+)\k<name>/) #anan
+Nel caso precedente sto cercndo un match con più caratteri che si ripetono, nel dettaglio:
+* (\w+) più caratteri che memorizzo nella variabile $1
+* (?<name>\w+) quello che c'è in $1 mettimelo nella variabile <name>
+* /(?<name>\w+)\k<name>/ \k<name> riuso quello che c'è in <name>.
+* in definitiva prendo il massimo numero di ripetizioni di più parole. anan
+
+I nomi matchati sono anche disponibili come variabili locali ma solo se usiamo la sintassi =~ e se compaiono a sinistra.
+/(?<hour>\d\d):(?<minute>\d\d)/ =~ '12:50'
+al che posso scrivere: "#{hour} - #{minute}"
+
+
+
+SOSTITUZIONE BASATA SUI PATTERN
+value = 'quick brown box'
+value.sub(/[aeiou]/, '*')  -> q*ick brown box
+value.gsub(/[aeiou]/, '*') -> q**ck br*wn b*x
+
+Se invece a sub e gsub passo un blocco, il valore del match viene passato al blocco e il risultato del blocco messo
+nella stringa originaria.
+value.sub(/^./) {|match| match.upcase} -> Quick brown box
+
+Se ho più cose da sostituire posso anche passare alla gsub una hash.
+rep = {'cat' => 'feline', 'dog' => 'canine'}
+rep.default = 'X'
+'cat and dog'.gsub(/\w+/, rep) # feline X canine
+
+
+
+SEQUENZE DI BACKSLASH NELLA SOSTITUZIONE
+
 

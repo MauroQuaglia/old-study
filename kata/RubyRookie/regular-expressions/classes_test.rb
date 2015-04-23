@@ -1,7 +1,7 @@
 require 'test/unit'
 require_relative 'show'
 
-class ReservedCharactersClassesTest < Test::Unit::TestCase
+class ClassesTest < Test::Unit::TestCase
 
   def setup
    @show = Show.new

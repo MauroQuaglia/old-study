@@ -1,7 +1,7 @@
 require 'test/unit'
 require_relative 'show'
 
-class ReservedCharactersRepetitionTest < Test::Unit::TestCase
+class RepetitionTest < Test::Unit::TestCase
 
   def setup
     @show = Show.new
