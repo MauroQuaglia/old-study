@@ -178,5 +178,19 @@ rep.default = 'X'
 
 
 SEQUENZE DI BACKSLASH NELLA SOSTITUZIONE
+Le sequenze che si possono usare all'interno del pattern come \1, \2, ecc, si possono usare anche dentro alla sub e gsub.
+'fred:smith'.sub(/(\w+):(\w+)/, '\2:\1' ) -> 'smith:fred'
+
+Esistono anche degli shortcut
+'fred:smith'.sub(/(\w+):(\w+)/, '\+:\+' ) -> 'smith:smith', infatti \+ sta per ultimo gruppo matchato.
+Abbiamo cose del tipo
+\& ultimo match
+\+ ultimo gruppo di match
+\` stringa che precede il match
+\' stringa che segue il match
+\\ il carattere \ (backslash)
+
+OSS: se voglio includere un backslash in una sostituzione devo avere una cosa del tipo
+str.gsub(/\\/, '\\\\\\\\') # prendi il backslash e sostituiscilo con quello doppio
 
 
