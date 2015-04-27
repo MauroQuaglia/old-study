@@ -194,3 +194,33 @@ OSS: se voglio includere un backslash in una sostituzione devo avere una cosa de
 str.gsub(/\\/, '\\\\\\\\') # prendi il backslash e sostituiscilo con quello doppio
 
 
+
+REGEXP AVANZATE
+Ruby usa Onigmo come libreria per le regexp.
+
+Estensioni
+(?:) -> raggruppa ma non genera backreference del tipo \1, $1, ecc.
+(?#) -> serve per commentare
+
+Lookahead
+Posso cercare le parole che matchano e solo se sono seguite da un altro pattenr che matcha.
+red,white,blue yellow'.scan(/[a-z]+(?=,)/) # [red, white]
+red ok, perché dopo è seguita da una virgola
+red white, perché dopo è seguita da una virgola
+il resto non va bene
+
+Lookbehind
+Una cosa analoga alla precedente
+red,white,blue yellow'.scan(/(?<=,)[a-z]+/) # [white, blue]
+da notare che il pattern con <= è messo prima della regexp, mentre nell'esempio precedente zena < è messo dopo.
+OSS: come pattern behind cose del tipo (?<aa) (?<aa|bbb) vanno bene, mentre (?<a+b) non vanno bene
+
+Entrambe le forme lookahead e look behind hanno la negazione.
+(?!re) oppure (?<!re)
+
+OSS:
+\K
+non infuenza il processo di matching ma quando ruby cerca di memorizzare l'intero match (ricordiamo che lo butta
+nella variabile $& oppure \&) memorizza solo il testo alla destra di \K.
+
+
