@@ -82,7 +82,7 @@ Bordi: \b, \B
 * Marchanto la stringa esatta, con o senza spazi.
  ** /\bcat\b/ matcha solo la parola cat, se scrivo xcatx non trova nessun match.
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 CLASSI DI CARATTERI
 * E' un insieme di caratteri tra [].
@@ -99,7 +99,7 @@ scivono con questi caratteri [ ] -, quindi per forza li devo escapare.
 * lo \p permette di matchare caratteri speciali come quelli matematici che hanno codifiche particolari. Es: /\p{Alnum}/
 * il punto (fuori dalle parentesi) . rappresenta qualsiasi carattere eccetto la newline.
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 RIPETIZIONI
 r = regular expression
@@ -118,7 +118,11 @@ La versione lazy che esce appena la condizione è soddisfatta si ottiene aggiung
 avido /\s.*\s/    moon is made of
 lazy  /\s.*?\s/   moon
 
+OSS.
+Nelle regexp avanzate si usa una terza forma di ripetizione detta possessiva. Vedere dopo.
+ES: X++
 
+------------------------------------------------------------------------------------------------------------------------
 
 ALTERNANZA
 Il | la escapiamo perchè altrimenti significa una cosa O un'altra. d|e significa d oppure e.
@@ -126,7 +130,7 @@ Il | ha una precedenza molto bassa:
 /red ball|angry sky/ matcha [red ball] o [angry sky] e non [red ball sky] o [red angry sky].
 Per ottenere l'ultimo match dobbiamo overraidare il default e usare il raggruppamento.
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 RAGGRUPPAMENTO
 Si possono usare le () per raggruppare le regexp, ogni cosa tra () viene trattata come una regexp a se e il risultato
@@ -147,7 +151,7 @@ md = /(\d\d):(\d\d)/.match('12:50')
 
 Un modo per cercare varie forme di ripetizione:
 Posso usare anche i nomi per raggruppare che sono più parlanti.
-?<name> ----> \k<name>
+?<name> ----> \k<name>  (oppure ?<name> ----> \k'name', posso usare <> o '' un po' come voglio)
 @show.regex('banana', /(?<name>\w+)\k<name>/) #anan
 Nel caso precedente sto cercndo un match con più caratteri che si ripetono, nel dettaglio:
 * (\w+) più caratteri che memorizzo nella variabile $1
@@ -159,7 +163,7 @@ I nomi matchati sono anche disponibili come variabili locali ma solo se usiamo l
 /(?<hour>\d\d):(?<minute>\d\d)/ =~ '12:50'
 al che posso scrivere: "#{hour} - #{minute}"
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 SOSTITUZIONE BASATA SUI PATTERN
 value = 'quick brown box'
@@ -175,7 +179,7 @@ rep = {'cat' => 'feline', 'dog' => 'canine'}
 rep.default = 'X'
 'cat and dog'.gsub(/\w+/, rep) # feline X canine
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 SEQUENZE DI BACKSLASH NELLA SOSTITUZIONE
 Le sequenze che si possono usare all'interno del pattern come \1, \2, ecc, si possono usare anche dentro alla sub e gsub.
@@ -193,23 +197,27 @@ Abbiamo cose del tipo
 OSS: se voglio includere un backslash in una sostituzione devo avere una cosa del tipo
 str.gsub(/\\/, '\\\\\\\\') # prendi il backslash e sostituiscilo con quello doppio
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 REGEXP AVANZATE
 Ruby usa Onigmo come libreria per le regexp.
 
-Estensioni
+------------------------------------------------------------------------------------------------------------------------
+
+ESTENSIONI
 (?:) -> raggruppa ma non genera backreference del tipo \1, $1, ecc.
 (?#) -> serve per commentare
 
-Lookahead
+------------------------------------------------------------------------------------------------------------------------
+
+LOOKAHEAD
 Posso cercare le parole che matchano e solo se sono seguite da un altro pattenr che matcha.
 red,white,blue yellow'.scan(/[a-z]+(?=,)/) # [red, white]
 red ok, perché dopo è seguita da una virgola
 red white, perché dopo è seguita da una virgola
 il resto non va bene
 
-Lookbehind
+LOOKBEHIND
 Una cosa analoga alla precedente
 red,white,blue yellow'.scan(/(?<=,)[a-z]+/) # [white, blue]
 da notare che il pattern con <= è messo prima della regexp, mentre nell'esempio precedente zena < è messo dopo.
@@ -222,5 +230,25 @@ OSS:
 \K
 non infuenza il processo di matching ma quando ruby cerca di memorizzare l'intero match (ricordiamo che lo butta
 nella variabile $& oppure \&) memorizza solo il testo alla destra di \K.
+'thx1138' =~ /[a-z]+\K\d+/ ---> 1138 # senza \K matcherebbe tutto
+
+------------------------------------------------------------------------------------------------------------------------
+
+BACKTRACKING
+'test XXXY' =~ /(X+)(?!O)/ # XXX
+'test XXXO' =~ /(X+)(?!O)/ # XX
+Nel secondo caso il match fallisce, ma il codice torna indietro e cerca di matchare il più possibile, quindi prende
+le due XX. Questo modo di tornare indietro e rimatchare si chiama backtracking. In sostanza quando un match fallisce
+il motoreregexp torna indietro e cerca di matchare in modo differente.
 
 
+Ci sono un paio di  modi per ferrmare il backtracking
+(?>re) innesta una regexp che è valida fino alla prima regexp dopo questa.
+'test XXXO' =~ /(?>X+)(?!O)/ # XXX
+'test XXXO' =~ /(?>X+)(?!O)/ # No match!
+
+Un altro modo è questo:
+'test XXXO' =~ /(X++)(?!O)/ # XXX
+'test XXXO' =~ /(X++)(?!O)/ # No match!
+
+------------------------------------------------------------------------------------------------------------------------

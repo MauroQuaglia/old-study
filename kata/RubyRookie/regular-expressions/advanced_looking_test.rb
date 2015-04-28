@@ -1,4 +1,5 @@
 require 'test/unit'
+require_relative 'show'
 
 class AdvancedLookingTest < Test::Unit::TestCase
 
@@ -14,6 +15,11 @@ class AdvancedLookingTest < Test::Unit::TestCase
 
     p str.scan(/[a-z]+(?!,)/) # c d e
     p str.scan(/(?<!,)[a-z]+/) # a d e
+  end
+
+  def test_3
+    Show.new.regex('thx1138', /[a-z]+\d+/)
+    Show.new.regex('thx1138', /[a-z]+\K\d+/)
   end
 
 
