@@ -102,6 +102,8 @@ scivono con questi caratteri [ ] -, quindi per forza li devo escapare.
 ------------------------------------------------------------------------------------------------------------------------
 
 RIPETIZIONI
+Tutti gli operatori seguenti hanno sia la versione avida che lazy.
+
 r = regular expression
 r*     -> 0+
 r+     -> 1+
@@ -290,7 +292,7 @@ re = /
 
 ------------------------------------------------------------------------------------------------------------------------
 
-NESTED GROUP
+GRUPPI INNESTATI
 Dato che i livelli di innesto possono essere molteplici, possiamo specificare con un +n o -n il livello di innesto che
 stiamo intendendo.
 Supponiamo di avere diversi livelli di innesto
@@ -301,4 +303,10 @@ Supponiamo di avere diversi livelli di innesto
 \k<some_letter+0>
 ...
 
-Il +0 significa il some_letter matchanto proprio prima.
+Il +0 significa il some_letter è quello matchanto allo stesso livello di innesto.
+
+------------------------------------------------------------------------------------------------------------------------
+
+GRUPPI CONDIZIONALI
+Per esempio vogliamo che venga matchato il pattern la seconda volta solo se la prma volta ha matchato.
+Detto ?<pattern>, la seconda volta che lo nominiamo scriviamo (?<pattern>)
