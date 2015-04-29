@@ -252,3 +252,53 @@ Un altro modo è questo:
 'test XXXO' =~ /(X++)(?!O)/ # No match!
 
 ------------------------------------------------------------------------------------------------------------------------
+
+BACKREFERENCES AND NAMED MATCHES
+I numeri con coui si raggruppano sono relativi alla posizione, per cui si puo scorrerli anche all'indietro, tuttavia
+bisogna usare la sintassi \k per poter utilizzare dei numeri negativi (d'altronde deve capire che il carattere -
+è un meno e non un carattere normale)
+'abab' =~ /(.)(.)\1\2/) # matcha abab
+'abba' =~ /(.)(.)\k<-1>\k<-2>/) # matcha abba: 1 = a, 2 = b ---> da cui -1 = b, -2 = a
+
+Posso anche memorizzare un pattern in una variabile e poi riutilizzarlo con \g
+'red sun blue moon' =~ /(?<color>red|green|blue) \w+ \g<color> \w+/) # red sun blue moon
+Infatti memorizza in color il pattern red|green|blue
+Poi lo riutilizza con la chiamata \g<color>
+Quindi:
+\k riutilizza ciò che è stato matchato
+\g riutilizza il patter per matchare
+
+Le regexp posso anche essere scritte su più righe e con dei commenti in modo da essere più leggibili. Questo è un
+esempio:
+Osserviamo in questo particolare caso che \g è riutilizzato ricorsivamente
+re = /
+    \A
+      (?<brace_expression>
+        {
+          (
+            [^{}]                      # Tutto ciò che non sono graffe  ---> posso usare i commenti in ruby-style
+          |                            # oppure
+            \g<brace_expression>       # una espressione innestata
+          )*
+        }
+      )
+    \Z
+/x   ---> dice che posso scrivere la regexp con molto spazio e su più righe
+
+'{12}' =~ re # {12}
+'{12 {23}}' =~ re # {12 {23}}
+
+------------------------------------------------------------------------------------------------------------------------
+
+NESTED GROUP
+Dato che i livelli di innesto possono essere molteplici, possiamo specificare con un +n o -n il livello di innesto che
+stiamo intendendo.
+Supponiamo di avere diversi livelli di innesto
+
+...
+(?<some_letter>\w)
+\g<palindrome>
+\k<some_letter+0>
+...
+
+Il +0 significa il some_letter matchanto proprio prima.
