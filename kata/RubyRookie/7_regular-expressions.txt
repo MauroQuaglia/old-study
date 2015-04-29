@@ -308,5 +308,41 @@ Il +0 significa il some_letter è quello matchanto allo stesso livello di innest
 ------------------------------------------------------------------------------------------------------------------------
 
 GRUPPI CONDIZIONALI
-Per esempio vogliamo che venga matchato il pattern la seconda volta solo se la prma volta ha matchato.
-Detto ?<pattern>, la seconda volta che lo nominiamo scriviamo (?<pattern>)
+Per esempio vogliamo che venga matchanto un patter solo se ha matchato un altro patter.
+Detto ?<pattern> il pattern del primo match, se vogliamo che matchi anche il secondo scriviamo(?<pattern>subpattern)
+che significa che il subpattern deve matchare o meno a seconda di quello che ha fatto il primo.
+
+Da notare che le cose potrebbero non funzionare a causa del backtracking, se il primo matcha e il secondo no, piuttosto
+che non matchare il motore regexp torna indietro e prova a ignorare il condizionale. Quindi la soluzione
+consiste poi nell'evitare il backtracking con ?>.
+
+------------------------------------------------------------------------------------------------------------------------
+
+ALTERNATIVE NEI GRUPPI CONDIZIONALI
+I patter condizionali possono avere una clausola else:
+( ?(group_id) true-pattern | fails-pattern )
+Se il patter group_id aveva matchato allora applico il true-patter altrimenti applico il fail-pattern.
+
+------------------------------------------------------------------------------------------------------------------------
+
+CHIAMATE A SUBROUTINE
+Posso definire delle subroutine.
+Mettendo {0} vuol dire di non matcharlo e andare oltre fino a quando non lo chiamo. Sto definendo una subroutine
+
+    sentence = %r{
+      (?<subject> cat  | dog   ){0}
+      (?<verb>    eats | drinks){0}
+
+      The\s\g<subject>\s\g<verb>.
+    }x
+
+Esempi di match sono
+md = sentence.match('The cat eats.')
+"The subject is #{md[:subject]} and the verb is #{md[:verb]}."
+
+Oppure, per scriverla in altro modo:
+sentence =~ 'The cat eats.'
+"The subject is #{$~[:subject]} and the verb is #{$~[:verb]}."
+
+Che danno come risultato
+"The subject is cat and the verb is eats."

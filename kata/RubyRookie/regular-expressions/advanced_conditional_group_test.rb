@@ -3,10 +3,6 @@ require_relative 'show'
 
 class AdvancedConditionalGroupTest < Test::Unit::TestCase
 
-  def setup
-    @show = Show.new
-  end
-
   def test_1
     re = %r{ (?: (Mrs | Mr | Ms | Dr) \s )? (.*?) \s and \s  }x
 
@@ -67,15 +63,25 @@ class AdvancedConditionalGroupTest < Test::Unit::TestCase
   end
 
   def test_5
-    data = <<-EOF
-    Mr Jones and Sally
-    Mr Bond and Ms Moneypenny
-    Samson and Deliah
-    Dr Jej and himself
-    Ms H DD and Ms Jones
-    Dr Wooh and mrs wood
-    thelma and louise
-    EOF
+    # Se la prima persona ha titolo così deve avere la seconda, se non ha titolo non deve averlo neanche la seconda.
+    # Qui però dobbiamo evitare il backtracking, altrimenti se il primo matcha e il secondo no, con il backtracking
+    # il motore regexp torna indietro e trascura il condizionale.
+    re =
+        %r{
+        ^(?>
+          (?: (?<title>Mrs | Mr | Ms | Dr) \s )? (.*?)
+          \s and \s
+        )
+        (?(<title>)\g<title>\s) (.+)
+        }x
+
+    p re.match('Mr Jones and Sally')
+    p re.match('Mr Bond and Ms Moneypenny')
+    p re.match('Samson and Deliah')
+    p re.match('Dr Jek and himself')
+    p re.match('Ms Hikki Kihhi and Ms Jones')
+    p re.match('Dr Wooh and Mrs wood')
+    p re.match('thelma and louise')
   end
 
 end
