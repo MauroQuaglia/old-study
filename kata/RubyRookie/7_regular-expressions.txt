@@ -1,30 +1,33 @@
-Regular Expressions
-* vedere se la stringa matcha un pattern;   // =~ S, // !~ S (vale anche S =~ //, S !~ //)
-* cambiare una stringa;   sub, gsub
+REGULAR EXPRESSIONS
+
+A cosa servono:
+* vedere se la stringa matcha un pattern;
+* cambiare una stringa;
 * estrarre da una stringa dei valori;
 
-* carrattei riservati: . | ( ) [ ] { } + \ ^ $ * ?
-* se li voglio usare come caratteri che devono matchare in una stringa, nella regex devo mettere davanti il simbolo: \
-* devo usare il \ anche per il carattere / a meno di non usare la sintassi Regexp.new o %r{}.
-** es: /\*/ match del carattere *, in questo caso avendo l'escape viene considerato come un carattere come tutti gli altri
+Carrattei riservati: . | ( ) [ ] { } + \ ^ $ * ?
+* se li voglio usare come caratteri che devono matchare in una stringa, nella regexp devo mettere davanti il simbolo: \
+* devo usare lo \ anche per il carattere / (non è riservato ma serve per delimitare la regexp, quindi deve essere
+trattato in maniera particolare) a meno di non usare la sintassi Regexp.new o %r{}.
+
+* ES: /\*/ match del carattere *, in questo caso avendo l'escape viene considerato come un carattere come tutti gli altri
 
 ------------------------------------------------------------------------------------------------------------------------
 
 VEDERE SE LA STRINGA MATCHA UN PATTERN
 * Sintassi:
-stringa =~ /regex/ -> num o nil
-/regex/ =~ stringa -> num o nil
-stringa !~ /regex/ -> true o false
-/regex/ !~ stringa -> true o false
+stringa =~ /regex/ -> num o nil                   oppure                  /regex/ =~ stringa -> num o nil
+stringa !~ /regex/ -> true o false                oppure                  /regex/ !~ stringa -> true o false
 
 * /cat/ è una regex come "cat" è una stringa
+
 * il match ritorna un numero che è la posizione dove comincia il match nella stringa altrimenti nil.
 * quindi con la sintassi stringa =~ /regex/ ho in uscita un true se il match c'è, perchè mi ritorna un numero che vale
-true, o false se non c'è il match perchè nil è come false.
+true, o false se non c'è il match perchè nil è come false, invece con la sintassi !~ (negazione) ho solo true o false.
 
-Altri esempi di sintassi:
+ES:
 /a/ =~ 'cane' -> 1
-/a/.match('cane') -> torna un oggetto MatchData
+/a/.match('cane')             -> torna un oggetto MatchData
 Regexp.new('a').match('cane') -> torna un oggetto MatchData
 In sostanza quando chiamo il match, mi torna un MatchData
 Se il match fallisce tutti tornano nil
@@ -33,6 +36,7 @@ Differenza fra =~ e .match
 * Con =~ ho a disposizione le variabili $&, $`, $' che contengono informazioni sul match.
 ** Sono variabili globali, e sono brutte da vedere e utilizare. ($` + $& + $' riottengo la stringa originaria)
 ** Sono il pre_match, il match e il post match.
+
 * Con .match ho a disposizione i metodi pre_match, post_match, [0]
 ** Comunque riempie anche le variabili $ precedenti ma le stesse informazioni ora le posso chiedere a un oggetto.
 ** result.pre_match + result[0]  + result.post_match è la stringa originaria
@@ -40,7 +44,7 @@ Differenza fra =~ e .match
 ------------------------------------------------------------------------------------------------------------------------
 
 CAMBIARE UNA STRINGA
-* sub -> cambia solo il primo match
+* sub  -> cambia solo il primo match
 * gsub -> li cambia tutti (global sub)
 
 NB
@@ -49,25 +53,23 @@ NB
 
 ------------------------------------------------------------------------------------------------------------------------
 
-ANCORA SULLA REGEX
+ANCORA SULLA REGEXP
 
-La regex è un oggetto, in quanto istanza della classe Regexp e come tale può essere assegnato ad una variabile.
+La regexp è un oggetto, in quanto istanza della classe Regexp e come tale può essere assegnato ad una variabile.
 Ci sono diversi modi per istanziare una regexp
 p1 = /mm\/dd/
 p2 = Regexp.new('mm/dd') -> utile per regexp che contengono il carattere /
-p3 = %r{mm/dd}  -> utile per regexp che contengono il carattere /
+p3 = %r{mm/dd}           -> utile per regexp che contengono il carattere /
 
 OPZIONI (esempio)
 Ce ne sono molte, questo è un esempio del case insensitive.
-i -> case insensitive; /cat/i    Regexp.new('cat', 'i')   %r{cat}i
+i -> case insensitive;            /cat/i    Regexp.new('cat', 'i')   %r{cat}i
 Si può specificare anche l'encoding della regular expression, normalmente usa quello del file in cui si trova.
 
 ------------------------------------------------------------------------------------------------------------------------
 
 CARATTERI RISERVATI
 E' solo un'infarinatura, ci sarebbero troppi dettagli e servirebbe un libro solo per le regexp.
-
-
 
 ANCORE
 Matchano solo all'inizio di una stringa: ^, \A
@@ -78,33 +80,37 @@ Matchano solo alla fine di una stringa:  $, \Z
 * Come dire, la stringa deve finire per ...
 * /123$/ -> la stringa deve finire per 123
 
-Bordi: \b, \B
+BORDI \b, \B
 * Marchanto la stringa esatta, con o senza spazi.
  ** /\bcat\b/ matcha solo la parola cat, se scrivo xcatx non trova nessun match.
 
 ------------------------------------------------------------------------------------------------------------------------
 
 CLASSI DI CARATTERI
-* E' un insieme di caratteri tra [].
-** Ci posso mettere anche i caratteri speciali tuttavia i i caratteri del tipo \n, \s, ... rappresentano comunque
+E' un insieme di caratteri tra [].
+* Ci posso mettere anche i caratteri speciali tuttavia i caratteri del tipo \n, \s, ... rappresentano comunque
 nuova riga, spazio, ...
-** Se ci metto dei -, vuoli dire tutto quello tra gli estremi: [A-Z]
-** Posso negare una classe di caratteri merdiante il simbolo ^: [^A-Z]
-** alcune classi di caratteri sono molto utilizzate perc cui ci sono delle abbreviazioni. \d = [0-9]. Possono essere
+* Se ci metto dei -, vuol dire tutto quello tra gli estremi: [A-Z]
+* Posso negare una classe di caratteri merdiante il simbolo ^: [^A-Z]
+* alcune classi di caratteri sono molto utilizzate percui ci sono delle abbreviazioni. \d = [0-9]. Possono essere
 usate sia nel pattern che nella classe di caratteri.
 * Possiamo dire alla Regexp come interpretare i caratteri. (?d) default, (?a) ASCII, (?u) UNICODE (cosa nuova di ruby 2)
-* Se all'interno delle [] voglio usare le [] o i - li devo escapare, infatti nelle le classi di caratteri si
-scivono con questi caratteri [ ] -, quindi per forza li devo escapare.
-* Posso creare intersezioni di caratteri di classi usando &&. Es: tutte le non vocali:  /[[a-z]&&[^aeiou]]/
-* lo \p permette di matchare caratteri speciali come quelli matematici che hanno codifiche particolari. Es: /\p{Alnum}/
+* Se all'interno delle [] voglio usare le [] o i - li devo escapare.
+
+* Posso creare intersezioni di caratteri di classi usando &&.
+ES: tutte le non vocali:  /[[a-z]&&[^aeiou]]/
+
+* lo \p permette di matchare caratteri speciali come quelli matematici che hanno codifiche particolari.
+Es: /\p{Alnum}/
+
 * il punto (fuori dalle parentesi) . rappresenta qualsiasi carattere eccetto la newline.
 
 ------------------------------------------------------------------------------------------------------------------------
 
 RIPETIZIONI
 Tutti gli operatori seguenti hanno sia la versione avida che lazy.
-
 r = regular expression
+
 r*     -> 0+
 r+     -> 1+
 r?     -> 01
@@ -115,19 +121,21 @@ r{m}   -> m
 
 Questi operatori hanno una precedenza alta così che /ab+/ non significa che matcha una sequenza di ab, ma matcha a
 seguita da una o più b.
-Sono definiti operatori avidi perché matchano tutto quello che possono e poi ritornao.
+Sono definiti operatori avidi perché matchano tutto quello che possono e poi ritornano.
+
 La versione lazy che esce appena la condizione è soddisfatta si ottiene aggiungendo un ?
-avido /\s.*\s/    moon is made of
-lazy  /\s.*?\s/   moon
+ES: The moon is made of cheese
+avido /\s.*\s/    moon is made of (matcha il più possibile)
+lazy  /\s.*?\s/   moon            (matcha il meno possibile)
 
 OSS.
 Nelle regexp avanzate si usa una terza forma di ripetizione detta possessiva. Vedere dopo.
-ES: X++
 
 ------------------------------------------------------------------------------------------------------------------------
 
 ALTERNANZA
 Il | la escapiamo perchè altrimenti significa una cosa O un'altra. d|e significa d oppure e.
+
 Il | ha una precedenza molto bassa:
 /red ball|angry sky/ matcha [red ball] o [angry sky] e non [red ball sky] o [red angry sky].
 Per ottenere l'ultimo match dobbiamo overraidare il default e usare il raggruppamento.
@@ -135,15 +143,17 @@ Per ottenere l'ultimo match dobbiamo overraidare il default e usare il raggruppa
 ------------------------------------------------------------------------------------------------------------------------
 
 RAGGRUPPAMENTO
-Si possono usare le () per raggruppare le regexp, ogni cosa tra () viene trattata come una regexp a se e il risultato
+Si possono usare le () per raggruppare le regexp, ogni cosa tra () viene trattata come una regexp a sè e il risultato
 del match tra parentesi viene memorizzato in una variabile che eventualmente posso riutilizzare.
 banana /an+/   -> an
 banana /(an)+/ -> anan
 
 I risultati nei match delle () sono disponibili come variabili
 * nel codice ruby, e a cui posso riferirmi con $1, $2, ...
-* all'interno del patter stesso. e a cui posso riferirmi con \1, \2, ...
-** questo permette di cercare dei match che contengono una certa sorta di ripetizioni. Come vediamo poco più avanti
+* all'interno del patter stesso a cui posso riferirmi con \1, \2, ...
+** questo permette di cercare dei match che contengono una certa sorta di ripetizioni
+
+ES:
 /(\d\d):(\d\d)/ =~ '12:50'
 "Hour #$1, minute #$2" ---> "Hour 12, minute 50"
 
@@ -155,11 +165,12 @@ Un modo per cercare varie forme di ripetizione:
 Posso usare anche i nomi per raggruppare che sono più parlanti.
 ?<name> ----> \k<name>  (oppure ?<name> ----> \k'name', posso usare <> o '' un po' come voglio)
 @show.regex('banana', /(?<name>\w+)\k<name>/) #anan
+
 Nel caso precedente sto cercndo un match con più caratteri che si ripetono, nel dettaglio:
 * (\w+) più caratteri che memorizzo nella variabile $1
 * (?<name>\w+) quello che c'è in $1 mettimelo nella variabile <name>
 * /(?<name>\w+)\k<name>/ \k<name> riuso quello che c'è in <name>.
-* in definitiva prendo il massimo numero di ripetizioni di più parole. anan
+* in definitiva prendo il massimo numero di ripetizioni di più parole.      anan
 
 I nomi matchati sono anche disponibili come variabili locali ma solo se usiamo la sintassi =~ e se compaiono a sinistra.
 /(?<hour>\d\d):(?<minute>\d\d)/ =~ '12:50'
@@ -212,20 +223,18 @@ ESTENSIONI
 
 ------------------------------------------------------------------------------------------------------------------------
 
-LOOKAHEAD
+LOOKAHEAD (?=) (?!)
 Posso cercare le parole che matchano e solo se sono seguite da un altro pattenr che matcha.
 red,white,blue yellow'.scan(/[a-z]+(?=,)/) # [red, white]
 red ok, perché dopo è seguita da una virgola
-red white, perché dopo è seguita da una virgola
+white ok, perché dopo è seguita da una virgola
 il resto non va bene
 
-LOOKBEHIND
+LOOKBEHIND (?<=) (?<!)
 Una cosa analoga alla precedente
 red,white,blue yellow'.scan(/(?<=,)[a-z]+/) # [white, blue]
-da notare che il pattern con <= è messo prima della regexp, mentre nell'esempio precedente zena < è messo dopo.
-OSS: come pattern behind cose del tipo (?<aa) (?<aa|bbb) vanno bene, mentre (?<a+b) non vanno bene
 
-Entrambe le forme lookahead e look behind hanno la negazione.
+Entrambe le forme lookahead e lookbehind hanno la negazione.
 (?!re) oppure (?<!re)
 
 OSS:
@@ -235,6 +244,9 @@ nella variabile $& oppure \&) memorizza solo il testo alla destra di \K.
 'thx1138' =~ /[a-z]+\K\d+/ ---> 1138 # senza \K matcherebbe tutto
 
 ------------------------------------------------------------------------------------------------------------------------
+
+
+DEVO LEGGERE DA QUI IN GIU PER FINIRE
 
 BACKTRACKING
 'test XXXY' =~ /(X+)(?!O)/ # XXX
@@ -346,3 +358,14 @@ sentence =~ 'The cat eats.'
 
 Che danno come risultato
 "The subject is cat and the verb is eats."
+
+------------------------------------------------------------------------------------------------------------------------
+
+OPZIONI
+Alcune opzioni posso essere inserite anche all'interno del patter, per esempio il case insensitive possiamo specificarlo
+in due modi
+/xxx/i
+/(?i)xxx/
+/(?-i)xxx/ # in questo modo invece, con il segno meno davanti lo disabilito
+
+Posso anche specificarle in maniera multipla, es: (?imx)
