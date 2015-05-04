@@ -1,25 +1,40 @@
 require 'test/unit'
 
-class SplatTest < Test::Unit::TestCase
+class VariableLengthArgumentListsTest < Test::Unit::TestCase
 
   def test_1
-    my_splat 1, 2, 'X'
+    splat_first(1, 2, 'X') # [1, 2], X
   end
 
   def test_2
-    my_reverse_splat 1, *[2, 'X']
+    splat_second(1, 2, 'X') # 1, [2, X]
   end
 
   def test_3
+    splat_between(1, 2, 3, 'X') # 1, X
+  end
+
+  def test_4
+    my_reverse_splat 1, *[2, 'X']
+  end
+
+  def test_5
     five(1, 2, 3, 4, 5)
     five(1, 2, 3, *['a', 'b'])
     five(*[1, 2], 3, *['a', 'b'])
     five(*(1..5))
   end
 
-  def my_splat(a, *b)
-    # i parametri dentro b sono condensati in un array
+  def splat_first(*a, b)
     puts "#{a.class}, #{b.class}"
+    puts "#{a}, #{b}"
+  end
+
+  def splat_second(a, *b)
+    puts "#{a}, #{b}"
+  end
+
+  def splat_between(a, *, b)
     puts "#{a}, #{b}"
   end
 

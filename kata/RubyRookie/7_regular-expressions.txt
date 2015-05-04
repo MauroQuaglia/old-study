@@ -245,22 +245,19 @@ nella variabile $& oppure \&) memorizza solo il testo alla destra di \K.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-
-DEVO LEGGERE DA QUI IN GIU PER FINIRE
-
 BACKTRACKING
 'test XXXY' =~ /(X+)(?!O)/ # XXX
 'test XXXO' =~ /(X+)(?!O)/ # XX
 Nel secondo caso il match fallisce, ma il codice torna indietro e cerca di matchare il più possibile, quindi prende
 le due XX. Questo modo di tornare indietro e rimatchare si chiama backtracking. In sostanza quando un match fallisce
-il motoreregexp torna indietro e cerca di matchare in modo differente.
-
+il motore regexp torna indietro e cerca di matchare in modo differente.
 
 Ci sono un paio di  modi per ferrmare il backtracking
-(?>re) innesta una regexp che è valida fino alla prima regexp dopo questa.
+(?>re)
 'test XXXO' =~ /(?>X+)(?!O)/ # XXX
 'test XXXO' =~ /(?>X+)(?!O)/ # No match!
 
+++
 Un altro modo è questo:
 'test XXXO' =~ /(X++)(?!O)/ # XXX
 'test XXXO' =~ /(X++)(?!O)/ # No match!
@@ -268,7 +265,7 @@ Un altro modo è questo:
 ------------------------------------------------------------------------------------------------------------------------
 
 BACKREFERENCES AND NAMED MATCHES
-I numeri con coui si raggruppano sono relativi alla posizione, per cui si puo scorrerli anche all'indietro, tuttavia
+I numeri con cui si raggruppano sono relativi alla posizione, per cui si puo scorrerli anche all'indietro, tuttavia
 bisogna usare la sintassi \k per poter utilizzare dei numeri negativi (d'altronde deve capire che il carattere -
 è un meno e non un carattere normale)
 'abab' =~ /(.)(.)\1\2/) # matcha abab
@@ -324,7 +321,7 @@ Per esempio vogliamo che venga matchanto un patter solo se ha matchato un altro 
 Detto ?<pattern> il pattern del primo match, se vogliamo che matchi anche il secondo scriviamo(?<pattern>subpattern)
 che significa che il subpattern deve matchare o meno a seconda di quello che ha fatto il primo.
 
-Da notare che le cose potrebbero non funzionare a causa del backtracking, se il primo matcha e il secondo no, piuttosto
+Da notare che le cose potrebbero non funzionare a causa del backtracking. Se il primo matcha e il secondo no, piuttosto
 che non matchare il motore regexp torna indietro e prova a ignorare il condizionale. Quindi la soluzione
 consiste poi nell'evitare il backtracking con ?>.
 

@@ -1,17 +1,37 @@
-metodi
-* se torna boolean (predicate method) finisce con ?
-* se modificano il reciver ovvero chi riceve il messaggio (bang method) finisce con !
-* se sono dei setter finiscono con =
+METODI
+Se torna boolean (predicate method) finisce con ?
+Se modificano il reciver ovvero chi riceve il messaggio (bang method) finisce con !
+Se sono dei setter finiscono con =
+Altrimenti non ci sono altri caratteri 'magici' da aggiungere.
 
-* parametri di default
-** def my_default(a='ciao')
+------------------------------------------------------------------------------------------------------------------------
 
-* se voglio passare più parametri ma non so quanti uso def my_params(*a)
-** solo un parametro splat per metodo si può avere
-** si può mettere dove si vuole nella lista dei parametri, (*a) (a, *b) (*c, d) ,ecc
-** se mi interessano solo gli estremi posso fare (a,*,b)
-** si chiama splatting
-** a volte si usa nell'ereditarietà per passare parametri alla super classe. Se non uso i parametri posso anche non mettere il nome del parametro. ES. def do(*)... end se chiamo solo super gli passa tutti i parametri
+DEFAULT
+Es: def my_default(a='ciao')
+Posso anche assegnare un default basandomi sui parametri precedenti, per esempio: def my_params(a, b=a.length)
+
+------------------------------------------------------------------------------------------------------------------------
+
+SPLAT (o splatting)
+Se voglio passare più parametri ma non so quanti, posso usare la sintassi: *a.
+a viene gestito come un array, che quindi può essere vuoto [] se non passo nessun parametro, oppure puù contenere
+ordinatamente i parametri passati.
+Es: def my_params(*a)
+
+Si può avere solo un parametro splat per metodo.
+Non si possono mettere dei valori di default dopo un parametro splat.
+Si può mettere dove si vuole nella lista dei parametri, (*a) (a, *b) (*c, d).
+Se mi interessano solo i parametri agli estremi posso fare (a, *, b)
+
+A volte si usa nell'ereditarietà per passare parametri alla super classe.
+Se non uso i parametri passati ma li giro direttamente alla super classe posso anche non mettere il nome del parametro.
+Es:
+def do(*)
+  super # gli passa tutti i parametri alla super classe.
+end
+
+------------------------------------------------------------------------------------------------------------------------
+
 
 * se l'ultimo parametro della lista è preceduto da &, ogni blocco associato viene convertito in una Proc.
 ** è utile avere l'& se voglio memorizzare il blocco
@@ -19,8 +39,11 @@ metodi
 
 * posso anche omettere le parentesi, ma sui metodi come buona norma è sempre meglio metterle.
 
-* ogni metodo ritorna un valore
-** di solito si omette return
+------------------------------------------------------------------------------------------------------------------------
+
+RETURN
+ogni metodo ritorna un valore, che è il risultato dell'ultima istruzione eseguita oppure si può mettere esplicitamente
+il return (di solito si omette return).
 ** posso fare il return di più valori che vengono passati in un array, return "a", "b". poi posso usare l'assegnamento parallelo a, b = [...]
 *** a, b, c = my_return
 
