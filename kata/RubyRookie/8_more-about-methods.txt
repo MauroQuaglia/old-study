@@ -12,7 +12,7 @@ Posso anche assegnare un default basandomi sui parametri precedenti, per esempio
 
 ------------------------------------------------------------------------------------------------------------------------
 
-SPLAT (o splatting)
+SPLAT (DIRETTO)
 Se voglio passare più parametri ma non so quanti, posso usare la sintassi: *a.
 a viene gestito come un array, che quindi può essere vuoto [] se non passo nessun parametro, oppure puù contenere
 ordinatamente i parametri passati.
@@ -30,29 +30,34 @@ def do(*)
   super # gli passa tutti i parametri alla super classe.
 end
 
+SPLAT INVERSO
+Se metto *a, più parametri vengono passati accorpaty come array.
+Se metto *[a, b] i parametri accorpati vengono passati come parametri singoli.
+ES:
+def do (a,b,c) ... end
+---> lo posso chiamare con do(1, *[2, 3])
+---> lo posso chiamare con do(*(1..3))
+
 ------------------------------------------------------------------------------------------------------------------------
 
+PARAMETRI DI METODI
+Posso anche omettere le parentesi, ma sui metodi come buona norma è sempre meglio metterle.
 
-* se l'ultimo parametro della lista è preceduto da &, ogni blocco associato viene convertito in una Proc.
-** è utile avere l'& se voglio memorizzare il blocco
-** double(p),double2(a, &p) nel primo non posso memorizzare nessun bloco perché implicito, nel secondo lo posso memorizzare
-
-* posso anche omettere le parentesi, ma sui metodi come buona norma è sempre meglio metterle.
+Se l'ultimo parametro della lista è preceduto da &, questo significa che si aspetta un blocco (che sarà un oggetto Proc)
+E' utile avere l'& se voglio memorizzare il blocco.
+ES:
+double(a)
+double(a, &p)
+nel primo non posso memorizzare nessun bloco perché implicito, nel secondo lo posso memorizzare
 
 ------------------------------------------------------------------------------------------------------------------------
 
 RETURN
-ogni metodo ritorna un valore, che è il risultato dell'ultima istruzione eseguita oppure si può mettere esplicitamente
+Ogni metodo ritorna un valore, che è il risultato dell'ultima istruzione eseguita oppure si può mettere esplicitamente
 il return (di solito si omette return).
-** posso fare il return di più valori che vengono passati in un array, return "a", "b". poi posso usare l'assegnamento parallelo a, b = [...]
-*** a, b, c = my_return
-
-* se metto *a, più parametri vengono passati accorpaty come array
-* se metto *[a, b] i parametri accorpati come array vengono passati come parametri singoli, in realtà è * di un qualsiasi enumerable
-** five(1, 2, 3, 4, 5)
-** five(1, 2, 3, *[4, 5])
-** five(*[1, 2], 3, *[4, 5])
-** five(*(1..5))
+Posso fare il return di più valori che vengono passati in un array, return "a", "b".
+poi posso usare l'assegnamento parallelo a, b = [...]
+Es: a, b, c = my_return
 
 ------------------------------------------------------------------
 * Esempio di come passare un blocco

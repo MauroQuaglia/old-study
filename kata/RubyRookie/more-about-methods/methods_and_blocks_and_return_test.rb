@@ -1,6 +1,6 @@
 require 'test/unit'
 
-class MethodsAndBlockTest < Test::Unit::TestCase
+class MethodsAndBlockAndReturnTest < Test::Unit::TestCase
 
   def test_1
    double('ciao'){|a, b| puts a * b}
@@ -8,12 +8,14 @@ class MethodsAndBlockTest < Test::Unit::TestCase
   end
 
   def test_2
-    my_test{|p| double3(p)}
+    a, b, c = my_return
+    p a + b + c
   end
 
   def test_3
-    a, b, c = my_return
-    p a + b + c
+    a = my_return
+    p a
+    p a.class
   end
 
   def my_return
@@ -26,14 +28,6 @@ class MethodsAndBlockTest < Test::Unit::TestCase
 
   def double2(a, &p)
     p.call a, 3
-  end
-
-  def double3(x)
-    puts 'xxxx' + x
-  end
-
-  def my_test()
-    yield 'Y'
   end
 
 end

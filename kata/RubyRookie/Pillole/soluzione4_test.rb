@@ -1,7 +1,6 @@
 require 'test/unit'
-require 'mathn'
 
-class Soluzione2Test < Test::Unit::TestCase
+class Soluzione4Test < Test::Unit::TestCase
 
   def test_1
     mauro = Person.new('mauro')
@@ -14,18 +13,6 @@ class Soluzione2Test < Test::Unit::TestCase
     assert_true(antonio < mauro)
     assert_true(antonio <= mauro)
     assert_true(mauro.between?(antonio, riccardo))
-  end
-
-  def test_2
-    n = Complex::I * Complex::I
-
-    assert_equal(-1.class, n.class)
-  end
-
-  def test_3
-    File.foreach('range.csv') do |line|
-      puts line if line =~ /START/ .. line =~ /END/
-    end
   end
 
 end
@@ -43,6 +30,3 @@ class Person
   end
 
 end
-
-
-

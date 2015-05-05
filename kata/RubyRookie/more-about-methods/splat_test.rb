@@ -1,6 +1,6 @@
 require 'test/unit'
 
-class VariableLengthArgumentListsTest < Test::Unit::TestCase
+class SplatTest < Test::Unit::TestCase
 
   def test_1
     splat_first(1, 2, 'X') # [1, 2], X
@@ -15,7 +15,7 @@ class VariableLengthArgumentListsTest < Test::Unit::TestCase
   end
 
   def test_4
-    my_reverse_splat 1, *[2, 'X']
+    reverse_splat 1, *[2, 'X']
   end
 
   def test_5
@@ -38,7 +38,7 @@ class VariableLengthArgumentListsTest < Test::Unit::TestCase
     puts "#{a}, #{b}"
   end
 
-  def my_reverse_splat(a, b, c)
+  def reverse_splat(a, b, c)
     # i parametri condensati nell'array vengono esplicitati
     puts "#{a.class}, #{b.class}, #{c.class}"
     puts "#{a}, #{b}, #{c}"
