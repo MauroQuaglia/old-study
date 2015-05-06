@@ -5,17 +5,17 @@ print 'number: '
 number = Integer(gets())
 
 
+# --- PRIMA VERSIONE ---
 if operator =~ /^t/
   puts ((1..10).collect{|n| number * n}.join(', '))
 else
   puts ((1..10).collect{|n| number + n}.join(', '))
 end
+# ----------------------
 
 
 
-=begin
---- SECONDA VERSIONE ---
-
+#--- SECONDA VERSIONE ---
 if operator =~ /^t/
   calc = lambda{|n| n * number}
 else
@@ -23,23 +23,5 @@ else
 end
 
 puts ((1..10).collect(&calc).join(', '))
-----------------------
-=end
-
-
-=begin
---- PRIMA VERSIONE ---
-def operation
-  puts ((1..10).collect{|n| yield n}.join(', '))
-end
-if operator =~ /^t/
-  operation{|n| number * n}
-else
-  operation{|n| number + n}
-end
-----------------------
-=end
-
-
-
+# ----------------------
 

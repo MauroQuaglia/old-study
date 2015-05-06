@@ -31,7 +31,7 @@ def do(*)
 end
 
 SPLAT INVERSO
-Se metto *a, più parametri vengono passati accorpaty come array.
+Se metto *a, più parametri vengono passati accorpati come array.
 Se metto *[a, b] i parametri accorpati vengono passati come parametri singoli.
 ES:
 def do (a,b,c) ... end
@@ -45,6 +45,7 @@ Posso anche omettere le parentesi, ma sui metodi come buona norma è sempre megl
 
 Se l'ultimo parametro della lista è preceduto da &, questo significa che si aspetta un blocco (che sarà un oggetto Proc)
 E' utile avere l'& se voglio memorizzare il blocco.
+
 ES:
 double(a)
 double(a, &p)
@@ -59,51 +60,35 @@ Posso fare il return di più valori che vengono passati in un array, return "a",
 poi posso usare l'assegnamento parallelo a, b = [...]
 Es: a, b, c = my_return
 
-------------------------------------------------------------------
-* Esempio di come passare un blocco
+------------------------------------------------------------------------------------------------------------------------
+
+* BLOCCHI DINAMICI
+Esempio di come passare un blocco. A volte è utile per togliere la duplicazione.
 
 puts ((1..10).collect{|n| number * n}.join(', '))
-Dato che collect prende un blocco...
 
-...posso esplicitare il blocco e passarglielo...
+Dato che collect prende un blocco posso esplicitare il blocco e passarglielo:
+
 calc = lambda{|n| n * number}
+
 puts ((1..10).collect(&calc).join(', '))
 
-...oppure anche così...
-def operation
-  puts ((1..10).collect{|n| yield n}.join(', '))
-end
-operation{|n| number * n}
--------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
-Se l'ultimo argomento di un metodo è preceduto da &, ruby assume che sia una Proc.  La rimuove dalla lista dei parametri, la converte in un blocco e lo associa al metodo.
+HASH COME PARAMETRO DI METODO
+Quando passo una hash a un metodo posso anche non esplicitare le parentesi.
+E' meglio perchè altrimenti sembra un blocco.
+OSS: l'hash deve precedere, eventuali splat e blocchi.
 
-
-
-def my_test(a)
-    puts a
-    yield 'Z'
-end
-
-posso chiamarlo anche così
-
-    calc = lambda{|n| p n}
-    my_test('X', &calc)
-
-    my_test('Y'){|n| p n}
---------------------------------------------------------------------------------------------------
-
-quando passo una hash a un metodo posso anche non esplicitare le parentesi. E' meglio perchè altrimenti sembra un blocco.
-invece di:
 my_hash(:title, {a: 'ciao', b: 'miao'})
-meglio usare
 my_hash(:title, a: 'ciao', b: 'miao')
-----------------------------------
 
-con ruby 2.0 posso definire i parametri di default di una hash direttamente in un metodo
+Con ruby 2.0 posso definire i parametri di default di una hash direttamente in un metodo.
 def search(field, genre: nil, duration: 120)
 se gliene passo uno che non conosce mi lancia in atomatico un ArgumentError
 
-se invece ho degli extra argomenti della hash da passare oltre ai due di default posso usare il double slat
+se invece ho degli extra argomenti della hash da passare oltre ai due di default posso usare il doppio splat
+def search(field, genre: nil, duration: 120, **rest)
+I valori del rest vengono messi in un oggetto hash ovviamente.
 
------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
