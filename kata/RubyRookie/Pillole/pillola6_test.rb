@@ -9,5 +9,4 @@ class Pillola6Test < Test::Unit::TestCase
     end
   end
 
-
 end
