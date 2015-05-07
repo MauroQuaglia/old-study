@@ -2,7 +2,6 @@ class ScoreKeeper
 
   def initialize
     @total_score = @count = 0
-    @members = []
   end
 
   def <<(score)
@@ -11,20 +10,15 @@ class ScoreKeeper
     self
   end
 
-  def [](p1, p2, p3)
-    @members << p1 << p2 << p3
-    puts @members
+  def []=(*params) #[] = 1, 2
+    value = params.pop # Prende l'ultimo dell'array params.
+    puts "Indexed with #{params.join(', ')}"
+    puts "Value = #{value.inspect}"
   end
 
   def average
-    fail 'No score' if @count.zero? # lancia un RuntimeError di default... se ne volgio lanciare un altra basta che gli passo il nome dell'eccezione
-    Float(@total_score) / @count # dato che float è più generale, comanda il float, quindi poi quello che torna è sempre float.
+    fail 'No score' if @count.zero?
+    Float(@total_score) / @count # Float è più generale, quindi quello che torna sarà sempre Float.
   end
 
-end
-
-class ScoreKeeper2
-  def []=(*params)
-
-  end
 end

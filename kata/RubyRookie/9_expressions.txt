@@ -7,19 +7,14 @@ my_if =
     end
 poi quando chiamo la my_if, la esegue.
 
-In Ruby tutti gli operatori sono definiti come chiamate a metodi.
-
+In Ruby tutti gli operatori sono definiti come chiamate a metodi per cui a + b = a.+(b).
+* Chiamo il metodo + su a e gli passo come parametro b.
 
 
 Posso ridefinire un'operazione usando la parola alias:
 class Fixnum
-  alias old_plus +
-end
-2 + 5 = 7
-2.old_plus(5) = 7
+  alias old_plus + # E' come se tenesse un puntatore al vecchio metodo
 
-class Fixnum
-  alias old_plus +
   def +(other)
     self.succ
   end
@@ -28,9 +23,17 @@ end
 1.old_plus(3) = 4
 
 
+OSS:
+fail                  lancia un RuntimeError
+fail ArgumentError    lancia un ArgumentError
 
-Posso definire su una mia classi tutti i metodi che voglio, come quelli usati normalmente:
-<< (che poi torna self), [] indexing
+
+
+Posso definire su una mia classi tutti i metodi che voglio, per esempio come quelli usati normalmente su un array:
+<< (che poi dovrà tornare self se volgio poter concatenare cose del tipo << 1 << 2 ...)
+[] indexing
+
+------------------------------------------------------------------------------------------------------------------------
 
 
 
