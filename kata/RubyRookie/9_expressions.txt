@@ -1,12 +1,13 @@
-Espressioni
-
-
+ESPRESSIONI
 
 Quello che per C# o Java è un'istruzione, per Ruby è un'espressione.
-my_if = if 0 == 0
-          'ciao'
-         end
+my_if =
+    if 0 == 0
+        'ciao'
+    end
 poi quando chiamo la my_if, la esegue.
+
+In Ruby tutti gli operatori sono definiti come chiamate a metodi.
 
 
 
