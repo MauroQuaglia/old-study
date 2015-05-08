@@ -1,6 +1,7 @@
 require 'test/unit'
+require_relative 'score_keeper'
 
-class ConditionalTest < Test::Unit::TestCase
+class ConditionalXxxTest < Test::Unit::TestCase
 
   def test_1
     if 'c' == 'c' then
@@ -44,6 +45,16 @@ class ConditionalTest < Test::Unit::TestCase
     p 1 != 1 ? 'a' : 'b'
   end
 
+  def test_4
+    a1 = A.new
+    b1 = B.new
+    a2 = ScoreKeeper.new
+
+    case a1
+      when A then p 'Eccoci!'
+      else p 'No!'
+    end
+  end
 
   def test_5
     p 1 === 1

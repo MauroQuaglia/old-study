@@ -3,38 +3,33 @@ require 'test/unit'
 class ComparisonTest < Test::Unit::TestCase
 
   def test_1
-    t = T.new
-    t == 'value'
-    t != 'value' # cerca la definizione di == e la nega
+    p nil && 99 # nil
+    p true && 99 # 99
   end
 
   def test_2
-    q = Q.new
-    q == 'value'
-    q != 'value' #va diretto sulla definizione
+    p nil || 99 #99
+    p 'ciao' || nil # ciao
   end
 
-end
-
-class T
-
-  def ==(other)
-    other == 'value'
-    p 'Sono in =='
+  def test_3
+    var1 = 'io'
+    var1 ||= 'tu' # assegna solo se var non è ancora assegnata
+    puts var1
   end
 
-end
-
-class Q
-
-  def ==(other)
-    other == 'value'
-    p 'Sono in =='
+  def test_4
+    var2 = nil
+    var2 ||= 'default'
+    puts var2
   end
 
-  def !=(other)
-    other != 'value'
-    p 'Sono in !='
+  def test_5
+    p defined? 1
+    p defined? x
+    p defined? String
+    p defined? String.new
+    p defined? $?
   end
 
 end

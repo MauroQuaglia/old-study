@@ -10,10 +10,9 @@ class ScoreKeeper
     self
   end
 
-  def []=(*params) #[] = 1, 2
-    value = params.pop # Prende l'ultimo dell'array params.
-    puts "Indexed with #{params.join(', ')}"
-    puts "Value = #{value.inspect}"
+  def []=(key, value)
+    puts "Indexed with #{key}"
+    puts "Value = #{value}"
   end
 
   def average
