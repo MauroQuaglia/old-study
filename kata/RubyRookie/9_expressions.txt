@@ -150,21 +150,25 @@ p defined? $?          # global-variable
 
 ------------------------------------------------------------------------------------------------------------------------
 
+COMPARAZIONE TRA OGGETTI
 
+Gli oggetti ruby supportano il confronto grazie ai metodi:
+==, ===, <=>, =~, eql?, equal?
 
+== (!=)      testa se il valore è uguale. (1 == 1.0 ok)
+===          stesso tipo di base e valore. (1 === 1.0 ok; numeric di base e 1 di valore)
+<=>          ritorna -1, 0 o 1 in base se quello che riceve è <, == o > del suo argomento.
+<, <=, >=, > operatori di comparazione
+=~           comparazione per regexp (!~)
+eql?         stesso tipo e valore (1.eql?(1.0) ko; integer non è float)
+equal?       stesso object-id
 
+A parte <=> sono tutti in classe object, ma vengono poi ridefiniti nelle classi figlio per supportare le semantiche
+corrette. ES: [1, 2] == [1, 2] (stessi elementi nelle stesse posizioni)
 
-gli oggetti ruby supportano il confronto grazie ai metodi
-==, ===, <=>, =~, eql?, equal? -> tutti in classe object tranne <=>
-OSS:
-== stesso valore 1 == 1.0 ok
-=== stesso tipo di base e valore:    VERO  1 === 1.0 # numeric di base e 1 di valore
-eql? stesso tipo e valore:   FALSO 1.eql?(1.0) # integer e float
-equal? stesso oggetto
-
-
-ci sono anche le versioni negate di ==, != e =~, !~
-# se le negazioni non sono definite, ruby cerca la definizione di == e nega il risultato. Vedi class T di esempio.
+OSS (versioni negative):
+Se le negazioni non sono definite, ruby cerca la definizione di == e nega il risultato.
+Vedi class T di esempio.
 
 
 IF

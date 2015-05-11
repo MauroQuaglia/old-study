@@ -1,0 +1,67 @@
+require 'test/unit'
+
+class ComparingObjectsTest < Test::Unit::TestCase
+
+  def test_1
+    if 'c' == 'c' then
+      p 'ciao'
+    end
+
+    if 'c' == 'c' then p 'ciao' end
+
+    a =
+      if 'c' == 'c'
+         p 'ciao'
+      elsif 'c' == 'd'
+        p 'fff'
+      else
+        p 'g'
+      end
+
+    p a + a + a
+  end
+
+  def test_2
+   if 1 == 1
+     p 'ok'
+   end
+
+   unless 1 != 1
+     p 'ok'
+   end
+
+    if 1 != 2
+      p 'lll'
+    end
+
+    unless 1 == 2
+      p 'ddddd'
+    end
+  end
+
+  def test_3
+    p 1 == 1 ? 'a' : 'b'
+    p 1 != 1 ? 'a' : 'b'
+  end
+
+
+  def test_5
+    p 1 === 1
+    p 1 === 1.0 # la classe base mi pare sia numeric per entrambe quindi funziona anche così
+    p 1 === 2
+  end
+
+  def test_6
+    p 1 === 1.0 # numeric di base e 1 di valore
+    p 1.eql?(1.0) # integer e float
+  end
+
+end
+
+class A
+
+end
+
+class B < A
+
+end
