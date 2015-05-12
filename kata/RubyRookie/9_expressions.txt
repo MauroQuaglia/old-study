@@ -163,23 +163,33 @@ Gli oggetti ruby supportano il confronto grazie ai metodi:
 eql?         stesso tipo e valore (1.eql?(1.0) ko; integer non è float)
 equal?       stesso object-id
 
+Quindi a partire dall'ugualglianza più forte (cioè quella che è false per un maggior numero di casi...)
+equal?
+eql?
+===
+==
+
 A parte <=> sono tutti in classe object, ma vengono poi ridefiniti nelle classi figlio per supportare le semantiche
 corrette. ES: [1, 2] == [1, 2] (stessi elementi nelle stesse posizioni)
 
 OSS (versioni negative):
 Se le negazioni non sono definite, ruby cerca la definizione di == e nega il risultato.
-Vedi class T di esempio.
+ES
+Se ho il metodo: ==(other) e chiamo !=, ruby prende == e nega il risultato
+Se invece oltre al metodo: ==(other) ho anche !=(other), ruby usa direttamente !=
 
+------------------------------------------------------------------------------------------------------------------------
+
+VALUTAZIONI
 
 IF
-la keyword then è opzionale se vado a capo. Se metto tutto su una linea allora ci vuole.
-if, then, elsif, else, end. Sono le varie keyword che si possono usare
-dato che la if è un'espressione, essa ritorna un valore e questo può essere memorizzato in una variabile
+la keyword THEN è opzionale se vado a capo.
+Se metto tutto su una linea allora ci vuole.
+if, then, elsif, else, end. Sono le varie keyword che si possono usare.
+dato che la if è un'espressione, essa ritorna un valore e questo può essere memorizzato in una variabile.
 unless = if not
 c'è anche l'operatore ternario.... condition ? true : false
-id e unless possono anche essere messi alla fine di uno statements. return 'c' if ...
-
-
+if e unless possono anche essere messi alla fine di uno statements. return 'c' if ...
 
 CASE
 praticamente una if con steroidi... una multi-if.
