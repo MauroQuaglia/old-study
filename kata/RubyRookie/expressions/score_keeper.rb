@@ -1,4 +1,4 @@
-class ScoreKeeper
+class ScoreKeeper < Class
 
   def initialize
     @total_score = @count = 0

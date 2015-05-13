@@ -191,34 +191,51 @@ unless = if not
 c'è anche l'operatore ternario.... condition ? true : false
 if e unless possono anche essere messi alla fine di uno statements. return 'c' if ...
 
+-------------------------------------------
+
 CASE
-praticamente una if con steroidi... una multi-if.
-case, when, then, else, ,, end
-la keyword then si usa se voglio scrivere tutto su una riga, se vado a capo non serve.
-case a
-    when 1...10   then p 'ciao'
-posso usare la virgola per separare più condizioni con lo stesso output.    when 1, 2
-NB: la comparazione del valore con il target è fatto dal case usando l'operatore ===
-posso valutare sia le singole when che solo il case
-1) case
-when XXX=AAA
-when YYY=BBB
-when ZZZ=CCC
+Praticamente è una if con steroidi... una multi-if.
+case, when, then, else, ,, end. Sono le varie keyword che si possono usare.
+La keyword then si usa se voglio scrivere tutto su una riga, se vado a capo non serve.
+Posso usare la virgola per separare più condizioni con lo stesso output.    when 1, 2
+NB: la comparazione del valore con il target è fatto dal case usando l'operatore ===.
+
+Ci sono due modi di utilizzare il case: posso valutare sia le singole when che solo il case.
+
+Nel caso 1) non sto valutando sempre lo stesso valore, posso valutare anche cose diverse (song.name, song.duration, ...)
+Tuttavia se una condizione è vera, esce dal case e non esegue le successive.
+1)
+case
+when XXX=AAA ...
+when YYY=BBB ...
+when ZZZ=CCC ...
+
+Nel caso 2) invece faccio riferimento sempre allo stesso valore: VALUE.
+Se una condizione è vera, esce dal case e non esegue le successive.
 2)
 case VALUE
-when XXX
-when YYY
-il case ritorna l'ultima operazione eseguita quindi la posso memorizzare.
+when XXX ...
+when YYY ...
+
+Il case ritorna l'ultima operazione eseguita quindi la posso memorizzare.
+
 OSS.
-l'operatore === è definito nelle classi (Class) e si può usare per controllare se il tipo della classe è lo stesso di un'altra
-SI USA ANCHE CON LE CLASSI DERIVATE
+l'operatore === è definito nelle classi (Class) e si può usare per controllare se il tipo della classe è lo stesso
+di un'altra. Ogni classe lo reimplementa per aggiustarene la semantica, infatti se nel case metto una regexp l'===
+viene visto come patter match.
 
+Ogni classe Ruby è un'istanza della classe Class. L'opertaore === è definito in Class per testare se un argomento è
+un'istanza del receiver o di una sua super classe.
 
+-------------------------------------------
 
--LOOPS- (while ed until sono le uniche primitive per il loop )
+LOOPS
+while ed until sono le uniche primitive per il loop
 WHILE eseguo finché è true la condizione
 UNTIL eseguo finchè è false la condizione
+
 Entrambi si possono usare alla fine di uno statements: a += 1 while a <= 3
+
 per fare scattare il while almeno una volta posso usare il begin end (do..while in C#)
 
 OSS: il range .. è come un interruttore
@@ -226,8 +243,23 @@ ritorna true quando il primo evento succede e rimane true finche il secondo even
 File.foreach('numbers.txt') do |line|
     puts(line) if line =~ /two/ .. /five/
 end
-mi scrive  two three four five
-Dato che gli estremi del range vengono valutati tutte le volte posso anche usare espressioni combinate
+mi scrive: two three four five
+Dato che gli estremi del range vengono valutati tutte le volte posso anche usare espressioni combinate.
+
+OSS
+Se uso uno statement modifiers come while e until in un begin end la prima volta viene sempre eseguito il begin end
+incurantemente alla condizione.
+p 'mauro' while false # NIENTE
+
+begin
+    p'quaglia'
+end while false # scrive quaglia
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
