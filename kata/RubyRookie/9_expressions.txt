@@ -230,7 +230,10 @@ un'istanza del receiver o di una sua super classe.
 -------------------------------------------
 
 LOOPS
-while ed until sono le uniche primitive per il loop
+while ed until sono le uniche primitive per il loop (for..in è solo zucchero sintattico per il metodo each, loop invece
+è un metodo primitivo e ha poche funzionalità, il suo uso principale non è occuparsi dei cicli di scorrimento, si usa
+con gli enumeratori come abbiamo già visto.)
+
 WHILE eseguo finché è true la condizione
 UNTIL eseguo finchè è false la condizione
 
@@ -257,55 +260,67 @@ end while false # scrive quaglia
 
 ------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
 ITERATORI
-OSS. in ruby il FOR non c'è come iteratore esterno, ma compare spesso come iteratore interno, in modo che sia più difficile commettere errori.
+
+INTERNI
+In ruby il FOR non c'è come iteratore esterno, ma compare spesso come iteratore interno,
+in modo che sia più difficile commettere errori.
+Sugli interi ci sono a disposizione molti iteratori.
 ES:
 3.times {p 'A'}
-1.upto(3) {p 'B'} -> è come se fosse il for
-3.downto(1) {p 'C'}
+1.upto(3) {p 'B'}
 1.step(3,1) {p 'D'}
-[1, 2].each{|x| p x}
-NB:
-una volta che una classe supporta l'each i metodi addizionali dell'enumerable sono disponibili
-File.open('numbers.txt').grep(/e$/){|l| puts l} tutti quelli che finiscono per 'e'
-* dato che file ha il metodo each posso ciclare su tutte le righe
+
+ES:
+File.open('numbers.txt').grep(/e$/){|l| puts l}
+* itera su tutte le righe che finiscono per 'e'
 
 
-TRA GLI ITERATORI C'E' ANCHE
+
 LOOP
-loop do
-...
-end
-e
+Tra gli iteratori c'è anche loop, il ciclo più base di tutti.
+loop do ... end # continua all'infinito finché non lo interrompo.
+
+
+
 FOR..IN
-che però è solo uno zucchero sintattico per il metodo each
+Che però è solo uno zucchero sintattico per il metodo each. Si può usare su tutte le collezioni che implementano each.
 a = [1, 2, 3]
 a.each{|v| puts v}
 for v in a
   puts v
 end
-quando ruby vede il for in lo traduce nel metodo each.
-Tuttavia una differenza c'è e riguarda lo scope delle variabili che sono definite nel body del metodo
+quando ruby vede il for..in lo traduce nel metodo each.
+Tuttavia una differenza c'è e riguarda lo scope delle variabili che sono definite nel body del metodo.
 
 
 
+Quando si usano tutti queste cose è utile conoscere anche le parole chiave:
+* break, redo, next
+La parola chiave retry non c'è più. Con il ruby nuovo è stata rimossa.
+
+Questi permettono di alterare il flusso normale dell'iteratore
+break  ---> esce dal ciclo
+next   ---> salta il giro
+redo   ---> riprova il ciclo appena effettuato senza rivalutare la condizione e senza usare l'elemento successivo
+
+NB:
+Queste parole chiave possono anche essere usae all'interno dei blocchi. Anche se poi hanno senso quando il blocco
+è un iteratore:
+loop do
+... next, break, ...
+end
+
+Al break posso anche passare un valore che è quello che viene tornato dal ciclo.
+Altrimenti il ciclo torna nil.
+value = while i < 3 ... break(i) ... end
+così che in value ci sarà il valore che gli ha passato il break, altrimenti ci sarà nil.
+Lo posso passare anche al next ma di fatto verrà perso.
+
+------------------------------------------------------------------------------------------------------------------------
 
 
 
-Quando si usano tutti queste cose è utile conoscere anche le parole chiave: break, redo, next. La parola chiave retry non c'è più. Con il ruby nuovo è stata rimossa.
-questi permettono di alterare il flusso normale dell'iteratore
-break esce dal ciclo
-next salta il giro
-redo riprova il ciclo appena effettuato senza rivalutare la condizione
-al break posso anche passare un valore che è quello che viene tornato dal ciclo. Altrimenti il ciclo torna nil.
-whl = while i < 3 ... break(i) if i == 2. così whl = i
-si può passare anche al next ma non serve a nulla
 
 
 SCOPE
