@@ -319,15 +319,12 @@ Lo posso passare anche al next ma di fatto verrà perso.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
 SCOPE
 while, until e for non introducono nuovi scope, e se definisco una variabile AL LORO interno poi c'è anche nel codice.
-Per i blocchi e gli iteratori invece è diverso, creano un loro scope, per cui se definisco una variabile nel blocco poi non
-me la ritrovo più nel codice.
-Se però il blocco usa delle variabili già definite, poi i valori delle variabili sono influenzate dal blocco.
+Per i blocchi e gli iteratori invece è diverso, creano un loro scope, per cui se definisco una variabile nel blocco poi
+non me la ritrovo più nel codice.
+Se però il blocco fa delle assegnazioni di variabili già definite, poi i valori delle variabili sono influenzate dal
+blocco.
 Comunque le variabili si possono definire locali anche all'interno del blocco |val; scope|
 
 
