@@ -1,12 +1,18 @@
+Le eccezioni impacchettano informazioni circa un errore avvenuto in un oggetto.
+Quando viene sollevata viene inoltrata nello stack finché non trova qualcuno che si prende carico di gestirla.
+Le informazioni vengono incapsulate in un oggetto Exception o in un suo figlio.
+
 Quando lancio un'eccezione posso usare una di quelle già predefinite in Ruby (146) oppure ne posso creare
 io una nuova ma deve derivare da StandardError o uno dei suoi figli, altrimenti non viene agganciata per default.
+A ogni eccezione si può associare un messaggio e uno stack backtrace.
 
 OSS
-open-uri permette di scaricare pagine web e salvarle in un file
+open-uri permette di scaricare pagine web e salvarle in un file.
 
+------------------------------------------------------------------------------------------------------------------------
 
+COSTRUTTO PER LA GESTIONE DELLE ECCEZIONI
 
-Gestione eccezioni costrutto
 begin
     ...
     ...
@@ -30,6 +36,8 @@ begin
 rescue Exception => boom
     ...
 end
+
+
 
 
 ci possono essere più rescue per gestire le eccezioni

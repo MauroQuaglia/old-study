@@ -1,28 +1,20 @@
 require 'test/unit'
 require 'open-uri'
 
-class FetchTest < Test::Unit::TestCase
+class HandlingExceptionsTest < Test::Unit::TestCase
 
   def test_1
-    web_page = open('http://www.trovaprezzi.it')
-    output = File.open('tp.html', 'w')
+    web_page = open('http://www.trovaprezzi.it/')
 
-    begin
-      while line = web_page.gets
-        output.puts line
-        raise StandardError
-      end
-      output.close
-    rescue Exception
-      STDERR.puts "Failed! #{$!}"
-      output.close
-      #File.delete('tp.html')
-      raise
+    output = File.open('trovaprezzi-homepage.html', 'w')
+    while line = web_page.gets
+      output.puts line
     end
-
+    output.close
   end
 
-  def test_2
+
+  def test_23
     web_page = open('http://www.trovaprezzi.it')
     output = File.open('tp.html', 'w')
 
@@ -43,7 +35,7 @@ class FetchTest < Test::Unit::TestCase
 
   def test_3
     begin
-        raise NameError
+      raise NameError
     rescue StandardError, NameError => boom
       STDERR.puts "XXX#{boom.backtrace}XXX"
     rescue SecurityError => security
@@ -52,7 +44,6 @@ class FetchTest < Test::Unit::TestCase
 
 
   end
-
 
 
 end
