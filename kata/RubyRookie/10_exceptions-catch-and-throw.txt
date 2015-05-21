@@ -20,7 +20,7 @@ rescue Exception
     ...
     # un riferimento all'eccezione presa è contenuta nella variabile globale $!
     raise # se la voglio rilanciare (lui in automatico rilancia $!), altrimenti non metto niente.
-    retry # se volgio (o posso) correggere il motivo di eccezione e riprovare ad eseguire il blocco begin ..end. Da usare con molta cautela, perché potrei entrarein cicli infiniti!
+    retry # se voglio correggere il motivo di eccezione e riprovare ad eseguire il blocco begin-end. Occhio ai loop infiniti!
 else
     ...
     viene eseguita solo se non ci sono state eccezioni e prima del blocco ensure
@@ -30,63 +30,42 @@ ensure
     ...
 end
 
-un'alternativa ad usare $! e definire la variabile locale che contiene l'eccezione corrente
-begin
-    ...
+
+OSSERVAZIONI
+* Un'alternativa ad usare $! e definire la variabile locale che contiene l'eccezione corrente
 rescue Exception => boom
-    ...
-end
 
-
-
-
-ci possono essere più rescue per gestire le eccezioni
-begin
-    ...
+* Ci possono essere più rescue per gestire le eccezioni
 rescue StandardError, NameError => boom
-    ...
 rescue SecurityError => security
-    ...
-end
-ma come fa a capire il match?   usa (parameter === $!)    (=== come quello che usa il case e $! è l'eccezione che è stata lanciata)
 
+* Il match tra l'eccezione lanciata e la clausola rescue è fatta tramite l'operatore === (come quello del case).
 
+* Se scrivo rescue senza specificare niente il default è lo StandardError
+
+------------------------------------------------------------------------------------------------------------------------
+
+ERRORI DI SISTEMA
+Vengono lanciate quando un errore di sistema (per esempio Linux) ritorna un codice di errore (error code).
+Con 'man errno' su linux li posso vedere.
+Ruby li decora con uno specifico oggetto eccezione (che deriva da SystemCallError) e ce li mostra.
+ES:
+`x` # Errno::ENOENT
+infatti il comando linux x non ha senso, lancia un error code che viene decorato da ruby da un'eccezione che ha la
+forma Errno::ENOENT (No such file or directory (POSIX.1)
+Se voglio anche lo status code si può vedere così Errno::ENOENT::Errno, infatti ogni eccezione del tipo Errno::ENOENT ha
+una costante Errno che contiene lo status code.
 
 OSS
-se scrivo rescue senza specificare niente il default è lo StandardError
-se nessuna rescue va a buon fine o se l'accezione è lanciata al di fuore del blocco begin .. end cerca ruby un gestore di eccezione nel chiamante e nel chiamante del chiamante e così via...
+Attenzione nel mettere l'apertura di un file File.open dentro il blocco begin.
+E' sbagliato perchè open può lanciare un'eccezione e se è così di una ensure con un f.close sarebbe sbagliata in quanto
+non ci sarebbe nessun file da chiudere.
 
+------------------------------------------------------------------------------------------------------------------------
 
+LANCIARE ECCEZIONI
 
-----
-errori di sistema (system error)
-vengono lanciate quando un errore di sistema ritorna un codice di errore (error code). (EAGAIN, ...) con 'man errno' su linux li posso vedere
-ruby li decora con uno specifico oggetto e ce li mostra
-
-
-----------------------
-
-
-NB
-i beginner di solito mettono l'apertura del file File.open dentro il blocco begin. E' sbagliato perchè open può lanciare un'eccezione
-e se è così di solito non si vuole eseguire ciò che sta nel blocco ensure perchè non c'è nessun file da chiudere.
-
-SBAGLIATO
-begin
- file.open
-rescue
-...
-
-GIUSTO
-file.open
-begin
-...
-rescue
-
-
-------------------------
-
-per lanciare un'eccezione nel codice posso usare (sono la stessa cosa, ma fail è più parlante di raise)
+Per lanciare un'eccezione nel codice posso usare (sono la stessa cosa, ma fail è più parlante di raise)
 raise
 fail (che è un sinonimo una RuntimeError)
 #raise -> RuntimeError (o quella corrente)
@@ -94,10 +73,9 @@ fail (che è un sinonimo una RuntimeError)
 #raise NameError, 'mp3'  -> NameError con messaggio mp3
 #raise NameError, 'mp3', caller -> lo stacktrace è prodotto usando Object#caller method
 
+------------------------------------------------------------------------------------------------------------------------
 
 
-
--------------------
 catch and throw
 - raise e rescue si usano quando qualcosa può andare storto.
 se volgio abbandonare un ciclo perchè qualcosa non 'mi piace' devo usare il catch end throw, in tal caso niente è andato storto, voglio solo abbandonareil ciclo

@@ -13,37 +13,13 @@ class HandlingExceptionsTest < Test::Unit::TestCase
     output.close
   end
 
-
-  def test_23
-    web_page = open('http://www.trovaprezzi.it')
-    output = File.open('tp.html', 'w')
-
+  def test_2
     begin
-      while line = web_page.gets
-        output.puts line
-        raise StandardError
-      end
-      output.close
-    rescue Exception => boom
-      STDERR.puts "Failed! #{boom}"
-      output.close
-      raise boom
-    end
-
-  end
-
-
-  def test_3
-    begin
-      raise NameError
+      raise StandardError
     rescue StandardError, NameError => boom
-      STDERR.puts "XXX#{boom.backtrace}XXX"
-    rescue SecurityError => security
-      STDERR.puts "YYY#{security.backtrace}YYY"
+      STDERR.puts $!
+      STDERR.puts boom
     end
-
-
   end
-
 
 end
