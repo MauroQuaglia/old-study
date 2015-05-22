@@ -1,5 +1,15 @@
-c'è una singola classe per gestire gli input/output, la IO.
-è un canale bidirezionale tra il programma ruby e l'esterno. (es. file è una sottoclasse di IO)
+* Il primo modo per gestire gli I/O è una semplice interfaccia che permette di avere i metodi
+print, gets, puts, ...
+e che permette di gestire semplicemente gli input dell'utente.
+* Il secondo modo è usare l'oggetto IO.
+
+------------------------------------------------------------------------------------------------------------------------
+
+OGGETTO IO
+C'è una singola classe base per gestire gli input/output, la IO. E' un canale bidirezionale tra il programma ruby e l'esterno.
+Ha come figli le classi File e BasicSocket.
+
+
 quando ad un file leggo o scrivo tramite un blocco ci pensa lui a chiuderlo. anche se viene lanciata un'eccezione, prima che l'eccezione si propaghi il file viene chiuso.
 
 gets legge una linea da standard input
