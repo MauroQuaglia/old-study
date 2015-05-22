@@ -75,30 +75,36 @@ fail (che è un sinonimo una RuntimeError)
 
 ------------------------------------------------------------------------------------------------------------------------
 
+CATCH AND THROW
+Normalmente raise e rescue si usano quando qualcosa può andare storto.
+Se volgio abbandonare un ciclo perchè qualcosa non 'mi piace' devo usare il catch end throw, in tal caso niente è andato
+storto, voglio solo abbandonareil ciclo.
 
-catch and throw
-- raise e rescue si usano quando qualcosa può andare storto.
-se volgio abbandonare un ciclo perchè qualcosa non 'mi piace' devo usare il catch end throw, in tal caso niente è andato storto, voglio solo abbandonareil ciclo
-esempio
+Esempio
 catch(:done) do
-      File.foreach('words.txt') do |line|
-        throw :done if line.chomp! == 'egli'
+    File.foreach('words.txt') do |line|
+        throw :done if line.chomp! == 'xxx'
         p line
-      end
-        p 'ciao'
     end
-quando rilancio il simbolo :done esco.
-la differenza è che con il break interrompo il ciclo ed esco, qui invece esco proprio dall'esecuzione del blocco , quindi è qualcosa in più che l'uscire
-dal ciclo del foreach.
-se passo un parametro al throw viene ritornato quel valore
-value = catch(:done) do
-      File.foreach('words.txt') do |line|
-        throw :done, 'done-executed' if line.chomp! == 'egli'
-        p line
-      end
-      p 'ciao'
-    end
-    p value
-  end
+    puts 'yyy'
+end
+Quando rilancio il simbolo :done esco.
+La differenza è che con il break interrompo il ciclo ed esco, qui invece esco proprio dall'esecuzione del blocco,
+quindi è qualcosa in più che l'uscire dal ciclo del foreach.
+Infatti con il break uscirei solo dal foreach e stamperei la scritta yyy, con il throw esco dal blocco e non stampo
+neanche yyy.
 
-il throw può anche non apparire nel contesto statico del catch
+Se passo un parametro al throw, questo viene ritornato, atrimenti verrà tornato nil.
+value = catch(:done) do
+    ...
+    throw :done, 'done-executed'
+end
+
+e value varrà 'done-executed'.
+
+Il throw può anche non apparire nel contesto statico del catch. Nel senso che posso definire un catch del tipo
+catch(:nok) do
+    puts 'NO!'
+end
+e poi lanciare il throw(:nok) in un altro punto del codice, non necessariamente dentro il blocco del catch.
+Però se trova il catch così, ruby lo esegue, o almeno sembra così dai test.

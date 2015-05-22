@@ -1,26 +1,37 @@
 require 'test/unit'
 
-class MyTest < Test::Unit::TestCase
+class CatchAndThrowTest < Test::Unit::TestCase
 
   def test_1
     catch(:done) do
-      File.foreach('words.txt') do |line|
-        throw :done if line.chomp! == 'egli'
+      File.foreach('numbers.txt') do |line|
+        throw :done if line.chomp! == '9'
         p line
       end
-      puts 'ciao'
+      puts 'Fine del blocco catch.'
     end
   end
 
   def test_2
     value = catch(:done) do
-      File.foreach('words.txt') do |line|
-        throw :done, 'done-executed' if line.chomp! == 'egli'
+      File.foreach('numbers.txt') do |line|
+        throw :done, 'done-executed' if line.chomp! == '4'
         p line
       end
-      p 'ciao'
+      puts 'Fine del blocco catch.'
     end
     p value
+  end
+
+  catch :nok do
+    puts '!nok!'
+  end
+
+  def test_3
+    5.times do |n|
+      puts n
+      throw :nok if n == 3
+    end
   end
 
 end
