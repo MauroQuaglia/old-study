@@ -1,18 +1,33 @@
-* Il primo modo per gestire gli I/O è una semplice interfaccia che permette di avere i metodi
-print, gets, puts, ...
+* Il primo modo per gestire gli I/O è una semplice interfaccia che permette di avere i metodi print, gets, puts, ...
 e che permette di gestire semplicemente gli input dell'utente.
 * Il secondo modo è usare l'oggetto IO.
 
 ------------------------------------------------------------------------------------------------------------------------
 
 OGGETTO IO
-C'è una singola classe base per gestire gli input/output, la IO. E' un canale bidirezionale tra il programma ruby e l'esterno.
-Ha come figli le classi File e BasicSocket.
+C'è una singola classe base per gestire gli input/output, la IO. E' un canale bidirezionale tra il programma ruby e
+l'esterno. Ha come figli le classi File e BasicSocket.
+
+------------------------------------------------------------------------------------------------------------------------
+
+FILE (aprire e chiudere)
+Modalità corretta di gestire un file:
+
+* creazione
+File.new(name, mode, permission) mode, permission non sono obbligatori.
+Una volta aperto siamo noi responsabili di chiuderlo in modo che tutto sia scritto e le risorse rilasciate.
+
+* apertura
+File.open(name) apre un file. Però se gli associo un blocco, la open passa il file al blocco e si preoccupa lei della
+chiusura. Questo ha il vantaggio che se viene generata un'eccezione nel blocco il file viene chiuso prima che l'eccezione
+venga propagata.
+
+FILE (leggere e scrivere)
+gets      legge una riga da standard input o da qualsiasi file specificato da command line.
+file.gets legge una riga da un oggetto file.
 
 
-quando ad un file leggo o scrivo tramite un blocco ci pensa lui a chiuderlo. anche se viene lanciata un'eccezione, prima che l'eccezione si propaghi il file viene chiuso.
 
-gets legge una linea da standard input
-file.gets legge una linea dal file
 
-Se so che devo leggere solo stringhe posso usare lo StringIO
+
+
