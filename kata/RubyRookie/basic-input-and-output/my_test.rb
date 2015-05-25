@@ -1,26 +1,19 @@
 require 'test/unit'
-<<<<<<< HEAD
 require_relative 'book_in_stock'
-=======
 require 'stringio'
 require 'socket'
->>>>>>> 27680af306f04878825f6f99668040e1bee51291
+
 
 class MyTest < Test::Unit::TestCase
 
-  def test_1
-    file = File.new('test-file', 'w')
-    file.close
-  end
-
   def test_2
-<<<<<<< HEAD
+
     b = Precedence.new()
     puts b.one
     puts b.two
   end
 
-=======
+  def test_00
     File.open('test-file.txt') do |file|
       file.each_byte do |chr|
         print "[#{chr.chr}:#{chr}]"
@@ -71,5 +64,5 @@ class MyTest < Test::Unit::TestCase
 
 
 
->>>>>>> 27680af306f04878825f6f99668040e1bee51291
+
 end
