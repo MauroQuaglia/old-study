@@ -26,8 +26,28 @@ FILE (leggere e scrivere)
 gets      legge una riga da standard input o da qualsiasi file specificato da command line.
 file.gets legge una riga da un oggetto file.
 
+------------------------------------------------------------------------------------------------------------------------
 
+LETTURA
 
+Ci sono vari modi di leggere un file, quello classico è tramite i loop while. Un altro modo è sfruttare gli iteratori.
+Esempi di teratori: each_byte, each_line.
+
+Un iteratore molto utile è foreach                     --> IO.foreach('my-file.txt') {|line| p line}   # File.foreach
+Posso anche ritornare un file intero in una stringa    --> IO.read('my-file.txt')                      # File.read
+Posso anche ritornare un file intero in una arry       --> IO.readline('my-file.txt')                  # File.readline
+
+------------------------------------------------------------------------------------------------------------------------
+
+SCRITTURA
+Quando scrivo devo ricordarmi la modalità 'w'. ES: File.open('my-file-2.txt', 'w')
+Se voglio scrivere dei dati binari e fare in modo che Ruby non pasticci con essi è bene usare IO.print.
+
+Il metodo << si può usare con qualsiasi stream, non solo sulle stringhe e gli array. Inoltre << usa il metodo to_s
+per convertire l'argomento in stringa prima di aggiungerlo allo stream.
+Es: STDOUT << 99 << " red balloons "
+
+------------------------------------------------------------------------------------------------------------------------
 
 
 

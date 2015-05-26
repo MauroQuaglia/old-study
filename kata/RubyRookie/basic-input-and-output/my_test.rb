@@ -13,24 +13,6 @@ class MyTest < Test::Unit::TestCase
     puts b.two
   end
 
-  def test_00
-    File.open('test-file.txt') do |file|
-      file.each_byte do |chr|
-        print "[#{chr.chr}:#{chr}]"
-      end
-    end
-  end
-
-  def test_3
-    str = IO.read('test-file.txt') # butta tutto in una string
-    p str[0]
-    arr = IO.readlines('test-file.txt') # butta tutto in una array
-    p arr[0]
-  end
-
-  def test_4
-    puts File.read('test-file.txt')
-  end
 
   def test_5
     input = StringIO.new('Impara a usare Ruby!')
