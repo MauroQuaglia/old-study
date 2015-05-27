@@ -47,7 +47,29 @@ Il metodo << si può usare con qualsiasi stream, non solo sulle stringhe e gli a
 per convertire l'argomento in stringa prima di aggiungerlo allo stream.
 Es: STDOUT << 99 << " red balloons "
 
+Quando possibile è buona norma usare il <<.
+
 ------------------------------------------------------------------------------------------------------------------------
+
+CREARE UN I/O CON STRING
+Praticamente l'oggetto StringIO è un oggetto String mascherato da IO. Ha per esempio i metodi read e write.
+Questo può essere molto utile nei test. Invece di creare degli oggetti File (o Socket) da passare all'oggetto sotto test,
+posso creare degli oggetti StringIO.
+
+------------------------------------------------------------------------------------------------------------------------
+
+LAVORARE CON LA RETE
+Con Ruby ci sono molte librerie che permettono di comunicare tramite vari protocolli con dei servizi.
+
+Esempi:
+client = TCPSocket.open('trovaprezziinternal', 80) # Creo un client che si mette a parlare con nginx locale.
+http   = Net::HTTP.new('trovaprezzi.it', 80)       # Parlo con la rete tramite http.
+
+------------------------------------------------------------------------------------------------------------------------
+
+INTERPRETARE L'HTML
+La libreria da usare è nokogiri, per installarla basta fare: gem install nokogiri.
+
 
 
 
