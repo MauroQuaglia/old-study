@@ -1,0 +1,29 @@
+Ci sono due modi differenti di eseguire differenti parti di codice 'apparentemente' contemporaneamente: le Fibre.
+Queste permettono di sospendere l'esecuzione di un processo in un punto e farlo ripartire in un altro.
+
+Le due modalità sono:
+* creare dei task da far eseguire allo stesso processo.
+* creare dei task da far eseguire a più processi.
+
+------------------------------------------------------------------------------------------------------------------------
+
+FIBRE
+Permettono di scrivere del codice che usa i thread senza incappare nella complessità ad essi inerente.
+Solitamete vengono usate per generare infinite sequenze di valori su domanda. (un'alternativa ai lazy enumerator)
+
+Esempio: i numeri divisibili per due e non per tre.
+Alla fibra devon passare un blocco, ma tutte le volte che arriva a Fiber.yield torna il valore e non continua nell'esecuzione.
+Ma il blocco viene eseguito quando poi viene chiamato il resume.
+numbers = Fiber.new do
+    n = 2
+    loop do
+        Fiber.yield(n) if n % 3 != 0
+        n += 2
+    end
+end
+10.times{p numbers.resume}
+
+La fibra può essere usata solo nel thread che l'ha creata, tuttavia ci sono librerie che permettono di estendere questa
+limitazione. Le librerie sono:
+* fiber 
+* continuation
