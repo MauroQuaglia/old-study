@@ -27,3 +27,55 @@ La fibra può essere usata solo nel thread che l'ha creata, tuttavia ci sono lib
 limitazione. Le librerie sono:
 * fiber 
 * continuation
+
+------------------------------------------------------------------------------------------------------------------------
+
+MULTITHREADING
+
+Prima di Ruby 1.9 il concetto di thread era il green thred, cioè una tipologia di threading che non riguardava il SO
+ma era gestita da Ruby che passava l'esecuzione un po' a una parte di codice un po' ad un'altra.
+
+Da Ruby 1.9 il multithreading è a livello di sistema operativo ed effettivamente sfruttando le capacità dell'SO si
+possono avere più processi paralleli.
+Tuttavia il vantaggio è minimo, infatti la maggior parte delle librerie che usa ruby non sono thread safe, in quanto
+scritte per il vecchio modello di threading.
+Il compromesso è: usare il threading del SO, ma operare con un singolo thread alla volta... quindi non si vedranno mai
+due thread nella stessa applicazione che eseguiranno codice veramente contemporaneamente.
+
+Esempio
+threads = pages.map do |page|
+  Thread.new(page) do |url|
+    http = Net::HTTP.new(url, 80)
+    print "Fetching #{url}\n"
+    print "Got #{http.get('/').message}\n"
+  end
+end
+threads.each{|thred| thread.join }
+
+OSS:
+Thread.new(page) do |url|
+Notare che passiamo il parametro page e poi nel blocco questo viene passato come url.
+I thread condividono le variabili globali, di istanza, e locali che esistono nel momento in cui parte il thred. Quindi
+il parametro page che viene fornito dal ciclo può cambiare e il thred che era partito precedentemente può fare casino se
+stava usando quella variabile.
+Mentre le variabili del blocco passato al thread sono veramente locali al thread.
+Si possono passare tutte le variabili che si vogliono al blocco via Thread.new.
+OSS:
+All'interno del blocco non è bene usare puts perché splitta la scrittura in due, la linea e la newline... questo al
+thread non piace e quindi è meglio usare print.
+
+Quando un programma ruby termina, tutti i thread vengono uccisi indipendentemente dal loro stato. Tuttavia si può
+aspettare che i vari thread abbiano finito con la chiamata al metodo join.
+
+------------------------------------------------------------------------------------------------------------------------
+
+VARIABILI
+Le variabili locali al blocco non sono condivisibili con gli altri thread. Ma se mi serve una variabile visibile al di
+fuori come faccio?
+La classe Thread permette di creare e accedere a una variabile per nome.
+Thread.current[:my_var] = 'ciao'
+
+------------------------------------------------------------------------------------------------------------------------
+
+ECCEZIONI
+Quando viene lanciata un'eccezione in un thread, se non gestita il thread muore, ma gli altri thread non se ne accorgono.
