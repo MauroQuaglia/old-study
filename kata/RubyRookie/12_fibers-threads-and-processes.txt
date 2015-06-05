@@ -66,6 +66,8 @@ thread non piace e quindi è meglio usare print.
 
 Quando un programma ruby termina, tutti i thread vengono uccisi indipendentemente dal loro stato. Tuttavia si può
 aspettare che i vari thread abbiano finito con la chiamata al metodo join.
+Però i thread non è che partono quando chiamo la join. La join è solo per dire che se ci sono quei thread che stanno
+girando di non uscire dal programma finché non hanno finito di girare.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -78,4 +80,10 @@ Thread.current[:my_var] = 'ciao'
 ------------------------------------------------------------------------------------------------------------------------
 
 ECCEZIONI
-Quando viene lanciata un'eccezione in un thread, se non gestita il thread muore, ma gli altri thread non se ne accorgono.
+Le eccezioni si possono gestire in dipendenza dal flag abort_on_exception
+
+abort_on_exception = flase
+Un'eccezione in un thread uccide solo quel thred.
+
+abort_on_exception = true
+Un'eccezione in un thread uccide quel thread e il main thread.
