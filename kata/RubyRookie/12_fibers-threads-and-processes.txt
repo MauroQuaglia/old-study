@@ -87,3 +87,54 @@ Un'eccezione in un thread uccide solo quel thred.
 
 abort_on_exception = true
 Un'eccezione in un thread uccide quel thread e il main thread.
+
+------------------------------------------------------------------------------------------------------------------------
+
+CONTROLLARE LA SCHEDULAZIONE
+Ci sono molti metodi per controllare la schedulazione dei thread, ma la vera cosa da fare è lasciare che ruby e il SO
+si occupi di questo!
+Gli unici metodi che vale la pena di prendere in considerazione sone: Thread.join e Thread.value.
+
+------------------------------------------------------------------------------------------------------------------------
+
+ESCLUSIONE RECIPROCA
+Se più thread hanno accesso alla stessa variabile e la cambiano in maniera incontrollata ci possono essere dei
+malfunzionamenti.
+
+Si possono usare i Mutex per creare la sincronizzazione, cioè delle aree di codice dove un solo thread alla volta ha
+accesso.
+ES:
+mutex.lock
+... codice ...
+mutex.unlock
+
+Tuttavia c'è un modo migliore per farlo che ci mette anche al riparo da eventuali accezioni, nel senso che se viene
+sollevata un'eccezione il metodo synchronize toglie il lock dalla risorsa in automatico.
+ES:
+mutex.synchronize do
+...codice...
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
