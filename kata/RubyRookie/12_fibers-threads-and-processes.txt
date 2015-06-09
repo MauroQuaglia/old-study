@@ -115,10 +115,24 @@ mutex.synchronize do
 ...codice...
 end
 
+Atri metodi utili:
+Mutex.try_lock -> prende il lock se non c'è, altrimenti torna false.
+Mutex.sleep -> se ho il lock ma lo voglio momentaneamente lasciare.
 
+Quando devo gestire tutte queste sincronizzazioni c'è un'altra classe che può essere molto  utile: Queue.
+Più thread possono aggiungere e togliere oggetti dalla queue con operazioni che sono garantite thread-safe.
 
+------------------------------------------------------------------------------------------------------------------------
+LANCIARE PIU' PROCESSI
+Un metodo è lanciare più comandi e aspettare che finiscano, con `` o system.
+Questi due lanciano un comando in un sottoprocesso.
 
+System torna
+true  -> se il comando è stato eseguito con successo
+exp   -> se il comando non è stato trovato
+false -> se è stato eseguito ma ha tornato errore. L'exit code lo troviamo in $?.
 
+System scrive l'output sulla console del programma, mentre `` non lo fanno.
 
 
 
