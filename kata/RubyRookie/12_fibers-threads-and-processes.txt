@@ -123,6 +123,7 @@ Quando devo gestire tutte queste sincronizzazioni c'è un'altra classe che può 
 Più thread possono aggiungere e togliere oggetti dalla queue con operazioni che sono garantite thread-safe.
 
 ------------------------------------------------------------------------------------------------------------------------
+
 LANCIARE PIU' PROCESSI
 Un metodo è lanciare più comandi e aspettare che finiscano, con `` o system.
 Questi due lanciano un comando in un sottoprocesso.
@@ -133,6 +134,33 @@ exp   -> se il comando non è stato trovato
 false -> se è stato eseguito ma ha tornato errore. L'exit code lo troviamo in $?.
 
 System scrive l'output sulla console del programma, mentre `` non lo fanno.
+
+Spesso però ci serve un tipo di comunicazione più sofisticata che il semplice lanciare un processo. Il metodo
+IO.popen è quello che ci serve.
+Questo lancia un comando come sottoprocesso e connette lo standard input e output del sottoprocesso a un oggetto IO.
+Se poi scrivo sull'oggetto IO il sottoprocesso può leggerlo proprio da questo standard input.
+
+------------------------------------------------------------------------------------------------------------------------
+
+PROCESSI INDIPENDENTI
+A volte vogliamo lanciare un processo e continuare con il nostro business.
+Più tardi possiamo controllare se poi ha finito.
+
+exec('sort test-file.txt > output.txt') if fork.nil?
+lancia un processo figlio indipendente.
+fork torna il processID nel genitore e nil nel figlio, questo permette al figlio di partire.
+un altro modo per forkare è questo fork{exec('sleep 5s')}
+
+Process.wait
+significa che rimane in attesa finché il processo non ha finito.
+
+trap
+Serve per essere notificati quando il processo finisce.
+
+------------------------------------------------------------------------------------------------------------------------
+
+BLOCCHI E SOTTOPROCESSI
+se passo un comando a IO.popen queso viene passato al blocco come parametro.
 
 
 

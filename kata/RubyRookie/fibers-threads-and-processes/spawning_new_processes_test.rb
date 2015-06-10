@@ -12,6 +12,5 @@ class SpawningNewProcessesTest < Test::Unit::TestCase
     puts system('date') # scrive e torna true
   end
 
-
 end
 
