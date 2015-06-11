@@ -1,0 +1,12 @@
+MiniTest::Unit o Test::Unit
+Per hanno gli sviluppatori hanno usato Test::Unit ma poi nel tempo è stata creata una versione un po' più snella.
+Molte delle asserzioni di MiniTest ricalcano quelle di Test, altre sono state rinominate (assert_not_nil -> refute_nil)
+e alcune funzionalità rimosse.
+
+Quandi abbiamo diverse alternative:
+require minitest/unit -> per usare le funzionalità di MiniTest
+require test/unit     -> per usare MiniTest con il layer di compatibilità di Test::Unit che aggiunge a MiniTest le
+                         funzionalità di cui è stato sfrodato.
+Installare la gemma test-unit -> per oavere l'originale framework Test::Unit
+
+Comunque lo standard è il Test::Unit.

@@ -160,7 +160,17 @@ Serve per essere notificati quando il processo finisce.
 ------------------------------------------------------------------------------------------------------------------------
 
 BLOCCHI E SOTTOPROCESSI
-se passo un comando a IO.popen queso viene passato al blocco come parametro.
+Posso associare al popen anche un blocco:
+IO.popen('date') {|f| puts "Date is #{f.gets}"}
+
+Posso lanciare anche un fork con un blocco, che attiverà un sottoprocesso, mentre il programma principale continuerà
+oltre il blocco.
+...
+fork do
+ ...
+end
+...
+
 
 
 
