@@ -2,22 +2,25 @@ require 'test/unit'
 
 class TheTestingFrameworkTest < Test::Unit::TestCase
 
-  # Called before every test method runs. Can be used
-  # to set up fixture information.
-  def setup
-    # Do nothing
+  def test_1
+    number = 1
+    assert_equal(1, number)
   end
 
-  # Called after every test method runs. Can be used to tear
-  # down fixture information.
-
-  def teardown
-    # Do nothing
+  def test_2
+    number = 2
+    assert_equal(1, number)
   end
 
-  # Fake test
-  def test_fail
-
-    fail('Not implemented')
+  def test_3
+    number = 2
+    refute_equal(1, number)
   end
+
+  def test_4
+    number = 2
+    assert_equal(1, number, 'Failure!')
+  end
+
+
 end

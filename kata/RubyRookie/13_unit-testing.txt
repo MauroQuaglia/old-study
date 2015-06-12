@@ -1,4 +1,5 @@
 MiniTest::Unit o Test::Unit
+
 Per hanno gli sviluppatori hanno usato Test::Unit ma poi nel tempo è stata creata una versione un po' più snella.
 Molte delle asserzioni di MiniTest ricalcano quelle di Test, altre sono state rinominate (assert_not_nil -> refute_nil)
 e alcune funzionalità rimosse.
@@ -10,3 +11,23 @@ require test/unit     -> per usare MiniTest con il layer di compatibilità di Te
 Installare la gemma test-unit -> per oavere l'originale framework Test::Unit
 
 Comunque lo standard è il Test::Unit.
+
+Per ogni asserzione positiva abbiamo anche l'asserzione negativa:
+assert_equal --> refute_equal
+
+Posso sempre passare come ultimo parametro un messaggio, che verrà visualizzato prima dell'output di fallimento.
+
+------------------------------------------------------------------------------------------------------------------------
+
+STRUTTURARE I TEST
+I test devono iniziare con la parola test, perché viene usata la reflection per lanciarli. Tutti i metodi che iniziano
+con test vengono lanciati.
+
+il metodi setup e teardown 'decornao' ogni test e non l'intera suite di test.
+
+------------------------------------------------------------------------------------------------------------------------
+
+LANCIARE I TEST
+Per lanciare l'intera suite:                    ruby the_testing_framework_test.rb
+Per lanciare un singolo test:                   ruby the_testing_framework_test.rb -n test_1
+Per lanciare dei test che matchano una regexp:  ruby the_testing_framework_test.rb -n /1/
