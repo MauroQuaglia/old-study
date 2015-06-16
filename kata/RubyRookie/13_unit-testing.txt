@@ -14,6 +14,8 @@ Comunque lo standard è il Test::Unit.
 
 Per ogni asserzione positiva abbiamo anche l'asserzione negativa:
 assert_equal --> refute_equal
+OSS:
+assert_equal usa l'operatore ==
 
 Posso sempre passare come ultimo parametro un messaggio, che verrà visualizzato prima dell'output di fallimento.
 
@@ -71,7 +73,8 @@ RSpec e Shoulda
 
 RSpec e Shoulda hanno focus differenti.
 RSpec è pensato per un vero TDD, prima scrivo il test e poi il codice, anche lo stile della sintassi rispecchia questo.
-Shoulda invece è pensato per un testing vero e proprio, che non matcha necessariamente l'AT del cliente.
+Shoulda invece è pensato per un testing vero e proprio, che non matcha necessariamente l'AT del cliente. Prende le idee
+di RSpec e ce le offre da integrare nel classico test unitario.
 
 Mentre RSpec è un vero e proprio framework, Shoulda lavora insieme a un framework, sia esso Test::Unit o RSpec. Perciò
 si possono mixare i test Shoulda con i metodi di test di Test::Unit o RSpec.
@@ -86,31 +89,43 @@ gem install rspec
 La sintassi di RSpec:
 describe 'TennisScorer', 'basic scoring' do
 
-  it 'should start with a score of 0 - 0'
-  it 'should be 15 - 0 if the server wins a point'
+  before(:each) do
+    @ts = TennisScorer.new
+  end
+
+  it 'should start with a score of 0 - 0' do
+    @ts.score.should == '0 - 0'
+  end
+
   it 'should be 0 - 15 if the receiver wins a point'
 
 end
-OSS: l'output sarà del tipo:
-***
-Pending: (Failures listed here are expected and do not affect your suite's status)
-
-  1) TennisScorer basic scoring should start with a score of 0 - 0
-     # Not yet implemented
-     # ./rspec_spec.rb:3
-
-  2) TennisScorer basic scoring should be 15 - 0 if the server wins a point
-     # Not yet implemented
-     # ./rspec_spec.rb:4
-
-  3) TennisScorer basic scoring should be 0 - 15 if the receiver wins a point
-     # Not yet implemented
-     # ./rspec_spec.rb:5
-
-Finished in 0.00046 seconds (files took 0.07409 seconds to load)
-3 examples, 0 failures, 3 pending
 
 Per lanciare RSpec
 rspec file_spec.rb
 
+------------------------------------------------------------------------------------------------------------------------
 
+Shoulda
+
+Per installare Shoulda
+gem install shoulda
+
+La sintassi di Shoulda
+class TennisScorerTest < Test::Unit::TestCase
+
+  context 'Tennis scorer' do
+
+    setup do
+      @ts = TennisScorer.new
+    end
+
+    should 'start with a score of 0 - 0' do
+      assert_equal('0 - 0', @ts.score)
+    end
+
+  end
+end
+
+Per lanciare Shoulda
+ruby file_shoulda.rb
