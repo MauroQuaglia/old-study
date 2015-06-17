@@ -1,0 +1,23 @@
+Ruby ha molte funzionalità che permettono di debuggare un programma.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Ruby Debugger
+
+Per esempio se ho il listato di test_debug.rb.
+ruby test_debug.rb           ---> lo esegue
+ruby -r debug test_debug.rb  ---> lo debugga
+Però devo caricare nel debug le righe di codice che voglio effettivamente debuggare e posso farlo con il comando
+list 1-9
+che carica nel debug le prime 9 righe del file.
+Dopo posso mettere dei breakpoint e debuggare. Ci sono vari comandi che si possono usare e se il caso si possono
+guardare.
+
+------------------------------------------------------------------------------------------------------------------------
+
+irb
+
+irb è una shell Ruby che fornisce un ambiente dove poter giocare con il linguaggio in tempo reale.
+Si puo lanciare cosy: irb
+
+------------------------------------------------------------------------------------------------------------------------

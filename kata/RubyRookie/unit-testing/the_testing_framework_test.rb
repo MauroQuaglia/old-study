@@ -22,5 +22,4 @@ class TheTestingFrameworkTest < Test::Unit::TestCase
     assert_equal(1, number, 'Failure!')
   end
 
-
 end

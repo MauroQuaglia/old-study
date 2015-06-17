@@ -7,5 +7,4 @@ class WhereToPutTestsTest < Test::Unit::TestCase
     assert_equal('hello', MySource.new.say_hello)
   end
 
-
 end
