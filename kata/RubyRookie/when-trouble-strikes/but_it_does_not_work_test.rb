@@ -10,6 +10,31 @@ class ButItDoesNotWorkTest < Test::Unit::TestCase
     p obj.two
   end
 
+  def test_2
+    result1 = one two { 'three' }
+
+    result2 = one two do
+      'three'
+    end
+
+    puts "With braces, result = #{result1}" #'two'
+    puts "With do/end, result = #{result2}" #'one'
+  end
+
+  def two
+    if block_given?
+      "Block given to 'two' returns: [#{yield}]."
+    end
+  end
+
+  def one(arg)
+    if block_given?
+      "Block given to 'one' returns: [#{yield}]."
+    else
+      arg
+    end
+  end
+
 
 
 end

@@ -29,8 +29,57 @@ Piccoli trucchi per scovare i problemi
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Performance
+STRUMENTI UTILI
 
 Se ci sono problemi di performance, ci possono essere di aiuto due strumenti che ci permettono di capire dove sta
 il problema della lentezza: il modulo benchmark, e il profilatore Ruby.
+
+IL MODULO BENCHMARK
+
+Devo fare:
+require 'benchmark'
+include Benchmark
+
+e poi per misurare si può fare una cosa del genere:
+
+array = ['a', 'b', 'c']
+hash = {a: 'a', b: 'b', c: 'c'}
+
+bmbm do |test|
+
+  test.report('Array access:') do
+    10_000_000.times{array[0]}
+  end
+
+  test.report('Hash access:') do
+    10_000_000.times{hash[:a]}
+  end
+
+end
+
+in questo modo ottengo un output che mi fa capire cosa è più veloce.
+C'è da dire che il risultato potrebbe essere inficiato dal fatto che il garbage collector passi proprio nel momento
+in cui uno dei due test stia girando.
+
+IL PROFILATORE
+
+Mostra quante volte un metodo viene chiamato, la media di risposta, e il totale di tempo passato nel metodo.
+Per esempio se ho un file del tipo
+
+require 'profile'
+count = 0
+File.foreach('lipsum.txt') do |line|
+  line.chomp!
+  count += 1 if line.length > 3
+end
+puts "Line with specific length: #{count}"
+
+e lancio il comando: ruby -r profile profiler.rb
+
+posso vedere sulla console un riepilogo di tutte le tempistiche.
+
+
+LA COPERTURA DI CODICE
+Ci sono diversi tool già integrati in Ruby che ci dicono quante righe di codice sono state eseguite.
+
 
