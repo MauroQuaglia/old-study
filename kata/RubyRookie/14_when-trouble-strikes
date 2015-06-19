@@ -33,4 +33,4 @@ Performance
 
 Se ci sono problemi di performance, ci possono essere di aiuto due strumenti che ci permettono di capire dove sta
 il problema della lentezza: il modulo benchmark, e il profilatore Ruby.
- 
+
