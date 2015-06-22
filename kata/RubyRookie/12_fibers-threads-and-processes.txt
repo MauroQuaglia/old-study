@@ -1,4 +1,4 @@
-Ci sono due modi differenti di eseguire differenti parti di codice 'apparentemente' contemporaneamente: le Fibre.
+Ci sono due modi differenti di eseguire differenti parti di codice 'apparentemente' contemporaneamente.
 Queste permettono di sospendere l'esecuzione di un processo in un punto e farlo ripartire in un altro.
 
 Le due modalità sono:
@@ -12,7 +12,7 @@ Permettono di scrivere del codice che usa i thread senza incappare nella comples
 Solitamete vengono usate per generare infinite sequenze di valori su domanda. (un'alternativa ai lazy enumerator)
 
 Esempio: i numeri divisibili per due e non per tre.
-Alla fibra devon passare un blocco, ma tutte le volte che arriva a Fiber.yield torna il valore e non continua nell'esecuzione.
+Alla fibra devo passare un blocco, ma tutte le volte che arriva a Fiber.yield torna il valore e non continua nell'esecuzione.
 Ma il blocco viene eseguito quando poi viene chiamato il resume.
 numbers = Fiber.new do
     n = 2
@@ -66,7 +66,7 @@ thread non piace e quindi è meglio usare print.
 
 Quando un programma ruby termina, tutti i thread vengono uccisi indipendentemente dal loro stato. Tuttavia si può
 aspettare che i vari thread abbiano finito con la chiamata al metodo join.
-Però i thread non è che partono quando chiamo la join. La join è solo per dire che se ci sono quei thread che stanno
+Però i thread non è che partono quando chiamo la join. La join è solo per dire che se ci sono dei thread che stanno
 girando di non uscire dal programma finché non hanno finito di girare.
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -82,7 +82,7 @@ Thread.current[:my_var] = 'ciao'
 ECCEZIONI
 Le eccezioni si possono gestire in dipendenza dal flag abort_on_exception
 
-abort_on_exception = flase
+abort_on_exception = false
 Un'eccezione in un thread uccide solo quel thred.
 
 abort_on_exception = true
@@ -108,7 +108,7 @@ mutex.lock
 ... codice ...
 mutex.unlock
 
-Tuttavia c'è un modo migliore per farlo che ci mette anche al riparo da eventuali accezioni, nel senso che se viene
+Tuttavia c'è un modo migliore per farlo che ci mette anche al riparo da eventuali eccezioni, nel senso che se viene
 sollevata un'eccezione il metodo synchronize toglie il lock dalla risorsa in automatico.
 ES:
 mutex.synchronize do
@@ -117,9 +117,9 @@ end
 
 Atri metodi utili:
 Mutex.try_lock -> prende il lock se non c'è, altrimenti torna false.
-Mutex.sleep -> se ho il lock ma lo voglio momentaneamente lasciare.
+Mutex.sleep    -> se ho il lock ma lo voglio momentaneamente lasciare.
 
-Quando devo gestire tutte queste sincronizzazioni c'è un'altra classe che può essere molto  utile: Queue.
+Quando devo gestire tutte queste sincronizzazioni c'è un'altra classe che può essere molto utile: Queue.
 Più thread possono aggiungere e togliere oggetti dalla queue con operazioni che sono garantite thread-safe.
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -130,7 +130,7 @@ Questi due lanciano un comando in un sottoprocesso.
 
 System torna
 true  -> se il comando è stato eseguito con successo
-exp   -> se il comando non è stato trovato
+exc   -> se il comando non è stato trovato
 false -> se è stato eseguito ma ha tornato errore. L'exit code lo troviamo in $?.
 
 System scrive l'output sulla console del programma, mentre `` non lo fanno.

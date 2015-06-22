@@ -29,8 +29,8 @@ fail ArgumentError    lancia un ArgumentError
 
 
 
-Posso definire su una mia classi tutti i metodi che voglio, per esempio come quelli usati normalmente su un array:
-<< (che poi dovrà tornare self se volgio poter concatenare cose del tipo << 1 << 2 ...)
+Posso definire su una mia classe tutti i metodi che voglio, per esempio come quelli usati normalmente su un array:
+<< (che poi dovrà tornare self se voglio poter concatenare cose del tipo << 1 << 2 ...)
 [] indexing
 
 Per esempio una definizione per l'indexing è questa:
@@ -224,7 +224,7 @@ l'operatore === è definito nelle classi (Class) e si può usare per controllare
 di un'altra. Ogni classe lo reimplementa per aggiustarene la semantica, infatti se nel case metto una regexp l'===
 viene visto come patter match.
 
-Ogni classe Ruby è un'istanza della classe Class. L'opertaore === è definito in Class per testare se un argomento è
+Ogni classe Ruby è un'istanza della classe Class. L'opertore === è definito in Class per testare se un argomento è
 un'istanza del receiver o di una sua super classe.
 
 -------------------------------------------
@@ -305,7 +305,7 @@ next   ---> salta il giro
 redo   ---> riprova il ciclo appena effettuato senza rivalutare la condizione e senza usare l'elemento successivo
 
 NB:
-Queste parole chiave possono anche essere usae all'interno dei blocchi. Anche se poi hanno senso quando il blocco
+Queste parole chiave possono anche essere usate all'interno dei blocchi. Anche se poi hanno senso quando il blocco
 è un iteratore:
 loop do
 ... next, break, ...

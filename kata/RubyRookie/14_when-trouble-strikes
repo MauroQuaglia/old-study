@@ -24,9 +24,7 @@ Si puo lanciare cosy: irb
 
 Piccoli trucchi per scovare i problemi
 
-1) lanciare gli script con l'opzione -w
-2) se ho un attr_accessor :variabile, impostare la variabile come self.nome_variabile = valore.
-
+lanciare gli script con l'opzione -w
 ------------------------------------------------------------------------------------------------------------------------
 
 STRUMENTI UTILI

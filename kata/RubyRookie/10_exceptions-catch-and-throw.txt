@@ -58,7 +58,7 @@ una costante Errno che contiene lo status code.
 
 OSS
 Attenzione nel mettere l'apertura di un file File.open dentro il blocco begin.
-E' sbagliato perchè open può lanciare un'eccezione e se è così di una ensure con un f.close sarebbe sbagliata in quanto
+E' sbagliato perchè open può lanciare un'eccezione e se è così una ensure con un f.close sarebbe sbagliata in quanto
 non ci sarebbe nessun file da chiudere.
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -77,7 +77,7 @@ fail (che è un sinonimo una RuntimeError)
 
 CATCH AND THROW
 Normalmente raise e rescue si usano quando qualcosa può andare storto.
-Se volgio abbandonare un ciclo perchè qualcosa non 'mi piace' devo usare il catch end throw, in tal caso niente è andato
+Se voglio abbandonare un ciclo perchè qualcosa non 'mi piace' devo usare il catch end throw, in tal caso niente è andato
 storto, voglio solo abbandonareil ciclo.
 
 Esempio

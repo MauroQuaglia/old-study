@@ -1,6 +1,6 @@
 MiniTest::Unit o Test::Unit
 
-Per hanno gli sviluppatori hanno usato Test::Unit ma poi nel tempo è stata creata una versione un po' più snella.
+Per anni gli sviluppatori hanno usato Test::Unit ma poi nel tempo è stata creata una versione un po' più snella.
 Molte delle asserzioni di MiniTest ricalcano quelle di Test, altre sono state rinominate (assert_not_nil -> refute_nil)
 e alcune funzionalità rimosse.
 
@@ -8,7 +8,7 @@ Quandi abbiamo diverse alternative:
 require minitest/unit -> per usare le funzionalità di MiniTest
 require test/unit     -> per usare MiniTest con il layer di compatibilità di Test::Unit che aggiunge a MiniTest le
                          funzionalità di cui è stato sfrodato.
-Installare la gemma test-unit -> per oavere l'originale framework Test::Unit
+Installare la gemma test-unit -> per avere l'originale framework Test::Unit
 
 Comunque lo standard è il Test::Unit.
 
@@ -25,7 +25,7 @@ STRUTTURARE I TEST
 I test devono iniziare con la parola test, perché viene usata la reflection per lanciarli. Tutti i metodi che iniziano
 con test vengono lanciati.
 
-il metodi setup e teardown 'decornao' ogni test e non l'intera suite di test.
+i metodi setup e teardown 'decorano' ogni test e non l'intera suite di test.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ Nel file di test non ci dovrebbe essere una intestazione del tipo
 require 'test/unit'
 require '../lib/my_source'
 
-in quanto il require_relative potrebbe non funzionare. Infatti se la classe che carico (my_source) contiene un require
+in quanto il require relativo potrebbe non funzionare. Infatti se la classe che carico (my_source) contiene un require
 (require 'my_source2') il test non riesce a caricare quest'ultimo.
 La soluzione da adottare è che la directory di livello più alto (lib) sia nel load_path insieme alle altre componenti
 dell'applicazione.
