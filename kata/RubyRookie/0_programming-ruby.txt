@@ -1,0 +1,5 @@
+Sito ufficiale
+https://www.ruby-lang.org/en/
+
+c'è anche la versione italiana:
+https://www.ruby-lang.org/it/

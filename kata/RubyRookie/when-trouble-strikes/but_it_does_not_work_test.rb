@@ -35,6 +35,4 @@ class ButItDoesNotWorkTest < Test::Unit::TestCase
     end
   end
 
-
-
 end
