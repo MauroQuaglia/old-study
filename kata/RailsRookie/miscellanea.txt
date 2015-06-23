@@ -1,0 +1,43 @@
+assets pipeline -> via preferenziale dei 'beni'
+asset = bene
+
+Devo saper rispondere a queste domande:
+
+What the asset pipeline is and what it does.
+
+
+How to properly organize your application assets.
+
+
+The benefits of the asset pipeline.
+
+
+How to add a pre-processor to the pipeline.
+
+
+How to package assets with a gem.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+L'asset-pipeline (AP) mette a disposizione un framework per concatenare, minificare o comprimere il javascript e il css.
+Permette anche di scrivere questi 'beni' in altri linguaggi (coffeescript) e poi preprocessarli.
+
+L'AP non è un fondamento di rails 4, ma è stata estratta dal framework rails e aggiunta come gemma 'sprockets-rails' (sprocket
+significa rocchetto e da l'idea di un ingranaggio).
+
+L'AP si può anche bypassare all'atto della creazione di un nuovo progetto rails con {rails new appname --skip-sprockets}
+(comuque si potrà attivare successivamente), altrimenti viene aggiunta di default e con essa vengono aggiunte al Gemfile
+le gemme: sass-rails, uglifier e coffee-rails che verranno usare da Sprockets per la compressione.
+
+Per configurare la compressione bisogna modificare il production.rb
+config.assets.css_compressor = :yui
+config.assets.js_compressor = :uglifier
+
+La gemma sass-rails, se inclusa nel gemfile, è usata automaticamente per la compressione css senza bisogno di configurare niente.
+
+Sass (Syntactically Awesome Stylesheets)
+E' un linguaggio molto potente che permette di scrivere in maniera più concisa il CSS. Viene poi interpretato come CSS.
+
+
