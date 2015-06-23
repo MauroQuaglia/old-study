@@ -1,2 +1,0 @@
-1) Cosa serve "<meta charset="utf-8">"?
-2) Ho rimosso "protect_from_forgery" da ApplicationController, è una cosa di protezione.
