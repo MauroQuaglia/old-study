@@ -3,7 +3,14 @@ asset = bene
 
 Devo saper rispondere a queste domande:
 
-What the asset pipeline is and what it does.
+
+What the asset pipeline is?
+
+What it does?
+- traduzione del linguaggio di alto livello (sass, coffescript, erb) in linguaggio di basso livello (css, javascript)
+- compressione css e js
+- concatenazione dei js e dei css con ausilio dell'MD5 per il nome in modo che non ci siano problemi con la cache del browser.
+
 
 
 How to properly organize your application assets.
@@ -40,4 +47,27 @@ La gemma sass-rails, se inclusa nel gemfile, è usata automaticamente per la com
 Sass (Syntactically Awesome Stylesheets)
 E' un linguaggio molto potente che permette di scrivere in maniera più concisa il CSS. Viene poi interpretato come CSS.
 
+
+FUNZIONE PRINCIPALE DELLA PIPELINE
+1) Concatenazione
+Sprockets concatena gli assets, in modo che il browser debba fare meno richieste.
+
+a.js + b.js   = master.js  in modo che il browser invece di fare due chiamate per scaricare i js  ne fa solo una.
+a.css + b.css = master.css in modo che il browser invece di fare due chiamate per scaricare i css ne fa solo una.
+
+In produzione Rails inserisce un'impronta MD5 per ognuno dei file master, dopodichè il browser li metterà in cache.
+Tutte le volte che modifico un file js o css l'MD5 verrà ricalcolato, in modo che il browser lo dovrà riscaricare. (cache busting)
+ES:
+global.css -> global-908e25f4bf641868d8683022a5b62f54.css
+OSS:
+Per default il calcolo dell'MD5 è attivo solo in produzione.
+Si può abilitare o meno tramite l'opzione: config.assets.digest
+
+2) Compressione
+css -> rimozione spazi e bianchi e commenti
+js  -> vengono applicati ragionamenti più complessi. (configurabili o personalizzabili)
+
+3) Codificazione di alto livello
+Posso scrivere js e css con linguaggi di più alto livello, come per esempio Sass per il CSS e CoffeScript per il Javascript (e ERB
+per entrambe)che poi verranno tradotti in css e js prima di essere minificati e concatenati.
 
