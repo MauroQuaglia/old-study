@@ -1,3 +1,6 @@
+link: http://guides.rubyonrails.org/asset_pipeline.html
+----------------------------------------------------------------
+
 assets pipeline -> via preferenziale dei 'beni'
 asset = bene
 
@@ -13,7 +16,10 @@ What it does?
 
 
 
-How to properly organize your application assets.
+How to properly organize your application assets:
+Gli assets che necessitano pre-processo vanno sotto app/assets.
+Gli assets che si vogliono fornire direttamente vanno sotto public, ma devo settare il flag config.serve_static_files = true.
+
 
 
 The benefits of the asset pipeline.
@@ -71,3 +77,42 @@ js  -> vengono applicati ragionamenti più complessi. (configurabili o personali
 Posso scrivere js e css con linguaggi di più alto livello, come per esempio Sass per il CSS e CoffeScript per il Javascript (e ERB
 per entrambe)che poi verranno tradotti in css e js prima di essere minificati e concatenati.
 
+
+
+COME USARE L'ASSETS PIPELINE
+Tutti i file sotto app/assets sono serviti dallo Sprockets middleware (ponte).
+
+Gli assets si possono anche mettere sotto la cartella public, in tal caso verranno serviti direttamente senza essere preprocessati. (file statici)
+Tuttavia dobbiamo settare la configurazione config.serve_static_files a true.
+
+
+
+ASSETS DEL CONTROLLER
+Quando genero un controller vengono in automatico generati i suoi assets relativi js e css.
+Questi file sono direttamente utilizzabili dall'applicazione quando nei relativi file application.js e application.css è attiva
+l'opzione: require_tree
+
+Questi file si possono includere direttamente nel rispettivo controller mediante le direttive
+<%= javascript_include_tag params[:controller] %>
+<%= stylesheet_link_tag params[:controller] %>
+Tuttavia se c'è attiva anche l'opzione require_tree i file vengono inclusi più volte, quindi attenzione.
+
+
+
+ORGANIZZAZIONE DEGLI ASSETS
+Gli assets possono essere messi in uno di questi tre posti:
+
+app/assets
+Sono gli assest dell'applicazione, tipicamente immagini, css e js.
+
+lib/assets
+è per le librerie che non c'entrano direttamente con lo scopo dell'applicazione o per librerie che sono condivise con altre applicazioni.
+
+vendor/assets
+è per assets di proprietà di terzi
+
+I vari path degli assets si possono visualizzare con il comando Rails.application.config.assets.paths da rails console.
+
+Posso anche aggiungere degli assets path tramite il file assets.rb
+Rails.application.config.assets.paths << Rails.root.join("lib", "videoplayer", "flash")
+In questo modo ho un path in più. (Rails.application.config.assets.paths da rails console)
