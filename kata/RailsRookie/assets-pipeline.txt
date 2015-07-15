@@ -1,4 +1,4 @@
-link: http://guides.rubyonrails.org/asset_pipeline.html
+http://guides.rubyonrails.org/asset_pipeline.html
 ----------------------------------------------------------------
 
 assets pipeline -> via preferenziale dei 'beni'
@@ -86,16 +86,36 @@ Gli assets si possono anche mettere sotto la cartella public, in tal caso verran
 Tuttavia dobbiamo settare la configurazione config.serve_static_files a true.
 
 
+------------------------------------------------------------------------------------------------------------------------
 
 ASSETS DEL CONTROLLER
-Quando genero un controller vengono in automatico generati i suoi assets relativi js e css.
+Quando genero un controller vengono in automatico generati i suoi assets relativi js (coffee) e css (scss).
 Questi file sono direttamente utilizzabili dall'applicazione quando nei relativi file application.js e application.css è attiva
-l'opzione: require_tree
+l'opzione: require_tree.
 
-Questi file si possono includere direttamente nel rispettivo controller mediante le direttive
-<%= javascript_include_tag params[:controller] %>
-<%= stylesheet_link_tag params[:controller] %>
-Tuttavia se c'è attiva anche l'opzione require_tree i file vengono inclusi più volte, quindi attenzione.
+1)
+Se in application.js c'è:
+//= require_tree
+Includo tutti i js sotto la cartella javascript in tutte le pagine.
+
+2)
+Se in application.js c'è:
+//= require hello
+Includo il file hello.js in tutte le pagine, ma mi devo ricordare di aggiungere hello.js nel file asset.rb
+Rails.application.config.assets.precompile += %w( hello.js )
+Inoltre se è presente anche //= require_tree, lo stesso file hello.rb lo sto includendo due volte in ogni pagina.
+
+3)
+Se voglio il javascript disponibile solo in una pagina lo posso includere direttamente nella view.
+<%= javascript_include_tag 'hello' %> se il nome del javascript non è lo stesso del controller.
+oppure
+<%= javascript_include_tag params[:controller] %> se il nome del javascript è lo stesso del controller.
+e ricordarci di farne il precompile aggiungendo
+Rails.application.config.assets.precompile += %w( nome-file-javascript.js )
+nel file assets.rb
+
+------------------------------------------------------------------------------------------------------------------------
+
 
 
 
