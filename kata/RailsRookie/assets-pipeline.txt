@@ -114,25 +114,53 @@ e ricordarci di farne il precompile aggiungendo
 Rails.application.config.assets.precompile += %w( nome-file-javascript.js )
 nel file assets.rb
 
+
 ------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 ORGANIZZAZIONE DEGLI ASSETS
 Gli assets possono essere messi in uno di questi tre posti:
 
 app/assets
-Sono gli assest dell'applicazione, tipicamente immagini, css e js.
+Sono gli assest dell'applicazione: immagini, css e js.
 
 lib/assets
 è per le librerie che non c'entrano direttamente con lo scopo dell'applicazione o per librerie che sono condivise con altre applicazioni.
 
 vendor/assets
-è per assets di proprietà di terzi
+è per assets di proprietà di terzi. Analytycs?
+
+Nel file application, posso richiamare nello stesso i file che sono presenti negli assets di app, lib e vendor.
 
 I vari path degli assets si possono visualizzare con il comando Rails.application.config.assets.paths da rails console.
 
 Posso anche aggiungere degli assets path tramite il file assets.rb
 Rails.application.config.assets.paths << Rails.root.join("lib", "videoplayer", "flash")
 In questo modo ho un path in più. (Rails.application.config.assets.paths da rails console)
+non è detto che dbba essere per forza una directory della applicazione, magari è una share.
+
+I file che sono fuori dal manifesto devono anche essere aggiunti all'array degli assets precompile.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+USARE IL FILE DI INDICE
+
+Se ho una libreria di jQuery con molti moduli salvata in
+lib/assets/javascripts/library_name
+allora il file
+lib/assets/javascripts/library_name/index.js serve come manifest per tutti i file della libreria che verranno caricati nell'ordine specificato
+oppure posso semplisemente fare require_tree se l'ordine non è importante.
+Poi nel manifest principale dell'applicaione si puù fare
+//= require library_name
+Tutto questo serve per tenere più pulito e separato il codice.
+
+------------------------------------------------------------------------------------------------------------------------
+
+LINK PER INCLUDERE GLI ASSETS
+Con Rails4 in automatico abbiamo a disposizione la gemma turbolink che dice che se il file è cambiato di scaricarlo altrimenti di
+tenere quello vecchio.
+
+Per accedere alle immagini basta fare:
+<%= image_tag "rails.png" %>
+Le immagini sotto assets/images sono servite da Sprockets, quelle sotto publi/imagis dal Webserver.
