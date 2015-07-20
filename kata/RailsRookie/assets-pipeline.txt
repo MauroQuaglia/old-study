@@ -1,0 +1,196 @@
+http://guides.rubyonrails.org/asset_pipeline.html
+https://github.com/rails/sass-rails#features
+
+----------------------------------------------------------------
+
+assets pipeline -> via preferenziale dei 'beni'
+asset = bene
+
+Devo saper rispondere a queste domande:
+
+
+What the asset pipeline is?
+
+What it does?
+- traduzione del linguaggio di alto livello (sass, coffescript, erb) in linguaggio di basso livello (css, javascript)
+- compressione css e js
+- concatenazione dei js e dei css con ausilio dell'MD5 per il nome in modo che non ci siano problemi con la cache del browser.
+
+
+
+How to properly organize your application assets:
+Gli assets che necessitano pre-processo vanno sotto app/assets.
+Gli assets che si vogliono fornire direttamente vanno sotto public, ma devo settare il flag config.serve_static_files = true.
+
+
+
+The benefits of the asset pipeline.
+
+
+How to add a pre-processor to the pipeline.
+
+
+How to package assets with a gem.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+L'asset-pipeline (AP) mette a disposizione un framework per concatenare, minificare o comprimere il javascript e il css.
+Permette anche di scrivere questi 'beni' in altri linguaggi (coffeescript) e poi preprocessarli.
+
+L'AP non è un fondamento di rails 4, ma è stata estratta dal framework rails e aggiunta come gemma 'sprockets-rails' (sprocket
+significa rocchetto e da l'idea di un ingranaggio).
+
+L'AP si può anche bypassare all'atto della creazione di un nuovo progetto rails con {rails new appname --skip-sprockets}
+(comuque si potrà attivare successivamente), altrimenti viene aggiunta di default e con essa vengono aggiunte al Gemfile
+le gemme: sass-rails, uglifier e coffee-rails che verranno usare da Sprockets per la compressione.
+
+Per configurare la compressione bisogna modificare il production.rb
+config.assets.css_compressor = :yui
+config.assets.js_compressor = :uglifier
+
+La gemma sass-rails, se inclusa nel gemfile, è usata automaticamente per la compressione css senza bisogno di configurare niente.
+
+Sass (Syntactically Awesome Stylesheets)
+E' un linguaggio molto potente che permette di scrivere in maniera più concisa il CSS. Viene poi interpretato come CSS.
+
+
+FUNZIONE PRINCIPALE DELLA PIPELINE
+1) Concatenazione
+Sprockets concatena gli assets, in modo che il browser debba fare meno richieste.
+
+a.js + b.js   = master.js  in modo che il browser invece di fare due chiamate per scaricare i js  ne fa solo una.
+a.css + b.css = master.css in modo che il browser invece di fare due chiamate per scaricare i css ne fa solo una.
+
+In produzione Rails inserisce un'impronta MD5 per ognuno dei file master, dopodichè il browser li metterà in cache.
+Tutte le volte che modifico un file js o css l'MD5 verrà ricalcolato, in modo che il browser lo dovrà riscaricare. (cache busting)
+ES:
+global.css -> global-908e25f4bf641868d8683022a5b62f54.css
+OSS:
+Per default il calcolo dell'MD5 è attivo solo in produzione.
+Si può abilitare o meno tramite l'opzione: config.assets.digest
+
+2) Compressione
+css -> rimozione spazi e bianchi e commenti
+js  -> vengono applicati ragionamenti più complessi. (configurabili o personalizzabili)
+
+3) Codificazione di alto livello
+Posso scrivere js e css con linguaggi di più alto livello, come per esempio Sass per il CSS e CoffeScript per il Javascript (e ERB
+per entrambe)che poi verranno tradotti in css e js prima di essere minificati e concatenati.
+
+
+
+COME USARE L'ASSETS PIPELINE
+Tutti i file sotto app/assets sono serviti dallo Sprockets middleware (ponte).
+
+Gli assets si possono anche mettere sotto la cartella public, in tal caso verranno serviti direttamente senza essere preprocessati. (file statici)
+Tuttavia dobbiamo settare la configurazione config.serve_static_files a true.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+ASSETS DEL CONTROLLER
+Quando genero un controller vengono in automatico generati i suoi assets relativi js (coffee) e css (scss).
+Questi file sono direttamente utilizzabili dall'applicazione quando nei relativi file application.js e application.css è attiva
+l'opzione: require_tree.
+
+1)
+Se in application.js c'è:
+//= require_tree
+Includo tutti i js sotto la cartella javascript in tutte le pagine.
+
+2)
+Se in application.js c'è:
+//= require hello
+Includo il file hello.js in tutte le pagine, ma mi devo ricordare di aggiungere hello.js nel file asset.rb
+Rails.application.config.assets.precompile += %w( hello.js )
+Inoltre se è presente anche //= require_tree, lo stesso file hello.rb lo sto includendo due volte in ogni pagina.
+
+3)
+Se voglio il javascript disponibile solo in una pagina lo posso includere direttamente nella view.
+<%= javascript_include_tag 'hello' %> se il nome del javascript non è lo stesso del controller.
+oppure
+<%= javascript_include_tag params[:controller] %> se il nome del javascript è lo stesso del controller.
+e ricordarci di farne il precompile aggiungendo
+Rails.application.config.assets.precompile += %w( nome-file-javascript.js )
+nel file assets.rb
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+ORGANIZZAZIONE DEGLI ASSETS
+Gli assets possono essere messi in uno di questi tre posti:
+
+app/assets
+Sono gli assest dell'applicazione: immagini, css e js.
+
+lib/assets
+è per le librerie che non c'entrano direttamente con lo scopo dell'applicazione o per librerie che sono condivise con altre applicazioni.
+
+vendor/assets
+è per assets di proprietà di terzi. Analytycs?
+
+Nel file application, posso richiamare nello stesso i file che sono presenti negli assets di app, lib e vendor.
+
+I vari path degli assets si possono visualizzare con il comando Rails.application.config.assets.paths da rails console.
+
+Posso anche aggiungere degli assets path tramite il file assets.rb
+Rails.application.config.assets.paths << Rails.root.join("lib", "videoplayer", "flash")
+In questo modo ho un path in più. (Rails.application.config.assets.paths da rails console)
+
+non è detto che dbba essere per forza una directory della applicazione, magari è una share.
+
+I file che sono fuori dal manifesto devono anche essere aggiunti all'array degli assets precompile.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+USARE IL FILE DI INDICE
+
+Se ho una libreria di jQuery con molti moduli salvata in
+lib/assets/javascripts/library_name
+allora il file
+lib/assets/javascripts/library_name/index.js serve come manifest per tutti i file della libreria che verranno caricati nell'ordine specificato
+oppure posso semplisemente fare require_tree se l'ordine non è importante.
+Poi nel manifest principale dell'applicaione si puù fare
+//= require library_name
+Tutto questo serve per tenere più pulito e separato il codice.
+
+------------------------------------------------------------------------------------------------------------------------
+
+LINK PER INCLUDERE GLI ASSETS
+Con Rails4 in automatico abbiamo a disposizione la gemma turbolink che dice che se il file è cambiato di scaricarlo altrimenti di
+tenere quello vecchio.
+
+Per accedere alle immagini basta fare:
+<%= image_tag "rails.png" %>
+Le immagini sotto assets/images sono servite da Sprockets, quelle sotto publi/imagis dal Webserver.
+
+CSS E ERB
+Dentro al CSS posso speciaficare anche del codice, infatti la precompilazione interpreta l'erb.
+background-image: url(<%= asset_path 'rana.jpeg' %>)
+
+CSS E SASS
+Quando uso la pipeline i path agli assets possono essere riscritti, tanto poi vengono reinterpretati
+    image-url("rails.png") becomes url(/assets/rails.png)
+    image-path("rails.png") becomes "/assets/rails.png".
+
+oppure in forma più generica:
+
+    asset-url("rails.png") becomes url(/assets/rails.png)
+    asset-path("rails.png") becomes "/assets/rails.png"
+
+------------------------------------------------------------------------------------------------------------------------
+
+Direttive del manifest:
+//= require jquery
+
+
+
+
+
+
+
