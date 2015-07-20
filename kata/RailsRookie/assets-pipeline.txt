@@ -1,4 +1,6 @@
 http://guides.rubyonrails.org/asset_pipeline.html
+https://github.com/rails/sass-rails#features
+
 ----------------------------------------------------------------
 
 assets pipeline -> via preferenziale dei 'beni'
@@ -137,12 +139,14 @@ I vari path degli assets si possono visualizzare con il comando Rails.applicatio
 Posso anche aggiungere degli assets path tramite il file assets.rb
 Rails.application.config.assets.paths << Rails.root.join("lib", "videoplayer", "flash")
 In questo modo ho un path in più. (Rails.application.config.assets.paths da rails console)
+
 non è detto che dbba essere per forza una directory della applicazione, magari è una share.
 
 I file che sono fuori dal manifesto devono anche essere aggiunti all'array degli assets precompile.
 
 
 ------------------------------------------------------------------------------------------------------------------------
+
 
 USARE IL FILE DI INDICE
 
@@ -164,3 +168,30 @@ tenere quello vecchio.
 Per accedere alle immagini basta fare:
 <%= image_tag "rails.png" %>
 Le immagini sotto assets/images sono servite da Sprockets, quelle sotto publi/imagis dal Webserver.
+
+CSS E ERB
+Dentro al CSS posso speciaficare anche del codice, infatti la precompilazione interpreta l'erb.
+background-image: url(<%= asset_path 'rana.jpeg' %>)
+
+CSS E SASS
+Quando uso la pipeline i path agli assets possono essere riscritti, tanto poi vengono reinterpretati
+    image-url("rails.png") becomes url(/assets/rails.png)
+    image-path("rails.png") becomes "/assets/rails.png".
+
+oppure in forma più generica:
+
+    asset-url("rails.png") becomes url(/assets/rails.png)
+    asset-path("rails.png") becomes "/assets/rails.png"
+
+------------------------------------------------------------------------------------------------------------------------
+
+Direttive del manifest:
+//= require jquery
+
+
+
+
+
+
+
+
