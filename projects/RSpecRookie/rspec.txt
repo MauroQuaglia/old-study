@@ -1,0 +1,10 @@
+https://www.relishapp.com/rspec/
+
+----
+
+Vado nella cartella di progetto:
+* gem install rspec
+
+Per lanciare un file di test:
+ * rspec file-di-test_spec.rb
+ * con rspec --help posso vedere anche tutte le opzioni da aggiungere per la formattazione dell'output.
