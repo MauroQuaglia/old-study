@@ -8,3 +8,10 @@ Vado nella cartella di progetto:
 Per lanciare un file di test:
  * rspec file-di-test_spec.rb
  * con rspec --help posso vedere anche tutte le opzioni da aggiungere per la formattazione dell'output.
+
+
+------------------------------------------------------------------------------------------------------------------------
+CORE
+describe e context sono sinonimi e servono per raggruppare.
+it e specify sono sinonimi e servono per descrivere nel dettaglio il test.
+Questi sinonimi servono a scopo di lettura del test, a volte la parola specify è più parlante di it e viceversa.
