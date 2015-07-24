@@ -15,3 +15,41 @@ CORE
 describe e context sono sinonimi e servono per raggruppare.
 it e specify sono sinonimi e servono per descrivere nel dettaglio il test.
 Questi sinonimi servono a scopo di lettura del test, a volte la parola specify è più parlante di it e viceversa.
+
+A degli shared-examples posso passare sia più classi da mettere sotto test (Array, Set, ...) oppure anche un blocco
+con delle variabili impostate.
+Possono essere dichiarati anche all'interno di un blocco describe, così da essere disponibili solo in un determinato contesto.
+
+Le parole include_examples, it_behaves_like, it_should_behave_like permettono di includere gli shared_examples.
+Agli shared_examples posso passare sia una classe che un blocco contenente delle varibili.
+Questi nomi, che poi compaiono nell'output possono anche essere sovrascritti se si vuole personalizzare la leggibilità.
+Esempio:
+RSpec.configure do |c|
+  c.alias_it_should_behave_like_to :it_has_behavior, 'has behavior:'
+end
+
+Testa la classe Array richiamando gli shared examples.
+L'inizializzazione della classe la faccio negli shared example: described_class.new(...)
+RSpec.describe Array do
+  it_behaves_like 'a collection'
+end
+
+Testa la classe Array richiamando gli shared examples passandogli anche una variabile.
+Notare che in questo caso l'inizializzazione della classe è fatta qua.
+RSpec.describe Array do
+  it_behaves_like 'a collection object' do
+    let(:collection) { Array.new }
+  end
+end
+
+Testa i metodi della classe Array richiamando gli shared examples.
+RSpec.describe Array, 'with 3 items' do
+  subject{[1,2,3]}
+  it_behaves_like 'a measurable object', 3, [:size, :length]
+end
+
+
+L'esempio dei metadati non l'ho capito
+
+
+
