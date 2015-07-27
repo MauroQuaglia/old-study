@@ -1,0 +1,21 @@
+shared_context: definisco un blocco che sarà valutato nel contesto di un gruppo di test.
+
+include_context: serve per includere un contesto condiviso.
+
+before:
+
+let:
+
+subject:
+
+describe:
+
+expect:
+
+xdescribe, xcontent: disabilita tutta la suite di test.
+
+fdescribe: focalizza l'attenzione solo sulle suite di test che hanno l'fdescribe.
+NB: bisogna modificare anche la configurazione mediante
+RSpec.configure do |c|
+  c.filter_run :focus
+end

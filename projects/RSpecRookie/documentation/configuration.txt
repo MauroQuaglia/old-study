@@ -1,0 +1,12 @@
+ESEMPI DI CONFIGURAZIONE
+
+Definisco un alias per un gruppo di test, così che invece di describe o context posso usare detail.
+Definisco un comando detailed per la riga di comando per far girare solo i test che sono marcati con detail.
+
+RSpec.configure do |c|
+  c.alias_example_group_to :detail, :detailed => true
+end
+
+rspec nested_example_group_aliases_spec.rb --tag detailed -f d
+
+------------------------------------------------------------------------------------------------------------------------
