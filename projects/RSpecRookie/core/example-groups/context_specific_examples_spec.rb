@@ -24,16 +24,22 @@ RSpec.describe 'shared example' do
 
 end
 
-# Posso anche inserirli dentro un contesto
+
 RSpec.describe 'shared example' do
 
-  context 'per context' do
+  # Inseriti in questo contesto sono visibili.
+  context 'in first context' do
 
-    shared_examples 'shared examples are nestable' do
+    shared_examples 'are visible' do
       specify {expect(true).to be_truthy}
     end
 
-    it_behaves_like 'shared examples are nestable'
+    it_behaves_like 'are visible'
+  end
+
+  # Non sono visibili da questo contesto.
+  context 'in second context 'do
+    it_behaves_like 'are visible'
   end
 
 end

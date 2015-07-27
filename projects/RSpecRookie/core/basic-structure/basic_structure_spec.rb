@@ -1,7 +1,7 @@
-# Un gruppo.
+# Un gruppo con un test.
 RSpec.describe 'something' do
 
-  it 'does something' do
+  it 'that does something' do
     expect('A').to eq('B')
     # Mi aspetto che 'A' sia uguale a 'B'
 
