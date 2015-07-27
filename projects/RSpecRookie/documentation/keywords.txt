@@ -1,3 +1,9 @@
+describe: crea un gruppo principale e innestato di test.
+
+context: crea un gruppo innestato di test.
+
+it, specify: serve per creare il singolo test.
+
 shared_context: definisco un blocco che sarà valutato nel contesto di un gruppo di test.
 
 include_context: serve per includere un contesto condiviso.
@@ -8,7 +14,6 @@ let:
 
 subject:
 
-describe:
 
 expect:
 
