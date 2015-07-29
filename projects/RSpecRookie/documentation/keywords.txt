@@ -4,16 +4,23 @@ context: crea un gruppo innestato di test.
 
 it, specify: serve per creare il singolo test.
 
+include_examples "name", matching metadata:
+
+it_behaves_like "name", it_should_behave_like "name": Include gli shared-examples in un contesto innestato.
+
+shared_examples: descrive il comportamento di classi o moduli. Il contesto gli deve essere fornito a posteriori.
+
+let: definisce una variabile.
+
+described_class: è un riferimento alla classe passata.
+
+subject: è un riferimento alla classe corrente.
+
 shared_context: definisco un blocco che sarà valutato nel contesto di un gruppo di test.
 
 include_context: serve per includere un contesto condiviso.
 
 before:
-
-let:
-
-subject:
-
 
 expect:
 
