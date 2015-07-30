@@ -1,0 +1,14 @@
+Ma i test vengono eseguiti in ordine all'interno del file?
+C'è questa garanzia?
+Facendo gli esempi degli hooks sembra di sì.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Cosa significa far giare i test così: rspec before_context_spec.rb:15?
+A cosa serve il :15 in fondo?
+Poi mi scrive anche: Run options: include {:locations=>{"./before_context_spec.rb"=>[15]}}.
+
+R:
+E' il numero di riga con il test da far girare.
+
+------------------------------------------------------------------------------------------------------------------------

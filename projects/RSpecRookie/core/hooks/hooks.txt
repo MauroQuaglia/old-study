@@ -1,0 +1,8 @@
+before(:example)
+Viene eseguito prima di ogni test.
+
+before(:context)
+Viene eseguito solo una volta, prima di tutti i test della suite.
+
+after(:context)
+Viene eseguito solo una volta, alla fine di tutti i test della suite.
