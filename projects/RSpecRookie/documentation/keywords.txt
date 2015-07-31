@@ -2,7 +2,7 @@ describe: crea un gruppo principale e innestato di test.
 
 context: crea un gruppo innestato di test.
 
-it, specify: serve per creare il singolo test.
+it, specify, example: serve per creare il singolo test.
 
 include_examples "name", matching metadata:
 

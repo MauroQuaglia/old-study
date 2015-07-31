@@ -1,8 +1,20 @@
 before(:example)
 Viene eseguito prima di ogni test.
 
+after(:example)
+Viene eseguito dopo ogni test.
+
 before(:context)
-Viene eseguito solo una volta, prima di tutti i test della suite.
+Viene eseguito solo una volta, prima di tutti i test. Se anche ci sono più contesti nella stessa suite viene comunque
+eseguito una volta.
 
 after(:context)
-Viene eseguito solo una volta, alla fine di tutti i test della suite.
+Viene eseguito solo una volta, alla fine di tutti i test. Se anche ci sono più contesti nella stessa suite viene comunque
+eseguito una volta.
+
+before(:suite)
+Eseguito prima di tutta la suite di test.
+
+after(:suite)
+Eseguito alla fine della suite di test.
+
