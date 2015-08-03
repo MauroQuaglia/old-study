@@ -3,7 +3,7 @@ require_relative 'thing'
 
 RSpec.describe Thing do
 
-  # Eseguito una volta sola, all'inizio del describe.
+  # Eseguito una volta sola, quando lancio i test del gruppo.
   before(:context) do
     @thing = Thing.new
   end
@@ -28,8 +28,6 @@ end
 
 RSpec.describe 'an error in before(:context)' do
 
-  # Eseguito una volta per tutta la suite di test, non importa se ci sono dei livelli innestati.
-  # Dato che però fallisce, di conseguenza falliscono tutti i test.
   before(:context) do
     raise 'oops'
   end

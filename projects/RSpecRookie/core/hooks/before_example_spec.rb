@@ -3,7 +3,7 @@ require_relative 'thing'
 
 RSpec.describe Thing do
 
-  # Eseguito prima di ogni test del describe.
+  # Eseguito prima di ogni test.
   before(:example) do
     @thing = Thing.new
   end

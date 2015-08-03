@@ -1,13 +1,15 @@
 RSpec.describe 'an error in after(:context)' do
 
   after(:context) do
-    raise StandardError.new('Boom!')
+    puts 'boom'
   end
 
   it 'passes this example' do
+    puts 'ok'
   end
 
   it 'passes this example, too' do
+    puts 'ok'
   end
 
 end

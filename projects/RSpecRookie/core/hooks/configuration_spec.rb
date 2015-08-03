@@ -28,10 +28,10 @@ RSpec.configure do |config|
 
 end
 
-# suite
+# suite e context
 RSpec.describe 'suite-1' do
 
-  #Vede context ed esegue before-context.
+  # Ricordiamo che questa è solo la sintassi. il before context e definito per tutto il gruppo.
   context 'context-1' do
 
     #test
@@ -46,15 +46,12 @@ RSpec.describe 'suite-1' do
 
   end
 
-  #Non esegue più before-context, è già stato eseguito.
   context 'context-2' do
 
-    #test
     it 'test-1' do
       p 'suite-1 context-2 test-1'
     end
 
-    #test
     it 'test-2' do
       p 'suite-1 context-2 test-2'
     end

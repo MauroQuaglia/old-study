@@ -12,3 +12,13 @@ R:
 E' il numero di riga con il test da far girare.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+RSpec.configure la prende come configurazione globale?
+
+R.
+RSpec.configure se la definisco in un file è locale solo agli esempi di quel file.
+Tuttavia una volta che l'ha caricata poi anche gli esempi successivi anche se stanno in altri file la vedono.
+Quindi bisogna stare attenti a dove si mette!
+
+------------------------------------------------------------------------------------------------------------------------
+

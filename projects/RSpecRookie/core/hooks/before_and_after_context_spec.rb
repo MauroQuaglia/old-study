@@ -1,32 +1,33 @@
 RSpec.describe 'before and after callbacks' do
 
-  # Prima di tutti i test.
+  # Prima di tutti i test del gruppo principale.
   before(:context) do
-    puts 'outer before context'
+    puts '1'
   end
 
   example 'in outer group' do
-    puts 'outer example'
+    puts '2'
   end
 
-  # Alla fine di tutti i test.
-  # In sostanza è come se fosse il contesto della suite.
+  # Alla fine di tutti i test del gruppo principale.
   after(:context) do
-    puts 'outer after context'
+    puts '6'
   end
 
   describe 'nested group' do
 
+    # Prima di tutti i test del gruppo innestato.
     before(:context) do
-      puts 'inner before context'
+      puts '3'
     end
 
     example 'in nested group' do
-      puts 'inner example'
+      puts '4'
     end
 
+    # Alla fine di tutti i test del gruppo innestato.
     after(:context) do
-      puts 'inner after context'
+      puts '5'
     end
 
   end

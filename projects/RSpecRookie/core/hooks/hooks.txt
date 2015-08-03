@@ -1,20 +1,33 @@
-before(:example)
+before(:example) o before(:each)
 Viene eseguito prima di ogni test.
+E' l'unico che supporta il mocking.
 
-after(:example)
+after(:example) o after(:each)
 Viene eseguito dopo ogni test.
 
-before(:context)
-Viene eseguito solo una volta, prima di tutti i test. Se anche ci sono più contesti nella stessa suite viene comunque
-eseguito una volta.
+before(:context) o before(:all)
+Viene eseguito solo una volta, prima di tutti i test del gruppo di test che ho lanciato.
+Se qui c'è un errore anche tutti itest che fanno riferimento a questo :context falliscono.
 
-after(:context)
-Viene eseguito solo una volta, alla fine di tutti i test. Se anche ci sono più contesti nella stessa suite viene comunque
-eseguito una volta.
+after(:context) o after(:all)
+Viene eseguito solo una volta, alla fine di tutti i test del gruppo di test che ho lanciato.
 
 before(:suite)
-Eseguito prima di tutta la suite di test.
+Eseguito prima di TUTTA la suite di test, non dei singoli gruppi. E' come se fosse una configurazione globale e
+proprio per questo si può definire solo tramite configurazione.
+In questo caso non posso definire variabili di istanza.
 
 after(:suite)
 Eseguito alla fine della suite di test.
+
+ORDINE:
+suite
+context
+example
+example
+context
+suite
+
+Tutti questi before(:example), after(:example), ecc, si possono definire direttamente nel gruppo di test
+oppure nel blocco RSpec.configure.
 
