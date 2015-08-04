@@ -31,3 +31,25 @@ suite
 Tutti questi before(:example), after(:example), ecc, si possono definire direttamente nel gruppo di test
 oppure nel blocco RSpec.configure.
 
+------------------------------------------------------------------------------------------------------------------------
+
+around prende un test e lo decora con delle operazioni.
+Se ci sono dei before(:example) e degli after(:example) --> around(example(test))
+Se ci sono dei before(:context) e degli after(:context) --> context(around(test))
+
+around(:example) do |example|
+    puts 'first'
+    puts example.run
+    puts 'second'
+end
+
+All'interno dell'around ho accesso ai metadati:
+around(:example) do |exp|
+    puts exp.metadata[:foo]
+end
+it 'does something', foo: 'this is metadata' do
+end
+
+Se anche un test fallisce, dentro l'around il prima e il dopo del test vengono eseguiti.
+si può definire anche tramite configurazione.
+
