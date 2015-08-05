@@ -33,9 +33,11 @@ oppure nel blocco RSpec.configure.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-around prende un test e lo decora con delle operazioni.
-Se ci sono dei before(:example) e degli after(:example) --> around(example(test))
-Se ci sono dei before(:context) e degli after(:context) --> context(around(test))
+around prende un test e lo decora con delle operazioni, è un modo più pulito di fare contemporaneamente il before e l'after.
+around può essere usato anche insieme ai before e agli after, bisogna però controllare di volta in volta le precedenze.
+
+Diversamente da before, in un around non è possibile definire una variabile locale alla classe di test.
+Inoltre in un around non si possono definire i mock.
 
 around(:example) do |example|
     puts 'first'
@@ -43,7 +45,7 @@ around(:example) do |example|
     puts 'second'
 end
 
-All'interno dell'around ho accesso ai metadati:
+All'interno dell'around ho accesso ai metadati del test.
 around(:example) do |exp|
     puts exp.metadata[:foo]
 end
@@ -51,5 +53,27 @@ it 'does something', foo: 'this is metadata' do
 end
 
 Se anche un test fallisce, dentro l'around il prima e il dopo del test vengono eseguiti.
-si può definire anche tramite configurazione.
+
+Si può definire anche tramite configurazione.
+
+Tramite configurazione posso anche includere un modulo nel contesto dei test.
+RSpec.configure do |c|
+  c.include IncludedInConfigureBlock
+end
+
+Posso mettere dei test in pending anche così, definendoli e basta.
+Può essere utile per ricordarsi di doverli poi implementare.
+Questo è un pending implicito.
+it 'this is pending'
+
+Se voglio fare un pending esplicito.
+it 'explicit pending' do
+    pending
+end
+
+Se ci sono più around definiti, li applica tutte e due.
+Se anche ci sono degli around in contesti innestati li applica tutti a partire dal più interno.
+
+------------------------------------------------------------------------------------------------------------------------
+
 
