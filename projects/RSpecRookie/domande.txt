@@ -22,3 +22,16 @@ Quindi bisogna stare attenti a dove si mette!
 
 ------------------------------------------------------------------------------------------------------------------------
 
+Se dichiaro una variabile con let tipo:
+
+RSpec.describe 'examples' do
+  let(:invoked_hooks){[]}
+  ...
+end
+
+viene ripulita tutte le volte che lancio un test?
+
+R: Sì.
+
+------------------------------------------------------------------------------------------------------------------------
+

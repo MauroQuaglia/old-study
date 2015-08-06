@@ -1,1 +1,42 @@
-* creare un describe.production per i test di produzione.
+Creare un describe.production per i test di produzione.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Buttare il for_site ed usare:
+
+RSpec.configure do |config|
+  config.around(:example, :site => :EncuentraPrecios) do |example|
+    Rails.application.reload! EncuentraPrecios
+    example.run # se anche fallisce me ne fotto perchè esegue anche la riga dopo
+    Rails.application.reload! TrovaPrezzi
+  end
+end
+it 'criteo script must be present in homepage', :site => :EncuentraPrecios do
+    visit '/'
+    expect(body).to include('account: 20705')
+end
+
+OPPURE c'è la versione non verbosa
+
+RSpec.configure do |config|
+  config.around(:example, :es) do |example|
+    Rails.application.reload! EncuentraPrecios
+    example.run
+    Rails.application.reload! TrovaPrezzi
+  end
+end
+it('criteo script must be present in homepage', :es) do
+    visit '/'
+    expect(body).to include('account: 20705')
+end
+
+NB: Ricordiamo che
+All'interno dell'around ho accesso ai metadati del test. Magari può essere utile.
+around(:example) do |exp|
+    puts exp.metadata[:foo]
+end
+it 'does something', foo: 'this is metadata' do
+end
+
+
+------------------------------------------------------------------------------------------------------------------------

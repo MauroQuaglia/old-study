@@ -1,3 +1,5 @@
+BEFORE AND AFTER
+
 before(:example) o before(:each)
 Viene eseguito prima di ogni test.
 E' l'unico che supporta il mocking.
@@ -32,6 +34,7 @@ Tutti questi before(:example), after(:example), ecc, si possono definire diretta
 oppure nel blocco RSpec.configure.
 
 ------------------------------------------------------------------------------------------------------------------------
+AROUND
 
 around prende un test e lo decora con delle operazioni, è un modo più pulito di fare contemporaneamente il before e l'after.
 around può essere usato anche insieme ai before e agli after, bisogna però controllare di volta in volta le precedenze.
@@ -75,5 +78,29 @@ Se ci sono più around definiti, li applica tutte e due.
 Se anche ci sono degli around in contesti innestati li applica tutti a partire dal più interno.
 
 ------------------------------------------------------------------------------------------------------------------------
+FILTERS
+
+Possiamo usare i metadati come filtri per before, after e around.
+
+Ci sono due modi per usare i metadati, verboso o non verboso.
+
+Verboso:
+config.around(:example, :foo => :bar) do |example|
+    ...
+end
+
+it 'example', :foo => :bar do
+    ...
+end
+
+
+Non Verboso, dove sostanzialmente usiamo un simbolo come metadato:
+config.around(:example, :foo) do |example|
+    ...
+end
+
+it('example', :foo) do
+      ...
+end
 
 
