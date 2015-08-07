@@ -1,0 +1,19 @@
+Il subject è un riferimento alla classe del contesto.
+RSpec.describe Array --> subject rappresenta l'array.
+
+Se ho dei describe innestati:
+RSpec.describe Array do
+  describe OneElementArray do
+    subject -> E' un riferimento a OneElementArray
+  end
+end
+Il subject si riferisce sempre al contesto più innestato.
+
+Il subject è in cache (memoizzato) all'interno del test, e non in cache tra i singoli test.
+
+Possiamo anche esplicitare il subject inizializzandolo.
+RSpec.describe Array do
+  subject { [1, 2, 3] }
+end
+
+Il subject è disponibile nei before.
