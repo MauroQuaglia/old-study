@@ -10,6 +10,11 @@ end
 Il subject si riferisce sempre al contesto più innestato.
 
 Il subject è in cache (memoizzato) all'interno del test, e non in cache tra i singoli test.
+ES:
+element_list = [1, 2, 3]
+subject { element_list.pop }
+E' un po' come se dovessi leggere un file. La prima volta lo leggo (pop), poi uso sempre quello che ho in cache quando
+mi richiedono di fare quell'operazione (pop).
 
 Possiamo anche esplicitare il subject inizializzandolo.
 RSpec.describe Array do
@@ -17,3 +22,19 @@ RSpec.describe Array do
 end
 
 Il subject è disponibile nei before.
+
+E' inizializzabile mediante un metodo.
+RSpec.describe Array, 'with some element' do # Da notare che posso scrivere la classe e un pezzo di commento.
+subject{prepare_array}
+end
+
+Con il bang method (subject!), viene chiamato prima dell'esecuzione del test.
+
+Se si usa una sintassi del tipo (sconsigliata)
+subject(:global_count) { $count += 1 }
+il metodo += viene memoizzato nell'esempio ma non tra gli esempi.
+Nei test posso chiamare subject o global_count indifferentemente, tanto sono la stessa cosa.
+
+Quando faccio riferimento al subject posso usare la one-linear-syntax:
+is_expected.to ->  equivale a ->  expect(subject)
+
