@@ -1,2 +1,0 @@
---example (-e): filtra i test per nome.
---format: formattazione dell'output.

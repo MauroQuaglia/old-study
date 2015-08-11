@@ -30,11 +30,19 @@ end
 
 Con il bang method (subject!), viene chiamato prima dell'esecuzione del test.
 
-Se si usa una sintassi del tipo (sconsigliata)
+Posso dare anche un nome al subject:
 subject(:global_count) { $count += 1 }
 il metodo += viene memoizzato nell'esempio ma non tra gli esempi.
 Nei test posso chiamare subject o global_count indifferentemente, tanto sono la stessa cosa.
 
 Quando faccio riferimento al subject posso usare la one-linear-syntax:
 is_expected.to ->  equivale a ->  expect(subject)
+
+Tre modi di fare la stessa cosa con la one-linear-syntax
+it 'should be empty' do
+  expect(subject).to be_empty
+end
+it { should be_empty }
+it { is_expected.to be_empty }
+
 

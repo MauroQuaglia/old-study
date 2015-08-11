@@ -1,0 +1,12 @@
+Funzionamento con Ruby
+Tutta la configurazione va sotto un file di tipo spec/spec_helper.rb.
+E' una convenzione quando poi devo fare i test quelle di fare -> require 'spec_helper'
+RSpec aggiunge al LOAD_PATH la spec directory e la directory lib.
+
+--example (-e): filtra i test per nome e meno di quelli che usano la one-linear-syntax.
+ES:
+rspec . --example "xxx"
+* tutti(.) quelli che hanno nella descrizione del test la stringa "xxx"
+
+
+
