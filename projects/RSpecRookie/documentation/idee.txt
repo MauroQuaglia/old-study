@@ -1,4 +1,13 @@
 Creare un describe.production per i test di produzione.
+Oppure posso taggare i test di con :production => true e farli girare con l'opzione --tag
+
+Oppure anche cose del tipo
+it "special example with symbol", :type => :special do
+end
+E poi:
+rspec . --tag type:special
+
+cos' posso suddividere i test per tipo e decidere quali far girare di volta in volta.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -38,5 +47,11 @@ end
 it 'does something', foo: 'this is metadata' do
 end
 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Per i test può essere comoda la formattazione --out test.html da vedere con un browser, bello che li puoi anche filtrare.
+Più che altro fare una cosa del tipo
+rspec . --format progress --format html --out /home/xpuser/Desktop/rspec.html
 
 ------------------------------------------------------------------------------------------------------------------------

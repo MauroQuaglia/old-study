@@ -10,3 +10,12 @@ end
 rspec nested_example_group_aliases_spec.rb --tag detailed -f d
 
 ------------------------------------------------------------------------------------------------------------------------
+
+
+Uno dei modi per mettere in pending:
+it "does something that is pending", :pending => true do
+end
+
+Uno dei modi per saltare un test:
+it "does something that is skipped", :skip => true do
+end
