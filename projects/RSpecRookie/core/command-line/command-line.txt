@@ -5,27 +5,26 @@ RSpec aggiunge al LOAD_PATH la spec directory e la directory lib.
 
 ------------------------------------------------------------------------------------------------------------------------
 
---example (-e): filtra i test per nome e meno di quelli che usano la one-linear-syntax.
-ES:
+--example (-e):
+* filtra i test per nome e meno di quelli che usano la one-linear-syntax.
+
 rspec . --example "xxx"
 * tutti(.) quelli che hanno nella descrizione del test la stringa "xxx"
-ES:
+
 rspec . --example "xxx" --example "yyy"
 
 ------------------------------------------------------------------------------------------------------------------------
 
 --format (-f):
+* formattazione dell'output dei test.
 
-ES:
 rspec . --format documentation
 * formatta tutte le scritte dei test, in modo che si possano leggere.
 
-ES:
 Posso anche specificare un file dove andare a scrivere i risultati. Il default è lo stdout.
 rspec spec --format documentation --out rspec.txt
 rspec spec --format html --out rspec.html
 
-ES:
 Su stdout vedo la progressbar e poi mi salva anche un file html dove posso visualizzare meglio i fallimenti.
 rspec . --format progress --format html --out /home/xpuser/Desktop/rspec.html
 
@@ -34,13 +33,12 @@ rspec . --format progress --format html --out /home/xpuser/Desktop/rspec.html
 --tag (-t)
 * Filtra i test per mezzo di un tag.
 
-ES:
 Dato il test:
 it "example I'm working now, too", :mq do
 end
 Con:
 rspec tagged_spec.rb --tag mq
-Eseguo solo que singolo test.
+Eseguo solo quel singolo test.
 
 Invece con la tilde davanti:
 rspec tagged_spec.rb --tag ~mq
@@ -48,15 +46,53 @@ Eseguo tutti i test tranne quelli marcati con mq.
 
 Oppure posso fare anche così:
 it "example I'm working now", :focus => true do
-end
 E poi eseguirli così:
 rspec tagged_spec.rb --tag focus
 
-
-Oppure:
+Oppure
 it "special example with symbol", :type => :special do
 end
 E poi:
 rspec . --tag type:special
 
+Quindi i tre modi che possono servire a livello di chiarezza sono:
+:mq              ---> --tag mq
+:focus => true   ---> --tag focus
+:type => :specia ---> --tag type:special
+
+Posso anche usare più volte il --tag nello stesso comando:
+rspec tagged_spec.rb --tag focus --tag ~skip
+
+------------------------------------------------------------------------------------------------------------------------
+
+:n
+* Numero di linea con la suite o il test da far girare.
+
+rspec example_2_spec.rb:1
+Lancia il test o la suite presente alla riga 1 del file.
+
+Anche in questo caso li posso lanciare multipli:
+rspec example_2_spec.rb:3 example_3_spec.rb:4
+
+Se poi sono nello stesso file posso anche semplificare:
+rspec example_2_spec.rb:3:11
+
+------------------------------------------------------------------------------------------------------------------------
+
+--failure-exit-code
+* l'exit status dei test. Di norma è 0 se tutto ok, oppure 1 se qualcosa fallisce. Tuttavia si può fare l'override.
+
+Tutto ok:
+rspec example_2_spec.rb
+echo $? ---> 0
+
+Qualche errore:
+rspec ko_spec.rb
+echo $? ---> 1
+
+Qualche errore con exit status personalizzato:
+rspec --failure-exit-code 42 ko_spec.rb
+echo $? ---> 42
+
+------------------------------------------------------------------------------------------------------------------------
 

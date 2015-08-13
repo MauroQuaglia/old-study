@@ -19,3 +19,14 @@ end
 Uno dei modi per saltare un test:
 it "does something that is skipped", :skip => true do
 end
+
+------------------------------------------------------------------------------------------------------------------------
+
+Si possono fare anche cose carine del tipo:
+
+RSpec.describe 9 do
+  it { is_expected.to be > 8 }
+  it { is_expected.to be < 10 }
+end
+
+------------------------------------------------------------------------------------------------------------------------
