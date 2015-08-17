@@ -54,4 +54,6 @@ Per i test può essere comoda la formattazione --out test.html da vedere con un 
 Più che altro fare una cosa del tipo
 rspec . --format progress --format html --out /home/xpuser/Desktop/rspec.html
 
+Anche specificare --order può essere utile per scovare eventuali dipendenze che non dovrebbero esserci.
 ------------------------------------------------------------------------------------------------------------------------
+

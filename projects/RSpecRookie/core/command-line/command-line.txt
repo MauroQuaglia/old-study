@@ -96,3 +96,20 @@ echo $? ---> 42
 
 ------------------------------------------------------------------------------------------------------------------------
 
+--order
+* serve per lanciare i test secondo la modalità di default(defined) oppure casuale(rand).
+
+ES:
+--order defined (default)
+--order rand
+--order rand:123
+
+------------------------------------------------------------------------------------------------------------------------
+
+Raketask
+
+Per usare il Rake file devo definirlo a livello di progetto: Rakefile
+Poi sempre sotto il progetto devo definire una cartella spec con dentro i miei file. Questo è il default, così quando
+lancio il comando rake, vengono presi tutti i file di test sotto spec e fatti girare.
+
+------------------------------------------------------------------------------------------------------------------------
