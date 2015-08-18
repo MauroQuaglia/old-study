@@ -55,5 +55,11 @@ Più che altro fare una cosa del tipo
 rspec . --format progress --format html --out /home/xpuser/Desktop/rspec.html
 
 Anche specificare --order può essere utile per scovare eventuali dipendenze che non dovrebbero esserci.
+
+Se aggiungo questa opzione posso profilare anche i 10 test più lenti. (rspec --init) e poi modificare lo spec_helper.
+config.profile_examples = 10
+
+Anche specificare il random può essere utilie per lanciare i test sempre non nello stesso ordine:
+--order rand
 ------------------------------------------------------------------------------------------------------------------------
 

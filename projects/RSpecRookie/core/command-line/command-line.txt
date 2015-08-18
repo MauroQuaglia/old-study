@@ -113,3 +113,23 @@ Poi sempre sotto il progetto devo definire una cartella spec con dentro i miei f
 lancio il comando rake, vengono presi tutti i file di test sotto spec e fatti girare.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+--dry-run
+* stampa l'output dei test ma senza eseguirli. Ovviamente devo aggiungere la formattazione che voglio per farli stampare.
+
+------------------------------------------------------------------------------------------------------------------------
+
+--fail-fast
+* ferma l'esecuzione della suite di test al primo errore. Il default è: --no-fail-fast
+
+------------------------------------------------------------------------------------------------------------------------
+
+--init
+* genera i file convenzionali per un progetto RSpec.
+** .rspec
+** spec/spec_helper.rb
+
+------------------------------------------------------------------------------------------------------------------------
+
+--pattern
+* Il default è: "spec/**/*_spec.rb", però posso specificarne di altri.
