@@ -66,3 +66,11 @@ Abilitare i warning può essere una buona idea.
 ES: rspec --warnings warning_spec.rb
 ------------------------------------------------------------------------------------------------------------------------
 
+Si possono includere i moduli mediante configurazione:
+
+require './helpers'
+RSpec.configure do |c|
+  c.include Helpers
+end
+
+------------------------------------------------------------------------------------------------------------------------

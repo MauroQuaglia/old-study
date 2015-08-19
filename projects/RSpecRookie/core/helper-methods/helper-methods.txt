@@ -1,0 +1,6 @@
+I valori all'interno di let sono memoizzati per il singolo test, ma non tra i test.
+Quindi let si può usare per definire un helper method memoizzato.
+E' comunque un lazy method, nel senso che viene chiamato solo quando necessario, se voglio chiamarlo prima di
+ogni test devo usare let!
+
+Un helper_method può essere definito come metodo def...end all'interno della suite di test.
