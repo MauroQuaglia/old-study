@@ -169,3 +169,11 @@ rspec --seed 1234 --bisect
 
 Esiste anche questa opzione:
 --next-failure che è uno shortcut per: --only-failures --fail-fast --order defined
+
+------------------------------------------------------------------------------------------------------------------------
+
+Si possono usare i comandi ruby per far girare rspec.
+Tuttavia bisogna fare: require 'rspec/autorun'
+e poi si possono far girare i test con: ruby nome-file_spec.rb
+
+Generalmente è meglio usare rspec per fare girare i test, ma alcuni tool non lo supportano.
