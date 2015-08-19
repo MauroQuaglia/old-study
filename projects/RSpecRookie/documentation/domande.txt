@@ -42,3 +42,9 @@ R: Perchè lui fa girare tutti i file che sono sotto la cartella spec, quindi bi
 tutti i file di test.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+A cosa serve il file .rspec?
+
+R: ci posso mettere tutte le opzioni della riga di comando, quindi formattazione, progressbar, warning, ecc.
+
+------------------------------------------------------------------------------------------------------------------------

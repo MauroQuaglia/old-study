@@ -61,5 +61,8 @@ config.profile_examples = 10
 
 Anche specificare il random può essere utilie per lanciare i test sempre non nello stesso ordine:
 --order rand
+
+Abilitare i warning può essere una buona idea.
+ES: rspec --warnings warning_spec.rb
 ------------------------------------------------------------------------------------------------------------------------
 
