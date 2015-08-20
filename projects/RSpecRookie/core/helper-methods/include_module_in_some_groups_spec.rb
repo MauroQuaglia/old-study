@@ -1,13 +1,16 @@
 require_relative 'helpers'
 
 RSpec.configure do |c|
-  c.include Helpers
+  c.include Helpers, :foo => :bar
 end
 
 RSpec.describe 'an example group' do
-  #puts "Here I see the method: #{help}?"
 
-  it 'has access to the helper methods defined in the module' do
+  it 'ok', :foo => :bar do
+    expect(help).to be(:available)
+  end
+
+  it 'ko' do
     expect(help).to be(:available)
   end
 

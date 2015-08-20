@@ -4,3 +4,27 @@ E' comunque un lazy method, nel senso che viene chiamato solo quando necessario,
 ogni test devo usare let!
 
 Un helper_method può essere definito come metodo def...end all'interno della suite di test.
+
+Ricordiamo che:
+include: rende i metodi del modulo disponibili nell'istanza della classe (aggiunti come metodi di istanza)
+extend: rende i metodi del modulo disponibili nella classe. (aggiunti come metodi di classe)
+
+Ci sono vari modi per includere un modulo in una suite di test:
+Tramite configurazione:
+RSpec.configure do |c|
+  c.include Helpers
+end
+Oppure definendolo nel gruppo di test con:
+include Helpers
+
+Per estendere una classe con un modulo:
+RSpec.configure do |c|
+  c.extend Helpers
+end
+In tal modo il gruppo vede i metodi del modulo, ma i test non li vedono.
+
+Sia include che extend possono essere inclusi mediante metadati:
+c.include Helpers, :foo => :bar
+o con simboli
+c.include Helpers, :include_helpers
+end
