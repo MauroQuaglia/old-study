@@ -74,3 +74,35 @@ RSpec.configure do |c|
 end
 
 ------------------------------------------------------------------------------------------------------------------------
+
+una cosa interessante è la possibilità di aver accesso ai metadati del test nei blocchi before, after, let, ...
+
+before do |example|
+  # in example c'è il test sotto, la cui description e 'is the example object', quindi passa anche questo.
+  expect(example.description).to eq('is the example object')
+end
+
+it 'is the example object' do |example|
+  # La description è il titolo stesso del test, quindi ok.
+  expect(example.description).to eq('is the example object')
+end
+
+
+
+let!(:the_description) do |example|
+    puts "This is the #{example.description}!" #This is the same object
+end
+
+it 'Same object' do
+end
+
+
+let!(:the_description) do |example|
+    puts "This is the #{example.description}!"
+    puts "#{example.metadata}!"
+    puts "#{example.full_description}!"
+    puts " #{example.file_path}!"
+    puts "#{example.metadata[:foo]}!" #bar
+end
+
+------------------------------------------------------------------------------------------------------------------------

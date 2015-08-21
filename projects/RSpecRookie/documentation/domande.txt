@@ -48,3 +48,9 @@ A cosa serve il file .rspec?
 R: ci posso mettere tutte le opzioni della riga di comando, quindi formattazione, progressbar, warning, ecc.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Che differenza c'è tra usare subject o described_class?
+
+R: ?
+
+------------------------------------------------------------------------------------------------------------------------
