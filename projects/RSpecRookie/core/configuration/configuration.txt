@@ -1,0 +1,4 @@
+La configurazione può stare in tre posti differentemente.
+Locale: ./.rspec-local (legge 3, la più forte, quindi occhio agli override)
+Progetto: ./.rspec (legge 2)
+Globale: ~/.rspec (legge 1)

@@ -54,3 +54,11 @@ Che differenza c'è tra usare subject o described_class?
 R: ?
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Perché non riesco a configurare un nuovo path per i test in modo che rspec non prenda i test sotto specs ma quelli per
+esempio sotto hooks?
+
+R:
+
+------------------------------------------------------------------------------------------------------------------------
+

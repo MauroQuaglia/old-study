@@ -106,3 +106,11 @@ let!(:the_description) do |example|
 end
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Per fare girare un test in uno specifica ambiente e basta, posso anche fare un test condizionale, del tipo:
+it 'run', :if => RUBY_VERSION == '2.1.1' do
+    p RUBY_VERSION
+end
+e dire :if => PRO allora gira...
+
+------------------------------------------------------------------------------------------------------------------------
