@@ -58,6 +58,9 @@ R: ?
 Perché non riesco a configurare un nuovo path per i test in modo che rspec non prenda i test sotto specs ma quelli per
 esempio sotto hooks?
 
+--default-path behavior
+dovrebbe far girare tutti i test sotto la cartella behavior, invece si rompe.
+
 R:
 
 ------------------------------------------------------------------------------------------------------------------------

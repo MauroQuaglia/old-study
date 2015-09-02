@@ -1,4 +1,24 @@
 La configurazione può stare in tre posti differentemente.
-Locale: ./.rspec-local (legge 3, la più forte, quindi occhio agli override)
+Locale:   ./.rspec-local (legge 3, la più forte, quindi occhio agli override)
 Progetto: ./.rspec (legge 2)
-Globale: ~/.rspec (legge 1)
+Globale:  ~/.rspec (legge 1)
+
+La configurazione di RSpec è testabile tramite chiamate del tipo:
+expect(RSpec.configuration).to be_color_enabled
+
+Anche il fail-fast si può impostare così:
+RSpec.configure { |c| c.fail_fast = true }
+
+L'estensione rspec-rails aggiunge un po' di configurazione.
+
+Posso creare degli alias per it, example, ...
+c.alias_example_to :task (oppure  c.alias_example_to :pit, :pending => "Pit alias used")
+per poi scrivere
+task 'should be ...' do ... end
+pit 'should be ...' do ... end (sarà pending in automatico)
+
+Posso specificare anche il --default-path, dove sta la cartella con i test (default = spec)
+non si può fare tramite configurazione ma solo tramite file .rspec.
+
+Se interessa si può anche redirigere l'output delle cose deprecate su un file. da configurazione o console
+Se interessa si può anche redirigere l'output ddei test da configurazione o console

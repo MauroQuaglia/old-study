@@ -114,3 +114,11 @@ end
 e dire :if => PRO allora gira...
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Per il pending posso usare questo:
+c.alias_example_to :pending, :pending
+
+e poi viene comodo scrivere il test come
+pending 'should be ...' do end
+
+------------------------------------------------------------------------------------------------------------------------
