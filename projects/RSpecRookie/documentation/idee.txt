@@ -122,3 +122,10 @@ e poi viene comodo scrivere il test come
 pending 'should be ...' do end
 
 ------------------------------------------------------------------------------------------------------------------------
+
+RSpec.shared_context: define some common context (using before, let,
+helper methods, etc) that can later be included in an example group.
+
+Questo può essere utile per eliminare la duplicazione.
+
+------------------------------------------------------------------------------------------------------------------------

@@ -22,3 +22,6 @@ non si può fare tramite configurazione ma solo tramite file .rspec.
 
 Se interessa si può anche redirigere l'output delle cose deprecate su un file. da configurazione o console
 Se interessa si può anche redirigere l'output ddei test da configurazione o console
+
+Posso escludere dei test dalla suite con la keyword: --exclude-pattern
+** sembra indicare la cartella spec, come se fosse un acronimo.

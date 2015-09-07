@@ -1,0 +1,21 @@
+Struttura base:
+expect(actual).to     matcher(expected)
+expect(actual).not_to matcher(expected)
+
+Dove "matcher" è un oggetto che risponde ai metodi:
+matches?(actual)
+failure_message
+
+RSpec mette a disposizione dei matcher già fatti e permette di farne di nuovi.
+
+IDENTITÀ (be, equal)
+* usa equal?
+* quindi devo avere lo stesso object_id
+
+EQUIVALENZA (eq)
+* usa ==
+* guarda il valore e non il tipo di base, per esempio 17 == 17.0 è true.
+
+EQUIVALENZA (eql)
+* usa eql?
+* guarda il valore e il tipo di base, per esempio 17 == 17.0 è false.
