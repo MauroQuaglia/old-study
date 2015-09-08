@@ -6,16 +6,41 @@ Dove "matcher" è un oggetto che risponde ai metodi:
 matches?(actual)
 failure_message
 
+
+
 RSpec mette a disposizione dei matcher già fatti e permette di farne di nuovi.
 
-IDENTITÀ (be, equal)
-* usa equal?
-* quindi devo avere lo stesso object_id
+IDENTITÀ
+Viene usato l'operatore equal? di ruby che confronta il valore dell'object_id.
+* be
+* equal
 
-EQUIVALENZA (eq)
-* usa ==
-* guarda il valore e non il tipo di base, per esempio 17 == 17.0 è true.
+EQUIVALENZA LARGA
+Viene usato l'operatore == di ruby che guarda il valore ma non il tipo di base. Per esempio 17 == 17.0 è vero.
+* eq
 
-EQUIVALENZA (eql)
-* usa eql?
-* guarda il valore e il tipo di base, per esempio 17 == 17.0 è false.
+EQUIVALENZA STRETTA
+Viene usato l'operatore eql? di ruby che guarda il valore e il tipo di base. Per esempio 17 == 17.0 è falso.
+* eql
+
+COMPARAZIONE
+* be <
+* be <=
+* be >=
+* be >
+* be_between(m, M).inclusive
+* be_between(m, M).exclusive
+* match(/re/)
+* be_within(delta).of(value)
+* start_with(value)
+* end_with(value)
+
+CLASSE
+* be_instance_of(class)
+
+TIPO
+* be_kind_of(class)
+
+RISPOSTA
+* respond_to(:method)
+
