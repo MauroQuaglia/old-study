@@ -1,3 +1,5 @@
+require_relative 'stuff'
+
 RSpec.describe 'base matchers' do
 
   it 'identity' do
@@ -42,6 +44,32 @@ RSpec.describe 'base matchers' do
 
   it 'response' do
     expect('x').to respond_to(:length)
+  end
+
+  it 'boolean' do
+    expect('x').to be_truthy
+    expect(true).to be(true)
+
+    expect(false).to be_falsey
+    expect(nil).to be_falsey
+    expect(false).to be(false)
+  end
+
+  it 'nil' do
+    expect(nil).to be_nil
+  end
+
+  it 'existance' do
+    expect(Stuff.new).to exist
+    expect(Stuff.new).to exist('x')
+  end
+
+  it 'error' do
+    expect { Stuff.new.not_existing_method }.to raise_error
+    expect { Stuff.new.security_error }.to raise_error
+#    expect { ... }.to raise_error(ErrorClass)
+ #   expect { ... }.to raise_error("message")
+  #  expect { ... }.to raise_error(ErrorClass, "message")
   end
 
 end

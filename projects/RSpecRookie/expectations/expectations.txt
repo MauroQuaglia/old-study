@@ -44,3 +44,19 @@ TIPO
 RISPOSTA
 * respond_to(:method)
 
+BOOLEANI
+* be_truthy  (guarda che il valore non sia nil o false, per esempio una stringa è vera)
+** be true   (be usa equal?, quindi guarda l'obgect_id, quindi si aspetta proprio true)
+* be_falsey  (nil o false)
+** be false  (false)
+
+NULLITA'
+* be_nil
+
+ESISTENZA
+Passa quando l'oggetto sotto test risponde truthy (non nil, non false) al metodo exist?(*args) o exists?(*args)
+* exist
+
+ERRORI
+expect { ... }.to raise_error # Guarda solo se lancia un errore, genera un warning perché potrebbero esserci dei falsi positivi
+
