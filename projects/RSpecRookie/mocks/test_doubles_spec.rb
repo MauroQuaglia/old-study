@@ -14,9 +14,11 @@ RSpec.describe 'test double' do
 
   it 'allow' do
     dbl = double('some collaborator')
-    allow(dbl).to receive(:foo)
+    allow(dbl).to receive(:foo){'FOO'}
+    allow(dbl).to receive(:bar).and_return('BAR')
 
     p dbl.foo
+    p dbl.bar
   end
 
   it 'bulk allow' do
@@ -47,6 +49,9 @@ RSpec.describe 'test double' do
     p person.find.name
   end
 
-
-
+  it 'not raise error' do
+    dbl = double('collaborator').as_null_object
+    p dbl.foo
+    expect(dbl.foo.bar.bazz).to be(dbl)
+  end
 end

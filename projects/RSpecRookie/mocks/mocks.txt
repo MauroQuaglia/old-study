@@ -3,25 +3,29 @@ Posso crearli con
 DOUBLE (oggetto)
 Parole chiave: double, allow, receive, receive_messages, as_null_object
 E' un oggetto che fa le veci di un altro durante il codice di test.
-E' strict per default, se gli mando un messaggio che non conosce lancia eccezione, ma esiste anche una versione non strict.
-Lo posso programmare tramite hash.
+
+E' strict per default, se gli mando un messaggio che non conosce lancia eccezione, ma esiste anche una versione loose
+che invece di lanciare eccezione ritorna se stesso. Questa si implementa con as_null_object.
 
 ESEMPI:
-dbl = double('come collaborator', foo: 'hello world')
+dbl = double('collaborator', foo: 'hello world')
 * programma la risposta del metodo foo.
 
+dbl = double('collaborator', foo: 'hello world').as_null_object
+
 ------------------------------------------------------------------------------------------------------------------------
+STUB(metodo)
 
 allow(dbl).to receive(:foo)
 * Permetto che sia chiamato il metodo foo senza lanciare eccezione.
 
 allow(dbl).to receive(:foo) {'foo'}
+allow(dbl).to receive(:foo).and_return('foo')
 * In questo caso posso programmare la risposta tramite blocco.
 
 allow(Person).to receive(:find) { person }
 * doble parziale, in quanto la classe Person esiste veramente. Però gli programmo la risposta.
 
-------------------------------------------------------------------------------------------------------------------------
 allow(dbl).to receive_messages(foo: 'X')
 allow(dbl).to receive_messages(foo: 'X', bar: 'Y')
 * Programmo le risposte, anche in maniera multipla.
@@ -30,14 +34,10 @@ expect(dbl).to receive(:foo)
 expect(dbl).not_to receive(:foo)
 * Verifica che sia chiamato o meno il metodo foo sul double dbl.
 
+Possibili keyword di programmazione risposta (nil viene restituito per default)
+and_return (posso programmare anche i valori successivi se lo chiamo più volte)
+and_raise (eccezioni)
+and_throw (simboli)
+and_yield (al blocco che passo al metodo, forniscigli quei valori...)
+and_call_original
 
-
-
-STUB(metodo)
-E' un metodo su un oggetto reale a double che posso programmare dicendogli di tornare un valore ad una certa chiamata.
-*allow(die).to receive(:roll) { 3 }
-* quando l'oggetto die riceve il messaggio roll torna il valore 3.
-
-MESSAGE EXPECTATION
-E' un qualcosa che l'oggetto sotto test dovrebbe ricevere durante l'esecuzione del codice.
-*  expect(logger).to receive(:account_closed).with(account)
