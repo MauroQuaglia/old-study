@@ -1,0 +1,11 @@
+Creazione:
+rails new NomeApplicazione
+
+Riepilogo:
+rake about
+
+Far partire il sito:
+rails server
+
+Vedere il risultato:
+http://localhost:3000/
