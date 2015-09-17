@@ -1,3 +1,12 @@
 * Capire da dove prende le External Libraries.
+
+
 * Capire come fare un gemset separato per lavorare in isolamento.
+Se faccio
+rails new App1
+rails new App1
+u poi guardo a dove puntano le gemme vedo che per entrambe i progetti il puntamento alle gemme è lo stesso, quindi stanno condividendo lo stesso gemset.
+
+
+
 * capire WEBrick

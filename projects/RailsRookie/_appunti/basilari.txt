@@ -9,3 +9,15 @@ rails server
 
 Vedere il risultato:
 http://localhost:3000/
+
+Generazione controller:
+Generare SayController con due action, hello e goodbye:
+rails generate controller Say hello goodbye
+Il nome del controller indica un'azione, Say cioè dire.
+Il nome della action è il risultato dell'azione.
+Di ciao -> Say hello
+
+Navigazione URL:
+http://localhost:3000/controller/azione
+http://localhost:3000/say/hello
+
