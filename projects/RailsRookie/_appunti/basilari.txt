@@ -21,3 +21,8 @@ Navigazione URL:
 http://localhost:3000/controller/azione
 http://localhost:3000/say/hello
 
+NOTE
+Tutte le volte che carico una pagina, in
+dev: ricarica tutti i file
+test, pro: li tiene in memoria
+
