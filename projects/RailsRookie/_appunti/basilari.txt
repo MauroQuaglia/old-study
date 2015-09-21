@@ -26,3 +26,6 @@ Tutte le volte che carico una pagina, in
 dev: ricarica tutti i file
 test, pro: li tiene in memoria
 
+Per creare link, usare link_to()
+
+

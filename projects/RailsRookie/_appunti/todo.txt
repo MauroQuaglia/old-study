@@ -1,5 +1,3 @@
-* Capire da dove prende le External Libraries.
-
 
 * Capire come fare un gemset separato per lavorare in isolamento.
 Se faccio

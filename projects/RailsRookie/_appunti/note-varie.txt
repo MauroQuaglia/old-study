@@ -1,0 +1,9 @@
+Quando parte Rails si prende, Ruby, le gemme di Ruby e le gemme di Rails.
+
+Le gemme sono di due tipi, quelle di Ruby e quelle di Rails.
+Ruby:  /home/xpuser/.rvm/gems/ruby-2.1.1/gems/         (dipendono dalla versione di Ruby)
+Rails: /home/xpuser/.rvm/gems/ruby-2.1.1@rails-4/gems/ (dipendono dal Gemfile)
+
+------------------------------------------------------------------------------------------------------------------------
+
+WEBrick è una libreria di Ruby che fornisce un web server come servizio.
