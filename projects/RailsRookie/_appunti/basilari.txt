@@ -1,6 +1,12 @@
 Creazione:
 rails new NomeApplicazione
 
+Gemme installate:
+bundle show
+
+Dettaglio gemma installata:
+bundle show NomeGemma
+
 Riepilogo:
 rake about
 

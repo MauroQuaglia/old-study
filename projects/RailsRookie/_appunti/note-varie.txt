@@ -6,4 +6,12 @@ Rails: /home/xpuser/.rvm/gems/ruby-2.1.1@rails-4/gems/ (dipendono dal Gemfile)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-WEBrick è una libreria di Ruby che fornisce un web server come servizio.
+Rails
+Quando installo Rails mi viene messa anche a disposizione una command-line (rails) che permette di creare
+applicazioni Rails già preconfigurate.
+
+WEBrick
+è una libreria di Ruby che fornisce un web server come servizio.
+
+Bundler (bundle significa impacchettare)
+E' un tool che permette di gestire le gemme in maniera efficace.
