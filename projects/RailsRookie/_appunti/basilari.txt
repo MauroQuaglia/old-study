@@ -7,11 +7,12 @@ bundle show
 Dettaglio gemma installata:
 bundle show NomeGemma
 
-Riepilogo:
-rake about
+Riepilogo: rake about
+* mi da anche l'elenco dei middelware
+* fa anche un check su errori di installazione.
 
 Far partire il sito:
-rails server
+* rails server (rails server webrick)
 
 Vedere il risultato:
 http://localhost:3000/
@@ -19,7 +20,7 @@ http://localhost:3000/
 Generazione controller:
 Generare SayController con due action, hello e goodbye:
 rails generate controller Say hello goodbye
-Il nome del controller indica un'azione, Say cioè dire.
+Il nome del controller indica un'azione, Say cioè dire. Notare il singolare
 Il nome della action è il risultato dell'azione.
 Di ciao -> Say hello
 

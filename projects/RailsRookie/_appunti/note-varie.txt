@@ -6,9 +6,20 @@ Rails: /home/xpuser/.rvm/gems/ruby-2.1.1@rails-4/gems/ (dipendono dal Gemfile)
 
 ------------------------------------------------------------------------------------------------------------------------
 
+Per creare un gemset separato con RVM
+* https://rvm.io/gemsets/basics/
+
+------------------------------------------------------------------------------------------------------------------------
+ERB
+.html.erb -> vuol dire che espande il file tramite il filtro ERB e il risultato finale è un .html
+Similmente potri fare
+.txt.erb -> vuol dire che espande il file tramite il filtro ERB e il risultato finale è un .html
+------------------------------------------------------------------------------------------------------------------------
+
 Rails
 Quando installo Rails mi viene messa anche a disposizione una command-line (rails) che permette di creare
-applicazioni Rails già preconfigurate.
+* applicazioni Rails già preconfigurate: rails new
+* generare controller: rails generate controller
 
 WEBrick
 è una libreria di Ruby che fornisce un web server come servizio.
