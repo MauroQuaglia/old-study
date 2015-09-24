@@ -1,3 +1,7 @@
+Filosofia Rails
+Convention Over Configuration è un paradigma di programmazione che prevede configurazione minima (o addirittura assente)
+
+------------------------------------------------------------------------------------------------------------------------
 Quando parte Rails si prende, Ruby, le gemme di Ruby e le gemme di Rails.
 
 Le gemme sono di due tipi, quelle di Ruby e quelle di Rails.
