@@ -1,3 +1,5 @@
 * Capire come fare un gemset separato per lavorare in isolamento.
 * Capire bundle exec a cosa serve
 * capire Rack
+* studiare get, puth, patch. delete, post.
+** post method -> create() action
