@@ -9,6 +9,14 @@ Ruby:  /home/xpuser/.rvm/gems/ruby-2.1.1/gems/         (dipendono dalla versione
 Rails: /home/xpuser/.rvm/gems/ruby-2.1.1@rails-4/gems/ (dipendono dal Gemfile)
 
 ------------------------------------------------------------------------------------------------------------------------
+Linux
+creare il proprio account
+
+sudo userdel mauro-quaglia
+sudo useradd mauro
+sudo passwd mauro
+
+------------------------------------------------------------------------------------------------------------------------
 
 Per creare un gemset separato con RVM
 * https://rvm.io/gemsets/basics/
@@ -30,3 +38,18 @@ WEBrick
 
 Bundler (bundle significa impacchettare)
 E' un tool che permette di gestire le gemme in maniera efficace.
+
+------------------------------------------------------------------------------------------------------------------------
+Rails è MVC
+
+M  -> Active Record è l'ORM che usa Rails.
+VC -> Action Pack
+
+Views
+* ci sono diversi tipi di templating, ma il più usato è ERB.
+
+Controller
+* collega la richiesta all'azione
+* gestisce le cache, moduli di helper e sessioni.
+
+

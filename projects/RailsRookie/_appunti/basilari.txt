@@ -27,7 +27,6 @@ http://localhost:3000/say/hello
 Quando navigo "/say/hello" rails crea una nuova istanza di SayController e chiama il metodo hello, dopodiche cerca la view
 hello.html.erb
 
-
 NOTE
 Tutte le volte che carico una pagina, in
 dev: ricarica tutti i file
