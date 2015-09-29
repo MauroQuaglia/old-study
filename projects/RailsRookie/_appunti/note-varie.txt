@@ -13,9 +13,7 @@ Linux
 creare il proprio account
 
 sudo userdel mauro-quaglia
-sudo useradd mauro
-sudo passwd mauro
-
+sudo adduser mauro
 ------------------------------------------------------------------------------------------------------------------------
 
 Per creare un gemset separato con RVM
@@ -45,11 +43,21 @@ Rails è MVC
 M  -> Active Record è l'ORM che usa Rails.
 VC -> Action Pack
 
+ORM
+* Se su db ho  la tabella "orders", nel codice avrò il modello "Order"
+* tabelle -> classi, righe -> oggetti, colonne -> attributi
+* metodi di classe ->  operazioni sulle tabelle, metodi di istanza -> operazioni sulla singola righa.
+* supporta sofisticate validazioni sui dati
+
 Views
 * ci sono diversi tipi di templating, ma il più usato è ERB.
 
 Controller
 * collega la richiesta all'azione
 * gestisce le cache, moduli di helper e sessioni.
+
+Request
+* ogni richiesta è costituita da un PATH(utl) e un METHOD(get, post, ...)
+* ad ogni method rails associa in automatico una action.
 
 
