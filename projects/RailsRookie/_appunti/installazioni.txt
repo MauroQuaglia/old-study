@@ -1,0 +1,37 @@
+Installazione per avere Rails funzionante (Linguaggio Ruby + Rails framework)
+Serve:
+* Un interprete Ruby (ruby -v)
+* Ruby on Rails
+* un interprete JavaScript
+* librerie varie che dipendono dal SO,
+* un database.
+
+Windows, Mac ---> RubyInstaller installa tutto quello che serve
+in alternativa installare RVM e usare questa per installare tutto ciò che serve:
+* RVM: curl -sSL https://get.rvm.io | bash -s stable
+* Ruby: rvm install 2.0.0 --autolibs=enable
+* rvm use 2.0.0 (dice di usare ruby 2.0.0 ed è da fare sempre quando apro la shell a meno di non impostarlo come default)
+* gem install rails --version 4.0.0 --no-ri --no-rdoc
+* rvm --default 2.0.0 (ogni shell ora usa l'interprete ruby 2.0.0)
+* rails -v (controllo della versione installata)
+
+Linux:
+* sudo apt-get install ruby2.0.0
+* sudo gem install rails --version 4.0.0 --no-ri --no-rdoc
+
+Ma se si vuole una installazione separata di Ruby sulla propria macchina dedicata al supporto dell'applicazione bisogna usare RVM.
+* curl -sSL https://get.rvm.io | bash -s stable
+* chiudere il terminale e riaprirlo (ricarica il file .bash_login)
+* rvm requirements --autolibs=enable (installazione dei prerequisiti per il SO in uso)
+* rvm install 2.0.0 (installazione di ruby)
+* rvm --default 2.0.0  (ogni shell ora usa l'interprete ruby 2.0.0)
+* gem install rails --version 4.0.0 --no-ri --no-rdoc (installazione rails)
+* rails -v (controllo della versione installata)
+
+
+RVM serve per gestire più ambienti ruby contemporaneamente.
+
+NB
+http://freegoweb.it/stream/ruby-e-rails-in-italiano-parte-1
+
+
