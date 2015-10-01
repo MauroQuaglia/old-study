@@ -1,3 +1,9 @@
+RVM (“Ruby Version Manager”)
+RVM ti permette di installare e gestire multiple installazioni di Ruby sul tuo sistema.
+Ti permette anche di gestire gemsets differenti.
+
+
+
 Installazione per avere Rails funzionante (Linguaggio Ruby + Rails framework)
 Serve:
 * Un interprete Ruby (ruby -v)
@@ -28,10 +34,26 @@ Ma se si vuole una installazione separata di Ruby sulla propria macchina dedicat
 * gem install rails --version 4.0.0 --no-ri --no-rdoc (installazione rails)
 * rails -v (controllo della versione installata)
 
+----
+dove è installato ruby:
+which ruby
+
+Posso anche creare tutta la documentazione in locale in modo da non dover cercare online.
+rake doc:rails, poi la copi sul desktop ed è fatta.
+
+
+Vedere le gemme di rails installate (notare che nei nomi compare sempre rails)
+gem list --local rails
 
 RVM serve per gestire più ambienti ruby contemporaneamente.
+Sito ufficiale dove cercare informazioni: http://api.rubyonrails.org/
 
 NB
 http://freegoweb.it/stream/ruby-e-rails-in-italiano-parte-1
+
+Database
+Se si vuole usare un database diverso da SQLite3, bisogna installare un driver di database e una libreria che ci permette di
+connetterci ed usare il database.
+Si possono scaricare già compilati o da compilare, in tal caso serve un compilatore installato nel so.
 
 

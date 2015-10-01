@@ -60,4 +60,7 @@ Request
 * ogni richiesta è costituita da un PATH(utl) e un METHOD(get, post, ...)
 * ad ogni method rails associa in automatico una action.
 
+------------------------------------------------------------------------------------------------------------------------
 
+Qiando si lavora in locale è sempre bene andare i tail -f sul log errori e avere sempre una console per le richieste
+che vengono fatte al webserver.
