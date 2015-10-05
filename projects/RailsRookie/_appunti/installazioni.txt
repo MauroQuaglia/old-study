@@ -1,16 +1,49 @@
-* RVM
-* Ruby (via RVM)
-* gemma Rails (via RubyGems, che è stato installato con Ruby al passo precedente)
+Installazione per avere Rails funzionante
+* Ruby
+* Ruby on Rails
+* un interprete JavaScript (per linux è da installare)
+* librerie varie che dipendono dal SO (quando servono si installano con apt-get)
+* un database
+* un editor
+* un web server se voglio deployare in produzione insieme a un interprete per il codice
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Linux:
+(potrebbero servirmi alcune librerie, ma eventualmente me le chiederà il SO di volta in volta)
+
+installo RVM
+* curl -sSL https://get.rvm.io | bash -s stable
+* chiudere il terminale e riaprirlo per ricaricare il file .bash_login
+* rvm requirements --autolibs=enable (installazione dei prerequisiti per il SO in uso)
+
+installo Ruby con RVM
+* rvm install 2.0.0
+* rvm --default 2.0.0 (ogni shell ora usa l'interprete ruby 2.0.0, infatti potendone evere diversi non saprebbe quale ruby usare)
+
+installo la gemma Rails via RubyGems che è distribuito con il Ruby che è stato precedentemente installato:
+* gem install rails --version 4.0.0 --no-ri --no-rdoc
+* rails -v (controllo)
+
+------------------------------------------------------------------------------------------------------------------------
+
+Per tenere sotto controllo le varie cose che sto usando:
+Ruby   -> aggiungo il file .ruby-version con la versione usata nell'applicazione
+gemset -> aggiungo il file .ruby-gemset con il nome del gemset usato
+rails  -> nel gem file fisso la versione usata nell'applicazione.
+
 
 RVM (“Ruby Version Manager”)
 RVM ti permette di installare e gestire multiple installazioni di Ruby sul tuo sistema.
 Ti permette anche di gestire gemsets differenti.
+Per pulire i gemset, posso anche essere drastico, del tipo: rvm gemset delete nome-gemset. Poi lancio bundle dalla dir
+di progetto e lui, dato che vede il file .ruby-gemset crea il gemset con quel nome e ci mette le gemme che ci sono specificate
+nel gemfile con le relative dipendenze.
 
 
 ------------------------------------------------------------------------------------------------------------------------
 rails è una gemma di ruby.
+bundle è una gemma di ruby.
 
 è come dire apro un progetto ruby vuoto, e mi faccio tutta l'architettura rails da zero.
 oppure
@@ -27,14 +60,6 @@ http://stackoverflow.com/questions/15708916/use-rvmrc-or-ruby-version-file-to-se
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Installazione per avere Rails funzionante
-* Ruby
-* Ruby on Rails
-* un interprete JavaScript (per linux è da installare)
-* librerie varie che dipendono dal SO (quando servono si installano con apt-get)
-* un database
-* un editor
-* un web server se voglio deployare in produzione insieme a un interprete per il codice
 
 Installazione Linux:
 
@@ -72,18 +97,6 @@ connetterci ed usare il database.
 Si possono scaricare già compilati o da compilare, in tal caso serve un compilatore installato nel so.
 
 
-
-
-
-
-Windows, Mac ---> RubyInstaller installa tutto quello che serve
-in alternativa installare RVM e usare questa per installare tutto ciò che serve:
-* RVM: curl -sSL https://get.rvm.io | bash -s stable
-* Ruby: rvm install 2.0.0 --autolibs=enable
-* rvm use 2.0.0 (dice di usare ruby 2.0.0 ed è da fare sempre quando apro la shell a meno di non impostarlo come default)
-* gem install rails --version 4.0.0 --no-ri --no-rdoc
-* rvm --default 2.0.0 (ogni shell ora usa l'interprete ruby 2.0.0)
-* rails -v (controllo della versione installata)
 
 Linux:
 * sudo apt-get install ruby2.0.0
