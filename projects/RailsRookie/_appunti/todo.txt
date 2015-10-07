@@ -1,5 +1,4 @@
-* Capire come fare un gemset separato per lavorare in isolamento.
-* studiare bundler che è una cosa separata sia da ruby che da rails
+* studiare la gemma bundler
 * Capire bundle exec a cosa serve
 * capire Rack
 * studiare get, puth, patch. delete, post.

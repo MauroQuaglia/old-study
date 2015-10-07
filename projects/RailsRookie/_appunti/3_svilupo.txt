@@ -1,25 +1,6 @@
-Creazione:
-rails new NomeApplicazione
-
-Gemme installate:
-bundle show
-
-Dettaglio gemma installata:
-bundle show NomeGemma
-
-Riepilogo: rake about
-* mi da anche l'elenco dei middelware
-* fa anche un check su errori di installazione.
-
-Far partire il sito:
-* rails server (rails server webrick)
-
-Vedere il risultato:
-http://localhost:3000/
-
 Generazione controller:
 Generare SayController con due action, hello e goodbye:
-rails generate controller Say hello goodbye
+* rails generate controller Say hello goodbye
 
 Navigazione URL:
 http://localhost:3000/controller/azione
@@ -36,5 +17,4 @@ test, pro: li tiene in memoria
 Buona norma usarlo per link interni all'applicazione.
 Per link esterni posso decidere se preferire <a...> (oppure uso sempre link_to per convenzione)
 Il path è a disposizione della rotta anche se non lo specifico, es: say_goodbye_path (NomeController_NomeAction_path)
-
 

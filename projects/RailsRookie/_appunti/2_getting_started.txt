@@ -1,0 +1,25 @@
+Creazione:
+rails new NomeApplicazione
+
+Gemme installate:
+bundle show
+
+Dettaglio gemma installata:
+bundle show NomeGemma
+
+Riepilogo: rake about
+* mi da anche l'elenco dei middelware
+* fa anche un check su errori di installazione.
+
+Far partire il sito:
+* rails server (rails server webrick)
+
+Vedere il risultato:
+http://localhost:3000/
+
+DESKTOP
+Aprire sempre dei cmd con:
+* le richieste che arrivano al webserver
+* avere un tail -f sul log
+Avere sempre un browser con la documentazione ufficiale a disposizione:
+* http://api.rubyonrails.org/
