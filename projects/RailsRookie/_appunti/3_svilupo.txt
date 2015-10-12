@@ -18,3 +18,14 @@ Buona norma usarlo per link interni all'applicazione.
 Per link esterni posso decidere se preferire <a...> (oppure uso sempre link_to per convenzione)
 Il path è a disposizione della rotta anche se non lo specifico, es: say_goodbye_path (NomeController_NomeAction_path)
 
+YAML
+Per configuarere
+* database
+* dati di test
+* traduzioni
+
+Marshaling
+Ruby può prendere un oggetto e convertirlo in uno strem di byte che può essere salvato. Questo processo si chiama
+marshaling.
+Rails usa marshaling per memorizzare i dati di sessione.
+

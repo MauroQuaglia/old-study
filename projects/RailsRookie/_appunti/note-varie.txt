@@ -62,5 +62,7 @@ Request
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Qiando si lavora in locale è sempre bene andare i tail -f sul log errori e avere sempre una console per le richieste
-che vengono fatte al webserver.
+YAML è un modulo che fa parte delle librerie standard di ruby.
+(YAML = YAML Ain't Markup Language)
+
+------------------------------------------------------------------------------------------------------------------------
