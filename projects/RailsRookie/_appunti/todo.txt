@@ -3,3 +3,4 @@
 * capire Rack
 * studiare get, puth, patch. delete, post.
 ** post method -> create() action
+* capire meglio File.expand_path
