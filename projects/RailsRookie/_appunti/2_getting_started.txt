@@ -1,3 +1,12 @@
+Creare un'applicazione:
+E' necessario fare un bozza sapendo comunque che dovremo modificare strada facendo
+* Che cosa deve fare l'applicazione?
+* Mettere giù dei casi d'uso di alto livello. Come le varie entità useranno l'applicazione: acquirente, venditore, ...
+** Non incaponirsi sui dettagli, li si vedranno strada facendo.
+* Fare un disegno del flusso tra le varie pagine.
+* Capire con che tipo di dati avremo a che fare.
+
+
 Creazione:
 rails new NomeApplicazione
 
