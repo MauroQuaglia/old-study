@@ -66,3 +66,9 @@ YAML è un modulo che fa parte delle librerie standard di ruby.
 (YAML = YAML Ain't Markup Language)
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Nei javascript sotto assets mettere: use 'strict'
+* capire meglio perché
+
+------------------------------------------------------------------------------------------------------------------------
+

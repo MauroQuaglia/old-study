@@ -1,10 +1,21 @@
 Creare un'applicazione:
 E' necessario fare un bozza sapendo comunque che dovremo modificare strada facendo
 * Che cosa deve fare l'applicazione?
+
+USE CASES
 * Mettere giù dei casi d'uso di alto livello. Come le varie entità useranno l'applicazione: acquirente, venditore, ...
 ** Non incaponirsi sui dettagli, li si vedranno strada facendo.
-* Fare un disegno del flusso tra le varie pagine.
-* Capire con che tipo di dati avremo a che fare.
+
+PAGE FLOW
+* Fare un disegno del flusso di navigazione tra le pagine pricipali.
+** Non incaponirsi sui dettagli, li si vedranno strada facendo.
+
+DATA
+* Capire con che tipo di dati avremo a che fare. Non è uno schema di classi e non si parla di database, tabelle o chiavi.
+** Non incaponirsi sui dettagli, li si vedranno strada facendo.
+
+* Fare vedere il tutto al cliente oppure disegnarli insieme a lui.
+** Non incaponirsi sui dettagli, li si vedranno strada facendo.
 
 
 Creazione:
