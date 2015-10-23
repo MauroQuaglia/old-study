@@ -1,5 +1,16 @@
 Filosofia Rails
-Convention Over Configuration è un paradigma di programmazione che prevede configurazione minima (o addirittura assente)
+DRY - don't repeat yourself
+* In Rails la configurazione per cambiare un comportamento sta sempre in un unico punto. Non devo mai toccare in più
+di un punto per ottenere l'effetto desiderato.
+
+Convention Over Configuration
+* E' un paradigma di programmazione che prevede configurazione minima (o addirittura assente).
+
+Agiliità è parte dell'idea di Rails. In ogni caso (presi dal manifesto agile)
+* Individui e iterazione sociale sopra a processi e strumenti.
+* lavorare sul software piuttosto che su una documentazione.
+* lavorare insieme al cliente piuttosto che contrattare.
+* rispondere al cambiamento piuttosto che seguire il piano.
 
 ------------------------------------------------------------------------------------------------------------------------
 Quando parte Rails si prende, Ruby, le gemme di Ruby e le gemme di Rails.
@@ -72,3 +83,5 @@ Nei javascript sotto assets mettere: use 'strict'
 
 ------------------------------------------------------------------------------------------------------------------------
 
+* i task di rake servono per tenere sotto controllo tutti quegli script che altrimenti sarebbero parte di
+configurazioni esterne.
