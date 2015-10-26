@@ -1,34 +1,35 @@
-RUBY
+Creazione:
+rails new NomeApplicazione
 
-Marshaling
-Ruby può prendere un oggetto e convertirlo in uno strem di byte che può essere salvato. Questo processo si chiama
-marshaling.
-Rails usa marshaling per memorizzare i dati di sessione.
+Gemme installate:
+bundle show
 
-Idiomi
-a || b
-Se a è false o nil torna b, altrimenti torna a.
-Usato di solito per i default, dove b è il default.
+Dettaglio gemma installata:
+bundle show NomeGemma
 
-a ||= b (a operatore= b)
-Significa a = a || b (a operatore= b). Assegna alla prima variabile (a) il valore di (a || b)
-count += 1  -> count = count + 1
-count ||= 0 -> count = count || 0
+Riepilogo: rake about
+* mi da anche l'elenco dei middelware
+* fa anche un check su errori di installazione.
 
-self.new
-Torna un'istanza della classe stessa. Di solito si usa quando c'è l'ereditarietà e torna un'istanza della classe stessa.
+Far partire il sito:
+* rails server (rails server webrick)
 
-require
-require_relative -> specifico solo le directory
-require -> devo specificare tutto il path, con cose del tipo ..\..
+Vedere il risultato:
+http://localhost:3000/
 
-require File.expand_path('../../congif/environment', __FILE__)
-Ruby cerca questi file nelle directory specificate nel LOAD_PATH
+DESKTOP
+Aprire sempre dei cmd con:
+* le richieste che arrivano al webserver
+* avere un tail -f sul log
+Avere sempre un browser con la documentazione ufficiale a disposizione:
+* http://api.rubyonrails.org/
 
-require File.expand_path('../../congif/environment/x.txt', __FILE__)
-Ruby cerca questo file nelle directory specificate nel LOAD_PATH, in questo caso però cerco solo un file specifico.
 
-------------------------------------------------------------------------------------------------------------------------
+GEMME
+Per vedere tutte le gemme installate e la loro specifica documentazione:
+* andare nella cartella di progetto
+* gem server
+* http://localhost:8808/ (tutte le rails api)
 RAILS
 
 Generazione controller:

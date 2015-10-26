@@ -85,3 +85,49 @@ Nei javascript sotto assets mettere: use 'strict'
 
 * i task di rake servono per tenere sotto controllo tutti quegli script che altrimenti sarebbero parte di
 configurazioni esterne.
+
+------------------------------------------------------------------------------------------------------------------------
+
+INFO
+Ruby on Rails è un framework:
+E' come dire apro un progetto ruby vuoto, e mi faccio tutta l'architettura rails da zero.
+oppure
+scarico la gemma rails e con [rails new MyApp] mi crea tutta l'infrastruttura nel progetto ruby.
+
+Meglio avere gemset separati per ogni applicazione così le gemme non si mischiano.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+RUBY
+
+Marshaling
+Ruby può prendere un oggetto e convertirlo in uno strem di byte che può essere salvato. Questo processo si chiama
+marshaling.
+Rails usa marshaling per memorizzare i dati di sessione.
+
+Idiomi
+a || b
+Se a è false o nil torna b, altrimenti torna a.
+Usato di solito per i default, dove b è il default.
+
+a ||= b (a operatore= b)
+Significa a = a || b (a operatore= b). Assegna alla prima variabile (a) il valore di (a || b)
+count += 1  -> count = count + 1
+count ||= 0 -> count = count || 0
+
+self.new
+Torna un'istanza della classe stessa. Di solito si usa quando c'è l'ereditarietà e torna un'istanza della classe stessa.
+
+require
+require_relative -> specifico solo le directory
+require -> devo specificare tutto il path, con cose del tipo ..\..
+
+require File.expand_path('../../congif/environment', __FILE__)
+Ruby cerca questi file nelle directory specificate nel LOAD_PATH
+
+require File.expand_path('../../congif/environment/x.txt', __FILE__)
+Ruby cerca questo file nelle directory specificate nel LOAD_PATH, in questo caso però cerco solo un file specifico.
+
+

@@ -1,55 +1,45 @@
-Installazione per avere Rails funzionante
-* Ruby
-* Ruby on Rails
+Cosa mi serve per iniziare con il piede giusto:
+* Ruby (l'interprete)
+* Ruby on Rails (la gemma)
 * un interprete JavaScript (per linux è da installare)
 * librerie varie che dipendono dal SO (quando servono si installano con apt-get)
 * un database
-** Se non è quello di default SQLite3, devo installare un driver del db, cioè una libreria che userà rails per comunicare con il db
-* un editor
-* un web server se voglio deployare in produzione insieme a un interprete per il codice
-* Git cove repository
+** Se non è quello di default, SQLite3, devo installare un driver del db, cioè una libreria che userà rails per comunicare con il db.
+* un editor (sublime, rubymine, ...)
+* un web server se voglio deployare in produzione E un interprete per il codice (thin, unicorn, ...)
+* Git come repository
 * una continuous integration
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Linux:
-(potrebbero servirmi alcune librerie, ma eventualmente me le chiederà il SO di volta in volta)
+* potrebbero servirmi alcune librerie, ma eventualmente me le chiederà il SO di volta in volta.
 
-installo RVM (Ruby Version Manager)
+Installo RVM (Ruby Version Manager)
 * curl -sSL https://get.rvm.io | bash -s stable
 * chiudere il terminale e riaprirlo per ricaricare il file .bash_login
 * rvm requirements --autolibs=enable (installazione dei prerequisiti per il SO in uso)
 
 installo Ruby con RVM
 * rvm install 2.0.0
-* rvm --default 2.0.0 (ogni shell ora usa l'interprete ruby 2.0.0, infatti potendone evere diversi non saprebbe quale ruby usare)
+* rvm --default 2.0.0 (ogni shell ora usa l'interprete ruby 2.0.0 come default)
 
-installo la gemma Rails via RubyGems che è distribuito con il Ruby che è stato precedentemente installato:
+installo la gemma Rails (via RubyGems che è distribuito con il Ruby che è stato precedentemente installato):
 * gem install rails --version 4.0.0 --no-ri --no-rdoc
 * rails -v (controllo)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Per tenere sotto controllo le varie cose che sto usando:
-Ruby   -> aggiungo il file .ruby-version con la versione usata nell'applicazione
+Per tenere sotto controllo le varie versioni in uso.
+ruby   -> aggiungo il file .ruby-version con la versione usata nell'applicazione
 gemset -> aggiungo il file .ruby-gemset con il nome del gemset usato
 rails  -> nel gem file fisso la versione usata nell'applicazione.
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Controllare le varie installazioni con il comando which:
+which rvm   -> /home/xpuser/.rvm/bin/rvm
 which ruby  -> /home/xpuser/.rvm/rubies/ruby-2.2.0/bin/ruby
 which rails -> /home/xpuser/.rvm/gems/ruby-2.2.0/bin/rails
-which rvm   -> /home/xpuser/.rvm/bin/rvm
 
 
-------------------------------------------------------------------------------------------------------------------------
-
-INFO
-
-Ruby on Rails è un framework:
-E' come dire apro un progetto ruby vuoto, e mi faccio tutta l'architettura rails da zero.
-oppure
-scarico la gemma rails e con [rails new MyApp] mi crea tutta l'infrastruttura nel progetto ruby.
-
-Meglio avere gemset separati per ogni applicazione così le gemme non si mischiano.
