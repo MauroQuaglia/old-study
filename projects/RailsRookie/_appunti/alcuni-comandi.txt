@@ -1,14 +1,23 @@
 Vedere tutti i gemset delle varie versioni di ruby installate:
 * rvm gemset list_all
 
+Pulire i gemset:
+* rvm gemset delete nome-gemset.
+* per ricrearlo vado nella dir di progetto e faccio: bundle
+
+Vedere le gemme del gemset corrente:
+gem list
+------------------------------------------------------------------------------------------------------------------------
+
 Capire dove sono installati i vari programmi
 * which ruby  -> /home/xpuser/.rvm/rubies/ruby-2.2.0/bin/ruby
 * which rails -> /home/xpuser/.rvm/gems/ruby-2.2.0/bin/rails
 * which rvm   -> /home/xpuser/.rvm/bin/rvm
 
-Pulire i gemset:
-* rvm gemset delete nome-gemset.
-* vado nella dir di progetto e faccio: bundle
+------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 

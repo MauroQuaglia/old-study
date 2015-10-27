@@ -6,7 +6,7 @@ Cosa mi serve per iniziare con il piede giusto:
 * un database
 ** Se non è quello di default, SQLite3, devo installare un driver del db, cioè una libreria che userà rails per comunicare con il db.
 * un editor (sublime, rubymine, ...)
-* un web server se voglio deployare in produzione E un interprete per il codice (thin, unicorn, ...)
+* un web server (WEBrick in locale, ...) se voglio deployare in produzione E un interprete per il codice (thin, unicorn, ...)
 * Git come repository
 * una continuous integration
 

@@ -6,7 +6,7 @@ di un punto per ottenere l'effetto desiderato.
 Convention Over Configuration
 * E' un paradigma di programmazione che prevede configurazione minima (o addirittura assente).
 
-Agiliità è parte dell'idea di Rails. In ogni caso (presi dal manifesto agile)
+L'agilità è parte dell'idea di Rails. In ogni caso (presi dal manifesto agile)
 * Individui e iterazione sociale sopra a processi e strumenti.
 * lavorare sul software piuttosto che su una documentazione.
 * lavorare insieme al cliente piuttosto che contrattare.
@@ -25,17 +25,6 @@ creare il proprio account
 
 sudo userdel mauro-quaglia
 sudo adduser mauro
-------------------------------------------------------------------------------------------------------------------------
-
-Per creare un gemset separato con RVM
-* https://rvm.io/gemsets/basics/
-
-------------------------------------------------------------------------------------------------------------------------
-ERB
-.html.erb -> vuol dire che espande il file tramite il filtro ERB e il risultato finale è un .html
-Similmente potri fare
-.txt.erb -> vuol dire che espande il file tramite il filtro ERB e il risultato finale è un .html
-------------------------------------------------------------------------------------------------------------------------
 
 Rails
 Quando installo Rails mi viene messa anche a disposizione una command-line (rails) che permette di creare
@@ -48,57 +37,13 @@ WEBrick
 Bundler (bundle significa impacchettare)
 E' un tool che permette di gestire le gemme in maniera efficace.
 
-------------------------------------------------------------------------------------------------------------------------
-Rails è MVC
-
-M  -> Active Record è l'ORM che usa Rails.
-VC -> Action Pack
-
-ORM
-* Se su db ho  la tabella "orders", nel codice avrò il modello "Order"
-* tabelle -> classi, righe -> oggetti, colonne -> attributi
-* metodi di classe ->  operazioni sulle tabelle, metodi di istanza -> operazioni sulla singola righa.
-* supporta sofisticate validazioni sui dati
-
-Views
-* ci sono diversi tipi di templating, ma il più usato è ERB.
-
-Controller
-* collega la richiesta all'azione
-* gestisce le cache, moduli di helper e sessioni.
-
-Request
-* ogni richiesta è costituita da un PATH(utl) e un METHOD(get, post, ...)
-* ad ogni method rails associa in automatico una action.
-
-------------------------------------------------------------------------------------------------------------------------
-
-YAML è un modulo che fa parte delle librerie standard di ruby.
-(YAML = YAML Ain't Markup Language)
-
-------------------------------------------------------------------------------------------------------------------------
-
-Nei javascript sotto assets mettere: use 'strict'
-* capire meglio perché
-
-------------------------------------------------------------------------------------------------------------------------
-
-* i task di rake servono per tenere sotto controllo tutti quegli script che altrimenti sarebbero parte di
-configurazioni esterne.
-
-------------------------------------------------------------------------------------------------------------------------
-
 INFO
 Ruby on Rails è un framework:
 E' come dire apro un progetto ruby vuoto, e mi faccio tutta l'architettura rails da zero.
 oppure
 scarico la gemma rails e con [rails new MyApp] mi crea tutta l'infrastruttura nel progetto ruby.
 
-Meglio avere gemset separati per ogni applicazione così le gemme non si mischiano.
-
-
 ------------------------------------------------------------------------------------------------------------------------
-
 
 RUBY
 

@@ -1,6 +1,10 @@
 * studiare la gemma bundler
 * Capire bundle exec a cosa serve
 * capire Rack
+* capire WEBrick
 * studiare get, puth, patch. delete, post.
 ** post method -> create() action
 * capire meglio File.expand_path
+* Nei javascript sotto assets mettere: use 'strict'
+** capire meglio perché
+
