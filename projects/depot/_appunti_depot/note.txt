@@ -1,9 +1,23 @@
 rails new depot
 
+
 Fissate le versioni con i file:
 .ruby-version
 .ruby-gemset
 * Poi entrare della directory di progetto che così crea il gemset e rifare [bundle] perché quando uso [rails new] non
 prende sempre il ruby corrente. Nel mio caso aveva preso ancora quello vecchio (1.9.3).
 * Chiudo e riapro l'editor e poi posso vedere che sotto External Libraries sta prendendo il ruby e il gemset giusto.
+
+
+Il mio gemset [depot] si trova qui: /home/xpuser/.rvm/gems/ruby-2.1.1@depot
+Se lo voglio cancellare basta fare: [rvm gemset delete depot]
+Se lo voglio ricreare basta:
+* entrare nella directory di progetto -> crea il gemset depot vuoto
+* lancio bundle                       -> scarica le gemme
+
+Quando aggiungo e tolgo gemme dal Gemfile, poi devo lanciare bundle.
+Se l'ho aggiunta la scarica.
+Se l'ho tolta la cancella.
+
+
 
