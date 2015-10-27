@@ -1,0 +1,96 @@
+Creazione:
+rails new NomeApplicazione
+
+Gemme installate:
+bundle show
+
+Dettaglio gemma installata:
+bundle show NomeGemma
+
+Riepilogo: rake about
+* mi da anche l'elenco dei middelware
+* fa anche un check su errori di installazione.
+
+Far partire il sito:
+* rails server (rails server webrick)
+
+Vedere il risultato:
+http://localhost:3000/
+
+DESKTOP
+Aprire sempre dei cmd con:
+* le richieste che arrivano al webserver
+* avere un tail -f sul log
+
+DOCUMENTAZIONE UFFICIALE
+* Rails
+** http://api.rubyonrails.org/
+* Gemme
+** andare nella cartella di progetto
+** gem server
+** http://localhost:8808/ (tutte le rails api)
+
+RAILS
+Generazione controller:
+Generare SayController con due action, hello e goodbye:
+* rails generate controller Say hello goodbye
+
+Navigazione URL:
+http://localhost:3000/controller/azione
+http://localhost:3000/say/hello
+Quando navigo "/say/hello" rails crea una nuova istanza di SayController e chiama il metodo hello, dopodiche cerca la view
+hello.html.erb
+
+------------------------------------------------------------------------------------------------------------------------
+
+* cache
+Tutte le volte che carico una pagina, in
+dev: ricarica tutti i file
+test, pro: li tiene in memoria
+
+* link_to()
+Buona norma usarlo per link interni all'applicazione.
+Per link esterni posso decidere se preferire <a...> (oppure uso sempre link_to per convenzione)
+Il path è a disposizione della rotta anche se non lo specifico, es: say_goodbye_path (NomeController_NomeAction_path)
+
+YAML (YAML = YAML Ain't Markup Language)
+YAML è un modulo che fa parte delle librerie standard di ruby.
+Per configuarere
+* database
+* dati di test
+* traduzioni
+
+ERB
+.html.erb -> vuol dire che espande il file tramite il filtro ERB e il risultato finale è un .html
+.txt.erb  -> vuol dire che espande il file tramite il filtro ERB e il risultato finale è un .txt
+
+------------------------------------------------------------------------------------------------------------------------
+
+Rails è MVC
+
+M  -> Active Record è l'ORM che usa Rails.
+VC -> Action Pack
+
+ORM
+* Se su db ho  la tabella "orders", nel codice avrò il modello "Order"
+* tabelle -> classi, righe -> oggetti, colonne -> attributi
+* metodi di classe ->  operazioni sulle tabelle, metodi di istanza -> operazioni sulla singola righa.
+* supporta sofisticate validazioni sui dati
+
+Views
+* ci sono diversi tipi di templating, ma il più usato è ERB.
+
+Controller
+* collega la richiesta all'azione
+* gestisce le cache, moduli di helper e sessioni.
+
+Request
+* ogni richiesta è costituita da un PATH(url) e un METHOD(get, post, ...)
+* ad ogni method rails associa in automatico una action.
+
+------------------------------------------------------------------------------------------------------------------------
+
+* i task di rake servono per tenere sotto controllo tutti quegli script che altrimenti sarebbero parte di
+configurazioni esterne.
+
+------------------------------------------------------------------------------------------------------------------------

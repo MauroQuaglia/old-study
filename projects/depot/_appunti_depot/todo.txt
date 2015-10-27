@@ -1,0 +1,13 @@
+Quando ho creato l'applicazione, è stato fatto bundle e le ultime righe erano:
+
+...
+Using web-console 2.2.1
+Bundle complete! 12 Gemfile dependencies, 53 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+
+D: Capire perché vuole [run  bundle exec spring binstub --all]. Io al momento non l'ho fatto.
+
+------------------------------------------------------------------------------------------------------------------------

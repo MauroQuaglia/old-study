@@ -1,0 +1,78 @@
+Filosofia Rails
+DRY - don't repeat yourself
+* In Rails la configurazione per cambiare un comportamento sta sempre in un unico punto. Non devo mai toccare in più
+di un punto per ottenere l'effetto desiderato.
+
+Convention Over Configuration
+* E' un paradigma di programmazione che prevede configurazione minima (o addirittura assente).
+
+L'agilità è parte dell'idea di Rails. In ogni caso (presi dal manifesto agile)
+* Individui e iterazione sociale sopra a processi e strumenti.
+* lavorare sul software piuttosto che su una documentazione.
+* lavorare insieme al cliente piuttosto che contrattare.
+* rispondere al cambiamento piuttosto che seguire il piano.
+
+------------------------------------------------------------------------------------------------------------------------
+Quando parte Rails si prende, Ruby, le gemme di Ruby e le gemme di Rails.
+
+Le gemme sono di due tipi, quelle di Ruby e quelle di Rails.
+Ruby:  /home/xpuser/.rvm/gems/ruby-2.1.1/gems/         (dipendono dalla versione di Ruby)
+Rails: /home/xpuser/.rvm/gems/ruby-2.1.1@rails-4/gems/ (dipendono dal Gemfile)
+
+------------------------------------------------------------------------------------------------------------------------
+Linux
+creare il proprio account
+
+sudo userdel mauro-quaglia
+sudo adduser mauro
+
+Rails
+Quando installo Rails mi viene messa anche a disposizione una command-line (rails) che permette di creare
+* applicazioni Rails già preconfigurate: rails new
+* generare controller: rails generate controller
+
+WEBrick
+è una libreria di Ruby che fornisce un web server come servizio.
+
+Bundler (bundle significa impacchettare)
+E' un tool che permette di gestire le gemme in maniera efficace.
+
+INFO
+Ruby on Rails è un framework:
+E' come dire apro un progetto ruby vuoto, e mi faccio tutta l'architettura rails da zero.
+oppure
+scarico la gemma rails e con [rails new MyApp] mi crea tutta l'infrastruttura nel progetto ruby.
+
+------------------------------------------------------------------------------------------------------------------------
+
+RUBY
+
+Marshaling
+Ruby può prendere un oggetto e convertirlo in uno strem di byte che può essere salvato. Questo processo si chiama
+marshaling.
+Rails usa marshaling per memorizzare i dati di sessione.
+
+Idiomi
+a || b
+Se a è false o nil torna b, altrimenti torna a.
+Usato di solito per i default, dove b è il default.
+
+a ||= b (a operatore= b)
+Significa a = a || b (a operatore= b). Assegna alla prima variabile (a) il valore di (a || b)
+count += 1  -> count = count + 1
+count ||= 0 -> count = count || 0
+
+self.new
+Torna un'istanza della classe stessa. Di solito si usa quando c'è l'ereditarietà e torna un'istanza della classe stessa.
+
+require
+require_relative -> specifico solo le directory
+require -> devo specificare tutto il path, con cose del tipo ..\..
+
+require File.expand_path('../../congif/environment', __FILE__)
+Ruby cerca questi file nelle directory specificate nel LOAD_PATH
+
+require File.expand_path('../../congif/environment/x.txt', __FILE__)
+Ruby cerca questo file nelle directory specificate nel LOAD_PATH, in questo caso però cerco solo un file specifico.
+
+
