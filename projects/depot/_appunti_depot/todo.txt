@@ -11,3 +11,9 @@ Use `bundle show [gemname]` to see where a bundled gem is installed.
 D: Capire perché vuole [run  bundle exec spring binstub --all]. Io al momento non l'ho fatto.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Capire come ridurre al minimo il Gemfile, intanto se lascio solo la gemma rails si arrabbia l'applicazione di default
+perché cerca di usare SQLlite.
+Comunque ci sono gemme, tipo 'coffee-rails' che attualmente non uso.
+
+------------------------------------------------------------------------------------------------------------------------

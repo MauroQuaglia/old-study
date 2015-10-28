@@ -1,6 +1,5 @@
 rails new depot
 
-
 Fissate le versioni con i file:
 .ruby-version
 .ruby-gemset
@@ -8,16 +7,26 @@ Fissate le versioni con i file:
 prende sempre il ruby corrente. Nel mio caso aveva preso ancora quello vecchio (1.9.3).
 * Chiudo e riapro l'editor e poi posso vedere che sotto External Libraries sta prendendo il ruby e il gemset giusto.
 
-
 Il mio gemset [depot] si trova qui: /home/xpuser/.rvm/gems/ruby-2.1.1@depot
-Se lo voglio cancellare basta fare: [rvm gemset delete depot]
+Se lo voglio cancellarlo basta fare: [rvm gemset delete depot]
 Se lo voglio ricreare basta:
 * entrare nella directory di progetto -> crea il gemset depot vuoto
 * lancio bundle                       -> scarica le gemme
 
-Quando aggiungo e tolgo gemme dal Gemfile, poi devo lanciare bundle.
-Se l'ho aggiunta la scarica.
-Se l'ho tolta la cancella.
+Quando modifico il Gemfile, poi devo lanciare bundle.
+* Se ho aggiunta una gemma, la scarica nel gemset [depot]
+* Se ho tolto una gemma la cancella dal gemset [depot]
+
+Creare una entità di dominio:
+I nomi vanno al singolare, così l'entità "Product" viene mappata sulla tabella "products". (Product -> products)
+Sotto l'entry :development in /config/database.yml vedo dove stanno le tabelle con i dati.
+Tendenzialmente si trovano sotto la directory db discriminando per gli ambienti test, sviluppo e produzione.
+Quindi apriamo la console rails e: [rails generate scaffold Product tite:string description:text image_url:string price:decimal]
+
+* model
+* view
+* controlle
+* migration
 
 
 
