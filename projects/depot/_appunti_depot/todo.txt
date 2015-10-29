@@ -17,3 +17,4 @@ perché cerca di usare SQLlite.
 Comunque ci sono gemme, tipo 'coffee-rails' che attualmente non uso.
 
 ------------------------------------------------------------------------------------------------------------------------
+

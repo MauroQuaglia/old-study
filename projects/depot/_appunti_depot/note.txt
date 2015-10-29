@@ -17,13 +17,12 @@ Quando modifico il Gemfile, poi devo lanciare bundle.
 * Se ho aggiunta una gemma, la scarica nel gemset [depot]
 * Se ho tolto una gemma la cancella dal gemset [depot]
 
-Creare una entità di dominio:
+Migrare un'entità di dominio:
 I nomi vanno al singolare, così l'entità "Product" viene mappata sulla tabella "products". (Product -> products)
-Sotto l'entry :development in /config/database.yml vedo dove stanno le tabelle con i dati.
-Tendenzialmente si trovano sotto la directory db discriminando per gli ambienti test, sviluppo e produzione.
-Quindi apriamo la console rails e: [rails generate scaffold Product tite:string description:text image_url:string price:decimal]
-Una migrazione rappresenta un cambio di dati, che viene memorizzata in un file sotto la cartella db/migrate. Una
-migrazione può comportare sia un cambio di tabelle che una modifica della stessa. Il nome file è dato da un timestamp
-seguito dal nome della migrazione.
+In /config/database.yml vedo dove stanno le tabelle con i dati.
+Quindi apriamo la console rails: [rails generate scaffold Product tite:string description:text image_url:string price:decimal]
 
+Una migrazione può comportare sia un cambio di tabelle che una modifica delle stesse.
+I file di migration possono essere ritoccati a mano, prima di lanciare la migrazione, dopodichè quando sono sicuro
+posso lanciare la migrazione [rake db:migrate].
 
