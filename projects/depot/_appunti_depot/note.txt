@@ -17,12 +17,27 @@ Quando modifico il Gemfile, poi devo lanciare bundle.
 * Se ho aggiunta una gemma, la scarica nel gemset [depot]
 * Se ho tolto una gemma la cancella dal gemset [depot]
 
+-----------------------------------------------------------------------------------------------------------------------
+Migrazione
+
 Migrare un'entità di dominio:
 I nomi vanno al singolare, così l'entità "Product" viene mappata sulla tabella "products". (Product -> products)
 In /config/database.yml vedo dove stanno le tabelle con i dati.
 Quindi apriamo la console rails: [rails generate scaffold Product tite:string description:text image_url:string price:decimal]
 
 Una migrazione può comportare sia un cambio di tabelle che una modifica delle stesse.
-I file di migration possono essere ritoccati a mano, prima di lanciare la migrazione, dopodichè quando sono sicuro
-posso lanciare la migrazione [rake db:migrate].
+I file di migration (es: 20151028113040_create_products.rb) possono essere ritoccati a mano, prima di lanciare la migrazione.
+Per lanciarla [rake db:migrate].
+Se mi accorgo che ho sbagliato qualcosa posso buttare tutto [rake db:drop], sistemare il file di migrazione (20151028113040_create_products.rb)
+e rifare la migrazione: [rake db:create db:migrate]
+
+Nel file seed.rb posso mettere dei dati di default che possono essere caricati in ogni momento con il comado [rake db:seed]
+
+I metodi con il ! nelle migrazioni:
+create! -> lanciano eccezione se un record non può essere inserito su database
+create  -> in caso di errore fallisce silenziosamente
+
+------------------------------------------------------------------------------------------------------------------------
+Stile
+
 
