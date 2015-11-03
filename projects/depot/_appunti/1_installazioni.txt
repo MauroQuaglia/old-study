@@ -31,10 +31,11 @@ installo la gemma Rails (via RubyGems che è distribuito con il Ruby che è stat
 ------------------------------------------------------------------------------------------------------------------------
 
 Per tenere sotto controllo le varie versioni in uso.
-ruby   -> aggiungo il file .ruby-version con la versione usata nell'applicazione
-gemset -> aggiungo il file .ruby-gemset con il nome del gemset usato
-rails  -> nel gem file fisso la versione usata nell'applicazione.
-
+ruby    -> aggiungo il file .ruby-version con la versione usata nell'applicazione
+gemset  -> aggiungo il file .ruby-gemset con il nome del gemset usato
+rails   -> nel gem file fisso la versione usata nell'applicazione.
+bundler -> è una gemma speciale che serve per aggiornare le altre gemme, si può fissare la versione mediante l'entry
+           "BUNDLED WITH" nel Gemfile.lock
 ------------------------------------------------------------------------------------------------------------------------
 
 Controllare le varie installazioni con il comando which:
