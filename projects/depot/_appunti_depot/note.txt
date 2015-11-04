@@ -39,5 +39,10 @@ create  -> in caso di errore fallisce silenziosamente
 
 ------------------------------------------------------------------------------------------------------------------------
 Stile
+Nel layout application posso separare i body per lo stile delle varie pagine.
+<body class="<%= controller.controller_name %>">
+    <%= yield %>
+</body>
+Nel scss poi avrò: .products {...}
 
 

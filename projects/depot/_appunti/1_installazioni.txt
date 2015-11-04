@@ -34,8 +34,7 @@ Per tenere sotto controllo le varie versioni in uso.
 ruby    -> aggiungo il file .ruby-version con la versione usata nell'applicazione
 gemset  -> aggiungo il file .ruby-gemset con il nome del gemset usato
 rails   -> nel gem file fisso la versione usata nell'applicazione.
-bundler -> è una gemma speciale che serve per aggiornare le altre gemme, si può fissare la versione mediante l'entry
-           "BUNDLED WITH" nel Gemfile.lock
+bundler -> è una gemma speciale che serve per aggiornare le altre gemme, meglio fissare la versione nel Gemfile. (es: gem 'bundler', '1.10.6')
 ------------------------------------------------------------------------------------------------------------------------
 
 Controllare le varie installazioni con il comando which:

@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+Carica tutti i css sotto la cartella: /app/assets/stylesheets
+
+media: 'all'
+Potremmo definire uno stile per ogni supporto su cui la pagina verrà utilizzata: tablet, smartphone, schermi televisivi, console per i videogiochi, ecc.
+all    -> il css si applica a tutti i dispositivi di visualizzazione.
+print  -> il css si applica ai dispositivi di stampa.
+screen -> il css si applica allo schermo del computer.
+
+'data-turbolinks-track' => true
+Quando faccio un'azione sulla pagina, invece di ricaricare tutto il contenuto carica solo il title, il body, ecc ma non quello che è marcato come turbolink.
+
+
