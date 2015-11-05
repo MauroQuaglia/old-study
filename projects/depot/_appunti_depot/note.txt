@@ -44,5 +44,27 @@ Nel layout application posso separare i body per lo stile delle varie pagine.
     <%= yield %>
 </body>
 Nel scss poi avrò: .products {...}
+------------------------------------------------------------------------------------------------------------------------
+cycle serve per alternare le classi. gli posso dare anche un nome così ne posso avere diversi nella stessa pagina
+<tr class='<%= cycle('list_line_odd', 'list_line_even', name: 'mq') %>'>
+...
+</tr>
+<% reset_cycle('mq') %>
+------------------------------------------------------------------------------------------------------------------------
+Lista di termini e descrizioni
+<dl> lista
+    <dt></dt> termine
+    <dd></dd> descrizione
+</dl>
+<dl>
+</dl>
+------------------------------------------------------------------------------------------------------------------------
 
+<%= truncate(strip_tags(product.description), length: 80) %>
+tronca a 80 caratteri, l'80-esimo diventa il tag :omission, cioè (...)
+strip_tags elimina tutti i tag html commenti inclusi
 
+------------------------------------------------------------------------------------------------------------------------
+
+<%= link_to('Show', product) %>
+Chiama la vista show.html.erb e gli passa product.
