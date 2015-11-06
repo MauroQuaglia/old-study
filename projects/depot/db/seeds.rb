@@ -9,7 +9,19 @@
 Product.delete_all
 
 Product.create!(
+    title: 'CoffeeScript',
+    description: %{<p> Questo libro è bellissimo!</p>},
+    image_url: 'cs.jpg',
+    price: '49')
+
+Product.create!(
     title: 'Programming Ruby 1.9 & 2.0',
     description: %{<p> Questo libro è bellissimo!</p>},
     image_url: 'ruby.jpg',
     price: '49.95')
+
+Product.create!(
+    title: 'Rails Test Prescription',
+    description: %{<p> Questo libro è bellissimo!</p>},
+    image_url: 'rtp.jpg',
+    price: '50')

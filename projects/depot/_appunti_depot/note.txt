@@ -51,14 +51,6 @@ cycle serve per alternare le classi. gli posso dare anche un nome così ne posso
 </tr>
 <% reset_cycle('mq') %>
 ------------------------------------------------------------------------------------------------------------------------
-Lista di termini e descrizioni
-<dl> lista
-    <dt></dt> termine
-    <dd></dd> descrizione
-</dl>
-<dl>
-</dl>
-------------------------------------------------------------------------------------------------------------------------
 
 <%= truncate(strip_tags(product.description), length: 80) %>
 tronca a 80 caratteri, l'80-esimo diventa il tag :omission, cioè (...)
@@ -66,5 +58,14 @@ strip_tags elimina tutti i tag html commenti inclusi
 
 ------------------------------------------------------------------------------------------------------------------------
 
+In una pagina di index:
+Chiama la show passandogli product:
+/products/5
 <%= link_to('Show', product) %>
-Chiama la vista show.html.erb e gli passa product.
+
+<%= link_to('Edit', edit_product_path(product)) %>
+/products/5/edit
+
+chiama il metodo delete sul controller ma prima chiede conferma.
+<%= link_to('Destroy', product, method: :delete, data: {confirm: 'Are you sure?'}) %>
+/products/5/
