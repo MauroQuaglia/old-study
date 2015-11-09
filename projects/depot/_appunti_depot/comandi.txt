@@ -16,6 +16,10 @@ rake db:seed
 [rake db:drop db:create db:migrate]
 * distruggere e ricreare il database
 
+rake db:rollback
+* elimina lo schema, ma il database non viene distrutto.
+
+
 
 ------------------------------------------------------------------------------------------------------------------------
 
