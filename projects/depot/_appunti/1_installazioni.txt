@@ -31,10 +31,30 @@ installo la gemma Rails (via RubyGems che è distribuito con il Ruby che è stat
 ------------------------------------------------------------------------------------------------------------------------
 
 Per tenere sotto controllo le varie versioni in uso.
+
 ruby    -> aggiungo il file .ruby-version con la versione usata nell'applicazione
+
 gemset  -> aggiungo il file .ruby-gemset con il nome del gemset usato
+
 rails   -> nel gem file fisso la versione usata nell'applicazione.
+
 bundler -> è una gemma speciale che serve per aggiornare le altre gemme, meglio fissare la versione nel Gemfile. (es: gem 'bundler', '1.10.6')
+
+git
+1)
+* Guardo le impostazioni dei commit. Potrebbero essere gia impostate quindi attenzione a non sovrascriverle:
+* Comunque dove ho il file .git li posso mettere le mie impostazioni. Nel mio caso [/home/xpuser/studio/mauro-quaglia/studio/.git]
+** git config --global --list
+* Se non ci sono problemi posso mettere i miei dati:
+** git config --global --add user.name=MauroQuaglia
+** git config --global --add user.email=mauroquaglia@libero.it
+2)
+Dopo posso impostare il file: .gitignore
+3)
+git init
+git add .
+git commit -m "Primo commit."
+
 ------------------------------------------------------------------------------------------------------------------------
 
 Controllare le varie installazioni con il comando which:

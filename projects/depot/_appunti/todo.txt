@@ -7,4 +7,6 @@
 * capire meglio File.expand_path
 * Nei javascript sotto assets mettere: use 'strict'
 ** capire meglio perché
+* vedere come impostare il git sul singolo progetto e non su quello globale: git config --global. In realtà bisogna
+studiare come impostare git.
 
