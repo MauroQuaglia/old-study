@@ -1,10 +1,11 @@
 Cosa mi serve per iniziare con il piede giusto:
 * Ruby (l'interprete)
 * Ruby on Rails (la gemma)
+* RVM per la gestione delle diverse versioni di Ruby
 * un interprete JavaScript (per linux è da installare)
 * librerie varie che dipendono dal SO (quando servono si installano con apt-get)
 * un database
-** Se non è quello di default, SQLite3, devo installare un driver del db, cioè una libreria che userà rails per comunicare con il db.
+** Se non è quello di default (SQLite3), devo installare un driver del db, cioè una libreria che userà rails per comunicare con il db.
 * un editor (sublime, rubymine, ...)
 * un web server (WEBrick in locale, ...) se voglio deployare in produzione E un interprete per il codice (thin, unicorn, ...)
 * Git come repository
@@ -15,10 +16,23 @@ Cosa mi serve per iniziare con il piede giusto:
 Linux:
 * potrebbero servirmi alcune librerie, ma eventualmente me le chiederà il SO di volta in volta.
 
+Controllo che non ci siano installati dei Ruby di sistema [which ruby]:
+Se sì li posso cancellare, preferisco avere tutto sotto RVM
+Attenzione però a non avere dei progetti che usano questa versione di Ruby!
+[sudo apt-get purge ruby]
+
+Se c'è già un rvm installato posso vedere tutti i ruby installati tramire RVM: [rvm list]
+* Se li voglio rimuovere: [rvm remove]
+In tal modo metto solo quelli che voglio io, infatti quando scarico rvm me ne mette già un paio di default.
+
+
+Se volgio rimuovere anche rvm: [rvm implode]
+
 Installo RVM (Ruby Version Manager)
 * curl -sSL https://get.rvm.io | bash -s stable
 * chiudere il terminale e riaprirlo per ricaricare il file .bash_login
 * rvm requirements --autolibs=enable (installazione dei prerequisiti per il SO in uso)
+* di default mi installa già dei ruby, li posso buttare. [rvm list; rvm remove]
 
 installo Ruby con RVM
 * rvm install 2.0.0
@@ -32,9 +46,9 @@ installo la gemma Rails (via RubyGems che è distribuito con il Ruby che è stat
 
 Per tenere sotto controllo le varie versioni in uso.
 
-ruby    -> aggiungo il file .ruby-version con la versione usata nell'applicazione
+ruby    -> aggiungo il file .ruby-version con la versione usata nell'applicazione. E' un file di rvm.
 
-gemset  -> aggiungo il file .ruby-gemset con il nome del gemset usato
+gemset  -> aggiungo il file .ruby-gemset con il nome del gemset usato. E' un file di rvm.
 
 rails   -> nel gem file fisso la versione usata nell'applicazione.
 

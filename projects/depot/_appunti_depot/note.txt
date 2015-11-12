@@ -1,6 +1,6 @@
 rails new depot
 
-Fissate le versioni con i file:
+Fissate le versioni con i file di rvm:
 .ruby-version
 .ruby-gemset
 * Poi entrare della directory di progetto che così crea il gemset e rifare [bundle] perché quando uso [rails new] non
@@ -18,7 +18,7 @@ Quando modifico il Gemfile, poi devo lanciare bundle.
 * Se ho tolto una gemma la cancella dal gemset [depot]
 
 -----------------------------------------------------------------------------------------------------------------------
-Migrazione
+Scaffold e Migrazione
 
 Migrare un'entità di dominio:
 I nomi vanno al singolare, così l'entità "Product" viene mappata sulla tabella "products". (Product -> products)
@@ -28,8 +28,7 @@ Quindi apriamo la console rails e creiamo tutta l'infrastruttura legata al datab
 
 Una migrazione può comportare sia un cambio di tabelle che una modifica delle stesse.
 I file di migration (es: 20151028113040_create_products.rb) possono essere ritoccati a mano, prima di lanciare la migrazione.
-La migrazione crea effettivamente il database
-Per lanciarla [rake db:migrate].
+La migrazione crea anche il database. Per lanciarla [rake db:migrate].
 
 Se mi accorgo che ho sbagliato qualcosa posso buttare tutto [rake db:drop], sistemare il file di migrazione (20151028113040_create_products.rb)
 e rifare la migrazione: [rake db:create db:migrate]
@@ -40,6 +39,11 @@ I metodi con il ! nelle migrazioni:
 create! -> lanciano eccezione se un record non può essere inserito su database
 create  -> in caso di errore fallisce silenziosamente
 
+Quando voglio pulire e rifare da zero
+rake db:create crea il database
+rake db:migrate crea le tabelle delle migrazioni
+rake db:seed importa i dati
+
 ------------------------------------------------------------------------------------------------------------------------
 Stile
 Nel layout application posso separare i body per lo stile delle varie pagine.
@@ -47,6 +51,9 @@ Nel layout application posso separare i body per lo stile delle varie pagine.
     <%= yield %>
 </body>
 Nel scss poi avrò: .products {...}
+
+Rails carica tutti i fogli di stile in una volta, (poi penso siano cachati con turbolink o dal browser) comuque
+per differenziarli nelle varie pagine il trucchetto è il precedente.
 ------------------------------------------------------------------------------------------------------------------------
 cycle serve per alternare le classi. gli posso dare anche un nome così ne posso avere diversi nella stessa pagina
 <tr class='<%= cycle('list_line_odd', 'list_line_even', name: 'mq') %>'>
