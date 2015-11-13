@@ -1,3 +1,8 @@
+Rails carica tutti i fogli di stile in un colpo solo.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
 rails new depot
 
 Fissate le versioni con i file di rvm:
