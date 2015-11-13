@@ -19,6 +19,25 @@ rake db:seed
 rake db:rollback
 * elimina lo schema, ma il database non viene distrutto.
 
+------------------------------------------------------------------------------------------------------------------------
+
+Vedere tutti i gemset delle varie versioni di ruby installate:
+* rvm gemset list_all
+
+Pulire i gemset:
+* rvm gemset delete nome-gemset.
+* per ricrearlo vado nella dir di progetto e faccio: bundle
+* NB:
+Quando cancello il gemset cancello anche la gemma [bundler], quindi se poi rilancio bundle usa quello di sistema del gemset globale per riscaricare le gemme.
+Quindi dovrei cancellare il gemset, aggiornare la gemma bundler, e poi fare bundle. (Vedere il Gemfile.lock)
+Attenzione che posso avere nel Gemfile.lock specificato una versione di bundler e comunque usarne un'altra. E' più un appunto
+per lo sviluppatore che per il sistema!
+
+Vedere le gemme del gemset corrente:
+gem list
+
+
+
 
 
 ------------------------------------------------------------------------------------------------------------------------

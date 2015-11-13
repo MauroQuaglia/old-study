@@ -25,7 +25,6 @@ Se c'è già un rvm installato posso vedere tutti i ruby installati tramire RVM:
 * Se li voglio rimuovere: [rvm remove]
 In tal modo metto solo quelli che voglio io, infatti quando scarico rvm me ne mette già un paio di default.
 
-
 Se volgio rimuovere anche rvm: [rvm implode]
 
 Installo RVM (Ruby Version Manager)
@@ -53,6 +52,8 @@ gemset  -> aggiungo il file .ruby-gemset con il nome del gemset usato. E' un fil
 rails   -> nel gem file fisso la versione usata nell'applicazione.
 
 bundler -> è una gemma speciale che serve per aggiornare le altre gemme, meglio fissare la versione nel Gemfile. (es: gem 'bundler', '1.10.6')
+* tuttavia è meglio aggiornare anche il gemset globale del ruby corrente.
+* quando con rvm installi ruby, viene creato comunque un gemset globale contenente alcune gemme.
 
 git
 1)
@@ -65,9 +66,11 @@ git
 2)
 Dopo posso impostare il file: .gitignore
 3)
+Il primo commit
 git init
 git add .
 git commit -m "Primo commit."
+git push
 
 ------------------------------------------------------------------------------------------------------------------------
 

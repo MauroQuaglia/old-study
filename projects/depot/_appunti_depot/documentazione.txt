@@ -1,2 +1,9 @@
-Configurazione database:
-*
+DOCUMENTAZIONE UFFICIALE
+
+RAILS
+* http://api.rubyonrails.org/
+
+GEMME
+* andare nella cartella di progetto
+* gem server
+* http://localhost:8808/
