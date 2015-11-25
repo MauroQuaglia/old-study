@@ -49,6 +49,8 @@ ruby    -> aggiungo il file .ruby-version con la versione usata nell'applicazion
 
 gemset  -> aggiungo il file .ruby-gemset con il nome del gemset usato. E' un file di rvm.
 
+rspec   -> aggiungo il file .rspec e la gemma [gem 'rspec-rails'] nel gruppo :development + :test; seguire le istruzioni...[https://relishapp.com/rspec/rspec-rails/docs/gettingstarted]
+
 rails   -> nel gem file fisso la versione usata nell'applicazione.
 
 bundler -> è una gemma speciale che serve per aggiornare le altre gemme, meglio fissare la versione nel Gemfile. (es: gem 'bundler', '1.10.6')
