@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
 
   # POST /products
   # POST /products.json
+  # dal test del controller: ---> post :create, product: @update
   def create
     @product = Product.new(product_params)
 
@@ -39,6 +40,7 @@ class ProductsController < ApplicationController
 
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
+  # dal test del controller: ---> patch :update, id: @product, product: @update
   def update
     respond_to do |format|
       if @product.update(product_params)
