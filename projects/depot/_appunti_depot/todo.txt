@@ -36,3 +36,7 @@ Comunque ci sono gemme, tipo 'coffee-rails' che attualmente non uso.
 dove sta il /.bundle che viene ignorato nel gitignore e a cosa serve?
 
 ------------------------------------------------------------------------------------------------------------------------
+
+lanciare con rspec solo i test di una certa suite. Del tipo rake spec:models
+
+------------------------------------------------------------------------------------------------------------------------
