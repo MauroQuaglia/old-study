@@ -40,3 +40,5 @@ dove sta il /.bundle che viene ignorato nel gitignore e a cosa serve?
 lanciare con rspec solo i test di una certa suite. Del tipo rake spec:models
 
 ------------------------------------------------------------------------------------------------------------------------
+
+A cosa servono i file .keep?

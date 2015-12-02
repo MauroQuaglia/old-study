@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Product do
+  fixtures :products
 
   it 'attributes must be not empty' do
     product = described_class.create
@@ -30,6 +31,22 @@ RSpec.describe Product do
     product = product_for('My title', 'My description', 'my-image-url.doc', 1)
     expect(product.invalid?).to be_truthy
   end
+
+  it 'fixture is loaded' do
+    expect(Product.all.first[:title]).to eq('Ruby')
+  end
+
+  it 'product is not valid without a unique title' do
+
+
+
+    #product = product_for(products(:ruby).title, 'xxx', 'y.png', 1000)
+
+    #expect(product.invalid?).to be_truthy
+    #expect(product.errors[:title].first).to eq('has already been taken')
+  end
+
+
 
   private
 

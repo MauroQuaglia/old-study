@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ruby:
+  title: 'Ruby'
+  description: 'Beautiful Ruby!'
+  image_url: ruby.png
+  price: 100.00

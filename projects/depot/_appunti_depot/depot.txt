@@ -1,6 +1,11 @@
-
-
-
+NB:
+Nel file di test quando voglio caricare una fixture lo devo fare esplicitamente!
+ES:
+RSpec.describe Product do
+  fixtures :products
+end
+e nello rails_helper ci deve essere la riga
+config.fixture_path = "#{::Rails.root}/spec/fixtures"
 ------------------------------------------------------------------------------------------------------------------------
 
 Rails carica tutti i fogli di stile in un colpo solo.
