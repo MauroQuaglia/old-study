@@ -6,6 +6,8 @@ RSpec.describe Product do
 end
 e nello rails_helper ci deve essere la riga
 config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+La fixture non passa dal modello, quindi si saltano tutti gli eventuali check di validazione.
 ------------------------------------------------------------------------------------------------------------------------
 
 Rails carica tutti i fogli di stile in un colpo solo.
