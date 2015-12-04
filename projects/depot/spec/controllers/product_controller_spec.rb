@@ -18,7 +18,7 @@ RSpec.describe ProductsController do
     get :index
 
     expect(response).to have_http_status(:success)
-   # assert_not_nil assigns(:products)
+    expect(assigns(:products)).not_to be_nil
   end
 
 =begin

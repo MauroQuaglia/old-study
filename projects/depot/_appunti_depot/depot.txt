@@ -1,3 +1,16 @@
+Nel controller:
+def index
+    @products = Product.all
+end
+
+Nel test del controller:
+get :index
+expect(assigns(:products)).not_to be_nil
+
+Verifica che la variabile @products del controller è stata valorizzata.
+Se anche fosse @products = '' il test sarebbe verde lo stesso.
+
+------------------------------------------------------------------------------------------------------------------------
 NB:
 Nel file di test quando voglio caricare una fixture lo devo fare esplicitamente!
 ES:
