@@ -10,7 +10,7 @@ Product.delete_all
 
 Product.create!(
     title: 'CoffeeScript',
-    description: %{<p> Questo libro è bellissimo!</p>},
+    description: %{<p> Questo libro è bellissimo! Il suo prezzo è > 0!!!</p>},
     image_url: 'cs.jpg',
     price: '49')
 

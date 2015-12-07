@@ -1,3 +1,8 @@
+sanitize(...) permette di caricare nella web page dell'html correttamente.
+
+Senza sanitize <p> -> &lt;p&gt;
+Con   sanitaze <p> -> <p>
+------------------------------------------------------------------------------------------------------------------------
 Nel controller:
 def index
     @products = Product.all
