@@ -317,6 +317,7 @@ Carica tutti i js sotto la cartella: /app/assets/javascript
 
 ------------------------------------------------------------------------------------------------------------------------
 Prevenire attacchi xss
+servono per quando si mettono le form
 
 i csrf_meta_tags vengono tradotti come
 <meta name="csrf-param" content="authenticity_token" />

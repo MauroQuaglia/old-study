@@ -21,11 +21,12 @@ RSpec.describe ProductsController do
     expect(assigns(:products)).not_to be_nil
   end
 
-=begin
-  test "should get new" do
+  it 'should get new' do
     get :new
-    assert_response :success
+
+    expect(response).to have_http_status(:success)
   end
+=begin
 
   test "should create product" do
     # Falliva perché usa il products.yml come database.
