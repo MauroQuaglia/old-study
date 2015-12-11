@@ -2,17 +2,17 @@ require 'rails_helper'
 
 RSpec.describe ProductsController do
 
-    before do
-      #@product = products(:one)
-=begin
-      @update = {
-              title: 'Lorem Ipsum',
-              description: 'Wibbles are fun!',
-              image_url: 'lorem.jpg',
-              price: 19.95
-      }
-=end
-    end
+  #https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs
+
+  before do
+    #@product = products(:one)
+    @update = {
+        title: 'Lorem Ipsum',
+        description: 'Wibbles are fun!',
+        image_url: 'lorem.jpg',
+        price: 19.95
+    }
+  end
 
   it 'should get index' do
     get :index
@@ -26,6 +26,16 @@ RSpec.describe ProductsController do
 
     expect(response).to have_http_status(:success)
   end
+
+  it 'should create product' do
+    # Dato che è una post gli posso passare una hash con i valori, quelli che recupererebbe dalla form.
+    # Product.count è di ActiveRecord e vale inizialmente 1 perché un valore è nella fixture.
+    expect { post :create, product: @update }.to change { Product.count }.from(1).to(2)
+    #expect(response).to redirect_to(location)
+    #expect { post :create, product: @update }.to redirect_to(product_path(assigns(:product)))
+  end
+
+
 =begin
 
   test "should create product" do
