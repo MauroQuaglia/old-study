@@ -43,5 +43,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'rspec-rails'
+  gem 'capybara' # mi permette di avere i selettori per l'html. have_css, have_selectori, ecc...
 end
 

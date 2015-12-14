@@ -30,7 +30,7 @@ RSpec.describe ProductsController do
   it 'should create product' do
     # Dato che è una post gli posso passare una hash con i valori, quelli che recupererebbe dalla form.
     # Product.count è di ActiveRecord e vale inizialmente 1 perché un valore è nella fixture.
-    expect { post :create, product: @update }.to change { Product.count }.from(1).to(2)
+    expect { post :create, product: @update }.to change { Product.count }.from(3).to(4)
     #expect(response).to redirect_to(location)
     #expect { post :create, product: @update }.to redirect_to(product_path(assigns(:product)))
   end
