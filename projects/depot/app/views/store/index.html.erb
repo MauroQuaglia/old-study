@@ -5,9 +5,14 @@ notice
 <% end %>
 
 <h1>Your Pragmatic Catalog</h1>
-<% cache do %>
-    ddddddddddddd
+<!-- Come chiave mettiamo in prodotto, se su db non tocco niente lui non fa più query per recuperare prodotti
+     se invece faccio un rake db:seed vengono aggiornati tutti quindi cambia la chiave e vengono ricaricati.
+     Si può vedere tramite le query che fa su db. -->
+<% cache ['store', Product.latest] do %>
     <% @products.each do |product| %>
+
+        <!-- Qui invece fa la cache della singola entry, infatti non cambieranno sempre tutte e se c'è già in cache la prende da li-->
+        <% cache ['entry', product] do %>
             <div class='entry'>
               <%= image_tag(product.image_url) %>
               <h3><%= product.title %></h3>
@@ -17,4 +22,7 @@ notice
               </div>
             </div>
         <% end %>
+
     <% end %>
+<% end %>
+
