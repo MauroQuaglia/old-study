@@ -12,7 +12,7 @@ Product.create!(
     title: 'CoffeeScript',
     description: %{<p> Questo libro è bellissimo! Il suo prezzo è > 0!!!</p>},
     image_url: 'cs.jpg',
-    price: '49')
+    price: '4900.70')
 
 Product.create!(
     title: 'Programming Ruby 1.9 & 2.0',
