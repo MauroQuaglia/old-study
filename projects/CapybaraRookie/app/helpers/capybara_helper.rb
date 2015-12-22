@@ -1,0 +1,2 @@
+module CapybaraHelper
+end
