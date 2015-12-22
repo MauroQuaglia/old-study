@@ -1,0 +1,4 @@
+rails new CapybaraRookie -T
+
+gem 'rspec-rails'
+bundle install
