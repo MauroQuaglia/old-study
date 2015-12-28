@@ -1,0 +1,5 @@
+Lo spec_helper serve per i test che non dipendono da Rails. Tipicamente quelli che testano classi di libreria.
+Sembra che sia caricato in automatico quindi non serve specificarlo.
+
+Il rails_helper serve per i test che dipendono da rails e deve caricarsi anche lo spec_helper, infatti deve contenere la riga
+require 'spec_helper'

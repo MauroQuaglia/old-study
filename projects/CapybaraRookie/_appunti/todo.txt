@@ -6,3 +6,5 @@ rails generate rspec:install
 
 rails generate controller capybara index
 
+
+

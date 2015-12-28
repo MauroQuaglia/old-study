@@ -90,4 +90,11 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  config.around(:example, :puts_in_spec_helper => :on) do |example|
+    puts 'Test start [spec_helper]'
+    example.run
+    puts 'Test stop [spec_helper]'
+  end
+
 end
