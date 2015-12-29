@@ -2,6 +2,7 @@ rails new CapybaraRookie -T
 
 gem 'rspec-rails'
 bundle install
+
 rails generate rspec:install
 
 rails generate controller capybara index

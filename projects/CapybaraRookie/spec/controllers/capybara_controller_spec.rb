@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'rails_helper' # usando cose di Rails è necessario metterlo.
 
 RSpec.describe CapybaraController do
 
@@ -7,12 +7,12 @@ RSpec.describe CapybaraController do
     puts response.status
   end
 
-  it 'returns http success spec decorated', :puts_in_spec_helper => :on do
+  xit 'returns http success spec decorated', :puts_in_spec_helper => :on do
     get :index
     puts response.status
   end
 
-  it 'returns http success rails decorated', :puts_in_rails_helper => :on do
+  xit 'returns http success rails decorated', :puts_in_rails_helper => :on do
     get :index
     puts response.status
   end

@@ -4,3 +4,26 @@ Sembra che sia caricato in automatico quindi non serve specificarlo.
 Il rails_helper serve per i test che dipendono da rails e deve caricarsi anche lo spec_helper, infatti deve contenere la riga
 require 'spec_helper'.
 Pare che nel rails_helper non serva caricare lo spec_helper in quanto caricato in automatico.
+
+Se nel file .rspec metto: [--require spec_helper] non serve mettere [require 'rails_helper'] nelle varie classi di test.
+
+Lo spec_helper contiene le alcune configurazioni customper RSpec, ma non deve essere caricato per forza.
+Se non lo uso non avrò quelle particolari configurazioni ma la sintassi e le expectation sì, in quanto facenti parte della gemma
+installata.
+
+Se vedo questo file
+/home/xpuser/.rvm/gems/ruby-2.1.1/gems/capybara-2.5.0/lib/capybara/rspec.rb
+si possono vedere cosa capybara mette a disposizione
+
+config.include Capybara::DSL, :type => :feature
+config.include Capybara::RSpecMatchers, :type => :feature
+config.include Capybara::RSpecMatchers, :type => :view
+
+
+https://www.relishapp.com/rspec/rspec-rails/v/3-4/docs/feature-specs/feature-spec
+i features spec richiedono capybara
+
+Documentazione di capybara
+http://www.rubydoc.info/github/jnicklas/capybara/master
+
+
