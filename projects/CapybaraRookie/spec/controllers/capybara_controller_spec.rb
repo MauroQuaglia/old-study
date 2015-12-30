@@ -7,12 +7,12 @@ RSpec.describe CapybaraController do
     puts response.status
   end
 
-  xit 'returns http success spec decorated', :puts_in_spec_helper => :on do
+  it 'returns http success spec decorated', :puts_in_spec_helper => :on do
     get :index
     puts response.status
   end
 
-  xit 'returns http success rails decorated', :puts_in_rails_helper => :on do
+  it 'returns http success rails decorated', :puts_in_rails_helper => :on do
     get :index
     puts response.status
   end

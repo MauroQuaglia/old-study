@@ -1,3 +1,8 @@
+note:
+Rails è una rack application
+documentazione:
+https://github.com/jnicklas/capybara
+
 Lo spec_helper serve per i test che non dipendono da Rails. Tipicamente quelli che testano classi di libreria.
 Sembra che sia caricato in automatico quindi non serve specificarlo.
 
@@ -25,5 +30,19 @@ i features spec richiedono capybara
 
 Documentazione di capybara
 http://www.rubydoc.info/github/jnicklas/capybara/master
+
+Capybara uso lo stesso DSL per tutti i driver:
+* rack_test
+** default;
+** veloce ma limitato;
+** no javasctipt;
+** no cose specifiche di http;
+** no accesso a url remote
+** puo essere configurato (headers, ...)
+
+
+* selenium
+* webkit
+* ...
 
 

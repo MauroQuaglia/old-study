@@ -2,19 +2,38 @@ require 'rails_helper'
 
 RSpec.feature 'Capybara page' do
 
-  it 'respond correctly without javascript' do
-    visit '/capybara'
-
-    expect(page).to have_http_status(:success)
-    expect(page).to have_css('h1', text: 'Capybara')
+  after do
+    puts "Capybara.current_driver: [#{Capybara.current_driver}]"
   end
 
-  it 'respond correctly with javascript', :js => true do
+  it 'default driver is rack_test' do
+    test_info
+  end
+
+  it 'default driver is rack_test (:driver => :rack_test)', :driver => :rack_test do
+    test_info
+  end
+
+  it 'default javascript driver is selenium (activated by :js => true)', :js => true do
+    test_info
+
+  end
+
+  it 'default javascript driver is selenium (:driver => :selenium)', :driver => :selenium do
+    test_info
+  end
+
+  it 'javascript headless driver is webkit (:driver => :webkit)', :driver => :webkit do
+    test_info
+  end
+
+  private
+
+  def test_info
     visit '/capybara'
 
-    sleep(5)
-    #expect(page).to have_http_status(:success)
-    #expect(page).to have_css('h1', text: 'Capybara')
+    expect(page).to have_css('h1', text: 'Capybara')
+    puts "Capybara.current_driver: [#{Capybara.current_driver}]"
   end
 
 end
