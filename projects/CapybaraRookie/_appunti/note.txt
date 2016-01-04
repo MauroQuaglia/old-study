@@ -36,7 +36,6 @@ Capybara uso lo stesso DSL per tutti i driver:
 ** default;
 ** veloce ma limitato;
 ** no javasctipt;
-** no cose specifiche di http;
 ** no accesso a url remote
 ** puo essere configurato (headers, ...)
 

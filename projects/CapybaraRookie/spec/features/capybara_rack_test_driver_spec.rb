@@ -1,27 +1,31 @@
 require 'rails_helper'
 
-RSpec.feature 'driver rack_test' do
+RSpec.feature 'rack_test driver' do
 
-  it 'is default if no specified' do
+  it 'is default when no specified' do
+    expect(Capybara.current_driver).to be(:rack_test)
+  end
+
+  it 'cannot support javascript' do
+    expect {
+      page.evaluate_script("alert('Hello');")
+    }.to raise_error(Capybara::NotSupportedByDriverError)
+  end
+
+  it 'cannot visit a remote application' do
+    expect {
+      visit 'https://www.google.it/'
+    }.to raise_error(ActionController::RoutingError)
+  end
+
+  it 'support page status code' do
     visit '/capybara'
-    expect(page.status_code).to be(200)
 
-    puts "Capybara current driver: [#{Capybara.current_driver}]"
+    expect(page.status_code).to be(:success)
   end
 
-  it 'cannot understand javascript' do
-    visit '/capybara'
-    expect(page.status_code).to be(200)
-    expect(page).to have_css('h1', text: 'Capybara')
-
-    sleep(1)
-    puts page.evaluate_script("alert('ciao');")
-    sleep(1)
+  it 'is fast' do
+    puts "Visit Capybara page in [#{Benchmark.realtime { visit '/capybara' }}] seconds."
   end
-
-  it 'cannot test a remote application', :js => true do
-    visit 'http://www.trovaprezzi.it/'
-  end
-
 
 end

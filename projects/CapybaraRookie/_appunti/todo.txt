@@ -8,4 +8,19 @@ rails generate rspec:install
 rails generate controller capybara index
 
 
+------------------------------------------------------------------------------------------------------------------------
+
+Capire come
+* impostare
+* leggere
+gli headers
+
+Capire come
+* impostare
+* leggere
+i cookie
+
+* configurazione dei vari browser
+
+
 
