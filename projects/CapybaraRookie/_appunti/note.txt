@@ -32,7 +32,7 @@ Documentazione di capybara
 http://www.rubydoc.info/github/jnicklas/capybara/master
 
 Capybara uso lo stesso DSL per tutti i driver:
-* rack_test
+* rack_test (http://www.rubydoc.info/github/jnicklas/capybara/Capybara/RackTest)
 ** default;
 ** veloce ma limitato;
 ** no javasctipt;
