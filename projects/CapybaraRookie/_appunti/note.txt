@@ -45,3 +45,24 @@ Capybara uso lo stesso DSL per tutti i driver:
 * ...
 
 
+------------------------------------------------------------------------------------------------------------------------
+* Il più veloce
+** rack_test (default)
+
+* Supporta javascript
+** selenium
+** webkit
+** poltergeist
+
+* Accede a url remote
+** selenium
+** webkit (ma richiede configurazione per eliminare i warning)
+** poltergeist
+
+Supporta lo status code della risposta
+** rack_test
+** webkit
+** poltergeist
+
+* Supporta in maniera semplice la modifica degli headers
+* Supporta in maniera semplice la gestione dei cookie
