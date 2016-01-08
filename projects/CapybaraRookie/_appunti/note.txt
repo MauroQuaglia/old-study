@@ -64,5 +64,12 @@ Supporta lo status code della risposta
 ** webkit
 ** poltergeist
 
+Manipola facilmente gli header
+* request
+** webkit
+** poltergeist
+
+
+
 * Supporta in maniera semplice la modifica degli headers
 * Supporta in maniera semplice la gestione dei cookie
