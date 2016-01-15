@@ -12,4 +12,8 @@ class CapybaraController < ApplicationController
     @cookie = "Cookie: [#{cookies[:driver]}]"
   end
 
+  def capybara_bulk_javascript
+
+  end
+
 end

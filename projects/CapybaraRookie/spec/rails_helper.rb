@@ -64,4 +64,16 @@ RSpec.configure do |config|
     puts 'In rails_helper'
   end
 
+  # Impostare un driver poltergeist di debug.
+  Capybara.register_driver :poltergeist_debug do |app|
+    Capybara::Poltergeist::Driver.new(app, :inspector => true)
+  end
+
+  # Impostare le opzioni iniziali.
+  # Capybara.register_driver :poltergeist do |app|
+  #   Capybara::Poltergeist::Driver.new(app, options)
+  # end
+
 end
+
+

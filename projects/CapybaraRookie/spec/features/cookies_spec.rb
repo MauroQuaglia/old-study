@@ -5,28 +5,31 @@ RSpec.feature 'Manage cookies' do
   context 'on setting' do
 
     it 'rack_test', :driver => :rack_test do
-      puts cookies
-      expect(cookies["#{MerchantTracking::COOKIE.v2}a_trusted_merchant"]).to_not be_nil
+      page.driver.browser.set_cookie('driver=rack_test')
+
+      visit capybara_show_cookie_path
+
+      expect(page).to have_css('#cookie', text: 'rack_test')
     end
 
     it 'selenium', :driver => :selenium do
     end
 
     it 'webkit', :driver => :webkit do
-      page.driver.set_cookie('driver=webkit')
+      page.driver.browser.set_cookie('driver=webkit')
 
-      visit 'capybara-cookie'
-      save_and_open_page
+      visit capybara_show_cookie_path
 
-      puts page.driver.cookies.inspect
+
+      expect(page).to have_css('#cookie', text: 'webkit')
     end
 
     it 'poltergeist', :driver => :poltergeist do
       page.driver.set_cookie('driver', 'poltergeist')
 
-      visit 'capybara-cookie'
+      visit capybara_show_cookie_path
 
-      puts page.driver.cookies
+      expect(page).to have_css('#cookie', text: 'poltergeist')
     end
 
   end
