@@ -21,7 +21,7 @@ RSpec.feature 'Performance of driver' do
   private
 
   def benchmark
-    puts "[#{Benchmark.realtime { visit capybara_path }}] seconds for #{Capybara.current_driver}"
+    puts "[#{Benchmark.realtime { visit welcome_path }}] seconds for #{Capybara.current_driver}"
   end
 
 end

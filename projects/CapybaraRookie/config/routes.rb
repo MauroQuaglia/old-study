@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
-  root 'capybara#welcome', as: :welcome
+  get 'capybara-welcome' => 'capybara#welcome', as: :welcome
 
-  get 'capybara' => 'capybara#index', as: :capybara
+  get 'capybara-header' => 'capybara#header', as: :capybara_header
 
-  get 'capybara-cookie' => 'capybara#show_cookie', as: :capybara_show_cookie
+  get 'capybara-get-cookie' => 'capybara#get_cookie', as: :get_cookie
+
+  get 'capybara-set-cookie' => 'capybara#set_cookie', as: :set_cookie
 
   get 'capybara-bulk-javascript' => 'capybara#capybara_bulk_javascript', as: :capybara_bulk_javascript
 

@@ -7,7 +7,7 @@ RSpec.feature 'Manage headers' do
     it 'rack_test', :driver => :rack_test do
       page.driver.header('USER_AGENT', 'rack_test')
 
-      visit capybara_path
+      visit capybara_header_path
 
       expect(page).to have_text('"HTTP_USER_AGENT"=>"rack_test"')
     end
@@ -19,7 +19,7 @@ RSpec.feature 'Manage headers' do
     it 'webkit', :driver => :webkit do
       page.driver.header('USER_AGENT', 'webkit')
 
-      visit capybara_path
+      visit capybara_header_path
 
       expect(page).to have_text('"HTTP_USER_AGENT"=>"webkit"')
     end
@@ -27,7 +27,7 @@ RSpec.feature 'Manage headers' do
     it 'poltergeist', :driver => :poltergeist do
       page.driver.add_headers('USER_AGENT' => 'poltergeist')
 
-      visit capybara_path
+      visit capybara_header_path
 
       expect(page).to have_text('"HTTP_USER_AGENT"=>"poltergeist"')
     end
@@ -37,7 +37,7 @@ RSpec.feature 'Manage headers' do
   context 'response' do
 
     it 'rack_test', :driver => :rack_test do
-      visit capybara_path
+      visit capybara_header_path
 
       expect(response_headers).to have_text('"X-Frame-Options"=>"SAMEORIGIN"')
     end
@@ -47,13 +47,13 @@ RSpec.feature 'Manage headers' do
     end
 
     it 'webkit', :driver => :webkit do
-      visit capybara_path
+      visit capybara_header_path
 
       expect(response_headers).to have_text('"X-Frame-Options"=>"SAMEORIGIN"')
     end
 
     it 'poltergeist', :driver => :poltergeist do
-      visit capybara_path
+      visit capybara_header_path
 
       expect(response_headers).to have_text('"X-Frame-Options"=>"SAMEORIGIN"')
     end

@@ -4,12 +4,12 @@ RSpec.feature 'JavaScript support' do
 
   it 'rack_test', :driver => :rack_test  do
     expect {
-      page.evaluate_script("alert('Hello');")
+      page.evaluate_script("alert('Capybara');")
     }.to raise_error(Capybara::NotSupportedByDriverError)
   end
 
   it 'selenium', :driver => :selenium  do
-    visit capybara_path
+    visit welcome_path
 
     sleep(1)
     value = page.evaluate_script("alert('Capybara!');")
@@ -19,7 +19,7 @@ RSpec.feature 'JavaScript support' do
   end
 
   it 'webkit', :driver => :webkit  do
-    visit capybara_path
+    visit welcome_path
 
     value = page.evaluate_script("alert('Capybara!');")
 
@@ -27,7 +27,7 @@ RSpec.feature 'JavaScript support' do
   end
 
   it 'poltergeist', :driver => :poltergeist  do
-    visit capybara_path
+    visit welcome_path
 
     value = page.evaluate_script("alert('Capybara!');")
 

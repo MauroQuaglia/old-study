@@ -95,12 +95,4 @@ RSpec.configure do |config|
     puts 'In spec_helper'
   end
 
-  config.around(:example, :rack_test => :headers) do |example|
-    Capybara.register_driver(:rack_test) do |app|
-      Capybara::RackTest::Driver.new(app, :headers => example[:headers])
-    end
-    puts 'ECCOMIIIIIIIII'
-    example.run
-  end
-
 end

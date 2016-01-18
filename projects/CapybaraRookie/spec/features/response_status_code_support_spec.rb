@@ -23,7 +23,7 @@ RSpec.feature 'Response status code support' do
   private
 
   def status_code
-    visit capybara_path
+    visit welcome_path
 
     expect(page.status_code).to be(200)
   end
