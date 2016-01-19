@@ -1,7 +1,5 @@
 note:
 Rails è una rack application
-documentazione:
-https://github.com/jnicklas/capybara
 
 Lo spec_helper serve per i test che non dipendono da Rails. Tipicamente quelli che testano classi di libreria.
 Sembra che sia caricato in automatico quindi non serve specificarlo.
@@ -12,7 +10,7 @@ Pare che nel rails_helper non serva caricare lo spec_helper in quanto caricato i
 
 Se nel file .rspec metto: [--require spec_helper] non serve mettere [require 'rails_helper'] nelle varie classi di test.
 
-Lo spec_helper contiene le alcune configurazioni customper RSpec, ma non deve essere caricato per forza.
+Lo spec_helper contiene le alcune configurazioni custom per RSpec, ma non deve essere caricato per forza.
 Se non lo uso non avrò quelle particolari configurazioni ma la sintassi e le expectation sì, in quanto facenti parte della gemma
 installata.
 
@@ -24,52 +22,7 @@ config.include Capybara::DSL, :type => :feature
 config.include Capybara::RSpecMatchers, :type => :feature
 config.include Capybara::RSpecMatchers, :type => :view
 
-
 https://www.relishapp.com/rspec/rspec-rails/v/3-4/docs/feature-specs/feature-spec
 i features spec richiedono capybara
 
-Documentazione di capybara
-http://www.rubydoc.info/github/jnicklas/capybara/master
-
-Capybara uso lo stesso DSL per tutti i driver:
-* rack_test (http://www.rubydoc.info/github/jnicklas/capybara/Capybara/RackTest)
-** default;
-** veloce ma limitato;
-** no javasctipt;
-** no accesso a url remote
-** puo essere configurato (headers, ...)
-
-
-* selenium
-* webkit
-* ...
-
-
-------------------------------------------------------------------------------------------------------------------------
-* Il più veloce
-** rack_test (default)
-
-* Supporta javascript
-** selenium
-** webkit
-** poltergeist
-
-* Accede a url remote
-** selenium
-** webkit (ma richiede configurazione per eliminare i warning)
-** poltergeist
-
-Supporta lo status code della risposta
-** rack_test
-** webkit
-** poltergeist
-
-Manipola facilmente gli header
-* request
-** webkit
-** poltergeist
-
-
-
-* Supporta in maniera semplice la modifica degli headers
-* Supporta in maniera semplice la gestione dei cookie
+Capybara uso lo stesso DSL per tutti i driver.

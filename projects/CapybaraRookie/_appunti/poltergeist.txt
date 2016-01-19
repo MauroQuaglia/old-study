@@ -1,2 +1,0 @@
-Documentazione:
-https://github.com/teampoltergeist/poltergeist/tree/v1.8.1

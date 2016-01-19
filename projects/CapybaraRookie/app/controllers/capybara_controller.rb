@@ -15,8 +15,7 @@ class CapybaraController < ApplicationController
     cookies[:gem] = {:value => 'capybara'}
   end
 
-  def capybara_bulk_javascript
-
+  def capybara_javascript
   end
 
 end

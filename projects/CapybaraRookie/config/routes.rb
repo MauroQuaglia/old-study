@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
   get 'capybara-set-cookie' => 'capybara#set_cookie', as: :set_cookie
 
-  get 'capybara-bulk-javascript' => 'capybara#capybara_bulk_javascript', as: :capybara_bulk_javascript
+  get 'capybara-javascript' => 'capybara#capybara_javascript', as: :capybara_javascript
 
 end

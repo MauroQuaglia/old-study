@@ -1,5 +1,5 @@
-require 'spec_helper' # Se uso cose specifiche configurate per rspec è necessario.
-require 'rails_helper' # Se uso cose specifiche di Rails è necessario.
+#require 'spec_helper' # Se uso cose specifiche configurate per rspec è necessario.
+#require 'rails_helper' # Se uso cose specifiche di Rails è necessario.
 require_relative '../../lib/hello_capybara'
 
 RSpec.describe HelloCapybara do
