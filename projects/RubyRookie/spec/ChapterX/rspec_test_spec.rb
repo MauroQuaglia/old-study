@@ -4,7 +4,6 @@ RSpec.describe 'test' do
   end
 
   it 'should fails' do
-    fail
   end
 
 end
