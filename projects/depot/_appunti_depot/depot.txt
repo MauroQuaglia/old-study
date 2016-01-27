@@ -333,3 +333,6 @@ image_tag -> punta a assets/images
 
 La differenza quindi tra un normale modulo ed un concern è la possibilità di avere accesso ai metodi che sono propri dei model di Active Record.
 
+------------------------------------------------------------------------------------------------------------------------
+link_to   fa una GET
+button_to fa una POST

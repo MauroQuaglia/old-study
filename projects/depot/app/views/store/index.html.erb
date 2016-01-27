@@ -1,6 +1,3 @@
-session_id = <%= @session_id %>
-session_inspector = <%= @session_inspector %>
-
 <% if notice %>
     <p id='notice>'>
       <% notice %></p>
@@ -21,6 +18,7 @@ session_inspector = <%= @session_inspector %>
               <%= sanitize(product.description) %>
               <div class='price_line'>
                 <span class='price'><%= number_to_currency(product.price, precision: 2, separator: ',', delimiter: '.', unit: '€') %></span>
+                <%= button_to('Add to Cart', line_items_path(product_id: product)) %> <!-- Fa una POST. Quindi chiama create del line item controller-->
               </div>
             </div>
         <% end %>

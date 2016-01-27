@@ -13,6 +13,7 @@ class CartsController < ApplicationController
   end
 
   # GET /carts/new
+  # La new è un carrello potenziale, finche non faccio save (l'azione :create) non va su db
   def new
     @cart = Cart.new
   end
@@ -23,6 +24,7 @@ class CartsController < ApplicationController
 
   # POST /carts
   # POST /carts.json
+  # A differenza della new fa la save.
   def create
     @cart = Cart.new(cart_params)
 
