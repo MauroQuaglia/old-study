@@ -1,6 +1,19 @@
 Rails.application.routes.draw do
 
   resources :line_items
+=begin
+  line_items     GET    /line_items(.:format)          line_items#index
+                 POST   /line_items(.:format)          line_items#create
+  new_line_item  GET    /line_items/new(.:format)      line_items#new
+  edit_line_item GET    /line_items/:id/edit(.:format) line_items#edit
+  line_item      GET    /line_items/:id(.:format)      line_items#show
+                 PATCH  /line_items/:id(.:format)      line_items#update
+                 PUT    /line_items/:id(.:format)      line_items#update
+                 DELETE /line_items/:id(.:format)      line_items#destroy
+=end
+
+
+
   resources :carts
   get 'store/index'
 
