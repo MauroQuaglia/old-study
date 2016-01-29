@@ -2,14 +2,19 @@ Rails.application.routes.draw do
 
   resources :line_items
 =begin
-  line_items     GET    /line_items(.:format)          line_items#index
-                 POST   /line_items(.:format)          line_items#create
-  new_line_item  GET    /line_items/new(.:format)      line_items#new
-  edit_line_item GET    /line_items/:id/edit(.:format) line_items#edit
-  line_item      GET    /line_items/:id(.:format)      line_items#show
-                 PATCH  /line_items/:id(.:format)      line_items#update
-                 PUT    /line_items/:id(.:format)      line_items#update
-                 DELETE /line_items/:id(.:format)      line_items#destroy
+
+  Per oguna di queste viene chreato anche un path che le sollecita:
+
+  line_items     GET    /line_items(.:format)          line_items#index    --> line_items_path, link_to chiama GET
+                 POST   /line_items(.:format)          line_items#create   --> line_items_path, button_to chiama POST
+  new_line_item  GET    /line_items/new(.:format)      line_items#new      --> new_line_items_path
+  edit_line_item GET    /line_items/:id/edit(.:format) line_items#edit     --> edit_line_item_path
+  line_item      GET    /line_items/:id(.:format)      line_items#show     --> line_item_path
+                 PATCH  /line_items/:id(.:format)      line_items#update   --> line_item_path
+                 PUT    /line_items/:id(.:format)      line_items#update   --> line_item_path
+                 DELETE /line_items/:id(.:format)      line_items#destroy  --> line_item_path
+
+
 =end
 
 

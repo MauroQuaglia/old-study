@@ -26,16 +26,15 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-
     product = Product.find(params[:product_id])
     @line_item = @cart.line_items.build(product: product)
-#byebug
+
     respond_to do |format|
       if @line_item.save
         # Lo ributta al carrello: @line_item.cart è il carrello # GET /carts/cart_id
         # il notice è in tutte le pagine quindi ok
-        # Occhio che fa le redirect in automatico. Per quello che poi vedo /cart/ e non /line_items/ nella url
-        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
+        # redirect_to @line_item.cart capisce che è un carrello (con un certo id ) e quindi chiama /carts/id e chiama la show
+        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created' }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
