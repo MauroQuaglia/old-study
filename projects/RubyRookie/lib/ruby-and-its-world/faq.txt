@@ -1,0 +1,5 @@
+1) Cosa significano ARGV e ARGF?
+
+2) gets
+ARGF.gets o gets si possono usare indifferentemente.
+
