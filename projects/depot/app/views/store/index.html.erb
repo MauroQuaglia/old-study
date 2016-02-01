@@ -3,6 +3,8 @@
       <% notice %></p>
 <% end %>
 
+store message: <%= pluralize(@store_counter, 'time') %>
+
 <h1>Your Pragmatic Catalog</h1>
 <!-- Come chiave mettiamo in prodotto, se su db non tocco niente lui non fa più query per recuperare prodotti
      se invece faccio un rake db:seed vengono aggiornati tutti quindi cambia la chiave e vengono ricaricati.

@@ -1,5 +1,5 @@
 class LineItemsController < ApplicationController
-  include CurrentCart
+  include CurrentCart, StoreCounter
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
@@ -31,6 +31,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
+        reset(session)
         # Lo ributta al carrello: @line_item.cart è il carrello # GET /carts/cart_id
         # il notice è in tutte le pagine quindi ok
         # redirect_to @line_item.cart capisce che è un carrello (con un certo id ) e quindi chiama /carts/id e chiama la show
@@ -68,13 +69,13 @@ class LineItemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_line_item
-      @line_item = LineItem.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_line_item
+    @line_item = LineItem.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def line_item_params
-      params.require(:line_item).permit(:product_id, :cart_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def line_item_params
+    params.require(:line_item).permit(:product_id, :cart_id)
+  end
 end
