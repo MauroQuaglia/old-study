@@ -1,6 +1,4 @@
-# optional, also allows you to specify version
-#gem 'helloworld'
+ gem 'builder', '< 3.0.0'
+ require 'builder'
 
-# just require and use it
-require 'hello_world'
-puts HelloWorld::say_hello()
+puts Gem.inspect
