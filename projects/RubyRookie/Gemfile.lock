@@ -1,7 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    builder (3.2.2)
     diff-lcs (1.2.5)
+    helloworld (0.0.1)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -20,7 +22,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   bundler (= 1.11.2)
+  helloworld
   rspec
 
 BUNDLED WITH

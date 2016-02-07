@@ -15,3 +15,4 @@ COME HO CREATO IL PROGETTO
 * Da riga di comando scarico le gemme (bundle)
 * Da riga di comando creo il supporto di default per RSpec (rspec --init)
 * Per lanciare i test da riga di comando (rspec)
+* Il Rakefile è di utilità e si mette nella root, in modo che sia richiamabile ovunque nel progetto.

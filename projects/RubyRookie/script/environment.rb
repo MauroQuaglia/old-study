@@ -1,17 +1,24 @@
-# Le variabili di sistema vengono lette da ruby quando parte.
-# Queste variabili modificano il comportamento dell'interprete ruby.
+require 'rbconfig'
+include RbConfig
 
-puts 'Operating system environment variable:'
-ENV.keys.each do |key|
-	puts  "#{key} = #{ENV[key]}"
+# Le variabili di sistema (env) vengono lette da Ruby quando parte.
+# Queste variabili modificano il comportamento dell'interprete Ruby.
+puts '--- OS environment variable start ---'
+ENV.keys.sort.each do |key|
+	puts "#{key} = #{ENV[key]}"
 end
-puts ' ------------------------------------- '
+puts '--- OS environment variable end ---'
 
-# Memoria allocata dalla vm di ruby per vari task
-puts 'Environment variabled used by Ruby:'
-RubyVM::DEFAULT_PARAMS.keys.each do |key|
-	puts  "#{key} = #{RubyVM::DEFAULT_PARAMS[key]}"
+# Memoria allocata dalla VM di Ruby per l'esecuzione di task.
+puts '--- Ruby VM start ---'
+RubyVM::DEFAULT_PARAMS.keys.sort.each do |key|
+	puts "#{key} = #{RubyVM::DEFAULT_PARAMS[key]}"
 end
-puts ' ------------------------------------- '
+puts '--- Ruby VM end ---'
 
-
+# Setting usati per compilare Ruby.
+puts '--- Ruby compiler setting start ---'
+CONFIG.keys.sort.each do |key|
+	puts "#{key}: #{CONFIG[key]}"
+end
+puts '--- Ruby compiler setting end ---'

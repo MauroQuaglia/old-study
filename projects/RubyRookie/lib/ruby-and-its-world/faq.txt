@@ -1,5 +1,27 @@
-1) Cosa significano ARGV e ARGF?
-
-2) gets
 ARGF.gets o gets si possono usare indifferentemente.
+-------------------------------------------------------------------------------------------Tramite Gemfile non posso installare due versioni diverse della stessa gemma:
+...
+gem 'builder'
+gem 'builder', '2.1.1'
+...
 
+ma tramite il comando gem sì:
+gem install builder
+gem install builder --version 2.1.1
+
+Infatti se poi vado a vedere il gemset ruby-2.3.0@ruby-rookie vi troverò le gemme:
+builder-2.1.1 e builder-3.2.2
+-------------------------------------------------------------------------------------------
+In ogni installazione di base di Ruby abbiamo le gemme: 
+rubygems 
+rake
+-------------------------------------------------------------------------------------------
+Quando lancio il comando rake il file Rakefile viene cercato nella directory corrente e nelle directory genitori. Quindi se lo metto nella root di progetto lo posso chiamare da dove voglio.
+Il Rakefile contiene di default tutti i metodi di FileUtils.
+-------------------------------------------------------------------------------------------
+RubyGems oltre a scaricare gemme, permette di scaricare delle utility richiamabili dalla command line.
+-------------------------------------------------------------------------------------------
+Quando lanciamo uno script può essere utile
+-c check sintassi
+-d per il debug (occhio che stampa anche le eccezioni anche se sono trappate, è una feature)
+-------------------------------------------------------------------------------------------
