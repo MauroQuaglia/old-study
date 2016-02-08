@@ -25,4 +25,4 @@ Quando lanciamo uno script può essere utile
 -c check sintassi
 -d per il debug (occhio che stampa anche le eccezioni anche se sono trappate, è una feature)
 -------------------------------------------------------------------------------------------
-quando le gemme vengono installate con il comando gem a meno che non glielo dica si scarica anche la documentazione che mette nel gemset sotto la cartella /doc, invece di quelle scaricate con il gemfile non viene scaricata la documentazione. 
+Quando le gemme vengono installate con il comando gem a meno che non glielo dica si scarica anche la documentazione che mette nel gemset sotto la cartella /doc, invece di quelle scaricate con il gemfile non viene scaricata la documentazione. 
