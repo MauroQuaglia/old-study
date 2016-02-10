@@ -58,8 +58,5 @@ RSpec.describe ProductsController do
     expect(response).to redirect_to(product_path(assigns(:product)))
   end
 
-  it 'should destroy product' do
-    expect { delete :destroy, id: @product }.to change { Product.count }.from(3).to(2)
-  end
 
 end
