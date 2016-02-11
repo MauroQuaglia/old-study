@@ -11,6 +11,10 @@ class Cart < ActiveRecord::Base
     current_item
   end
 
+  def total_price
+    line_items.to_a.sum(&:total_price)
+  end
+
   # #<LineItem
   # id: 3,
   #     product_id: 68, --> questo è quello che devo cercare.

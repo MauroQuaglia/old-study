@@ -35,7 +35,7 @@ class LineItemsController < ApplicationController
         # Lo ributta al carrello: @line_item.cart è il carrello # GET /carts/cart_id
         # il notice è in tutte le pagine quindi ok
         # redirect_to @line_item.cart capisce che è un carrello (con un certo id ) e quindi chiama /carts/id e chiama la show
-        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created' }
+        format.html { redirect_to @line_item.cart }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
