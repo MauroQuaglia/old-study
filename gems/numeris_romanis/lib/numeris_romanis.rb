@@ -1,22 +1,23 @@
 class NumerisRomanis
 
-  MAP = {1000 => 'M', 900 => 'CM', 500 => 'D', 400 => 'CD', 100 => 'C', 90 => 'XC',
-         50 => 'L', 40 => 'XL', 10 => 'X', 9 => 'IX', 5 => 'V', 4 => 'IV', 1 => 'I'
-  }
+  MAP = {
+      1000 => 'M', 900 => 'CM', 500 => 'D', 400 => 'CD', 100 => 'C', 90 => 'XC',
+      50 => 'L', 40 => 'XL', 10 => 'X', 9 => 'IX', 5 => 'V', 4 => 'IV', 1 => 'I'}
 
   def initialize
-    @roman = {}
+    @romans = {}
     (1..3999).each do |number|
-      @roman[number] = roman_for(number)
+      @romans[number] = roman_for(number)
     end
   end
 
   def to_roman(value)
-    @roman[value]
+    raise Exception
+    @romans[value]
   end
 
   def to_decimal(roman)
-    @roman.key(roman)
+    @romans.key(roman)
   end
 
   private

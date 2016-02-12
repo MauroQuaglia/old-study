@@ -9,4 +9,11 @@ RSpec.describe NumerisRomanis do
     expect(numbers.to_decimal('MMMCMXCIX')).to eq(3999)
   end
 
+  it 'should throw exception when decimal number is not valid' do
+    numbers = described_class.new
+
+    expect { numbers.to_roman(0) }.to raise_error(Exception)
+  end
+
+
 end
