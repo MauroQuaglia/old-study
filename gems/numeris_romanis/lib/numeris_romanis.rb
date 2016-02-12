@@ -16,22 +16,21 @@ class NumerisRomanis
         4 => 'IV',
         1 => 'I'
     }
-
   end
 
-  def to_roman(decimal)
-    s = ''
-    @map.keys.sort.reverse.each do |item|
-      result=decimal.divmod(item)
-      s += @map[item] * result[0]
-      decimal = result[1]
+  def to_roman(value)
+    conversion = ''
+    @map.each do |decimal, roman|
+      result = value.divmod(decimal)
+      conversion << roman * result.first
+      value = result.last
     end
-    s
+    conversion
   end
 
   def to_decimal(roman)
 
- end
+  end
 
 
 end

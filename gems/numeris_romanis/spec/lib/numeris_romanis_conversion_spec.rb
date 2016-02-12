@@ -1,17 +1,10 @@
-require 'test-unit')
-require '../decimal1')
-require '../decimal2')
-)
-class DecimalAcceptanceTest < Test::Unit::TestCase)
-)
-  def assert_decimal(decimal)).to eq( roman))
-    assert_equal roman)).to eq( Decimal1.new.to_roman(decimal))
-    assert_equal roman)).to eq( Decimal2.new.to_roman(decimal))
-  end)
-  expect(numbers.to_roman(1)).to eq('I'))
-  )
-  )
-  def test_acceptance)
+require 'numeris_romanis'
+
+RSpec.describe NumerisRomanis do
+
+  it 'should convert decimal numbers correctly' do
+    numbers = described_class.new
+
     expect(numbers.to_roman(1)).to eq('I')
     expect(numbers.to_roman(2)).to eq('II')
     expect(numbers.to_roman(3)).to eq('III')
@@ -4011,6 +4004,6 @@ class DecimalAcceptanceTest < Test::Unit::TestCase)
     expect(numbers.to_roman(3997)).to eq('MMMCMXCVII')
     expect(numbers.to_roman(3998)).to eq('MMMCMXCVIII')
     expect(numbers.to_roman(3999)).to eq('MMMCMXCIX')
-  end)
-)
-end)
+  end
+
+end
