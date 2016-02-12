@@ -12,7 +12,6 @@ class NumerisRomanis
   end
 
   def to_roman(value)
-    raise Exception
     @romans[value]
   end
 

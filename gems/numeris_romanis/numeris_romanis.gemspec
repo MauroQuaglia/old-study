@@ -1,12 +1,11 @@
 Gem::Specification.new do |s|
-  s.name        = 'hola'
-  s.version     = '0.0.0'
-  s.date        = '2010-04-28'
-  s.summary     = "Hola!"
-  s.description = "A simple hello world gem"
-  s.authors     = ["Nick Quaranto"]
-  s.email       = 'nick@quaran.to'
-  s.files       = ["lib/hola.rb", "lib/hola/translator.rb"] # li devo mettere tutti
-  s.homepage    = 'http://rubygems.org/gems/hola'
-  s.license     = 'MIT'
+  s.author      = 'Mauro Quaglia'
+  s.files       = ['lib/numeris_romanis.rb']
+  s.name        = 'numeris_romanis'
+  s.summary     = 'Numeris Romanis'
+  s.version     = '1.0.0'
+  s.email       = 'mauroquaglia@libero.it'
+  s.homepage    = 'http://rubygems.org/gems/numeris_romanis'
+  s.date        = '2016-02-11'
+  s.description = "Converts decimal into roman and vice versa."
 end
