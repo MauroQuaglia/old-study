@@ -1,5 +1,6 @@
 class StoreController < ApplicationController
-  include StoreCounter
+  include StoreCounter, CurrentCart
+  before_action(:set_cart)
 
   def index
     # E' lazy, la query la fa quando chiedo a @product qualche operazione (es. each) altrimenti non fa nulla.
