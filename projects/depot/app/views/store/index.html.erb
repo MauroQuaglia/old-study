@@ -22,7 +22,7 @@ store message: <%= pluralize(@store_counter, 'time') %>
                 <span class='price'><%= number_to_currency(product.price, precision: 2, separator: ',', delimiter: '.', unit: '€') %></span>
 
                 <!-- Fa una POST. Quindi chiama create del line item controller-->
-                <%=button_to('Add to Cart', line_items_path(product_id: product)) %>
+                <%=button_to('Add to Cart', line_items_path(product_id: product), remote: true) %>
               </div>
             </div>
         <% end %>
