@@ -29,14 +29,14 @@ class LineItemsController < ApplicationController
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)
 
-    respond_to do |format|
+    respond_to do |format| # RISPONDE IN BASE AL FORMATO!!!
       if @line_item.save
         reset(session)
         # Lo ributta al carrello: @line_item.cart è il carrello # GET /carts/cart_id
         # il notice è in tutte le pagine quindi ok
         # redirect_to @line_item.cart capisce che è un carrello (con un certo id ) e quindi chiama /carts/id e chiama la show
         format.html { redirect_to store_url }
-        format.js
+        format.js {@current_item = @line_item} # quando il formato è js chiama la create.js.erb. Tra le graffe posso passare gli argomenti.
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
