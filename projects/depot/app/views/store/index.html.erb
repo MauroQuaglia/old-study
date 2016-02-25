@@ -15,7 +15,9 @@ store message: <%= pluralize(@store_counter, 'time') %>
         <!-- Qui invece fa la cache della singola entry, infatti non cambieranno sempre tutte e se c'è già in cache la prende da li-->
         <% cache ['entry', product] do %>
             <div class='entry'>
+
               <%= image_tag(product.image_url) %>
+
               <h3><%= product.title %></h3>
               <%= sanitize(product.description) %>
               <div class='price_line'>
