@@ -15,5 +15,14 @@ RSpec.describe StoreController do
     expect(response.body).to have_css('.price', /\$[,\d]+\.\d\d/) # Boh, non si capisce come dirgli che è una regexp, ma non funziona bene
   end
 
+  it 'markup needed for store.js.coffee' do
+    get :index
+
+    expect(response.body).to have_css('.store .entry img', count: 3)
+    expect(response.body).to have_css('.entry input[type = submit]', count: 3)
+  end
+
+
+
 
 end
