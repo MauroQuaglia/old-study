@@ -14,9 +14,13 @@
 <div id='columns'>
   <div id='side'>
     <div><%= DateTime.now.to_formatted_s(:long) %></div>
-    <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-        <%= render(@cart) %>
-    <% end if @cart %>
+
+    <% if (@cart) %>
+        <div id="cart">
+          <%= render(@cart) %>
+        </div>
+    <% end %>
+
     <ul>
       <li><a href=''>Home</a></li>
       <li><a href=''>Questions</a></li>
