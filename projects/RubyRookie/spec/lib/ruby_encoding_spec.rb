@@ -2,42 +2,39 @@
 
 RSpec.describe 'RubyEncoding' do
 
-	xit 'puts encoding of this file' do
-    puts __ENCODING__	
-   # puts 'π' # Se metto ascii, non funziona.
+	it 'current encoding of this file' do
+    expect(__ENCODING__).to eq(Encoding::UTF_8)
   end
 
- xit 'show all encodings' do
-   checkmark = "\u03C0" 
-   puts checkmark.encode('utf-8').bytes
-    puts "pi: ".encode('utf-8').bytes
-  end
+  it 'show all static encodings' do
+    # Tutti quelli che hanno anche un alias.
+    Encoding.aliases.each do |encoding_alias, encoding_name|
+      puts "#{encoding_name} (#{encoding_alias})"
+    end
 
-  it 'all' do
-    pi = "\u03C0" #valore esadecimale del carattere in unicode
-    Encoding.list.each do |encoding|
-      begin
-        puts pi
-        puts encoding.name  
-        puts pi.encode(encoding).bytes.to_s
+    puts '-----------------------------------------'
 
-         pi.encode(encoding).bytes.each do |decimal|
-          puts decimal.to_s(2)
-         end 
-
-
-
-      rescue
-        puts "Non esiste"
-      ensure
-        puts '------------------------------------------------------'
-      end
+    # Tutti.
+    Encoding.list.each do |encoding_name|
+      puts encoding_name
     end
   end
 
-  it 'contro image' do
-    
+  it 'utf-8 inspector' do
+    puts Encoding::UTF_8.methods
   end
+
+  it 'work with greek pi in utf-8' do
+    puts "\u03C0".encode(Encoding::UTF_8).bytes.to_s
+    "\u03C0".encode(Encoding::UTF_8).bytes.each{|decimal| p decimal.to_s(2) }
+    "\u03C0".encode(Encoding::UTF_8).bytes.each{|decimal| p decimal.to_s(16) }
+  end
+
+  it 'work with greek pi in different encoding' do
+    puts "\u03C0".encode(Encoding::UTF_8).bytes.to_s
+    puts "\u03C0".encode(Encoding::SJIS).bytes.to_s
+  end
+
 
 
 end
