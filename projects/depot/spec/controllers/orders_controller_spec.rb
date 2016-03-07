@@ -27,4 +27,14 @@ RSpec.describe OrdersController do
 
   end
 
+  describe '#create' do
+
+    it 'should create order' do
+      # La form fa il submit di un order, quindi gli passa tutti i campi address, email, name, pay_type.
+      expect { post :create, order: {address: 'xyz', email: 'x@y.z', name: 'Xyz', pay_type: Order::PAYMENT_TYPES.first} }.to change { Order.count }.by(1)
+      expect(response).to redirect_to(store_path)
+    end
+
+  end
+
 end
