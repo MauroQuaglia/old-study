@@ -70,12 +70,13 @@ class ProductsController < ApplicationController
     # infatti se chiedo 2 volte http://localhost:3000/products/1/who_bought.atom
     # la prima mi da 200
     # la seconda 304 not modified e comunque torna il risultato
-    #if stale?(@latest_order) # guarda se l'ETag è cambiato... nel @lates_order c'è anche la data
+    if stale?(@latest_order) # guarda se l'ETag è cambiato... nel @lates_order c'è anche la data
+      # se anche toglo stale funziona ma per creare l'etag usa il body della pagina. troppo, con stale è ottimizzata la cosa. Cercare su internet...
 
       respond_to do |format|
         format.atom
       end
-    #end
+    end
   end
 
   private
