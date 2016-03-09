@@ -66,11 +66,16 @@ class ProductsController < ApplicationController
   def who_bought
     @product = Product.find(params[:id])
     @latest_order = @product.orders.order(:updated_at).last
-    if stale?(@latest_order)
+    # funziona !
+    # infatti se chiedo 2 volte http://localhost:3000/products/1/who_bought.atom
+    # la prima mi da 200
+    # la seconda 304 not modified e comunque torna il risultato
+    #if stale?(@latest_order) # guarda se l'ETag è cambiato... nel @lates_order c'è anche la data
+
       respond_to do |format|
         format.atom
       end
-    end
+    #end
   end
 
   private
