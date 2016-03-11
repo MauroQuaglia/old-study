@@ -2,7 +2,7 @@
 
 RSpec.describe 'RubyEncoding' do
 
-	xit 'encoding' do
+	it 'encoding' do
     # Stringhe con l'encoding del file.
     show_encoding("cat") #utf-8
     show_encoding("∂og") #utf-8
@@ -16,7 +16,7 @@ RSpec.describe 'RubyEncoding' do
     show_encoding(/∂og/) #utf-8
   end
 
-  xit 'cretae arbitrary unicode character' do
+  it 'cretae arbitrary unicode character' do
     # bisogna usare l'escape \u. in tal caso sono sempre encodati utf-8 indipendentemente dall'encoding del file. 
     # \uxxxx con 4 cifre esadecimali: 0123456789ABCDEF
     # \u{x... y... ...} x... è un numero variabile di caratteri ognuno dei quali è esadecimale 
