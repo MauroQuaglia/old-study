@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   #get 'patients/show'
 
-  get 'patients/:id', to: 'patients#show', as: 'patient'
+  get 'patients/:id', to: 'patients#show',
+      as: 'patient' # Crea patient_path e patient_url. Questi come parametro vogliono un numero, infatti devono creare cose del tipo patients/17, infatti fanno riferimento alla rotta stessa [get 'patients/:id'].
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
