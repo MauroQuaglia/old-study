@@ -1,9 +1,29 @@
 Rails.application.routes.draw do
 
-  #get 'patients/show'
-
   get 'patients/:id', to: 'patients#show',
       as: 'patient' # Crea patient_path e patient_url. Questi come parametro vogliono un numero, infatti devono creare cose del tipo patients/17, infatti fanno riferimento alla rotta stessa [get 'patients/:id'].
+
+
+  resources :photos
+  resource :geocodes
+
+ # get 'profile', to: :show ???
+
+
+=begin
+  E' uno shortcut per creare tutte le risorse che normalmente vengono usate da un sito.
+  NB: Questi path/url sono visibili in tutti i controller dell'applicazione. Notare che sono tutti quelli con GET.
+
+  photos     GET    /photos(.:format)          photos#index                  photos_path, photos_url
+             POST   /photos(.:format)          photos#create
+  new_photo  GET    /photos/new(.:format)      photos#new                    new_photo_path, new_photo_url
+  edit_photo GET    /photos/:id/edit(.:format) photos#edit                   edit_photo_path(ID), edit_photo_url(ID)
+  photo      GET    /photos/:id(.:format)      photos#show                   photo_path(ID), photo_url(ID)
+             PATCH  /photos/:id(.:format)      photos#update
+             PUT    /photos/:id(.:format)      photos#update
+             DELETE /photos/:id(.:format)      photos#destroy
+=end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
