@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # Bound Parameters
-  get ':controller(/:action(/:id))'
+#  get ':controller(/:action(/:id))'
 
   # La crea generica!
   # Se chiedo /photos/show/1 risponde!
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # /photos/show/1
 
   # Segmenti dinamici
-  get ':controller/:action/:id/:user_id'
+ # get ':controller/:action/:id/:user_id'
   #  GET  /:controller/:action/:id/:user_id(.:format) :controller#:action
   # controller a action sono abbligatori ... poi :id e :user_id dentro l'action li becco come parametri
 
@@ -21,7 +21,14 @@ Rails.application.routes.draw do
   #get ':controller/:action/:id/with_user/:user_id' # with_user è un path fisso.
 
 
+=begin
+  get 'photos/:id',
+      to: 'photos#any',
+      default: {mauro: 'quaglia'},
+      as: 'prova'
 
+=end
 
+  delete 'photos/:id', to: 'photos#any'
 
 end

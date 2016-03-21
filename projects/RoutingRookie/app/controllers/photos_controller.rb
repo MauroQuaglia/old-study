@@ -12,4 +12,8 @@ class PhotosController < ApplicationController
     render text: 'index'
   end
 
+  def any
+    render text: params.inspect
+  end
+
 end

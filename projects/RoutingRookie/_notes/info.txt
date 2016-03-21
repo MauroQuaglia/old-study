@@ -1,2 +1,27 @@
 Documentazione
 http://guides.rubyonrails.org/routing.html
+
+----
+
+TROVAPREZZI
+
+Rotta PREZZI
+http://www.trovaprezzi.it/prezzi_CATEGORIA.aspx
+
+CATEGORIA
+vuota            ---> 400 (/prezzi_.aspx)
+non valida       ---> 404 (/prezzi_invalid-category.aspx)
+                 ---> Secondo me possono dare tutte e due 404 in quanto "" è solo una particolare categori anon valida.
+
+categoria-tutte  ---> ??? (/prezzi_all.aspx)
+categoria-macro  ---> 200 (/prezzi_audio-video.aspx)
+
+categoria-foglia-marche ---> 200 (/prezzi_schede-grafiche.aspx)
+categoria-foglia-guidata  ---> 200 (/prezzi_accessori-cellulari.aspx)
+categoria-foglia-listino  --->
+
+
+manca
+* paginazione
+* ordinamento
+* vecchie reidrect
