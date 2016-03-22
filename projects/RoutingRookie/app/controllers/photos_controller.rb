@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    render text: params[:id]
+    render text: params.inspect
   end
 
   def index

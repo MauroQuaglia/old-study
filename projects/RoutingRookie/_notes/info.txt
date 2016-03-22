@@ -9,9 +9,10 @@ Rotta PREZZI
 http://www.trovaprezzi.it/prezzi_CATEGORIA.aspx
 
 CATEGORIA
-vuota            ---> 400 (/prezzi_.aspx)
-non valida       ---> 404 (/prezzi_invalid-category.aspx)
-                 ---> Secondo me possono dare tutte e due 404 in quanto "" è solo una particolare categori anon valida.
+vuota                ---> 400 (/prezzi_.aspx)
+non valida           ---> 404 (/prezzi_invalid-category.aspx)
+                     ---> Secondo me possono dare tutte e due 404 in quanto "" è solo una particolare categori anon valida.
+categoria.con.punto  ---> 404 non deve matchare il format, vogliamo 404.
 
 categoria-tutte  ---> ??? (/prezzi_all.aspx)
 categoria-macro  ---> 200 (/prezzi_audio-video.aspx)
@@ -21,7 +22,11 @@ categoria-foglia-guidata  ---> 200 (/prezzi_accessori-cellulari.aspx)
 categoria-foglia-listino  --->
 
 
+Cosa può servire
+* format: true  (GET  /*books.:format photos#show {:format=>/.+/}, vuole sempre l'estensione per matchare... occhio però che dal punto in poi per lui è sempre estensione
+
 manca
 * paginazione
 * ordinamento
-* vecchie reidrect
+* vecchie reidrect (SI PUÒ USARE IL REDIRECT DIRETTAMENTE NEL ROUTING, ES: get '/photos', to: redirect('/users'))
+* rotte con punti nel nome di categoria perché possono far scannellare il parametro format. anche se nei nomi di categori non dovrebbero esserci.
