@@ -6,6 +6,7 @@ http://guides.rubyonrails.org/routing.html
 TROVAPREZZI
 
 Rotta PREZZI
+* pensare alla differenza tra matchare e dare errore oppure non matchare e andare alla fine del routing con 404.
 http://www.trovaprezzi.it/prezzi_CATEGORIA.aspx
 
 CATEGORIA
