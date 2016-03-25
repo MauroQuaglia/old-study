@@ -31,3 +31,5 @@ manca
 * ordinamento
 * vecchie reidrect (SI PUÒ USARE IL REDIRECT DIRETTAMENTE NEL ROUTING, ES: get '/photos', to: redirect('/users'))
 * rotte con punti nel nome di categoria perché possono far scannellare il parametro format. anche se nei nomi di categori non dovrebbero esserci.
+
+
