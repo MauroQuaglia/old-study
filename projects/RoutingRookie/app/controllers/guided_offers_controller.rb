@@ -13,16 +13,29 @@ class GuidedOffersController < ApplicationController
 
     # A questo punto entrambe i parametri sono presenti...
 
-    # Validazione del parametro page.
+    # Validazione del parametro page come numero intero.
     if not is_integer?(page)
       return bad_request
     end
 
-    # Dato che c'è il parametri page (indipendentemente da cosa esso sia)
-    #if (category == 'all' || category == 'macro')
-   #   return bad_request
-    #end
+    page_number = Integer(page)
 
+    if page_number < 0
+      return bad_request
+    end
+
+    if page_number == 0
+      return not_found
+    end
+
+    if page_number >= 1_000_000
+      return gone
+    end
+
+    # Il parametro page è corretto, controllo la categoria
+    if (category == 'all' || category == 'telefonia' || category == 'inesistente')
+      return not_found
+    end
 
     render text: "Category: [#{params[:category]}]; Page: [#{params[:page]}]"
   end

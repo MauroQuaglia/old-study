@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
     render text: 'Bad Request [400]', status: 400
   end
 
+  def gone
+    render text: 'Gone [410]', status: 410
+  end
+
 end

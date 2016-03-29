@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe GuidedOffersController do
 
+  it 'test' do
+    puts Integer('-1')
+  end
+
   it 'rejects nil parameters' do
     get :listing
     expect(response).to have_http_status(400)
@@ -63,8 +67,7 @@ RSpec.describe GuidedOffersController do
     expect(controller.params[:page]).to eq('1000000')
   end
 
-
-  xit 'manage category with valid page parameters' do
+  it 'manage category with valid page parameters' do
     get :listing, {category: 'all', page: '1'}
     expect(response).to have_http_status(400)
     expect(controller.params[:category]).to eq('all')
