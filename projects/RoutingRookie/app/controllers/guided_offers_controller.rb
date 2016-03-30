@@ -1,8 +1,6 @@
 class GuidedOffersController < ApplicationController
 
   def listing
-    puts "Category: [#{params[:category]}]; Page: [#{params[:page]}]"
-
     category = params[:category]
     page = params[:page]
 
@@ -33,11 +31,27 @@ class GuidedOffersController < ApplicationController
     end
 
     # Il parametro page è corretto, controllo la categoria
-    if (category == 'all' || category == 'telefonia' || category == 'inesistente')
+    if category == 'all' || category == 'telefonia' || category == 'inesistente'
       return not_found
     end
 
-    render text: "Category: [#{params[:category]}]; Page: [#{params[:page]}]"
+    render text: "Params: [#{params.inspect}]"
+  end
+
+  def table
+    #guided o brand o listino con redirect http://www.trovaprezzi.it/prezzi_accessori-fotografia.aspx
+    category = params[:category]
+
+    # Validazione della presenza dei parametri.
+    if not category.present?
+      return bad_request
+    end
+
+    if category == 'inesistente'
+      return not_found
+    end
+
+    render text: "Params: [#{params.inspect}]"
   end
 
   private

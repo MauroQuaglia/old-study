@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
     render text: 'Gone [410]', status: 410
   end
 
+  def not_acceptable
+    render text: 'Not Acceptable [406]', status: 406
+  end
+
 end
