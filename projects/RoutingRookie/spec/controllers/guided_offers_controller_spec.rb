@@ -2,10 +2,6 @@ require 'rails_helper'
 
 RSpec.describe GuidedOffersController do
 
-  it 'test' do
-    puts Integer('-1')
-  end
-
   context '/prezzi_CATEGORY_PAGE.aspx' do
 
     it 'rejects nil parameters' do

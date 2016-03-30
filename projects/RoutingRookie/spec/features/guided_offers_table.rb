@@ -23,6 +23,12 @@ RSpec.feature 'GuidedOffersTable', :driver => :webkit do
     assert_status_code_local('/prezzi_cellulari.aspx', 200)
   end
 
+  it 'correct guided' do
+    assert_status_code_online('/prezzi_accessori-cellulari.aspx', 200)
+
+    assert_status_code_local('/prezzi_accessori-cellulari.aspx', 200)
+  end
+
   private
 
   def assert_status_code_online(url, status_code)
