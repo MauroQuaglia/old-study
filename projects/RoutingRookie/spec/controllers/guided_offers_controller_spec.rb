@@ -21,7 +21,7 @@ RSpec.describe GuidedOffersController do
       expect(controller.params[:page]).to eq('1')
     end
 
-    it 'rejects empty parameters' do
+    xit 'rejects empty parameters' do
       get :listing, {category: '', page: ''}
       expect(response).to have_http_status(400)
       expect(controller.params[:category]).to be_empty
@@ -96,7 +96,7 @@ RSpec.describe GuidedOffersController do
       expect(controller.params[:category]).to be_nil
     end
 
-    it 'rejects empty parameter' do
+    xit 'rejects empty parameter' do
       get :table, {category: ''}
 
       expect(response).to have_http_status(400)

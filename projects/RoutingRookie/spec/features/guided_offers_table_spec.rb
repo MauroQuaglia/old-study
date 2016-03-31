@@ -25,8 +25,12 @@ RSpec.feature 'GuidedOffersTable', :driver => :webkit do
 
   it 'correct guided' do
     assert_status_code_online('/prezzi_accessori-cellulari.aspx', 200)
-
     assert_status_code_local('/prezzi_accessori-cellulari.aspx', 200)
+  end
+
+  it 'listing' do
+    assert_status_code_online('/prezzi_accessori-fotografia.aspx', 200)
+    assert_status_code_local('/prezzi_accessori-fotografia.aspx', 200)   # 01 SIDONIO?
   end
 
   private

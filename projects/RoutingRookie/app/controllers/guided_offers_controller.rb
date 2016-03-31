@@ -51,9 +51,7 @@ class GuidedOffersController < ApplicationController
     end
 
     if category == 'accessori-fotografia'
-      # non dovrei fare redirect ma chiamare la rotta con 200
-      #return redirect_to guided_offers_listing_path(category, 1)
-      #render :action => :listing
+      return redirect_to guided_offers_listing_path(category, 1) # chiedere Sidonio
     end
 
     render text: "TABLE: [#{params.inspect}]"
