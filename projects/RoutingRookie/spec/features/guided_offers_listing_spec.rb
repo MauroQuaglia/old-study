@@ -20,7 +20,7 @@ RSpec.feature 'GuidedOffersListing', :driver => :webkit do
     assert_status_code_online('/prezzi_cellulari_-1.aspx', 400)
     assert_status_code_local('/prezzi_cellulari_-1.aspx', 400)
 
-    assert_status_code_online('/prezzi_cellulari_0.aspx', 404)
+    assert_status_code_online('/prezzi_cellulari_0.aspx', 404) #400
     assert_status_code_local('/prezzi_cellulari_0.aspx', 404)
 
     assert_status_code_online('/prezzi_cellulari_1000000.aspx', 410)
@@ -28,10 +28,10 @@ RSpec.feature 'GuidedOffersListing', :driver => :webkit do
   end
 
   it 'invalid parameter category' do
-    assert_status_code_online('/prezzi_all_1.aspx', 404)
+    assert_status_code_online('/prezzi_all_1.aspx', 404) #400
     assert_status_code_local('/prezzi_all_1.aspx', 404)
 
-    assert_status_code_online('/prezzi_telefonia_1.aspx', 404)
+    assert_status_code_online('/prezzi_telefonia_1.aspx', 404) #400
     assert_status_code_local('/prezzi_telefonia_1.aspx', 404)
 
     assert_status_code_online('/prezzi_inesistente_1.aspx', 404)

@@ -51,7 +51,7 @@ class GuidedOffersController < ApplicationController
     end
 
     if category == 'accessori-fotografia'
-      return redirect_to guided_offers_listing_path(category, 1) # chiedere Sidonio
+      return redirect_to guided_offers_listing_path(category, 1) # chiedere Sidonio 302, può apparire e sparire?
     end
 
     render text: "TABLE: [#{params.inspect}]"

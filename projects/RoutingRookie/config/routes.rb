@@ -6,3 +6,15 @@ Rails.application.routes.draw do
   match '*url', to: 'application#not_acceptable', via: :all
 
 end
+
+
+
+
+# test routing con tutte le casistiche di mpping parametri
+# test di request con gli status code
+# test del controller con tutte le casistiche di preparazione dell'ambiete della view
+# test delle view
+
+# decidere gli status code, ...
+# controller: ListingsController (per i listini)
+# controller: GuidedSearches, GuidedOffers, GuidedTrees, Navigations, GuidedLinks, GuidedPages, GuidedListings
