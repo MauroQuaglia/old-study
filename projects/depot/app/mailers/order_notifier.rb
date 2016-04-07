@@ -8,7 +8,7 @@ class OrderNotifier < ApplicationMailer
   def received(order)
     @order = order
 
-    mail(to: 'mauro.quaglia@trovaprezzi.it', subject: 'Abeamus E-Mail: received!')
+    mail(to: 'mauro.quaglia@trovaprezzi.it', subject: 'Abeamus!')
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
