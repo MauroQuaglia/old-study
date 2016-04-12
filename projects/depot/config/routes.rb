@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users
   resources :products do
     get :who_bought, on: :member
   end
