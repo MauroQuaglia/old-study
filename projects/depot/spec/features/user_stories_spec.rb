@@ -11,7 +11,7 @@ RSpec.describe "UserStories" do
       Order.delete_all
       ruby_book = products(:ruby)
 
-      puts ActionMailer::Base.deliveries.last.inspect
+      ActionMailer::Base.deliveries.last
     end
   end
 
