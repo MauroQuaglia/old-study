@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "UserStories" do
+  fixtures :products
 
 
   describe "GET /user_stories" do
-    fixtures :products
 
     it "works! (now write some real specs)" do
       LineItem.delete_all

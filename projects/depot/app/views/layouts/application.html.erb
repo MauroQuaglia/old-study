@@ -27,6 +27,16 @@
       <li><a href=''>News</a></li>
       <li><a href=''>Contact</a></li>
     </ul>
+
+    <% if session[:user_id] %>
+     <ul>
+       <li><%= link_to 'orders', orders_path %></li>
+       <li><%= link_to 'products', products_path %></li>
+       <li><%= link_to 'users', users_path %></li>
+     </ul>
+        <%= button_to 'logout', logout_path, method: :delete %>
+    <% end %>
+
   </div>
   <div id='main'>
     <%= yield %>
