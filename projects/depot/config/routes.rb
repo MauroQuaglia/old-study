@@ -14,10 +14,17 @@ Rails.application.routes.draw do
     get :who_bought, on: :member
   end
 
-  resources :orders
   get 'store/index'
 
-  resources :line_items
+
+
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index', as: 'store', via: :all
+  end
+
 =begin
 
   Per oguna di queste viene chreato anche un path che le sollecita:
@@ -34,14 +41,12 @@ Rails.application.routes.draw do
 
 =end
 
-  resources :carts
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'store#index', as: 'store'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

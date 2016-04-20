@@ -9,6 +9,7 @@
 LineItem.delete_all
 Cart.delete_all
 Product.delete_all
+User.delete_all
 
 product1 = Product.create!(
     title: 'CoffeeScript',
@@ -33,3 +34,5 @@ cart2 = Cart.create!
 
 LineItem.create!(product_id: product1.id, cart_id: cart1.id, quantity: 1, product_price: product1.price)
 LineItem.create!(product_id: product2.id, cart_id: cart2.id, quantity: 1, product_price: product2.price)
+
+User.create(name: 'mauro', password: 'mauro', password_confirmation: 'mauro')
