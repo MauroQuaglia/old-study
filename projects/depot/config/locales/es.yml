@@ -19,13 +19,13 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+es:
   hello: "Hello world"
 
   layouts:
     application:
-      title: "Pragmatic Bookshelf"
-      home: "Home"
-      questions: "Questions"
-      news: "News"
-      contact: "Contact"
+      title: "ES - Pragmatic Bookshelf"
+      home: "ES - Home"
+      questions: "ES - Questions"
+      news: "ES - News"
+      contact: "ES - Contact"

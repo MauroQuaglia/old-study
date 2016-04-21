@@ -17,8 +17,9 @@ Rails.application.routes.draw do
   get 'store/index'
 
 
-
-  scope '(:locale)' do
+#http://localhost:3000/ = http://localhost:3000/en
+#http://localhost:3000/es
+  scope '(:locale)' do # tra parentesi significa opzionale
     resources :orders
     resources :line_items
     resources :carts
