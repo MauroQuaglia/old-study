@@ -9,7 +9,7 @@
 <body class='<%= controller.controller_name %>'>
 <div id='banner'>
   <%= image_tag('logo.png') %>
-  <%= @page_title || t('.title') %>
+  <%= @page_title || t('.title').html_safe    %>
 </div>
 <div id='columns'>
   <div id='side'>

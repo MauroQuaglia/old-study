@@ -20,12 +20,38 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+
+  number:
+    currency:
+      format:
+        unit:      "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+
+  activerecord:
+    errors:
+      inclusion: "No incluso"
+      blank: "blanco"
+
+  errors:
+    template:
+      body: 'body'
+      header:
+        one: one
+        other: other
+
   hello: "Hello world"
 
   layouts:
     application:
-      title: "Pragmatic Bookshelf"
+      title: "&amp;&amp;&amp;Pragmatic Bookshelf"
       home: "Home"
       questions: "Questions"
       news: "News"
       contact: "Contact"
+  carts:
+    cart:
+      title: "TITLE"
+

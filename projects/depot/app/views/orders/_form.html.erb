@@ -1,9 +1,11 @@
- <!--f è la form-->
+<!--f è la form-->
 <%= form_for(@order) do |f| %>
-     <!-- se c'è un errore i dati vecchi non li perdo anche se nel metodo new del controller creo un nuovo ordine, infatti nella form i dati sono nel browser e rimangono, non vengono caricati i dati dell'oggetto nuovo creato. Viene creato solo un oggetto nuovo pronto ad accogliere di nuovo i dati dell'utente.-->
+    <!-- se c'è un errore i dati vecchi non li perdo anche se nel metodo new del controller creo un nuovo ordine, infatti nella form i dati sono nel browser e rimangono, non vengono caricati i dati dell'oggetto nuovo creato. Viene creato solo un oggetto nuovo pronto ad accogliere di nuovo i dati dell'utente.-->
     <% if @order.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+          <h2><%= raw(t('.errors.template.header', count: @order.errors.count, model: t('activerecord.models.order'))) %></h2>
+          <p><%= t('errors.template.body') %></p>
           <ul>
             <% @order.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
