@@ -4,8 +4,14 @@ class StoreController < ApplicationController
   skip_before_action(:authorize)
 
   def index
+
+    if params[:set_locale]
+      redirect_to store_url(locale: params[:set_locale])
+    else
+      @products = Product.order(:title)
+    end
+
     # E' lazy, la query la fa quando chiedo a @product qualche operazione (es. each) altrimenti non fa nulla.
-    @products = Product.order(:title)
 
     update(session)
 
