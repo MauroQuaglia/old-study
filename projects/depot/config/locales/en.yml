@@ -34,10 +34,13 @@ en:
     errors:
       inclusion: "No incluso"
       blank: "blanco"
+    models:
+      order: "pedido"
+
 
   errors:
     template:
-      body: 'body'
+      body: 'body errors'
       header:
         one: one
         other: other
