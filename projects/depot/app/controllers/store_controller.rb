@@ -1,3 +1,5 @@
+#require 'hello_world' Se metto l'autoload_path il require non serve
+
 class StoreController < ApplicationController
   include StoreCounter, CurrentCart
   before_action(:set_cart)
@@ -11,6 +13,7 @@ class StoreController < ApplicationController
       @products = Product.order(:title)
     end
 
+    @say = HelloWorld.say
     # E' lazy, la query la fa quando chiedo a @product qualche operazione (es. each) altrimenti non fa nulla.
 
     update(session)
