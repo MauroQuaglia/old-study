@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_i18n_locale_from_params
+    Rails.logger.error("ERROR")
     locale = params[:locale]
     if (locale)
       if I18n.available_locales.map(&:to_s).include?(locale)

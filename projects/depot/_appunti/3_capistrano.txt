@@ -1,0 +1,28 @@
+Nel Gemfile aggiungere:
+
+group(:development) do
+  gem 'rvm-capistrano'
+end
+
+Mettiamo rvm- perché noi stiamo usando rvm per gestire i Ruby, quindi la prassi è questa.
+
+------------------------------------------------------------------------------------------------------------------------
+Per aggiungere i file che sono necessari a Capistrano:
+> capify .
+
++Capfile
+** analogo al Rakefile, in cui devo decommentare una riga e poi non lo tocco più...
+
++config/deploy.rb
+** contiene il necessario per i deploy, ma la versione che mette lui di default è troppo stringata, bisogna scaricarne un'altra e poi scommentare quello che serve e commentare ciò che non serve
+
+
+------------------------------------------------------------------------------------------------------------------------
+La prima volta che si deploya per setup directory:
+* cap deploy:setup
+
+dopodiche
+* cap deploy:check
+
+Per rollback:
+cap deploy:rollback
