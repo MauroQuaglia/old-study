@@ -1,3 +1,14 @@
+=begin
+create_table "orders", force: :cascade do |t|
+  t.string   "name"
+  t.text     "address"
+  t.string   "email"
+  t.string   "pay_type"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+=end
+
 class Order < ActiveRecord::Base
   PAYMENT_TYPES = ['Check', 'Credit Card', 'Purchase Order']
   has_many(:line_items, dependent: :destroy)
