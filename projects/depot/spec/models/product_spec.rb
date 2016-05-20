@@ -3,6 +3,12 @@ require 'rails_helper'
 RSpec.describe Product do
   fixtures :products
 
+  it 'sss attributes must be not empty' do
+    product = described_class.create!
+
+  end
+
+
   it 'attributes must be not empty' do
     product = described_class.create
 
