@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Order do
 
   it 'xxx' do
+    # Esemp
      # Creo ordine senza creare una variabile in memoria.
     Order.new do |o|
       o.name = 'dave'
@@ -11,6 +12,7 @@ RSpec.describe Order do
     end
 
     it 'yyy' do
+      order = Order.new(name: 'mauro', email: 'ddd')
       order = Order.new(name: 'mauro', email: 'ddd')
       #puts "Ecco: #{order.id}"
       order.save

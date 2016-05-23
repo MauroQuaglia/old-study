@@ -46,3 +46,24 @@ Ruby
 
 %{}
 * sintassi alternativa a "", conveniente da usare quando le stringhe sono molto lunghe.
+
+Esempio di query con like
+Product.where("title like ?", "%Scrip%")   xxxScripyyy me lo trova, % sono dei segnaposto.
+
+Esempi di query funzionanti:
+
+* Product.where("title like ?", "%Scrip%")
+* Product.where("title like ?", "%Scri%").order("title DESC")
+* Product.where("title like ?", "%Scri%").order("title ASC")
+* Product.order("title DESC").count
+* Product.order("title DESC").limit(2)
+* Product.order("title DESC").limit(1).offset(1)
+* Product.select('*') ----> Product.all
+* Product.select("id, title")
+
+
+
+
+
+
+
