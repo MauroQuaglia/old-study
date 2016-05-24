@@ -55,12 +55,18 @@ Esempi di query funzionanti:
 * Product.where("title like ?", "%Scrip%")
 * Product.where("title like ?", "%Scri%").order("title DESC")
 * Product.where("title like ?", "%Scri%").order("title ASC")
-* Product.order("title DESC").count
+* Product.order("title ASC").count
 * Product.order("title DESC").limit(2)
 * Product.order("title DESC").limit(1).offset(1)
 * Product.select('*') ----> Product.all
 * Product.select("id, title")
-
+* Product.all.each {|p| puts p.title  }
+* Product.readonly.first
+* Product.average(:price)
+* Product.minimum(:price)
+* Product.sum(:price)
+* Product.where('price > 10').minimum(:price)
+* Product.group(:title).minimum(:price)
 
 
 
