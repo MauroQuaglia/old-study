@@ -67,6 +67,18 @@ Esempi di query funzionanti:
 * Product.sum(:price)
 * Product.where('price > 10').minimum(:price)
 * Product.group(:title).minimum(:price)
+* Product.find_by_sql('SELECT * FROM products;')
+
+
+NEl modell:
+* scope :last_n_days, lambda { |days| where('updated < ?', days) } # with parameter
+* scope :last_7_days, -> { where('updated < 7') }                  # without parameter
+* Order.last_7_days
+
+
+
+
+
 
 
 
