@@ -10,9 +10,28 @@ Rails.application.routes.draw do
   end
 
   resources :users
+
+
   resources :products do
     get :who_bought, on: :member
   end
+=begin
+  ES:format.html, ecc tutte hannoil format opzionale, significa che posso chiamarle con una certa estensione e ottenere delle risposte diverse, txt, json, html, ecc...
+  il CRUD è contenuto in queste sette rotte. più 3 speciali (*)
+
+  who_bought_product GET    /products/:id/who_bought(.:format)       products#who_bought
+
+  products           GET    /products(.:format)                      products#index      *List
+                     POST   /products(.:format)                      products#create     Create creo la risorsa
+  new_product        GET    /products/new(.:format)                  products#new        *New
+  edit_product       GET    /products/:id/edit(.:format)             products#edit       Read la risorsa
+  product            GET    /products/:id(.:format)                  products#show       *Show
+                     PATCH  /products/:id(.:format)                  products#update     Update la risorsa
+                     PUT    /products/:id(.:format)                  products#update     Update la risorsa
+                     DELETE /products/:id(.:format)                  products#destroy    Delete la risorsa
+=end
+
+
 
   get 'store/index'
 
@@ -25,6 +44,7 @@ Rails.application.routes.draw do
     resources :carts
     root 'store#index', as: 'store', via: :all
   end
+  resources :products
 
 =begin
 
@@ -42,7 +62,6 @@ Rails.application.routes.draw do
 
 =end
 
-  resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
