@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   # shortcut per non srivere tutte le volte il nome del controller
   controller :sessions do
-    get    'login'  => :new
-    post   'login'  => :create
+    get 'login' => :new
+    post 'login' => :create
     delete 'logout' => :destroy
   end
 
@@ -13,13 +13,34 @@ Rails.application.routes.draw do
 
 
   resources :products do
-    get :who_bought, on: :member
+    get :who_bought_on_member, on: :member #Aggiungiamo una GET, si applioca ad ogni membro della collezione di prodotti.
+    get :who_bought_on_collection, on: :collection #Aggiungiamo una GET, si applioca ad ogni membro della collezione di prodotti.
+
+    resources :reviews
   end
+
+=begin
+  product_reviews     GET    /products/:product_id/reviews(.:format)          reviews#index
+                      POST   /products/:product_id/reviews(.:format)          reviews#create
+  new_product_review  GET    /products/:product_id/reviews/new(.:format)      reviews#new
+  edit_product_review GET    /products/:product_id/reviews/:id/edit(.:format) reviews#edit
+  product_review      GET    /products/:product_id/reviews/:id(.:format)      reviews#show
+                      PATCH  /products/:product_id/reviews/:id(.:format)      reviews#update
+                      PUT    /products/:product_id/reviews/:id(.:format)      reviews#update
+                      DELETE /products/:product_id/reviews/:id(.:format)      reviews#destroy
+=end
+
+=begin
+  who_bought_on_member_product      GET    /products/:id/who_bought_on_member(.:format) products#who_bought_on_member
+  who_bought_on_collection_products GET    /products/who_bought_on_collection(.:format) products#who_bought_on_collection
+=end
+
+
 =begin
   ES:format.html, ecc tutte hannoil format opzionale, significa che posso chiamarle con una certa estensione e ottenere delle risposte diverse, txt, json, html, ecc...
   il CRUD è contenuto in queste sette rotte. più 3 speciali (*)
 
-  who_bought_product GET    /products/:id/who_bought(.:format)       products#who_bought
+
 
   products           GET    /products(.:format)                      products#index      *List
                      POST   /products(.:format)                      products#create     Create creo la risorsa
@@ -32,12 +53,11 @@ Rails.application.routes.draw do
 =end
 
 
-
   get 'store/index'
 
 
-#http://localhost:3000/ = http://localhost:3000/en
-#http://localhost:3000/es
+  #http://localhost:3000/ = http://localhost:3000/en
+  #http://localhost:3000/es
   scope '(:locale)' do # tra parentesi significa opzionale
     resources :orders
     resources :line_items
