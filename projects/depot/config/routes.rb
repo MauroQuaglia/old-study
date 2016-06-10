@@ -19,6 +19,11 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+
+  resources :xxx, shallow: true do
+    resources :yyy
+  end
+
 =begin
   product_reviews     GET    /products/:product_id/reviews(.:format)          reviews#index
                       POST   /products/:product_id/reviews(.:format)          reviews#create
