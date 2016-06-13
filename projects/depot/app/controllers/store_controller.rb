@@ -7,6 +7,12 @@ class StoreController < ApplicationController
 
   def index
 
+    #return render text: request.inspect
+    #return render text: response.inspect
+    #return render text: params.cookies
+    #return render text: session.inspect
+    #return render text: cookies.inspect
+
     if params[:set_locale]
       redirect_to store_url(locale: params[:set_locale])
     else
@@ -21,4 +27,6 @@ class StoreController < ApplicationController
     @store_counter = session[:store_counter]
   end
 
+
 end
+
