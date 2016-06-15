@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
+  get ':controller/:action'
+=begin
   get 'admin' => 'admin#index'
+
+  get 'test' => 'store#test'
 
   # shortcut per non srivere tutte le volte il nome del controller
   controller :sessions do
@@ -23,6 +27,7 @@ Rails.application.routes.draw do
   resources :xxx, shallow: true do
     resources :yyy
   end
+=end
 
 =begin
   product_reviews     GET    /products/:product_id/reviews(.:format)          reviews#index
@@ -58,11 +63,12 @@ Rails.application.routes.draw do
 =end
 
 
-  get 'store/index'
+ # get 'store/index'
 
 
   #http://localhost:3000/ = http://localhost:3000/en
   #http://localhost:3000/es
+=begin
   scope '(:locale)' do # tra parentesi significa opzionale
     resources :orders
     resources :line_items
@@ -70,6 +76,7 @@ Rails.application.routes.draw do
     root 'store#index', as: 'store', via: :all
   end
   resources :products
+=end
 
 =begin
 

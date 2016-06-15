@@ -6,12 +6,14 @@ class StoreController < ApplicationController
   skip_before_action(:authorize)
 
   def index
-
+    # set di informazioni disponibili
+    #return render text: action_name.inspect
+    #return render text: cookies.inspect
+    #return render text: headers.inspect
+    #return render text: params.inspect
     #return render text: request.inspect
     #return render text: response.inspect
-    #return render text: params.cookies
     #return render text: session.inspect
-    #return render text: cookies.inspect
 
     if params[:set_locale]
       redirect_to store_url(locale: params[:set_locale])
@@ -28,5 +30,14 @@ class StoreController < ApplicationController
   end
 
 
+  def method_missing(name, *args)
+    render(inline: "Action sconosciuta: #{name}; parameters: #{params.inspect}")
+  end
+
+
+  def test
+    #render text: 'cccj'
+    render file: '/home/xpuser/mauro-quaglia/studio/projects/depot/_appunti_depot/documentazione.txt'
+  end
 end
 

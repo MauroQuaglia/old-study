@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
   #before_action :authorize
   before_action :set_i18n_locale_from_params
 
+=begin
+
+  def method_missing(name, *args)
+    render(inline: "Action sconosciuta: #{name}; parameters: #{params.inspect}")
+  end
+=end
+
+
   protected
 
   def set_i18n_locale_from_params
