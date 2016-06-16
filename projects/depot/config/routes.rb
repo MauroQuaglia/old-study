@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get ':controller/:action'
+
 =begin
   get 'admin' => 'admin#index'
 
@@ -63,7 +64,7 @@ Rails.application.routes.draw do
 =end
 
 
- # get 'store/index'
+  get 'store/index', as: :store_index
 
 
   #http://localhost:3000/ = http://localhost:3000/en

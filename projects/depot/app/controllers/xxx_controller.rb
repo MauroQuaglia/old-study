@@ -29,4 +29,23 @@ class XxxController < ApplicationController
     send_data('dkldkldk', type: 'type/text', disposition: 'inline')
   end
 
+  def test3
+    send_file('/home/xpuser/mauro-quaglia/studio/projects/depot/_appunti_depot/documentazione.txt')
+  end
+
+  def test4
+    render text: 'test4'
+  end
+
+  def test5
+    redirect_to(action: :test4) #302
+    #render text: 'test5'
+  end
+
+  def test6
+    #redirect_to(xxx_path)
+    #render text: 'test5'
+  end
+
+
 end
