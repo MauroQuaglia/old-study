@@ -1,24 +1,22 @@
-require_relative '../lib/ticket_shop'
+require_relative '../../lib/ticket_shop'
 
 RSpec.describe TicketShop do
 
-  subject { described_class.new }
-
   it 'should sell a one way ticket' do
     expect(
-        subject.get('ONEWAY')
+        described_class.buy(:ONEWAY)
     ).to be_instance_of(OneWayTicket)
   end
 
   it 'should sell a daily ticket' do
     expect(
-        subject.get('DAILY')
+        described_class.buy(:DAILY)
     ).to be_instance_of(DailyTicket)
   end
 
   it 'should sell a weekly ticket' do
     expect(
-        subject.get('WEEKLY')
+        described_class.buy(:WEEKLY)
     ).to be_instance_of(WeeklyTicket)
   end
 

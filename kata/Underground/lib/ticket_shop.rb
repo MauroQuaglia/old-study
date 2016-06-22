@@ -4,15 +4,14 @@ require_relative 'weekly_ticket'
 
 class TicketShop
 
-  def initialize
-    @tickets=Hash.new
-    @tickets['ONEWAY']=OneWayTicket.new
-    @tickets['DAILY']= DailyTicket.new
-    @tickets['WEEKLY']= WeeklyTicket.new
-  end
+  TICKETS = {
+      ONEWAY: OneWayTicket.new,
+      DAILY: DailyTicket.new,
+      WEEKLY: WeeklyTicket.new,
+  }
 
-  def get(type)
-    @tickets[type]
+  def self.buy(type)
+    TICKETS[type]
   end
 
 end
