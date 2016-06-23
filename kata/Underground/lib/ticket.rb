@@ -5,7 +5,8 @@ class Ticket
   end
 
   def scan_at(time, sound)
-    yield(@times << time) ? sound + ' KO' :  sound + ' OK'
+    yield(@times << time) ?
+        sound.concat(' KO') : sound.concat(' OK')
   end
 
 end
