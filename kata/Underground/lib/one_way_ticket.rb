@@ -1,12 +1,11 @@
-class OneWayTicket
+require_relative '../lib/ticket'
 
-  def initialize
-    @times = []
-  end
+class OneWayTicket < Ticket
 
   def scan_at(time)
-    @times << time
-    @times.last.to_time - @times.first.to_time >= 72 * 60 ? message('KO') : message('OK')
+    super(time) do |times|
+      times.last.to_time - times.first.to_time >= 72 * 60 ? message('KO') : message('OK')
+    end
   end
 
   private

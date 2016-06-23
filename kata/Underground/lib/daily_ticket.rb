@@ -1,12 +1,11 @@
-class DailyTicket
+require_relative '../lib/ticket'
 
-  def initialize
-    @times = []
-  end
+class DailyTicket < Ticket
 
   def scan_at(time)
-    @times << time
-    @times.last.day - @times.first.day >= 1 ? message('KO') : message('OK')
+    super(time) do |times|
+      times.last.day - times.first.day >= 1 ? message('KO') : message('OK')
+    end
   end
 
   private

@@ -1,12 +1,11 @@
-class WeeklyTicket
+require_relative '../lib/ticket'
 
-  def initialize
-    @times = []
-  end
+class WeeklyTicket < Ticket
 
   def scan_at(time)
-    @times << time
-    @times.last.year == @times.first.year && @times.last.cweek == @times.first.cweek ? message('OK') : message('KO')
+    super(time) do |times|
+      times.last.year == times.first.year && times.last.cweek == times.first.cweek ? message('OK') : message('KO')
+    end
   end
 
   private

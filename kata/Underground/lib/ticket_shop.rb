@@ -1,6 +1,6 @@
-require_relative 'one_way_ticket'
-require_relative 'daily_ticket'
-require_relative 'weekly_ticket'
+require_relative '../lib/one_way_ticket'
+require_relative '../lib/daily_ticket'
+require_relative '../lib/weekly_ticket'
 
 class TicketShop
 
