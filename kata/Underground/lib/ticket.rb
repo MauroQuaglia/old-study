@@ -4,8 +4,8 @@ class Ticket
     @times = []
   end
 
-  def scan_at(time)
-    yield(@times << time)
+  def scan_at(time, sound)
+    yield(@times << time) ? sound + ' KO' :  sound + ' OK'
   end
 
 end

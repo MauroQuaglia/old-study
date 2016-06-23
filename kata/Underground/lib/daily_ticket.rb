@@ -3,15 +3,9 @@ require_relative '../lib/ticket'
 class DailyTicket < Ticket
 
   def scan_at(time)
-    super(time) do |times|
-      times.last.day - times.first.day >= 1 ? message('KO') : message('OK')
+    super(time, "DISPLAY DAILY\nBEEP DAILY") do |times|
+      times.last.day - times.first.day >= 1
     end
-  end
-
-  private
-
-  def message(value)
-    "DISPLAY DAILY\nBEEP DAILY #{value}"
   end
 
 end
