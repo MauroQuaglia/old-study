@@ -1,1 +1,0 @@
-* provare a rimuovere il gemset global, dovrebbe a questo punto non trovare rake.
