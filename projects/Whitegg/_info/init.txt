@@ -17,6 +17,7 @@ Aggiungere al Gemfile le gemme:
 * 'rspec-rails' al gruppo (:development, :test)
 * 'therubyracer' per l'ambiente JavaScript
 * 'bundler' con la versione fissata
+* 'rails' con la versione fissata
 
 Installare tutte le gemme:
 * bundler
