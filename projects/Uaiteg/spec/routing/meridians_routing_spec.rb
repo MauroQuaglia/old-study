@@ -4,6 +4,8 @@ RSpec.describe MeridiansController do
 
   it 'routes to #index' do
     expect(:get => "/meridians").to route_to("meridians#index")
+    #expect(:get => "/meridians.json").to route_to(controller: 'meridians', action: 'index', format: 'json')
+    #expect(:get => "/meridians.html").to route_to(controller: 'meridians', action: 'index', format: 'html')
   end
 
   it "routes to #new" do
