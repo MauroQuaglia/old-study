@@ -1,0 +1,19 @@
+Configurare il database:
+* http://guides.rubyonrails.org/configuring.html#configuring-a-database
+
+Bisogna installare un driver, cioè una libreria che permette di interfacciarsi con il database.
+* https://bitbucket.org/ged/ruby-pg/wiki/Home
+
+* una volta che ho modificato il file database.yml dicendogli di usare l'adapter giusto e messo i nomi dei database, fare: rake db:setup
+* sistemazione dei permessi...
+* cose importanti da impostare...
+* poi posso creare un modello Es: rails generate scaffold Meridian name:string
+* poi rails db:migrate e crea lo schema
+
+* vedere la versione installata
+* http://zetcode.com/db/postgresqlruby/
+*  psql -V
+
+** verificare che ENV['DATABASE_URL'] non sia impostato. Noi usiamo database.yml che è meglio.
+
+
