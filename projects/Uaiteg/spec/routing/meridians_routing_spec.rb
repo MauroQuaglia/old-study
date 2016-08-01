@@ -2,11 +2,14 @@ require 'rails_helper'
 
 RSpec.describe MeridiansController do
 
-  it 'routes to #index' do
-    expect(:get => "/meridians").to route_to("meridians#index")
-    #expect(:get => "/meridians.json").to route_to(controller: 'meridians', action: 'index', format: 'json')
-    #expect(:get => "/meridians.html").to route_to(controller: 'meridians', action: 'index', format: 'html')
+  it 'should disable format' do
+    expect(:get => '/meridians.json').not_to be_routable
   end
+
+  it 'routes to #index' do
+    expect(:get => '/meridians').to route_to(controller: 'meridians', action: 'index')
+  end
+
 
   it "routes to #new" do
     expect(:get => "/meridians/new").to route_to("meridians#new")

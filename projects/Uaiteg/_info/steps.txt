@@ -7,7 +7,7 @@ Bisogna installare un driver, cioè una libreria che permette di interfacciarsi 
 * una volta che ho modificato il file database.yml dicendogli di usare l'adapter giusto e messo i nomi dei database, fare: rake db:setup
 * sistemazione dei permessi...
 * cose importanti da impostare...
-* poi posso creare un modello Es: rails generate scaffold Meridian name:string
+* poi posso creare un modello Es: rails generate scaffold Meridian name:string (rails g scaffold MyModel --no-stylesheets se non voglio lo stile)
 * poi rails db:migrate e crea lo schema
 
 * vedere la versione installata

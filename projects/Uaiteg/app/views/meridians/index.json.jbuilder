@@ -1,1 +1,0 @@
-json.array! @meridians, partial: 'meridians/meridian', as: :meridian

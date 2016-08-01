@@ -1,8 +1,6 @@
 class MeridiansController < ApplicationController
   before_action :set_meridian, only: [:show, :edit, :update, :destroy]
 
-  # GET /meridians
-  # GET /meridians.json
   def index
     @meridians = Meridian.all
   end
