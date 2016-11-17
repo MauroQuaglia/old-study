@@ -1,0 +1,3 @@
+* api
+* application server
+* database

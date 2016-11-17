@@ -24,3 +24,8 @@ cd /home/xpuser/mauro-quaglia/studio/projects
 * http://localhost:3000/, per vedere se funziona
 
 * committare!
+
+------------------------------------------------------------------------------------------------------------------------
+
+Per informazioni:
+* http://guides.rubyonrails.org/index.html
