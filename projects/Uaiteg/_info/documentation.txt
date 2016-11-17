@@ -1,5 +1,0 @@
-rails
- * http://guides.rubyonrails.org/
-
-rspec-rails
-* http://www.relishapp.com/rspec/rspec-rails/v/3-1/docs

@@ -1,2 +1,0 @@
-class Meridian < ApplicationRecord
-end
