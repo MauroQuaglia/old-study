@@ -1,0 +1,26 @@
+cd /home/xpuser/mauro-quaglia/studio/projects
+* rvm gemset create zero
+* rvm gemset use zero
+* gem install bundler --no-rdoc --no-ri
+* gem install rails --no-rdoc --no-ri
+* rails new zero -T
+
+* Aggiungere al Gemfile le gemme:
+** [rspec-rails] al gruppo (:development, :test) per i test di RSpec
+** [therubyracer] per l'ambiente JavaScript
+** [bundler] con la versione fissata
+** [rails] con la versione fissata
+** [rake]
+* bundle install
+
+* rails generate rspec:install
+
+* Aggiungere al progetto i file
+** .ruby-version (ruby-2.3.1)
+** .ruby-gemset (zero)
+
+* rake (rspec), per vedere se per i test è OK.
+* rails s, per vedere se parte
+* http://localhost:3000/, per vedere se funziona
+
+* committare!
