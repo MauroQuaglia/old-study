@@ -27,5 +27,8 @@ cd /home/xpuser/mauro-quaglia/studio/projects
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Per informazioni:
+Guida ufficiale Rails:
 * http://guides.rubyonrails.org/index.html
+
+Pagine di errore:
+* https://mattbrictson.com/dynamic-rails-error-pages

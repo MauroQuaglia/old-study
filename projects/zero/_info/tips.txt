@@ -1,0 +1,4 @@
+PAGINE DI ERRORE
+* Documentazione: https://mattbrictson.com/dynamic-rails-error-pages
+* Mettere sotto la public la 502 bad gateway
+* Il test di feature non serve per le pagine di errore, è un automatismo di rails, quindi non da testare.

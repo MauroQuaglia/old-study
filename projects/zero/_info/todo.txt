@@ -1,3 +1,8 @@
 * api
 * application server
 * database
+
+Pagine di errore
+* mettere un initializer per le pagine di errore
+* per la /xxx ci vuole un test di feature
+* mettere sotto la public la 502 bad gateway
