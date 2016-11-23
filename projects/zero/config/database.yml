@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   template: template0
-  encoding: urf8
+  encoding: utf8
   pool: 5
   timeout: 5000
   host: localhost
@@ -9,13 +9,13 @@ default: &default
 test:
   <<: *default
   database: zero_test
-  username: zero_username_test
+  username: xpuser_test
   password: zero_password_test
 
 development:
   <<: *default
   database: zero_development
-  username: zero_username_development
+  username: xpuser
   password: zero_password_development
 
 production:
