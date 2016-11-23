@@ -19,5 +19,15 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+it:
+  welcome:
+    home:
+      title: "Benvenuto in homepage"
+      message: "Benvenuto in homepage!"
+  errors:
+    internal_server_error:
+      title: "Errore del server"
+      message: "Errore del server!"
+    not_found:
+      title: "Pagina non trovata"
+      message: "Pagina non trovata!"
