@@ -1,0 +1,24 @@
+1)
+template0
+Se non si mette la entry template: template0 in database.yml sotto la voce test la macchina di integrazione (debian)
+si arrabbia perché nel in database.yml gli dico di creare un database in utf-8 e per farlo lei cerca di usare un template
+che è sql-ascii. Se invece gli dico di usare template0 usa un template che crea il database in utf-8. postgres
+
+Vedere:
+http://guide.debianizzati.org/index.php/Installazione_di_PostgreSQL_in_Debian
+
+2)
+Creo l'utente zero_username_test:
+
+createuser --interactive -EP zero_username_test
+
+Creo i database per l'ambiente di test:
+
+    bundle exec rake db:setup RAILS_ENV=test
+
+    se il db c'è già lo devo cancellare e mi devo connettere come supeuser
+
+sudo su - postgres (se chiede username e password: postgres, postgres)
+psql
+\l vedo le tabelle
+DROP DATABASE nome-database
