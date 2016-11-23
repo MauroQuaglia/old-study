@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bundler', '1.13.6'
-gem 'rails', '5.0.0.1'
+gem 'rails'
 gem 'rake'
 gem 'therubyracer'
 
@@ -36,6 +36,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   gem 'capybara'
+  gem 'capybara-selenium'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

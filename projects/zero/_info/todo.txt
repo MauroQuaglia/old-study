@@ -3,6 +3,9 @@
 * database
 
 Pagine di errore
-* mettere un initializer per le pagine di errore
-* per la /xxx ci vuole un test di feature
+* mettere un initializer per le pagine di errore. non ci riesco pare non si possa
+* per la /xxx ci vuole un test di feature che però non riesco a fare funzionare
 * mettere sotto la public la 502 bad gateway
+
+Selenium
+* Capire come farlo funzionare
