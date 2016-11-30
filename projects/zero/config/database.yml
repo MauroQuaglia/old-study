@@ -15,11 +15,11 @@ test:
 development:
   <<: *default
   database: zero_development
-  username: xpuser
+  username: xpuser_test
   password: zero_password_development
 
 production:
   <<: *default
   database: zero_production
-  username: zero_username_production
+  username: xpuser_production
   password: zero_password_production

@@ -9,3 +9,7 @@ Pagine di errore
 
 Selenium
 * Capire come farlo funzionare
+
+
+Test di ambiente.
+Testare che c'è heroku (heroku --version)
