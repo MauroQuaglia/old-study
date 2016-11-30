@@ -2,3 +2,6 @@ Informazioni
 * https://devcenter.heroku.com/articles/getting-started-with-rails5
 
 * NB: A volte chiudere il terminare e riaprire dopo le installazioni.
+
+* URL
+* https://gentle-tundra-62921.herokuapp.com/

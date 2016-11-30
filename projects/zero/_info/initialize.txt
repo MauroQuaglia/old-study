@@ -1,3 +1,5 @@
+Setup Applicazione
+
 cd /home/xpuser/mauro-quaglia/studio/projects
 * rvm gemset create zero
 * rvm gemset use zero
@@ -17,6 +19,7 @@ cd /home/xpuser/mauro-quaglia/studio/projects
 
 * Aggiungere al progetto i file
 ** .ruby-version (ruby-2.3.1)
+** posso aggiungere anche al gem file la versione di ruby. (così vuole heroku)
 ** .ruby-gemset (zero)
 
 * rake (rspec), per vedere se per i test è OK.
@@ -26,6 +29,18 @@ cd /home/xpuser/mauro-quaglia/studio/projects
 * committare!
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Setup git
+Da capire però come mettere le mie credenziali e la mia mail (git config --list)
+Da capire se pushando su Heroku salva anche su git.
+
+* E' da fare perchè serve a Heroku
+* git init
+* git add .
+* git commit -m "init"
+
+ ------------------------------------------------------------------------------------------------------------------------
+
 
 Guida ufficiale Rails:
 * http://guides.rubyonrails.org/index.html
