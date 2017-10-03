@@ -1,0 +1,17 @@
+<div>
+  Valore energetico: <div id="total_energy"><%= calories(@zonetor.energy) %></div>
+  <%= pie_chart({
+                    'carboidrati' => calories(@zonetor.carbs_energy),
+                    'grassi' => calories(@zonetor.fats_energy),
+                    'proteine' => calories(@zonetor.proteins_energy),
+                },
+                id: 'partition',
+                colors: ['lightblue', 'yellow', 'salmon'],
+                width: '50',
+                height: '50',
+                legend: false
+      ) %>
+</div>
+<hr>
+<div>
+</div>
