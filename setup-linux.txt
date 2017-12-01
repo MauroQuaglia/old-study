@@ -1,0 +1,99 @@
+INSTALLO UBUNTU
+
+Scaricare UNetbootin con i comandi linux: https://unetbootin.github.io/
+
+Formattare la chiavetta
+
+Con la chiavetta inserita, avviare UNetbootin e seguire le istruzioni.
+Quando ha finito sulla chiavetta abbiamo una versione di ubuntu installabile.
+
+Riavviare il PC e premere F12 per le opzioni del bios. Dire di usare la chiavetta e seguire le istruzioni.
+Quando chiede di riavviare, rimuovere la chiavetta e riavviare il PC.
+
+Poi per sicurezza rilancio gli aggiornamenti. (sudo apt-get update, sudo apt-get upgrade)
+
+NB:
+Aprire il terminale e nelle preferenze
+sotto il tab command selezionare "run command as a login shell."
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------INSTALLO RVM E RUBY
+
+Linux:
+* potrebbero servirmi alcune librerie, ma eventualmente me le chiederà il SO di volta in volta.
+
+Controllo che non ci siano installati dei Ruby di sistema [which ruby]:
+Se sì li posso cancellare, preferisco avere tutto sotto RVM
+Attenzione però a non avere dei progetti che usano questa versione di Ruby!
+[sudo apt-get purge ruby]
+
+Se c'è già un rvm installato posso vedere tutti i ruby installati tramire RVM: [rvm list]
+* Se li voglio rimuovere: [rvm remove]
+In tal modo metto solo quelli che voglio io, infatti quando scarico rvm me ne mette già un paio di default.
+
+Se volgio rimuovere anche rvm: [rvm implode]
+
+Installo RVM (Ruby Version Manager)
+* curl -sSL https://get.rvm.io | bash -s stable
+* chiudere il terminale e riaprirlo per ricaricare il file .bash_login
+* rvm requirements --autolibs=enable (installazione dei prerequisiti per il SO in uso)
+* di default mi installa già dei ruby, li posso buttare. [rvm list; rvm remove]
+
+installo Ruby con RVM
+* rvm install 2.0.0
+* rvm --default 2.0.0 (ogni shell ora usa l'interprete ruby 2.0.0 come default)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+INSTALLARE GIT
+* https://git-scm.com/book/it/v1/Per-Iniziare-Installare-Git
+sudo apt-get install git
+
+git config --global user.name "MauroQuaglia"
+git config --global user.email mauroquaglia@libero.it
+
+dopo se voglio posso impostare anche i tool di diff e gli alias.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+INSTALLARE RubyMine
+https://www.jetbrains.com/ruby/download/#section=linux
+Scaricare lo zip e unzipparlo in un posto... io l'ho messo sotto home ma probabilmente c'è un posto migliore.
+Seguire il readme.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Provare a scaricare i progetti da git.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+LATEX
+
+sorgenti
+sudo apt-get install texlive-full
+
+texstudio
+sudo apt-get install texstudio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
