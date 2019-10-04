@@ -1,5 +1,0 @@
-Perché non usiamo turbolink?
-
-usare il sanitaze per l'html che viene scritto a mano per i contenuti delle fprezzo. Dovrebb l'html sporco.
-
-si usa number_to_currency per formattare i prezzi

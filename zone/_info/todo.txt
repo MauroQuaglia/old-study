@@ -1,6 +1,0 @@
-* pagine di errore
-
-* Completare la lista
-* http://www.my-personaltrainer.it/nutrizione/alimenti.htm
-* http://guides.rubyonrails.org/i18n.html
-* validare lo zonetor

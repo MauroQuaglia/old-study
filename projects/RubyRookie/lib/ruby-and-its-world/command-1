@@ -1,5 +1,0 @@
-#! /home/mauro/.rvm/rubies/ruby-2.3.0/bin/ruby
-p "ARGV: #{ARGV.inspect}"
-
-p "$0 = #{$0}"
-p "$PROGRAM_NAME = #{$PROGRAM_NAME}"

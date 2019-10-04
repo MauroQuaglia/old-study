@@ -1,2 +1,0 @@
-Ogni test è identificato tramite un id unico.
-let e subject sono threadsafe

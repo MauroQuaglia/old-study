@@ -1,3 +1,0 @@
-f1 one
-f1 two
-f1 three

@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54376c72-8142-420f-ad91-a700356bc111" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/JavaScriptRookie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/grasp.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/.idea/monopoly.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/.idea/scopes/scope_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/board.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/monopoly_game.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/square.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasp/monopoly/test/square_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html5-rookie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/BackToTheCheckOut/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/BackToTheCheckOut/check_out.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/BackToTheCheckOut/test/price_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling1/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling1/bowling.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling1/frame.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling1/shots.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling1/test/acceptance_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling1/test/frame_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling1/test/shots_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling2/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling2/bowling.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling2/frame.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling2/shots.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling2/test/acceptance_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling2/test/frame_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Bowling/Bowling2/test/shots_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/FizzBuzz/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/FizzBuzz/fizz_buzz.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/FizzBuzz/test/fizz_buzz_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/JobInterview/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/JobInterview/array_util.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/JobInterview/string_util1.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/JobInterview/string_util2.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/JobInterview/test/count5_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/JobInterview/test/normalize_spaces_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/JobInterview/test/reverse_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/JobInterview/test/sum_odd_elements_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/test/daily_ticket_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/test/one_way_ticket_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/test/ticket_shop_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/test/time_support.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/test/weekly_ticket_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/ticket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/ticket_shop.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileKompact/turnstile.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/daily_ticket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/one_way_ticket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/test/daily_ticket_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/test/one_way_ticket_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/test/ticket_shop_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/test/time_support.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/test/weekly_ticket_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/ticket_shop.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/turnstile.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/MetroTurnstile/MetroTurnstileOriginal/weekly_ticket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/db/development.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/log/development.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/-1C74_YjztyyhUlXOad-gfSMzmyBkc4AzcgUiPnxVGo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/-KrnTACB-ghDPr2X-EN8enAzY-UifUuSJcPYDNxhDUQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/-vxr8tHIMI-FDwbyRgbNw_SctKq8exJR2PGv2WFlyDE.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/0-tPS3kWxwc7ZbT9FBn90awikOSdB2WZnKHqU2t230M.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/0CJPfNiLnS02UFcUPH88GhS8tWU5rEv28mOB_06QRZ4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/0aJq-asZGc4XvN8yIhGoKWPSTbL5If9GoigS4_kgTPQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/131v1dlTV0NlU5ea0u2UCoMuUuAu2uBGia3GdwYMnBs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/1Udt0YSiBHJFNnj-W58O0_yY56U2R3cr1Em4Zd5oe2E.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/1V7QDj74X7KtjRUmA0zkqqJ6gN9wmbXScHu8yPe6h7Q.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/1oMRc8HoRKbP-gsY_6yg1fIpxQ6qUCJg7cx_Y7J-P4I.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/2-lnamUxUAEZWYt74Rq_yuOZRKALL4uHi0eKalpB5K8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/2RzLOWYWyQmZQDMyBe4Gq-psBU23MpXkHWSbSWLPy9U.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/30vImBXSkmCp0Ckzdu0qPLaclZ-iESze8S1KiXtvvWk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/3vq9NbCp9C9idur-9stLF_fSrCE6MjpFhXfizUmR_To.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/43agVXhsM12i23ZPtzksSsfZq3iBVCuU9eBWSJqCBcY.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/4JuWvWXBlhtgMVmkAw_qbeIgpCqzshqwhAc5AqKWaM4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/4NYT8TfgWFoSdskg9g11bu6Ag6DEZwIAdJELs4NKzvA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/4URuFhg8HBC2-S4osw-FD6t9l8XTKXsOr2tFyCEOoME.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/4Zb7A10Cs6jvCQQaFdBMhZxUEUmZEdQO4mEsjulrHEo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/4_vGNEZ3wNp986G5ZInn6cDHYWSomB_r0XNanVMF4Z0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/4j1cN4kini9rFAjCOV55r4dJcnWtNKjpfOmrSVkcMfc.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/5e-UrgarEJT8Mmctmv9OQTlSP-9fdQBNsnfZ3FPV4oc.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/5eHBvFc5DeM141Te1Z3KCvhDDBmQe-9PEVKEg562w7Y.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/5hbQMU8jVUJ8M0hivOAdaJUct5WsDi1eGli0-N3kmKM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/69iWoGhS_RY0utyNwz7P58KbRRad21ZWtH9-ZR9U-Eg.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/70Frk1bmFjtQP6rqJgppc5k606L2EvG4LZh-aGYVlqw.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/7bCk8phqfKMspAKfD_rAB-0Pr2s1REMNDosoPgLdsJo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/7rMYYpdqkugPbzqcxGHgXRXGHjD9rMeHCbBmPRw3_SQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/85qJUBvPDWnrkC8YerXOK63uyuYaaWUByS7_u4_zYuQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/8MzFtIcyDS9bIQ34R3Z_VZxsEWThZdqkgaZQb7W3m2E.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/8bMucdx_fCvYCSkcOWv8UMPP7x61VxdU5UF44nzld6c.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/8mtU4C8r4-qKKNaLMX4qoA9oVmjb_RS9675NrJOaWOA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/8yh0epKBzpb4EAIkAU-epg2leDHJ_HKUwOAhLbYu8sg.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/991W-qvRLc-tL7kmymvH5T_IBNMm7n4YwohVF7TYnuM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/9Q5UNZhsDs9_5ZQUHoxFEAdflaIKOUurRp9iCMdKbGc.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/9aGk2ql3EIHOB4yLab6BTfrZakV561Sh4r7Seg5EyuM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/9pmMuwTA2D03JbCkh7TXYSZJR5lRwORxiWK2t2zXUqs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/Au06pqYQvlzcOxmHgLDQh9Nbzs9cvnsGta7i3mErXsA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/B0x8Qx_A0SndN9NVqpYxpqRRS2pLI1TUfcquG-yrQQY.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/BtlQAmZNo4WxAMK-Zu5sBlrtgbMJYTuC5e5RF4GqCdA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/CxyD47A9aaqOP56aaO_kgpGpZ4yE6QW3ASifbBsc5_k.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/Dxf7AULdfhagt082kbKiApJqZ3nKYfX_giuxc29VYy0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/E1AvP8o7RPQQfFdfw8TXFqqnWkpoMveHsXq2r-4bX_M.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/E2f5VTq7NeWcEECUPKsKaPq5qO3I6kGpMbKd1fXsSd0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/E2yfUUhS7g-Bkk3Hk8SJPz22_5rlrvuVQbZCcmYvnTs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/EKZgCqRcoy1gd35L0wYcS6UIm5qt_2h2Do866Fu8H4A.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/FWnNf5lkdna0W-PDL8KB3ptySyU_ocNqjW-chBy8EpQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/F__emMM6CHgloh-7SPuXKuKNHY0he5kZ2ZiLzTb-uVM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/G4oDnJwLz-LQZLTp0T_HoP3BaLOCwRlTPJDJtgBDpQM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/G59uy26sGfZii1kL9xPEOhzII8_R7KBkPJhKuxWDLXc.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/GUBw8pCORdEttoDYOZ62iO79zfJjgXq0HiJeYxIf6Yk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/Gbf3duHUkGk9a8mi_j2Jgt9KsfVcJ7h54MY-6b9drP8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/GkMdo5wXcamikRZ_xGeC1oss6E7dCFjFg5j8xXIWebw.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/H-mOER1Db7aYDs9GMq39EFDbIrUkFazlBdI3cOPClZA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/Iz1TLX4fI6vIiZ3nZDiFWqw7doGiaYSBBNLcxfV5-nA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/JdPujEvTSrPDZHO6K3g6m7un0kVoYVxDyeJqE-O66HU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/KBEYECmgCoccB-_GcK4dMqkWKVk2fHbXffHq--zrcnI.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/KNZ2NJH8cAtEmDcF1CbxaDLEeM7Ef8Mc_808cRER5y8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/KziYCEI5bBeWTgdsoJEdLResabgrsYU7pJc0Dmaexew.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/LUZ7T-jeAEXiMXVF5AMqQFgtqrasQUkFd8H_DzN_t4Q.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/LxypOy98r0xJh0pbCFp_Aa64bp3wOyKDRjTrOyZoTC8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/LzdgCk9EICncfBVZ2mxZkduZ0Jy8Wn4QU2EFWA5NKAA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/MNjdsCrvp_fGe-u4mEmDaes3g2Ie-BX9E8mvYesfNwE.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/MX54cGPSN0Cr8glaiPimFaLOsZf7pgn8kNoJS9qWQvk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/NCl51w40oJlhc05F85xNhaOe-D5EmL5MKDHMezVYqNk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/Nf2aP6wmCAhX95vCrxic_RIjrAO1HF00hdGxR5eVjwk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/OUBSQFvX9eHp2T7kvAbSs1I7a5mWGpNOqwDANOfH_Ns.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/OVnGY2G21W3nglIfUIvoz6q_jEhiAYcxLH57TQS8dsA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/PBGlAP-buAOOWFgyynOvjYF5AY-EBj80bxNzfsSTVHw.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/PMF5bWByu8GnyZcQZ7mo6PNhILL3_OkiFfiZ7SANgg0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/PdtudTfDRZTn55lpEMzwZujEYAaBO2D3I2W8baxrPNg.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/PeHpInejSNIOOswyomIJMIj6C_6i82WrcNHOCQ_1Sy8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/Pk2-f6ipmigNIDER-Dze1YeGIj6su0fdS_LR8rXX6_M.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/PpW6fnyZ6Lnlw3jqyLAdBqSgxcqvQTDNDMVQgfjD12Q.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/QXxzjU20vVvprLBbeMEMWq8e6xzmiT8LXeeaenloP7g.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/QjRyIL3KMAp3Oox74Gw_Mp2DL9olLDPbaZCOBtc_Dso.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/QraLt_TKYPmTcX72NqQ8AYoPUnZldzrRM_pns_IH8zI.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/QxtKuAYTB5wFx4WzndwBjrYOF-A4eXPI3qe1sy_aKt4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/RODLgWoAKbW0CeiMXOgJYmrkbuE4BHdlJgLul8_bn78.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/SY9ESNMwHTVg6VvmGNVhvKi_OnlrYZ2MLBm-ma94iRA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/TRjyGlj3EgqyNzba0CYNCluVU6DcTM_5nAiGsE5EWlQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/TjK3T8UkKMDPvG5wD4xW-7FUUwtPfsPkpqxZwRRIngw.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/TzVBcxDf366ujx28CsvCF5Nl-HktJkA-WRDYLFqmrhI.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/ULaJ0xmrGsBPyZl2f8J_xoN_Va1lmzABd7XAdCE34MU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/UxfQFjr_6lbPfO4srN0dVO5K7a5Tp2f7GFht9AmsMaY.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/V6-0knhrcakxsuTnCcOCk4FMgN4Wcnyj9NsOOfCMuZM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/V9o4qwkRX8gJTNR-LhMHYk0fhqxfO1qIttMwP1AC9zM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/VEWtG2UrytGpg2GCpYgUpzNMqGXj22biya-pMT6TQ4A.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/VO2hRQBTT_6FAACcn603NLmeNIc4yP3IMt90dwgQk2Q.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/VOp0pIv_pTt1jyD5JQn5Ee721CyQFQTGdnz4ODw38i4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/W9VjFXrMB0b7CiYqdUbNG4zEEo_a3uIMhSMyG_enwds.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/WJaE-28GC3F544bp91Is6P4olFBZ6oI9bMgJJPIC5Tw.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/X-qeNbk4zLl_rQQTYVdMUTkerxq5jBLPCPKHE45iX4Y.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/XCYf4szZa3TqVMBJ4v3fBj0fIHuzswqGPgmo2t7cwdM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/XOyYBotYbiKgH1VBhSx6I0qaDlWW71iHmht5CtJTx_0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/XoG1PC0MA4mVUmDrZXNKaw0bBNSX4tkVIJ3nyRgXp7U.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/YfZqVITSm8fh4vQsOAy7tXhgaphBPW16hhoVrbq2OcM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/ZJYh_gCjjB_UqnDE3npEQ5GxtiG9E3Xeifoi-VbXj14.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/_-9WHxxD4Sx_gghk1JCdx_vR4cXVhNcI-Rf9Rl3n-sc.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/_QPX52EF_QTIHEPzF6bA7hzCvRywL1XxP5I_p47tal4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/_RSjXr6KheyDshLK0reEY2Dg34FEg-wXcb5sLCkDtaA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/_TVrMTk1Knx1L0rwLQ0vFe5QGDCa6WEZilMNpkJTKr8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/aE9TkVEriNkrFHxKzYL-3Z6HPxyT-U_MzNlx9V98uDY.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/aIM-YJoEpTgseJvA8gUNFGPAVF9U6Nkub8yXVGOBK38.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/aKmVWbJ4kP5RP5xo_26kpl-vIob6xWLkHo1tIUjdGSQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/axzEwTSORpBNlQG4aSo2VK7hKrCG-wdgGgzOOkCSPu0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/b11Wd_854pELCyibWmDQQWw0NOwFEgUTTOv43B7L0O0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/b9qNPH7EAGflPQoSxVKF4VpR-nvhXO_FfkyNqTcuvEg.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/bD7DgPz7QK0xxFSDEG3KQus6AT2FOqDdYaoPibws-pU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/c435sCJiF1Vn9FgqmW9Aw1pi91-LFI6MV9_uT7tHTy0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/c6dmXo4OIycmfhxX-gwNtJa_XgE_72BbsLOBGZ8Bwoo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/cV08hpWvnX5IgoJCzbF1fiyRtJ5siDH3Z2rBWrNE9_g.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/dCF3sAzBRf6EhuPwhGEfy6u8p8Gc-W9SDbe5enTFJuk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/dTHzuosdlReujAGYVZf733k-riHMnR6IyrIwqiixc3g.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/dX26pigB0sWZWU34aGLzI4uDf43dOD7xKStczUcrVJI.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/deN1OEKgBBqTjBJyURdIBlL7Ep96EkZ4WSiiEW9wtAQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/degG6hihSykFRt7sx1PrKzNoHPPjwrRTxrbauQT1IPA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/dm7OR534xf4u5EXGxuIw0FiTOLNfByagCXP6RZEuUoA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/dx2P3z5XFSHrBB0Sq5BG25-Fr8fT8qxv-gTCyWsgHlE.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/eAbnGnmmxNfCaMKvx1KjLMzq-xoAF6uaeZPa-fq5ovM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/eK3Ggx_NMSyuzPTv2zGqW9Ar6CzkyWm-g6WkJrzmq2A.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/edIS0GGgNvjnR07PftJWBr-SevcOd4GfCzM2PsrlN-A.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/f6pIA6ArY2iApe9CHk7UArKVSGXzRtDuxTtIwZrzb2M.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/fIzKEVS92Pus0Y3HfjRQrrU3mu4ykSKh2iubgHWdSPY.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/gWUpjLDiSaH_3hVWfKFgrT5l0fx4eNObUTbMZRw_6lM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/ggyxUUYSFeo4_ueZV6yQlNNr8aY8UzxyBGTRCB1XwSo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/gwaz0aL0WhnDLRcnOVL3xVCjWosMHp0QwSgnDnZg51E.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/hoVc8eL4cYwmZxj7cK4iOAJ24ygilU_dIuzQWZvVWmU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/iNm-ASvqR3zWX4nRaiH-ganx76rERmCQ0UyQDfEqOAI.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/jDVG3XeGbpudwT7Y1hRuE-bPkPQVCtbgaW8dek3208c.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/kYKbdAe94y6hqTr2M4FfczqJq9pNavKnwBPlcWI3Nqs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/koNhGjfEG2biShgeko00nrihH4umWcZ1K29fEq_bNb8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/krKQiBFHnPMguiSV8PNaqBk_OcoKWkaJscyop-k1XC8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/lDTlylCTdWikSSNzrQ1O7hst9Z72NT-gZW5ACL0--nk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/lpRqRufnD9FFXP6amEvKTwn31RFd37LMUdfvQtMS_FM.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/mt1ryqg4rThCeQ_zKeWoH4Cutf1pviWZeJh8lkA2cAs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/nBJkg2sQbdqIVLcqZf-7ra6zHoHrCdY4A9OozxK31wk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/nGwBnD-x3scgRkHy7Zs83kKBMoREXnMWT9NhKqiKIdU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/nkuy64YwCr-HZVpqkt3hGo_-iFWyhyhR1_tGVkXeWBk.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/o1YUww3za9dgxco6-vAGk-Y_9kORuC6jzaufbMgjUz4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/of7-RxKYkrY92JnBLXO91pZNht5ajvNyDNk1WmKql5s.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/on69pk3ejFBN0sQtGiZA8JIzdb3qHPb9EZz-WSzpQeY.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/ozEGFqcTL1dmZ0QPEnc6dIdkd3Uou9fcVQjYDNjhIMo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/p7i1OIS7s4ju7dpJnv5cyJXsSLl4EivoS98fw62ogPQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/pufVpxVyoD6SAEQK-mEpH3ELL7OADj3Bb9xZDnGANXw.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/qhrvtxIQnaM4fejWElVEXyurrc1IkCwkKLdhM-S_U90.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/qx8AKb7P_RKYf2YuTV6QF79B4CUWzNrZX99VxOGePU4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/rHGinhL4UasRueEIIkcH5dKmxONYQWW09qTALlXm26I.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/ro_5rOW8v7kzNWoD--xdFBjscTodZpJ3frBCG5Zqfes.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/s7w1024b4mRrnLALFpfU7nx_-EVBLJwQ1Lb6K37McEU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/sA9Hh2lcKgPQheLgj6or3CWS6gWCmDJaSY20nRGlhlo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/sIBFPVH3HpGUnRRlDR2Mah311j_leGlDbkFUojHwTwU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/sIPCATZa02pwVdNOON4n-wIV0DiVhp0YHhhbx0XMBhQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/sOkNSC10Pn46lHhrPN51gxqONfjL0cZo7AoPJZV6PjI.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/sqn2kCeaSYT4KSWLROZ2H_2mfoNP-_-ZBy5SZK73Feg.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/tGWv0EO9NVRhVpvU7zLe7JNQpsehK-9mmJWlIKo9BL4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/tKjBDrB4beFaHGkbqZl_drUUxyR9gXApxI5Tkp7NkkI.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/taHpZje1B1XC-13q5_fk0KaR3pPDp45nrukU7joHyn0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/tvf_mPQn61bDqnXOurc8VpYV2mkxHtJWJvOVNLEiGTw.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/uDlU5vdz7GPsKGAX5KArS3VRLMylKlAOBnGd1oUEAjU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/v-X14metpnJUMJvhjcoy4j41WiN2xCr6wI_cQ2qnqUU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/v5cNvh-BUhxhtoMIAXzHG6J8_a5BE8Zl5yAJvhqfATU.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/vSCVCMbtiyiPX8n9NqbcQfklVPACEEgkLKf8yeoyiLQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/vWr_FOgvYtKNUuLXi421gyBVcbFMOJnAnmszidcgUTA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/wLv8FCVyEGyDk33vij1bwOlCz6natgA8cNW38VB5H9c.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/wyVmLToHucLEoGhNdahuRRbTuZR7au-k2jrp0ipAA5I.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/yLPmmXrSS4L3v7SBnmdNKRxD9VoyEMzkkeV0RXSmWfQ.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/yigOwCwrIT-197tZ1zUbE6wddMM1_b-Sp1Z564-jM7Q.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/ylDeQnfHBQ-bE3Xan6ht1xbOUOi4AaO8sBy85-xtrLg.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/zBKVYObp3Q5au-Pd0Ay654Wp-B0DuTdz0fEL6uxRtJc.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/zGJEGK5NpYUT0HVF37yem9LdxKnB0CxtFuRf_lnQcFA.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RailsRookie/tmp/cache/assets/development/sprockets/v3.0/zumvZ91PKo7kzlcWjCk6ktxgrK8y4M4LOHBdCN_B50s.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RomanNumbers/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RomanNumbers/decimal1.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RomanNumbers/decimal2.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RomanNumbers/roman.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RomanNumbers/test/decimal_acceptance_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RomanNumbers/test/decimal_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RomanNumbers/test/roman_acceptance_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/RomanNumbers/test/roman_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/categories.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/checkout.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/import.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/product.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/receipt.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/rounding.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/test/checkout_acceptance_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/test/checkout_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/test/fake_receipt.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/test/receipt_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes1/test/rounding_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/checkout.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/product.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/product_factory.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/receipt.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/rounding.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/shopper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/supermarket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/test/acceptance_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/test/checkout_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/test/fake_receipt.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/test/product_factory_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/test/product_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/test/receipt_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/test/rounding_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes2/test/shopper_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/checkout.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/product.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/product_factory.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/receipt.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/rounding.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/shopper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/supermarket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/test/acceptance_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/test/checkout_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/test/fake_receipt.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/test/product_factory_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/test/product_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/test/receipt_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/test/rounding_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/SalesTaxes/SalesTaxes3/test/shopper_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/TheSolitaireCipher/solitaire_cipher.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/TheSolitaireCipher/test/acceptance_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/TheSolitaireCipher/test/solitaire_cipher_decrypt_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/TheSolitaireCipher/test/solitaire_cipher_encrypt_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/.rspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/.ruby-gemset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/.ruby-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/lib/daily_ticket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/lib/one_way_ticket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/lib/ticket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/lib/ticket_shop.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/lib/weekly_ticket.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/spec/lib/daily_ticket_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/spec/lib/one_way_ticket_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/spec/lib/ticket_shop_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/spec/lib/weekly_ticket_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/spec/spec_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/spec/time_support.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kata/Underground/turnstile.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-project/primo.aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-project/primo.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-project/primo.synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-project/primo.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-project/primo.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/.rspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/.ruby-gemset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/.ruby-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/README.rdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/_appunti/note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/_appunti/todo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/assets/images/capybara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/assets/javascripts/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/assets/stylesheets/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/controllers/application_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/controllers/capybara_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/controllers/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/helpers/application_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/helpers/capybara_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/models/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/views/capybara/capybara_javascript.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/views/capybara/get_cookie.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/views/capybara/header.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/views/capybara/set_cookie.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/views/capybara/welcome.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/app/views/layouts/application.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/bin/bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/bin/rails" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/bin/rake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/bin/setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/bin/spring" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config.ru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/application.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/boot.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/database.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/environment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/environments/development.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/environments/production.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/environments/test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/initializers/assets.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/initializers/backtrace_silencers.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/initializers/cookies_serializer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/initializers/filter_parameter_logging.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/initializers/inflections.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/initializers/mime_types.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/initializers/session_store.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/initializers/wrap_parameters.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/locales/en.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/routes.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/config/secrets.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/db/seeds.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/lib/assets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/lib/hello_capybara.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/lib/tasks/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/log/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/public/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/public/422.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/public/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/controllers/capybara_controller_manage_request_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/features/cookies_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/features/headers_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/features/javascript_support_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/features/performance_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/features/poltergeist/poltergeist_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/features/remote_url_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/features/response_status_code_support_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/lib/hello_capybara_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/rails_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/spec/spec_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/vendor/assets/javascripts/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/CapybaraRookie/vendor/assets/stylesheets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/.rspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/.rspec-local" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/changelog/changelog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/command-line.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/dry_run_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/example_2_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/example_3_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/fail_fast_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/first_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/fourth_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/ko_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/one_linear_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/ruby_example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/second_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/tagged_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/third_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/command-line/warning_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/configuration/alias_example_to_pending_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/configuration/configuration.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/configuration/example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/basic_structure_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/collection_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/context_specific_examples_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/nested_example_group_aliases_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/nested_example_groups_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/sample_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_context_example.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_example_group_aliasing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_example_group_params_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_example_group_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_example_metadata_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_examples.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_examples_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_stuff.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/filtering/custom_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/filtering/explicit_inclusion_filter_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/filtering/filtering.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/filtering/implicit_filter_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/filtering/sample_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/helper-methods/extend_module_in_some_groups_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/helper-methods/extend_module_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/helper-methods/helper-methods.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/helper-methods/helpers.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/helper-methods/include_module_in_some_groups_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/helper-methods/include_module_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/helper-methods/let_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/after_context_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/before_and_after_context_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/before_context_2_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/before_context_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/before_example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/befores_in_configuration_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/configuration_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/ensure_block_order_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/error_in_before_example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_10_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_11_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_2_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_3_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_4_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_5_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_6_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_7_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_8_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_9_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/filter_around_example_hooks_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/filter_before_example_hooks_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/hooks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/less_verbose_metadata_filter.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/hooks/thing.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/metadata/define_group_metadata_with_hash_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/metadata/described_class_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/metadata/example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/metadata/metadata.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/before_hook_subject_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/helper_subject_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/memoized_subject_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/named_subject_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/nested_subject_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/subject.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/subject_bang_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/subject/top_level_subject_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/core/upgrade/upgrade.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/documentation/domande.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/documentation/idee.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/documentation/keywords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/documentation/miscellanea.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/expectations/built-in-matchers/base_matcher_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/expectations/built-in-matchers/stuff.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/expectations/expectations.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/mocks/base_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/mocks/mocks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/mocks/person.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/mocks/temporary_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/mocks/test_doubles_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/rails/rails.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/spec/example_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/spec/example_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RSpecRookie/spec/spec_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/.ruby-gemset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/.ruby-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/README.rdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/_appunti/1_installazioni.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/_appunti/2_getting_started.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/_appunti/3_svilupo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/_appunti/alcuni-comandi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/_appunti/note-varie.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/_appunti/todo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/assets/images/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/assets/javascripts/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/assets/javascripts/say.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/assets/stylesheets/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/assets/stylesheets/say.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/controllers/application_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/controllers/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/controllers/say_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/helpers/application_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/helpers/say_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/models/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/views/layouts/application.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/views/say/goodbye.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/app/views/say/hello.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/bin/bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/bin/rails" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/bin/rake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/bin/setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/bin/spring" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config.ru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/application.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/boot.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/database.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/environment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/environments/development.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/environments/production.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/environments/test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/initializers/assets.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/initializers/backtrace_silencers.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/initializers/cookies_serializer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/initializers/filter_parameter_logging.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/initializers/inflections.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/initializers/mime_types.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/initializers/session_store.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/initializers/wrap_parameters.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/locales/en.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/routes.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/config/secrets.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/db/seeds.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/lib/assets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/lib/tasks/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/log/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/public/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/public/422.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/public/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/test/controllers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/test/controllers/say_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/test/fixtures/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/test/helpers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/test/integration/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/test/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/test/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/test/test_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/vendor/assets/javascripts/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookie/vendor/assets/stylesheets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/README.rdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/assets/images/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/assets/javascripts/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/assets/stylesheets/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/controllers/application_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/controllers/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/helpers/application_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/models/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/app/views/layouts/application.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/assets-pipeline-def.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/assets-pipeline.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/bin/bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/bin/rails" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/bin/rake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/bin/setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/bin/spring" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config.ru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/application.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/boot.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/database.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/environment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/environments/development.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/environments/production.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/environments/test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/initializers/assets.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/initializers/backtrace_silencers.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/initializers/cookies_serializer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/initializers/filter_parameter_logging.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/initializers/inflections.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/initializers/mime_types.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/initializers/session_store.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/initializers/wrap_parameters.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/locales/en.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/routes.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/config/secrets.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/db/seeds.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/lib/assets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/lib/tasks/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/log/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/public/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/public/422.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/public/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/test/controllers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/test/fixtures/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/test/helpers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/test/integration/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/test/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/test/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/test/test_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/vendor/assets/javascripts/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RailsRookieOld/vendor/assets/stylesheets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/.rspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/.ruby-gemset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/.ruby-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/README.rdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/_notes/info.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/_notes/routes_rest_standard.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/assets/images/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/assets/javascripts/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/assets/stylesheets/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/controllers/application_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/controllers/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/controllers/guided_offers_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/controllers/listings_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/helpers/application_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/models/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/app/views/layouts/application.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/bin/bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/bin/rails" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/bin/rake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/bin/setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/bin/spring" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config.ru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/application.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/boot.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/database.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/environment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/environments/development.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/environments/production.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/environments/test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/initializers/assets.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/initializers/backtrace_silencers.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/initializers/cookies_serializer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/initializers/filter_parameter_logging.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/initializers/inflections.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/initializers/mime_types.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/initializers/session_store.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/initializers/wrap_parameters.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/locales/en.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/routes.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/config/secrets.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/db/schema.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/db/seeds.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/lib/assets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/lib/tasks/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/log/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/public/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/public/422.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/public/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/spec/controllers/guided_offers_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/spec/features/guided_offers_listing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/spec/features/guided_offers_table_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/spec/rails_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/spec/routing/guided_offers_routing_single_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/spec/routing/guided_offers_routing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/spec/routing/listings_routing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/spec/spec_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/vendor/assets/javascripts/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RoutingRookie/vendor/assets/stylesheets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/.rspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/.ruby-gemset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/.ruby-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/any" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/command-1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/command-2.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/command-3.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/command-4.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/faq.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/file-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/file-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/file-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-the-web/CGI/cgi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-the-web/f1.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-the-web/html/any.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-the-web/webserver.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/lib/encoding_iso-8859-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/lib/encoding_utf-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/lib/io_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/lib/ruby_encoding_bytes_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/lib/ruby_encoding_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/lib/ruby_encoding_strings_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/lib/ruby_transcoding_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/ruby-and-the-web/cgi_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/spec/spec_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/RubyRookie/utils/environment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/.rspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/.ruby-gemset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/.ruby-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/Capfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/README.rdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/_appunti/1_installazioni.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/_appunti/2_getting_started.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/_appunti/3_capistrano.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/_appunti_depot/comandi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/_appunti_depot/depot.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/_appunti_depot/documentazione.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/_appunti_depot/todo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/_appunti_depot/trovaprezzi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/images/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/images/cs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/images/rails.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/images/rtp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/images/ruby.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/admin.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/carts.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/line_items.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/orders.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/products.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/sessions.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/store.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/javascripts/users.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/admin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/application.css.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/carts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/line_items.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/orders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/products.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/scaffolds.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/sessions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/store.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/assets/stylesheets/users.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/admin_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/application_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/carts_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/concerns/current_cart.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/concerns/store_counter.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/line_items_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/orders_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/products_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/sessions_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/store_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/users_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/controllers/xxx_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/admin_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/application_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/carts_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/line_items_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/orders_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/products_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/sessions_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/store_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/helpers/users_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/mailers/application_mailer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/mailers/order_notifier.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/models/account.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/models/cart.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/models/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/models/line_item.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/models/order.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/models/product.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/models/user.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/admin/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/_cart.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/destroy.js.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/carts/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/layouts/application.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/layouts/mailer.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/layouts/mailer.text.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/_line_item.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/_line_item.text.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/create.js.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/line_items/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/order_notifier/received.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/order_notifier/received.text.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/order_notifier/shipped.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/order_notifier/shipped.text.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/orders/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/orders/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/orders/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/orders/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/orders/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/orders/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/orders/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/products/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/products/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/products/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/products/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/products/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/products/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/products/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/products/who_bought.atom.builder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/sessions/create.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/sessions/destroy.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/sessions/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/store/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/store/test.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/users/_form.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/users/edit.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/users/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/users/index.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/users/new.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/users/show.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/app/views/users/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/bin/bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/bin/rails" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/bin/rake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/bin/setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/bin/spring" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config.ru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/application.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/boot.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/database.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/deploy.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/environment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/environments/development.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/environments/production.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/environments/staging.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/environments/test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/assets.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/backtrace_silencers.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/cookies_serializer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/devise.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/filter_parameter_logging.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/i18n.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/inflections.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/mime_types.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/session_store.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/initializers/wrap_parameters.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/locales/devise.en.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/locales/en.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/locales/es.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/routes.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/config/secrets.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20151028113040_create_products.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160122130456_create_carts.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160122132753_create_line_items.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160201134950_add_quantity_to_line_items.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160204135643_combine_items_in_cart.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160216112754_add_product_price_to_line_items.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160217130959_add_product_price_in_line_items.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160302132826_create_orders.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160302133351_add_order_to_line_item.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160412100954_create_users.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/migrate/20160531101533_create_accounts.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/schema.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/db/seeds.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/AdminController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/AdminHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/ApplicationController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/ApplicationHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/ApplicationMailer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/Cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/CartsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/CartsController/ActiveRecord.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/CartsHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/CurrentCart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/LineItem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/LineItemsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/LineItemsHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/Order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/OrderNotifier.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/OrdersController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/OrdersHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/Product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/ProductsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/ProductsHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/README_rdoc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/SessionsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/SessionsHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/StoreController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/StoreCounter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/StoreHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/UsersController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/UsersHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/created.rid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/css/rdoc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/fonts/Lato-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/fonts/Lato-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/fonts/Lato-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/fonts/Lato-RegularItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/fonts/SourceCodePro-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/fonts/SourceCodePro-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/brick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/brick_link.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/bug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/bullet_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/bullet_toggle_minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/bullet_toggle_plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/date.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/find.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/loadingAnimation.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/macFFBgHack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/package.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/page_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/page_white_text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/page_white_width.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/plugin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/ruby.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/tag_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/tag_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/wrench.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/wrench_orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/images/zoom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/darkfish.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/navigation.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/search_index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/search_index.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/searcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/js/searcher.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/app/table_of_contents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/2_2_release_notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/2_3_release_notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/3_0_release_notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/3_1_release_notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/3_2_release_notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/4_0_release_notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/4_1_release_notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/4_2_release_notes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/_license.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/_welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/action_controller_overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/action_mailer_basics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/action_view_overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_job_basics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_model_basics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_record_basics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_record_callbacks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_record_migrations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_record_postgresql.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_record_querying.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_record_validations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_support_core_extensions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/active_support_instrumentation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/api_documentation_guidelines.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/asset_pipeline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/association_basics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/autoloading_and_reloading_constants.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/caching_with_rails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/command_line.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/configuring.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/contributing_to_ruby_on_rails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/credits.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/debugging_rails_applications.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/development_dependencies_install.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/engines.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/form_helpers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/generators.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/getting_started.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/i18n.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/akshaysurve.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/belongs_to.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/book_icon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/bullet.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/chapters_icon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/check_bullet.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/credits_pic_blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/csrf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/edge_badge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/feature_tile.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/footer_tile.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/fxn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/article_with_comments.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/challenge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/confirm_dialog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/forbidden_attributes_for_new_article.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/form_with_errors.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/index_action_with_edit_link.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/new_article.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/rails_welcome.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/routing_error_no_controller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/routing_error_no_route_matches.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/show_action_for_articles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/template_is_missing_articles_new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/unknown_action_create_for_articles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/getting_started/unknown_action_new_for_articles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/grey_bullet.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/habtm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/has_many.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/has_many_through.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/has_one.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/has_one_through.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/header_backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/header_tile.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/i18n/demo_html_safe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/i18n/demo_localized_pirate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/i18n/demo_translated_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/i18n/demo_translated_pirate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/i18n/demo_translation_missing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/i18n/demo_untranslated.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/callouts/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/caution.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/important.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/note.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/tip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/icons/warning.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/nav_arrow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/oscardelben.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/polymorphic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/radar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/rails4_features.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/rails_guides_kindle_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/rails_guides_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/rails_logo_remix.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/session_fixation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/tab_grey.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/tab_info.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/tab_note.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/tab_red.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/tab_yellow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/tab_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/images/vijaydev.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/initialization.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/guides.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/responsive-tables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushAS3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushAppleScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushBash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushCSharp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushColdFusion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushCpp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushCss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushDelphi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushDiff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushErlang.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushGroovy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushJScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushJava.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushJavaFX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushPerl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushPhp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushPlain.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushPowerShell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushPython.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushRuby.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushSass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushScala.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushSql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushVb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shBrushXml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/javascripts/syntaxhighlighter/shCore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/layouts_and_rendering.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/maintenance_policy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/nested_model_forms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/plugins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/rails_application_templates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/rails_on_rack.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/routing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/ruby_on_rails_guides_guidelines.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/security.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/fixes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/kindle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/print.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/responsive-tables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCore.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCoreDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCoreDjango.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCoreEclipse.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCoreEmacs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCoreFadeToGrey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCoreMDUltra.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCoreMidnight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shCoreRDark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeDjango.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeEclipse.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeEmacs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeFadeToGrey.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeMDUltra.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeMidnight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeRDark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/stylesheets/syntaxhighlighter/shThemeRailsGuides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/testing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/upgrading_ruby_on_rails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/doc/guides/working_with_javascript_in_rails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/lib/assets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/lib/hello_world.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/lib/tasks/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/log/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/422.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/assets/.sprockets-manifest-4d312b555998ae5547bf80b449719a57.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/assets/application-2d7968994a750350abb50028e047ed290d63c9bac692117bce66d6c43f178800.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/assets/application-c38c0acf44e9b62c460ee8fc9023b3c3236bf4dd4d9eff365879aff3b571e9a1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/assets/cs-f56ef62bc41b040664e801a38f068082a75d506d9048307e8096737463503d0b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/assets/logo-c6cc13d09c4262e637d9af74fa20f7cc0ba8cb57864863b3ce3135f37cbf308c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/assets/rails-5ad6d454af23f597c4c39dbe4ec6e12784f8e382997a4bc04944ab8547d48881.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/assets/rtp-d3d2240713cce773840785de837acf822d235d1b77040a3e1ed9d8c014cff086.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/assets/ruby-836fee16e3757bcd4e2c21d064eee4fa81d7f93e4e9a44b1ffcd6c1d41c92a88.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/admin_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/cart_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/line_items_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/orders_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/product_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/sessions_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/store_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/controllers/users_controller_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/features/user_stories_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/fixtures/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/fixtures/accounts.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/fixtures/order_notifier/received" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/fixtures/order_notifier/shipped" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/fixtures/products.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/fixtures/users.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/mailers/order_notifier_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/mailers/previews/order_notifier_preview.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/models/account_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/models/order_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/models/product_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/rails_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/requests/carts_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/requests/line_items_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/requests/users_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/routing/carts_routing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/routing/line_items_routing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/routing/orders_routing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/routing/users_routing_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/spec_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/carts/edit.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/carts/index.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/carts/new.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/line_items/edit.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/line_items/new.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/users/edit.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/users/index.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/users/new.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/spec/views/users/show.html.erb_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/vendor/assets/javascripts/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/depot/vendor/assets/stylesheets/.keep" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/Pillole/pillola2_test.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/Pillole/pillola4_test.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/Pillole/pillola7_test.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/Pillole/soluzione2_test.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/ruby-new/containers_test.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/ruby-new/miscellanea_test.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/ruby-new/regex_test.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/7_regular-expressions.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>LetterFilter</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="27" />
+    <option name="width" value="1920" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="studio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studio" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54376c72-8142-420f-ad91-a700356bc111" name="Default Changelist" comment="" />
+      <created>1570195625170</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570195625170</updated>
+      <workItem from="1570195626256" duration="511000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="511000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1920" height="1020" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/projects/depot/_appunti/3_capistrano.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/depot/_appunti/1_installazioni.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-784" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RailsRookie/_appunti/1_installazioni.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RailsRookie/_appunti/2_getting_started.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RailsRookie/_appunti/3_svilupo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RailsRookie/_appunti/alcuni-comandi.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RailsRookie/_appunti/note-varie.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RailsRookie/_appunti/todo.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RailsRookieOld/assets-pipeline.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RailsRookieOld/assets-pipeline-def.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RoutingRookie/_notes/info.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/changelog/changelog.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/command-line/command-line.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/command-line/dry_run_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/command-line/example_2_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/command-line/example_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/command-line/fail_fast_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/command-line/fourth_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/configuration/configuration.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/configuration/alias_example_to_pending_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/configuration/example_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/collection_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/nested_example_groups_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/sample_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_context_example.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/shared_example_group_aliasing_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/metadata/described_class_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/metadata/define_group_metadata_with_hash_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RSpecRookie/core/example-groups/nested_example_group_aliases_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/command-1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/command-2.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/command-3.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookie/lib/ruby-and-its-world/file-1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookie/spec/lib/ruby_encoding_bytes_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookie/spec/lib/ruby_encoding_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookie/spec/lib/ruby_encoding_strings_spec.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/basic-input-and-output/copy.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/basic-input-and-output/doing_io_with_strings_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/classes-objects-and-variables/account.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/classes-objects-and-variables/csv_reader_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/1_getting-started.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/Pillole/pillola2_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/Pillole/pillola4_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/Pillole/pillola7_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/Pillole/soluzione2_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/ruby-new/containers_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/ruby-new/miscellanea_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/ruby-new/regex_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zone/_info/init.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zone/_info/todo.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/RubyRookieOld/7_regular-expressions.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
